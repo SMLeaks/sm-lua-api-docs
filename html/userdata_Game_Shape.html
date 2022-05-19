@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Shape - Lua API Reference - Scrap Mechanic</title>
+ <link rel="stylesheet" href="styles.css">
+ <script src="script.js"></script>
+ <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+ <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+ <div id="menu">
+  <h2>Lua API Reference</h2>
+  <ul>
+   <li><a href="index.html">Introduction</a></li>
+  </ul>
+  <h2>Game environment</h2>
+  <h3>Classes</h3>
+  <ul>
+   <li><a href="class_Game_CharacterClass.html" class="code">CharacterClass</a></li>
+   <li><a href="class_Game_GameClass.html" class="code">GameClass</a></li>
+   <li><a href="class_Game_HarvestableClass.html" class="code">HarvestableClass</a></li>
+   <li><a href="class_Game_PlayerClass.html" class="code">PlayerClass</a></li>
+   <li><a href="class_Game_ScriptableObjectClass.html" class="code">ScriptableObjectClass</a></li>
+   <li><a href="class_Game_ShapeClass.html" class="code">ShapeClass</a></li>
+   <li><a href="class_Game_ToolClass.html" class="code">ToolClass</a></li>
+   <li><a href="class_Game_UnitClass.html" class="code">UnitClass</a></li>
+   <li><a href="class_Game_WorldClass.html" class="code">WorldClass</a></li>
+  </ul>
+  <h3>Object Types 'userdata'</h3>
+  <ul>
+   <li><a href="userdata_Game_AiState.html" class="code">AiState</a></li>
+   <li><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></li>
+   <li><a href="userdata_Game_BlueprintVisualization.html" class="code">BlueprintVisualization</a></li>
+   <li><a href="userdata_Game_Body.html" class="code">Body</a></li>
+   <li><a href="userdata_Game_BuilderGuide.html" class="code">BuilderGuide</a></li>
+   <li><a href="userdata_Game_Character.html" class="code">Character</a></li>
+   <li><a href="userdata_Game_Color.html" class="code">Color</a></li>
+   <li><a href="userdata_Game_Container.html" class="code">Container</a></li>
+   <li><a href="userdata_Game_CullSphereGroup.html" class="code">CullSphereGroup</a></li>
+   <li><a href="userdata_Game_Effect.html" class="code">Effect</a></li>
+   <li><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></li>
+   <li><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></li>
+   <li><a href="userdata_Game_Interactable.html" class="code">Interactable</a></li>
+   <li><a href="userdata_Game_Joint.html" class="code">Joint</a></li>
+   <li><a href="userdata_Game_Lift.html" class="code">Lift</a></li>
+   <li><a href="userdata_Game_LoadCellHandle.html" class="code">LoadCellHandle</a></li>
+   <li><a href="userdata_Game_Network.html" class="code">Network</a></li>
+   <li><a href="userdata_Game_PathNode.html" class="code">PathNode</a></li>
+   <li><a href="userdata_Game_Player.html" class="code">Player</a></li>
+   <li><a href="userdata_Game_Portal.html" class="code">Portal</a></li>
+   <li><a href="userdata_Game_Quat.html" class="code">Quat</a></li>
+   <li><a href="userdata_Game_RaycastResult.html" class="code">RaycastResult</a></li>
+   <li><a href="userdata_Game_ScriptableObject.html" class="code">ScriptableObject</a></li>
+   <li><a href="userdata_Game_Shape.html" class="code">Shape</a></li>
+   <li><a href="userdata_Game_Storage.html" class="code">Storage</a></li>
+   <li><a href="userdata_Game_Tool.html" class="code">Tool</a></li>
+   <li><a href="userdata_Game_Unit.html" class="code">Unit</a></li>
+   <li><a href="userdata_Game_Uuid.html" class="code">Uuid</a></li>
+   <li><a href="userdata_Game_Vec3.html" class="code">Vec3</a></li>
+   <li><a href="userdata_Game_Widget.html" class="code">Widget</a></li>
+   <li><a href="userdata_Game_World.html" class="code">World</a></li>
+  </ul>
+  <h3>Static Function Namespaces</h3>
+  <ul>
+   <li><a href="namespace_Game_GLOBAL.html" class="code">GLOBAL</a></li>
+   <li><a href="namespace_Game_sm.html" class="code">sm</a></li>
+   <li><a href="namespace_Game_sm_ai.html" class="code">sm.ai</a></li>
+   <li><a href="namespace_Game_sm_areaTrigger.html" class="code">sm.areaTrigger</a></li>
+   <li><a href="namespace_Game_sm_audio.html" class="code">sm.audio</a></li>
+   <li><a href="namespace_Game_sm_body.html" class="code">sm.body</a></li>
+   <li><a href="namespace_Game_sm_builderGuide.html" class="code">sm.builderGuide</a></li>
+   <li><a href="namespace_Game_sm_camera.html" class="code">sm.camera</a></li>
+   <li><a href="namespace_Game_sm_cell.html" class="code">sm.cell</a></li>
+   <li><a href="namespace_Game_sm_challenge.html" class="code">sm.challenge</a></li>
+   <li><a href="namespace_Game_sm_character.html" class="code">sm.character</a></li>
+   <li><a href="namespace_Game_sm_color.html" class="code">sm.color</a></li>
+   <li><a href="namespace_Game_sm_construction.html" class="code">sm.construction</a></li>
+   <li><a href="namespace_Game_sm_container.html" class="code">sm.container</a></li>
+   <li><a href="namespace_Game_sm_creation.html" class="code">sm.creation</a></li>
+   <li><a href="namespace_Game_sm_cullSphereGroup.html" class="code">sm.cullSphereGroup</a></li>
+   <li><a href="namespace_Game_sm_debris.html" class="code">sm.debris</a></li>
+   <li><a href="namespace_Game_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
+   <li><a href="namespace_Game_sm_effect.html" class="code">sm.effect</a></li>
+   <li><a href="namespace_Game_sm_event.html" class="code">sm.event</a></li>
+   <li><a href="namespace_Game_sm_game.html" class="code">sm.game</a></li>
+   <li><a href="namespace_Game_sm_gui.html" class="code">sm.gui</a></li>
+   <li><a href="namespace_Game_sm_gui_widget.html" class="code">sm.gui.widget</a></li>
+   <li><a href="namespace_Game_sm_harvestable.html" class="code">sm.harvestable</a></li>
+   <li><a href="namespace_Game_sm_interactable.html" class="code">sm.interactable</a></li>
+   <li><a href="namespace_Game_sm_item.html" class="code">sm.item</a></li>
+   <li><a href="namespace_Game_sm_joint.html" class="code">sm.joint</a></li>
+   <li><a href="namespace_Game_sm_json.html" class="code">sm.json</a></li>
+   <li><a href="namespace_Game_sm_localPlayer.html" class="code">sm.localPlayer</a></li>
+   <li><a href="namespace_Game_sm_log.html" class="code">sm.log</a></li>
+   <li><a href="namespace_Game_sm_melee.html" class="code">sm.melee</a></li>
+   <li><a href="namespace_Game_sm_menuCreation.html" class="code">sm.menuCreation</a></li>
+   <li><a href="namespace_Game_sm_noise.html" class="code">sm.noise</a></li>
+   <li><a href="namespace_Game_sm_particle.html" class="code">sm.particle</a></li>
+   <li><a href="namespace_Game_sm_pathNode.html" class="code">sm.pathNode</a></li>
+   <li><a href="namespace_Game_sm_pathfinder.html" class="code">sm.pathfinder</a></li>
+   <li><a href="namespace_Game_sm_physics.html" class="code">sm.physics</a></li>
+   <li><a href="namespace_Game_sm_player.html" class="code">sm.player</a></li>
+   <li><a href="namespace_Game_sm_portal.html" class="code">sm.portal</a></li>
+   <li><a href="namespace_Game_sm_projectile.html" class="code">sm.projectile</a></li>
+   <li><a href="namespace_Game_sm_quat.html" class="code">sm.quat</a></li>
+   <li><a href="namespace_Game_sm_render.html" class="code">sm.render</a></li>
+   <li><a href="namespace_Game_sm_scriptableObject.html" class="code">sm.scriptableObject</a></li>
+   <li><a href="namespace_Game_sm_shape.html" class="code">sm.shape</a></li>
+   <li><a href="namespace_Game_sm_storage.html" class="code">sm.storage</a></li>
+   <li><a href="namespace_Game_sm_tool.html" class="code">sm.tool</a></li>
+   <li><a href="namespace_Game_sm_unit.html" class="code">sm.unit</a></li>
+   <li><a href="namespace_Game_sm_util.html" class="code">sm.util</a></li>
+   <li><a href="namespace_Game_sm_uuid.html" class="code">sm.uuid</a></li>
+   <li><a href="namespace_Game_sm_vec3.html" class="code">sm.vec3</a></li>
+   <li><a href="namespace_Game_sm_visualization.html" class="code">sm.visualization</a></li>
+   <li><a href="namespace_Game_sm_world.html" class="code">sm.world</a></li>
+  </ul>
+  <h2>Terrain environment</h2>
+  <h3>Classes</h3>
+  <ul>
+  </ul>
+  <h3>Object Types 'userdata'</h3>
+  <ul>
+   <li><a href="userdata_Terrain_Color.html" class="code">Color</a></li>
+   <li><a href="userdata_Terrain_Harvestable.html" class="code">Harvestable</a></li>
+   <li><a href="userdata_Terrain_Quat.html" class="code">Quat</a></li>
+   <li><a href="userdata_Terrain_Uuid.html" class="code">Uuid</a></li>
+   <li><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></li>
+   <li><a href="userdata_Terrain_World.html" class="code">World</a></li>
+  </ul>
+  <h3>Static Function Namespaces</h3>
+  <ul>
+   <li><a href="namespace_Terrain_GLOBAL.html" class="code">GLOBAL</a></li>
+   <li><a href="namespace_Terrain_sm.html" class="code">sm</a></li>
+   <li><a href="namespace_Terrain_sm_color.html" class="code">sm.color</a></li>
+   <li><a href="namespace_Terrain_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
+   <li><a href="namespace_Terrain_sm_harvestable.html" class="code">sm.harvestable</a></li>
+   <li><a href="namespace_Terrain_sm_json.html" class="code">sm.json</a></li>
+   <li><a href="namespace_Terrain_sm_log.html" class="code">sm.log</a></li>
+   <li><a href="namespace_Terrain_sm_noise.html" class="code">sm.noise</a></li>
+   <li><a href="namespace_Terrain_sm_quat.html" class="code">sm.quat</a></li>
+   <li><a href="namespace_Terrain_sm_terrainData.html" class="code">sm.terrainData</a></li>
+   <li><a href="namespace_Terrain_sm_terrainGeneration.html" class="code">sm.terrainGeneration</a></li>
+   <li><a href="namespace_Terrain_sm_terrainTile.html" class="code">sm.terrainTile</a></li>
+   <li><a href="namespace_Terrain_sm_util.html" class="code">sm.util</a></li>
+   <li><a href="namespace_Terrain_sm_uuid.html" class="code">sm.uuid</a></li>
+   <li><a href="namespace_Terrain_sm_vec3.html" class="code">sm.vec3</a></li>
+  </ul>
+ </div>
+ <div id="content">
+  <h1 class="code">Shape</h1>
+  <h3>Associated namespace: <a href="namespace_Game_sm_shape.html" class="code">sm.shape</a></h3>
+  <p>A userdata object representing a <strong>shape</strong> in the game.</p>
+  <h4>Values:</h4>
+  <ul>
+   <li><a href="#at" class="code">at</a></li>
+   <li><a href="#body" class="code">body</a></li>
+   <li><a href="#buildable" class="code">buildable</a></li>
+   <li><a href="#buoyancy" class="code">buoyancy</a></li>
+   <li><a href="#color" class="code">color</a></li>
+   <li><a href="#connectable" class="code">connectable</a></li>
+   <li><a href="#convertableToDynamic" class="code">convertableToDynamic</a></li>
+   <li><a href="#destructable" class="code">destructable</a></li>
+   <li><a href="#erasable" class="code">erasable</a></li>
+   <li><a href="#id" class="code">id</a></li>
+   <li><a href="#interactable" class="code">interactable</a></li>
+   <li><a href="#isBlock" class="code">isBlock</a></li>
+   <li><a href="#liftable" class="code">liftable</a></li>
+   <li><a href="#localPosition" class="code">localPosition</a></li>
+   <li><a href="#localRotation" class="code">localRotation</a></li>
+   <li><a href="#mass" class="code">mass</a></li>
+   <li><a href="#material" class="code">material</a></li>
+   <li><a href="#materialId" class="code">materialId</a></li>
+   <li><a href="#paintable" class="code">paintable</a></li>
+   <li><a href="#right" class="code">right</a></li>
+   <li><a href="#stackedAmount" class="code">stackedAmount</a></li>
+   <li><a href="#stackedItem" class="code">stackedItem</a></li>
+   <li><a href="#up" class="code">up</a></li>
+   <li><a href="#usable" class="code">usable</a></li>
+   <li><a href="#uuid" class="code">uuid</a></li>
+   <li><a href="#velocity" class="code">velocity</a></li>
+   <li><a href="#worldPosition" class="code">worldPosition</a></li>
+   <li><a href="#worldRotation" class="code">worldRotation</a></li>
+   <li><a href="#xAxis" class="code">xAxis</a></li>
+   <li><a href="#yAxis" class="code">yAxis</a></li>
+   <li><a href="#zAxis" class="code">zAxis</a></li>
+  </ul>  <h4>Functions:</h4>
+  <ul>
+   <li><a href="#createJoint" class="code">createJoint</a></li>
+   <li><a href="#destroyBlock" class="code">destroyBlock</a></li>
+   <li><a href="#destroyPart" class="code">destroyPart</a></li>
+   <li><a href="#destroyShape" class="code">destroyShape</a></li>
+   <li><a href="#getAt" class="code">getAt</a></li>
+   <li><a href="#getBody" class="code">getBody</a></li>
+   <li><a href="#getBoundingBox" class="code">getBoundingBox</a></li>
+   <li><a href="#getBuoyancy" class="code">getBuoyancy</a></li>
+   <li><a href="#getClosestBlockLocalPosition" class="code">getClosestBlockLocalPosition</a></li>
+   <li><a href="#getColor" class="code">getColor</a></li>
+   <li><a href="#getId" class="code">getId</a></li>
+   <li><a href="#getInteractable" class="code">getInteractable</a></li>
+   <li><a href="#getInterpolatedAt" class="code">getInterpolatedAt</a></li>
+   <li><a href="#getInterpolatedRight" class="code">getInterpolatedRight</a></li>
+   <li><a href="#getInterpolatedUp" class="code">getInterpolatedUp</a></li>
+   <li><a href="#getInterpolatedWorldPosition" class="code">getInterpolatedWorldPosition</a></li>
+   <li><a href="#getIsHarvest" class="code">getIsHarvest</a></li>
+   <li><a href="#getIsStackable" class="code">getIsStackable</a></li>
+   <li><a href="#getJoints" class="code">getJoints</a></li>
+   <li><a href="#getLocalPosition" class="code">getLocalPosition</a></li>
+   <li><a href="#getLocalRotation" class="code">getLocalRotation</a></li>
+   <li><a href="#getMass" class="code">getMass</a></li>
+   <li><a href="#getMaterial" class="code">getMaterial</a></li>
+   <li><a href="#getMaterialId" class="code">getMaterialId</a></li>
+   <li><a href="#getNeighbours" class="code">getNeighbours</a></li>
+   <li><a href="#getPipedNeighbours" class="code">getPipedNeighbours</a></li>
+   <li><a href="#getRight" class="code">getRight</a></li>
+   <li><a href="#getShapeUuid" class="code">getShapeUuid</a></li>
+   <li><a href="#getSticky" class="code">getSticky</a></li>
+   <li><a href="#getUp" class="code">getUp</a></li>
+   <li><a href="#getVelocity" class="code">getVelocity</a></li>
+   <li><a href="#getWorldPosition" class="code">getWorldPosition</a></li>
+   <li><a href="#getWorldRotation" class="code">getWorldRotation</a></li>
+   <li><a href="#getXAxis" class="code">getXAxis</a></li>
+   <li><a href="#getYAxis" class="code">getYAxis</a></li>
+   <li><a href="#getZAxis" class="code">getZAxis</a></li>
+   <li><a href="#replaceShape" class="code">replaceShape</a></li>
+   <li><a href="#setColor" class="code">setColor</a></li>
+   <li><a href="#shapeExists" class="code">shapeExists</a></li>
+   <li><a href="#shapesInSphere" class="code">shapesInSphere</a></li>
+   <li><a href="#transformDirection" class="code">transformDirection</a></li>
+   <li><a href="#transformLocalPoint" class="code">transformLocalPoint</a></li>
+   <li><a href="#transformPoint" class="code">transformPoint</a></li>
+   <li><a href="#transformRotation" class="code">transformRotation</a></li>
+  </ul>
+  <h4>Operations:</h4>
+  <table>
+   <tr><th>Operation</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a> == <a href="userdata_Game_Shape.html" class="code">Shape</a></td><td>Checks if two instances of <a href="userdata_Game_Shape.html" class="code">Shape</a> refer to the same Shape.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="at"></a>at <i><a href="userdata_Game_Vec3.html" class="code">Vec3</a></i></h2>
+  <h4>Get:</h4>
+  <p>Returns the direction of a shape's front side.</p>
+  <p>The direction is affected by the shape's rotation in the world.</p>
+  <hr>
+  <h2 class="code"><a id="body"></a>body <i><a href="userdata_Game_Body.html" class="code">Body</a></i></h2>
+  <h4>Get:</h4>
+  <p>Returns the <a href="userdata_Game_Body.html" class="code">Body</a> a shape is part of.</p>
+  <hr>
+  <h2 class="code"><a id="buildable"></a>buildable <i>boolean</i></h2>
+  <h4>Get:</h4>
+  <p>Check if a shape is buildable</p>
+  <hr>
+  <h2 class="code"><a id="buoyancy"></a>buoyancy <i>number</i></h2>
+  <h4>Get:</h4>
+  <p>Returns the buoyancy multiplier of a shape.</p>
+  <hr>
+  <h2 class="code"><a id="color"></a>color <i><a href="userdata_Game_Color.html" class="code">Color</a></i></h2>
+  <h4>Get:</h4>
+  <p>Returns the color of a shape.</p>
+  <h4>Set:</h4>
+  <p>Server only</p>
+  <p>Sets the color of a shape. This is similar to coloring with the <em>Paint Tool</em>.</p>
+  <hr>
+  <h2 class="code"><a id="connectable"></a>connectable <i>boolean</i></h2>
+  <h4>Get:</h4>
+  <p>Check if a shape is connectable</p>
+  <hr>
+  <h2 class="code"><a id="convertableToDynamic"></a>convertableToDynamic <i>boolean</i></h2>
+  <h4>Get:</h4>
+  <p>Check if a shape is convertible to dynamic form</p>
+  <hr>
+  <h2 class="code"><a id="destructable"></a>destructable <i>boolean</i></h2>
+  <h4>Get:</h4>
+  <p>Check if a shape is destructable.</p>
+  <hr>
+  <h2 class="code"><a id="erasable"></a>erasable <i>boolean</i></h2>
+  <h4>Get:</h4>
+  <p>Check if a shape is erasable.</p>
+  <hr>
+  <h2 class="code"><a id="id"></a>id <i>integer</i></h2>
+  <h4>Get:</h4>
+  <p>Returns the id of a shape.</p>
+  <hr>
+  <h2 class="code"><a id="interactable"></a>interactable <i><a href="userdata_Game_Interactable.html" class="code">Interactable</a></i></h2>
+  <h4>Get:</h4>
+  <p>Returns the <a href="userdata_Game_Interactable.html" class="code">Interactable</a> of a shape, if one exists. Otherwise the function will return nil.</p>
+  <hr>
+  <h2 class="code"><a id="isBlock"></a>isBlock <i>boolean</i></h2>
+  <h4>Get:</h4>
+  <p>Return true if a shape is a basicmaterial</p>
+  <hr>
+  <h2 class="code"><a id="liftable"></a>liftable <i>boolean</i></h2>
+  <h4>Get:</h4>
+  <p>Check if a shape is liftable</p>
+  <hr>
+  <h2 class="code"><a id="localPosition"></a>localPosition <i><a href="userdata_Game_Vec3.html" class="code">Vec3</a></i></h2>
+  <h4>Get:</h4>
+  <p>Returns the local grid postition of a shape.</p>
+  <hr>
+  <h2 class="code"><a id="localRotation"></a>localRotation <i><a href="userdata_Game_Quat.html" class="code">Quat</a></i></h2>
+  <h4>Get:</h4>
+  <p>Returns the local rotation of a shape.</p>
+  <hr>
+  <h2 class="code"><a id="mass"></a>mass <i>number</i></h2>
+  <h4>Get:</h4>
+  <p>Returns the mass of a shape.</p>
+  <hr>
+  <h2 class="code"><a id="material"></a>material <i>string</i></h2>
+  <h4>Get:</h4>
+  <p>Returns the material of a shape.</p>
+  <hr>
+  <h2 class="code"><a id="materialId"></a>materialId <i>integer</i></h2>
+  <h4>Get:</h4>
+  <p>Returns the material id of a shape.</p>
+  <hr>
+  <h2 class="code"><a id="paintable"></a>paintable <i>boolean</i></h2>
+  <h4>Get:</h4>
+  <p>Check if a shape is paintable</p>
+  <hr>
+  <h2 class="code"><a id="right"></a>right <i><a href="userdata_Game_Vec3.html" class="code">Vec3</a></i></h2>
+  <h4>Get:</h4>
+  <p>Returns the direction of a shape's right side.</p>
+  <p>The direction is affected by the shape's rotation in the world.</p>
+  <hr>
+  <h2 class="code"><a id="stackedAmount"></a>stackedAmount <i>integer</i></h2>
+  <h4>Get:</h4>
+  <p>Return the amount that is stacked in the shape</p>
+  <h4>Set:</h4>
+  <p>Server only</p>
+  <p>Set the amount that is stacked in the shape</p>
+  <hr>
+  <h2 class="code"><a id="stackedItem"></a>stackedItem <i><a href="userdata_Game_Uuid.html" class="code">Uuid</a></i></h2>
+  <h4>Get:</h4>
+  <p>Return the item <a href="userdata_Game_Uuid.html" class="code">Uuid</a> that is stacked in the shape</p>
+  <h4>Set:</h4>
+  <p>Server only</p>
+  <p>Set the item <a href="userdata_Game_Uuid.html" class="code">Uuid</a> that is stacked in the shape</p>
+  <hr>
+  <h2 class="code"><a id="up"></a>up <i><a href="userdata_Game_Vec3.html" class="code">Vec3</a></i></h2>
+  <h4>Get:</h4>
+  <p>Returns the direction of a shape's top side.</p>
+  <p>The direction is affected by the shape's rotation in the world.</p>
+  <hr>
+  <h2 class="code"><a id="usable"></a>usable <i>boolean</i></h2>
+  <h4>Get:</h4>
+  <p>Check if a shape is interactable</p>
+  <hr>
+  <h2 class="code"><a id="uuid"></a>uuid <i><a href="userdata_Game_Uuid.html" class="code">Uuid</a></i></h2>
+  <h4>Get:</h4>
+  <p>Returns the uuid string unique to a shape/block type.</p>
+  <hr>
+  <h2 class="code"><a id="velocity"></a>velocity <i><a href="userdata_Game_Vec3.html" class="code">Vec3</a></i></h2>
+  <h4>Get:</h4>
+  <p>Returns the linear velocity of a shape.</p>
+  <hr>
+  <h2 class="code"><a id="worldPosition"></a>worldPosition <i><a href="userdata_Game_Vec3.html" class="code">Vec3</a></i></h2>
+  <h4>Get:</h4>
+  <p>Returns the world position of a shape.</p>
+  <hr>
+  <h2 class="code"><a id="worldRotation"></a>worldRotation <i><a href="userdata_Game_Quat.html" class="code">Quat</a></i></h2>
+  <h4>Get:</h4>
+  <p>Returns the world rotation of a shape.</p>
+  <hr>
+  <h2 class="code"><a id="xAxis"></a>xAxis <i><a href="userdata_Game_Vec3.html" class="code">Vec3</a></i></h2>
+  <h4>Get:</h4>
+  <p>Returns the local x-axis vector of a shape.</p>
+  <hr>
+  <h2 class="code"><a id="yAxis"></a>yAxis <i><a href="userdata_Game_Vec3.html" class="code">Vec3</a></i></h2>
+  <h4>Get:</h4>
+  <p>Returns the local y-axis vector of a shape.</p>
+  <hr>
+  <h2 class="code"><a id="zAxis"></a>zAxis <i><a href="userdata_Game_Vec3.html" class="code">Vec3</a></i></h2>
+  <h4>Get:</h4>
+  <p>Returns the local z-axis vector of a shape.</p>
+  <hr>
+  <h2 class="code"><a id="createJoint"></a>createJoint(shape, uuid, position, direction)</h2>
+  <p>Server only</p>
+  <p>Create a new joint</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">shape</td><td>The host shape.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">uuid</td><td>The uuid of the joint.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The joint's grid position.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">direction</td><td>The joint's normal direction.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Joint.html" class="code">Joint</a>					The created joint.</td><td></td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="destroyBlock"></a>destroyBlock(shape, position, size=nil, attackLevel=0)</h2>
+  <p>Server only</p>
+  <p>Destroy a block.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">shape</td><td>The block shape.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The local position of the removal box corner.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">size=nil</td><td>The size of the removal box. Defaults to 1x1x1 (Optional)</td></tr>
+   <tr><td class="code">integer</td><td class="code">attackLevel=0</td><td>Determines which quality level of block the attack can destroy. Setting it to 0 (default) will destroy any block.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="destroyPart"></a>destroyPart(shape, attackLevel)</h2>
+  <p>Server only</p>
+  <p>Destroy a part</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">shape</td><td>The part.</td></tr>
+   <tr><td class="code">integer</td><td class="code">attackLevel</td><td>Determines which quality level of parts the attack can destroy. Setting it to 0 (default) will destroy any part.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="destroyShape"></a>destroyShape(shape, attackLevel)</h2>
+  <p>Server only</p>
+  <p>Destroy a shape</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">shape</td><td>The shape.</td></tr>
+   <tr><td class="code">integer</td><td class="code">attackLevel</td><td>Determines which quality level of shape the attack can destroy. Setting it to 0 (default) will destroy any shape.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getAt"></a>getAt(shape)</h2>
+  <p>Returns the direction of a shape's front side.</p>
+  <p>The direction is affected by the shape's rotation in the world.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">shape</td><td>The shape.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The shape's at-axis.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getBody"></a>getBody(shape)</h2>
+  <p>Returns the <a href="userdata_Game_Body.html" class="code">Body</a> a shape is part of.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">shape</td><td>The shape.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td>The body which the shape is part of.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getBoundingBox"></a>getBoundingBox(shape)</h2>
+  <p>Returns the bounding box of a shape &ndash; the dimensions that a shape occupies when building.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">shape</td><td>The shape.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The size of the shape's bounding box.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getBuoyancy"></a>getBuoyancy(shape)</h2>
+  <p>Returns the buoyancy multiplier of a shape.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">shape</td><td>The shape.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">number</td><td>The buoyancy multiplier.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getClosestBlockLocalPosition"></a>getClosestBlockLocalPosition(shape, position)</h2>
+  <p>Transform a world position to the closest block's local position in a shape.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">shape</td><td>The block shape.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The world position.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The closest position.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getColor"></a>getColor(shape)</h2>
+  <p>Returns the color of a shape.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">shape</td><td>The shape.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Color.html" class="code">Color</a></td><td>The shape's color.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getId"></a>getId(shape)</h2>
+  <p>Returns the id of a shape.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">shape</td><td>The shape.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">integer</td><td>The shape's id.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getInteractable"></a>getInteractable(shape)</h2>
+  <p>Returns the <a href="userdata_Game_Interactable.html" class="code">Interactable</a> of a shape, if one exists. Otherwise the function will return nil.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">shape</td><td>The shape.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Interactable.html" class="code">Interactable</a></td><td>The interactable belonging to the shape.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getInterpolatedAt"></a>getInterpolatedAt(shape)</h2>
+  <p>Returns the interpolated direction of a shape's front side.</p>
+  <p>The direction is affected by the shape's rotation in the world.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">shape</td><td>The shape.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The shape's interpolated at-axis.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getInterpolatedRight"></a>getInterpolatedRight(shape)</h2>
+  <p>Returns the interpolated direction of a shape's right side.</p>
+  <p>The direction is affected by the shape's rotation in the world.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">shape</td><td>The shape.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The shape's interpolated right-axis.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getInterpolatedUp"></a>getInterpolatedUp(shape)</h2>
+  <p>Returns the interpolated direction of a shape's top side.</p>
+  <p>The direction is affected by the shape's rotation in the world.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">shape</td><td>The shape.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The shape's interpolated up-axis.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getInterpolatedWorldPosition"></a>getInterpolatedWorldPosition(shape)</h2>
+  <p>Returns the interpolated world position of a shape.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">shape</td><td>The shape.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The shape's interpolated world position.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getIsHarvest"></a>getIsHarvest(The)</h2>
+  <p>Return whether the shape uuid belongs to a harvest shape</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">The</td><td>shape uuid.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>True if the shape is harvestable.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getIsStackable"></a>getIsStackable(The)</h2>
+  <p>Return whether the shape uuid belongs to a stackable shape</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">The</td><td>shape uuid.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>True if the shape is stackable.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getJoints"></a>getJoints(shape, onlyChildJoints=true, onlySubshapes=false)</h2>
+  <p>Returns a table of all <a href="userdata_Game_Joint.html" class="code">joints</a> that are attached to the shape.</p>
+  <p>Will return all attached joints when onlyChildJoints is set to false.</p>
+  <p>Will only get the joints which are subshapes to the shape when onlySubshapes is set to true.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">shape</td><td>The shape.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">onlyChildJoints=true</td><td>Filters what joints to return. Defaults to true (Optional)</td></tr>
+   <tr><td class="code">boolean</td><td class="code">onlySubshapes=false</td><td>Only get the joints which are subshapes to the shape. Defaults to false (Optional)</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td>The table of joints attached to the shape. {<a href="userdata_Game_Joint.html" class="code">Joint</a>, ..}</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getLocalPosition"></a>getLocalPosition(shape)</h2>
+  <p>Returns the local grid postition of a shape.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">shape</td><td>The shape.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The shape's local position.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getLocalRotation"></a>getLocalRotation(shape)</h2>
+  <p>Returns the local rotation of a shape.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">shape</td><td>The shape.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td>The shape's local rotation.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getMass"></a>getMass(shape)</h2>
+  <p>Returns the mass of a shape.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">shape</td><td>The shape.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">number</td><td>The shape's mass.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getMaterial"></a>getMaterial(shape)</h2>
+  <p>Returns the material of a shape.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">shape</td><td>The shape.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">string</td><td>The shape's material.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getMaterialId"></a>getMaterialId(shape)</h2>
+  <p>Returns the material id of a shape.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">shape</td><td>The shape.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">integer</td><td>The shape's material id.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getNeighbours"></a>getNeighbours(shape)</h2>
+  <p>Server only</p>
+  <p>Returns a table of shapes which are neighbours to the shape</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">shape</td><td>The shape.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td>table of shapes. {<a href="userdata_Game_Shape.html" class="code">Shape</a>, ..}</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getPipedNeighbours"></a>getPipedNeighbours(shape)</h2>
+  <p>Server only</p>
+  <p>Returns a table of shapes which are neighbours connected with pipes to the shape</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">shape</td><td>The shape.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td>table of shapes. {<a href="userdata_Game_Shape.html" class="code">Shape</a>, ..}</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getRight"></a>getRight(shape)</h2>
+  <p>Returns the direction of a shape's right side.</p>
+  <p>The direction is affected by the shape's rotation in the world.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">shape</td><td>The shape.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The shape's right-axis.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getShapeUuid"></a>getShapeUuid(shape)</h2>
+  <p>Returns the uuid string unique to a shape/block type.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">shape</td><td>The shape.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td>The shape's uuid.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getSticky"></a>getSticky(shape)</h2>
+  <p>Returns the sticky directions of the shape for positive xyz and negative xyz.</p>
+  <p>A value of 1 means that the direction is sticky and a value of 0 means that the direction is not sticky.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">shape</td><td>The shape.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">{<a href="userdata_Game_Vec3.html" class="code">Vec3</a>,<a href="userdata_Game_Vec3.html" class="code">Vec3</a>}</td><td>The negative xyz sticky and the positive xyz sticky.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getUp"></a>getUp(shape)</h2>
+  <p>Returns the direction of a shape's top side.</p>
+  <p>The direction is affected by the shape's rotation in the world.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">shape</td><td>The shape.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The shape's up-axis.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getVelocity"></a>getVelocity(shape)</h2>
+  <p>Returns the linear velocity of a shape.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">shape</td><td>The shape.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The shape's linear velocity.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getWorldPosition"></a>getWorldPosition(shape)</h2>
+  <p>Returns the world position of a shape.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">shape</td><td>The shape.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The shape's world position.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getWorldRotation"></a>getWorldRotation(shape)</h2>
+  <p>Returns the world rotation of a shape.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">shape</td><td>The shape.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td>The shape's world rotation.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getXAxis"></a>getXAxis(shape)</h2>
+  <p>Returns the local x-axis vector of a shape.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">shape</td><td>The shape.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The shape's x-axis.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getYAxis"></a>getYAxis(shape)</h2>
+  <p>Returns the local y-axis vector of a shape.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">shape</td><td>The shape.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The shape's y-axis.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getZAxis"></a>getZAxis(shape)</h2>
+  <p>Returns the local z-axis vector of a shape.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">shape</td><td>The shape.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The shape's z-axis.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="replaceShape"></a>replaceShape(shape, uuid)</h2>
+  <p>Server only</p>
+  <p>Creates a new <a href="userdata_Game_Shape.html" class="code">Shape</a> from <a href="userdata_Game_Uuid.html" class="code">Uuid</a> to replace the given <a href="userdata_Game_Shape.html" class="code">Shape</a>.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">shape</td><td>The shape.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">uuid</td><td>The uuid of the new shape.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setColor"></a>setColor(shape, color)</h2>
+  <p>Server only</p>
+  <p>Sets the color of a shape. This is similar to coloring with the <em>Paint Tool</em>.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">shape</td><td>The shape.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Color.html" class="code">Color</a></td><td class="code">color</td><td>The color.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="shapeExists"></a>shapeExists(shape)</h2>
+  <div class="deprecated">
+   <h4>Deprecated:</h4>
+   <p>use <a href="namespace_Game_sm.html#exists" class="code">sm.exists</a></p>
+  </div>
+  <p>Return true if a shape exists.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">shape</td><td>The shape.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>Whether the shape exists.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="shapesInSphere"></a>shapesInSphere(center, radius)</h2>
+  <p>Returns a table of all shapes colliding with a given sphere.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">center</td><td>The center position of the sphere.</td></tr>
+   <tr><td class="code">number</td><td class="code">radius</td><td>The radius of the sphere.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td>The table of found shapes. {<a href="userdata_Game_Shape.html" class="code">Shape</a>, ..}</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="transformDirection"></a>transformDirection(shape, vector)</h2>
+  <p>Transform a world direction to the local shape transform.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">shape</td><td>The shape.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">vector</td><td>The untransformed direction.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The transformed direction.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="transformLocalPoint"></a>transformLocalPoint(shape, vector)</h2>
+  <p>Transform a local point to world space.</p>
+  <pre class="code">local worldPos = self.shape:transformLocalPoint( localPos )</pre>  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">shape</td><td>The shape.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">vector</td><td>The local point.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The world point.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="transformPoint"></a>transformPoint(shape, vector)</h2>
+  <p>Transform a world point to the local shape transform.</p>
+  <pre class="code">local localPos = self.shape:transformPoint( worldPos )</pre>  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">shape</td><td>The shape.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">vector</td><td>The world point.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The local point.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="transformRotation"></a>transformRotation(shape, quat)</h2>
+  <p>Transform a world rotation to the local shape transform.</p>
+  <pre class="code">local worldUp = sm.vec3.new( 0, 0, 1 )
+local worldRot = sm.vec3.getRotation( worldUp, worldDir )
+local localRot = self.shape:transformRotation( worldRot )</pre>  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">shape</td><td>The shape.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td class="code">quat</td><td>The untransformed quaternion.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td>The transformed quaternion.</td></tr>
+  </table>
+ </div>
+</body>
+</html>

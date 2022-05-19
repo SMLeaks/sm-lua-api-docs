@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Effect - Lua API Reference - Scrap Mechanic</title>
+ <link rel="stylesheet" href="styles.css">
+ <script src="script.js"></script>
+ <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+ <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+ <div id="menu">
+  <h2>Lua API Reference</h2>
+  <ul>
+   <li><a href="index.html">Introduction</a></li>
+  </ul>
+  <h2>Game environment</h2>
+  <h3>Classes</h3>
+  <ul>
+   <li><a href="class_Game_CharacterClass.html" class="code">CharacterClass</a></li>
+   <li><a href="class_Game_GameClass.html" class="code">GameClass</a></li>
+   <li><a href="class_Game_HarvestableClass.html" class="code">HarvestableClass</a></li>
+   <li><a href="class_Game_PlayerClass.html" class="code">PlayerClass</a></li>
+   <li><a href="class_Game_ScriptableObjectClass.html" class="code">ScriptableObjectClass</a></li>
+   <li><a href="class_Game_ShapeClass.html" class="code">ShapeClass</a></li>
+   <li><a href="class_Game_ToolClass.html" class="code">ToolClass</a></li>
+   <li><a href="class_Game_UnitClass.html" class="code">UnitClass</a></li>
+   <li><a href="class_Game_WorldClass.html" class="code">WorldClass</a></li>
+  </ul>
+  <h3>Object Types 'userdata'</h3>
+  <ul>
+   <li><a href="userdata_Game_AiState.html" class="code">AiState</a></li>
+   <li><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></li>
+   <li><a href="userdata_Game_BlueprintVisualization.html" class="code">BlueprintVisualization</a></li>
+   <li><a href="userdata_Game_Body.html" class="code">Body</a></li>
+   <li><a href="userdata_Game_BuilderGuide.html" class="code">BuilderGuide</a></li>
+   <li><a href="userdata_Game_Character.html" class="code">Character</a></li>
+   <li><a href="userdata_Game_Color.html" class="code">Color</a></li>
+   <li><a href="userdata_Game_Container.html" class="code">Container</a></li>
+   <li><a href="userdata_Game_CullSphereGroup.html" class="code">CullSphereGroup</a></li>
+   <li><a href="userdata_Game_Effect.html" class="code">Effect</a></li>
+   <li><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></li>
+   <li><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></li>
+   <li><a href="userdata_Game_Interactable.html" class="code">Interactable</a></li>
+   <li><a href="userdata_Game_Joint.html" class="code">Joint</a></li>
+   <li><a href="userdata_Game_Lift.html" class="code">Lift</a></li>
+   <li><a href="userdata_Game_LoadCellHandle.html" class="code">LoadCellHandle</a></li>
+   <li><a href="userdata_Game_Network.html" class="code">Network</a></li>
+   <li><a href="userdata_Game_PathNode.html" class="code">PathNode</a></li>
+   <li><a href="userdata_Game_Player.html" class="code">Player</a></li>
+   <li><a href="userdata_Game_Portal.html" class="code">Portal</a></li>
+   <li><a href="userdata_Game_Quat.html" class="code">Quat</a></li>
+   <li><a href="userdata_Game_RaycastResult.html" class="code">RaycastResult</a></li>
+   <li><a href="userdata_Game_ScriptableObject.html" class="code">ScriptableObject</a></li>
+   <li><a href="userdata_Game_Shape.html" class="code">Shape</a></li>
+   <li><a href="userdata_Game_Storage.html" class="code">Storage</a></li>
+   <li><a href="userdata_Game_Tool.html" class="code">Tool</a></li>
+   <li><a href="userdata_Game_Unit.html" class="code">Unit</a></li>
+   <li><a href="userdata_Game_Uuid.html" class="code">Uuid</a></li>
+   <li><a href="userdata_Game_Vec3.html" class="code">Vec3</a></li>
+   <li><a href="userdata_Game_Widget.html" class="code">Widget</a></li>
+   <li><a href="userdata_Game_World.html" class="code">World</a></li>
+  </ul>
+  <h3>Static Function Namespaces</h3>
+  <ul>
+   <li><a href="namespace_Game_GLOBAL.html" class="code">GLOBAL</a></li>
+   <li><a href="namespace_Game_sm.html" class="code">sm</a></li>
+   <li><a href="namespace_Game_sm_ai.html" class="code">sm.ai</a></li>
+   <li><a href="namespace_Game_sm_areaTrigger.html" class="code">sm.areaTrigger</a></li>
+   <li><a href="namespace_Game_sm_audio.html" class="code">sm.audio</a></li>
+   <li><a href="namespace_Game_sm_body.html" class="code">sm.body</a></li>
+   <li><a href="namespace_Game_sm_builderGuide.html" class="code">sm.builderGuide</a></li>
+   <li><a href="namespace_Game_sm_camera.html" class="code">sm.camera</a></li>
+   <li><a href="namespace_Game_sm_cell.html" class="code">sm.cell</a></li>
+   <li><a href="namespace_Game_sm_challenge.html" class="code">sm.challenge</a></li>
+   <li><a href="namespace_Game_sm_character.html" class="code">sm.character</a></li>
+   <li><a href="namespace_Game_sm_color.html" class="code">sm.color</a></li>
+   <li><a href="namespace_Game_sm_construction.html" class="code">sm.construction</a></li>
+   <li><a href="namespace_Game_sm_container.html" class="code">sm.container</a></li>
+   <li><a href="namespace_Game_sm_creation.html" class="code">sm.creation</a></li>
+   <li><a href="namespace_Game_sm_cullSphereGroup.html" class="code">sm.cullSphereGroup</a></li>
+   <li><a href="namespace_Game_sm_debris.html" class="code">sm.debris</a></li>
+   <li><a href="namespace_Game_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
+   <li><a href="namespace_Game_sm_effect.html" class="code">sm.effect</a></li>
+   <li><a href="namespace_Game_sm_event.html" class="code">sm.event</a></li>
+   <li><a href="namespace_Game_sm_game.html" class="code">sm.game</a></li>
+   <li><a href="namespace_Game_sm_gui.html" class="code">sm.gui</a></li>
+   <li><a href="namespace_Game_sm_gui_widget.html" class="code">sm.gui.widget</a></li>
+   <li><a href="namespace_Game_sm_harvestable.html" class="code">sm.harvestable</a></li>
+   <li><a href="namespace_Game_sm_interactable.html" class="code">sm.interactable</a></li>
+   <li><a href="namespace_Game_sm_item.html" class="code">sm.item</a></li>
+   <li><a href="namespace_Game_sm_joint.html" class="code">sm.joint</a></li>
+   <li><a href="namespace_Game_sm_json.html" class="code">sm.json</a></li>
+   <li><a href="namespace_Game_sm_localPlayer.html" class="code">sm.localPlayer</a></li>
+   <li><a href="namespace_Game_sm_log.html" class="code">sm.log</a></li>
+   <li><a href="namespace_Game_sm_melee.html" class="code">sm.melee</a></li>
+   <li><a href="namespace_Game_sm_menuCreation.html" class="code">sm.menuCreation</a></li>
+   <li><a href="namespace_Game_sm_noise.html" class="code">sm.noise</a></li>
+   <li><a href="namespace_Game_sm_particle.html" class="code">sm.particle</a></li>
+   <li><a href="namespace_Game_sm_pathNode.html" class="code">sm.pathNode</a></li>
+   <li><a href="namespace_Game_sm_pathfinder.html" class="code">sm.pathfinder</a></li>
+   <li><a href="namespace_Game_sm_physics.html" class="code">sm.physics</a></li>
+   <li><a href="namespace_Game_sm_player.html" class="code">sm.player</a></li>
+   <li><a href="namespace_Game_sm_portal.html" class="code">sm.portal</a></li>
+   <li><a href="namespace_Game_sm_projectile.html" class="code">sm.projectile</a></li>
+   <li><a href="namespace_Game_sm_quat.html" class="code">sm.quat</a></li>
+   <li><a href="namespace_Game_sm_render.html" class="code">sm.render</a></li>
+   <li><a href="namespace_Game_sm_scriptableObject.html" class="code">sm.scriptableObject</a></li>
+   <li><a href="namespace_Game_sm_shape.html" class="code">sm.shape</a></li>
+   <li><a href="namespace_Game_sm_storage.html" class="code">sm.storage</a></li>
+   <li><a href="namespace_Game_sm_tool.html" class="code">sm.tool</a></li>
+   <li><a href="namespace_Game_sm_unit.html" class="code">sm.unit</a></li>
+   <li><a href="namespace_Game_sm_util.html" class="code">sm.util</a></li>
+   <li><a href="namespace_Game_sm_uuid.html" class="code">sm.uuid</a></li>
+   <li><a href="namespace_Game_sm_vec3.html" class="code">sm.vec3</a></li>
+   <li><a href="namespace_Game_sm_visualization.html" class="code">sm.visualization</a></li>
+   <li><a href="namespace_Game_sm_world.html" class="code">sm.world</a></li>
+  </ul>
+  <h2>Terrain environment</h2>
+  <h3>Classes</h3>
+  <ul>
+  </ul>
+  <h3>Object Types 'userdata'</h3>
+  <ul>
+   <li><a href="userdata_Terrain_Color.html" class="code">Color</a></li>
+   <li><a href="userdata_Terrain_Harvestable.html" class="code">Harvestable</a></li>
+   <li><a href="userdata_Terrain_Quat.html" class="code">Quat</a></li>
+   <li><a href="userdata_Terrain_Uuid.html" class="code">Uuid</a></li>
+   <li><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></li>
+   <li><a href="userdata_Terrain_World.html" class="code">World</a></li>
+  </ul>
+  <h3>Static Function Namespaces</h3>
+  <ul>
+   <li><a href="namespace_Terrain_GLOBAL.html" class="code">GLOBAL</a></li>
+   <li><a href="namespace_Terrain_sm.html" class="code">sm</a></li>
+   <li><a href="namespace_Terrain_sm_color.html" class="code">sm.color</a></li>
+   <li><a href="namespace_Terrain_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
+   <li><a href="namespace_Terrain_sm_harvestable.html" class="code">sm.harvestable</a></li>
+   <li><a href="namespace_Terrain_sm_json.html" class="code">sm.json</a></li>
+   <li><a href="namespace_Terrain_sm_log.html" class="code">sm.log</a></li>
+   <li><a href="namespace_Terrain_sm_noise.html" class="code">sm.noise</a></li>
+   <li><a href="namespace_Terrain_sm_quat.html" class="code">sm.quat</a></li>
+   <li><a href="namespace_Terrain_sm_terrainData.html" class="code">sm.terrainData</a></li>
+   <li><a href="namespace_Terrain_sm_terrainGeneration.html" class="code">sm.terrainGeneration</a></li>
+   <li><a href="namespace_Terrain_sm_terrainTile.html" class="code">sm.terrainTile</a></li>
+   <li><a href="namespace_Terrain_sm_util.html" class="code">sm.util</a></li>
+   <li><a href="namespace_Terrain_sm_uuid.html" class="code">sm.uuid</a></li>
+   <li><a href="namespace_Terrain_sm_vec3.html" class="code">sm.vec3</a></li>
+  </ul>
+ </div>
+ <div id="content">
+  <h1 class="code">Effect</h1>
+  <h3>Associated namespace: <a href="namespace_Game_sm_effect.html" class="code">sm.effect</a></h3>
+  <p>A userdata object representing an <strong>effect</strong>.</p>
+  <h4>Values:</h4>
+  <ul>
+   <li><a href="#id" class="code">id</a></li>
+  </ul>  <h4>Functions:</h4>
+  <ul>
+   <li><a href="#bindEventCallback" class="code">bindEventCallback</a></li>
+   <li><a href="#clearEventCallbacks" class="code">clearEventCallbacks</a></li>
+   <li><a href="#destroy" class="code">destroy</a></li>
+   <li><a href="#getCameraFov" class="code">getCameraFov</a></li>
+   <li><a href="#getCameraPosition" class="code">getCameraPosition</a></li>
+   <li><a href="#getCameraRotation" class="code">getCameraRotation</a></li>
+   <li><a href="#getId" class="code">getId</a></li>
+   <li><a href="#hasActiveCamera" class="code">hasActiveCamera</a></li>
+   <li><a href="#isDone" class="code">isDone</a></li>
+   <li><a href="#isPlaying" class="code">isPlaying</a></li>
+   <li><a href="#setAutoPlay" class="code">setAutoPlay</a></li>
+   <li><a href="#setOffsetPosition" class="code">setOffsetPosition</a></li>
+   <li><a href="#setOffsetRotation" class="code">setOffsetRotation</a></li>
+   <li><a href="#setParameter" class="code">setParameter</a></li>
+   <li><a href="#setPosition" class="code">setPosition</a></li>
+   <li><a href="#setRotation" class="code">setRotation</a></li>
+   <li><a href="#setScale" class="code">setScale</a></li>
+   <li><a href="#setTimeOfDay" class="code">setTimeOfDay</a></li>
+   <li><a href="#setVelocity" class="code">setVelocity</a></li>
+   <li><a href="#setWorld" class="code">setWorld</a></li>
+   <li><a href="#start" class="code">start</a></li>
+   <li><a href="#stop" class="code">stop</a></li>
+   <li><a href="#stopFaded" class="code">stopFaded</a></li>
+   <li><a href="#stopImmediate" class="code">stopImmediate</a></li>
+  </ul>
+  <h4>Operations:</h4>
+  <table>
+   <tr><th>Operation</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Effect.html" class="code">Effect</a> == <a href="userdata_Game_Effect.html" class="code">Effect</a></td><td>Checks if two instances of <a href="userdata_Game_Effect.html" class="code">Effect</a> refer to the same Effect.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="id"></a>id <i>integer</i></h2>
+  <h4>Get:</h4>
+  <p>Returns the id of an effect.</p>
+  <hr>
+  <h2 class="code"><a id="bindEventCallback"></a>bindEventCallback(effect, methodName, params=nil, reference=nil)</h2>
+  <p>Client only</p>
+  <p>Bind an lua callback to be triggerd by the effect.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Effect.html" class="code">Effect</a></td><td class="code">effect</td><td>The effect.</td></tr>
+   <tr><td class="code">string</td><td class="code">methodName</td><td>The name of the callback method being bound. Example: MyClass.methodName( self, event, params )</td></tr>
+   <tr><td class="code">any</td><td class="code">params=nil</td><td>Parameter object passed to the callback. (Optional)</td></tr>
+   <tr><td class="code">table</td><td class="code">reference=nil</td><td>Table to recieve the callback. (Optional)</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="clearEventCallbacks"></a>clearEventCallbacks(effect)</h2>
+  <p>Client only</p>
+  <p>Clear all lua effect callbacks.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Effect.html" class="code">Effect</a></td><td class="code">effect</td><td>The effect.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="destroy"></a>destroy(effect)</h2>
+  <p>Stops and destroys the effect.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Effect.html" class="code">Effect</a></td><td class="code">effect</td><td>The effect.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getCameraFov"></a>getCameraFov(effect)</h2>
+  <p>Client only</p>
+  <p>Get the desired camera FOV.</p>
+  <p>Will return nil if the effect is not playing.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Effect.html" class="code">Effect</a></td><td class="code">effect</td><td>The effect.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">number</td><td>The FOV.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getCameraPosition"></a>getCameraPosition(effect)</h2>
+  <p>Client only</p>
+  <p>Get the desired camera position.</p>
+  <p>Will return nil if the effect is not playing.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Effect.html" class="code">Effect</a></td><td class="code">effect</td><td>The effect.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The position vector.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getCameraRotation"></a>getCameraRotation(effect)</h2>
+  <p>Client only</p>
+  <p>Get the desired camera rotation.</p>
+  <p>Will return nil if the effect is not playing.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Effect.html" class="code">Effect</a></td><td class="code">effect</td><td>The effect.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td>The rotation.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getId"></a>getId(effect)</h2>
+  <p>Returns the id of an effect.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Effect.html" class="code">Effect</a></td><td class="code">effect</td><td>The effect.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">integer</td><td>The effect's id.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="hasActiveCamera"></a>hasActiveCamera(effect)</h2>
+  <p>Client only</p>
+  <p>Check if the effect has an active camera effect.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Effect.html" class="code">Effect</a></td><td class="code">effect</td><td>The effect.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>Is active.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="isDone"></a>isDone(effect)</h2>
+  <p>Client only</p>
+  <p>Returns whether the effect is done, meaning that all effect instances have finished.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Effect.html" class="code">Effect</a></td><td class="code">effect</td><td>The effect.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>Whether effect is done.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="isPlaying"></a>isPlaying(effect)</h2>
+  <p>Client only</p>
+  <p>Returns whether the effect is currently playing.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Effect.html" class="code">Effect</a></td><td class="code">effect</td><td>The effect.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>Whether effect is playing.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setAutoPlay"></a>setAutoPlay(The, Autoplay)</h2>
+  <p>Client only</p>
+  <p>Sets an effect to start playing and repeating automatically.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Effect.html" class="code">Effect</a></td><td class="code">The</td><td>effect.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">Autoplay</td><td>enabled.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setOffsetPosition"></a>setOffsetPosition(effect, offsetPosition)</h2>
+  <p>Client only</p>
+  <p>Offsets the position of the effect relatively to the host interactable.</p>
+  <div class="note">
+   <h4>Note:</h4>
+   <p>Does not work if the effect was created without a host interactable.</p>
+  </div>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Effect.html" class="code">Effect</a></td><td class="code">effect</td><td>The effect.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">offsetPosition</td><td>The relative offset position.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setOffsetRotation"></a>setOffsetRotation(effect, offsetRotation)</h2>
+  <p>Client only</p>
+  <p>Offsets the orientation of the effect relatively to the host interactable.</p>
+  <div class="note">
+   <h4>Note:</h4>
+   <p>Does not work if the effect was created without a host interactable.</p>
+  </div>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Effect.html" class="code">Effect</a></td><td class="code">effect</td><td>The effect.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td class="code">offsetRotation</td><td>The relative offset rotation.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setParameter"></a>setParameter(effect, name, value)</h2>
+  <p>Client only</p>
+  <p>Sets a named parameter value on the effect.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Effect.html" class="code">Effect</a></td><td class="code">effect</td><td>The effect.</td></tr>
+   <tr><td class="code">string</td><td class="code">name</td><td>The name.</td></tr>
+   <tr><td class="code">any</td><td class="code">value</td><td>The effect parameter value.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setPosition"></a>setPosition(effect, position)</h2>
+  <p>Client only</p>
+  <p>Sets the position of an effect.</p>
+  <div class="note">
+   <h4>Note:</h4>
+   <p>Does not work if the effect was created with a host interactable.</p>
+  </div>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Effect.html" class="code">Effect</a></td><td class="code">effect</td><td>The effect.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The position.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setRotation"></a>setRotation(effect, rotation)</h2>
+  <p>Client only</p>
+  <p>Sets the orientation of an effect using a quaternion.</p>
+  <div class="note">
+   <h4>Note:</h4>
+   <p>Does not work if the effect was created with a host interactable.</p>
+  </div>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Effect.html" class="code">Effect</a></td><td class="code">effect</td><td>The effect.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td class="code">rotation</td><td>The rotation.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setScale"></a>setScale(effect, scale)</h2>
+  <p>Client only</p>
+  <p>Sets the scale of an effect.</p>
+  <div class="note">
+   <h4>Note:</h4>
+   <p>Only applies to effect renderables.</p>
+  </div>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Effect.html" class="code">Effect</a></td><td class="code">effect</td><td>The effect.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">scale</td><td>The scale.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setTimeOfDay"></a>setTimeOfDay(effect, enabled, start, end, inversed)</h2>
+  <p>Client only</p>
+  <p>Sets an effect to be active during specific period of the day / night cycle.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Effect.html" class="code">Effect</a></td><td class="code">effect</td><td>The effect.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">enabled</td><td>Time of day enabled.</td></tr>
+   <tr><td class="code">number</td><td class="code">start</td><td>Start normalized time of day.</td></tr>
+   <tr><td class="code">number</td><td class="code">end</td><td>End normalized time of day.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">inversed</td><td>If true, period between start-end becomes inactive time.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setVelocity"></a>setVelocity(effect, velocity)</h2>
+  <p>Client only</p>
+  <p>Sets the velocity of an effect. The effect will move along at the set velocity until it receives a new position.</p>
+  <div class="note">
+   <h4>Note:</h4>
+   <p>Does not work if the effect was created with a host interactable.</p>
+  </div>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Effect.html" class="code">Effect</a></td><td class="code">effect</td><td>The effect.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">velocity</td><td>The velocity.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setWorld"></a>setWorld(effect, world)</h2>
+  <p>Client only</p>
+  <p>Sets the world for an effect.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Effect.html" class="code">Effect</a></td><td class="code">effect</td><td>The effect.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_World.html" class="code">World</a></td><td class="code">world</td><td>The world. Defaults to world from script constext. (optional)</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="start"></a>start(effect)</h2>
+  <p>Client only</p>
+  <p>Starts playing an effect.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Effect.html" class="code">Effect</a></td><td class="code">effect</td><td>The effect.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="stop"></a>stop(effect)</h2>
+  <p>Client only</p>
+  <p>Stops playing an effect, allowing sound effects to finish.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Effect.html" class="code">Effect</a></td><td class="code">effect</td><td>The effect.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="stopFaded"></a>stopFaded(effect)</h2>
+  <p>Client only</p>
+  <p>Stops playing an effect, allow fading out sound effects.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Effect.html" class="code">Effect</a></td><td class="code">effect</td><td>The effect.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="stopImmediate"></a>stopImmediate(effect)</h2>
+  <p>Client only</p>
+  <p>Immediately stop playing an effect, sound effects ended immediately.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Effect.html" class="code">Effect</a></td><td class="code">effect</td><td>The effect.</td></tr>
+  </table>
+ </div>
+</body>
+</html>

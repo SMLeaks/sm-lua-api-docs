@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>ShapeClass - Lua API Reference - Scrap Mechanic</title>
+ <link rel="stylesheet" href="styles.css">
+ <script src="script.js"></script>
+ <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+ <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+ <div id="menu">
+  <h2>Lua API Reference</h2>
+  <ul>
+   <li><a href="index.html">Introduction</a></li>
+  </ul>
+  <h2>Game environment</h2>
+  <h3>Classes</h3>
+  <ul>
+   <li><a href="class_Game_CharacterClass.html" class="code">CharacterClass</a></li>
+   <li><a href="class_Game_GameClass.html" class="code">GameClass</a></li>
+   <li><a href="class_Game_HarvestableClass.html" class="code">HarvestableClass</a></li>
+   <li><a href="class_Game_PlayerClass.html" class="code">PlayerClass</a></li>
+   <li><a href="class_Game_ScriptableObjectClass.html" class="code">ScriptableObjectClass</a></li>
+   <li><a href="class_Game_ShapeClass.html" class="code">ShapeClass</a></li>
+   <li><a href="class_Game_ToolClass.html" class="code">ToolClass</a></li>
+   <li><a href="class_Game_UnitClass.html" class="code">UnitClass</a></li>
+   <li><a href="class_Game_WorldClass.html" class="code">WorldClass</a></li>
+  </ul>
+  <h3>Object Types 'userdata'</h3>
+  <ul>
+   <li><a href="userdata_Game_AiState.html" class="code">AiState</a></li>
+   <li><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></li>
+   <li><a href="userdata_Game_BlueprintVisualization.html" class="code">BlueprintVisualization</a></li>
+   <li><a href="userdata_Game_Body.html" class="code">Body</a></li>
+   <li><a href="userdata_Game_BuilderGuide.html" class="code">BuilderGuide</a></li>
+   <li><a href="userdata_Game_Character.html" class="code">Character</a></li>
+   <li><a href="userdata_Game_Color.html" class="code">Color</a></li>
+   <li><a href="userdata_Game_Container.html" class="code">Container</a></li>
+   <li><a href="userdata_Game_CullSphereGroup.html" class="code">CullSphereGroup</a></li>
+   <li><a href="userdata_Game_Effect.html" class="code">Effect</a></li>
+   <li><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></li>
+   <li><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></li>
+   <li><a href="userdata_Game_Interactable.html" class="code">Interactable</a></li>
+   <li><a href="userdata_Game_Joint.html" class="code">Joint</a></li>
+   <li><a href="userdata_Game_Lift.html" class="code">Lift</a></li>
+   <li><a href="userdata_Game_LoadCellHandle.html" class="code">LoadCellHandle</a></li>
+   <li><a href="userdata_Game_Network.html" class="code">Network</a></li>
+   <li><a href="userdata_Game_PathNode.html" class="code">PathNode</a></li>
+   <li><a href="userdata_Game_Player.html" class="code">Player</a></li>
+   <li><a href="userdata_Game_Portal.html" class="code">Portal</a></li>
+   <li><a href="userdata_Game_Quat.html" class="code">Quat</a></li>
+   <li><a href="userdata_Game_RaycastResult.html" class="code">RaycastResult</a></li>
+   <li><a href="userdata_Game_ScriptableObject.html" class="code">ScriptableObject</a></li>
+   <li><a href="userdata_Game_Shape.html" class="code">Shape</a></li>
+   <li><a href="userdata_Game_Storage.html" class="code">Storage</a></li>
+   <li><a href="userdata_Game_Tool.html" class="code">Tool</a></li>
+   <li><a href="userdata_Game_Unit.html" class="code">Unit</a></li>
+   <li><a href="userdata_Game_Uuid.html" class="code">Uuid</a></li>
+   <li><a href="userdata_Game_Vec3.html" class="code">Vec3</a></li>
+   <li><a href="userdata_Game_Widget.html" class="code">Widget</a></li>
+   <li><a href="userdata_Game_World.html" class="code">World</a></li>
+  </ul>
+  <h3>Static Function Namespaces</h3>
+  <ul>
+   <li><a href="namespace_Game_GLOBAL.html" class="code">GLOBAL</a></li>
+   <li><a href="namespace_Game_sm.html" class="code">sm</a></li>
+   <li><a href="namespace_Game_sm_ai.html" class="code">sm.ai</a></li>
+   <li><a href="namespace_Game_sm_areaTrigger.html" class="code">sm.areaTrigger</a></li>
+   <li><a href="namespace_Game_sm_audio.html" class="code">sm.audio</a></li>
+   <li><a href="namespace_Game_sm_body.html" class="code">sm.body</a></li>
+   <li><a href="namespace_Game_sm_builderGuide.html" class="code">sm.builderGuide</a></li>
+   <li><a href="namespace_Game_sm_camera.html" class="code">sm.camera</a></li>
+   <li><a href="namespace_Game_sm_cell.html" class="code">sm.cell</a></li>
+   <li><a href="namespace_Game_sm_challenge.html" class="code">sm.challenge</a></li>
+   <li><a href="namespace_Game_sm_character.html" class="code">sm.character</a></li>
+   <li><a href="namespace_Game_sm_color.html" class="code">sm.color</a></li>
+   <li><a href="namespace_Game_sm_construction.html" class="code">sm.construction</a></li>
+   <li><a href="namespace_Game_sm_container.html" class="code">sm.container</a></li>
+   <li><a href="namespace_Game_sm_creation.html" class="code">sm.creation</a></li>
+   <li><a href="namespace_Game_sm_cullSphereGroup.html" class="code">sm.cullSphereGroup</a></li>
+   <li><a href="namespace_Game_sm_debris.html" class="code">sm.debris</a></li>
+   <li><a href="namespace_Game_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
+   <li><a href="namespace_Game_sm_effect.html" class="code">sm.effect</a></li>
+   <li><a href="namespace_Game_sm_event.html" class="code">sm.event</a></li>
+   <li><a href="namespace_Game_sm_game.html" class="code">sm.game</a></li>
+   <li><a href="namespace_Game_sm_gui.html" class="code">sm.gui</a></li>
+   <li><a href="namespace_Game_sm_gui_widget.html" class="code">sm.gui.widget</a></li>
+   <li><a href="namespace_Game_sm_harvestable.html" class="code">sm.harvestable</a></li>
+   <li><a href="namespace_Game_sm_interactable.html" class="code">sm.interactable</a></li>
+   <li><a href="namespace_Game_sm_item.html" class="code">sm.item</a></li>
+   <li><a href="namespace_Game_sm_joint.html" class="code">sm.joint</a></li>
+   <li><a href="namespace_Game_sm_json.html" class="code">sm.json</a></li>
+   <li><a href="namespace_Game_sm_localPlayer.html" class="code">sm.localPlayer</a></li>
+   <li><a href="namespace_Game_sm_log.html" class="code">sm.log</a></li>
+   <li><a href="namespace_Game_sm_melee.html" class="code">sm.melee</a></li>
+   <li><a href="namespace_Game_sm_menuCreation.html" class="code">sm.menuCreation</a></li>
+   <li><a href="namespace_Game_sm_noise.html" class="code">sm.noise</a></li>
+   <li><a href="namespace_Game_sm_particle.html" class="code">sm.particle</a></li>
+   <li><a href="namespace_Game_sm_pathNode.html" class="code">sm.pathNode</a></li>
+   <li><a href="namespace_Game_sm_pathfinder.html" class="code">sm.pathfinder</a></li>
+   <li><a href="namespace_Game_sm_physics.html" class="code">sm.physics</a></li>
+   <li><a href="namespace_Game_sm_player.html" class="code">sm.player</a></li>
+   <li><a href="namespace_Game_sm_portal.html" class="code">sm.portal</a></li>
+   <li><a href="namespace_Game_sm_projectile.html" class="code">sm.projectile</a></li>
+   <li><a href="namespace_Game_sm_quat.html" class="code">sm.quat</a></li>
+   <li><a href="namespace_Game_sm_render.html" class="code">sm.render</a></li>
+   <li><a href="namespace_Game_sm_scriptableObject.html" class="code">sm.scriptableObject</a></li>
+   <li><a href="namespace_Game_sm_shape.html" class="code">sm.shape</a></li>
+   <li><a href="namespace_Game_sm_storage.html" class="code">sm.storage</a></li>
+   <li><a href="namespace_Game_sm_tool.html" class="code">sm.tool</a></li>
+   <li><a href="namespace_Game_sm_unit.html" class="code">sm.unit</a></li>
+   <li><a href="namespace_Game_sm_util.html" class="code">sm.util</a></li>
+   <li><a href="namespace_Game_sm_uuid.html" class="code">sm.uuid</a></li>
+   <li><a href="namespace_Game_sm_vec3.html" class="code">sm.vec3</a></li>
+   <li><a href="namespace_Game_sm_visualization.html" class="code">sm.visualization</a></li>
+   <li><a href="namespace_Game_sm_world.html" class="code">sm.world</a></li>
+  </ul>
+  <h2>Terrain environment</h2>
+  <h3>Classes</h3>
+  <ul>
+  </ul>
+  <h3>Object Types 'userdata'</h3>
+  <ul>
+   <li><a href="userdata_Terrain_Color.html" class="code">Color</a></li>
+   <li><a href="userdata_Terrain_Harvestable.html" class="code">Harvestable</a></li>
+   <li><a href="userdata_Terrain_Quat.html" class="code">Quat</a></li>
+   <li><a href="userdata_Terrain_Uuid.html" class="code">Uuid</a></li>
+   <li><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></li>
+   <li><a href="userdata_Terrain_World.html" class="code">World</a></li>
+  </ul>
+  <h3>Static Function Namespaces</h3>
+  <ul>
+   <li><a href="namespace_Terrain_GLOBAL.html" class="code">GLOBAL</a></li>
+   <li><a href="namespace_Terrain_sm.html" class="code">sm</a></li>
+   <li><a href="namespace_Terrain_sm_color.html" class="code">sm.color</a></li>
+   <li><a href="namespace_Terrain_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
+   <li><a href="namespace_Terrain_sm_harvestable.html" class="code">sm.harvestable</a></li>
+   <li><a href="namespace_Terrain_sm_json.html" class="code">sm.json</a></li>
+   <li><a href="namespace_Terrain_sm_log.html" class="code">sm.log</a></li>
+   <li><a href="namespace_Terrain_sm_noise.html" class="code">sm.noise</a></li>
+   <li><a href="namespace_Terrain_sm_quat.html" class="code">sm.quat</a></li>
+   <li><a href="namespace_Terrain_sm_terrainData.html" class="code">sm.terrainData</a></li>
+   <li><a href="namespace_Terrain_sm_terrainGeneration.html" class="code">sm.terrainGeneration</a></li>
+   <li><a href="namespace_Terrain_sm_terrainTile.html" class="code">sm.terrainTile</a></li>
+   <li><a href="namespace_Terrain_sm_util.html" class="code">sm.util</a></li>
+   <li><a href="namespace_Terrain_sm_uuid.html" class="code">sm.uuid</a></li>
+   <li><a href="namespace_Terrain_sm_vec3.html" class="code">sm.vec3</a></li>
+  </ul>
+ </div>
+ <div id="content">
+  <h1 class="code">ShapeClass</h1>
+  <p>A script class that is instanced for every "scripted" <a href="userdata_Game_Interactable.html" class="code">Interactable</a> <a href="userdata_Game_Shape.html" class="code">Shape</a> in the game.</p>
+  <p>An interactable part is a <a href="userdata_Game_Shape.html" class="code">Shape</a> that is usually built by the player and can be interacted with. For instance a button or an engine.</p>
+  <p>Can receive events sent with <a href="namespace_Game_sm_event.html#sendToInteractable" class="code">sm.event.sendToInteractable</a>.</p>
+  <h4>Fields:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Interactable.html" class="code">Interactable</a></td><td class="code">interactable</td><td>The <a href="userdata_Game_Interactable.html" class="code">Interactable</a> game object belonging to this class instance. (The same as shape.interactable)</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">shape</td><td>The <a href="userdata_Game_Shape.html" class="code">Shape</a> game object that the <a href="userdata_Game_Interactable.html" class="code">Interactable</a> is attached to. (The same as interactable.shape)</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Network.html" class="code">Network</a></td><td class="code">network</td><td>A <a href="userdata_Game_Network.html" class="code">Network</a> object that can be used to send messages between client and server.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Storage.html" class="code">Storage</a></td><td class="code">storage</td><td>(Server side only.) A <a href="userdata_Game_Storage.html" class="code">Storage</a> object that can be used to store data for the next time loading this object after being unloaded.</td></tr>
+   <tr><td class="code">any</td><td class="code">data</td><td>Data from the "data" json element.</td></tr>
+   <tr><td class="code">any</td><td class="code">params</td><td>Parameter set with <a href="userdata_Game_Interactable.html#setParams" class="code">Interactable.setParams</a> when created from a script.</td></tr>
+  </table>
+  <h4>Constants:</h4>
+  <ul>
+   <li><a href="#colorHighlight" class="code">colorHighlight</a></li>
+   <li><a href="#colorNormal" class="code">colorNormal</a></li>
+   <li><a href="#connectionInput" class="code">connectionInput</a></li>
+   <li><a href="#connectionOutput" class="code">connectionOutput</a></li>
+   <li><a href="#maxChildCount" class="code">maxChildCount</a></li>
+   <li><a href="#maxParentCount" class="code">maxParentCount</a></li>
+   <li><a href="#poseWeightCount" class="code">poseWeightCount</a></li>
+  </ul>
+  <h4>Common callbacks:</h4>
+  <ul>
+   <li><a href="#server_onCreate" class="code">server_onCreate</a></li>
+   <li><a href="#client_onCreate" class="code">client_onCreate</a></li>
+   <li><a href="#server_onDestroy" class="code">server_onDestroy</a></li>
+   <li><a href="#client_onDestroy" class="code">client_onDestroy</a></li>
+   <li><a href="#server_onRefresh" class="code">server_onRefresh</a></li>
+   <li><a href="#client_onRefresh" class="code">client_onRefresh</a></li>
+   <li><a href="#server_onFixedUpdate" class="code">server_onFixedUpdate</a></li>
+   <li><a href="#client_onFixedUpdate" class="code">client_onFixedUpdate</a></li>
+   <li><a href="#client_onUpdate" class="code">client_onUpdate</a></li>
+   <li><a href="#client_onClientDataUpdate" class="code">client_onClientDataUpdate</a></li>
+  </ul>
+  <h4>Callbacks:</h4>
+  <ul>
+   <li><a href="#server_onUnload" class="code">server_onUnload</a></li>
+   <li><a href="#client_onInteract" class="code">client_onInteract</a></li>
+   <li><a href="#client_onTinker" class="code">client_onTinker</a></li>
+   <li><a href="#client_onInteractThroughJoint" class="code">client_onInteractThroughJoint</a></li>
+   <li><a href="#client_onAction" class="code">client_onAction</a></li>
+   <li><a href="#client_onProjectile" class="code">client_onProjectile</a></li>
+   <li><a href="#server_onProjectile" class="code">server_onProjectile</a></li>
+   <li><a href="#server_onSledgehammer" class="code">server_onSledgehammer</a></li>
+   <li><a href="#client_onMelee" class="code">client_onMelee</a></li>
+   <li><a href="#server_onMelee" class="code">server_onMelee</a></li>
+   <li><a href="#server_onExplosion" class="code">server_onExplosion</a></li>
+   <li><a href="#client_onCollision" class="code">client_onCollision</a></li>
+   <li><a href="#server_onCollision" class="code">server_onCollision</a></li>
+   <li><a href="#client_canErase" class="code">client_canErase</a></li>
+   <li><a href="#server_canErase" class="code">server_canErase</a></li>
+   <li><a href="#client_canInteract" class="code">client_canInteract</a></li>
+   <li><a href="#client_canInteractThroughJoint" class="code">client_canInteractThroughJoint</a></li>
+   <li><a href="#client_canTinker" class="code">client_canTinker</a></li>
+   <li><a href="#client_getAvailableParentConnectionCount" class="code">client_getAvailableParentConnectionCount</a></li>
+   <li><a href="#client_getAvailableChildConnectionCount" class="code">client_getAvailableChildConnectionCount</a></li>
+   <li><a href="#client_canCarry" class="code">client_canCarry</a></li>
+  </ul>
+  <hr>
+  <h2 class="code"><a id="colorHighlight"></a>colorHighlight <i><a href="userdata_Game_Color.html" class="code">Color</a></i></h2>
+  <p>Sets the connection-point highlight color. The connection-point is shown when using the <em>Connect Tool</em> and selecting the interactable. (Defaults to white)</p>
+  <hr>
+  <h2 class="code"><a id="colorNormal"></a>colorNormal <i><a href="userdata_Game_Color.html" class="code">Color</a></i></h2>
+  <p>Sets the connection-point normal color. The connection-point is shown when using the <em>Connect Tool</em>. (Defaults to gray)</p>
+  <hr>
+  <h2 class="code"><a id="connectionInput"></a>connectionInput <i>integer</i></h2>
+  <p>Sets the connection input type flags. (See <a href="namespace_Game_sm_interactable.html#connectionType" class="code">sm.interactable.connectionType</a>) (Defaults to 0, no input)</p>
+  <hr>
+  <h2 class="code"><a id="connectionOutput"></a>connectionOutput <i>integer</i></h2>
+  <p>Sets the connection output type flags. (See <a href="namespace_Game_sm_interactable.html#connectionType" class="code">sm.interactable.connectionType</a>) (Defaults to 0, no output)</p>
+  <hr>
+  <h2 class="code"><a id="maxChildCount"></a>maxChildCount <i>integer</i></h2>
+  <p>Sets the maximum number of allowed child connections &ndash; the number of output connections. (Defaults to 0, no allowed child connections)</p>
+  <div class="note">
+   <h4>Note:</h4>
+   <p>Implement <a href="class_Game_ShapeClass.html#client_getAvailableChildConnectionCount" class="code">client_getAvailableChildConnectionCount</a> to control specific types.</p>
+  </div>
+  <hr>
+  <h2 class="code"><a id="maxParentCount"></a>maxParentCount <i>integer</i></h2>
+  <p>Sets the maximum number of allowed parent connections &ndash; the number of input connections. (Defaults to 0, no allowed parent connections)</p>
+  <div class="note">
+   <h4>Note:</h4>
+   <p>Implement <a href="class_Game_ShapeClass.html#client_getAvailableParentConnectionCount" class="code">client_getAvailableParentConnectionCount</a> to control specific types.</p>
+  </div>
+  <hr>
+  <h2 class="code"><a id="poseWeightCount"></a>poseWeightCount <i>integer</i></h2>
+  <p>Sets the number of animation poses the shape's model is able to use.</p>
+  <p>Value can be are integers 0-3. (Defaults to 0, no poses)</p>
+  <p>A value greater that 0 indicates that the renderable's "mesh" is set up blend into "pose0", "pose1", "pose2".</p>
+  <p>This is, for instance, used to move the lever on the engine.</p>
+  <hr>
+  <h2 class="code"><a id="server_onCreate"></a>server_onCreate(self) <i>serverEventCallback</i></h2>
+  <p>Called when the scripted object is created. This occurs when a new object is built, spawned, or loaded from the save file.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="client_onCreate"></a>client_onCreate(self) <i>clientEventCallback</i></h2>
+  <p>Called when the scripted object is created. This occurs when a new object is built, spawned, or loaded from the save file.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="server_onDestroy"></a>server_onDestroy(self) <i>serverEventCallback</i></h2>
+  <p>Called when the scripted object is destroyed.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="client_onDestroy"></a>client_onDestroy(self) <i>clientEventCallback</i></h2>
+  <p>Called when the scripted object is destroyed.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="server_onRefresh"></a>server_onRefresh(self) <i>serverEventCallback</i></h2>
+  <p>Called if the Lua script attached to the object is modified while the game is running.</p>
+  <div class="note">
+   <h4>Note:</h4>
+   <p>This event requires Scrap Mechanic to be running with the '-dev' flag. This will allow scripts to automatically refresh upon changes.</p>
+  </div>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="client_onRefresh"></a>client_onRefresh(self) <i>clientEventCallback</i></h2>
+  <p>Called if the Lua script attached to the object is modified while the game is running.</p>
+  <div class="note">
+   <h4>Note:</h4>
+   <p>This event requires Scrap Mechanic to be running with the '-dev' flag. This will allow scripts to automatically refresh upon changes.</p>
+  </div>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="server_onFixedUpdate"></a>server_onFixedUpdate(self, timeStep) <i>serverEventCallback</i></h2>
+  <p>Called every game tick &ndash; 40 ticks a second. If the frame rate is lower than 40 fps, this event may be called twice.</p>
+  <p>During a fixed update, physics and logic between interactables are updated.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+   <tr><td class="code">number</td><td class="code">timeStep</td><td>The time period of a tick. (Is always 0.025, a 1/40th of a second.)</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="client_onFixedUpdate"></a>client_onFixedUpdate(self, timeStep) <i>clientEventCallback</i></h2>
+  <p>Called every game tick &ndash; 40 ticks a second. If the frame rate is lower than 40 fps, this event may be called twice.</p>
+  <p>During a fixed update, physics and logic between interactables are updated.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+   <tr><td class="code">number</td><td class="code">timeStep</td><td>The time period of a tick. (Is always 0.025, a 1/40th of a second.)</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="client_onUpdate"></a>client_onUpdate(self, deltaTime) <i>clientEventCallback</i></h2>
+  <p>Called every frame.</p>
+  <p>During a frame update, graphics, animations and effects are updated.</p>
+  <div class="warning">
+   <h4>Warning:</h4>
+   <p>Because of how frequent this event is called, the game's frame rate is greatly affected by the amount of code executed here.</p>
+   <p>For any non-graphics related code, consider using <a href="class_Game_ShapeClass.html#client_onFixedUpdate" class="code">client_onFixedUpdate</a> instead.</p>
+   <p>If the event is not in use, consider removing it from the script. (Event callbacks that are not implemented will not be called.)</p>
+  </div>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+   <tr><td class="code">number</td><td class="code">deltaTime</td><td>Delta time since the last frame.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="client_onClientDataUpdate"></a>client_onClientDataUpdate(self, data, channel) <i>clientEventCallback</i></h2>
+  <p>Called when the client receives new client data updates from the server set with <a href="userdata_Game_Network.html#setClientData" class="code">Network.setClientData</a>.</p>
+  <p>Data set in this way is persistent and the latest data will automatically be sent to new clients.</p>
+  <p>The data will arrive after <a href="class_Game_ShapeClass.html#client_onCreate" class="code">client_onCreate</a> during the same tick.</p>
+  <p>Channel 1 will be received before channel 2 if both are updated.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+   <tr><td class="code">any</td><td class="code">data</td><td>Any lua object set with <a href="userdata_Game_Network.html#setClientData" class="code">Network.setClientData</a></td></tr>
+   <tr><td class="code">integer</td><td class="code">channel</td><td>Client data channel, 1 or 2. (default: 1)</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="server_onUnload"></a>server_onUnload(self) <i>serverEventCallback</i></h2>
+  <p>Called when the <a href="userdata_Game_Interactable.html" class="code">Interactable</a> is unloaded from the game because no <a href="userdata_Game_Player.html" class="code">Player</a>'s <a href="userdata_Game_Character.html" class="code">Character</a> is close enough to it. Also called when exiting the game.</p>
+  <div class="note">
+   <h4>Note:</h4>
+   <p>The creation, consisting of one or more <a href="userdata_Game_Body.html" class="code">bodies</a>, consisting of one or more <a href="userdata_Game_Shape.html" class="code">shapes</a> joined together with <a href="userdata_Game_Joint.html" class="code">joints</a> are always unloaded at the same time.</p>
+  </div>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="client_onInteract"></a>client_onInteract(self, character, state) <i>clientEventCallback</i></h2>
+  <p>Called when a <a href="userdata_Game_Player.html" class="code">Player</a> is interacting with the <a href="userdata_Game_Interactable.html" class="code">Interactable</a> by pressing the 'Use' key (default 'E') or pressing '0&ndash;9' if the <a href="userdata_Game_Interactable.html" class="code">Interactable</a> is connected to a seat. (See: <a href="userdata_Game_Interactable.html#pressSeatInteractable" class="code">Interactable.pressSeatInteractable</a>)</p>
+  <div class="note">
+   <h4>Note:</h4>
+   <p>If this method is defined, the player will see the interaction text "E Use" when looking at the <a href="userdata_Game_Shape.html" class="code">Shape</a>.</p>
+  </div>
+  <pre class="code">-- Example of interaction
+function MySwitch.client_onInteract( self, _, state ) 
+	if state == true then
+		self.network:sendToServer( 'sv_n_toggle' )
+	end
+end
+
+function MySwitch.sv_n_toggle( self ) 
+	-- Toggle on and off
+	self.interactable.active = not self.interactable.active
+end</pre>  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The <a href="userdata_Game_Character.html" class="code">Character</a> of the <a href="userdata_Game_Player.html" class="code">Player</a> that is interacting with the <a href="userdata_Game_Interactable.html" class="code">Interactable</a>.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">state</td><td>The interaction state. (true if pressed, false if released)</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="client_onTinker"></a>client_onTinker(self, character, state) <i>clientEventCallback</i></h2>
+  <p>Called when a <a href="userdata_Game_Player.html" class="code">Player</a> is tinkering with the <a href="userdata_Game_Interactable.html" class="code">Interactable</a> by pressing the 'Tinker' key (default 'U').</p>
+  <div class="note">
+   <h4>Note:</h4>
+   <p>Tinkering usually means opening the upgrade menu for seats.</p>
+  </div>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The <a href="userdata_Game_Character.html" class="code">Character</a> of the <a href="userdata_Game_Player.html" class="code">Player</a> that is tinkering with the <a href="userdata_Game_Interactable.html" class="code">Interactable</a>.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">state</td><td>The interaction state. (true if pressed, false if released)</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="client_onInteractThroughJoint"></a>client_onInteractThroughJoint(self, character, state, joint) <i>clientEventCallback</i></h2>
+  <p>Called when a <a href="userdata_Game_Player.html" class="code">Player</a> is interacting with the <a href="userdata_Game_Interactable.html" class="code">Interactable</a> through a connected <a href="userdata_Game_Joint.html" class="code">Joint</a>.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The <a href="userdata_Game_Character.html" class="code">Character</a> of the <a href="userdata_Game_Player.html" class="code">Player</a> that is interacting with the <a href="userdata_Game_Interactable.html" class="code">Interactable</a>.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">state</td><td>The interaction state. Always true. <a href="class_Game_ShapeClass.html#client_onInteractThroughJoint" class="code">client_onInteractThroughJoint</a> only receives the key down event.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Joint.html" class="code">Joint</a></td><td class="code">joint</td><td>The <a href="userdata_Game_Joint.html" class="code">Joint</a> that the <a href="userdata_Game_Player.html" class="code">Player</a> interacted through.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="client_onAction"></a>client_onAction(self, action, state) <i>clientEventCallback</i></h2>
+  <p>Called when the interactable receives input from a <a href="userdata_Game_Player.html" class="code">Player</a> with the <a href="userdata_Game_Character.html" class="code">Character</a> locked to the <a href="userdata_Game_Interactable.html" class="code">Interactable</a>.</p>
+  <p>When a <a href="userdata_Game_Character.html" class="code">Character</a> is seated in an <a href="userdata_Game_Interactable.html" class="code">Interactable</a> <a href="userdata_Game_Shape.html" class="code">Shape</a> with a "seat" component, the <a href="userdata_Game_Character.html" class="code">Character</a> is also considered locked to the <a href="userdata_Game_Interactable.html" class="code">Interactable</a>.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+   <tr><td class="code">integer</td><td class="code">action</td><td>The action as an integer value. More details in <a href="namespace_Game_sm_interactable.html#actions" class="code">sm.interactable.actions</a>.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">state</td><td>True on begin action, false on end action.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="client_onProjectile"></a>client_onProjectile(self, position, airTime, velocity, projectileName, shooter, damage, customData, normal, uuid) <i>clientEventCallback</i></h2>
+  <p>Called when the <a href="userdata_Game_Shape.html" class="code">Shape</a> is hit by a projectile.</p>
+  <div class="note">
+   <h4>Note:</h4>
+   <p>If the shooter is destroyed before the projectile hits, the shooter value will be nil.</p>
+  </div>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The position in world space where the projectile hit the <a href="userdata_Game_Shape.html" class="code">Shape</a>.</td></tr>
+   <tr><td class="code">number</td><td class="code">airTime</td><td>The time, in seconds, that the projectile spent flying before the hit.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">velocity</td><td>The velocity of the projectile at impact.</td></tr>
+   <tr><td class="code">string</td><td class="code">projectileName</td><td>The name of the projectile. (Legacy, use uuid instead)</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Player.html" class="code">Player</a>/<a href="userdata_Game_Shape.html" class="code">Shape</a>/<a href="userdata_Game_Harvestable.html" class="code">Harvestable</a>/nil</td><td class="code">shooter</td><td>The shooter, can be a <a href="userdata_Game_Player.html" class="code">Player</a>, <a href="userdata_Game_Shape.html" class="code">Shape</a>, <a href="userdata_Game_Harvestable.html" class="code">Harvestable</a> or nil if unknown. Projectiles shot by a <a href="userdata_Game_Unit.html" class="code">Unit</a> will be nil on the client.</td></tr>
+   <tr><td class="code">number</td><td class="code">damage</td><td>The damage value of the projectile.</td></tr>
+   <tr><td class="code">any</td><td class="code">customData</td><td>A Lua object that can be defined at shoot time using <a href="namespace_Game_sm_projectile.html#customProjectileAttack" class="code">sm.projectile.customProjectileAttack</a> or an other custom version. </td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">normal</td><td>The normal at the point of impact.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">uuid</td><td>The uuid of the projectile.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="server_onProjectile"></a>server_onProjectile(self, position, airTime, velocity, projectileName, shooter, damage, customData, normal, uuid) <i>serverEventCallback</i></h2>
+  <p>Called when the <a href="userdata_Game_Shape.html" class="code">Shape</a> is hit by a projectile.</p>
+  <div class="note">
+   <h4>Note:</h4>
+   <p>If the shooter is destroyed before the projectile hits, the shooter value will be nil.</p>
+  </div>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The position in world space where the projectile hit the <a href="userdata_Game_Shape.html" class="code">Shape</a>.</td></tr>
+   <tr><td class="code">number</td><td class="code">airTime</td><td>The time, in seconds, that the projectile spent flying before the hit.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">velocity</td><td>The velocity of the projectile at impact.</td></tr>
+   <tr><td class="code">string</td><td class="code">projectileName</td><td>The name of the projectile. (Legacy, use uuid instead)</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Player.html" class="code">Player</a>/<a href="userdata_Game_Unit.html" class="code">Unit</a>/<a href="userdata_Game_Shape.html" class="code">Shape</a>/<a href="userdata_Game_Harvestable.html" class="code">Harvestable</a>/nil</td><td class="code">shooter</td><td>The shooter. Can be a <a href="userdata_Game_Player.html" class="code">Player</a>, <a href="userdata_Game_Unit.html" class="code">Unit</a>, <a href="userdata_Game_Shape.html" class="code">Shape</a>, <a href="userdata_Game_Harvestable.html" class="code">Harvestable</a> or nil if unknown.</td></tr>
+   <tr><td class="code">integer</td><td class="code">damage</td><td>The damage value of the projectile.</td></tr>
+   <tr><td class="code">any</td><td class="code">customData</td><td>A Lua object that can be defined at shoot time using <a href="namespace_Game_sm_projectile.html#customProjectileAttack" class="code">sm.projectile.customProjectileAttack</a> or an other custom version. </td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">normal</td><td>The normal at the point of impact.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">uuid</td><td>The uuid of the projectile.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="server_onSledgehammer"></a>server_onSledgehammer() <i>serverEventCallback</i></h2>
+  <div class="deprecated">
+   <h4>Deprecated:</h4>
+   <p>Use <a href="class_Game_ShapeClass.html#server_onMelee" class="code">server_onMelee</a> instead.</p>
+  </div>
+  <hr>
+  <h2 class="code"><a id="client_onMelee"></a>client_onMelee(self, position, attacker, damage, power, direction, normal) <i>clientEventCallback</i></h2>
+  <p>Called when the <a href="userdata_Game_Shape.html" class="code">Shape</a> is hit by a melee attack.</p>
+  <div class="note">
+   <h4>Note:</h4>
+   <p>If the attacker is destroyed before the hit lands, the attacker value will be nil.</p>
+  </div>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The position in world space where the <a href="userdata_Game_Shape.html" class="code">Shape</a> was hit.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Player.html" class="code">Player</a>/nil</td><td class="code">attacker</td><td>The attacker. Can be a <a href="userdata_Game_Player.html" class="code">Player</a> or nil if unknown. Attacks made by a <a href="userdata_Game_Unit.html" class="code">Unit</a> will be nil on the client.</td></tr>
+   <tr><td class="code">integer</td><td class="code">damage</td><td>The damage value of the melee hit.</td></tr>
+   <tr><td class="code">number</td><td class="code">power</td><td>The physical impact impact of the hit.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">direction</td><td>The direction that the melee attack was made.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">normal</td><td>The normal at the point of impact.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="server_onMelee"></a>server_onMelee(self, position, attacker, damage, power, direction, normal) <i>serverEventCallback</i></h2>
+  <p>Called when the <a href="userdata_Game_Shape.html" class="code">Shape</a> is hit by a melee attack.</p>
+  <div class="note">
+   <h4>Note:</h4>
+   <p>If the attacker is destroyed before the hit lands, the attacker value will be nil.</p>
+  </div>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The position in world space where the <a href="userdata_Game_Shape.html" class="code">Shape</a> was hit.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Player.html" class="code">Player</a>/<a href="userdata_Game_Unit.html" class="code">Unit</a>/nil</td><td class="code">attacker</td><td>The attacker. Can be a <a href="userdata_Game_Player.html" class="code">Player</a>, <a href="userdata_Game_Unit.html" class="code">Unit</a> or nil if unknown.</td></tr>
+   <tr><td class="code">integer</td><td class="code">damage</td><td>The damage value of the melee hit.</td></tr>
+   <tr><td class="code">number</td><td class="code">power</td><td>The physical impact impact of the hit.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">direction</td><td>The direction that the melee attack was made.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">normal</td><td>The normal at the point of impact.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="server_onExplosion"></a>server_onExplosion(self, center, destructionLevel) <i>serverEventCallback</i></h2>
+  <p>Called when the <a href="userdata_Game_Shape.html" class="code">Shape</a> is hit by an explosion.</p>
+  <p>For more information about explosions, see <a href="namespace_Game_sm_physics.html#explode" class="code">sm.physics.explode</a>.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">center</td><td>The center of the explosion.</td></tr>
+   <tr><td class="code">integer</td><td class="code">destructionLevel</td><td>The level of destruction done by this explosion. Corresponds to the 'durability' rating of a <a href="userdata_Game_Shape.html" class="code">Shape</a>.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="client_onCollision"></a>client_onCollision(self, other, position, selfPointVelocity, otherPointVelocity, normal) <i>clientEventCallback</i></h2>
+  <p>Called when the <a href="userdata_Game_Shape.html" class="code">Shape</a> collides with another object.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a>/<a href="userdata_Game_Character.html" class="code">Character</a>/<a href="userdata_Game_Harvestable.html" class="code">Harvestable</a>/<a href="userdata_Game_Lift.html" class="code">Lift</a>/nil</td><td class="code">other</td><td>The other object. Nil if terrain.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The position in world space where the collision occurred.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">selfPointVelocity</td><td>The velocity that that the <a href="userdata_Game_Shape.html" class="code">Shape</a> had at the point of collision.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">otherPointVelocity</td><td>The velocity that that the other object had at the point of collision.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">normal</td><td>The collision normal between the <a href="userdata_Game_Shape.html" class="code">Shape</a> and the other other object.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="server_onCollision"></a>server_onCollision(self, other, position, selfPointVelocity, otherPointVelocity, normal) <i>serverEventCallback</i></h2>
+  <p>Called when the <a href="userdata_Game_Shape.html" class="code">Shape</a> collides with another object.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a>/<a href="userdata_Game_Character.html" class="code">Character</a>/<a href="userdata_Game_Harvestable.html" class="code">Harvestable</a>/<a href="userdata_Game_Lift.html" class="code">Lift</a>/nil</td><td class="code">other</td><td>The other object. Nil if terrain.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The position in world space where the collision occurred.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">selfPointVelocity</td><td>The velocity that that the <a href="userdata_Game_Shape.html" class="code">Shape</a> had at the point of collision.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">otherPointVelocity</td><td>The velocity that that the other object had at the point of collision.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">normal</td><td>The collision normal between the <a href="userdata_Game_Shape.html" class="code">Shape</a> and the other other object.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="client_canErase"></a>client_canErase(self) <i>clientEventCallback</i></h2>
+  <p>Called to check whether the <a href="userdata_Game_Shape.html" class="code">Shape</a> can be erased at this moment.</p>
+  <div class="note">
+   <h4>Note:</h4>
+   <p>Can be used to override restrictions. (See <a href="userdata_Game_Shape.html#erasable" class="code">Shape.erasable</a>)</p>
+  </div>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>A boolean indicating whether the <a href="userdata_Game_Shape.html" class="code">Shape</a> can be erased or not. (Defaults to true)</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="server_canErase"></a>server_canErase(self) <i>serverEventCallback</i></h2>
+  <p>Called to check whether the <a href="userdata_Game_Shape.html" class="code">Shape</a> can be erased at this moment.</p>
+  <div class="note">
+   <h4>Note:</h4>
+   <p>Can be used to override restrictions. (See <a href="userdata_Game_Shape.html#erasable" class="code">Shape.erasable</a>)</p>
+  </div>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>A boolean indicating whether the <a href="userdata_Game_Shape.html" class="code">Shape</a> can be erased or not. (Defaults to true)</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="client_canInteract"></a>client_canInteract(self, character) <i>clientEventCallback</i></h2>
+  <p>Called to check whether the <a href="userdata_Game_Interactable.html" class="code">Interactable</a> can be interacted with at this moment.</p>
+  <div class="note">
+   <h4>Note:</h4>
+   <p>This callback can also be used to change the interaction text shown to the player using <a href="namespace_Game_sm_gui.html#setInteractionText" class="code">sm.gui.setInteractionText</a>. (Defaults to "E Use")</p>
+  </div>
+  <div class="note">
+   <h4>Note:</h4>
+   <p>Can be used to override restrictions. (See <a href="userdata_Game_Shape.html#usable" class="code">Shape.usable</a>)</p>
+  </div>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The <a href="userdata_Game_Character.html" class="code">Character</a> of the <a href="userdata_Game_Player.html" class="code">Player</a> that is looking at the <a href="userdata_Game_Shape.html" class="code">Shape</a>.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>A boolean indicating whether the interactable can be interacted with or not. (Defaults to true if <a href="class_Game_ShapeClass.html#client_onInteract" class="code">client_onInteract</a> is implemented, otherwise false)</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="client_canInteractThroughJoint"></a>client_canInteractThroughJoint(self, character) <i>clientEventCallback</i></h2>
+  <p>Called to check whether the <a href="userdata_Game_Interactable.html" class="code">Interactable</a> can be interacted with through a child <a href="userdata_Game_Joint.html" class="code">Joint</a> at this moment.</p>
+  <div class="note">
+   <h4>Note:</h4>
+   <p>This callback can also be used to change the interaction text shown to the player using <a href="namespace_Game_sm_gui.html#setInteractionText" class="code">sm.gui.setInteractionText</a>. (Defaults to "E Use")</p>
+  </div>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The <a href="userdata_Game_Character.html" class="code">Character</a> of the <a href="userdata_Game_Player.html" class="code">Player</a> that is looking at the <a href="userdata_Game_Joint.html" class="code">Joint</a>.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>A boolean indicating whether the interactable can be interacted with or not. (Defaults to true if <a href="class_Game_ShapeClass.html#client_onInteractThroughJoint" class="code">client_onInteractThroughJoint</a> is implemented, otherwise false)</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="client_canTinker"></a>client_canTinker(self, character) <i>clientEventCallback</i></h2>
+  <p>Called to check whether the <a href="userdata_Game_Interactable.html" class="code">Interactable</a> can be tinkered with at this moment.</p>
+  <div class="note">
+   <h4>Note:</h4>
+   <p>Tinkering usually means opening the upgrade menu for seats.</p>
+  </div>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The <a href="userdata_Game_Character.html" class="code">Character</a> of the <a href="userdata_Game_Player.html" class="code">Player</a> that is looking at the <a href="userdata_Game_Shape.html" class="code">Shape</a>.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>A boolean indicating whether the interactable can be tinkered with or not. (Defaults to true if <a href="class_Game_ShapeClass.html#client_onTinker" class="code">client_onTinker</a> is implemented, otherwise false)</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="client_getAvailableParentConnectionCount"></a>client_getAvailableParentConnectionCount(self, flags) <i>clientEventCallback</i></h2>
+  <p>Called to check how many more parent (input) connections with the given type <a href="namespace_Game_sm_interactable.html#connectionType" class="code">flag</a> the <a href="userdata_Game_Interactable.html" class="code">Interactable</a> will accept. Return 1 or more to allow a connection of this type.</p>
+  <pre class="code">-- Example of implementation where logic and power shares the same slot but electricity counts as separate
+MyIteractable.maxParentCount = 2
+MyIteractable.connectionInput = sm.interactable.connectionType.logic + sm.interactable.connectionType.power + sm.interactable.connectionType.electricity
+
+function MyIteractable.client_getAvailableParentConnectionCount( self, flags )
+	if bit.band( flags, bit.bor( sm.interactable.connectionType.logic, sm.interactable.connectionType.power ) ) ~= 0 then
+		return 1 - self:getParents( bit.bor( sm.interactable.connectionType.logic, sm.interactable.connectionType.power ) )
+	end
+	if bit.band( flags, sm.interactable.connectionType.electricity ) ~= 0 then
+		return 1 - self:getParents( sm.interactable.connectionType.electricity )
+	end
+	return 0
+end</pre>  <div class="note">
+   <h4>Note:</h4>
+   <p><a href="class_Game_ShapeClass.html#maxParentCount" class="code">maxParentCount</a> must be 1 or more for this callback to be called.</p>
+  </div>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+   <tr><td class="code">integer</td><td class="code">flags</td><td>Connection type flags.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">integer</td><td>The number of available connections.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="client_getAvailableChildConnectionCount"></a>client_getAvailableChildConnectionCount(self, flags) <i>clientEventCallback</i></h2>
+  <p>Called to check how many more child (output) connections with the given type <a href="namespace_Game_sm_interactable.html#connectionType" class="code">flag</a> the <a href="userdata_Game_Interactable.html" class="code">Interactable</a> will accept. Return 1 or more to allow a connection of this type.</p>
+  <pre class="code">-- Example of implementation that accepts 10 logic connections and 1 power connection
+MyInteractable.maxChildCount = 11
+MyInteractable.connectionOutput = sm.interactable.connectionType.logic + sm.interactable.connectionType.power
+
+function MyIteractable.client_getAvailableChildConnectionCount( self, flags )
+	if bit.band( flags, sm.interactable.connectionType.logic ) ~= 0 then
+		return 10 - self:getParents( sm.interactable.connectionType.logic )
+	end
+	if bit.band( flags, sm.interactable.connectionType.power ) ~= 0 then
+		return 1 - self:getParents( sm.interactable.connectionType.power )
+	end
+	return 0
+end</pre>  <div class="note">
+   <h4>Note:</h4>
+   <p><a href="class_Game_ShapeClass.html#maxChildCount" class="code">maxChildCount</a> must be 1 or more for this callback to be called.</p>
+  </div>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+   <tr><td class="code">integer</td><td class="code">flags</td><td>Connection type flags.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">integer</td><td>The number of available connections.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="client_canCarry"></a>client_canCarry(self) <i>clientEventCallback</i></h2>
+  <p>Called to check if the shape must be carried instead of put in the inventory.</p>
+  <div class="note">
+   <h4>Note:</h4>
+   <p>Shapes with the "carryItem" attribute are always carried.</p>
+  </div>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>A boolean indicating whether the interacable must be carried or not. (Defaults to false)</td></tr>
+  </table>
+ </div>
+</body>
+</html>

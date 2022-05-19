@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Harvestable - Lua API Reference - Scrap Mechanic</title>
+ <link rel="stylesheet" href="styles.css">
+ <script src="script.js"></script>
+ <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+ <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+ <div id="menu">
+  <h2>Lua API Reference</h2>
+  <ul>
+   <li><a href="index.html">Introduction</a></li>
+  </ul>
+  <h2>Game environment</h2>
+  <h3>Classes</h3>
+  <ul>
+   <li><a href="class_Game_CharacterClass.html" class="code">CharacterClass</a></li>
+   <li><a href="class_Game_GameClass.html" class="code">GameClass</a></li>
+   <li><a href="class_Game_HarvestableClass.html" class="code">HarvestableClass</a></li>
+   <li><a href="class_Game_PlayerClass.html" class="code">PlayerClass</a></li>
+   <li><a href="class_Game_ScriptableObjectClass.html" class="code">ScriptableObjectClass</a></li>
+   <li><a href="class_Game_ShapeClass.html" class="code">ShapeClass</a></li>
+   <li><a href="class_Game_ToolClass.html" class="code">ToolClass</a></li>
+   <li><a href="class_Game_UnitClass.html" class="code">UnitClass</a></li>
+   <li><a href="class_Game_WorldClass.html" class="code">WorldClass</a></li>
+  </ul>
+  <h3>Object Types 'userdata'</h3>
+  <ul>
+   <li><a href="userdata_Game_AiState.html" class="code">AiState</a></li>
+   <li><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></li>
+   <li><a href="userdata_Game_BlueprintVisualization.html" class="code">BlueprintVisualization</a></li>
+   <li><a href="userdata_Game_Body.html" class="code">Body</a></li>
+   <li><a href="userdata_Game_BuilderGuide.html" class="code">BuilderGuide</a></li>
+   <li><a href="userdata_Game_Character.html" class="code">Character</a></li>
+   <li><a href="userdata_Game_Color.html" class="code">Color</a></li>
+   <li><a href="userdata_Game_Container.html" class="code">Container</a></li>
+   <li><a href="userdata_Game_CullSphereGroup.html" class="code">CullSphereGroup</a></li>
+   <li><a href="userdata_Game_Effect.html" class="code">Effect</a></li>
+   <li><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></li>
+   <li><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></li>
+   <li><a href="userdata_Game_Interactable.html" class="code">Interactable</a></li>
+   <li><a href="userdata_Game_Joint.html" class="code">Joint</a></li>
+   <li><a href="userdata_Game_Lift.html" class="code">Lift</a></li>
+   <li><a href="userdata_Game_LoadCellHandle.html" class="code">LoadCellHandle</a></li>
+   <li><a href="userdata_Game_Network.html" class="code">Network</a></li>
+   <li><a href="userdata_Game_PathNode.html" class="code">PathNode</a></li>
+   <li><a href="userdata_Game_Player.html" class="code">Player</a></li>
+   <li><a href="userdata_Game_Portal.html" class="code">Portal</a></li>
+   <li><a href="userdata_Game_Quat.html" class="code">Quat</a></li>
+   <li><a href="userdata_Game_RaycastResult.html" class="code">RaycastResult</a></li>
+   <li><a href="userdata_Game_ScriptableObject.html" class="code">ScriptableObject</a></li>
+   <li><a href="userdata_Game_Shape.html" class="code">Shape</a></li>
+   <li><a href="userdata_Game_Storage.html" class="code">Storage</a></li>
+   <li><a href="userdata_Game_Tool.html" class="code">Tool</a></li>
+   <li><a href="userdata_Game_Unit.html" class="code">Unit</a></li>
+   <li><a href="userdata_Game_Uuid.html" class="code">Uuid</a></li>
+   <li><a href="userdata_Game_Vec3.html" class="code">Vec3</a></li>
+   <li><a href="userdata_Game_Widget.html" class="code">Widget</a></li>
+   <li><a href="userdata_Game_World.html" class="code">World</a></li>
+  </ul>
+  <h3>Static Function Namespaces</h3>
+  <ul>
+   <li><a href="namespace_Game_GLOBAL.html" class="code">GLOBAL</a></li>
+   <li><a href="namespace_Game_sm.html" class="code">sm</a></li>
+   <li><a href="namespace_Game_sm_ai.html" class="code">sm.ai</a></li>
+   <li><a href="namespace_Game_sm_areaTrigger.html" class="code">sm.areaTrigger</a></li>
+   <li><a href="namespace_Game_sm_audio.html" class="code">sm.audio</a></li>
+   <li><a href="namespace_Game_sm_body.html" class="code">sm.body</a></li>
+   <li><a href="namespace_Game_sm_builderGuide.html" class="code">sm.builderGuide</a></li>
+   <li><a href="namespace_Game_sm_camera.html" class="code">sm.camera</a></li>
+   <li><a href="namespace_Game_sm_cell.html" class="code">sm.cell</a></li>
+   <li><a href="namespace_Game_sm_challenge.html" class="code">sm.challenge</a></li>
+   <li><a href="namespace_Game_sm_character.html" class="code">sm.character</a></li>
+   <li><a href="namespace_Game_sm_color.html" class="code">sm.color</a></li>
+   <li><a href="namespace_Game_sm_construction.html" class="code">sm.construction</a></li>
+   <li><a href="namespace_Game_sm_container.html" class="code">sm.container</a></li>
+   <li><a href="namespace_Game_sm_creation.html" class="code">sm.creation</a></li>
+   <li><a href="namespace_Game_sm_cullSphereGroup.html" class="code">sm.cullSphereGroup</a></li>
+   <li><a href="namespace_Game_sm_debris.html" class="code">sm.debris</a></li>
+   <li><a href="namespace_Game_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
+   <li><a href="namespace_Game_sm_effect.html" class="code">sm.effect</a></li>
+   <li><a href="namespace_Game_sm_event.html" class="code">sm.event</a></li>
+   <li><a href="namespace_Game_sm_game.html" class="code">sm.game</a></li>
+   <li><a href="namespace_Game_sm_gui.html" class="code">sm.gui</a></li>
+   <li><a href="namespace_Game_sm_gui_widget.html" class="code">sm.gui.widget</a></li>
+   <li><a href="namespace_Game_sm_harvestable.html" class="code">sm.harvestable</a></li>
+   <li><a href="namespace_Game_sm_interactable.html" class="code">sm.interactable</a></li>
+   <li><a href="namespace_Game_sm_item.html" class="code">sm.item</a></li>
+   <li><a href="namespace_Game_sm_joint.html" class="code">sm.joint</a></li>
+   <li><a href="namespace_Game_sm_json.html" class="code">sm.json</a></li>
+   <li><a href="namespace_Game_sm_localPlayer.html" class="code">sm.localPlayer</a></li>
+   <li><a href="namespace_Game_sm_log.html" class="code">sm.log</a></li>
+   <li><a href="namespace_Game_sm_melee.html" class="code">sm.melee</a></li>
+   <li><a href="namespace_Game_sm_menuCreation.html" class="code">sm.menuCreation</a></li>
+   <li><a href="namespace_Game_sm_noise.html" class="code">sm.noise</a></li>
+   <li><a href="namespace_Game_sm_particle.html" class="code">sm.particle</a></li>
+   <li><a href="namespace_Game_sm_pathNode.html" class="code">sm.pathNode</a></li>
+   <li><a href="namespace_Game_sm_pathfinder.html" class="code">sm.pathfinder</a></li>
+   <li><a href="namespace_Game_sm_physics.html" class="code">sm.physics</a></li>
+   <li><a href="namespace_Game_sm_player.html" class="code">sm.player</a></li>
+   <li><a href="namespace_Game_sm_portal.html" class="code">sm.portal</a></li>
+   <li><a href="namespace_Game_sm_projectile.html" class="code">sm.projectile</a></li>
+   <li><a href="namespace_Game_sm_quat.html" class="code">sm.quat</a></li>
+   <li><a href="namespace_Game_sm_render.html" class="code">sm.render</a></li>
+   <li><a href="namespace_Game_sm_scriptableObject.html" class="code">sm.scriptableObject</a></li>
+   <li><a href="namespace_Game_sm_shape.html" class="code">sm.shape</a></li>
+   <li><a href="namespace_Game_sm_storage.html" class="code">sm.storage</a></li>
+   <li><a href="namespace_Game_sm_tool.html" class="code">sm.tool</a></li>
+   <li><a href="namespace_Game_sm_unit.html" class="code">sm.unit</a></li>
+   <li><a href="namespace_Game_sm_util.html" class="code">sm.util</a></li>
+   <li><a href="namespace_Game_sm_uuid.html" class="code">sm.uuid</a></li>
+   <li><a href="namespace_Game_sm_vec3.html" class="code">sm.vec3</a></li>
+   <li><a href="namespace_Game_sm_visualization.html" class="code">sm.visualization</a></li>
+   <li><a href="namespace_Game_sm_world.html" class="code">sm.world</a></li>
+  </ul>
+  <h2>Terrain environment</h2>
+  <h3>Classes</h3>
+  <ul>
+  </ul>
+  <h3>Object Types 'userdata'</h3>
+  <ul>
+   <li><a href="userdata_Terrain_Color.html" class="code">Color</a></li>
+   <li><a href="userdata_Terrain_Harvestable.html" class="code">Harvestable</a></li>
+   <li><a href="userdata_Terrain_Quat.html" class="code">Quat</a></li>
+   <li><a href="userdata_Terrain_Uuid.html" class="code">Uuid</a></li>
+   <li><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></li>
+   <li><a href="userdata_Terrain_World.html" class="code">World</a></li>
+  </ul>
+  <h3>Static Function Namespaces</h3>
+  <ul>
+   <li><a href="namespace_Terrain_GLOBAL.html" class="code">GLOBAL</a></li>
+   <li><a href="namespace_Terrain_sm.html" class="code">sm</a></li>
+   <li><a href="namespace_Terrain_sm_color.html" class="code">sm.color</a></li>
+   <li><a href="namespace_Terrain_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
+   <li><a href="namespace_Terrain_sm_harvestable.html" class="code">sm.harvestable</a></li>
+   <li><a href="namespace_Terrain_sm_json.html" class="code">sm.json</a></li>
+   <li><a href="namespace_Terrain_sm_log.html" class="code">sm.log</a></li>
+   <li><a href="namespace_Terrain_sm_noise.html" class="code">sm.noise</a></li>
+   <li><a href="namespace_Terrain_sm_quat.html" class="code">sm.quat</a></li>
+   <li><a href="namespace_Terrain_sm_terrainData.html" class="code">sm.terrainData</a></li>
+   <li><a href="namespace_Terrain_sm_terrainGeneration.html" class="code">sm.terrainGeneration</a></li>
+   <li><a href="namespace_Terrain_sm_terrainTile.html" class="code">sm.terrainTile</a></li>
+   <li><a href="namespace_Terrain_sm_util.html" class="code">sm.util</a></li>
+   <li><a href="namespace_Terrain_sm_uuid.html" class="code">sm.uuid</a></li>
+   <li><a href="namespace_Terrain_sm_vec3.html" class="code">sm.vec3</a></li>
+  </ul>
+ </div>
+ <div id="content">
+  <h1 class="code">Harvestable</h1>
+  <h3>Associated namespace: <a href="namespace_Game_sm_harvestable.html" class="code">sm.harvestable</a></h3>
+  <p>Represents a harvestable object in the game.</p>
+  <h4>Values:</h4>
+  <ul>
+   <li><a href="#clientPublicData" class="code">clientPublicData</a></li>
+   <li><a href="#id" class="code">id</a></li>
+   <li><a href="#initialPosition" class="code">initialPosition</a></li>
+   <li><a href="#initialRotation" class="code">initialRotation</a></li>
+   <li><a href="#mass" class="code">mass</a></li>
+   <li><a href="#material" class="code">material</a></li>
+   <li><a href="#materialId" class="code">materialId</a></li>
+   <li><a href="#name" class="code">name</a></li>
+   <li><a href="#publicData" class="code">publicData</a></li>
+   <li><a href="#type" class="code">type</a></li>
+   <li><a href="#uuid" class="code">uuid</a></li>
+   <li><a href="#worldPosition" class="code">worldPosition</a></li>
+   <li><a href="#worldRotation" class="code">worldRotation</a></li>
+  </ul>  <h4>Functions:</h4>
+  <ul>
+   <li><a href="#destroy" class="code">destroy</a></li>
+   <li><a href="#getAabb" class="code">getAabb</a></li>
+   <li><a href="#getClientPublicData" class="code">getClientPublicData</a></li>
+   <li><a href="#getColor" class="code">getColor</a></li>
+   <li><a href="#getData" class="code">getData</a></li>
+   <li><a href="#getId" class="code">getId</a></li>
+   <li><a href="#getMass" class="code">getMass</a></li>
+   <li><a href="#getMaterial" class="code">getMaterial</a></li>
+   <li><a href="#getMaterialId" class="code">getMaterialId</a></li>
+   <li><a href="#getName" class="code">getName</a></li>
+   <li><a href="#getPoseWeight" class="code">getPoseWeight</a></li>
+   <li><a href="#getPosition" class="code">getPosition</a></li>
+   <li><a href="#getPublicData" class="code">getPublicData</a></li>
+   <li><a href="#getRotation" class="code">getRotation</a></li>
+   <li><a href="#getScale" class="code">getScale</a></li>
+   <li><a href="#getSeatCharacter" class="code">getSeatCharacter</a></li>
+   <li><a href="#getType" class="code">getType</a></li>
+   <li><a href="#getUuid" class="code">getUuid</a></li>
+   <li><a href="#getUvFrameIndex" class="code">getUvFrameIndex</a></li>
+   <li><a href="#getWorld" class="code">getWorld</a></li>
+   <li><a href="#hasSeat" class="code">hasSeat</a></li>
+   <li><a href="#isKinematic" class="code">isKinematic</a></li>
+   <li><a href="#setClientPublicData" class="code">setClientPublicData</a></li>
+   <li><a href="#setColor" class="code">setColor</a></li>
+   <li><a href="#setParams" class="code">setParams</a></li>
+   <li><a href="#setPoseWeight" class="code">setPoseWeight</a></li>
+   <li><a href="#setPosition" class="code">setPosition</a></li>
+   <li><a href="#setPublicData" class="code">setPublicData</a></li>
+   <li><a href="#setRotation" class="code">setRotation</a></li>
+   <li><a href="#setSeatCharacter" class="code">setSeatCharacter</a></li>
+   <li><a href="#setUvFrameIndex" class="code">setUvFrameIndex</a></li>
+  </ul>
+  <h4>Operations:</h4>
+  <table>
+   <tr><th>Operation</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a> == <a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></td><td>Checks if two instances of <a href="userdata_Game_Harvestable.html" class="code">Harvestable</a> refer to the same Harvestable.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="clientPublicData"></a>clientPublicData <i>table</i></h2>
+  <h4>Get:</h4>
+  <p>Client only</p>
+  <p>Returns client public data from a harvestable.</p>
+  <h4>Set:</h4>
+  <p>Client only</p>
+  <p>Sets client public data on a harvestable.</p>
+  <hr>
+  <h2 class="code"><a id="id"></a>id <i>integer</i></h2>
+  <h4>Get:</h4>
+  <p>Returns the id of a harvestable.</p>
+  <hr>
+  <h2 class="code"><a id="initialPosition"></a>initialPosition <i><a href="userdata_Game_Vec3.html" class="code">Vec3</a></i></h2>
+  <h4>Get:</h4>
+  <p>Returns the initial world coordinates of a kinematic.</p>
+  <hr>
+  <h2 class="code"><a id="initialRotation"></a>initialRotation <i><a href="userdata_Game_Quat.html" class="code">Quat</a></i></h2>
+  <h4>Get:</h4>
+  <p>Returns the initial quaternion rotation of a harvestable.</p>
+  <hr>
+  <h2 class="code"><a id="mass"></a>mass <i>number</i></h2>
+  <h4>Get:</h4>
+  <p>Returns the mass of a harvestable. The mass scales with the harvestable's scale.</p>
+  <hr>
+  <h2 class="code"><a id="material"></a>material <i>string</i></h2>
+  <h4>Get:</h4>
+  <p>Returns the material name of a harvestable.</p>
+  <hr>
+  <h2 class="code"><a id="materialId"></a>materialId <i>integer</i></h2>
+  <h4>Get:</h4>
+  <p>Returns the material id of a harvestable.</p>
+  <hr>
+  <h2 class="code"><a id="name"></a>name <i>string</i></h2>
+  <h4>Get:</h4>
+  <p>Returns the name of a harvestable.</p>
+  <hr>
+  <h2 class="code"><a id="publicData"></a>publicData <i>table</i></h2>
+  <h4>Get:</h4>
+  <p>Server only</p>
+  <p>Returns (server) public data from a harvestable.</p>
+  <h4>Set:</h4>
+  <p>Server only</p>
+  <p>Sets (server) public data on a harvestable.</p>
+  <hr>
+  <h2 class="code"><a id="type"></a>type <i>string</i></h2>
+  <h4>Get:</h4>
+  <p>Returns the type of a harvestable.</p>
+  <hr>
+  <h2 class="code"><a id="uuid"></a>uuid <i><a href="userdata_Game_Uuid.html" class="code">Uuid</a></i></h2>
+  <h4>Get:</h4>
+  <p>Returns the <a href="userdata_Game_Uuid.html" class="code">Uuid</a> of the harvestable.</p>
+  <hr>
+  <h2 class="code"><a id="worldPosition"></a>worldPosition <i><a href="userdata_Game_Vec3.html" class="code">Vec3</a></i></h2>
+  <h4>Get:</h4>
+  <p>Returns the world coordinates of a harvestable.</p>
+  <hr>
+  <h2 class="code"><a id="worldRotation"></a>worldRotation <i><a href="userdata_Game_Quat.html" class="code">Quat</a></i></h2>
+  <h4>Get:</h4>
+  <p>Returns the quaternion rotation of a harvestable.</p>
+  <hr>
+  <h2 class="code"><a id="destroy"></a>destroy(harvestable)</h2>
+  <p>Server only</p>
+  <p>Destroys a harvestable.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></td><td class="code">harvestable</td><td>The harvestable.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getAabb"></a>getAabb(harvestable)</h2>
+  <p>Returns the bounds of the harvestable shape.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></td><td class="code">harvestable</td><td>The harvestable.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a>,<a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The min and max bounds.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getClientPublicData"></a>getClientPublicData(harvestable)</h2>
+  <p>Client only</p>
+  <p>Returns client public data from a harvestable.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></td><td class="code">harvestable</td><td>The harvestable.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td>The client public data.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getColor"></a>getColor(harvestable)</h2>
+  <p>Returns the color of the harvestable.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></td><td class="code">harvestable</td><td>The harvestable.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Color.html" class="code">Color</a></td><td>The color.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getData"></a>getData(harvestable)</h2>
+  <p>Get the script data from a harvestable.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></td><td class="code">harvestable</td><td>The harvestable.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td>data			The script data.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getId"></a>getId(harvestable)</h2>
+  <p>Returns the id of a harvestable.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></td><td class="code">harvestable</td><td>The harvestable.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">integer</td><td>The harvestable id.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getMass"></a>getMass(harvestable)</h2>
+  <p>Returns the mass of a harvestable. The mass scales with the harvestable's scale.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></td><td class="code">harvestable</td><td>The harvestable.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">number</td><td>The mass.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getMaterial"></a>getMaterial(harvestable)</h2>
+  <p>Returns the material name of a harvestable.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></td><td class="code">harvestable</td><td>The harvestable.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">string</td><td>The name of the material.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getMaterialId"></a>getMaterialId(harvestable)</h2>
+  <p>Returns the material id of a harvestable.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></td><td class="code">harvestable</td><td>The harvestable.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">integer</td><td>The id of the material.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getName"></a>getName(harvestable)</h2>
+  <p>Returns the name of a harvestable.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></td><td class="code">harvestable</td><td>The harvestable.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">string</td><td>The harvestable name.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getPoseWeight"></a>getPoseWeight(harvestable, index)</h2>
+  <p>Client only</p>
+  <p>Returns the pose weight of the pose in the given index.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></td><td class="code">harvestable</td><td>The harvestable.</td></tr>
+   <tr><td class="code">integer</td><td class="code">index</td><td>The index.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">number</td><td>The pose weight.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getPosition"></a>getPosition(harvestable)</h2>
+  <p>Returns the world coordinates of a harvestable.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></td><td class="code">harvestable</td><td>The harvestable.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The position.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getPublicData"></a>getPublicData(harvestable)</h2>
+  <p>Server only</p>
+  <p>Returns (server) public data from a harvestable.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></td><td class="code">harvestable</td><td>The harvestable.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td>The public data.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getRotation"></a>getRotation(harvestable)</h2>
+  <p>Returns the quaternion rotation of a harvestable.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></td><td class="code">harvestable</td><td>The harvestable.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td>The rotation.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getScale"></a>getScale(harvestable)</h2>
+  <p>Returns the scale of the harvestable.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></td><td class="code">harvestable</td><td>The harvestable.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The scale.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getSeatCharacter"></a>getSeatCharacter(kinematic)</h2>
+  <p>Returns the <a href="userdata_Game_Character.html" class="code">Character</a> that is seated in the kinematic.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></td><td class="code">kinematic</td><td>The kinematic.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td>The character.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getType"></a>getType(harvestable)</h2>
+  <p>Returns the type of a harvestable.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></td><td class="code">harvestable</td><td>The harvestable.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">string</td><td>The harvestable's type.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getUuid"></a>getUuid(harvestable)</h2>
+  <p>Returns the <a href="userdata_Game_Uuid.html" class="code">Uuid</a> of the harvestable.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></td><td class="code">harvestable</td><td>The harvestable.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td>The uuid.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getUvFrameIndex"></a>getUvFrameIndex(harvestable)</h2>
+  <p>Client only</p>
+  <p>Returns the index of the current UV animation frame</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></td><td class="code">harvestable</td><td>The harvestable.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">integer</td><td>The uv frame.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getWorld"></a>getWorld(harvestable)</h2>
+  <p>Returns the world a harvestable exists in.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></td><td class="code">harvestable</td><td>The harvestable.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_World.html" class="code">World</a></td><td>The world the harvestable exists in.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="hasSeat"></a>hasSeat(kinematic)</h2>
+  <p>Returns true if kinematic has a seat component.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></td><td class="code">kinematic</td><td>The kinematic.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>The result.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="isKinematic"></a>isKinematic(harvestable)</h2>
+  <p>Check if a harvestable is kinematic</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></td><td class="code">harvestable</td><td>The harvestable.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>Return true if the harvestable is kinematic.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setClientPublicData"></a>setClientPublicData(harvestable, data)</h2>
+  <p>Client only</p>
+  <p>Sets client public data on a harvestable.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></td><td class="code">harvestable</td><td>The harvestable.</td></tr>
+   <tr><td class="code">table</td><td class="code">data</td><td>The client public data.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setColor"></a>setColor(harvestable, color)</h2>
+  <p>Client only</p>
+  <p>Sets the color of the harvestable.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></td><td class="code">harvestable</td><td>The harvestable.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Color.html" class="code">Color</a></td><td class="code">color</td><td>The color.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setParams"></a>setParams(harvestable, data)</h2>
+  <p>Server only</p>
+  <p>Sets param data for a harvestable.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></td><td class="code">harvestable</td><td>The harvestable.</td></tr>
+   <tr><td class="code">any</td><td class="code">data</td><td>The param data.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setPoseWeight"></a>setPoseWeight(harvestable, index, value)</h2>
+  <p>Client only</p>
+  <p>Set the pose weight of the pose in the given index.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></td><td class="code">harvestable</td><td>The harvestable.</td></tr>
+   <tr><td class="code">integer</td><td class="code">index</td><td>The index.</td></tr>
+   <tr><td class="code">number</td><td class="code">value</td><td>The pose weight.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setPosition"></a>setPosition(harvestable, position)</h2>
+  <p>Set the world coordinates of a harvestable. Can only be used on kinematic harvestables.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></td><td class="code">harvestable</td><td>The harvestable.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The position.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setPublicData"></a>setPublicData(harvestable, data)</h2>
+  <p>Server only</p>
+  <p>Sets (server) public data on a harvestable.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></td><td class="code">harvestable</td><td>The harvestable.</td></tr>
+   <tr><td class="code">table</td><td class="code">data</td><td>The public data.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setRotation"></a>setRotation(harvestable, rotation)</h2>
+  <p>Set the quaternion rotation of a harvestable. Can only be used on kinematic harvestables.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></td><td class="code">harvestable</td><td>The harvestable.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td class="code">rotation</td><td>The rotation.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setSeatCharacter"></a>setSeatCharacter(kinematic, character)</h2>
+  <p>Requests to seat a <a href="userdata_Game_Character.html" class="code">Character</a> in the kinematic.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></td><td class="code">kinematic</td><td>The kinematic.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The character.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setUvFrameIndex"></a>setUvFrameIndex(harvestable, index)</h2>
+  <p>Client only</p>
+  <p>Sets the UV animation frame with the given index.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></td><td class="code">harvestable</td><td>The harvestable.</td></tr>
+   <tr><td class="code">integer</td><td class="code">index</td><td>The index.</td></tr>
+  </table>
+ </div>
+</body>
+</html>

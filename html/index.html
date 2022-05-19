@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Introduction - Lua API Reference - Scrap Mechanic</title>
+ <link rel="stylesheet" href="styles.css">
+ <script src="script.js"></script>
+ <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+ <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+ <div id="menu">
+  <h2>Lua API Reference</h2>
+  <ul>
+   <li><a href="index.html">Introduction</a></li>
+  </ul>
+  <h2>Game environment</h2>
+  <h3>Classes</h3>
+  <ul>
+   <li><a href="class_Game_CharacterClass.html" class="code">CharacterClass</a></li>
+   <li><a href="class_Game_GameClass.html" class="code">GameClass</a></li>
+   <li><a href="class_Game_HarvestableClass.html" class="code">HarvestableClass</a></li>
+   <li><a href="class_Game_PlayerClass.html" class="code">PlayerClass</a></li>
+   <li><a href="class_Game_ScriptableObjectClass.html" class="code">ScriptableObjectClass</a></li>
+   <li><a href="class_Game_ShapeClass.html" class="code">ShapeClass</a></li>
+   <li><a href="class_Game_ToolClass.html" class="code">ToolClass</a></li>
+   <li><a href="class_Game_UnitClass.html" class="code">UnitClass</a></li>
+   <li><a href="class_Game_WorldClass.html" class="code">WorldClass</a></li>
+  </ul>
+  <h3>Object Types 'userdata'</h3>
+  <ul>
+   <li><a href="userdata_Game_AiState.html" class="code">AiState</a></li>
+   <li><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></li>
+   <li><a href="userdata_Game_BlueprintVisualization.html" class="code">BlueprintVisualization</a></li>
+   <li><a href="userdata_Game_Body.html" class="code">Body</a></li>
+   <li><a href="userdata_Game_BuilderGuide.html" class="code">BuilderGuide</a></li>
+   <li><a href="userdata_Game_Character.html" class="code">Character</a></li>
+   <li><a href="userdata_Game_Color.html" class="code">Color</a></li>
+   <li><a href="userdata_Game_Container.html" class="code">Container</a></li>
+   <li><a href="userdata_Game_CullSphereGroup.html" class="code">CullSphereGroup</a></li>
+   <li><a href="userdata_Game_Effect.html" class="code">Effect</a></li>
+   <li><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></li>
+   <li><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></li>
+   <li><a href="userdata_Game_Interactable.html" class="code">Interactable</a></li>
+   <li><a href="userdata_Game_Joint.html" class="code">Joint</a></li>
+   <li><a href="userdata_Game_Lift.html" class="code">Lift</a></li>
+   <li><a href="userdata_Game_LoadCellHandle.html" class="code">LoadCellHandle</a></li>
+   <li><a href="userdata_Game_Network.html" class="code">Network</a></li>
+   <li><a href="userdata_Game_PathNode.html" class="code">PathNode</a></li>
+   <li><a href="userdata_Game_Player.html" class="code">Player</a></li>
+   <li><a href="userdata_Game_Portal.html" class="code">Portal</a></li>
+   <li><a href="userdata_Game_Quat.html" class="code">Quat</a></li>
+   <li><a href="userdata_Game_RaycastResult.html" class="code">RaycastResult</a></li>
+   <li><a href="userdata_Game_ScriptableObject.html" class="code">ScriptableObject</a></li>
+   <li><a href="userdata_Game_Shape.html" class="code">Shape</a></li>
+   <li><a href="userdata_Game_Storage.html" class="code">Storage</a></li>
+   <li><a href="userdata_Game_Tool.html" class="code">Tool</a></li>
+   <li><a href="userdata_Game_Unit.html" class="code">Unit</a></li>
+   <li><a href="userdata_Game_Uuid.html" class="code">Uuid</a></li>
+   <li><a href="userdata_Game_Vec3.html" class="code">Vec3</a></li>
+   <li><a href="userdata_Game_Widget.html" class="code">Widget</a></li>
+   <li><a href="userdata_Game_World.html" class="code">World</a></li>
+  </ul>
+  <h3>Static Function Namespaces</h3>
+  <ul>
+   <li><a href="namespace_Game_GLOBAL.html" class="code">GLOBAL</a></li>
+   <li><a href="namespace_Game_sm.html" class="code">sm</a></li>
+   <li><a href="namespace_Game_sm_ai.html" class="code">sm.ai</a></li>
+   <li><a href="namespace_Game_sm_areaTrigger.html" class="code">sm.areaTrigger</a></li>
+   <li><a href="namespace_Game_sm_audio.html" class="code">sm.audio</a></li>
+   <li><a href="namespace_Game_sm_body.html" class="code">sm.body</a></li>
+   <li><a href="namespace_Game_sm_builderGuide.html" class="code">sm.builderGuide</a></li>
+   <li><a href="namespace_Game_sm_camera.html" class="code">sm.camera</a></li>
+   <li><a href="namespace_Game_sm_cell.html" class="code">sm.cell</a></li>
+   <li><a href="namespace_Game_sm_challenge.html" class="code">sm.challenge</a></li>
+   <li><a href="namespace_Game_sm_character.html" class="code">sm.character</a></li>
+   <li><a href="namespace_Game_sm_color.html" class="code">sm.color</a></li>
+   <li><a href="namespace_Game_sm_construction.html" class="code">sm.construction</a></li>
+   <li><a href="namespace_Game_sm_container.html" class="code">sm.container</a></li>
+   <li><a href="namespace_Game_sm_creation.html" class="code">sm.creation</a></li>
+   <li><a href="namespace_Game_sm_cullSphereGroup.html" class="code">sm.cullSphereGroup</a></li>
+   <li><a href="namespace_Game_sm_debris.html" class="code">sm.debris</a></li>
+   <li><a href="namespace_Game_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
+   <li><a href="namespace_Game_sm_effect.html" class="code">sm.effect</a></li>
+   <li><a href="namespace_Game_sm_event.html" class="code">sm.event</a></li>
+   <li><a href="namespace_Game_sm_game.html" class="code">sm.game</a></li>
+   <li><a href="namespace_Game_sm_gui.html" class="code">sm.gui</a></li>
+   <li><a href="namespace_Game_sm_gui_widget.html" class="code">sm.gui.widget</a></li>
+   <li><a href="namespace_Game_sm_harvestable.html" class="code">sm.harvestable</a></li>
+   <li><a href="namespace_Game_sm_interactable.html" class="code">sm.interactable</a></li>
+   <li><a href="namespace_Game_sm_item.html" class="code">sm.item</a></li>
+   <li><a href="namespace_Game_sm_joint.html" class="code">sm.joint</a></li>
+   <li><a href="namespace_Game_sm_json.html" class="code">sm.json</a></li>
+   <li><a href="namespace_Game_sm_localPlayer.html" class="code">sm.localPlayer</a></li>
+   <li><a href="namespace_Game_sm_log.html" class="code">sm.log</a></li>
+   <li><a href="namespace_Game_sm_melee.html" class="code">sm.melee</a></li>
+   <li><a href="namespace_Game_sm_menuCreation.html" class="code">sm.menuCreation</a></li>
+   <li><a href="namespace_Game_sm_noise.html" class="code">sm.noise</a></li>
+   <li><a href="namespace_Game_sm_particle.html" class="code">sm.particle</a></li>
+   <li><a href="namespace_Game_sm_pathNode.html" class="code">sm.pathNode</a></li>
+   <li><a href="namespace_Game_sm_pathfinder.html" class="code">sm.pathfinder</a></li>
+   <li><a href="namespace_Game_sm_physics.html" class="code">sm.physics</a></li>
+   <li><a href="namespace_Game_sm_player.html" class="code">sm.player</a></li>
+   <li><a href="namespace_Game_sm_portal.html" class="code">sm.portal</a></li>
+   <li><a href="namespace_Game_sm_projectile.html" class="code">sm.projectile</a></li>
+   <li><a href="namespace_Game_sm_quat.html" class="code">sm.quat</a></li>
+   <li><a href="namespace_Game_sm_render.html" class="code">sm.render</a></li>
+   <li><a href="namespace_Game_sm_scriptableObject.html" class="code">sm.scriptableObject</a></li>
+   <li><a href="namespace_Game_sm_shape.html" class="code">sm.shape</a></li>
+   <li><a href="namespace_Game_sm_storage.html" class="code">sm.storage</a></li>
+   <li><a href="namespace_Game_sm_tool.html" class="code">sm.tool</a></li>
+   <li><a href="namespace_Game_sm_unit.html" class="code">sm.unit</a></li>
+   <li><a href="namespace_Game_sm_util.html" class="code">sm.util</a></li>
+   <li><a href="namespace_Game_sm_uuid.html" class="code">sm.uuid</a></li>
+   <li><a href="namespace_Game_sm_vec3.html" class="code">sm.vec3</a></li>
+   <li><a href="namespace_Game_sm_visualization.html" class="code">sm.visualization</a></li>
+   <li><a href="namespace_Game_sm_world.html" class="code">sm.world</a></li>
+  </ul>
+  <h2>Terrain environment</h2>
+  <h3>Classes</h3>
+  <ul>
+  </ul>
+  <h3>Object Types 'userdata'</h3>
+  <ul>
+   <li><a href="userdata_Terrain_Color.html" class="code">Color</a></li>
+   <li><a href="userdata_Terrain_Harvestable.html" class="code">Harvestable</a></li>
+   <li><a href="userdata_Terrain_Quat.html" class="code">Quat</a></li>
+   <li><a href="userdata_Terrain_Uuid.html" class="code">Uuid</a></li>
+   <li><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></li>
+   <li><a href="userdata_Terrain_World.html" class="code">World</a></li>
+  </ul>
+  <h3>Static Function Namespaces</h3>
+  <ul>
+   <li><a href="namespace_Terrain_GLOBAL.html" class="code">GLOBAL</a></li>
+   <li><a href="namespace_Terrain_sm.html" class="code">sm</a></li>
+   <li><a href="namespace_Terrain_sm_color.html" class="code">sm.color</a></li>
+   <li><a href="namespace_Terrain_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
+   <li><a href="namespace_Terrain_sm_harvestable.html" class="code">sm.harvestable</a></li>
+   <li><a href="namespace_Terrain_sm_json.html" class="code">sm.json</a></li>
+   <li><a href="namespace_Terrain_sm_log.html" class="code">sm.log</a></li>
+   <li><a href="namespace_Terrain_sm_noise.html" class="code">sm.noise</a></li>
+   <li><a href="namespace_Terrain_sm_quat.html" class="code">sm.quat</a></li>
+   <li><a href="namespace_Terrain_sm_terrainData.html" class="code">sm.terrainData</a></li>
+   <li><a href="namespace_Terrain_sm_terrainGeneration.html" class="code">sm.terrainGeneration</a></li>
+   <li><a href="namespace_Terrain_sm_terrainTile.html" class="code">sm.terrainTile</a></li>
+   <li><a href="namespace_Terrain_sm_util.html" class="code">sm.util</a></li>
+   <li><a href="namespace_Terrain_sm_uuid.html" class="code">sm.uuid</a></li>
+   <li><a href="namespace_Terrain_sm_vec3.html" class="code">sm.vec3</a></li>
+  </ul>
+ </div>
+ <div id="content">
+  <h1><a id="introduction"></a>Introduction</h1>
+  <p>Welcome to the Lua scripting reference pages for Scrap Mechanic!</p>
+  <p>In this documentation, you will find details specific to Scrap Mechanic's Lua scripting. For more general information on how the Lua scripting language works, you can review the <a target="_blank" href="https://www.lua.org/docs.html">official Lua documentation.</a></p>
+  <p>Scrap Mechanic uses Lua version 5.1. Check the official <a target="_blank" href="https://www.lua.org/manual/5.1/">Manual</a> for more information.</p>
+  <p>The documentation is also available <a href="html.zip">offline</a>, in <a href="json.zip">json format</a> and a <a href="lua.zip">lua documentation file</a>.</p>
+  <h2><a id="console"></a>Console</h2>
+  <p>It's recommended to start the game with '-dev' launch option when scripting to get access to the Debug Console and to enable the script hot-reload feature. Use <a href="namespace_Game_GLOBAL.html#print" class="code">print</a> to print to the console.</p>
+  <h2><a id="classes"></a>Classes</h2>
+  <p>Classes act as the entry point from the game to the world of Lua. A script class is for example a buildable part with a "scripted" json object.</p>
+  <h4>In json "partList" element:</h4>
+  <pre class="code">
+	"scripted": {
+		"filename": "$CONTENT_DATA/Scripts/MyShape.lua",
+		"classname": "MyShape",
+		"data": { "hello": "Hello world!" }
+	},
+  </pre>
+  <h4>Lua script:</h4>
+  <pre class="code">
+-- MyShape.lua - Interactable part example script
+
+-- Creates a new class
+MyShape = class()
+
+-- Sets ShapeClass constants
+MyShape.maxParentCount = 1
+MyShape.maxChildCount = 0
+MyShape.connectionInput = sm.interactable.connectionType.none
+MyShape.connectionOutput = sm.interactable.connectionType.logic
+MyShape.colorNormal = sm.color.new( 0x777777ff )
+MyShape.colorHighlight = sm.color.new( 0x888888ff )
+
+-- Called on creation
+function MyShape:server_onCreate()
+	print( self.data.hello )
+end
+
+-- Called on creation
+function MyShape:client_onCreate()
+	self.cl = { time = 0 }
+end
+
+-- Called every tick
+function MyShape:client_onFixedUpdate( timeStep )
+	self.cl.time = self.cl.time + timeStep
+end
+
+-- Called on interact
+function MyShape:client_onInteract( character, state )
+	if state then
+		print( "Pressing E" )
+		self.network:sendToServer( "sv_n_toggle" )
+	else
+		print( "Releasing E" )
+	end
+	print( "Shape has existed for", self.cl.time, "seconds" )
+end
+
+function MyShape:sv_n_toggle() 
+	-- Toggle on and off
+	self.interactable.active = not self.interactable.active
+end
+  </pre>
+  <h2><a id="namespace"></a>Static Functions</h2>
+  <p>Static Functions can be called from Lua to do certain things in the game, such as creating a part using <a href="namespace_Game_sm_shape.html#createPart" class="code">sm.shape.createPart</a>. The createPart function will return a userdata object of type <a href="userdata_Game_Shape.html" class="code">Shape</a> which can be used to reference the part. This reference is valid as long as the part still exists in the game.</p>
+  <h2><a id="userdata"></a>Userdata</h2>
+  <p>Userdata is a Lua concept to define custom objects. Scrap Mechanic uses userdata to add game objects such as a <a href="userdata_Game_Shape.html" class="code">Shape</a> and utility objects such as <a href="userdata_Game_Vec3.html" class="code">Vec3</a>. They are similar to <a target="_blank" href="https://en.wikipedia.org/wiki/Instance_(computer_science)">instances</a> in <a target="_blank" href="https://en.wikipedia.org/wiki/Object-oriented_programming">object-oriented programming</a>. The userdata objects have a set of member values and functions.</p>
+  <p>Here is an example where the member function <a href="userdata_Game_Shape.html#getColor">getColor</a> is called on the <a href="userdata_Game_Shape.html" class="code">Shape</a> userdata:</p>
+  <pre class="code">local color = myShape.getColor( myShape ) -- All userdata functions require the object itself as first parameter.</pre>
+  <p>Or with : syntactic sugar which adds the userdata itself as the first parameter:</p>
+  <pre class="code">local color = myShape:getColor()</pre>
+  <p>Userdata can also be used as parameters to other functions. The color returned by <a href="userdata_Game_Shape.html#getColor">getColor</a> is another userdata type; <a href="userdata_Game_Color.html" class="code">Color</a>. That color can be used as a parameter to <a href="userdata_Game_Shape.html#setColor">setColor</a></p>
+  <pre class="code">local color = myShape:getColor()
+myOtherShape:setColor( color ) -- Copy the color from myShape to myOtherShape</pre>
+  <p>Userdata can also have member values; which are actually convenience for calling a get or set member function. This does exactly the same thing as the above:</p>
+  <pre class="code">local color = myShape.color
+myOtherShape.color = color) -- Copy the color from myShape to myOtherShape</pre>
+  <p>An other way to get a <a href="userdata_Game_Color.html" class="code">Color</a> userdata object is to call <a href="namespace_Game_sm_color.html#new" class="code">sm.color.new</a>. Here is an example where the shape color is set to red:</p>
+  <pre class="code">local color = sm.color.new( 1.0, 0.0, 0.0 )
+myShape.color = color -- Set shape to red</pre>
+  <h2><a id="sandboxes"></a>Sandboxes</h2>
+  <p>When Lua code is run by the game, they are run in a "sandbox". The sandbox makes sure no functions can be called that the sandbox does not allow in the current context. One reason for the sandbox to exist is to enforce a server/client structure, this is to help make sure the scripts work when playing multiplayer. The sandbox also makes sure no harmful code can be written in Lua by restricting file access and the ability to run executables.</p>
+  <h3><a id="server"></a>Server</h3>
+  <p>The <b>server</b> side simulates the game world and communicates with all clients that are currently playing, including the host itself. The server side is only running on the hosting player's computer.</p>
+  <p>In a script class, <b>serverEventCallback</b>, implies that the the code will run in server mode and have access only to <i>server only</i> functions and <i>client and server</i>. To check if a script is running in server mode at runtime you can also use <a href="namespace_Game_sm.html#isServerMode" class="code">sm.isServerMode</a>.</p>
+  <h3><a id="client"></a>Client</h3>
+  <p>The <b>client</b> is the part of Scrap Mechanic that a player sees and interacts with &ndash; e.g. graphics, audio, player input. A client is running on every player's computer, including the host.</p>
+  <p>In a script class, <b>clientEventCallback</b>, implies that what the callback will be run in client mode, restricting Lua to only be able to call <i>client only</i> and <i>client and server</i> functions.</p>
+ </div>

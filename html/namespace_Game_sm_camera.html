@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>sm.camera - Lua API Reference - Scrap Mechanic</title>
+ <link rel="stylesheet" href="styles.css">
+ <script src="script.js"></script>
+ <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+ <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+ <div id="menu">
+  <h2>Lua API Reference</h2>
+  <ul>
+   <li><a href="index.html">Introduction</a></li>
+  </ul>
+  <h2>Game environment</h2>
+  <h3>Classes</h3>
+  <ul>
+   <li><a href="class_Game_CharacterClass.html" class="code">CharacterClass</a></li>
+   <li><a href="class_Game_GameClass.html" class="code">GameClass</a></li>
+   <li><a href="class_Game_HarvestableClass.html" class="code">HarvestableClass</a></li>
+   <li><a href="class_Game_PlayerClass.html" class="code">PlayerClass</a></li>
+   <li><a href="class_Game_ScriptableObjectClass.html" class="code">ScriptableObjectClass</a></li>
+   <li><a href="class_Game_ShapeClass.html" class="code">ShapeClass</a></li>
+   <li><a href="class_Game_ToolClass.html" class="code">ToolClass</a></li>
+   <li><a href="class_Game_UnitClass.html" class="code">UnitClass</a></li>
+   <li><a href="class_Game_WorldClass.html" class="code">WorldClass</a></li>
+  </ul>
+  <h3>Object Types 'userdata'</h3>
+  <ul>
+   <li><a href="userdata_Game_AiState.html" class="code">AiState</a></li>
+   <li><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></li>
+   <li><a href="userdata_Game_BlueprintVisualization.html" class="code">BlueprintVisualization</a></li>
+   <li><a href="userdata_Game_Body.html" class="code">Body</a></li>
+   <li><a href="userdata_Game_BuilderGuide.html" class="code">BuilderGuide</a></li>
+   <li><a href="userdata_Game_Character.html" class="code">Character</a></li>
+   <li><a href="userdata_Game_Color.html" class="code">Color</a></li>
+   <li><a href="userdata_Game_Container.html" class="code">Container</a></li>
+   <li><a href="userdata_Game_CullSphereGroup.html" class="code">CullSphereGroup</a></li>
+   <li><a href="userdata_Game_Effect.html" class="code">Effect</a></li>
+   <li><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></li>
+   <li><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></li>
+   <li><a href="userdata_Game_Interactable.html" class="code">Interactable</a></li>
+   <li><a href="userdata_Game_Joint.html" class="code">Joint</a></li>
+   <li><a href="userdata_Game_Lift.html" class="code">Lift</a></li>
+   <li><a href="userdata_Game_LoadCellHandle.html" class="code">LoadCellHandle</a></li>
+   <li><a href="userdata_Game_Network.html" class="code">Network</a></li>
+   <li><a href="userdata_Game_PathNode.html" class="code">PathNode</a></li>
+   <li><a href="userdata_Game_Player.html" class="code">Player</a></li>
+   <li><a href="userdata_Game_Portal.html" class="code">Portal</a></li>
+   <li><a href="userdata_Game_Quat.html" class="code">Quat</a></li>
+   <li><a href="userdata_Game_RaycastResult.html" class="code">RaycastResult</a></li>
+   <li><a href="userdata_Game_ScriptableObject.html" class="code">ScriptableObject</a></li>
+   <li><a href="userdata_Game_Shape.html" class="code">Shape</a></li>
+   <li><a href="userdata_Game_Storage.html" class="code">Storage</a></li>
+   <li><a href="userdata_Game_Tool.html" class="code">Tool</a></li>
+   <li><a href="userdata_Game_Unit.html" class="code">Unit</a></li>
+   <li><a href="userdata_Game_Uuid.html" class="code">Uuid</a></li>
+   <li><a href="userdata_Game_Vec3.html" class="code">Vec3</a></li>
+   <li><a href="userdata_Game_Widget.html" class="code">Widget</a></li>
+   <li><a href="userdata_Game_World.html" class="code">World</a></li>
+  </ul>
+  <h3>Static Function Namespaces</h3>
+  <ul>
+   <li><a href="namespace_Game_GLOBAL.html" class="code">GLOBAL</a></li>
+   <li><a href="namespace_Game_sm.html" class="code">sm</a></li>
+   <li><a href="namespace_Game_sm_ai.html" class="code">sm.ai</a></li>
+   <li><a href="namespace_Game_sm_areaTrigger.html" class="code">sm.areaTrigger</a></li>
+   <li><a href="namespace_Game_sm_audio.html" class="code">sm.audio</a></li>
+   <li><a href="namespace_Game_sm_body.html" class="code">sm.body</a></li>
+   <li><a href="namespace_Game_sm_builderGuide.html" class="code">sm.builderGuide</a></li>
+   <li><a href="namespace_Game_sm_camera.html" class="code">sm.camera</a></li>
+   <li><a href="namespace_Game_sm_cell.html" class="code">sm.cell</a></li>
+   <li><a href="namespace_Game_sm_challenge.html" class="code">sm.challenge</a></li>
+   <li><a href="namespace_Game_sm_character.html" class="code">sm.character</a></li>
+   <li><a href="namespace_Game_sm_color.html" class="code">sm.color</a></li>
+   <li><a href="namespace_Game_sm_construction.html" class="code">sm.construction</a></li>
+   <li><a href="namespace_Game_sm_container.html" class="code">sm.container</a></li>
+   <li><a href="namespace_Game_sm_creation.html" class="code">sm.creation</a></li>
+   <li><a href="namespace_Game_sm_cullSphereGroup.html" class="code">sm.cullSphereGroup</a></li>
+   <li><a href="namespace_Game_sm_debris.html" class="code">sm.debris</a></li>
+   <li><a href="namespace_Game_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
+   <li><a href="namespace_Game_sm_effect.html" class="code">sm.effect</a></li>
+   <li><a href="namespace_Game_sm_event.html" class="code">sm.event</a></li>
+   <li><a href="namespace_Game_sm_game.html" class="code">sm.game</a></li>
+   <li><a href="namespace_Game_sm_gui.html" class="code">sm.gui</a></li>
+   <li><a href="namespace_Game_sm_gui_widget.html" class="code">sm.gui.widget</a></li>
+   <li><a href="namespace_Game_sm_harvestable.html" class="code">sm.harvestable</a></li>
+   <li><a href="namespace_Game_sm_interactable.html" class="code">sm.interactable</a></li>
+   <li><a href="namespace_Game_sm_item.html" class="code">sm.item</a></li>
+   <li><a href="namespace_Game_sm_joint.html" class="code">sm.joint</a></li>
+   <li><a href="namespace_Game_sm_json.html" class="code">sm.json</a></li>
+   <li><a href="namespace_Game_sm_localPlayer.html" class="code">sm.localPlayer</a></li>
+   <li><a href="namespace_Game_sm_log.html" class="code">sm.log</a></li>
+   <li><a href="namespace_Game_sm_melee.html" class="code">sm.melee</a></li>
+   <li><a href="namespace_Game_sm_menuCreation.html" class="code">sm.menuCreation</a></li>
+   <li><a href="namespace_Game_sm_noise.html" class="code">sm.noise</a></li>
+   <li><a href="namespace_Game_sm_particle.html" class="code">sm.particle</a></li>
+   <li><a href="namespace_Game_sm_pathNode.html" class="code">sm.pathNode</a></li>
+   <li><a href="namespace_Game_sm_pathfinder.html" class="code">sm.pathfinder</a></li>
+   <li><a href="namespace_Game_sm_physics.html" class="code">sm.physics</a></li>
+   <li><a href="namespace_Game_sm_player.html" class="code">sm.player</a></li>
+   <li><a href="namespace_Game_sm_portal.html" class="code">sm.portal</a></li>
+   <li><a href="namespace_Game_sm_projectile.html" class="code">sm.projectile</a></li>
+   <li><a href="namespace_Game_sm_quat.html" class="code">sm.quat</a></li>
+   <li><a href="namespace_Game_sm_render.html" class="code">sm.render</a></li>
+   <li><a href="namespace_Game_sm_scriptableObject.html" class="code">sm.scriptableObject</a></li>
+   <li><a href="namespace_Game_sm_shape.html" class="code">sm.shape</a></li>
+   <li><a href="namespace_Game_sm_storage.html" class="code">sm.storage</a></li>
+   <li><a href="namespace_Game_sm_tool.html" class="code">sm.tool</a></li>
+   <li><a href="namespace_Game_sm_unit.html" class="code">sm.unit</a></li>
+   <li><a href="namespace_Game_sm_util.html" class="code">sm.util</a></li>
+   <li><a href="namespace_Game_sm_uuid.html" class="code">sm.uuid</a></li>
+   <li><a href="namespace_Game_sm_vec3.html" class="code">sm.vec3</a></li>
+   <li><a href="namespace_Game_sm_visualization.html" class="code">sm.visualization</a></li>
+   <li><a href="namespace_Game_sm_world.html" class="code">sm.world</a></li>
+  </ul>
+  <h2>Terrain environment</h2>
+  <h3>Classes</h3>
+  <ul>
+  </ul>
+  <h3>Object Types 'userdata'</h3>
+  <ul>
+   <li><a href="userdata_Terrain_Color.html" class="code">Color</a></li>
+   <li><a href="userdata_Terrain_Harvestable.html" class="code">Harvestable</a></li>
+   <li><a href="userdata_Terrain_Quat.html" class="code">Quat</a></li>
+   <li><a href="userdata_Terrain_Uuid.html" class="code">Uuid</a></li>
+   <li><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></li>
+   <li><a href="userdata_Terrain_World.html" class="code">World</a></li>
+  </ul>
+  <h3>Static Function Namespaces</h3>
+  <ul>
+   <li><a href="namespace_Terrain_GLOBAL.html" class="code">GLOBAL</a></li>
+   <li><a href="namespace_Terrain_sm.html" class="code">sm</a></li>
+   <li><a href="namespace_Terrain_sm_color.html" class="code">sm.color</a></li>
+   <li><a href="namespace_Terrain_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
+   <li><a href="namespace_Terrain_sm_harvestable.html" class="code">sm.harvestable</a></li>
+   <li><a href="namespace_Terrain_sm_json.html" class="code">sm.json</a></li>
+   <li><a href="namespace_Terrain_sm_log.html" class="code">sm.log</a></li>
+   <li><a href="namespace_Terrain_sm_noise.html" class="code">sm.noise</a></li>
+   <li><a href="namespace_Terrain_sm_quat.html" class="code">sm.quat</a></li>
+   <li><a href="namespace_Terrain_sm_terrainData.html" class="code">sm.terrainData</a></li>
+   <li><a href="namespace_Terrain_sm_terrainGeneration.html" class="code">sm.terrainGeneration</a></li>
+   <li><a href="namespace_Terrain_sm_terrainTile.html" class="code">sm.terrainTile</a></li>
+   <li><a href="namespace_Terrain_sm_util.html" class="code">sm.util</a></li>
+   <li><a href="namespace_Terrain_sm_uuid.html" class="code">sm.uuid</a></li>
+   <li><a href="namespace_Terrain_sm_vec3.html" class="code">sm.vec3</a></li>
+  </ul>
+ </div>
+ <div id="content">
+  <h1 class="code">sm.camera</h1>
+  <p>The <strong>camera</strong> library contains methods related to the <a href="namespace_Game_sm_localPlayer.html" class="code">localPlayer</a>'s camera view.</p>
+  <p>In first-person view the camera is located inside the player's head, whereas in third-person view it floats behind them.</p>
+  <p>This library can only be used on the <a href="index.html#client">client</a>.</p>
+  <h4>Constants:</h4>  <ul>   <li><a href="#state" class="code">state</a></li>  </ul>  <h4>Functions:</h4  <ul>   <li><a href="#cameraSphereCast" class="code">cameraSphereCast</a></li>   <li><a href="#getCameraPullback" class="code">getCameraPullback</a></li>   <li><a href="#getCameraState" class="code">getCameraState</a></li>   <li><a href="#getDefaultFov" class="code">getDefaultFov</a></li>   <li><a href="#getDefaultPosition" class="code">getDefaultPosition</a></li>   <li><a href="#getDefaultRotation" class="code">getDefaultRotation</a></li>   <li><a href="#getDirection" class="code">getDirection</a></li>   <li><a href="#getFov" class="code">getFov</a></li>   <li><a href="#getPosition" class="code">getPosition</a></li>   <li><a href="#getRight" class="code">getRight</a></li>   <li><a href="#getRotation" class="code">getRotation</a></li>   <li><a href="#getUp" class="code">getUp</a></li>   <li><a href="#setCameraPullback" class="code">setCameraPullback</a></li>   <li><a href="#setCameraState" class="code">setCameraState</a></li>   <li><a href="#setDirection" class="code">setDirection</a></li>   <li><a href="#setFov" class="code">setFov</a></li>   <li><a href="#setPosition" class="code">setPosition</a></li>   <li><a href="#setRotation" class="code">setRotation</a></li>   <li><a href="#setShake" class="code">setShake</a></li>  </ul>  <hr>
+  <h2 class="code"><a id="state"></a>sm.camera.state <i>table</i></h2>
+  <p>Camera states are used to specify how the camera will view the world. The default state is meant for normal gameplay and the first-person and third-person states are meant to be used in cutcenes.</p>
+  <p>The states are:</p>
+  <ul>
+   <li><strong>default</strong> &ndash; The camera is controlled by the player.</li>
+   <li><strong>cutsceneFP</strong> &ndash; The camera views the world in a first-person perspective.</li>
+   <li><strong>cutsceneTP</strong> &ndash; The camera views the world in a third-person perspective.</li>
+  </ul>
+  <table>
+   <tr>    <td>default</td>    <td>1</td>   </tr>   <tr>    <td>cutsceneFP</td>    <td>2</td>   </tr>   <tr>    <td>cutsceneTP</td>    <td>3</td>   </tr>  </table>
+  <hr>
+  <h2 class="code"><a id="cameraSphereCast"></a>sm.camera.cameraSphereCast(radius, start, direction)</h2>
+  <p>Client only</p>
+  <p>Performs a distance convex sweep with the shape of a sphere, from a position with a given direction.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">number</td><td class="code">radius</td><td>The radius of the cast sphere</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">start</td><td>The start position.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">direction</td><td>The cast direction and range.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">number</td><td>The fraction of the distance reached until collision.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getCameraPullback"></a>sm.camera.getCameraPullback()</h2>
+  <p>Client only</p>
+  <p>Returns the camera's zoom step.</p>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">number</td><td>step	How far away the camera is from the player while standing</td></tr>
+   <tr><td class="code">number</td><td>step	How far away the camera is from the player while seated</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getCameraState"></a>sm.camera.getCameraState()</h2>
+  <p>Client only</p>
+  <p>Gets the camera's control state.</p>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">integer</td><td>state	How the camera is moved. (See <a href="namespace_Game_sm_camera.html#state" class="code">sm.camera.state</a>)</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getDefaultFov"></a>sm.camera.getDefaultFov()</h2>
+  <p>Client only</p>
+  <p>Returns the camera's default field of view angle.</p>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The field of view.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getDefaultPosition"></a>sm.camera.getDefaultPosition()</h2>
+  <p>Client only</p>
+  <p>Returns the world postition where the camera should be by default.</p>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The camera's world position.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getDefaultRotation"></a>sm.camera.getDefaultRotation()</h2>
+  <p>Client only</p>
+  <p>Returns the world rotation where the camera should be by default.</p>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td>The camera's default world rotation.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getDirection"></a>sm.camera.getDirection()</h2>
+  <p>Client only</p>
+  <p>Returns the direction the camera is aiming.</p>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The direction of the camera's aim.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getFov"></a>sm.camera.getFov()</h2>
+  <p>Client only</p>
+  <p>Returns the camera's field of view angle.</p>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The field of view.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getPosition"></a>sm.camera.getPosition()</h2>
+  <p>Client only</p>
+  <p>Returns the world postition of the camera.</p>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The camera's world position.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getRight"></a>sm.camera.getRight()</h2>
+  <p>Client only</p>
+  <p>Returns the right-vector perpendicular to the camera's aim.</p>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The right-vector of the camera's aim.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getRotation"></a>sm.camera.getRotation()</h2>
+  <p>Client only</p>
+  <p>Returns the world rotation of the camera.</p>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td>The camera's world rotation.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getUp"></a>sm.camera.getUp()</h2>
+  <p>Client only</p>
+  <p>Returns the up-vector perpendicular to the camera's aim.</p>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The up-vector of the camera's aim.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setCameraPullback"></a>sm.camera.setCameraPullback(step, step)</h2>
+  <p>Client only</p>
+  <p>Sets the camera's zoom step.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">integer</td><td class="code">step</td><td>How far away the camera is from the player while standing</td></tr>
+   <tr><td class="code">integer</td><td class="code">step</td><td>How far away the camera is from the player while seated</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setCameraState"></a>sm.camera.setCameraState(state)</h2>
+  <p>Client only</p>
+  <p>Sets the camera's control state.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">integer</td><td class="code">state</td><td>How the camera is moved. (See <a href="namespace_Game_sm_camera.html#state" class="code">sm.camera.state</a>)</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setDirection"></a>sm.camera.setDirection(direction)</h2>
+  <p>Client only</p>
+  <p>Sets the direction the camera is aiming.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">direction</td><td>The direction of the camera's aim.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setFov"></a>sm.camera.setFov(FOV)</h2>
+  <p>Client only</p>
+  <p>Sets the camera's field of view angle.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">FOV</td><td>The field of view.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setPosition"></a>sm.camera.setPosition(position)</h2>
+  <p>Client only</p>
+  <p>Sets the world postition of the camera.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The camera's world position.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setRotation"></a>sm.camera.setRotation(rotation)</h2>
+  <p>Client only</p>
+  <p>Sets the rotation of the camera.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td class="code">rotation</td><td>The rotation of the camera.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setShake"></a>sm.camera.setShake(strength)</h2>
+  <p>Client only</p>
+  <p>Sets the camera's level of camera shake.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">number</td><td class="code">strength</td><td>The camera shake strength.</td></tr>
+  </table>
+ </div>
+</body>
+</html>

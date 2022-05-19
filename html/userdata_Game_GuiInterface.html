@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>GuiInterface - Lua API Reference - Scrap Mechanic</title>
+ <link rel="stylesheet" href="styles.css">
+ <script src="script.js"></script>
+ <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+ <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+ <div id="menu">
+  <h2>Lua API Reference</h2>
+  <ul>
+   <li><a href="index.html">Introduction</a></li>
+  </ul>
+  <h2>Game environment</h2>
+  <h3>Classes</h3>
+  <ul>
+   <li><a href="class_Game_CharacterClass.html" class="code">CharacterClass</a></li>
+   <li><a href="class_Game_GameClass.html" class="code">GameClass</a></li>
+   <li><a href="class_Game_HarvestableClass.html" class="code">HarvestableClass</a></li>
+   <li><a href="class_Game_PlayerClass.html" class="code">PlayerClass</a></li>
+   <li><a href="class_Game_ScriptableObjectClass.html" class="code">ScriptableObjectClass</a></li>
+   <li><a href="class_Game_ShapeClass.html" class="code">ShapeClass</a></li>
+   <li><a href="class_Game_ToolClass.html" class="code">ToolClass</a></li>
+   <li><a href="class_Game_UnitClass.html" class="code">UnitClass</a></li>
+   <li><a href="class_Game_WorldClass.html" class="code">WorldClass</a></li>
+  </ul>
+  <h3>Object Types 'userdata'</h3>
+  <ul>
+   <li><a href="userdata_Game_AiState.html" class="code">AiState</a></li>
+   <li><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></li>
+   <li><a href="userdata_Game_BlueprintVisualization.html" class="code">BlueprintVisualization</a></li>
+   <li><a href="userdata_Game_Body.html" class="code">Body</a></li>
+   <li><a href="userdata_Game_BuilderGuide.html" class="code">BuilderGuide</a></li>
+   <li><a href="userdata_Game_Character.html" class="code">Character</a></li>
+   <li><a href="userdata_Game_Color.html" class="code">Color</a></li>
+   <li><a href="userdata_Game_Container.html" class="code">Container</a></li>
+   <li><a href="userdata_Game_CullSphereGroup.html" class="code">CullSphereGroup</a></li>
+   <li><a href="userdata_Game_Effect.html" class="code">Effect</a></li>
+   <li><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></li>
+   <li><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></li>
+   <li><a href="userdata_Game_Interactable.html" class="code">Interactable</a></li>
+   <li><a href="userdata_Game_Joint.html" class="code">Joint</a></li>
+   <li><a href="userdata_Game_Lift.html" class="code">Lift</a></li>
+   <li><a href="userdata_Game_LoadCellHandle.html" class="code">LoadCellHandle</a></li>
+   <li><a href="userdata_Game_Network.html" class="code">Network</a></li>
+   <li><a href="userdata_Game_PathNode.html" class="code">PathNode</a></li>
+   <li><a href="userdata_Game_Player.html" class="code">Player</a></li>
+   <li><a href="userdata_Game_Portal.html" class="code">Portal</a></li>
+   <li><a href="userdata_Game_Quat.html" class="code">Quat</a></li>
+   <li><a href="userdata_Game_RaycastResult.html" class="code">RaycastResult</a></li>
+   <li><a href="userdata_Game_ScriptableObject.html" class="code">ScriptableObject</a></li>
+   <li><a href="userdata_Game_Shape.html" class="code">Shape</a></li>
+   <li><a href="userdata_Game_Storage.html" class="code">Storage</a></li>
+   <li><a href="userdata_Game_Tool.html" class="code">Tool</a></li>
+   <li><a href="userdata_Game_Unit.html" class="code">Unit</a></li>
+   <li><a href="userdata_Game_Uuid.html" class="code">Uuid</a></li>
+   <li><a href="userdata_Game_Vec3.html" class="code">Vec3</a></li>
+   <li><a href="userdata_Game_Widget.html" class="code">Widget</a></li>
+   <li><a href="userdata_Game_World.html" class="code">World</a></li>
+  </ul>
+  <h3>Static Function Namespaces</h3>
+  <ul>
+   <li><a href="namespace_Game_GLOBAL.html" class="code">GLOBAL</a></li>
+   <li><a href="namespace_Game_sm.html" class="code">sm</a></li>
+   <li><a href="namespace_Game_sm_ai.html" class="code">sm.ai</a></li>
+   <li><a href="namespace_Game_sm_areaTrigger.html" class="code">sm.areaTrigger</a></li>
+   <li><a href="namespace_Game_sm_audio.html" class="code">sm.audio</a></li>
+   <li><a href="namespace_Game_sm_body.html" class="code">sm.body</a></li>
+   <li><a href="namespace_Game_sm_builderGuide.html" class="code">sm.builderGuide</a></li>
+   <li><a href="namespace_Game_sm_camera.html" class="code">sm.camera</a></li>
+   <li><a href="namespace_Game_sm_cell.html" class="code">sm.cell</a></li>
+   <li><a href="namespace_Game_sm_challenge.html" class="code">sm.challenge</a></li>
+   <li><a href="namespace_Game_sm_character.html" class="code">sm.character</a></li>
+   <li><a href="namespace_Game_sm_color.html" class="code">sm.color</a></li>
+   <li><a href="namespace_Game_sm_construction.html" class="code">sm.construction</a></li>
+   <li><a href="namespace_Game_sm_container.html" class="code">sm.container</a></li>
+   <li><a href="namespace_Game_sm_creation.html" class="code">sm.creation</a></li>
+   <li><a href="namespace_Game_sm_cullSphereGroup.html" class="code">sm.cullSphereGroup</a></li>
+   <li><a href="namespace_Game_sm_debris.html" class="code">sm.debris</a></li>
+   <li><a href="namespace_Game_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
+   <li><a href="namespace_Game_sm_effect.html" class="code">sm.effect</a></li>
+   <li><a href="namespace_Game_sm_event.html" class="code">sm.event</a></li>
+   <li><a href="namespace_Game_sm_game.html" class="code">sm.game</a></li>
+   <li><a href="namespace_Game_sm_gui.html" class="code">sm.gui</a></li>
+   <li><a href="namespace_Game_sm_gui_widget.html" class="code">sm.gui.widget</a></li>
+   <li><a href="namespace_Game_sm_harvestable.html" class="code">sm.harvestable</a></li>
+   <li><a href="namespace_Game_sm_interactable.html" class="code">sm.interactable</a></li>
+   <li><a href="namespace_Game_sm_item.html" class="code">sm.item</a></li>
+   <li><a href="namespace_Game_sm_joint.html" class="code">sm.joint</a></li>
+   <li><a href="namespace_Game_sm_json.html" class="code">sm.json</a></li>
+   <li><a href="namespace_Game_sm_localPlayer.html" class="code">sm.localPlayer</a></li>
+   <li><a href="namespace_Game_sm_log.html" class="code">sm.log</a></li>
+   <li><a href="namespace_Game_sm_melee.html" class="code">sm.melee</a></li>
+   <li><a href="namespace_Game_sm_menuCreation.html" class="code">sm.menuCreation</a></li>
+   <li><a href="namespace_Game_sm_noise.html" class="code">sm.noise</a></li>
+   <li><a href="namespace_Game_sm_particle.html" class="code">sm.particle</a></li>
+   <li><a href="namespace_Game_sm_pathNode.html" class="code">sm.pathNode</a></li>
+   <li><a href="namespace_Game_sm_pathfinder.html" class="code">sm.pathfinder</a></li>
+   <li><a href="namespace_Game_sm_physics.html" class="code">sm.physics</a></li>
+   <li><a href="namespace_Game_sm_player.html" class="code">sm.player</a></li>
+   <li><a href="namespace_Game_sm_portal.html" class="code">sm.portal</a></li>
+   <li><a href="namespace_Game_sm_projectile.html" class="code">sm.projectile</a></li>
+   <li><a href="namespace_Game_sm_quat.html" class="code">sm.quat</a></li>
+   <li><a href="namespace_Game_sm_render.html" class="code">sm.render</a></li>
+   <li><a href="namespace_Game_sm_scriptableObject.html" class="code">sm.scriptableObject</a></li>
+   <li><a href="namespace_Game_sm_shape.html" class="code">sm.shape</a></li>
+   <li><a href="namespace_Game_sm_storage.html" class="code">sm.storage</a></li>
+   <li><a href="namespace_Game_sm_tool.html" class="code">sm.tool</a></li>
+   <li><a href="namespace_Game_sm_unit.html" class="code">sm.unit</a></li>
+   <li><a href="namespace_Game_sm_util.html" class="code">sm.util</a></li>
+   <li><a href="namespace_Game_sm_uuid.html" class="code">sm.uuid</a></li>
+   <li><a href="namespace_Game_sm_vec3.html" class="code">sm.vec3</a></li>
+   <li><a href="namespace_Game_sm_visualization.html" class="code">sm.visualization</a></li>
+   <li><a href="namespace_Game_sm_world.html" class="code">sm.world</a></li>
+  </ul>
+  <h2>Terrain environment</h2>
+  <h3>Classes</h3>
+  <ul>
+  </ul>
+  <h3>Object Types 'userdata'</h3>
+  <ul>
+   <li><a href="userdata_Terrain_Color.html" class="code">Color</a></li>
+   <li><a href="userdata_Terrain_Harvestable.html" class="code">Harvestable</a></li>
+   <li><a href="userdata_Terrain_Quat.html" class="code">Quat</a></li>
+   <li><a href="userdata_Terrain_Uuid.html" class="code">Uuid</a></li>
+   <li><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></li>
+   <li><a href="userdata_Terrain_World.html" class="code">World</a></li>
+  </ul>
+  <h3>Static Function Namespaces</h3>
+  <ul>
+   <li><a href="namespace_Terrain_GLOBAL.html" class="code">GLOBAL</a></li>
+   <li><a href="namespace_Terrain_sm.html" class="code">sm</a></li>
+   <li><a href="namespace_Terrain_sm_color.html" class="code">sm.color</a></li>
+   <li><a href="namespace_Terrain_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
+   <li><a href="namespace_Terrain_sm_harvestable.html" class="code">sm.harvestable</a></li>
+   <li><a href="namespace_Terrain_sm_json.html" class="code">sm.json</a></li>
+   <li><a href="namespace_Terrain_sm_log.html" class="code">sm.log</a></li>
+   <li><a href="namespace_Terrain_sm_noise.html" class="code">sm.noise</a></li>
+   <li><a href="namespace_Terrain_sm_quat.html" class="code">sm.quat</a></li>
+   <li><a href="namespace_Terrain_sm_terrainData.html" class="code">sm.terrainData</a></li>
+   <li><a href="namespace_Terrain_sm_terrainGeneration.html" class="code">sm.terrainGeneration</a></li>
+   <li><a href="namespace_Terrain_sm_terrainTile.html" class="code">sm.terrainTile</a></li>
+   <li><a href="namespace_Terrain_sm_util.html" class="code">sm.util</a></li>
+   <li><a href="namespace_Terrain_sm_uuid.html" class="code">sm.uuid</a></li>
+   <li><a href="namespace_Terrain_sm_vec3.html" class="code">sm.vec3</a></li>
+  </ul>
+ </div>
+ <div id="content">
+  <h1 class="code">GuiInterface</h1>
+  <p>A userdata object representing a <strong>GUI interface</strong>.</p>
+  <p>A <strong>gui interface</strong> is an adapter between a script and a GUI.</p>
+  <p>Can only be used on the <a href="index.html#client">client</a>.</p>
+  <h4>Functions:</h4>
+  <ul>
+   <li><a href="#addGridItem" class="code">addGridItem</a></li>
+   <li><a href="#addGridItemsFromFile" class="code">addGridItemsFromFile</a></li>
+   <li><a href="#addListItem" class="code">addListItem</a></li>
+   <li><a href="#clearGrid" class="code">clearGrid</a></li>
+   <li><a href="#clearList" class="code">clearList</a></li>
+   <li><a href="#close" class="code">close</a></li>
+   <li><a href="#createDropDown" class="code">createDropDown</a></li>
+   <li><a href="#createGridFromJson" class="code">createGridFromJson</a></li>
+   <li><a href="#createHorizontalSlider" class="code">createHorizontalSlider</a></li>
+   <li><a href="#createVerticalSlider" class="code">createVerticalSlider</a></li>
+   <li><a href="#destroy" class="code">destroy</a></li>
+   <li><a href="#isActive" class="code">isActive</a></li>
+   <li><a href="#open" class="code">open</a></li>
+   <li><a href="#playEffect" class="code">playEffect</a></li>
+   <li><a href="#playGridEffect" class="code">playGridEffect</a></li>
+   <li><a href="#setButtonCallback" class="code">setButtonCallback</a></li>
+   <li><a href="#setButtonState" class="code">setButtonState</a></li>
+   <li><a href="#setColor" class="code">setColor</a></li>
+   <li><a href="#setContainer" class="code">setContainer</a></li>
+   <li><a href="#setContainers" class="code">setContainers</a></li>
+   <li><a href="#setData" class="code">setData</a></li>
+   <li><a href="#setFadeRange" class="code">setFadeRange</a></li>
+   <li><a href="#setFocus" class="code">setFocus</a></li>
+   <li><a href="#setGridButtonCallback" class="code">setGridButtonCallback</a></li>
+   <li><a href="#setGridItem" class="code">setGridItem</a></li>
+   <li><a href="#setGridItemChangedCallback" class="code">setGridItemChangedCallback</a></li>
+   <li><a href="#setGridMouseFocusCallback" class="code">setGridMouseFocusCallback</a></li>
+   <li><a href="#setGridSize" class="code">setGridSize</a></li>
+   <li><a href="#setHost" class="code">setHost</a></li>
+   <li><a href="#setHost" class="code">setHost</a></li>
+   <li><a href="#setIconImage" class="code">setIconImage</a></li>
+   <li><a href="#setImage" class="code">setImage</a></li>
+   <li><a href="#setItemIcon" class="code">setItemIcon</a></li>
+   <li><a href="#setListSelectionCallback" class="code">setListSelectionCallback</a></li>
+   <li><a href="#setMaxRenderDistance" class="code">setMaxRenderDistance</a></li>
+   <li><a href="#setMeshPreview" class="code">setMeshPreview</a></li>
+   <li><a href="#setOnCloseCallback" class="code">setOnCloseCallback</a></li>
+   <li><a href="#setRequireLineOfSight" class="code">setRequireLineOfSight</a></li>
+   <li><a href="#setSelectedDropDownItem" class="code">setSelectedDropDownItem</a></li>
+   <li><a href="#setSelectedListItem" class="code">setSelectedListItem</a></li>
+   <li><a href="#setSliderCallback" class="code">setSliderCallback</a></li>
+   <li><a href="#setSliderData" class="code">setSliderData</a></li>
+   <li><a href="#setSliderPosition" class="code">setSliderPosition</a></li>
+   <li><a href="#setSliderRange" class="code">setSliderRange</a></li>
+   <li><a href="#setSliderRangeLimit" class="code">setSliderRangeLimit</a></li>
+   <li><a href="#setText" class="code">setText</a></li>
+   <li><a href="#setTextAcceptedCallback" class="code">setTextAcceptedCallback</a></li>
+   <li><a href="#setTextChangedCallback" class="code">setTextChangedCallback</a></li>
+   <li><a href="#setVisible" class="code">setVisible</a></li>
+   <li><a href="#setWorldPosition" class="code">setWorldPosition</a></li>
+   <li><a href="#stopEffect" class="code">stopEffect</a></li>
+   <li><a href="#stopGridEffect" class="code">stopGridEffect</a></li>
+  </ul>
+  <h4>Operations:</h4>
+  <table>
+   <tr><th>Operation</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a> == <a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td>Checks if two instances of <a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a> refer to the same GuiInterface.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="addGridItem"></a>addGridItem(gui, gridName, item)</h2>
+  <p>Client only</p>
+  <p>Adds an item to a grid</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface</td></tr>
+   <tr><td class="code">string</td><td class="code">gridName</td><td>The name of the grid</td></tr>
+   <tr><td class="code">table</td><td class="code">item</td><td>The item</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="addGridItemsFromFile"></a>addGridItemsFromFile(gui, gridName, jsonPath, additionalData)</h2>
+  <p>Client only</p>
+  <p>Adds items to a grid from json</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface</td></tr>
+   <tr><td class="code">string</td><td class="code">gridName</td><td>The name of the grid</td></tr>
+   <tr><td class="code">string</td><td class="code">jsonPath</td><td>Json file path</td></tr>
+   <tr><td class="code">table</td><td class="code">additionalData</td><td>Additional data to the json (Optional)</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="addListItem"></a>addListItem(gui, listName, itemName, data)</h2>
+  <p>Client only</p>
+  <p>Appends an item to a list</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface</td></tr>
+   <tr><td class="code">string</td><td class="code">listName</td><td>The name of the list</td></tr>
+   <tr><td class="code">string</td><td class="code">itemName</td><td>The name of the item</td></tr>
+   <tr><td class="code">table</td><td class="code">data</td><td>Table of data to store</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="clearGrid"></a>clearGrid(gui, gridName)</h2>
+  <p>Client only</p>
+  <p>Clears a grid</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface</td></tr>
+   <tr><td class="code">string</td><td class="code">gridName</td><td>The name of the grid to clear</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="clearList"></a>clearList(gui, listName)</h2>
+  <p>Client only</p>
+  <p>Clears a list</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface</td></tr>
+   <tr><td class="code">string</td><td class="code">listName</td><td>The name of the list</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="close"></a>close(gui)</h2>
+  <p>Client only</p>
+  <p>Close a gui interface</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface to close</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="createDropDown"></a>createDropDown(gui, widgetName, functionName, options)</h2>
+  <p>Client only</p>
+  <p>Creates a dropdown at the specified widget</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface</td></tr>
+   <tr><td class="code">string</td><td class="code">widgetName</td><td>The name of the widget</td></tr>
+   <tr><td class="code">string</td><td class="code">functionName</td><td>The name of the function</td></tr>
+   <tr><td class="code">table</td><td class="code">options</td><td>The options in the dropdown menu</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="createGridFromJson"></a>createGridFromJson(gui, gridName, index)</h2>
+  <p>Client only</p>
+  <p>Creats a grid from a table/json</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface</td></tr>
+   <tr><td class="code">string</td><td class="code">gridName</td><td>The name of the grid</td></tr>
+   <tr><td class="code">table</td><td class="code">index</td><td>Grid data table { type=string, layout=string, itemWidth=integer, itemHeight=integer, itemCount=integer }</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="createHorizontalSlider"></a>createHorizontalSlider(gui, widgetName, range, value)</h2>
+  <p>Client only</p>
+  <p>Creates a slider at the specified widget</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface</td></tr>
+   <tr><td class="code">string</td><td class="code">widgetName</td><td>The name of the widget</td></tr>
+   <tr><td class="code">number</td><td class="code">range</td><td>The range of the slider</td></tr>
+   <tr><td class="code">number</td><td class="code">value</td><td>The start value on the slider</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="createVerticalSlider"></a>createVerticalSlider(gui, widgetName, range, value)</h2>
+  <p>Client only</p>
+  <p>Creates a slider at the specified widget</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface</td></tr>
+   <tr><td class="code">string</td><td class="code">widgetName</td><td>The name of the widget</td></tr>
+   <tr><td class="code">number</td><td class="code">range</td><td>The range of the slider</td></tr>
+   <tr><td class="code">number</td><td class="code">value</td><td>The start value on the slider</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="destroy"></a>destroy(gui)</h2>
+  <p>Client only</p>
+  <p>Destroy a gui interface</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The interface to destroy</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="isActive"></a>isActive(gui)</h2>
+  <p>Client only</p>
+  <p>Checks if a gui interface is active</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>True if gui is active</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="open"></a>open(gui)</h2>
+  <p>Client only</p>
+  <p>Open a gui interface</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface to open</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="playEffect"></a>playEffect(gui, widgetName, effectName, restart=true)</h2>
+  <p>Client only</p>
+  <p>Plays an effect at a widget</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface</td></tr>
+   <tr><td class="code">string</td><td class="code">widgetName</td><td>The name of the widget</td></tr>
+   <tr><td class="code">string</td><td class="code">effectName</td><td>The name of the effect</td></tr>
+   <tr><td class="code">boolean</td><td class="code">restart=true</td><td>If the effect should restart if its already palying</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="playGridEffect"></a>playGridEffect(gui, gridName, index, effectName, restart=true)</h2>
+  <p>Client only</p>
+  <p>Plays an effect at widget inside a grid</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface</td></tr>
+   <tr><td class="code">string</td><td class="code">gridName</td><td>The name of the grid</td></tr>
+   <tr><td class="code">integer</td><td class="code">index</td><td>The index in the grid</td></tr>
+   <tr><td class="code">string</td><td class="code">effectName</td><td>The name of the effect</td></tr>
+   <tr><td class="code">boolean</td><td class="code">restart=true</td><td>If the effect should restart if its already palying</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setButtonCallback"></a>setButtonCallback(gui, buttonName, callback)</h2>
+  <p>Client only</p>
+  <p>Sets a button callback to be called when the button is pressed</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface</td></tr>
+   <tr><td class="code">string</td><td class="code">buttonName</td><td>The button name</td></tr>
+   <tr><td class="code">string</td><td class="code">callback</td><td>Function to be called when button is pressed</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setButtonState"></a>setButtonState(gui, buttonName, state)</h2>
+  <p>Client only</p>
+  <p>Sets the button state</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface</td></tr>
+   <tr><td class="code">string</td><td class="code">buttonName</td><td>The name of the button</td></tr>
+   <tr><td class="code">boolean</td><td class="code">state</td><td>The state of the button</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setColor"></a>setColor(gui, widgetName, Color)</h2>
+  <p>Client only</p>
+  <p>Sets the color of a widget</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface</td></tr>
+   <tr><td class="code">string</td><td class="code">widgetName</td><td>The name of the widget</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Color.html" class="code">Color</a></td><td class="code">Color</td><td>The color</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setContainer"></a>setContainer(gui, gridName, container)</h2>
+  <p>Client only</p>
+  <p>Sets a container to a grid</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface</td></tr>
+   <tr><td class="code">string</td><td class="code">gridName</td><td>The name of the grid</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Container.html" class="code">Container</a></td><td class="code">container</td><td>The container</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setContainers"></a>setContainers(gui, gridName, containers)</h2>
+  <p>Client only</p>
+  <p>Sets multiple containers to a grid</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface</td></tr>
+   <tr><td class="code">string</td><td class="code">gridName</td><td>The name of the grid</td></tr>
+   <tr><td class="code">table</td><td class="code">containers</td><td>Table of containers. {<a href="userdata_Game_Container.html" class="code">Container</a>, ..}</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setData"></a>setData(gui, widgetName, data)</h2>
+  <p>Client only</p>
+  <p>Sets data to a widget</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface</td></tr>
+   <tr><td class="code">string</td><td class="code">widgetName</td><td>The name of the widget</td></tr>
+   <tr><td class="code">table</td><td class="code">data</td><td>The data</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setFadeRange"></a>setFadeRange(gui, range)</h2>
+  <p>Client only</p>
+  <p>Sets the fade range for a world gui</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface</td></tr>
+   <tr><td class="code">number</td><td class="code">range</td><td>The fade range</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setFocus"></a>setFocus(gui, widgetName)</h2>
+  <p>Client only</p>
+  <p>Sets a widget to recieve key focus</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface</td></tr>
+   <tr><td class="code">string</td><td class="code">widgetName</td><td>The name of the widget that needs focus</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setGridButtonCallback"></a>setGridButtonCallback(gui, buttonName, callback)</h2>
+  <p>Client only</p>
+  <p>Sets a callback to be called when a button inside a grid is pressed</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface</td></tr>
+   <tr><td class="code">string</td><td class="code">buttonName</td><td>The button name</td></tr>
+   <tr><td class="code">string</td><td class="code">callback</td><td>Function to be called when button is pressed</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setGridItem"></a>setGridItem(gui, gridName, index, item)</h2>
+  <p>Client only</p>
+  <p>Sets an item in a grid</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface</td></tr>
+   <tr><td class="code">string</td><td class="code">gridName</td><td>The name of the grid</td></tr>
+   <tr><td class="code">integer</td><td class="code">index</td><td>The item index</td></tr>
+   <tr><td class="code">table</td><td class="code">item</td><td>The item</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setGridItemChangedCallback"></a>setGridItemChangedCallback(gui, gridName, callback)</h2>
+  <p>Client only</p>
+  <p>Sets a callback to be called when a grid item is changed</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface</td></tr>
+   <tr><td class="code">string</td><td class="code">gridName</td><td>The grid name</td></tr>
+   <tr><td class="code">string</td><td class="code">callback</td><td>Function to be called when button is pressed</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setGridMouseFocusCallback"></a>setGridMouseFocusCallback(gui, buttonName, callback)</h2>
+  <p>Client only</p>
+  <p>Sets a callback to be called when a grid widget gets mouse focus</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface</td></tr>
+   <tr><td class="code">string</td><td class="code">buttonName</td><td>The button name</td></tr>
+   <tr><td class="code">string</td><td class="code">callback</td><td>Function to be called when button is pressed</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setGridSize"></a>setGridSize(gui, gridName, index)</h2>
+  <p>Client only</p>
+  <p>Sets the size of a grid</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface</td></tr>
+   <tr><td class="code">string</td><td class="code">gridName</td><td>The name of the grid</td></tr>
+   <tr><td class="code">integer</td><td class="code">index</td><td>The size</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setHost"></a>setHost(gui, widgetName, character, joint=nil)</h2>
+  <p>Client only</p>
+  <p>Sets a <a href="userdata_Game_Character.html" class="code">Character</a> as host for a world gui</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface</td></tr>
+   <tr><td class="code">string</td><td class="code">widgetName</td><td>The name of the widget</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The character to host the gui</td></tr>
+   <tr><td class="code">string</td><td class="code">joint=nil</td><td>The joint (Optional)</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setHost"></a>setHost(gui, widgetName, shape, joint=nil)</h2>
+  <p>Client only</p>
+  <p>Sets a <a href="userdata_Game_Shape.html" class="code">Shape</a> as host for a world gui</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface</td></tr>
+   <tr><td class="code">string</td><td class="code">widgetName</td><td>The name of the widget</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">shape</td><td>The shape to host the gui</td></tr>
+   <tr><td class="code">string</td><td class="code">joint=nil</td><td>The joint (Optional)</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setIconImage"></a>setIconImage(gui, itembox, uuid)</h2>
+  <p>Client only</p>
+  <p>Sets the icon image to a shape from an uuid</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface</td></tr>
+   <tr><td class="code">string</td><td class="code">itembox</td><td>The name of the itembox</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">uuid</td><td>The item uuid</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setImage"></a>setImage(gui, imagebox, image)</h2>
+  <p>Client only</p>
+  <p>Sets the image of an imagebox</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface</td></tr>
+   <tr><td class="code">string</td><td class="code">imagebox</td><td>The name of the imagebox widget</td></tr>
+   <tr><td class="code">string</td><td class="code">image</td><td>The name or path of the image</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setItemIcon"></a>setItemIcon(gui, imagebox, itemResource, itemGroup, itemName)</h2>
+  <p>Client only</p>
+  <p>Sets the resource, group and item name on an imagebox widget</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface</td></tr>
+   <tr><td class="code">string</td><td class="code">imagebox</td><td>The name of the imagebox</td></tr>
+   <tr><td class="code">string</td><td class="code">itemResource</td><td>The item resource </td></tr>
+   <tr><td class="code">string</td><td class="code">itemGroup</td><td>The item group</td></tr>
+   <tr><td class="code">string</td><td class="code">itemName</td><td>The item name</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setListSelectionCallback"></a>setListSelectionCallback(gui, listName, callback)</h2>
+  <p>Client only</p>
+  <p>Sets a callback to be called when a list selection is changed</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface</td></tr>
+   <tr><td class="code">string</td><td class="code">listName</td><td>The list name</td></tr>
+   <tr><td class="code">string</td><td class="code">callback</td><td>Function to be called when list is selected</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setMaxRenderDistance"></a>setMaxRenderDistance(gui, distance)</h2>
+  <p>Client only</p>
+  <p>Sets the maximum render distance for a world gui</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface</td></tr>
+   <tr><td class="code">number</td><td class="code">distance</td><td>The max render distance</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setMeshPreview"></a>setMeshPreview(gui, widgetName, uuid)</h2>
+  <p>Client only</p>
+  <p>Sets a mesh preview to display an item from uuid</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface</td></tr>
+   <tr><td class="code">string</td><td class="code">widgetName</td><td>The name of the widget</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">uuid</td><td>The item uuid to display</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setOnCloseCallback"></a>setOnCloseCallback(gui, callback)</h2>
+  <p>Client only</p>
+  <p>Sets a callback to be called when the gui is closed</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface</td></tr>
+   <tr><td class="code">string</td><td class="code">callback</td><td>Function to be called when gui is closed</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setRequireLineOfSight"></a>setRequireLineOfSight(gui, required)</h2>
+  <p>Client only</p>
+  <p>Sets if a world gui requires line of sight to be shown</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface</td></tr>
+   <tr><td class="code">boolean</td><td class="code">required</td><td>True if gui requires line of sight to render</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setSelectedDropDownItem"></a>setSelectedDropDownItem()</h2>
+  <p>Client only</p>
+  <hr>
+  <h2 class="code"><a id="setSelectedListItem"></a>setSelectedListItem(gui, listName, itemName)</h2>
+  <p>Client only</p>
+  <p>Selects an item in a list</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface</td></tr>
+   <tr><td class="code">string</td><td class="code">listName</td><td>The name of the list</td></tr>
+   <tr><td class="code">string</td><td class="code">itemName</td><td>The name of the item</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setSliderCallback"></a>setSliderCallback(gui, sliderName, callback)</h2>
+  <p>Client only</p>
+  <p>Sets a callback to be called when the slider is moved</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface</td></tr>
+   <tr><td class="code">string</td><td class="code">sliderName</td><td>The button name</td></tr>
+   <tr><td class="code">string</td><td class="code">callback</td><td>Function to be called when slider is moved</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setSliderData"></a>setSliderData(gui, sliderName, range, position)</h2>
+  <p>Client only</p>
+  <p>Sets the position and range of a slider</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface</td></tr>
+   <tr><td class="code">string</td><td class="code">sliderName</td><td>The name of the slider</td></tr>
+   <tr><td class="code">unsigned</td><td class="code">range</td><td>The slider range</td></tr>
+   <tr><td class="code">unsigned</td><td class="code">position</td><td>The slider position</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setSliderPosition"></a>setSliderPosition(gui, sliderName, position)</h2>
+  <p>Client only</p>
+  <p>Sets the position of a slider</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface</td></tr>
+   <tr><td class="code">string</td><td class="code">sliderName</td><td>The name of the slider</td></tr>
+   <tr><td class="code">integer</td><td class="code">position</td><td>The slider position</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setSliderRange"></a>setSliderRange(gui, sliderName, range)</h2>
+  <p>Client only</p>
+  <p>Sets the slider range of a slider.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface</td></tr>
+   <tr><td class="code">string</td><td class="code">sliderName</td><td>The name of the slider</td></tr>
+   <tr><td class="code">integer</td><td class="code">range</td><td>The slider range</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setSliderRangeLimit"></a>setSliderRangeLimit(gui, sliderName, limit)</h2>
+  <p>Client only</p>
+  <p>Sets the range limit of a slider</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface</td></tr>
+   <tr><td class="code">string</td><td class="code">sliderName</td><td>The name of the slider</td></tr>
+   <tr><td class="code">integer</td><td class="code">limit</td><td>The slider range limit</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setText"></a>setText(gui, textbox, text)</h2>
+  <p>Client only</p>
+  <p>Sets the text caption of a textbox widget</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface</td></tr>
+   <tr><td class="code">string</td><td class="code">textbox</td><td>The name of the textbox widget</td></tr>
+   <tr><td class="code">string</td><td class="code">text</td><td>The text</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setTextAcceptedCallback"></a>setTextAcceptedCallback(gui, editBoxName, callback)</h2>
+  <p>Client only</p>
+  <p>Sets a callback to be called when the text change is accepted</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface</td></tr>
+   <tr><td class="code">string</td><td class="code">editBoxName</td><td>The edit box name</td></tr>
+   <tr><td class="code">string</td><td class="code">callback</td><td>Function to be called when text is committed</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setTextChangedCallback"></a>setTextChangedCallback(gui, editBoxName, callback)</h2>
+  <p>Client only</p>
+  <p>Sets a callback to be called when the text is changed</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface</td></tr>
+   <tr><td class="code">string</td><td class="code">editBoxName</td><td>The edit box name</td></tr>
+   <tr><td class="code">string</td><td class="code">callback</td><td>Function to be called when text is edited</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setVisible"></a>setVisible(gui, widgetName, visible)</h2>
+  <p>Client only</p>
+  <p>Sets a widget to be visible or not</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface</td></tr>
+   <tr><td class="code">string</td><td class="code">widgetName</td><td>The name of the widget</td></tr>
+   <tr><td class="code">boolean</td><td class="code">visible</td><td>True if visible</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setWorldPosition"></a>setWorldPosition(gui, widgetName, world=nil)</h2>
+  <p>Client only</p>
+  <p>Sets the world position for a world gui</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface</td></tr>
+   <tr><td class="code">string</td><td class="code">widgetName</td><td>The name of the widget</td></tr>
+   <tr><td class="code"><a href="userdata_Game_World.html" class="code">World</a></td><td class="code">world=nil</td><td>The world, defaults to same as the script</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="stopEffect"></a>stopEffect(gui, widgetName, effectName, immediate=nil)</h2>
+  <p>Client only</p>
+  <p>Stops an effect playing at a widget</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface</td></tr>
+   <tr><td class="code">string</td><td class="code">widgetName</td><td>The name of the widget</td></tr>
+   <tr><td class="code">string</td><td class="code">effectName</td><td>The name of the effect</td></tr>
+   <tr><td class="code">boolean</td><td class="code">immediate=nil</td><td>When true, the effect stops immediately (Defaults to false)</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="stopGridEffect"></a>stopGridEffect(gui, gridName, index, effectName)</h2>
+  <p>Client only</p>
+  <p>Stopts an effect playing inside a grid</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface</td></tr>
+   <tr><td class="code">string</td><td class="code">gridName</td><td>The name of the grid</td></tr>
+   <tr><td class="code">integer</td><td class="code">index</td><td>The index in the grid</td></tr>
+   <tr><td class="code">string</td><td class="code">effectName</td><td>The name of the effect</td></tr>
+  </table>
+ </div>
+</body>
+</html>

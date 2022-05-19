@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Body - Lua API Reference - Scrap Mechanic</title>
+ <link rel="stylesheet" href="styles.css">
+ <script src="script.js"></script>
+ <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+ <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+ <div id="menu">
+  <h2>Lua API Reference</h2>
+  <ul>
+   <li><a href="index.html">Introduction</a></li>
+  </ul>
+  <h2>Game environment</h2>
+  <h3>Classes</h3>
+  <ul>
+   <li><a href="class_Game_CharacterClass.html" class="code">CharacterClass</a></li>
+   <li><a href="class_Game_GameClass.html" class="code">GameClass</a></li>
+   <li><a href="class_Game_HarvestableClass.html" class="code">HarvestableClass</a></li>
+   <li><a href="class_Game_PlayerClass.html" class="code">PlayerClass</a></li>
+   <li><a href="class_Game_ScriptableObjectClass.html" class="code">ScriptableObjectClass</a></li>
+   <li><a href="class_Game_ShapeClass.html" class="code">ShapeClass</a></li>
+   <li><a href="class_Game_ToolClass.html" class="code">ToolClass</a></li>
+   <li><a href="class_Game_UnitClass.html" class="code">UnitClass</a></li>
+   <li><a href="class_Game_WorldClass.html" class="code">WorldClass</a></li>
+  </ul>
+  <h3>Object Types 'userdata'</h3>
+  <ul>
+   <li><a href="userdata_Game_AiState.html" class="code">AiState</a></li>
+   <li><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></li>
+   <li><a href="userdata_Game_BlueprintVisualization.html" class="code">BlueprintVisualization</a></li>
+   <li><a href="userdata_Game_Body.html" class="code">Body</a></li>
+   <li><a href="userdata_Game_BuilderGuide.html" class="code">BuilderGuide</a></li>
+   <li><a href="userdata_Game_Character.html" class="code">Character</a></li>
+   <li><a href="userdata_Game_Color.html" class="code">Color</a></li>
+   <li><a href="userdata_Game_Container.html" class="code">Container</a></li>
+   <li><a href="userdata_Game_CullSphereGroup.html" class="code">CullSphereGroup</a></li>
+   <li><a href="userdata_Game_Effect.html" class="code">Effect</a></li>
+   <li><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></li>
+   <li><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></li>
+   <li><a href="userdata_Game_Interactable.html" class="code">Interactable</a></li>
+   <li><a href="userdata_Game_Joint.html" class="code">Joint</a></li>
+   <li><a href="userdata_Game_Lift.html" class="code">Lift</a></li>
+   <li><a href="userdata_Game_LoadCellHandle.html" class="code">LoadCellHandle</a></li>
+   <li><a href="userdata_Game_Network.html" class="code">Network</a></li>
+   <li><a href="userdata_Game_PathNode.html" class="code">PathNode</a></li>
+   <li><a href="userdata_Game_Player.html" class="code">Player</a></li>
+   <li><a href="userdata_Game_Portal.html" class="code">Portal</a></li>
+   <li><a href="userdata_Game_Quat.html" class="code">Quat</a></li>
+   <li><a href="userdata_Game_RaycastResult.html" class="code">RaycastResult</a></li>
+   <li><a href="userdata_Game_ScriptableObject.html" class="code">ScriptableObject</a></li>
+   <li><a href="userdata_Game_Shape.html" class="code">Shape</a></li>
+   <li><a href="userdata_Game_Storage.html" class="code">Storage</a></li>
+   <li><a href="userdata_Game_Tool.html" class="code">Tool</a></li>
+   <li><a href="userdata_Game_Unit.html" class="code">Unit</a></li>
+   <li><a href="userdata_Game_Uuid.html" class="code">Uuid</a></li>
+   <li><a href="userdata_Game_Vec3.html" class="code">Vec3</a></li>
+   <li><a href="userdata_Game_Widget.html" class="code">Widget</a></li>
+   <li><a href="userdata_Game_World.html" class="code">World</a></li>
+  </ul>
+  <h3>Static Function Namespaces</h3>
+  <ul>
+   <li><a href="namespace_Game_GLOBAL.html" class="code">GLOBAL</a></li>
+   <li><a href="namespace_Game_sm.html" class="code">sm</a></li>
+   <li><a href="namespace_Game_sm_ai.html" class="code">sm.ai</a></li>
+   <li><a href="namespace_Game_sm_areaTrigger.html" class="code">sm.areaTrigger</a></li>
+   <li><a href="namespace_Game_sm_audio.html" class="code">sm.audio</a></li>
+   <li><a href="namespace_Game_sm_body.html" class="code">sm.body</a></li>
+   <li><a href="namespace_Game_sm_builderGuide.html" class="code">sm.builderGuide</a></li>
+   <li><a href="namespace_Game_sm_camera.html" class="code">sm.camera</a></li>
+   <li><a href="namespace_Game_sm_cell.html" class="code">sm.cell</a></li>
+   <li><a href="namespace_Game_sm_challenge.html" class="code">sm.challenge</a></li>
+   <li><a href="namespace_Game_sm_character.html" class="code">sm.character</a></li>
+   <li><a href="namespace_Game_sm_color.html" class="code">sm.color</a></li>
+   <li><a href="namespace_Game_sm_construction.html" class="code">sm.construction</a></li>
+   <li><a href="namespace_Game_sm_container.html" class="code">sm.container</a></li>
+   <li><a href="namespace_Game_sm_creation.html" class="code">sm.creation</a></li>
+   <li><a href="namespace_Game_sm_cullSphereGroup.html" class="code">sm.cullSphereGroup</a></li>
+   <li><a href="namespace_Game_sm_debris.html" class="code">sm.debris</a></li>
+   <li><a href="namespace_Game_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
+   <li><a href="namespace_Game_sm_effect.html" class="code">sm.effect</a></li>
+   <li><a href="namespace_Game_sm_event.html" class="code">sm.event</a></li>
+   <li><a href="namespace_Game_sm_game.html" class="code">sm.game</a></li>
+   <li><a href="namespace_Game_sm_gui.html" class="code">sm.gui</a></li>
+   <li><a href="namespace_Game_sm_gui_widget.html" class="code">sm.gui.widget</a></li>
+   <li><a href="namespace_Game_sm_harvestable.html" class="code">sm.harvestable</a></li>
+   <li><a href="namespace_Game_sm_interactable.html" class="code">sm.interactable</a></li>
+   <li><a href="namespace_Game_sm_item.html" class="code">sm.item</a></li>
+   <li><a href="namespace_Game_sm_joint.html" class="code">sm.joint</a></li>
+   <li><a href="namespace_Game_sm_json.html" class="code">sm.json</a></li>
+   <li><a href="namespace_Game_sm_localPlayer.html" class="code">sm.localPlayer</a></li>
+   <li><a href="namespace_Game_sm_log.html" class="code">sm.log</a></li>
+   <li><a href="namespace_Game_sm_melee.html" class="code">sm.melee</a></li>
+   <li><a href="namespace_Game_sm_menuCreation.html" class="code">sm.menuCreation</a></li>
+   <li><a href="namespace_Game_sm_noise.html" class="code">sm.noise</a></li>
+   <li><a href="namespace_Game_sm_particle.html" class="code">sm.particle</a></li>
+   <li><a href="namespace_Game_sm_pathNode.html" class="code">sm.pathNode</a></li>
+   <li><a href="namespace_Game_sm_pathfinder.html" class="code">sm.pathfinder</a></li>
+   <li><a href="namespace_Game_sm_physics.html" class="code">sm.physics</a></li>
+   <li><a href="namespace_Game_sm_player.html" class="code">sm.player</a></li>
+   <li><a href="namespace_Game_sm_portal.html" class="code">sm.portal</a></li>
+   <li><a href="namespace_Game_sm_projectile.html" class="code">sm.projectile</a></li>
+   <li><a href="namespace_Game_sm_quat.html" class="code">sm.quat</a></li>
+   <li><a href="namespace_Game_sm_render.html" class="code">sm.render</a></li>
+   <li><a href="namespace_Game_sm_scriptableObject.html" class="code">sm.scriptableObject</a></li>
+   <li><a href="namespace_Game_sm_shape.html" class="code">sm.shape</a></li>
+   <li><a href="namespace_Game_sm_storage.html" class="code">sm.storage</a></li>
+   <li><a href="namespace_Game_sm_tool.html" class="code">sm.tool</a></li>
+   <li><a href="namespace_Game_sm_unit.html" class="code">sm.unit</a></li>
+   <li><a href="namespace_Game_sm_util.html" class="code">sm.util</a></li>
+   <li><a href="namespace_Game_sm_uuid.html" class="code">sm.uuid</a></li>
+   <li><a href="namespace_Game_sm_vec3.html" class="code">sm.vec3</a></li>
+   <li><a href="namespace_Game_sm_visualization.html" class="code">sm.visualization</a></li>
+   <li><a href="namespace_Game_sm_world.html" class="code">sm.world</a></li>
+  </ul>
+  <h2>Terrain environment</h2>
+  <h3>Classes</h3>
+  <ul>
+  </ul>
+  <h3>Object Types 'userdata'</h3>
+  <ul>
+   <li><a href="userdata_Terrain_Color.html" class="code">Color</a></li>
+   <li><a href="userdata_Terrain_Harvestable.html" class="code">Harvestable</a></li>
+   <li><a href="userdata_Terrain_Quat.html" class="code">Quat</a></li>
+   <li><a href="userdata_Terrain_Uuid.html" class="code">Uuid</a></li>
+   <li><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></li>
+   <li><a href="userdata_Terrain_World.html" class="code">World</a></li>
+  </ul>
+  <h3>Static Function Namespaces</h3>
+  <ul>
+   <li><a href="namespace_Terrain_GLOBAL.html" class="code">GLOBAL</a></li>
+   <li><a href="namespace_Terrain_sm.html" class="code">sm</a></li>
+   <li><a href="namespace_Terrain_sm_color.html" class="code">sm.color</a></li>
+   <li><a href="namespace_Terrain_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
+   <li><a href="namespace_Terrain_sm_harvestable.html" class="code">sm.harvestable</a></li>
+   <li><a href="namespace_Terrain_sm_json.html" class="code">sm.json</a></li>
+   <li><a href="namespace_Terrain_sm_log.html" class="code">sm.log</a></li>
+   <li><a href="namespace_Terrain_sm_noise.html" class="code">sm.noise</a></li>
+   <li><a href="namespace_Terrain_sm_quat.html" class="code">sm.quat</a></li>
+   <li><a href="namespace_Terrain_sm_terrainData.html" class="code">sm.terrainData</a></li>
+   <li><a href="namespace_Terrain_sm_terrainGeneration.html" class="code">sm.terrainGeneration</a></li>
+   <li><a href="namespace_Terrain_sm_terrainTile.html" class="code">sm.terrainTile</a></li>
+   <li><a href="namespace_Terrain_sm_util.html" class="code">sm.util</a></li>
+   <li><a href="namespace_Terrain_sm_uuid.html" class="code">sm.uuid</a></li>
+   <li><a href="namespace_Terrain_sm_vec3.html" class="code">sm.vec3</a></li>
+  </ul>
+ </div>
+ <div id="content">
+  <h1 class="code">Body</h1>
+  <h3>Associated namespace: <a href="namespace_Game_sm_body.html" class="code">sm.body</a></h3>
+  <p>A userdata object representing a <strong>body</strong> in the game.</p>
+  <h4>Values:</h4>
+  <ul>
+   <li><a href="#angularVelocity" class="code">angularVelocity</a></li>
+   <li><a href="#buildable" class="code">buildable</a></li>
+   <li><a href="#centerOfMassPosition" class="code">centerOfMassPosition</a></li>
+   <li><a href="#connectable" class="code">connectable</a></li>
+   <li><a href="#convertableToDynamic" class="code">convertableToDynamic</a></li>
+   <li><a href="#destructable" class="code">destructable</a></li>
+   <li><a href="#erasable" class="code">erasable</a></li>
+   <li><a href="#id" class="code">id</a></li>
+   <li><a href="#liftable" class="code">liftable</a></li>
+   <li><a href="#mass" class="code">mass</a></li>
+   <li><a href="#paintable" class="code">paintable</a></li>
+   <li><a href="#usable" class="code">usable</a></li>
+   <li><a href="#velocity" class="code">velocity</a></li>
+   <li><a href="#worldPosition" class="code">worldPosition</a></li>
+   <li><a href="#worldRotation" class="code">worldRotation</a></li>
+  </ul>  <h4>Functions:</h4>
+  <ul>
+   <li><a href="#createBlock" class="code">createBlock</a></li>
+   <li><a href="#createPart" class="code">createPart</a></li>
+   <li><a href="#getAllSeatedCharacter" class="code">getAllSeatedCharacter</a></li>
+   <li><a href="#getAngularVelocity" class="code">getAngularVelocity</a></li>
+   <li><a href="#getCenterOfMassPosition" class="code">getCenterOfMassPosition</a></li>
+   <li><a href="#getCreationBodies" class="code">getCreationBodies</a></li>
+   <li><a href="#getCreationId" class="code">getCreationId</a></li>
+   <li><a href="#getCreationJoints" class="code">getCreationJoints</a></li>
+   <li><a href="#getCreationShapes" class="code">getCreationShapes</a></li>
+   <li><a href="#getId" class="code">getId</a></li>
+   <li><a href="#getInteractables" class="code">getInteractables</a></li>
+   <li><a href="#getJoints" class="code">getJoints</a></li>
+   <li><a href="#getLocalAabb" class="code">getLocalAabb</a></li>
+   <li><a href="#getMass" class="code">getMass</a></li>
+   <li><a href="#getShapes" class="code">getShapes</a></li>
+   <li><a href="#getVelocity" class="code">getVelocity</a></li>
+   <li><a href="#getWorld" class="code">getWorld</a></li>
+   <li><a href="#getWorldAabb" class="code">getWorldAabb</a></li>
+   <li><a href="#getWorldPosition" class="code">getWorldPosition</a></li>
+   <li><a href="#hasChanged" class="code">hasChanged</a></li>
+   <li><a href="#isBuildable" class="code">isBuildable</a></li>
+   <li><a href="#isConnectable" class="code">isConnectable</a></li>
+   <li><a href="#isConvertibleToDynamic" class="code">isConvertibleToDynamic</a></li>
+   <li><a href="#isDestructable" class="code">isDestructable</a></li>
+   <li><a href="#isDynamic" class="code">isDynamic</a></li>
+   <li><a href="#isErasable" class="code">isErasable</a></li>
+   <li><a href="#isLiftable" class="code">isLiftable</a></li>
+   <li><a href="#isOnLift" class="code">isOnLift</a></li>
+   <li><a href="#isPaintable" class="code">isPaintable</a></li>
+   <li><a href="#isStatic" class="code">isStatic</a></li>
+   <li><a href="#isUsable" class="code">isUsable</a></li>
+   <li><a href="#setBuildable" class="code">setBuildable</a></li>
+   <li><a href="#setConnectable" class="code">setConnectable</a></li>
+   <li><a href="#setConvertibleToDynamic" class="code">setConvertibleToDynamic</a></li>
+   <li><a href="#setDestructable" class="code">setDestructable</a></li>
+   <li><a href="#setErasable" class="code">setErasable</a></li>
+   <li><a href="#setLiftable" class="code">setLiftable</a></li>
+   <li><a href="#setPaintable" class="code">setPaintable</a></li>
+   <li><a href="#setUsable" class="code">setUsable</a></li>
+   <li><a href="#transformPoint" class="code">transformPoint</a></li>
+  </ul>
+  <h4>Operations:</h4>
+  <table>
+   <tr><th>Operation</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a> == <a href="userdata_Game_Body.html" class="code">Body</a></td><td>Checks if two instances of <a href="userdata_Game_Body.html" class="code">Body</a> refer to the same Body.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="angularVelocity"></a>angularVelocity <i><a href="userdata_Game_Vec3.html" class="code">Vec3</a></i></h2>
+  <h4>Get:</h4>
+  <p>Returns the angular velocity of a body.</p>
+  <hr>
+  <h2 class="code"><a id="buildable"></a>buildable <i>boolean</i></h2>
+  <h4>Get:</h4>
+  <p>Check if a body is buildable</p>
+  <h4>Set:</h4>
+  <p>Server only</p>
+  <p>Controls whether a body is buildable</p>
+  <hr>
+  <h2 class="code"><a id="centerOfMassPosition"></a>centerOfMassPosition <i><a href="userdata_Game_Vec3.html" class="code">Vec3</a></i></h2>
+  <h4>Get:</h4>
+  <p>Returns the center of mass world position of a body.</p>
+  <hr>
+  <h2 class="code"><a id="connectable"></a>connectable <i>boolean</i></h2>
+  <h4>Get:</h4>
+  <p>Check if a body is connectable</p>
+  <h4>Set:</h4>
+  <p>Server only</p>
+  <p>Controls whether a body is connectable</p>
+  <hr>
+  <h2 class="code"><a id="convertableToDynamic"></a>convertableToDynamic <i>boolean</i></h2>
+  <h4>Get:</h4>
+  <p>Check if a body is convertible to dynamic form</p>
+  <h4>Set:</h4>
+  <p>Server only</p>
+  <p>Controls whether a body is convertible to dynamic form</p>
+  <hr>
+  <h2 class="code"><a id="destructable"></a>destructable <i>boolean</i></h2>
+  <h4>Get:</h4>
+  <p>Check if a body is destructable.</p>
+  <h4>Set:</h4>
+  <p>Server only</p>
+  <p>Controls whether a body is destructable</p>
+  <hr>
+  <h2 class="code"><a id="erasable"></a>erasable <i>boolean</i></h2>
+  <h4>Get:</h4>
+  <p>Check if a body is erasable.</p>
+  <h4>Set:</h4>
+  <p>Server only</p>
+  <p>Controls whether a body is erasable</p>
+  <hr>
+  <h2 class="code"><a id="id"></a>id <i>integer</i></h2>
+  <h4>Get:</h4>
+  <p>Returns the id of a body.</p>
+  <hr>
+  <h2 class="code"><a id="liftable"></a>liftable <i>boolean</i></h2>
+  <h4>Get:</h4>
+  <p>Check if a body is liftable</p>
+  <h4>Set:</h4>
+  <p>Server only</p>
+  <p>Controls whether a body is liftable</p>
+  <hr>
+  <h2 class="code"><a id="mass"></a>mass <i>number</i></h2>
+  <h4>Get:</h4>
+  <p>Returns the mass of a body.</p>
+  <hr>
+  <h2 class="code"><a id="paintable"></a>paintable <i>boolean</i></h2>
+  <h4>Get:</h4>
+  <p>Check if a body is paintable</p>
+  <h4>Set:</h4>
+  <p>Server only</p>
+  <p>Controls whether a body is non paintable</p>
+  <hr>
+  <h2 class="code"><a id="usable"></a>usable <i>boolean</i></h2>
+  <h4>Get:</h4>
+  <p>Check if a body is interactable</p>
+  <h4>Set:</h4>
+  <p>Server only</p>
+  <p>Controls whether a body is interactable</p>
+  <hr>
+  <h2 class="code"><a id="velocity"></a>velocity <i><a href="userdata_Game_Vec3.html" class="code">Vec3</a></i></h2>
+  <h4>Get:</h4>
+  <p>Returns the linear velocity of a body.</p>
+  <hr>
+  <h2 class="code"><a id="worldPosition"></a>worldPosition <i><a href="userdata_Game_Vec3.html" class="code">Vec3</a></i></h2>
+  <h4>Get:</h4>
+  <p>Returns the world position of a body.</p>
+  <hr>
+  <h2 class="code"><a id="worldRotation"></a>worldRotation <i><a href="userdata_Game_Quat.html" class="code">Quat</a></i></h2>
+  <h4>Get:</h4>
+  <p>Returns the world rotation of a body.</p>
+  <hr>
+  <h2 class="code"><a id="createBlock"></a>createBlock(body, uuid, size, position, forceAccept=nil)</h2>
+  <p>Server only</p>
+  <p>Create a block on body</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The parent body.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">uuid</td><td>The uuid of the shape.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">size</td><td>The shape's size.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The shape's local position.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">forceAccept=nil</td><td>Set true to force the body to accept the shape. (Defaults to true)</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="createPart"></a>createPart(body, uuid, position, z-axis, x-axis, forceAccept=nil)</h2>
+  <p>Server only</p>
+  <p>Create a part on body</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The parent body.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">uuid</td><td>The uuid of the shape.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The shape's local position.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">z-axis</td><td>The shape's local z direction.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">x-axis</td><td>The shape's local x direction.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">forceAccept=nil</td><td>Set true to force the body to accept the shape. (Defaults to true)</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getAllSeatedCharacter"></a>getAllSeatedCharacter(body)</h2>
+  <p>Server only</p>
+  <p>Returns a table with all characters seated in this body</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The body.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td>The table of all seated characters. {<a href="userdata_Game_Character.html" class="code">Character</a>, ...}</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getAngularVelocity"></a>getAngularVelocity(body)</h2>
+  <p>Returns the angular velocity of a body.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The body.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The body's angular velocity.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getCenterOfMassPosition"></a>getCenterOfMassPosition(body)</h2>
+  <p>Returns the center of mass world position of a body.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The body.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The body's center of mass world position.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getCreationBodies"></a>getCreationBodies(body)</h2>
+  <p>Returns a table of all bodies in a creation.</p>
+  <p>A creation includes all bodies connected by <a href="userdata_Game_Joint.html" class="code">joints</a>, etc.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The body.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td>The table all bodies in a creation. {<a href="userdata_Game_Body.html" class="code">Body</a>, ...}</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getCreationId"></a>getCreationId(body)</h2>
+  <p>Server only</p>
+  <p>Returns the id of the creation</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The body.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">integer</td><td>The creation's id</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getCreationJoints"></a>getCreationJoints(body)</h2>
+  <p>Returns a table of all <a href="userdata_Game_Joint.html" class="code">joints</a> that are part of a creation.</p>
+  <p>A creation includes all bodies connected by <a href="userdata_Game_Joint.html" class="code">joints</a>, etc.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The body.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td>The table of joints in a creation. {<a href="userdata_Game_Joint.html" class="code">Joint</a>, ...}</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getCreationShapes"></a>getCreationShapes(body)</h2>
+  <p>Returns a table of all <a href="userdata_Game_Shape.html" class="code">shapes</a> that are part of a creation.</p>
+  <p>A creation includes all bodies connected by <a href="userdata_Game_Joint.html" class="code">joints</a>, etc.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The body.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td>The table of shapes in a creation. {<a href="userdata_Game_Shape.html" class="code">Shape</a>, ...}</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getId"></a>getId(body)</h2>
+  <p>Returns the id of a body.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The body.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">integer</td><td>The body's id.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getInteractables"></a>getInteractables(body)</h2>
+  <p>Returns a table of all <a href="userdata_Game_Interactable.html" class="code">interactables</a> that are part of a body.</p>
+  <p>This will <strong>not</strong> return interactables in neighbouring bodies connected by <a href="userdata_Game_Joint.html" class="code">joints</a>, etc.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The body.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td>The table of interactables in a body. {<a href="userdata_Game_Interactable.html" class="code">Interactable</a>, ...}</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getJoints"></a>getJoints(body)</h2>
+  <p>Returns a table of all <a href="userdata_Game_Joint.html" class="code">joints</a> that are part of a body.</p>
+  <p>This will <strong>not</strong> return joints in neighbouring bodies.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The body.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td>The table of joints in a body. {<a href="userdata_Game_Joint.html" class="code">Joint</a>, ...}</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getLocalAabb"></a>getLocalAabb(body)</h2>
+  <p>Get the local aabb of the body.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The body.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a>,<a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>Returns the aabb min and max.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getMass"></a>getMass(body)</h2>
+  <p>Returns the mass of a body.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The body.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">number</td><td>The body's mass.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getShapes"></a>getShapes(body)</h2>
+  <p>Returns a table of all <a href="userdata_Game_Shape.html" class="code">shapes</a> that are part of a body.</p>
+  <p>This will <strong>not</strong> return shapes in neighbouring bodies connected by <a href="userdata_Game_Joint.html" class="code">joints</a>, etc.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The body.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td>The table of shapes in a body. {<a href="userdata_Game_Shape.html" class="code">Shape</a>, ...}</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getVelocity"></a>getVelocity(body)</h2>
+  <p>Returns the linear velocity of a body.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The body.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The body's linear velocity.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getWorld"></a>getWorld(body)</h2>
+  <p>Returns the world a body exists in.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The body.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_World.html" class="code">World</a></td><td>The world the body exists in.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getWorldAabb"></a>getWorldAabb(body)</h2>
+  <p>Get the world aabb of the body.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The body.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a>,<a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>Returns the aabb min and max.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getWorldPosition"></a>getWorldPosition(body)</h2>
+  <p>Returns the world position of a body.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The body.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The body's world position.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="hasChanged"></a>hasChanged(body, tick)</h2>
+  <p>Returns true if the given tick is lower than the tick the body was last changed.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The body.</td></tr>
+   <tr><td class="code">integer</td><td class="code">tick</td><td>The tick.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>Returns true if the body has been changed.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="isBuildable"></a>isBuildable(body)</h2>
+  <p>Check if a body is buildable</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The body.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>Return true if the body is buildable.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="isConnectable"></a>isConnectable(body)</h2>
+  <p>Check if a body is connectable</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The body.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>Return true if the body is connectable.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="isConvertibleToDynamic"></a>isConvertibleToDynamic(body)</h2>
+  <p>Check if a body is convertible to dynamic form</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The body.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>Return true if the body can be converted to dynamic.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="isDestructable"></a>isDestructable(body)</h2>
+  <p>Check if a body is destructable.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The body.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>Return true if the body is destructable.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="isDynamic"></a>isDynamic(body)</h2>
+  <p>Check if a body is dynamic</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The body.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>Return true if the body is dynamic.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="isErasable"></a>isErasable(body)</h2>
+  <p>Check if a body is erasable.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The body.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>Return true if the body is erasable.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="isLiftable"></a>isLiftable(body)</h2>
+  <p>Check if a body is liftable</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The body.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>Return true if the body is liftable.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="isOnLift"></a>isOnLift(body)</h2>
+  <p>Check if a body is on a lift</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The body.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>Return true if the body is on a lift</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="isPaintable"></a>isPaintable(body)</h2>
+  <p>Check if a body is paintable</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The body.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>Return true if the body is paintable.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="isStatic"></a>isStatic(body)</h2>
+  <p>Check if a body is static</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The body.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>Return true if the body is static.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="isUsable"></a>isUsable(body)</h2>
+  <p>Check if a body is interactable</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The body.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>Return true if the body is interactable.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setBuildable"></a>setBuildable(body, value)</h2>
+  <p>Server only</p>
+  <p>Controls whether a body is buildable</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The body.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">value</td><td>Whether the body is buildable.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setConnectable"></a>setConnectable(body, value)</h2>
+  <p>Server only</p>
+  <p>Controls whether a body is connectable</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The body.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">value</td><td>Whether the body is connectable.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setConvertibleToDynamic"></a>setConvertibleToDynamic(body, value)</h2>
+  <p>Server only</p>
+  <p>Controls whether a body is convertible to dynamic form</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The body.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">value</td><td>Whether the body is convertible to dynamic form.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setDestructable"></a>setDestructable(body, value)</h2>
+  <p>Server only</p>
+  <p>Controls whether a body is destructable</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The body.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">value</td><td>Whether the body is destructable.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setErasable"></a>setErasable(body, value)</h2>
+  <p>Server only</p>
+  <p>Controls whether a body is erasable</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The body.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">value</td><td>Whether the body is erasable.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setLiftable"></a>setLiftable(body, value)</h2>
+  <p>Server only</p>
+  <p>Controls whether a body is liftable</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The body.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">value</td><td>Whether the body is liftable.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setPaintable"></a>setPaintable(body, value)</h2>
+  <p>Server only</p>
+  <p>Controls whether a body is non paintable</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The body.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">value</td><td>Whether the body is paintable.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setUsable"></a>setUsable(body, value)</h2>
+  <p>Server only</p>
+  <p>Controls whether a body is interactable</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The body.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">value</td><td>Whether the body is interactable.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="transformPoint"></a>transformPoint(body, point)</h2>
+  <p>Transforms a point from local space to world space.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The body.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">point</td><td>The point in local space.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The point in world space.</td></tr>
+  </table>
+ </div>
+</body>
+</html>

@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>AreaTrigger - Lua API Reference - Scrap Mechanic</title>
+ <link rel="stylesheet" href="styles.css">
+ <script src="script.js"></script>
+ <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+ <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+ <div id="menu">
+  <h2>Lua API Reference</h2>
+  <ul>
+   <li><a href="index.html">Introduction</a></li>
+  </ul>
+  <h2>Game environment</h2>
+  <h3>Classes</h3>
+  <ul>
+   <li><a href="class_Game_CharacterClass.html" class="code">CharacterClass</a></li>
+   <li><a href="class_Game_GameClass.html" class="code">GameClass</a></li>
+   <li><a href="class_Game_HarvestableClass.html" class="code">HarvestableClass</a></li>
+   <li><a href="class_Game_PlayerClass.html" class="code">PlayerClass</a></li>
+   <li><a href="class_Game_ScriptableObjectClass.html" class="code">ScriptableObjectClass</a></li>
+   <li><a href="class_Game_ShapeClass.html" class="code">ShapeClass</a></li>
+   <li><a href="class_Game_ToolClass.html" class="code">ToolClass</a></li>
+   <li><a href="class_Game_UnitClass.html" class="code">UnitClass</a></li>
+   <li><a href="class_Game_WorldClass.html" class="code">WorldClass</a></li>
+  </ul>
+  <h3>Object Types 'userdata'</h3>
+  <ul>
+   <li><a href="userdata_Game_AiState.html" class="code">AiState</a></li>
+   <li><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></li>
+   <li><a href="userdata_Game_BlueprintVisualization.html" class="code">BlueprintVisualization</a></li>
+   <li><a href="userdata_Game_Body.html" class="code">Body</a></li>
+   <li><a href="userdata_Game_BuilderGuide.html" class="code">BuilderGuide</a></li>
+   <li><a href="userdata_Game_Character.html" class="code">Character</a></li>
+   <li><a href="userdata_Game_Color.html" class="code">Color</a></li>
+   <li><a href="userdata_Game_Container.html" class="code">Container</a></li>
+   <li><a href="userdata_Game_CullSphereGroup.html" class="code">CullSphereGroup</a></li>
+   <li><a href="userdata_Game_Effect.html" class="code">Effect</a></li>
+   <li><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></li>
+   <li><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></li>
+   <li><a href="userdata_Game_Interactable.html" class="code">Interactable</a></li>
+   <li><a href="userdata_Game_Joint.html" class="code">Joint</a></li>
+   <li><a href="userdata_Game_Lift.html" class="code">Lift</a></li>
+   <li><a href="userdata_Game_LoadCellHandle.html" class="code">LoadCellHandle</a></li>
+   <li><a href="userdata_Game_Network.html" class="code">Network</a></li>
+   <li><a href="userdata_Game_PathNode.html" class="code">PathNode</a></li>
+   <li><a href="userdata_Game_Player.html" class="code">Player</a></li>
+   <li><a href="userdata_Game_Portal.html" class="code">Portal</a></li>
+   <li><a href="userdata_Game_Quat.html" class="code">Quat</a></li>
+   <li><a href="userdata_Game_RaycastResult.html" class="code">RaycastResult</a></li>
+   <li><a href="userdata_Game_ScriptableObject.html" class="code">ScriptableObject</a></li>
+   <li><a href="userdata_Game_Shape.html" class="code">Shape</a></li>
+   <li><a href="userdata_Game_Storage.html" class="code">Storage</a></li>
+   <li><a href="userdata_Game_Tool.html" class="code">Tool</a></li>
+   <li><a href="userdata_Game_Unit.html" class="code">Unit</a></li>
+   <li><a href="userdata_Game_Uuid.html" class="code">Uuid</a></li>
+   <li><a href="userdata_Game_Vec3.html" class="code">Vec3</a></li>
+   <li><a href="userdata_Game_Widget.html" class="code">Widget</a></li>
+   <li><a href="userdata_Game_World.html" class="code">World</a></li>
+  </ul>
+  <h3>Static Function Namespaces</h3>
+  <ul>
+   <li><a href="namespace_Game_GLOBAL.html" class="code">GLOBAL</a></li>
+   <li><a href="namespace_Game_sm.html" class="code">sm</a></li>
+   <li><a href="namespace_Game_sm_ai.html" class="code">sm.ai</a></li>
+   <li><a href="namespace_Game_sm_areaTrigger.html" class="code">sm.areaTrigger</a></li>
+   <li><a href="namespace_Game_sm_audio.html" class="code">sm.audio</a></li>
+   <li><a href="namespace_Game_sm_body.html" class="code">sm.body</a></li>
+   <li><a href="namespace_Game_sm_builderGuide.html" class="code">sm.builderGuide</a></li>
+   <li><a href="namespace_Game_sm_camera.html" class="code">sm.camera</a></li>
+   <li><a href="namespace_Game_sm_cell.html" class="code">sm.cell</a></li>
+   <li><a href="namespace_Game_sm_challenge.html" class="code">sm.challenge</a></li>
+   <li><a href="namespace_Game_sm_character.html" class="code">sm.character</a></li>
+   <li><a href="namespace_Game_sm_color.html" class="code">sm.color</a></li>
+   <li><a href="namespace_Game_sm_construction.html" class="code">sm.construction</a></li>
+   <li><a href="namespace_Game_sm_container.html" class="code">sm.container</a></li>
+   <li><a href="namespace_Game_sm_creation.html" class="code">sm.creation</a></li>
+   <li><a href="namespace_Game_sm_cullSphereGroup.html" class="code">sm.cullSphereGroup</a></li>
+   <li><a href="namespace_Game_sm_debris.html" class="code">sm.debris</a></li>
+   <li><a href="namespace_Game_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
+   <li><a href="namespace_Game_sm_effect.html" class="code">sm.effect</a></li>
+   <li><a href="namespace_Game_sm_event.html" class="code">sm.event</a></li>
+   <li><a href="namespace_Game_sm_game.html" class="code">sm.game</a></li>
+   <li><a href="namespace_Game_sm_gui.html" class="code">sm.gui</a></li>
+   <li><a href="namespace_Game_sm_gui_widget.html" class="code">sm.gui.widget</a></li>
+   <li><a href="namespace_Game_sm_harvestable.html" class="code">sm.harvestable</a></li>
+   <li><a href="namespace_Game_sm_interactable.html" class="code">sm.interactable</a></li>
+   <li><a href="namespace_Game_sm_item.html" class="code">sm.item</a></li>
+   <li><a href="namespace_Game_sm_joint.html" class="code">sm.joint</a></li>
+   <li><a href="namespace_Game_sm_json.html" class="code">sm.json</a></li>
+   <li><a href="namespace_Game_sm_localPlayer.html" class="code">sm.localPlayer</a></li>
+   <li><a href="namespace_Game_sm_log.html" class="code">sm.log</a></li>
+   <li><a href="namespace_Game_sm_melee.html" class="code">sm.melee</a></li>
+   <li><a href="namespace_Game_sm_menuCreation.html" class="code">sm.menuCreation</a></li>
+   <li><a href="namespace_Game_sm_noise.html" class="code">sm.noise</a></li>
+   <li><a href="namespace_Game_sm_particle.html" class="code">sm.particle</a></li>
+   <li><a href="namespace_Game_sm_pathNode.html" class="code">sm.pathNode</a></li>
+   <li><a href="namespace_Game_sm_pathfinder.html" class="code">sm.pathfinder</a></li>
+   <li><a href="namespace_Game_sm_physics.html" class="code">sm.physics</a></li>
+   <li><a href="namespace_Game_sm_player.html" class="code">sm.player</a></li>
+   <li><a href="namespace_Game_sm_portal.html" class="code">sm.portal</a></li>
+   <li><a href="namespace_Game_sm_projectile.html" class="code">sm.projectile</a></li>
+   <li><a href="namespace_Game_sm_quat.html" class="code">sm.quat</a></li>
+   <li><a href="namespace_Game_sm_render.html" class="code">sm.render</a></li>
+   <li><a href="namespace_Game_sm_scriptableObject.html" class="code">sm.scriptableObject</a></li>
+   <li><a href="namespace_Game_sm_shape.html" class="code">sm.shape</a></li>
+   <li><a href="namespace_Game_sm_storage.html" class="code">sm.storage</a></li>
+   <li><a href="namespace_Game_sm_tool.html" class="code">sm.tool</a></li>
+   <li><a href="namespace_Game_sm_unit.html" class="code">sm.unit</a></li>
+   <li><a href="namespace_Game_sm_util.html" class="code">sm.util</a></li>
+   <li><a href="namespace_Game_sm_uuid.html" class="code">sm.uuid</a></li>
+   <li><a href="namespace_Game_sm_vec3.html" class="code">sm.vec3</a></li>
+   <li><a href="namespace_Game_sm_visualization.html" class="code">sm.visualization</a></li>
+   <li><a href="namespace_Game_sm_world.html" class="code">sm.world</a></li>
+  </ul>
+  <h2>Terrain environment</h2>
+  <h3>Classes</h3>
+  <ul>
+  </ul>
+  <h3>Object Types 'userdata'</h3>
+  <ul>
+   <li><a href="userdata_Terrain_Color.html" class="code">Color</a></li>
+   <li><a href="userdata_Terrain_Harvestable.html" class="code">Harvestable</a></li>
+   <li><a href="userdata_Terrain_Quat.html" class="code">Quat</a></li>
+   <li><a href="userdata_Terrain_Uuid.html" class="code">Uuid</a></li>
+   <li><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></li>
+   <li><a href="userdata_Terrain_World.html" class="code">World</a></li>
+  </ul>
+  <h3>Static Function Namespaces</h3>
+  <ul>
+   <li><a href="namespace_Terrain_GLOBAL.html" class="code">GLOBAL</a></li>
+   <li><a href="namespace_Terrain_sm.html" class="code">sm</a></li>
+   <li><a href="namespace_Terrain_sm_color.html" class="code">sm.color</a></li>
+   <li><a href="namespace_Terrain_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
+   <li><a href="namespace_Terrain_sm_harvestable.html" class="code">sm.harvestable</a></li>
+   <li><a href="namespace_Terrain_sm_json.html" class="code">sm.json</a></li>
+   <li><a href="namespace_Terrain_sm_log.html" class="code">sm.log</a></li>
+   <li><a href="namespace_Terrain_sm_noise.html" class="code">sm.noise</a></li>
+   <li><a href="namespace_Terrain_sm_quat.html" class="code">sm.quat</a></li>
+   <li><a href="namespace_Terrain_sm_terrainData.html" class="code">sm.terrainData</a></li>
+   <li><a href="namespace_Terrain_sm_terrainGeneration.html" class="code">sm.terrainGeneration</a></li>
+   <li><a href="namespace_Terrain_sm_terrainTile.html" class="code">sm.terrainTile</a></li>
+   <li><a href="namespace_Terrain_sm_util.html" class="code">sm.util</a></li>
+   <li><a href="namespace_Terrain_sm_uuid.html" class="code">sm.uuid</a></li>
+   <li><a href="namespace_Terrain_sm_vec3.html" class="code">sm.vec3</a></li>
+  </ul>
+ </div>
+ <div id="content">
+  <h1 class="code">AreaTrigger</h1>
+  <h3>Associated namespace: <a href="namespace_Game_sm_areaTrigger.html" class="code">sm.areaTrigger</a></h3>
+  <p>A userdata object representing an <strong>area trigger</strong> in the game.</p>
+  <h4>Values:</h4>
+  <ul>
+   <li><a href="#id" class="code">id</a></li>
+  </ul>  <h4>Functions:</h4>
+  <ul>
+   <li><a href="#bindOnEnter" class="code">bindOnEnter</a></li>
+   <li><a href="#bindOnExit" class="code">bindOnExit</a></li>
+   <li><a href="#bindOnProjectile" class="code">bindOnProjectile</a></li>
+   <li><a href="#bindOnStay" class="code">bindOnStay</a></li>
+   <li><a href="#getContents" class="code">getContents</a></li>
+   <li><a href="#getHostInteractable" class="code">getHostInteractable</a></li>
+   <li><a href="#getId" class="code">getId</a></li>
+   <li><a href="#getShapes" class="code">getShapes</a></li>
+   <li><a href="#getSize" class="code">getSize</a></li>
+   <li><a href="#getUserData" class="code">getUserData</a></li>
+   <li><a href="#getWorldMax" class="code">getWorldMax</a></li>
+   <li><a href="#getWorldMin" class="code">getWorldMin</a></li>
+   <li><a href="#getWorldPosition" class="code">getWorldPosition</a></li>
+   <li><a href="#getWorldRotation" class="code">getWorldRotation</a></li>
+   <li><a href="#hasVoxelTerrainContact" class="code">hasVoxelTerrainContact</a></li>
+   <li><a href="#setShapeDetection" class="code">setShapeDetection</a></li>
+   <li><a href="#setSize" class="code">setSize</a></li>
+   <li><a href="#setWorldPosition" class="code">setWorldPosition</a></li>
+   <li><a href="#setWorldRotation" class="code">setWorldRotation</a></li>
+  </ul>
+  <h4>Operations:</h4>
+  <table>
+   <tr><th>Operation</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a> == <a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></td><td>Checks if two instances of <a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a> refer to the same AreaTrigger.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="id"></a>id <i>integer</i></h2>
+  <h4>Get:</h4>
+  <p>Returns the id of an area trigger.</p>
+  <hr>
+  <h2 class="code"><a id="bindOnEnter"></a>bindOnEnter(areaTrigger, callback, object=nil)</h2>
+  <p>Binds an area trigger's onEnter event to a custom callback. The onEnter event is triggered when an object enters the trigger area.</p>
+  <p>The callback receives:</p>
+  <ul>
+   <li><strong>self</strong> (<em>table</em>) &ndash; The class instance.</li>
+   <li><strong>trigger</strong> (<em><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></em>) &ndash; The area trigger instance.</li>
+   <li><strong>results</strong> (<em>table</em>) &ndash; A table of <a href="userdata_Game_Character.html" class="code">characters</a> and/or <a href="userdata_Game_Body.html" class="code">bodies</a> and/or <a href="userdata_Game_Harvestable.html" class="code">harvestables</a> and/or <a href="userdata_Game_Lift.html" class="code">lifts</a> and/or <a href="userdata_Game_AreaTrigger.html" class="code">areaTriggers</a>.</li>
+  </ul>
+  <pre class="code">function MyClass.onEnter( self, trigger, results ) ...</pre>  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></td><td class="code">areaTrigger</td><td>The area trigger instance.</td></tr>
+   <tr><td class="code">string</td><td class="code">callback</td><td>The name of the Lua function to bind.</td></tr>
+   <tr><td class="code">table</td><td class="code">object=nil</td><td>The object that will receive the callback. (optional)</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="bindOnExit"></a>bindOnExit(areaTrigger, callback, object=nil)</h2>
+  <p>Binds an area trigger's onExit event to a custom callback. The onExit event is triggered when an object leaves the trigger area.</p>
+  <p>The callback receives:</p>
+  <ul>
+   <li><strong>self</strong> (<em>table</em>) &ndash; The class instance.</li>
+   <li><strong>trigger</strong> (<em><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></em>) &ndash; The area trigger instance.</li>
+   <li><strong>results</strong> (<em>table</em>) &ndash; A table of <a href="userdata_Game_Character.html" class="code">characters</a> and/or <a href="userdata_Game_Body.html" class="code">bodies</a> and/or <a href="userdata_Game_Harvestable.html" class="code">harvestables</a> and/or <a href="userdata_Game_Lift.html" class="code">lifts</a> and/or <a href="userdata_Game_AreaTrigger.html" class="code">areaTriggers</a>.</li>
+  </ul>
+  <pre class="code">function MyClass.onExit( self, trigger, results ) ...</pre>  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></td><td class="code">areaTrigger</td><td>The area trigger instance.</td></tr>
+   <tr><td class="code">string</td><td class="code">callback</td><td>The name of the Lua function to bind.</td></tr>
+   <tr><td class="code">table</td><td class="code">object=nil</td><td>The object that will receive the callback. (optional)</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="bindOnProjectile"></a>bindOnProjectile(areaTrigger, callback, object=nil)</h2>
+  <p>Binds an area trigger's onProjectile event to a custom callback. The onProjectile event is triggered if a projectile collides with the trigger area</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></td><td class="code">areaTrigger</td><td>The area trigger instance.</td></tr>
+   <tr><td class="code">string</td><td class="code">callback</td><td>The name of the Lua function to bind.</td></tr>
+   <tr><td class="code">table</td><td class="code">object=nil</td><td>The object that will receive the callback. (optional)</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="bindOnStay"></a>bindOnStay(areaTrigger, callback, object=nil)</h2>
+  <p>Binds an area trigger's onStay event to a custom callback. The onStay event is triggered every tick as long as an object is staying inside of the trigger area.</p>
+  <p>The callback receives:</p>
+  <ul>
+   <li><strong>self</strong> (<em>table</em>) &ndash; The class instance.</li>
+   <li><strong>trigger</strong> (<em><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></em>) &ndash; The area trigger instance.</li>
+   <li><strong>results</strong> (<em>table</em>) &ndash; A table of <a href="userdata_Game_Character.html" class="code">characters</a> and/or <a href="userdata_Game_Body.html" class="code">bodies</a> and/or <a href="userdata_Game_Harvestable.html" class="code">harvestables</a> and/or <a href="userdata_Game_Lift.html" class="code">lifts</a> and/or <a href="userdata_Game_AreaTrigger.html" class="code">areaTriggers</a>.</li>
+  </ul>
+  <pre class="code">function MyClass.onStay( self, trigger, results ) ...</pre>  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></td><td class="code">areaTrigger</td><td>The area trigger instance.</td></tr>
+   <tr><td class="code">string</td><td class="code">callback</td><td>The name of the Lua function to bind.</td></tr>
+   <tr><td class="code">table</td><td class="code">object=nil</td><td>The object that will receive the callback. (optional)</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getContents"></a>getContents(areaTrigger)</h2>
+  <p>Gets the contents of the area trigger.</p>
+  <p>Returns a table of <a href="userdata_Game_Character.html" class="code">characters</a> and/or <a href="userdata_Game_Body.html" class="code">bodies</a> and/or <a href="userdata_Game_Harvestable.html" class="code">harvestables</a> and/or <a href="userdata_Game_Lift.html" class="code">lifts</a> and/or <a href="userdata_Game_AreaTrigger.html" class="code">areaTriggers</a>.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></td><td class="code">areaTrigger</td><td>The area trigger instance.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td>The table with the content.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getHostInteractable"></a>getHostInteractable(areaTrigger)</h2>
+  <p>Returns the attached host <a href="namespace_Game_sm_interactable.html" class="code">interactable</a>.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></td><td class="code">areaTrigger</td><td>The area trigger instance.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Interactable.html" class="code">Interactable</a></td><td>The area trigger's host interactable.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getId"></a>getId(areaTrigger)</h2>
+  <p>Returns the id of an area trigger.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></td><td class="code">areaTrigger</td><td>The area trigger instance.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">integer</td><td>The area trigger's id.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getShapes"></a>getShapes(areaTrigger)</h2>
+  <p>Gets the shapes inside the area trigger</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></td><td class="code">areaTrigger</td><td>The area trigger instance.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td>A table of shapes. {<a href="userdata_Game_Shape.html" class="code">Shape</a>, ...}</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getSize"></a>getSize(areaTrigger)</h2>
+  <p>Returns the size of an area trigger.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></td><td class="code">areaTrigger</td><td>The area trigger instance.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The area trigger's size.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getUserData"></a>getUserData(areaTrigger)</h2>
+  <p>Returns the user data set on the area trigger.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></td><td class="code">areaTrigger</td><td>The area trigger instance.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td>The user data set on this trigger</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getWorldMax"></a>getWorldMax(areaTrigger)</h2>
+  <p>Returns the world max corner position of an area trigger.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></td><td class="code">areaTrigger</td><td>The area trigger instance.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The area trigger's max corner position.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getWorldMin"></a>getWorldMin(areaTrigger)</h2>
+  <p>Returns the world min corner position of an area trigger.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></td><td class="code">areaTrigger</td><td>The area trigger instance.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The area trigger's min corner position.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getWorldPosition"></a>getWorldPosition(areaTrigger)</h2>
+  <p>Returns the world position of an area trigger.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></td><td class="code">areaTrigger</td><td>The area trigger instance.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The area trigger's world position.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getWorldRotation"></a>getWorldRotation(areaTrigger)</h2>
+  <p>Returns the world rotation of an area trigger.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></td><td class="code">areaTrigger</td><td>The area trigger instance.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td>The area trigger's world rotation.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="hasVoxelTerrainContact"></a>hasVoxelTerrainContact(areaTrigger)</h2>
+  <p>Returns true if the <a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a> is in contact with destructable terrain.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></td><td class="code">areaTrigger</td><td>The area trigger instance.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>Destructable terrain contact.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setShapeDetection"></a>setShapeDetection(areaTrigger, detectShapes)</h2>
+  <p>Shape detection is off by default. When set to true the area trigger can calculate which shapes are inside of the trigger</p>
+  <p>with a call to <a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a>: getShapes</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></td><td class="code">areaTrigger</td><td>The area trigger instance.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">detectShapes</td><td>Shape detection on or off.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setSize"></a>setSize(areaTrigger, size)</h2>
+  <p>Sets the new size of an area trigger.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></td><td class="code">areaTrigger</td><td>The area trigger instance.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">size</td><td>The area trigger's new size.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setWorldPosition"></a>setWorldPosition(areaTrigger, position)</h2>
+  <p>Sets the new world position of an area trigger.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></td><td class="code">areaTrigger</td><td>The area trigger instance.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The area trigger's new world position.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setWorldRotation"></a>setWorldRotation(areaTrigger, rotation)</h2>
+  <p>Sets the new world rotation of an area trigger.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></td><td class="code">areaTrigger</td><td>The area trigger instance.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td class="code">rotation</td><td>The area trigger's new world rotation.</td></tr>
+  </table>
+ </div>
+</body>
+</html>

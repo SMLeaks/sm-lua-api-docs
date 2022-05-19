@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>UnitClass - Lua API Reference - Scrap Mechanic</title>
+ <link rel="stylesheet" href="styles.css">
+ <script src="script.js"></script>
+ <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+ <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+ <div id="menu">
+  <h2>Lua API Reference</h2>
+  <ul>
+   <li><a href="index.html">Introduction</a></li>
+  </ul>
+  <h2>Game environment</h2>
+  <h3>Classes</h3>
+  <ul>
+   <li><a href="class_Game_CharacterClass.html" class="code">CharacterClass</a></li>
+   <li><a href="class_Game_GameClass.html" class="code">GameClass</a></li>
+   <li><a href="class_Game_HarvestableClass.html" class="code">HarvestableClass</a></li>
+   <li><a href="class_Game_PlayerClass.html" class="code">PlayerClass</a></li>
+   <li><a href="class_Game_ScriptableObjectClass.html" class="code">ScriptableObjectClass</a></li>
+   <li><a href="class_Game_ShapeClass.html" class="code">ShapeClass</a></li>
+   <li><a href="class_Game_ToolClass.html" class="code">ToolClass</a></li>
+   <li><a href="class_Game_UnitClass.html" class="code">UnitClass</a></li>
+   <li><a href="class_Game_WorldClass.html" class="code">WorldClass</a></li>
+  </ul>
+  <h3>Object Types 'userdata'</h3>
+  <ul>
+   <li><a href="userdata_Game_AiState.html" class="code">AiState</a></li>
+   <li><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></li>
+   <li><a href="userdata_Game_BlueprintVisualization.html" class="code">BlueprintVisualization</a></li>
+   <li><a href="userdata_Game_Body.html" class="code">Body</a></li>
+   <li><a href="userdata_Game_BuilderGuide.html" class="code">BuilderGuide</a></li>
+   <li><a href="userdata_Game_Character.html" class="code">Character</a></li>
+   <li><a href="userdata_Game_Color.html" class="code">Color</a></li>
+   <li><a href="userdata_Game_Container.html" class="code">Container</a></li>
+   <li><a href="userdata_Game_CullSphereGroup.html" class="code">CullSphereGroup</a></li>
+   <li><a href="userdata_Game_Effect.html" class="code">Effect</a></li>
+   <li><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></li>
+   <li><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></li>
+   <li><a href="userdata_Game_Interactable.html" class="code">Interactable</a></li>
+   <li><a href="userdata_Game_Joint.html" class="code">Joint</a></li>
+   <li><a href="userdata_Game_Lift.html" class="code">Lift</a></li>
+   <li><a href="userdata_Game_LoadCellHandle.html" class="code">LoadCellHandle</a></li>
+   <li><a href="userdata_Game_Network.html" class="code">Network</a></li>
+   <li><a href="userdata_Game_PathNode.html" class="code">PathNode</a></li>
+   <li><a href="userdata_Game_Player.html" class="code">Player</a></li>
+   <li><a href="userdata_Game_Portal.html" class="code">Portal</a></li>
+   <li><a href="userdata_Game_Quat.html" class="code">Quat</a></li>
+   <li><a href="userdata_Game_RaycastResult.html" class="code">RaycastResult</a></li>
+   <li><a href="userdata_Game_ScriptableObject.html" class="code">ScriptableObject</a></li>
+   <li><a href="userdata_Game_Shape.html" class="code">Shape</a></li>
+   <li><a href="userdata_Game_Storage.html" class="code">Storage</a></li>
+   <li><a href="userdata_Game_Tool.html" class="code">Tool</a></li>
+   <li><a href="userdata_Game_Unit.html" class="code">Unit</a></li>
+   <li><a href="userdata_Game_Uuid.html" class="code">Uuid</a></li>
+   <li><a href="userdata_Game_Vec3.html" class="code">Vec3</a></li>
+   <li><a href="userdata_Game_Widget.html" class="code">Widget</a></li>
+   <li><a href="userdata_Game_World.html" class="code">World</a></li>
+  </ul>
+  <h3>Static Function Namespaces</h3>
+  <ul>
+   <li><a href="namespace_Game_GLOBAL.html" class="code">GLOBAL</a></li>
+   <li><a href="namespace_Game_sm.html" class="code">sm</a></li>
+   <li><a href="namespace_Game_sm_ai.html" class="code">sm.ai</a></li>
+   <li><a href="namespace_Game_sm_areaTrigger.html" class="code">sm.areaTrigger</a></li>
+   <li><a href="namespace_Game_sm_audio.html" class="code">sm.audio</a></li>
+   <li><a href="namespace_Game_sm_body.html" class="code">sm.body</a></li>
+   <li><a href="namespace_Game_sm_builderGuide.html" class="code">sm.builderGuide</a></li>
+   <li><a href="namespace_Game_sm_camera.html" class="code">sm.camera</a></li>
+   <li><a href="namespace_Game_sm_cell.html" class="code">sm.cell</a></li>
+   <li><a href="namespace_Game_sm_challenge.html" class="code">sm.challenge</a></li>
+   <li><a href="namespace_Game_sm_character.html" class="code">sm.character</a></li>
+   <li><a href="namespace_Game_sm_color.html" class="code">sm.color</a></li>
+   <li><a href="namespace_Game_sm_construction.html" class="code">sm.construction</a></li>
+   <li><a href="namespace_Game_sm_container.html" class="code">sm.container</a></li>
+   <li><a href="namespace_Game_sm_creation.html" class="code">sm.creation</a></li>
+   <li><a href="namespace_Game_sm_cullSphereGroup.html" class="code">sm.cullSphereGroup</a></li>
+   <li><a href="namespace_Game_sm_debris.html" class="code">sm.debris</a></li>
+   <li><a href="namespace_Game_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
+   <li><a href="namespace_Game_sm_effect.html" class="code">sm.effect</a></li>
+   <li><a href="namespace_Game_sm_event.html" class="code">sm.event</a></li>
+   <li><a href="namespace_Game_sm_game.html" class="code">sm.game</a></li>
+   <li><a href="namespace_Game_sm_gui.html" class="code">sm.gui</a></li>
+   <li><a href="namespace_Game_sm_gui_widget.html" class="code">sm.gui.widget</a></li>
+   <li><a href="namespace_Game_sm_harvestable.html" class="code">sm.harvestable</a></li>
+   <li><a href="namespace_Game_sm_interactable.html" class="code">sm.interactable</a></li>
+   <li><a href="namespace_Game_sm_item.html" class="code">sm.item</a></li>
+   <li><a href="namespace_Game_sm_joint.html" class="code">sm.joint</a></li>
+   <li><a href="namespace_Game_sm_json.html" class="code">sm.json</a></li>
+   <li><a href="namespace_Game_sm_localPlayer.html" class="code">sm.localPlayer</a></li>
+   <li><a href="namespace_Game_sm_log.html" class="code">sm.log</a></li>
+   <li><a href="namespace_Game_sm_melee.html" class="code">sm.melee</a></li>
+   <li><a href="namespace_Game_sm_menuCreation.html" class="code">sm.menuCreation</a></li>
+   <li><a href="namespace_Game_sm_noise.html" class="code">sm.noise</a></li>
+   <li><a href="namespace_Game_sm_particle.html" class="code">sm.particle</a></li>
+   <li><a href="namespace_Game_sm_pathNode.html" class="code">sm.pathNode</a></li>
+   <li><a href="namespace_Game_sm_pathfinder.html" class="code">sm.pathfinder</a></li>
+   <li><a href="namespace_Game_sm_physics.html" class="code">sm.physics</a></li>
+   <li><a href="namespace_Game_sm_player.html" class="code">sm.player</a></li>
+   <li><a href="namespace_Game_sm_portal.html" class="code">sm.portal</a></li>
+   <li><a href="namespace_Game_sm_projectile.html" class="code">sm.projectile</a></li>
+   <li><a href="namespace_Game_sm_quat.html" class="code">sm.quat</a></li>
+   <li><a href="namespace_Game_sm_render.html" class="code">sm.render</a></li>
+   <li><a href="namespace_Game_sm_scriptableObject.html" class="code">sm.scriptableObject</a></li>
+   <li><a href="namespace_Game_sm_shape.html" class="code">sm.shape</a></li>
+   <li><a href="namespace_Game_sm_storage.html" class="code">sm.storage</a></li>
+   <li><a href="namespace_Game_sm_tool.html" class="code">sm.tool</a></li>
+   <li><a href="namespace_Game_sm_unit.html" class="code">sm.unit</a></li>
+   <li><a href="namespace_Game_sm_util.html" class="code">sm.util</a></li>
+   <li><a href="namespace_Game_sm_uuid.html" class="code">sm.uuid</a></li>
+   <li><a href="namespace_Game_sm_vec3.html" class="code">sm.vec3</a></li>
+   <li><a href="namespace_Game_sm_visualization.html" class="code">sm.visualization</a></li>
+   <li><a href="namespace_Game_sm_world.html" class="code">sm.world</a></li>
+  </ul>
+  <h2>Terrain environment</h2>
+  <h3>Classes</h3>
+  <ul>
+  </ul>
+  <h3>Object Types 'userdata'</h3>
+  <ul>
+   <li><a href="userdata_Terrain_Color.html" class="code">Color</a></li>
+   <li><a href="userdata_Terrain_Harvestable.html" class="code">Harvestable</a></li>
+   <li><a href="userdata_Terrain_Quat.html" class="code">Quat</a></li>
+   <li><a href="userdata_Terrain_Uuid.html" class="code">Uuid</a></li>
+   <li><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></li>
+   <li><a href="userdata_Terrain_World.html" class="code">World</a></li>
+  </ul>
+  <h3>Static Function Namespaces</h3>
+  <ul>
+   <li><a href="namespace_Terrain_GLOBAL.html" class="code">GLOBAL</a></li>
+   <li><a href="namespace_Terrain_sm.html" class="code">sm</a></li>
+   <li><a href="namespace_Terrain_sm_color.html" class="code">sm.color</a></li>
+   <li><a href="namespace_Terrain_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
+   <li><a href="namespace_Terrain_sm_harvestable.html" class="code">sm.harvestable</a></li>
+   <li><a href="namespace_Terrain_sm_json.html" class="code">sm.json</a></li>
+   <li><a href="namespace_Terrain_sm_log.html" class="code">sm.log</a></li>
+   <li><a href="namespace_Terrain_sm_noise.html" class="code">sm.noise</a></li>
+   <li><a href="namespace_Terrain_sm_quat.html" class="code">sm.quat</a></li>
+   <li><a href="namespace_Terrain_sm_terrainData.html" class="code">sm.terrainData</a></li>
+   <li><a href="namespace_Terrain_sm_terrainGeneration.html" class="code">sm.terrainGeneration</a></li>
+   <li><a href="namespace_Terrain_sm_terrainTile.html" class="code">sm.terrainTile</a></li>
+   <li><a href="namespace_Terrain_sm_util.html" class="code">sm.util</a></li>
+   <li><a href="namespace_Terrain_sm_uuid.html" class="code">sm.uuid</a></li>
+   <li><a href="namespace_Terrain_sm_vec3.html" class="code">sm.vec3</a></li>
+  </ul>
+ </div>
+ <div id="content">
+  <h1 class="code">UnitClass</h1>
+  <p>A script class that is instanced for every <a href="userdata_Game_Unit.html" class="code">Unit</a> in the game.</p>
+  <p>A unit represents an AI controlling a <a href="userdata_Game_Character.html" class="code">Character</a>.</p>
+  <p>The unit script only runs on the server side.</p>
+  <p>Can receive events sent with <a href="namespace_Game_sm_event.html#sendToUnit" class="code">sm.event.sendToUnit</a>.</p>
+  <h4>Fields:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Unit.html" class="code">Unit</a></td><td class="code">unit</td><td>The <a href="userdata_Game_Unit.html" class="code">Unit</a> game object belonging to this class instance.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Storage.html" class="code">Storage</a></td><td class="code">storage</td><td>A <a href="userdata_Game_Storage.html" class="code">Storage</a> object that can be used to store data for the next time loading this object after being unloaded.</td></tr>
+   <tr><td class="code">any</td><td class="code">data</td><td>Data from the "data" json element.</td></tr>
+   <tr><td class="code">any</td><td class="code">params</td><td>Parameter sent to <a href="namespace_Game_sm_unit.html#createUnit" class="code">sm.unit.createUnit</a>.</td></tr>
+  </table>
+  <h4>Constants:</h4>
+  <ul>
+   <li><a href="#isSaveObject" class="code">isSaveObject</a></li>
+  </ul>
+  <h4>Common callbacks:</h4>
+  <ul>
+   <li><a href="#server_onCreate" class="code">server_onCreate</a></li>
+   <li><a href="#client_onCreate" class="code">client_onCreate</a></li>
+   <li><a href="#server_onDestroy" class="code">server_onDestroy</a></li>
+   <li><a href="#client_onDestroy" class="code">client_onDestroy</a></li>
+   <li><a href="#server_onRefresh" class="code">server_onRefresh</a></li>
+   <li><a href="#client_onRefresh" class="code">client_onRefresh</a></li>
+   <li><a href="#server_onFixedUpdate" class="code">server_onFixedUpdate</a></li>
+   <li><a href="#client_onFixedUpdate" class="code">client_onFixedUpdate</a></li>
+   <li><a href="#client_onUpdate" class="code">client_onUpdate</a></li>
+   <li><a href="#client_onClientDataUpdate" class="code">client_onClientDataUpdate</a></li>
+  </ul>
+  <h4>Callbacks:</h4>
+  <ul>
+   <li><a href="#server_onProjectile" class="code">server_onProjectile</a></li>
+   <li><a href="#server_onExplosion" class="code">server_onExplosion</a></li>
+   <li><a href="#server_onMelee" class="code">server_onMelee</a></li>
+   <li><a href="#server_onCollision" class="code">server_onCollision</a></li>
+   <li><a href="#server_onCollisionCrush" class="code">server_onCollisionCrush</a></li>
+   <li><a href="#server_onUnitUpdate" class="code">server_onUnitUpdate</a></li>
+   <li><a href="#server_onCharacterChangedColor" class="code">server_onCharacterChangedColor</a></li>
+  </ul>
+  <hr>
+  <h2 class="code"><a id="isSaveObject"></a>isSaveObject <i>boolean</i></h2>
+  <p>Enables or disables saving of this unit. (Defaults to true)</p>
+  <p>If enabled, the <a href="userdata_Game_Unit.html" class="code">Unit</a> will be recreated when loading a game. Otherwise, the <a href="userdata_Game_Unit.html" class="code">Unit</a> is considered a temporary object.</p>
+  <div class="note">
+   <h4>Note:</h4>
+   <p>If disabled, self.storage can not be used.</p>
+  </div>
+  <hr>
+  <h2 class="code"><a id="server_onCreate"></a>server_onCreate(self) <i>serverEventCallback</i></h2>
+  <p>Called when the scripted object is created. This occurs when a new object is built, spawned, or loaded from the save file.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="client_onCreate"></a>client_onCreate(self) <i>clientEventCallback</i></h2>
+  <p>Called when the scripted object is created. This occurs when a new object is built, spawned, or loaded from the save file.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="server_onDestroy"></a>server_onDestroy(self) <i>serverEventCallback</i></h2>
+  <p>Called when the scripted object is destroyed.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="client_onDestroy"></a>client_onDestroy(self) <i>clientEventCallback</i></h2>
+  <p>Called when the scripted object is destroyed.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="server_onRefresh"></a>server_onRefresh(self) <i>serverEventCallback</i></h2>
+  <p>Called if the Lua script attached to the object is modified while the game is running.</p>
+  <div class="note">
+   <h4>Note:</h4>
+   <p>This event requires Scrap Mechanic to be running with the '-dev' flag. This will allow scripts to automatically refresh upon changes.</p>
+  </div>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="client_onRefresh"></a>client_onRefresh(self) <i>clientEventCallback</i></h2>
+  <p>Called if the Lua script attached to the object is modified while the game is running.</p>
+  <div class="note">
+   <h4>Note:</h4>
+   <p>This event requires Scrap Mechanic to be running with the '-dev' flag. This will allow scripts to automatically refresh upon changes.</p>
+  </div>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="server_onFixedUpdate"></a>server_onFixedUpdate(self, timeStep) <i>serverEventCallback</i></h2>
+  <p>Called every game tick &ndash; 40 ticks a second. If the frame rate is lower than 40 fps, this event may be called twice.</p>
+  <p>During a fixed update, physics and logic between interactables are updated.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+   <tr><td class="code">number</td><td class="code">timeStep</td><td>The time period of a tick. (Is always 0.025, a 1/40th of a second.)</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="client_onFixedUpdate"></a>client_onFixedUpdate(self, timeStep) <i>clientEventCallback</i></h2>
+  <p>Called every game tick &ndash; 40 ticks a second. If the frame rate is lower than 40 fps, this event may be called twice.</p>
+  <p>During a fixed update, physics and logic between interactables are updated.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+   <tr><td class="code">number</td><td class="code">timeStep</td><td>The time period of a tick. (Is always 0.025, a 1/40th of a second.)</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="client_onUpdate"></a>client_onUpdate(self, deltaTime) <i>clientEventCallback</i></h2>
+  <p>Called every frame.</p>
+  <p>During a frame update, graphics, animations and effects are updated.</p>
+  <div class="warning">
+   <h4>Warning:</h4>
+   <p>Because of how frequent this event is called, the game's frame rate is greatly affected by the amount of code executed here.</p>
+   <p>For any non-graphics related code, consider using <a href="class_Game_UnitClass.html#client_onFixedUpdate" class="code">client_onFixedUpdate</a> instead.</p>
+   <p>If the event is not in use, consider removing it from the script. (Event callbacks that are not implemented will not be called.)</p>
+  </div>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+   <tr><td class="code">number</td><td class="code">deltaTime</td><td>Delta time since the last frame.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="client_onClientDataUpdate"></a>client_onClientDataUpdate(self, data, channel) <i>clientEventCallback</i></h2>
+  <p>Called when the client receives new client data updates from the server set with <a href="userdata_Game_Network.html#setClientData" class="code">Network.setClientData</a>.</p>
+  <p>Data set in this way is persistent and the latest data will automatically be sent to new clients.</p>
+  <p>The data will arrive after <a href="class_Game_UnitClass.html#client_onCreate" class="code">client_onCreate</a> during the same tick.</p>
+  <p>Channel 1 will be received before channel 2 if both are updated.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+   <tr><td class="code">any</td><td class="code">data</td><td>Any lua object set with <a href="userdata_Game_Network.html#setClientData" class="code">Network.setClientData</a></td></tr>
+   <tr><td class="code">integer</td><td class="code">channel</td><td>Client data channel, 1 or 2. (default: 1)</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="server_onProjectile"></a>server_onProjectile(self, position, airTime, velocity, projectileName, shooter, damage, customData, normal, uuid) <i>serverEventCallback</i></h2>
+  <p>Called when the <a href="userdata_Game_Unit.html" class="code">Unit</a>'s <a href="userdata_Game_Character.html" class="code">Character</a> is hit by a projectile.</p>
+  <div class="note">
+   <h4>Note:</h4>
+   <p>If the shooter is destroyed before the projectile hits, the shooter value will be nil.</p>
+  </div>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The position in world space where the projectile hit the <a href="userdata_Game_Unit.html" class="code">Unit</a>'s <a href="userdata_Game_Character.html" class="code">Character</a>.</td></tr>
+   <tr><td class="code">number</td><td class="code">airTime</td><td>The time, in seconds, that the projectile spent flying before the hit.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">velocity</td><td>The velocity of the projectile at impact.</td></tr>
+   <tr><td class="code">string</td><td class="code">projectileName</td><td>The name of the projectile. (Legacy, use uuid instead)</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Player.html" class="code">Player</a>/<a href="userdata_Game_Unit.html" class="code">Unit</a>/<a href="userdata_Game_Shape.html" class="code">Shape</a>/<a href="userdata_Game_Harvestable.html" class="code">Harvestable</a>/nil</td><td class="code">shooter</td><td>The shooter. Can be a <a href="userdata_Game_Player.html" class="code">Player</a>, <a href="userdata_Game_Unit.html" class="code">Unit</a>, <a href="userdata_Game_Shape.html" class="code">Shape</a>, <a href="userdata_Game_Harvestable.html" class="code">Harvestable</a> or nil if unknown.</td></tr>
+   <tr><td class="code">integer</td><td class="code">damage</td><td>The damage value of the projectile.</td></tr>
+   <tr><td class="code">any</td><td class="code">customData</td><td>A Lua object that can be defined at shoot time using <a href="namespace_Game_sm_projectile.html#customProjectileAttack" class="code">sm.projectile.customProjectileAttack</a> or an other custom version. </td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">normal</td><td>The normal at the point of impact.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">uuid</td><td>The uuid of the projectile.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="server_onExplosion"></a>server_onExplosion(self, center, destructionLevel) <i>serverEventCallback</i></h2>
+  <p>Called when the <a href="userdata_Game_Unit.html" class="code">Unit</a>'s <a href="userdata_Game_Character.html" class="code">Character</a> is hit by an explosion.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">center</td><td>The center of the explosion.</td></tr>
+   <tr><td class="code">integer</td><td class="code">destructionLevel</td><td>The level of destruction done by this explosion. Corresponds to the 'durability' rating of a <a href="userdata_Game_Shape.html" class="code">Shape</a>.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="server_onMelee"></a>server_onMelee(self, position, attacker, damage, power, direction, normal) <i>serverEventCallback</i></h2>
+  <p>Called when the <a href="userdata_Game_Unit.html" class="code">Unit</a>'s <a href="userdata_Game_Character.html" class="code">Character</a> is hit by a melee hit.</p>
+  <div class="note">
+   <h4>Note:</h4>
+   <p>If the attacker is destroyed before the hit lands, the attacker value will be nil.</p>
+  </div>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The position in world space where the <a href="userdata_Game_Unit.html" class="code">Unit</a>'s <a href="userdata_Game_Character.html" class="code">Character</a> was hit.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Player.html" class="code">Player</a>/<a href="userdata_Game_Unit.html" class="code">Unit</a>/nil</td><td class="code">attacker</td><td>The attacker. Can be a <a href="userdata_Game_Player.html" class="code">Player</a>, <a href="userdata_Game_Unit.html" class="code">Unit</a> or nil if unknown.</td></tr>
+   <tr><td class="code">integer</td><td class="code">damage</td><td>The damage value of the melee hit.</td></tr>
+   <tr><td class="code">number</td><td class="code">power</td><td>The physical impact impact of the hit.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">direction</td><td>The direction that the melee attack was made.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">normal</td><td>The normal at the point of impact.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="server_onCollision"></a>server_onCollision(self, other, position, selfPointVelocity, otherPointVelocity, normal) <i>serverEventCallback</i></h2>
+  <p>Called when the <a href="userdata_Game_Unit.html" class="code">Unit</a>'s <a href="userdata_Game_Character.html" class="code">Character</a> collides with another object.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a>/<a href="userdata_Game_Character.html" class="code">Character</a>/<a href="userdata_Game_Harvestable.html" class="code">Harvestable</a>/<a href="userdata_Game_Lift.html" class="code">Lift</a>/nil</td><td class="code">other</td><td>The other object. Nil if terrain.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The position in world space where the collision occurred.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">selfPointVelocity</td><td>The velocity that that the <a href="userdata_Game_Unit.html" class="code">Unit</a>'s <a href="userdata_Game_Character.html" class="code">Character</a> had at the point of collision.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">otherPointVelocity</td><td>The velocity that that the other object had at the point of collision.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">normal</td><td>The collision normal between the <a href="userdata_Game_Unit.html" class="code">Unit</a>'s <a href="userdata_Game_Character.html" class="code">Character</a> and the other other object.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="server_onCollisionCrush"></a>server_onCollisionCrush(self) <i>serverEventCallback</i></h2>
+  <p>Called when the <a href="userdata_Game_Unit.html" class="code">Unit</a>'s <a href="userdata_Game_Character.html" class="code">Character</a> is crushed.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="server_onUnitUpdate"></a>server_onUnitUpdate(self, deltaTime) <i>serverEventCallback</i></h2>
+  <p>Called occasionally for units based on how many units are active.</p>
+  <p>It is recommended to do heavier AI decisions here instead of in <a href="class_Game_UnitClass.html#server_onFixedUpdate" class="code">server_onFixedUpdate</a>.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+   <tr><td class="code">number</td><td class="code">deltaTime</td><td>The time, in seconds, since <a href="class_Game_UnitClass.html#server_onUnitUpdate" class="code">server_onUnitUpdate</a> was last called for this <a href="userdata_Game_Unit.html" class="code">Unit</a>.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="server_onCharacterChangedColor"></a>server_onCharacterChangedColor(self, color) <i>serverEventCallback</i></h2>
+  <p>Called when the <a href="userdata_Game_Unit.html" class="code">Unit</a>'s <a href="userdata_Game_Character.html" class="code">Character</a> color is set. Either by painting or set using <a href="userdata_Game_Character.html#setColor" class="code">Character.setColor</a> or <a href="userdata_Game_Character.html#color" class="code">Character.color</a>.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Color.html" class="code">Color</a></td><td class="code">color</td><td>The new <a href="userdata_Game_Color.html" class="code">Color</a> of the <a href="userdata_Game_Unit.html" class="code">Unit</a>'s <a href="userdata_Game_Character.html" class="code">Character</a>.</td></tr>
+  </table>
+ </div>
+</body>
+</html>

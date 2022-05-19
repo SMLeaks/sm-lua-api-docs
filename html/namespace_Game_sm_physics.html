@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>sm.physics - Lua API Reference - Scrap Mechanic</title>
+ <link rel="stylesheet" href="styles.css">
+ <script src="script.js"></script>
+ <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+ <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+ <div id="menu">
+  <h2>Lua API Reference</h2>
+  <ul>
+   <li><a href="index.html">Introduction</a></li>
+  </ul>
+  <h2>Game environment</h2>
+  <h3>Classes</h3>
+  <ul>
+   <li><a href="class_Game_CharacterClass.html" class="code">CharacterClass</a></li>
+   <li><a href="class_Game_GameClass.html" class="code">GameClass</a></li>
+   <li><a href="class_Game_HarvestableClass.html" class="code">HarvestableClass</a></li>
+   <li><a href="class_Game_PlayerClass.html" class="code">PlayerClass</a></li>
+   <li><a href="class_Game_ScriptableObjectClass.html" class="code">ScriptableObjectClass</a></li>
+   <li><a href="class_Game_ShapeClass.html" class="code">ShapeClass</a></li>
+   <li><a href="class_Game_ToolClass.html" class="code">ToolClass</a></li>
+   <li><a href="class_Game_UnitClass.html" class="code">UnitClass</a></li>
+   <li><a href="class_Game_WorldClass.html" class="code">WorldClass</a></li>
+  </ul>
+  <h3>Object Types 'userdata'</h3>
+  <ul>
+   <li><a href="userdata_Game_AiState.html" class="code">AiState</a></li>
+   <li><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></li>
+   <li><a href="userdata_Game_BlueprintVisualization.html" class="code">BlueprintVisualization</a></li>
+   <li><a href="userdata_Game_Body.html" class="code">Body</a></li>
+   <li><a href="userdata_Game_BuilderGuide.html" class="code">BuilderGuide</a></li>
+   <li><a href="userdata_Game_Character.html" class="code">Character</a></li>
+   <li><a href="userdata_Game_Color.html" class="code">Color</a></li>
+   <li><a href="userdata_Game_Container.html" class="code">Container</a></li>
+   <li><a href="userdata_Game_CullSphereGroup.html" class="code">CullSphereGroup</a></li>
+   <li><a href="userdata_Game_Effect.html" class="code">Effect</a></li>
+   <li><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></li>
+   <li><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></li>
+   <li><a href="userdata_Game_Interactable.html" class="code">Interactable</a></li>
+   <li><a href="userdata_Game_Joint.html" class="code">Joint</a></li>
+   <li><a href="userdata_Game_Lift.html" class="code">Lift</a></li>
+   <li><a href="userdata_Game_LoadCellHandle.html" class="code">LoadCellHandle</a></li>
+   <li><a href="userdata_Game_Network.html" class="code">Network</a></li>
+   <li><a href="userdata_Game_PathNode.html" class="code">PathNode</a></li>
+   <li><a href="userdata_Game_Player.html" class="code">Player</a></li>
+   <li><a href="userdata_Game_Portal.html" class="code">Portal</a></li>
+   <li><a href="userdata_Game_Quat.html" class="code">Quat</a></li>
+   <li><a href="userdata_Game_RaycastResult.html" class="code">RaycastResult</a></li>
+   <li><a href="userdata_Game_ScriptableObject.html" class="code">ScriptableObject</a></li>
+   <li><a href="userdata_Game_Shape.html" class="code">Shape</a></li>
+   <li><a href="userdata_Game_Storage.html" class="code">Storage</a></li>
+   <li><a href="userdata_Game_Tool.html" class="code">Tool</a></li>
+   <li><a href="userdata_Game_Unit.html" class="code">Unit</a></li>
+   <li><a href="userdata_Game_Uuid.html" class="code">Uuid</a></li>
+   <li><a href="userdata_Game_Vec3.html" class="code">Vec3</a></li>
+   <li><a href="userdata_Game_Widget.html" class="code">Widget</a></li>
+   <li><a href="userdata_Game_World.html" class="code">World</a></li>
+  </ul>
+  <h3>Static Function Namespaces</h3>
+  <ul>
+   <li><a href="namespace_Game_GLOBAL.html" class="code">GLOBAL</a></li>
+   <li><a href="namespace_Game_sm.html" class="code">sm</a></li>
+   <li><a href="namespace_Game_sm_ai.html" class="code">sm.ai</a></li>
+   <li><a href="namespace_Game_sm_areaTrigger.html" class="code">sm.areaTrigger</a></li>
+   <li><a href="namespace_Game_sm_audio.html" class="code">sm.audio</a></li>
+   <li><a href="namespace_Game_sm_body.html" class="code">sm.body</a></li>
+   <li><a href="namespace_Game_sm_builderGuide.html" class="code">sm.builderGuide</a></li>
+   <li><a href="namespace_Game_sm_camera.html" class="code">sm.camera</a></li>
+   <li><a href="namespace_Game_sm_cell.html" class="code">sm.cell</a></li>
+   <li><a href="namespace_Game_sm_challenge.html" class="code">sm.challenge</a></li>
+   <li><a href="namespace_Game_sm_character.html" class="code">sm.character</a></li>
+   <li><a href="namespace_Game_sm_color.html" class="code">sm.color</a></li>
+   <li><a href="namespace_Game_sm_construction.html" class="code">sm.construction</a></li>
+   <li><a href="namespace_Game_sm_container.html" class="code">sm.container</a></li>
+   <li><a href="namespace_Game_sm_creation.html" class="code">sm.creation</a></li>
+   <li><a href="namespace_Game_sm_cullSphereGroup.html" class="code">sm.cullSphereGroup</a></li>
+   <li><a href="namespace_Game_sm_debris.html" class="code">sm.debris</a></li>
+   <li><a href="namespace_Game_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
+   <li><a href="namespace_Game_sm_effect.html" class="code">sm.effect</a></li>
+   <li><a href="namespace_Game_sm_event.html" class="code">sm.event</a></li>
+   <li><a href="namespace_Game_sm_game.html" class="code">sm.game</a></li>
+   <li><a href="namespace_Game_sm_gui.html" class="code">sm.gui</a></li>
+   <li><a href="namespace_Game_sm_gui_widget.html" class="code">sm.gui.widget</a></li>
+   <li><a href="namespace_Game_sm_harvestable.html" class="code">sm.harvestable</a></li>
+   <li><a href="namespace_Game_sm_interactable.html" class="code">sm.interactable</a></li>
+   <li><a href="namespace_Game_sm_item.html" class="code">sm.item</a></li>
+   <li><a href="namespace_Game_sm_joint.html" class="code">sm.joint</a></li>
+   <li><a href="namespace_Game_sm_json.html" class="code">sm.json</a></li>
+   <li><a href="namespace_Game_sm_localPlayer.html" class="code">sm.localPlayer</a></li>
+   <li><a href="namespace_Game_sm_log.html" class="code">sm.log</a></li>
+   <li><a href="namespace_Game_sm_melee.html" class="code">sm.melee</a></li>
+   <li><a href="namespace_Game_sm_menuCreation.html" class="code">sm.menuCreation</a></li>
+   <li><a href="namespace_Game_sm_noise.html" class="code">sm.noise</a></li>
+   <li><a href="namespace_Game_sm_particle.html" class="code">sm.particle</a></li>
+   <li><a href="namespace_Game_sm_pathNode.html" class="code">sm.pathNode</a></li>
+   <li><a href="namespace_Game_sm_pathfinder.html" class="code">sm.pathfinder</a></li>
+   <li><a href="namespace_Game_sm_physics.html" class="code">sm.physics</a></li>
+   <li><a href="namespace_Game_sm_player.html" class="code">sm.player</a></li>
+   <li><a href="namespace_Game_sm_portal.html" class="code">sm.portal</a></li>
+   <li><a href="namespace_Game_sm_projectile.html" class="code">sm.projectile</a></li>
+   <li><a href="namespace_Game_sm_quat.html" class="code">sm.quat</a></li>
+   <li><a href="namespace_Game_sm_render.html" class="code">sm.render</a></li>
+   <li><a href="namespace_Game_sm_scriptableObject.html" class="code">sm.scriptableObject</a></li>
+   <li><a href="namespace_Game_sm_shape.html" class="code">sm.shape</a></li>
+   <li><a href="namespace_Game_sm_storage.html" class="code">sm.storage</a></li>
+   <li><a href="namespace_Game_sm_tool.html" class="code">sm.tool</a></li>
+   <li><a href="namespace_Game_sm_unit.html" class="code">sm.unit</a></li>
+   <li><a href="namespace_Game_sm_util.html" class="code">sm.util</a></li>
+   <li><a href="namespace_Game_sm_uuid.html" class="code">sm.uuid</a></li>
+   <li><a href="namespace_Game_sm_vec3.html" class="code">sm.vec3</a></li>
+   <li><a href="namespace_Game_sm_visualization.html" class="code">sm.visualization</a></li>
+   <li><a href="namespace_Game_sm_world.html" class="code">sm.world</a></li>
+  </ul>
+  <h2>Terrain environment</h2>
+  <h3>Classes</h3>
+  <ul>
+  </ul>
+  <h3>Object Types 'userdata'</h3>
+  <ul>
+   <li><a href="userdata_Terrain_Color.html" class="code">Color</a></li>
+   <li><a href="userdata_Terrain_Harvestable.html" class="code">Harvestable</a></li>
+   <li><a href="userdata_Terrain_Quat.html" class="code">Quat</a></li>
+   <li><a href="userdata_Terrain_Uuid.html" class="code">Uuid</a></li>
+   <li><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></li>
+   <li><a href="userdata_Terrain_World.html" class="code">World</a></li>
+  </ul>
+  <h3>Static Function Namespaces</h3>
+  <ul>
+   <li><a href="namespace_Terrain_GLOBAL.html" class="code">GLOBAL</a></li>
+   <li><a href="namespace_Terrain_sm.html" class="code">sm</a></li>
+   <li><a href="namespace_Terrain_sm_color.html" class="code">sm.color</a></li>
+   <li><a href="namespace_Terrain_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
+   <li><a href="namespace_Terrain_sm_harvestable.html" class="code">sm.harvestable</a></li>
+   <li><a href="namespace_Terrain_sm_json.html" class="code">sm.json</a></li>
+   <li><a href="namespace_Terrain_sm_log.html" class="code">sm.log</a></li>
+   <li><a href="namespace_Terrain_sm_noise.html" class="code">sm.noise</a></li>
+   <li><a href="namespace_Terrain_sm_quat.html" class="code">sm.quat</a></li>
+   <li><a href="namespace_Terrain_sm_terrainData.html" class="code">sm.terrainData</a></li>
+   <li><a href="namespace_Terrain_sm_terrainGeneration.html" class="code">sm.terrainGeneration</a></li>
+   <li><a href="namespace_Terrain_sm_terrainTile.html" class="code">sm.terrainTile</a></li>
+   <li><a href="namespace_Terrain_sm_util.html" class="code">sm.util</a></li>
+   <li><a href="namespace_Terrain_sm_uuid.html" class="code">sm.uuid</a></li>
+   <li><a href="namespace_Terrain_sm_vec3.html" class="code">sm.vec3</a></li>
+  </ul>
+ </div>
+ <div id="content">
+  <h1 class="code">sm.physics</h1>
+  <p>Contains functions regarding the physics engine.</p>
+  <h4>Constants:</h4>  <ul>   <li><a href="#filter" class="code">filter</a></li>   <li><a href="#types" class="code">types</a></li>  </ul>  <h4>Functions:</h4  <ul>   <li><a href="#applyImpulse" class="code">applyImpulse</a></li>   <li><a href="#applyImpulse" class="code">applyImpulse</a></li>   <li><a href="#applyImpulse" class="code">applyImpulse</a></li>   <li><a href="#applyTorque" class="code">applyTorque</a></li>   <li><a href="#distanceRaycast" class="code">distanceRaycast</a></li>   <li><a href="#explode" class="code">explode</a></li>   <li><a href="#getGravity" class="code">getGravity</a></li>   <li><a href="#getGroundMaterial" class="code">getGroundMaterial</a></li>   <li><a href="#getSphereContacts" class="code">getSphereContacts</a></li>   <li><a href="#multicast" class="code">multicast</a></li>   <li><a href="#raycast" class="code">raycast</a></li>   <li><a href="#raycastTarget" class="code">raycastTarget</a></li>   <li><a href="#setGravity" class="code">setGravity</a></li>   <li><a href="#sphereContactCount" class="code">sphereContactCount</a></li>   <li><a href="#spherecast" class="code">spherecast</a></li>  </ul>  <hr>
+  <h2 class="code"><a id="filter"></a>sm.physics.filter <i>table</i></h2>
+  <p>Collision filter types</p>
+  <table>
+   <tr>    <td>dynamicBody</td>   </tr>   <tr>    <td>staticBody</td>   </tr>   <tr>    <td>character</td>   </tr>   <tr>    <td>areaTrigger</td>   </tr>   <tr>    <td>joints</td>   </tr>   <tr>    <td>terrainSurface</td>   </tr>   <tr>    <td>terrainAsset</td>   </tr>   <tr>    <td>harvestable</td>   </tr>   <tr>    <td>areaTrigger</td>   </tr>   <tr>    <td>static</td>   </tr>   <tr>    <td>default</td>   </tr>   <tr>    <td>all</td>   </tr>  </table>
+  <hr>
+  <h2 class="code"><a id="types"></a>sm.physics.types <i>table</i></h2>
+  <p>Physics types are used to define an object's characteristics is in the physics world. Upon a raycast or collision detection, these types are used to find out what object was intersected.</p>
+  <table>
+   <tr>    <td>"invalid"</td>    <td>No object.</td>   </tr>   <tr>    <td>"terrainSurface"</td>    <td>The ground.</td>   </tr>   <tr>    <td>"terrainAsset"</td>    <td>Trees and boulders.</td>   </tr>   <tr>    <td>"lift"</td>    <td>A <a href="userdata_Game_Lift.html" class="code">Lift</a>.</td>   </tr>   <tr>    <td>"body"</td>    <td>A <a href="userdata_Game_Body.html" class="code">Body</a>.</td>   </tr>   <tr>    <td>"character"</td>    <td>A <a href="userdata_Game_Character.html" class="code">Character</a>.</td>   </tr>   <tr>    <td>"joint"</td>    <td>A <a href="userdata_Game_Joint.html" class="code">Joint</a>.</td>   </tr>   <tr>    <td>"harvestable"</td>    <td>A <a href="userdata_Game_Harvestable.html" class="code">Harvestable</a>.</td>   </tr>   <tr>    <td>"vision"</td>    <td>A collision area used by sensors.</td>   </tr>  </table>
+  <hr>
+  <h2 class="code"><a id="applyImpulse"></a>sm.physics.applyImpulse(target, impulse, worldSpace=false, offset=nil)</h2>
+  <p>Applies an impulse to a <a href="userdata_Game_Shape.html" class="code">Shape</a>, changing its velocity immediately. The impulse is applied to the shape's centerpoint with an optional offset.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">target</td><td>The object on which the impulse is exerted on.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">impulse</td><td>The direction and strength of the impulse.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">worldSpace=false</td><td>Whether the impulse is applied in world space coordinates. (Defaults to local rotation)</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">offset=nil</td><td>The offset from the center point. (Defaults to no offset)</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="applyImpulse"></a>sm.physics.applyImpulse(target, impulse, worldSpace=false, offset=nil)</h2>
+  <p>Applies an impulse to a <a href="userdata_Game_Body.html" class="code">Body</a>, changing its velocity immediately. The impulse is applied to the body's center of mass with an optional offset.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">target</td><td>The object on which the impulse is exerted on.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">impulse</td><td>The direction and strength of the impulse.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">worldSpace=false</td><td>Whether the impulse is applied in world space coordinates. (Defaults to local rotation)</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">offset=nil</td><td>The offset from the center point. (Defaults to no offset)</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="applyImpulse"></a>sm.physics.applyImpulse(target, impulse)</h2>
+  <p>Applies an impulse to a <a href="userdata_Game_Character.html" class="code">Character</a>, changing its velocity immediately. The impulse is applied to the character's centerpoint.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">target</td><td>The character on which the impulse is exerted on.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">impulse</td><td>The direction and strength of the impulse.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="applyTorque"></a>sm.physics.applyTorque(target, torque, worldSpace=false)</h2>
+  <p>Applies a torque impulse to a <a href="userdata_Game_Body.html" class="code">Body</a>, changing its angular velocity immediately. The torque is applied along the body's center of mass, making it rotate.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">target</td><td>The object on which the torque is exerted on.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">torque</td><td>The direction and strength of the torque.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">worldSpace=false</td><td>Whether the torque is applied in world space coordinates. (Defaults to local rotation)</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="distanceRaycast"></a>sm.physics.distanceRaycast(start, direction)</h2>
+  <p>Performs a distance <a target="_blank" href="https://en.wikipedia.org/wiki/Ray_casting">ray cast</a> from a position with a given direction.</p>
+  <div class="note">
+   <h4>Note:</h4>
+   <p><a href="namespace_Game_sm_physics.html#distanceRaycast" class="code">sm.physics.distanceRaycast</a> is generally cheaper to use than <a href="namespace_Game_sm_physics.html#raycast" class="code">sm.physics.raycast</a> as it performs collision checks in a simplified world. If the raycast is only used for checking collision, it is advised to use this method instead.</p>
+  </div>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">start</td><td>The start position.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">direction</td><td>The ray's direction and length.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean, number</td><td>2 values: whether raycast was successful; the fraction (0&ndash;1) of the distance reached until collision divided by the ray's length.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="explode"></a>sm.physics.explode(position, level, destructionRadius, impulseRadius, magnitude, effectName=nil, ignoreShape=nil, parameters=nil)</h2>
+  <p>Server only</p>
+  <p>Creates an explosion at given position. The explosion creates a shockwave that is capable of destroying blocks and pushing characters and creations away.</p>
+  <p>Shapes that are within the explosion's destruction radius may receive the event <a href="class_Game_ShapeClass.html#server_onExplosion" class="code">server_onExplosionHit</a>.</p>
+  <div class="note">
+   <h4>Note:</h4>
+   <p>The <strong>destruction level</strong> is the damage effect on blocks and parts, determining how likely it is that they are destroyed. This is related to the `qualityLevel` found in parts json-files.</p>
+   <p>Any quality level equal to or less than the destruction level may be destroyed. The effect fades one level every half travelled of the remaining destruction radius.</p>
+   <p>A quality level of 0 means a block or part is indestructible.</p>
+  </div>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The center point of the explosion.</td></tr>
+   <tr><td class="code">integer</td><td class="code">level</td><td>The destruction level affecting nearby objects.</td></tr>
+   <tr><td class="code">number</td><td class="code">destructionRadius</td><td>The destruction radius. Objects inside this sphere may be destroyed.</td></tr>
+   <tr><td class="code">number</td><td class="code">impulseRadius</td><td>The impulse radius. Objects inside this sphere are affected by an <a href="namespace_Game_sm_physics.html#applyImpulse" class="code">impulse</a>.</td></tr>
+   <tr><td class="code">number</td><td class="code">magnitude</td><td>The impulse strength of the explosion. The strength diminishes with distance.</td></tr>
+   <tr><td class="code">string</td><td class="code">effectName=nil</td><td>The name of the effect to be played upon explosion. (Optional)</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">ignoreShape=nil</td><td>The shape to be ignored. (Optional)</td></tr>
+   <tr><td class="code">table</td><td class="code">parameters=nil</td><td>The table containing the parameters for the effect. (Optional)</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getGravity"></a>sm.physics.getGravity()</h2>
+  <p>Server only</p>
+  <p>Returns the gravitational acceleration affecting <a href="userdata_Game_Shape.html" class="code">shapes</a> and <a href="userdata_Game_Body.html" class="code">bodies</a>.</p>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">number</td><td>The gravitational value.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getGroundMaterial"></a>sm.physics.getGroundMaterial(worldPosition)</h2>
+  <p>Returns the material at the given position in the terrain.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">worldPosition</td><td>The world position to check the material at.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">string</td><td>The material name.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getSphereContacts"></a>sm.physics.getSphereContacts(pos, radius)</h2>
+  <p>Server only</p>
+  <p>Returns a table of the game objects that are found inside the given sphere</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">pos</td><td>The world position of the sphere.</td></tr>
+   <tr><td class="code">number</td><td class="code">radius</td><td>The radius of the sphere.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td>The table with tables of objects found inside the sphere. { bodies={<a href="userdata_Game_Body.html" class="code">Body</a>, ..}, characters={<a href="userdata_Game_Character.html" class="code">Character</a>, ..}, harvestables={<a href="userdata_Game_Harvestable.html" class="code">Harvestable</a>, ..}, lifts={<a href="userdata_Game_Lift.html" class="code">Lift</a>, ..} }</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="multicast"></a>sm.physics.multicast(casts)</h2>
+  <p>Performs multiple sphere and/or raycasts given a table of parameters.</p>
+  <p>Type can be "sphere" or "ray". Radius is ignored for rays.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">casts</td><td>Table of casts. { type=string, startPoint=<a href="userdata_Game_Vec3.html" class="code">Vec3</a>, endPoint=<a href="userdata_Game_Vec3.html" class="code">Vec3</a>, radius=number, mask=<a href="namespace_Game_sm_physics.html#filter" class="code">sm.physics.filter</a> }</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td>Array of pairs of boolean and <a href="userdata_Game_RaycastResult.html" class="code">RaycastResult</a>. {{boolean,  <a href="userdata_Game_RaycastResult.html" class="code">RaycastResult</a>}, ..}</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="raycast"></a>sm.physics.raycast(start, end, body=nil, mask=nil)</h2>
+  <p>Performs a <a target="_blank" href="https://en.wikipedia.org/wiki/Ray_casting">ray cast</a> between two positions.</p>
+  <p>The returned <a href="userdata_Game_RaycastResult.html" class="code">RaycastResult</a> contains information about any object intersected by the ray.</p>
+  <p>If the ray cast is called from within a shape (e.g. a Sensor), a <a href="userdata_Game_Body.html" class="code">Body</a> may be provided which the ray will not intersect.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">start</td><td>The start position.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">end</td><td>The end position.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body=nil</td><td>The body to be ignored. (Optional)</td></tr>
+   <tr><td class="code">integer</td><td class="code">mask=nil</td><td>The collision mask. Defaults to <a href="namespace_Game_sm_physics.html#filter" class="code">sm.physics.filter.default</a> (Optional)</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean,	<a href="userdata_Game_RaycastResult.html" class="code">RaycastResult</a></td><td>True if raycast was successful; The raycast result data.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="raycastTarget"></a>sm.physics.raycastTarget(start, end, body)</h2>
+  <p>Performs a <a target="_blank" href="https://en.wikipedia.org/wiki/Ray_casting">ray cast</a> between two positions to find a specific target.</p>
+  <p>a <a href="userdata_Game_Body.html" class="code">Body</a> must be provided as a target.</p>
+  <p>The returned <a href="userdata_Game_RaycastResult.html" class="code">RaycastResult</a> contains information about any object intersected by the ray.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">start</td><td>The start position.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">end</td><td>The end position.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The body to be exclusively checked.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean,	<a href="userdata_Game_RaycastResult.html" class="code">RaycastResult</a></td><td>True if raycast was successful; The raycast result data.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setGravity"></a>sm.physics.setGravity(gravity)</h2>
+  <p>Server only</p>
+  <p>Sets the gravitational acceleration affecting <a href="userdata_Game_Shape.html" class="code">shapes</a> and <a href="userdata_Game_Body.html" class="code">bodies</a>.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">number</td><td class="code">gravity</td><td>The gravitational value.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="sphereContactCount"></a>sm.physics.sphereContactCount(worldPosition, radius, includeTerrain=false, countWater=false)</h2>
+  <p>Returns the number of collision objects that are found inside the given sphere</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">worldPosition</td><td>The world position of the sphere.</td></tr>
+   <tr><td class="code">number</td><td class="code">radius</td><td>The radius of the sphere.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">includeTerrain=false</td><td>True if terrain should be included in the test</td></tr>
+   <tr><td class="code">boolean</td><td class="code">countWater=false</td><td>True if water should be included</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">integer</td><td>The number of objects.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="spherecast"></a>sm.physics.spherecast(start, end, radius, body=nil, mask=nil)</h2>
+  <p>Performs a spherical <a target="_blank" href="https://en.wikipedia.org/wiki/Ray_casting">ray cast</a> between two positions.</p>
+  <p>The returned <a href="userdata_Game_RaycastResult.html" class="code">RaycastResult</a> contains information about any object intersected by the ray.</p>
+  <p>If the ray cast is called from within a shape (e.g. a Sensor), a <a href="userdata_Game_Body.html" class="code">Body</a> may be provided which the ray will not intersect.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">start</td><td>The start position.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">end</td><td>The end position.</td></tr>
+   <tr><td class="code">number</td><td class="code">radius</td><td>The radius of the sphere.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body=nil</td><td>The body to be ignored. (Optional)</td></tr>
+   <tr><td class="code">integer</td><td class="code">mask=nil</td><td>The collision mask. Defaults to <a href="namespace_Game_sm_physics.html#filter" class="code">sm.physics.filter.default</a> (Optional)</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean,	<a href="userdata_Game_RaycastResult.html" class="code">RaycastResult</a></td><td>True if raycast was successful; The raycast result data.</td></tr>
+  </table>
+ </div>
+</body>
+</html>

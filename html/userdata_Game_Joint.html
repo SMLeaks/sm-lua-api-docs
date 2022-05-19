@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Joint - Lua API Reference - Scrap Mechanic</title>
+ <link rel="stylesheet" href="styles.css">
+ <script src="script.js"></script>
+ <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+ <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+ <div id="menu">
+  <h2>Lua API Reference</h2>
+  <ul>
+   <li><a href="index.html">Introduction</a></li>
+  </ul>
+  <h2>Game environment</h2>
+  <h3>Classes</h3>
+  <ul>
+   <li><a href="class_Game_CharacterClass.html" class="code">CharacterClass</a></li>
+   <li><a href="class_Game_GameClass.html" class="code">GameClass</a></li>
+   <li><a href="class_Game_HarvestableClass.html" class="code">HarvestableClass</a></li>
+   <li><a href="class_Game_PlayerClass.html" class="code">PlayerClass</a></li>
+   <li><a href="class_Game_ScriptableObjectClass.html" class="code">ScriptableObjectClass</a></li>
+   <li><a href="class_Game_ShapeClass.html" class="code">ShapeClass</a></li>
+   <li><a href="class_Game_ToolClass.html" class="code">ToolClass</a></li>
+   <li><a href="class_Game_UnitClass.html" class="code">UnitClass</a></li>
+   <li><a href="class_Game_WorldClass.html" class="code">WorldClass</a></li>
+  </ul>
+  <h3>Object Types 'userdata'</h3>
+  <ul>
+   <li><a href="userdata_Game_AiState.html" class="code">AiState</a></li>
+   <li><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></li>
+   <li><a href="userdata_Game_BlueprintVisualization.html" class="code">BlueprintVisualization</a></li>
+   <li><a href="userdata_Game_Body.html" class="code">Body</a></li>
+   <li><a href="userdata_Game_BuilderGuide.html" class="code">BuilderGuide</a></li>
+   <li><a href="userdata_Game_Character.html" class="code">Character</a></li>
+   <li><a href="userdata_Game_Color.html" class="code">Color</a></li>
+   <li><a href="userdata_Game_Container.html" class="code">Container</a></li>
+   <li><a href="userdata_Game_CullSphereGroup.html" class="code">CullSphereGroup</a></li>
+   <li><a href="userdata_Game_Effect.html" class="code">Effect</a></li>
+   <li><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></li>
+   <li><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></li>
+   <li><a href="userdata_Game_Interactable.html" class="code">Interactable</a></li>
+   <li><a href="userdata_Game_Joint.html" class="code">Joint</a></li>
+   <li><a href="userdata_Game_Lift.html" class="code">Lift</a></li>
+   <li><a href="userdata_Game_LoadCellHandle.html" class="code">LoadCellHandle</a></li>
+   <li><a href="userdata_Game_Network.html" class="code">Network</a></li>
+   <li><a href="userdata_Game_PathNode.html" class="code">PathNode</a></li>
+   <li><a href="userdata_Game_Player.html" class="code">Player</a></li>
+   <li><a href="userdata_Game_Portal.html" class="code">Portal</a></li>
+   <li><a href="userdata_Game_Quat.html" class="code">Quat</a></li>
+   <li><a href="userdata_Game_RaycastResult.html" class="code">RaycastResult</a></li>
+   <li><a href="userdata_Game_ScriptableObject.html" class="code">ScriptableObject</a></li>
+   <li><a href="userdata_Game_Shape.html" class="code">Shape</a></li>
+   <li><a href="userdata_Game_Storage.html" class="code">Storage</a></li>
+   <li><a href="userdata_Game_Tool.html" class="code">Tool</a></li>
+   <li><a href="userdata_Game_Unit.html" class="code">Unit</a></li>
+   <li><a href="userdata_Game_Uuid.html" class="code">Uuid</a></li>
+   <li><a href="userdata_Game_Vec3.html" class="code">Vec3</a></li>
+   <li><a href="userdata_Game_Widget.html" class="code">Widget</a></li>
+   <li><a href="userdata_Game_World.html" class="code">World</a></li>
+  </ul>
+  <h3>Static Function Namespaces</h3>
+  <ul>
+   <li><a href="namespace_Game_GLOBAL.html" class="code">GLOBAL</a></li>
+   <li><a href="namespace_Game_sm.html" class="code">sm</a></li>
+   <li><a href="namespace_Game_sm_ai.html" class="code">sm.ai</a></li>
+   <li><a href="namespace_Game_sm_areaTrigger.html" class="code">sm.areaTrigger</a></li>
+   <li><a href="namespace_Game_sm_audio.html" class="code">sm.audio</a></li>
+   <li><a href="namespace_Game_sm_body.html" class="code">sm.body</a></li>
+   <li><a href="namespace_Game_sm_builderGuide.html" class="code">sm.builderGuide</a></li>
+   <li><a href="namespace_Game_sm_camera.html" class="code">sm.camera</a></li>
+   <li><a href="namespace_Game_sm_cell.html" class="code">sm.cell</a></li>
+   <li><a href="namespace_Game_sm_challenge.html" class="code">sm.challenge</a></li>
+   <li><a href="namespace_Game_sm_character.html" class="code">sm.character</a></li>
+   <li><a href="namespace_Game_sm_color.html" class="code">sm.color</a></li>
+   <li><a href="namespace_Game_sm_construction.html" class="code">sm.construction</a></li>
+   <li><a href="namespace_Game_sm_container.html" class="code">sm.container</a></li>
+   <li><a href="namespace_Game_sm_creation.html" class="code">sm.creation</a></li>
+   <li><a href="namespace_Game_sm_cullSphereGroup.html" class="code">sm.cullSphereGroup</a></li>
+   <li><a href="namespace_Game_sm_debris.html" class="code">sm.debris</a></li>
+   <li><a href="namespace_Game_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
+   <li><a href="namespace_Game_sm_effect.html" class="code">sm.effect</a></li>
+   <li><a href="namespace_Game_sm_event.html" class="code">sm.event</a></li>
+   <li><a href="namespace_Game_sm_game.html" class="code">sm.game</a></li>
+   <li><a href="namespace_Game_sm_gui.html" class="code">sm.gui</a></li>
+   <li><a href="namespace_Game_sm_gui_widget.html" class="code">sm.gui.widget</a></li>
+   <li><a href="namespace_Game_sm_harvestable.html" class="code">sm.harvestable</a></li>
+   <li><a href="namespace_Game_sm_interactable.html" class="code">sm.interactable</a></li>
+   <li><a href="namespace_Game_sm_item.html" class="code">sm.item</a></li>
+   <li><a href="namespace_Game_sm_joint.html" class="code">sm.joint</a></li>
+   <li><a href="namespace_Game_sm_json.html" class="code">sm.json</a></li>
+   <li><a href="namespace_Game_sm_localPlayer.html" class="code">sm.localPlayer</a></li>
+   <li><a href="namespace_Game_sm_log.html" class="code">sm.log</a></li>
+   <li><a href="namespace_Game_sm_melee.html" class="code">sm.melee</a></li>
+   <li><a href="namespace_Game_sm_menuCreation.html" class="code">sm.menuCreation</a></li>
+   <li><a href="namespace_Game_sm_noise.html" class="code">sm.noise</a></li>
+   <li><a href="namespace_Game_sm_particle.html" class="code">sm.particle</a></li>
+   <li><a href="namespace_Game_sm_pathNode.html" class="code">sm.pathNode</a></li>
+   <li><a href="namespace_Game_sm_pathfinder.html" class="code">sm.pathfinder</a></li>
+   <li><a href="namespace_Game_sm_physics.html" class="code">sm.physics</a></li>
+   <li><a href="namespace_Game_sm_player.html" class="code">sm.player</a></li>
+   <li><a href="namespace_Game_sm_portal.html" class="code">sm.portal</a></li>
+   <li><a href="namespace_Game_sm_projectile.html" class="code">sm.projectile</a></li>
+   <li><a href="namespace_Game_sm_quat.html" class="code">sm.quat</a></li>
+   <li><a href="namespace_Game_sm_render.html" class="code">sm.render</a></li>
+   <li><a href="namespace_Game_sm_scriptableObject.html" class="code">sm.scriptableObject</a></li>
+   <li><a href="namespace_Game_sm_shape.html" class="code">sm.shape</a></li>
+   <li><a href="namespace_Game_sm_storage.html" class="code">sm.storage</a></li>
+   <li><a href="namespace_Game_sm_tool.html" class="code">sm.tool</a></li>
+   <li><a href="namespace_Game_sm_unit.html" class="code">sm.unit</a></li>
+   <li><a href="namespace_Game_sm_util.html" class="code">sm.util</a></li>
+   <li><a href="namespace_Game_sm_uuid.html" class="code">sm.uuid</a></li>
+   <li><a href="namespace_Game_sm_vec3.html" class="code">sm.vec3</a></li>
+   <li><a href="namespace_Game_sm_visualization.html" class="code">sm.visualization</a></li>
+   <li><a href="namespace_Game_sm_world.html" class="code">sm.world</a></li>
+  </ul>
+  <h2>Terrain environment</h2>
+  <h3>Classes</h3>
+  <ul>
+  </ul>
+  <h3>Object Types 'userdata'</h3>
+  <ul>
+   <li><a href="userdata_Terrain_Color.html" class="code">Color</a></li>
+   <li><a href="userdata_Terrain_Harvestable.html" class="code">Harvestable</a></li>
+   <li><a href="userdata_Terrain_Quat.html" class="code">Quat</a></li>
+   <li><a href="userdata_Terrain_Uuid.html" class="code">Uuid</a></li>
+   <li><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></li>
+   <li><a href="userdata_Terrain_World.html" class="code">World</a></li>
+  </ul>
+  <h3>Static Function Namespaces</h3>
+  <ul>
+   <li><a href="namespace_Terrain_GLOBAL.html" class="code">GLOBAL</a></li>
+   <li><a href="namespace_Terrain_sm.html" class="code">sm</a></li>
+   <li><a href="namespace_Terrain_sm_color.html" class="code">sm.color</a></li>
+   <li><a href="namespace_Terrain_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
+   <li><a href="namespace_Terrain_sm_harvestable.html" class="code">sm.harvestable</a></li>
+   <li><a href="namespace_Terrain_sm_json.html" class="code">sm.json</a></li>
+   <li><a href="namespace_Terrain_sm_log.html" class="code">sm.log</a></li>
+   <li><a href="namespace_Terrain_sm_noise.html" class="code">sm.noise</a></li>
+   <li><a href="namespace_Terrain_sm_quat.html" class="code">sm.quat</a></li>
+   <li><a href="namespace_Terrain_sm_terrainData.html" class="code">sm.terrainData</a></li>
+   <li><a href="namespace_Terrain_sm_terrainGeneration.html" class="code">sm.terrainGeneration</a></li>
+   <li><a href="namespace_Terrain_sm_terrainTile.html" class="code">sm.terrainTile</a></li>
+   <li><a href="namespace_Terrain_sm_util.html" class="code">sm.util</a></li>
+   <li><a href="namespace_Terrain_sm_uuid.html" class="code">sm.uuid</a></li>
+   <li><a href="namespace_Terrain_sm_vec3.html" class="code">sm.vec3</a></li>
+  </ul>
+ </div>
+ <div id="content">
+  <h1 class="code">Joint</h1>
+  <h3>Associated namespace: <a href="namespace_Game_sm_joint.html" class="code">sm.joint</a></h3>
+  <p>A userdata object representing a <strong>joint</strong> in the game.</p>
+  <h4>Values:</h4>
+  <ul>
+   <li><a href="#angle" class="code">angle</a></li>
+   <li><a href="#angularVelocity" class="code">angularVelocity</a></li>
+   <li><a href="#appliedImpulse" class="code">appliedImpulse</a></li>
+   <li><a href="#color" class="code">color</a></li>
+   <li><a href="#id" class="code">id</a></li>
+   <li><a href="#length" class="code">length</a></li>
+   <li><a href="#localPosition" class="code">localPosition</a></li>
+   <li><a href="#localRotation" class="code">localRotation</a></li>
+   <li><a href="#reversed" class="code">reversed</a></li>
+   <li><a href="#shapeA" class="code">shapeA</a></li>
+   <li><a href="#shapeB" class="code">shapeB</a></li>
+   <li><a href="#type" class="code">type</a></li>
+   <li><a href="#uuid" class="code">uuid</a></li>
+   <li><a href="#worldPosition" class="code">worldPosition</a></li>
+   <li><a href="#xAxis" class="code">xAxis</a></li>
+   <li><a href="#yAxis" class="code">yAxis</a></li>
+   <li><a href="#zAxis" class="code">zAxis</a></li>
+  </ul>  <h4>Functions:</h4>
+  <ul>
+   <li><a href="#createBlock" class="code">createBlock</a></li>
+   <li><a href="#createPart" class="code">createPart</a></li>
+   <li><a href="#getAngle" class="code">getAngle</a></li>
+   <li><a href="#getAngularVelocity" class="code">getAngularVelocity</a></li>
+   <li><a href="#getAppliedImpulse" class="code">getAppliedImpulse</a></li>
+   <li><a href="#getBoundingBox" class="code">getBoundingBox</a></li>
+   <li><a href="#getColor" class="code">getColor</a></li>
+   <li><a href="#getId" class="code">getId</a></li>
+   <li><a href="#getLength" class="code">getLength</a></li>
+   <li><a href="#getLocalPosition" class="code">getLocalPosition</a></li>
+   <li><a href="#getLocalRotation" class="code">getLocalRotation</a></li>
+   <li><a href="#getShapeA" class="code">getShapeA</a></li>
+   <li><a href="#getShapeB" class="code">getShapeB</a></li>
+   <li><a href="#getShapeUuid" class="code">getShapeUuid</a></li>
+   <li><a href="#getSticky" class="code">getSticky</a></li>
+   <li><a href="#getType" class="code">getType</a></li>
+   <li><a href="#getWorldPosition" class="code">getWorldPosition</a></li>
+   <li><a href="#getWorldRotation" class="code">getWorldRotation</a></li>
+   <li><a href="#getXAxis" class="code">getXAxis</a></li>
+   <li><a href="#getYAxis" class="code">getYAxis</a></li>
+   <li><a href="#getZAxis" class="code">getZAxis</a></li>
+   <li><a href="#isReversed" class="code">isReversed</a></li>
+   <li><a href="#setMotorVelocity" class="code">setMotorVelocity</a></li>
+   <li><a href="#setTargetAngle" class="code">setTargetAngle</a></li>
+   <li><a href="#setTargetLength" class="code">setTargetLength</a></li>
+  </ul>
+  <h4>Operations:</h4>
+  <table>
+   <tr><th>Operation</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Joint.html" class="code">Joint</a> == <a href="userdata_Game_Joint.html" class="code">Joint</a></td><td>Checks if two instances of <a href="userdata_Game_Joint.html" class="code">Joint</a> refer to the same Joint.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="angle"></a>angle <i>number</i></h2>
+  <h4>Get:</h4>
+  <p>Returns the angle of a bearing.</p>
+  <hr>
+  <h2 class="code"><a id="angularVelocity"></a>angularVelocity <i>number</i></h2>
+  <h4>Get:</h4>
+  <p>Returns the angular velocity of a bearing.</p>
+  <p>The angular velocity can be set using <a href="userdata_Game_Joint.html#setMotorVelocity" class="code">setMotorVelocity</a> or <a href="userdata_Game_Joint.html#setTargetAngle" class="code">setTargetAngle</a>.</p>
+  <hr>
+  <h2 class="code"><a id="appliedImpulse"></a>appliedImpulse <i>number</i></h2>
+  <h4>Get:</h4>
+  <p>Returns the applied impulse of a bearing.</p>
+  <p>The applied impulse can be set using <a href="userdata_Game_Joint.html#setMotorVelocity" class="code">setMotorVelocity</a> or <a href="userdata_Game_Joint.html#setTargetAngle" class="code">setTargetAngle</a>.</p>
+  <hr>
+  <h2 class="code"><a id="color"></a>color <i><a href="userdata_Game_Color.html" class="code">Color</a></i></h2>
+  <h4>Get:</h4>
+  <p>Returns the color of a joint.</p>
+  <hr>
+  <h2 class="code"><a id="id"></a>id <i>integer</i></h2>
+  <h4>Get:</h4>
+  <p>Returns the id of a joint.</p>
+  <hr>
+  <h2 class="code"><a id="length"></a>length <i>number</i></h2>
+  <h4>Get:</h4>
+  <p>Returns the current length of a piston. The length is measured in blocks.</p>
+  <hr>
+  <h2 class="code"><a id="localPosition"></a>localPosition <i><a href="userdata_Game_Vec3.html" class="code">Vec3</a></i></h2>
+  <h4>Get:</h4>
+  <p>Returns the local position of a joint.</p>
+  <hr>
+  <h2 class="code"><a id="localRotation"></a>localRotation <i><a href="userdata_Game_Quat.html" class="code">Quat</a></i></h2>
+  <h4>Get:</h4>
+  <p>Returns the local rotation of a joint.</p>
+  <hr>
+  <h2 class="code"><a id="reversed"></a>reversed <i>boolean</i></h2>
+  <h4>Get:</h4>
+  <p>Returns whether a bearing has been reversed using the <em>Connect Tool</em>. A reversed bearing rotates counterclockwise.</p>
+  <hr>
+  <h2 class="code"><a id="shapeA"></a>shapeA <i><a href="userdata_Game_Shape.html" class="code">Shape</a></i></h2>
+  <h4>Get:</h4>
+  <p>Returns the <a href="userdata_Game_Shape.html" class="code">Shape</a> a joint is attached to. This shape does always exist.</p>
+  <hr>
+  <h2 class="code"><a id="shapeB"></a>shapeB <i><a href="userdata_Game_Shape.html" class="code">Shape</a></i></h2>
+  <h4>Get:</h4>
+  <p>Returns the <a href="userdata_Game_Shape.html" class="code">Shape</a> that is attached to a joint on another <a href="userdata_Game_Body.html" class="code">Body</a>. This method returns nil if there is no shape attached to the joint.</p>
+  <hr>
+  <h2 class="code"><a id="type"></a>type <i>string</i></h2>
+  <h4>Get:</h4>
+  <p>Returns the joint type of a joint.</p>
+  <hr>
+  <h2 class="code"><a id="uuid"></a>uuid <i><a href="userdata_Game_Uuid.html" class="code">Uuid</a></i></h2>
+  <h4>Get:</h4>
+  <p>Returns the uuid string unique to a joint type.</p>
+  <hr>
+  <h2 class="code"><a id="worldPosition"></a>worldPosition <i><a href="userdata_Game_Vec3.html" class="code">Vec3</a></i></h2>
+  <h4>Get:</h4>
+  <p>Returns the world position of a joint.</p>
+  <hr>
+  <h2 class="code"><a id="xAxis"></a>xAxis <i><a href="userdata_Game_Vec3.html" class="code">Vec3</a></i></h2>
+  <h4>Get:</h4>
+  <p>Returns the local x-axis vector of a joint.</p>
+  <hr>
+  <h2 class="code"><a id="yAxis"></a>yAxis <i><a href="userdata_Game_Vec3.html" class="code">Vec3</a></i></h2>
+  <h4>Get:</h4>
+  <p>Returns the local y-axis vector of a joint.</p>
+  <hr>
+  <h2 class="code"><a id="zAxis"></a>zAxis <i><a href="userdata_Game_Vec3.html" class="code">Vec3</a></i></h2>
+  <h4>Get:</h4>
+  <p>Returns the local z-axis vector of a joint.</p>
+  <hr>
+  <h2 class="code"><a id="createBlock"></a>createBlock(joint, uuid, size, position, forceCreate=true)</h2>
+  <p>Server only</p>
+  <p>Create a block on joint.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Joint.html" class="code">Joint</a></td><td class="code">joint</td><td>The parent joint.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">uuid</td><td>The uuid of the shape.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">size</td><td>The shape's size.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The shape's local position.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">forceCreate=true</td><td>Set true to force create the shape.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="createPart"></a>createPart(joint, uuid, position, zAxis, xAxis, forceCreate=true)</h2>
+  <p>Server only</p>
+  <p>Create a part on joint.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Joint.html" class="code">Joint</a></td><td class="code">joint</td><td>The parent joint.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">uuid</td><td>The uuid of the shape.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The shape's local position.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">zAxis</td><td>The shape's local z direction.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">xAxis</td><td>The shape's local x direction.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">forceCreate=true</td><td>Set true to force create the shape.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getAngle"></a>getAngle(bearing)</h2>
+  <p>Returns the angle of a bearing.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Joint.html" class="code">Joint</a></td><td class="code">bearing</td><td>The bearing.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">number</td><td>The bearing's angle. The angle ranges between `-math.pi` and `+math.pi`.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getAngularVelocity"></a>getAngularVelocity(bearing)</h2>
+  <p>Returns the angular velocity of a bearing.</p>
+  <p>The angular velocity can be set using <a href="userdata_Game_Joint.html#setMotorVelocity" class="code">setMotorVelocity</a> or <a href="userdata_Game_Joint.html#setTargetAngle" class="code">setTargetAngle</a>.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Joint.html" class="code">Joint</a></td><td class="code">bearing</td><td>The bearing.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">number</td><td>The bearing's angular velocity.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getAppliedImpulse"></a>getAppliedImpulse(bearing)</h2>
+  <p>Returns the applied impulse of a bearing.</p>
+  <p>The applied impulse can be set using <a href="userdata_Game_Joint.html#setMotorVelocity" class="code">setMotorVelocity</a> or <a href="userdata_Game_Joint.html#setTargetAngle" class="code">setTargetAngle</a>.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Joint.html" class="code">Joint</a></td><td class="code">bearing</td><td>The bearing.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">number</td><td>The bearing's applied impulse.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getBoundingBox"></a>getBoundingBox(joint)</h2>
+  <p>Returns the bounding box of a joint &ndash; the dimensions that a joint occupies when building.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Joint.html" class="code">Joint</a></td><td class="code">joint</td><td>The joint.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The size of the joint's bounding box.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getColor"></a>getColor(joint)</h2>
+  <p>Returns the color of a joint.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Joint.html" class="code">Joint</a></td><td class="code">joint</td><td>The joint.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Color.html" class="code">Color</a></td><td>The joint's color.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getId"></a>getId(joint)</h2>
+  <p>Returns the id of a joint.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Joint.html" class="code">Joint</a></td><td class="code">joint</td><td>The joint.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">integer</td><td>The joint's id.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getLength"></a>getLength(piston)</h2>
+  <p>Returns the current length of a piston. The length is measured in blocks.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Joint.html" class="code">Joint</a></td><td class="code">piston</td><td>The piston.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">number</td><td>The piston's current length in blocks.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getLocalPosition"></a>getLocalPosition(joint)</h2>
+  <p>Returns the local position of a joint.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Joint.html" class="code">Joint</a></td><td class="code">joint</td><td>The joint.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The joint's local position.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getLocalRotation"></a>getLocalRotation(joint)</h2>
+  <p>Returns the local rotation of a joint.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Joint.html" class="code">Joint</a></td><td class="code">joint</td><td>The joint.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td>The joint's local rotation.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getShapeA"></a>getShapeA(joint)</h2>
+  <p>Returns the <a href="userdata_Game_Shape.html" class="code">Shape</a> a joint is attached to. This shape does always exist.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Joint.html" class="code">Joint</a></td><td class="code">joint</td><td>The joint.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td>The joint's first shape.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getShapeB"></a>getShapeB(joint)</h2>
+  <p>Returns the <a href="userdata_Game_Shape.html" class="code">Shape</a> that is attached to a joint on another <a href="userdata_Game_Body.html" class="code">Body</a>. This method returns nil if there is no shape attached to the joint.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Joint.html" class="code">Joint</a></td><td class="code">joint</td><td>The joint.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td>The joint's second shape.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getShapeUuid"></a>getShapeUuid(joint)</h2>
+  <p>Returns the uuid string unique to a joint type.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Joint.html" class="code">Joint</a></td><td class="code">joint</td><td>The joint.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td>The joint's uuid.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getSticky"></a>getSticky(joint)</h2>
+  <p>Returns the sticky directions of the joint for positive xyz and negative xyz.</p>
+  <p>A value of 1 means that the direction is sticky and a value of 0 means that the direction is not sticky.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Joint.html" class="code">Joint</a></td><td class="code">joint</td><td>The joint.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a>,<a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The negative xyz sticky and the positive xyz sticky.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getType"></a>getType(joint)</h2>
+  <p>Returns the joint type of a joint.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Joint.html" class="code">Joint</a></td><td class="code">joint</td><td>The joint.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">string</td><td>One of the joint's type found in (sm.joint.types).</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getWorldPosition"></a>getWorldPosition(joint)</h2>
+  <p>Returns the world position of a joint.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Joint.html" class="code">Joint</a></td><td class="code">joint</td><td>The joint.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The joint's world position.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getWorldRotation"></a>getWorldRotation(joint)</h2>
+  <p>Returns the world rotation of a joint.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Joint.html" class="code">Joint</a></td><td class="code">joint</td><td>The joint.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td>The joint's world rotation.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getXAxis"></a>getXAxis(joint)</h2>
+  <p>Returns the local x-axis vector of a joint.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Joint.html" class="code">Joint</a></td><td class="code">joint</td><td>The joint.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The joint's x-axis.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getYAxis"></a>getYAxis(joint)</h2>
+  <p>Returns the local y-axis vector of a joint.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Joint.html" class="code">Joint</a></td><td class="code">joint</td><td>The joint.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The joint's y-axis.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getZAxis"></a>getZAxis(joint)</h2>
+  <p>Returns the local z-axis vector of a joint.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Joint.html" class="code">Joint</a></td><td class="code">joint</td><td>The joint.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The joint's z-axis.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="isReversed"></a>isReversed(bearing)</h2>
+  <p>Returns whether a bearing has been reversed using the <em>Connect Tool</em>. A reversed bearing rotates counterclockwise.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Joint.html" class="code">Joint</a></td><td class="code">bearing</td><td>The bearing.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>Whether the bearing is reversed (rotating counterclockwise).</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setMotorVelocity"></a>setMotorVelocity(bearing, targetVelocity, maxImpulse)</h2>
+  <p>Sets the motor velocity for a bearing. The bearing will try to maintain the target velocity with the given amount of impulse/strength.</p>
+  <p>In Scrap Mechanic, the Gas Engine increases both velocity and impulse with every gear. The Electric Engine increases velocity, but maintains the same impulse for every gear, making it sturdier.</p>
+  <p>This method cancels the effects of <a href="userdata_Game_Joint.html#setTargetAngle" class="code">setTargetAngle</a>.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Joint.html" class="code">Joint</a></td><td class="code">bearing</td><td>The bearing.</td></tr>
+   <tr><td class="code">number</td><td class="code">targetVelocity</td><td>The target velocity.</td></tr>
+   <tr><td class="code">number</td><td class="code">maxImpulse</td><td>The max impulse.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setTargetAngle"></a>setTargetAngle(bearing, targetAngle, targetVelocity, maxImpulse)</h2>
+  <p>Sets the target angle for a bearing. The bearing will try to reach the target angle with the target velocity and the given amount of impulse/strength.</p>
+  <p>The target angle is set to range between `-math.pi` and `+math.pi`. The bearing will always try to rotate in the direction closest to the target angle.</p>
+  <p>This method cancels the effects of <a href="userdata_Game_Joint.html#setMotorVelocity" class="code">setMotorVelocity</a>.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Joint.html" class="code">Joint</a></td><td class="code">bearing</td><td>The bearing.</td></tr>
+   <tr><td class="code">number</td><td class="code">targetAngle</td><td>The target angle.</td></tr>
+   <tr><td class="code">number</td><td class="code">targetVelocity</td><td>The target velocity.</td></tr>
+   <tr><td class="code">number</td><td class="code">maxImpulse</td><td>The max impulse.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setTargetLength"></a>setTargetLength(bearing, targetLength, targetVelocity, maxImpulse=100000)</h2>
+  <p>Server only</p>
+  <p>Sets the target length for a piston. The piston will try to reach the target length with the target velocity and the given amount of impulse/strength.</p>
+  <p>The target length is measured in blocks.</p>
+  <p>This method cancels the effects of <a href="userdata_Game_Joint.html#setMotorVelocity" class="code">setMotorVelocity</a>.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Joint.html" class="code">Joint</a></td><td class="code">bearing</td><td>The bearing.</td></tr>
+   <tr><td class="code">number</td><td class="code">targetLength</td><td>The target length.</td></tr>
+   <tr><td class="code">number</td><td class="code">targetVelocity</td><td>The target velocity.</td></tr>
+   <tr><td class="code">number</td><td class="code">maxImpulse=100000</td><td>The max impulse. (Defaults to impulse used in game)</td></tr>
+  </table>
+ </div>
+</body>
+</html>
