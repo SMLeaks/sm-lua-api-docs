@@ -16,7 +16,7 @@ jobs:
       - name: 'Download and Unpack'
         run: |
           for file in "html" "json" "lua"; do
-            wget -P .cache "https://scrapmechanic.com/api/$file.zip" && unzip -o ".cache/$file.zip"
+            wget -O .cache/$file.zip "https://scrapmechanic.com/api/$file.zip" && unzip -o ".cache/$file.zip"
           done
       - name: '`git status`'
         id: git-status
