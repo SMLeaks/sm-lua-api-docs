@@ -12,12 +12,13 @@ jobs:
         uses: actions/checkout@v3
         with:
           ref: ${{ github.head_ref }}
-      - run: mkdir -p .cache
+      - run: mkdir -p .cache html json lua
       - name: 'Download and Unpack'
         run: |
           for file in "html" "json" "lua"; do
             wget -O .cache/$file.zip "https://scrapmechanic.com/api/$file.zip" && unzip -o ".cache/$file.zip"
           done
+          mv sm.lua lua/
       - name: '`git status`'
         id: git-status
         run: echo ::set-output name=modified::$(if [ -n "$(git status --porcelain)" ]; then echo "true"; else echo "false"; fi)
