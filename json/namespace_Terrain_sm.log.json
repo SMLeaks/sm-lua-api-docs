@@ -15,9 +15,9 @@
 				],
 				"params": [
 					[
-						"string",
-						"message",
-						"The error message to display"
+						"any",
+						"...",
+						"The arguments to be displayed as an error message."
 					]
 				]
 			}
@@ -30,9 +30,9 @@
 				],
 				"params": [
 					[
-						"string",
-						"message",
-						"The log message to display"
+						"any",
+						"...",
+						"The arguments to be displayed as a log message."
 					]
 				]
 			}
@@ -41,13 +41,13 @@
 			"name": "warning",
 			"doc": {
 				"text": [
-					"Logs an warning message"
+					"Logs a warning message"
 				],
 				"params": [
 					[
-						"string",
-						"message",
-						"The warning message to display"
+						"any",
+						"...",
+						"The arguments to be displayed as a warning message."
 					]
 				]
 			}

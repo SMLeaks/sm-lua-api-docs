@@ -2942,12 +2942,12 @@ function Effect:setWorld(world) end
 function Effect:start() end
 
 ---*Client only*  
----Stops playing an effect, allowing sound effects to finish.  
+---Stops playing an effect  
 function Effect:stop() end
 
 ---*Client only*  
----Stops playing an effect, allow fading out sound effects.  
-function Effect:stopFaded() end
+---Stops playing an effect, letting sound finish before destroying the effect.  
+function Effect:stopBreakSustain() end
 
 ---*Client only*  
 ---Immediately stop playing an effect, sound effects ended immediately.  
@@ -3551,14 +3551,17 @@ function GuiInterface:createGridFromJson(gridName, index) end
 ---@param widgetName string The name of the widget
 ---@param range number The range of the slider
 ---@param value number The start value on the slider
-function GuiInterface:createHorizontalSlider(widgetName, range, value) end
+---@param functionName string Slider change callback function name
+---@param numbered? boolean Enable numbered steps (Defaults to false)
+function GuiInterface:createHorizontalSlider(widgetName, range, value, functionName, numbered) end
 
 ---*Client only*  
 ---Creates a slider at the specified widget  
 ---@param widgetName string The name of the widget
 ---@param range number The range of the slider
 ---@param value number The start value on the slider
-function GuiInterface:createVerticalSlider(widgetName, range, value) end
+---@param functionName string Slider change callback function name
+function GuiInterface:createVerticalSlider(widgetName, range, value, functionName) end
 
 ---*Client only*  
 ---Destroy a gui interface  
@@ -3810,6 +3813,20 @@ function GuiInterface:stopEffect(widgetName, effectName, immediate) end
 ---@param effectName string The name of the effect
 function GuiInterface:stopGridEffect(gridName, index, effectName) end
 
+---*Client only*  
+---Adds a quest to the quest tracker  
+---@param name string The name of quest
+---@param title string The quest title to be displayed in the tracker
+---@param mainQuest boolean If the quest is a main quest (Displayed on top in the tracker)
+---@param questTasks table The table of quest tasks to display in the log Task{ name = string, text = string, count = number, target = number, complete = boolean }
+function GuiInterface:trackQuest(name, title, mainQuest, questTasks) end
+
+---*Client only*  
+---Removes a quest from the quest tracker  
+---/  
+---@param questName string The name of quest
+function GuiInterface:untrackQuest(questName) end
+
 
 ---Creates a new class object.  
 ---@param base? string An optional base class to inherit from. (Defaults to inheriting from no class)
@@ -4049,16 +4066,16 @@ function sm.util.smoothstep(edge0, edge1, x) end
 sm.log = {}
 
 ---Logs an error message  
----@param message string The error message to display
-function sm.log.error(message) end
+---@param ... any The arguments to be displayed as an error message.
+function sm.log.error(...) end
 
 ---Logs an information message  
----@param message string The log message to display
-function sm.log.info(message) end
+---@param ... any The arguments to be displayed as a log message.
+function sm.log.info(...) end
 
----Logs an warning message  
----@param message string The warning message to display
-function sm.log.warning(message) end
+---Logs a warning message  
+---@param ... any The arguments to be displayed as a warning message.
+function sm.log.warning(...) end
 
 
 ---A <strong>vector</strong> is used to represent position and direction in 3D space, using X, Y and Z coordinates.  
@@ -6478,6 +6495,12 @@ function sm.gui.createMechanicStationGui(destroyOnClose) end
 function sm.gui.createNameTagGui(destroyOnClose) end
 
 ---*Client only*  
+---Create a quest tracker GUI.  
+---@param destroyOnClose? boolean If true the gui is destroyed when closed, otherwise the gui can be reused.
+---@return GuiInterface
+function sm.gui.createQuestTrackerGui(destroyOnClose) end
+
+---*Client only*  
 ---Create a seat GUI.  
 ---@param destroyOnClose? boolean If true the gui is destroyed when closed, otherwise the gui can be reused.
 ---@return GuiInterface
@@ -8032,7 +8055,7 @@ WorldClass.enableAssets = {}
 ---@type boolean
 WorldClass.enableClutter = {}
 
----Enables or disables creations for this world. (Defaults to false)  
+---Enables or disables creations for this world. (Defaults to true)  
 ---@type boolean
 WorldClass.enableCreations = {}
 
@@ -8044,7 +8067,7 @@ WorldClass.enableHarvestables = {}
 ---@type boolean
 WorldClass.enableKinematics = {}
 
----Enables or disables nodes for this world. (Defaults to false)  
+---Enables or disables nodes for this world. (Defaults to true)  
 ---@type boolean
 WorldClass.enableNodes = {}
 

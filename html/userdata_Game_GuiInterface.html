@@ -206,6 +206,8 @@
    <li><a href="#setWorldPosition" class="code">setWorldPosition</a></li>
    <li><a href="#stopEffect" class="code">stopEffect</a></li>
    <li><a href="#stopGridEffect" class="code">stopGridEffect</a></li>
+   <li><a href="#trackQuest" class="code">trackQuest</a></li>
+   <li><a href="#untrackQuest" class="code">untrackQuest</a></li>
   </ul>
   <h4>Operations:</h4>
   <table>
@@ -300,7 +302,7 @@
    <tr><td class="code">table</td><td class="code">index</td><td>Grid data table { type=string, layout=string, itemWidth=integer, itemHeight=integer, itemCount=integer }</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="createHorizontalSlider"></a>createHorizontalSlider(gui, widgetName, range, value)</h2>
+  <h2 class="code"><a id="createHorizontalSlider"></a>createHorizontalSlider(gui, widgetName, range, value, functionName, numbered=false)</h2>
   <p>Client only</p>
   <p>Creates a slider at the specified widget</p>
   <h4>Parameters:</h4>
@@ -310,9 +312,11 @@
    <tr><td class="code">string</td><td class="code">widgetName</td><td>The name of the widget</td></tr>
    <tr><td class="code">number</td><td class="code">range</td><td>The range of the slider</td></tr>
    <tr><td class="code">number</td><td class="code">value</td><td>The start value on the slider</td></tr>
+   <tr><td class="code">string</td><td class="code">functionName</td><td>Slider change callback function name</td></tr>
+   <tr><td class="code">boolean</td><td class="code">numbered=false</td><td>Enable numbered steps (Defaults to false)</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="createVerticalSlider"></a>createVerticalSlider(gui, widgetName, range, value)</h2>
+  <h2 class="code"><a id="createVerticalSlider"></a>createVerticalSlider(gui, widgetName, range, value, functionName)</h2>
   <p>Client only</p>
   <p>Creates a slider at the specified widget</p>
   <h4>Parameters:</h4>
@@ -322,6 +326,7 @@
    <tr><td class="code">string</td><td class="code">widgetName</td><td>The name of the widget</td></tr>
    <tr><td class="code">number</td><td class="code">range</td><td>The range of the slider</td></tr>
    <tr><td class="code">number</td><td class="code">value</td><td>The start value on the slider</td></tr>
+   <tr><td class="code">string</td><td class="code">functionName</td><td>Slider change callback function name</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="destroy"></a>destroy(gui)</h2>
@@ -781,6 +786,30 @@
    <tr><td class="code">string</td><td class="code">gridName</td><td>The name of the grid</td></tr>
    <tr><td class="code">integer</td><td class="code">index</td><td>The index in the grid</td></tr>
    <tr><td class="code">string</td><td class="code">effectName</td><td>The name of the effect</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="trackQuest"></a>trackQuest(gui, name, title, mainQuest, questTasks)</h2>
+  <p>Client only</p>
+  <p>Adds a quest to the quest tracker</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The QuestGui interface</td></tr>
+   <tr><td class="code">string</td><td class="code">name</td><td>The name of quest</td></tr>
+   <tr><td class="code">string</td><td class="code">title</td><td>The quest title to be displayed in the tracker</td></tr>
+   <tr><td class="code">boolean</td><td class="code">mainQuest</td><td>If the quest is a main quest (Displayed on top in the tracker)</td></tr>
+   <tr><td class="code">table</td><td class="code">questTasks</td><td>The table of quest tasks to display in the log Task{ name = string, text = string, count = number, target = number, complete = boolean }</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="untrackQuest"></a>untrackQuest(gui, questName)</h2>
+  <p>Client only</p>
+  <p>Removes a quest from the quest tracker</p>
+  <p>/</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The QuestGui interface</td></tr>
+   <tr><td class="code">string</td><td class="code">questName</td><td>The name of quest</td></tr>
   </table>
  </div>
 </body>

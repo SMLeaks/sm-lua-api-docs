@@ -240,6 +240,16 @@
 						"number",
 						"value",
 						"The start value on the slider"
+					],
+					[
+						"string",
+						"functionName",
+						"Slider change callback function name"
+					],
+					[
+						"boolean",
+						"numbered=false",
+						"Enable numbered steps (Defaults to false)"
 					]
 				],
 				"client_only": true
@@ -271,6 +281,11 @@
 						"number",
 						"value",
 						"The start value on the slider"
+					],
+					[
+						"string",
+						"functionName",
+						"Slider change callback function name"
 					]
 				],
 				"client_only": true
@@ -1349,6 +1364,64 @@
 						"string",
 						"effectName",
 						"The name of the effect"
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "trackQuest",
+			"doc": {
+				"text": [
+					"Adds a quest to the quest tracker"
+				],
+				"params": [
+					[
+						"[GuiInterface]",
+						"gui",
+						"The QuestGui interface"
+					],
+					[
+						"string",
+						"name",
+						"The name of quest"
+					],
+					[
+						"string",
+						"title",
+						"The quest title to be displayed in the tracker"
+					],
+					[
+						"boolean",
+						"mainQuest",
+						"If the quest is a main quest (Displayed on top in the tracker)"
+					],
+					[
+						"table",
+						"questTasks",
+						"The table of quest tasks to display in the log Task{ name = string, text = string, count = number, target = number, complete = boolean }"
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "untrackQuest",
+			"doc": {
+				"text": [
+					"Removes a quest from the quest tracker",
+					"/"
+				],
+				"params": [
+					[
+						"[GuiInterface]",
+						"gui",
+						"The QuestGui interface"
+					],
+					[
+						"string",
+						"questName",
+						"The name of quest"
 					]
 				],
 				"client_only": true

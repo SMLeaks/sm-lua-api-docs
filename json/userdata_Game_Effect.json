@@ -520,7 +520,7 @@
 			"name": "stop",
 			"doc": {
 				"text": [
-					"Stops playing an effect, allowing sound effects to finish."
+					"Stops playing an effect"
 				],
 				"params": [
 					[
@@ -533,10 +533,10 @@
 			}
 		},
 		{
-			"name": "stopFaded",
+			"name": "stopBreakSustain",
 			"doc": {
 				"text": [
-					"Stops playing an effect, allow fading out sound effects."
+					"Stops playing an effect, letting sound finish before destroying the effect."
 				],
 				"params": [
 					[

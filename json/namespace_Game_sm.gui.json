@@ -461,6 +461,28 @@
 			}
 		},
 		{
+			"name": "createQuestTrackerGui",
+			"doc": {
+				"text": [
+					"Create a quest tracker GUI."
+				],
+				"params": [
+					[
+						"boolean",
+						"destroyOnClose=false",
+						"If true the gui is destroyed when closed, otherwise the gui can be reused."
+					]
+				],
+				"return": [
+					[
+						"[GuiInterface]",
+						"The gui interface to the created gui."
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
 			"name": "createSeatGui",
 			"doc": {
 				"text": [

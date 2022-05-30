@@ -118,7 +118,7 @@
 			"name": "enableCreations",
 			"doc": {
 				"text": [
-					"Enables or disables creations for this world. (Defaults to false)"
+					"Enables or disables creations for this world. (Defaults to true)"
 				],
 				"return": [
 					[
@@ -160,7 +160,7 @@
 			"name": "enableNodes",
 			"doc": {
 				"text": [
-					"Enables or disables nodes for this world. (Defaults to false)"
+					"Enables or disables nodes for this world. (Defaults to true)"
 				],
 				"return": [
 					[
