@@ -16,8 +16,8 @@
 				"params": [
 					[
 						"[Uuid]",
-						"The",
-						"shape uuid."
+						"uuid",
+						"The shape uuid."
 					]
 				],
 				"return": [
@@ -37,8 +37,8 @@
 				"params": [
 					[
 						"[Uuid]",
-						"The",
-						"shape uuid."
+						"uuid",
+						"The shape uuid."
 					]
 				],
 				"return": [
@@ -58,8 +58,8 @@
 				"params": [
 					[
 						"[Uuid]",
-						"The",
-						"item uuid."
+						"uuid",
+						"The item uuid."
 					]
 				],
 				"return": [
@@ -75,6 +75,13 @@
 			"doc": {
 				"text": [
 					"Returns a table of all [Interactable, interactable] [Uuid, uuids] of a interactable type"
+				],
+				"params": [
+					[
+						"string",
+						"interactableType",
+						"The interactable type name"
+					]
 				],
 				"return": [
 					[
@@ -93,8 +100,8 @@
 				"params": [
 					[
 						"[Uuid]",
-						"The",
-						"shape uuid."
+						"uuid",
+						"The shape uuid."
 					]
 				],
 				"return": [
@@ -128,8 +135,8 @@
 				"params": [
 					[
 						"[Uuid]",
-						"The",
-						"shape uuid."
+						"uuid",
+						"The shape uuid."
 					]
 				],
 				"return": [
@@ -146,10 +153,17 @@
 				"text": [
 					"Returns the default color of a shape"
 				],
+				"params": [
+					[
+						"[Uuid]",
+						"uuid",
+						"The item uuid."
+					]
+				],
 				"return": [
 					[
 						"[Color]",
-						"color of the shape."
+						"Color of the shape."
 					]
 				]
 			}
@@ -163,8 +177,8 @@
 				"params": [
 					[
 						"[Uuid]",
-						"The",
-						"shape uuid."
+						"uuid",
+						"The shape uuid."
 					]
 				],
 				"return": [
@@ -181,10 +195,17 @@
 				"text": [
 					"Returns the block dimensions of an shape"
 				],
+				"params": [
+					[
+						"[Uuid]",
+						"uuid",
+						"The item uuid."
+					]
+				],
 				"return": [
 					[
 						"[Vec3]",
-						"size of the shape."
+						"Size of the shape."
 					]
 				]
 			}
@@ -198,8 +219,8 @@
 				"params": [
 					[
 						"[Uuid]",
-						"The",
-						"item uuid."
+						"uuid",
+						"The item uuid."
 					]
 				],
 				"return": [
@@ -219,8 +240,8 @@
 				"params": [
 					[
 						"[Uuid]",
-						"The",
-						"shape uuid."
+						"uuid",
+						"The shape uuid."
 					]
 				],
 				"return": [
@@ -240,8 +261,8 @@
 				"params": [
 					[
 						"[Uuid]",
-						"The",
-						"item uuid."
+						"uuid",
+						"The item uuid."
 					]
 				],
 				"return": [
@@ -261,8 +282,8 @@
 				"params": [
 					[
 						"[Uuid]",
-						"The",
-						"item uuid."
+						"uuid",
+						"The item uuid."
 					]
 				],
 				"return": [
@@ -282,8 +303,8 @@
 				"params": [
 					[
 						"[Uuid]",
-						"The",
-						"uuid."
+						"uuid",
+						"The uuid."
 					]
 				],
 				"return": [

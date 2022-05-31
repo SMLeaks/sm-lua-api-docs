@@ -151,12 +151,12 @@
   <h1 class="code">sm.item</h1>
   <p>Allows checking for static infortmation about items.</p>
   <h4>Functions:</h4  <ul>   <li><a href="#getCharacterShape" class="code">getCharacterShape</a></li>   <li><a href="#getEdible" class="code">getEdible</a></li>   <li><a href="#getFeatureData" class="code">getFeatureData</a></li>   <li><a href="#getInteractablesUuidsOfType" class="code">getInteractablesUuidsOfType</a></li>   <li><a href="#getPlantable" class="code">getPlantable</a></li>   <li><a href="#getPlantableUuids" class="code">getPlantableUuids</a></li>   <li><a href="#getQualityLevel" class="code">getQualityLevel</a></li>   <li><a href="#getShapeDefaultColor" class="code">getShapeDefaultColor</a></li>   <li><a href="#getShapeOffset" class="code">getShapeOffset</a></li>   <li><a href="#getShapeSize" class="code">getShapeSize</a></li>   <li><a href="#isBlock" class="code">isBlock</a></li>   <li><a href="#isHarvestablePart" class="code">isHarvestablePart</a></li>   <li><a href="#isJoint" class="code">isJoint</a></li>   <li><a href="#isPart" class="code">isPart</a></li>   <li><a href="#isTool" class="code">isTool</a></li>  </ul>  <hr>
-  <h2 class="code"><a id="getCharacterShape"></a>sm.item.getCharacterShape(The)</h2>
+  <h2 class="code"><a id="getCharacterShape"></a>sm.item.getCharacterShape(uuid)</h2>
   <p>Return the data for the character <a href="userdata_Game_Shape.html" class="code">Shape</a>.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">The</td><td>shape uuid.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">uuid</td><td>The shape uuid.</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -164,12 +164,12 @@
    <tr><td class="code">table</td><td>The character shape data.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="getEdible"></a>sm.item.getEdible(The)</h2>
+  <h2 class="code"><a id="getEdible"></a>sm.item.getEdible(uuid)</h2>
   <p>Return the data for the edible <a href="userdata_Game_Shape.html" class="code">Shape</a>.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">The</td><td>shape uuid.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">uuid</td><td>The shape uuid.</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -177,12 +177,12 @@
    <tr><td class="code">table</td><td>The edible data.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="getFeatureData"></a>sm.item.getFeatureData(The)</h2>
+  <h2 class="code"><a id="getFeatureData"></a>sm.item.getFeatureData(uuid)</h2>
   <p>Returns the shapes feature data.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">The</td><td>item uuid.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">uuid</td><td>The item uuid.</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -190,20 +190,25 @@
    <tr><td class="code">table</td><td>The feature data table</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="getInteractablesUuidsOfType"></a>sm.item.getInteractablesUuidsOfType()</h2>
+  <h2 class="code"><a id="getInteractablesUuidsOfType"></a>sm.item.getInteractablesUuidsOfType(interactableType)</h2>
   <p>Returns a table of all <a href="userdata_Game_Interactable.html" class="code">interactable</a> <a href="userdata_Game_Uuid.html" class="code">uuids</a> of a interactable type</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">string</td><td class="code">interactableType</td><td>The interactable type name</td></tr>
+  </table>
   <h4>Returns:</h4>
   <table>
    <tr><th>Type</th><th>Description</th></tr>
    <tr><td class="code">table</td><td>table of interactable <a href="userdata_Game_Uuid.html" class="code">uuids</a> {<a href="userdata_Game_Uuid.html" class="code">Uuid</a>, ..}</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="getPlantable"></a>sm.item.getPlantable(The)</h2>
+  <h2 class="code"><a id="getPlantable"></a>sm.item.getPlantable(uuid)</h2>
   <p>Return the data for the plantable <a href="userdata_Game_Shape.html" class="code">Shape</a>.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">The</td><td>shape uuid.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">uuid</td><td>The shape uuid.</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -219,12 +224,12 @@
    <tr><td class="code">table</td><td>table of all plantable <a href="userdata_Game_Uuid.html" class="code">uuids</a> {<a href="userdata_Game_Uuid.html" class="code">Uuid</a>, ..}.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="getQualityLevel"></a>sm.item.getQualityLevel(The)</h2>
+  <h2 class="code"><a id="getQualityLevel"></a>sm.item.getQualityLevel(uuid)</h2>
   <p>Return the quality level for the <a href="userdata_Game_Shape.html" class="code">Shape</a>.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">The</td><td>shape uuid.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">uuid</td><td>The shape uuid.</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -232,20 +237,25 @@
    <tr><td class="code">integer</td><td>The quality level.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="getShapeDefaultColor"></a>sm.item.getShapeDefaultColor()</h2>
+  <h2 class="code"><a id="getShapeDefaultColor"></a>sm.item.getShapeDefaultColor(uuid)</h2>
   <p>Returns the default color of a shape</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">uuid</td><td>The item uuid.</td></tr>
+  </table>
   <h4>Returns:</h4>
   <table>
    <tr><th>Type</th><th>Description</th></tr>
-   <tr><td class="code"><a href="userdata_Game_Color.html" class="code">Color</a></td><td>color of the shape.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Color.html" class="code">Color</a></td><td>Color of the shape.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="getShapeOffset"></a>sm.item.getShapeOffset(The)</h2>
+  <h2 class="code"><a id="getShapeOffset"></a>sm.item.getShapeOffset(uuid)</h2>
   <p>Return the <a href="userdata_Game_Shape.html" class="code">Shape</a> offset</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">The</td><td>shape uuid.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">uuid</td><td>The shape uuid.</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -253,20 +263,25 @@
    <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The offset vector.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="getShapeSize"></a>sm.item.getShapeSize()</h2>
+  <h2 class="code"><a id="getShapeSize"></a>sm.item.getShapeSize(uuid)</h2>
   <p>Returns the block dimensions of an shape</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">uuid</td><td>The item uuid.</td></tr>
+  </table>
   <h4>Returns:</h4>
   <table>
    <tr><th>Type</th><th>Description</th></tr>
-   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>size of the shape.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>Size of the shape.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="isBlock"></a>sm.item.isBlock(The)</h2>
+  <h2 class="code"><a id="isBlock"></a>sm.item.isBlock(uuid)</h2>
   <p>Check if the item is a block.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">The</td><td>item uuid.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">uuid</td><td>The item uuid.</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -274,12 +289,12 @@
    <tr><td class="code">boolean</td><td>True if the item is a block.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="isHarvestablePart"></a>sm.item.isHarvestablePart(The)</h2>
+  <h2 class="code"><a id="isHarvestablePart"></a>sm.item.isHarvestablePart(uuid)</h2>
   <p>Return whether the <a href="userdata_Game_Shape.html" class="code">Shape</a> uuid belongs to a harvestable shape.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">The</td><td>shape uuid.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">uuid</td><td>The shape uuid.</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -287,12 +302,12 @@
    <tr><td class="code">boolean</td><td>True if shape is a harvestable shape.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="isJoint"></a>sm.item.isJoint(The)</h2>
+  <h2 class="code"><a id="isJoint"></a>sm.item.isJoint(uuid)</h2>
   <p>Check if the item is a <a href="userdata_Game_Joint.html" class="code">Joint</a>.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">The</td><td>item uuid.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">uuid</td><td>The item uuid.</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -300,12 +315,12 @@
    <tr><td class="code">boolean</td><td>True if the item is a joint.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="isPart"></a>sm.item.isPart(The)</h2>
+  <h2 class="code"><a id="isPart"></a>sm.item.isPart(uuid)</h2>
   <p>Check if the item is a part.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">The</td><td>item uuid.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">uuid</td><td>The item uuid.</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -313,12 +328,12 @@
    <tr><td class="code">boolean</td><td>True if the item is a part.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="isTool"></a>sm.item.isTool(The)</h2>
+  <h2 class="code"><a id="isTool"></a>sm.item.isTool(uuid)</h2>
   <p>Check if the item uuid belongs to a <a href="userdata_Game_Tool.html" class="code">Tool</a>.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">The</td><td>uuid.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">uuid</td><td>The uuid.</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>

@@ -5500,75 +5500,78 @@ function sm.event.sendToWorld(world, callback, args) end
 sm.item = {}
 
 ---Return the data for the character [Shape].  
----@param The Uuid shape uuid.
+---@param uuid Uuid The shape uuid.
 ---@return table
-function sm.item.getCharacterShape(The) end
+function sm.item.getCharacterShape(uuid) end
 
 ---Return the data for the edible [Shape].  
----@param The Uuid shape uuid.
+---@param uuid Uuid The shape uuid.
 ---@return table
-function sm.item.getEdible(The) end
+function sm.item.getEdible(uuid) end
 
 ---Returns the shapes feature data.  
----@param The Uuid item uuid.
+---@param uuid Uuid The item uuid.
 ---@return table
-function sm.item.getFeatureData(The) end
+function sm.item.getFeatureData(uuid) end
 
 ---Returns a table of all [Interactable, interactable] [Uuid, uuids] of a interactable type  
+---@param interactableType string The interactable type name
 ---@return table
-function sm.item.getInteractablesUuidsOfType() end
+function sm.item.getInteractablesUuidsOfType(interactableType) end
 
 ---Return the data for the plantable [Shape].  
----@param The Uuid shape uuid.
+---@param uuid Uuid The shape uuid.
 ---@return table
-function sm.item.getPlantable(The) end
+function sm.item.getPlantable(uuid) end
 
 ---Returns a table of all plantable [Uuid, uuids].  
 ---@return table
 function sm.item.getPlantableUuids() end
 
 ---Return the quality level for the [Shape].  
----@param The Uuid shape uuid.
+---@param uuid Uuid The shape uuid.
 ---@return integer
-function sm.item.getQualityLevel(The) end
+function sm.item.getQualityLevel(uuid) end
 
 ---Returns the default color of a shape  
+---@param uuid Uuid The item uuid.
 ---@return Color
-function sm.item.getShapeDefaultColor() end
+function sm.item.getShapeDefaultColor(uuid) end
 
 ---Return the [Shape] offset  
----@param The Uuid shape uuid.
+---@param uuid Uuid The shape uuid.
 ---@return Vec3
-function sm.item.getShapeOffset(The) end
+function sm.item.getShapeOffset(uuid) end
 
 ---Returns the block dimensions of an shape  
+---@param uuid Uuid The item uuid.
 ---@return Vec3
-function sm.item.getShapeSize() end
+function sm.item.getShapeSize(uuid) end
 
 ---Check if the item is a block.  
----@param The Uuid item uuid.
+---@param uuid Uuid The item uuid.
 ---@return boolean
-function sm.item.isBlock(The) end
+function sm.item.isBlock(uuid) end
 
 ---Return whether the [Shape] uuid belongs to a harvestable shape.  
----@param The Uuid shape uuid.
+---@param uuid Uuid The shape uuid.
 ---@return boolean
-function sm.item.isHarvestablePart(The) end
+function sm.item.isHarvestablePart(uuid) end
 
 ---Check if the item is a [Joint].  
----@param The Uuid item uuid.
+---@param uuid Uuid The item uuid.
 ---@return boolean
-function sm.item.isJoint(The) end
+function sm.item.isJoint(uuid) end
 
 ---Check if the item is a part.  
----@param The Uuid item uuid.
+---@param uuid Uuid The item uuid.
 ---@return boolean
-function sm.item.isPart(The) end
+function sm.item.isPart(uuid) end
 
 ---Check if the item uuid belongs to a [Tool].  
----@param The Uuid uuid.
+---@param uuid Uuid The uuid.
 ---@return boolean
-function sm.item.isTool(The) end
+function sm.item.isTool(uuid) end
 
 
 ---The <strong>Challenge</strong> api contains functions related to the Challenge game mode.  
