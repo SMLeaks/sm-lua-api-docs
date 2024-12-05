@@ -289,6 +289,28 @@
 			}
 		},
 		{
+			"name": "getSmoothDirection",
+			"doc": {
+				"text": [
+					"Returns the smooth direction of where the player is viewing or aiming."
+				],
+				"params": [
+					[
+						"[Tool]",
+						"tool",
+						"The tool."
+					]
+				],
+				"return": [
+					[
+						"[Vec3]",
+						"The player's smooth view direction."
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
 			"name": "getTpBoneDir",
 			"doc": {
 				"text": [

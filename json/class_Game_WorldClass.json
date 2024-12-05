@@ -215,6 +215,21 @@
 			}
 		},
 		{
+			"name": "isStatic",
+			"doc": {
+				"text": [
+					"Enables or disables static mode. (Defaults to false)",
+					"Static worlds are created at load time and doesn't stream in and out."
+				],
+				"return": [
+					[
+						"boolean",
+						""
+					]
+				]
+			}
+		},
+		{
 			"name": "renderMode",
 			"doc": {
 				"text": [

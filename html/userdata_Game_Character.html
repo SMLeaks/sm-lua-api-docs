@@ -160,6 +160,7 @@
    <li><a href="#mass" class="code">mass</a></li>
    <li><a href="#movementSpeedFraction" class="code">movementSpeedFraction</a></li>
    <li><a href="#publicData" class="code">publicData</a></li>
+   <li><a href="#smoothDirection" class="code">smoothDirection</a></li>
    <li><a href="#velocity" class="code">velocity</a></li>
    <li><a href="#worldPosition" class="code">worldPosition</a></li>
   </ul>  <h4>Functions:</h4>
@@ -185,6 +186,7 @@
    <li><a href="#getPlayer" class="code">getPlayer</a></li>
    <li><a href="#getPublicData" class="code">getPublicData</a></li>
    <li><a href="#getRadius" class="code">getRadius</a></li>
+   <li><a href="#getSmoothViewDirection" class="code">getSmoothViewDirection</a></li>
    <li><a href="#getSurfaceNormal" class="code">getSurfaceNormal</a></li>
    <li><a href="#getTpBonePos" class="code">getTpBonePos</a></li>
    <li><a href="#getTpBoneRot" class="code">getTpBoneRot</a></li>
@@ -274,6 +276,10 @@
   <h4>Set:</h4>
   <p>Server only</p>
   <p>Sets (server) public data on a character.</p>
+  <hr>
+  <h2 class="code"><a id="smoothDirection"></a>smoothDirection <i><a href="userdata_Game_Vec3.html" class="code">Vec3</a></i></h2>
+  <h4>Get:</h4>
+  <p>Returns the smooth direction of where a character is viewing or aiming.</p>
   <hr>
   <h2 class="code"><a id="velocity"></a>velocity <i><a href="userdata_Game_Vec3.html" class="code">Vec3</a></i></h2>
   <h4>Get:</h4>
@@ -549,6 +555,19 @@
   <table>
    <tr><th>Type</th><th>Description</th></tr>
    <tr><td class="code">number</td><td>The character's radius.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getSmoothViewDirection"></a>getSmoothViewDirection(character)</h2>
+  <p>Returns the smooth direction of where a character is viewing or aiming.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The character.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The character's smooth view direction.</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="getSurfaceNormal"></a>getSurfaceNormal(character)</h2>

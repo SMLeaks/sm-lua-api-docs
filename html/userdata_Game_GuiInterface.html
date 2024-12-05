@@ -157,6 +157,7 @@
    <li><a href="#addGridItem" class="code">addGridItem</a></li>
    <li><a href="#addGridItemsFromFile" class="code">addGridItemsFromFile</a></li>
    <li><a href="#addListItem" class="code">addListItem</a></li>
+   <li><a href="#addToPickupDisplay" class="code">addToPickupDisplay</a></li>
    <li><a href="#clearGrid" class="code">clearGrid</a></li>
    <li><a href="#clearList" class="code">clearList</a></li>
    <li><a href="#close" class="code">close</a></li>
@@ -250,6 +251,17 @@
    <tr><td class="code">table</td><td class="code">data</td><td>Table of data to store</td></tr>
   </table>
   <hr>
+  <h2 class="code"><a id="addToPickupDisplay"></a>addToPickupDisplay(gui, uuid, amount)</h2>
+  <p>Client only</p>
+  <p>Adds an item to the item pickup display</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The players survival hud interface</td></tr>
+   <tr><td class="code">[uuid]</td><td class="code">uuid</td><td>The item uuid</td></tr>
+   <tr><td class="code">number</td><td class="code">amount</td><td>Quantity of items picked up</td></tr>
+  </table>
+  <hr>
   <h2 class="code"><a id="clearGrid"></a>clearGrid(gui, gridName)</h2>
   <p>Client only</p>
   <p>Clears a grid</p>
@@ -302,7 +314,7 @@
    <tr><td class="code">table</td><td class="code">index</td><td>Grid data table { type=string, layout=string, itemWidth=integer, itemHeight=integer, itemCount=integer }</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="createHorizontalSlider"></a>createHorizontalSlider(gui, widgetName, range, value, functionName, numbered=false)</h2>
+  <h2 class="code"><a id="createHorizontalSlider"></a>createHorizontalSlider(gui, widgetName, range, value, functionName, numbered=false, inverted=false)</h2>
   <p>Client only</p>
   <p>Creates a slider at the specified widget</p>
   <h4>Parameters:</h4>
@@ -314,6 +326,7 @@
    <tr><td class="code">number</td><td class="code">value</td><td>The start value on the slider</td></tr>
    <tr><td class="code">string</td><td class="code">functionName</td><td>Slider change callback function name</td></tr>
    <tr><td class="code">boolean</td><td class="code">numbered=false</td><td>Enable numbered steps (Defaults to false)</td></tr>
+   <tr><td class="code">boolean</td><td class="code">inverted=false</td><td>Invert slider direction</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="createVerticalSlider"></a>createVerticalSlider(gui, widgetName, range, value, functionName)</h2>
@@ -370,7 +383,7 @@
    <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td class="code">gui</td><td>The Gui interface</td></tr>
    <tr><td class="code">string</td><td class="code">widgetName</td><td>The name of the widget</td></tr>
    <tr><td class="code">string</td><td class="code">effectName</td><td>The name of the effect</td></tr>
-   <tr><td class="code">boolean</td><td class="code">restart=true</td><td>If the effect should restart if its already palying</td></tr>
+   <tr><td class="code">boolean</td><td class="code">restart=true</td><td>If the effect should restart if its already playing</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="playGridEffect"></a>playGridEffect(gui, gridName, index, effectName, restart=true)</h2>

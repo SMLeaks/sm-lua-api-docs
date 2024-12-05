@@ -261,13 +261,13 @@
 				"params": [
 					[
 						"[Effect]",
-						"The",
-						"effect."
+						"effect",
+						"The effect."
 					],
 					[
 						"boolean",
-						"Autoplay",
-						"enabled."
+						"autoplay",
+						"Autoplay enabled."
 					]
 				],
 				"client_only": true
@@ -414,6 +414,32 @@
 						"[Vec3]",
 						"scale",
 						"The scale."
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "setStartStopDistance",
+			"doc": {
+				"text": [
+					"Sets an effect to stop and restart depending on distance to the player."
+				],
+				"params": [
+					[
+						"[Effect]",
+						"effect",
+						"The effect."
+					],
+					[
+						"number",
+						"startDistance",
+						"The distance when effect will start"
+					],
+					[
+						"number",
+						"stopDistance",
+						"The distance when effect will stop"
 					]
 				],
 				"client_only": true

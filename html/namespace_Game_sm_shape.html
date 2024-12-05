@@ -152,7 +152,7 @@
   <h3>Associated object type: <a href="userdata_Game_Shape.html" class="code">Shape</a></h3>
   <p>A <strong>shape</strong> is any block, part or basic material that can be built by a player. Shapes are always connected to a <a href="namespace_Game_sm_body.html" class="code">body</a>, which is a collection of shapes.</p>
   <p>For more information about creating your own scripted shapes, see <a href="class_Game_ShapeClass.html" class="code">ShapeClass</a>.</p>
-  <h4>Functions:</h4  <ul>   <li><a href="#createBlock" class="code">createBlock</a></li>   <li><a href="#createPart" class="code">createPart</a></li>   <li><a href="#getShapeDescription" class="code">getShapeDescription</a></li>   <li><a href="#getShapeIcon" class="code">getShapeIcon</a></li>   <li><a href="#getShapeTitle" class="code">getShapeTitle</a></li>   <li><a href="#getShapeTypeColor" class="code">getShapeTypeColor</a></li>   <li><a href="#uuidExists" class="code">uuidExists</a></li>  </ul>  <hr>
+  <h4>Functions:</h4  <ul>   <li><a href="#createBlock" class="code">createBlock</a></li>   <li><a href="#createPart" class="code">createPart</a></li>   <li><a href="#createWedge" class="code">createWedge</a></li>   <li><a href="#getShapeDescription" class="code">getShapeDescription</a></li>   <li><a href="#getShapeIcon" class="code">getShapeIcon</a></li>   <li><a href="#getShapeTitle" class="code">getShapeTitle</a></li>   <li><a href="#getShapeTypeColor" class="code">getShapeTypeColor</a></li>   <li><a href="#uuidExists" class="code">uuidExists</a></li>  </ul>  <hr>
   <h2 class="code"><a id="createBlock"></a>sm.shape.createBlock(uuid, size, position, rotation=nil, dynamic=true, forceSpawn=true)</h2>
   <p>Server only</p>
   <p>Create a new block</p>
@@ -188,6 +188,26 @@
   <table>
    <tr><th>Type</th><th>Description</th></tr>
    <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a>							The created part</td><td></td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="createWedge"></a>sm.shape.createWedge(uuid, size, position, rotation=nil, dynamic=true, forceSpawn=true)</h2>
+  <p>Server only</p>
+  <p>Creates a wedge. The wedge is oriented with one </p>
+  <p>cathetus along the Y-axis and the other along the Z-axis, forming a right angle. </p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">uuid</td><td>The uuid of the shape.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">size</td><td>The size of the wedge.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The shape's world position.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td class="code">rotation=nil</td><td>The shape's world rotation. Defaults to no rotation (Optional)</td></tr>
+   <tr><td class="code">boolean</td><td class="code">dynamic=true</td><td>Set true if the shape is dynamic or false if the shape is static. Defaults to true (Optional)</td></tr>
+   <tr><td class="code">boolean</td><td class="code">forceSpawn=true</td><td>Set true to force spawn the shape even if it will cause collision. Defaults to true (Optional)</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a>							The created wedge</td><td></td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="getShapeDescription"></a>sm.shape.getShapeDescription(uuid)</h2>

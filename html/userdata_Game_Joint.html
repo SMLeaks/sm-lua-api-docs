@@ -194,6 +194,7 @@
    <li><a href="#getYAxis" class="code">getYAxis</a></li>
    <li><a href="#getZAxis" class="code">getZAxis</a></li>
    <li><a href="#isReversed" class="code">isReversed</a></li>
+   <li><a href="#setColor" class="code">setColor</a></li>
    <li><a href="#setMotorVelocity" class="code">setMotorVelocity</a></li>
    <li><a href="#setTargetAngle" class="code">setTargetAngle</a></li>
    <li><a href="#setTargetLength" class="code">setTargetLength</a></li>
@@ -221,6 +222,9 @@
   <h2 class="code"><a id="color"></a>color <i><a href="userdata_Game_Color.html" class="code">Color</a></i></h2>
   <h4>Get:</h4>
   <p>Returns the color of a joint.</p>
+  <h4>Set:</h4>
+  <p>Server only</p>
+  <p>Sets the color of a joint.</p>
   <hr>
   <h2 class="code"><a id="id"></a>id <i>integer</i></h2>
   <h4>Get:</h4>
@@ -562,6 +566,16 @@
   <table>
    <tr><th>Type</th><th>Description</th></tr>
    <tr><td class="code">boolean</td><td>Whether the bearing is reversed (rotating counterclockwise).</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setColor"></a>setColor(joint, color)</h2>
+  <p>Server only</p>
+  <p>Sets the color of a joint.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Joint.html" class="code">Joint</a></td><td class="code">joint</td><td>The joint.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Color.html" class="code">Color</a></td><td class="code">color</td><td>The new color.</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="setMotorVelocity"></a>setMotorVelocity(bearing, targetVelocity, maxImpulse)</h2>

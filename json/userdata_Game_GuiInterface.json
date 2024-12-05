@@ -100,6 +100,32 @@
 			}
 		},
 		{
+			"name": "addToPickupDisplay",
+			"doc": {
+				"text": [
+					"Adds an item to the item pickup display"
+				],
+				"params": [
+					[
+						"[GuiInterface]",
+						"gui",
+						"The players survival hud interface"
+					],
+					[
+						"[uuid]",
+						"uuid",
+						"The item uuid"
+					],
+					[
+						"number",
+						"amount",
+						"Quantity of items picked up"
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
 			"name": "clearGrid",
 			"doc": {
 				"text": [
@@ -250,6 +276,11 @@
 						"boolean",
 						"numbered=false",
 						"Enable numbered steps (Defaults to false)"
+					],
+					[
+						"boolean",
+						"inverted=false",
+						"Invert slider direction"
 					]
 				],
 				"client_only": true
@@ -370,7 +401,7 @@
 					[
 						"boolean",
 						"restart=true",
-						"If the effect should restart if its already palying"
+						"If the effect should restart if its already playing"
 					]
 				],
 				"client_only": true

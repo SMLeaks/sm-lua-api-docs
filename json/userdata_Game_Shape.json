@@ -307,6 +307,29 @@
 			}
 		},
 		{
+			"name": "isWedge",
+			"get": {
+				"doc": {
+					"text": [
+						"Return true if a shape is a wedge"
+					],
+					"params": [
+						[
+							"[Shape]",
+							"shape",
+							"The shape."
+						]
+					],
+					"return": [
+						[
+							"boolean",
+							"Whether shape is wedge."
+						]
+					]
+				}
+			}
+		},
+		{
 			"name": "liftable",
 			"get": {
 				"doc": {
@@ -860,6 +883,9 @@
 			"doc": {
 				"text": [
 					"Destroy a part"
+				],
+				"deprecated": [
+					"use [Shape.destroyShape]"
 				],
 				"params": [
 					[

@@ -167,6 +167,7 @@
    <li><a href="#getOwner" class="code">getOwner</a></li>
    <li><a href="#getPosition" class="code">getPosition</a></li>
    <li><a href="#getRelativeMoveDirection" class="code">getRelativeMoveDirection</a></li>
+   <li><a href="#getSmoothDirection" class="code">getSmoothDirection</a></li>
    <li><a href="#getTpBoneDir" class="code">getTpBoneDir</a></li>
    <li><a href="#getTpBonePos" class="code">getTpBonePos</a></li>
    <li><a href="#isCrouching" class="code">isCrouching</a></li>
@@ -347,6 +348,20 @@
   <table>
    <tr><th>Type</th><th>Description</th></tr>
    <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The player's relative movement direction.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getSmoothDirection"></a>getSmoothDirection(tool)</h2>
+  <p>Client only</p>
+  <p>Returns the smooth direction of where the player is viewing or aiming.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Tool.html" class="code">Tool</a></td><td class="code">tool</td><td>The tool.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The player's smooth view direction.</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="getTpBoneDir"></a>getTpBoneDir(tool, jointName)</h2>

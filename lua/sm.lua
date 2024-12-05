@@ -322,6 +322,11 @@ Shape.interactable = {}
 Shape.isBlock = {}
 
 ---**Get**:
+---Return true if a shape is a wedge  
+---@type boolean
+Shape.isWedge = {}
+
+---**Get**:
 ---Check if a shape is liftable  
 ---@type boolean
 Shape.liftable = {}
@@ -440,6 +445,7 @@ function Shape:createJoint(uuid, position, direction) end
 function Shape:destroyBlock(position, size, attackLevel) end
 
 ---*Server only*  
+---@deprecated use [Shape.destroyShape]
 ---Destroy a part  
 ---@param attackLevel integer Determines which quality level of parts the attack can destroy. Setting it to 0 (default) will destroy any part.
 function Shape:destroyPart(attackLevel) end
@@ -762,6 +768,18 @@ function Body:createBlock(uuid, size, position, forceAccept) end
 ---@param x-axis Vec3 The shape's local x direction.
 ---@param forceAccept? boolean Set true to force the body to accept the shape. (Defaults to true)
 function Body:createPart(uuid, position, z-axis, x-axis, forceAccept) end
+
+---*Server only*  
+---Creates a wedge attached to a body. The wedge is oriented with one   
+---cathetus along the Y-axis and the other along the Z-axis, forming a right angle. The wedge's   
+---rotation is controlled by z-axis and x-axis parameters, similar to standard part rotation.  
+---@param uuid Uuid The uuid of the shape.
+---@param size Vec3 The shape's size.
+---@param position Vec3 The shape's local position.
+---@param z-axis Vec3 The shape's local z direction.
+---@param x-axis Vec3 The shape's local x direction.
+---@param forceAccept? boolean Set true to force the body to accept the shape. (Defaults to true)
+function Body:createWedge(uuid, size, position, z-axis, x-axis, forceAccept) end
 
 ---*Server only*  
 ---Returns a table with all characters seated in this body  
@@ -1340,6 +1358,9 @@ Joint.appliedImpulse = {}
 
 ---**Get**:
 ---Returns the color of a joint.  
+---**Set**:
+---*Server only*  
+---Sets the color of a joint.  
 ---@type Color
 Joint.color = {}
 
@@ -1507,6 +1528,11 @@ function Joint:getZAxis() end
 ---Returns whether a bearing has been reversed using the <em>Connect Tool</em>. A reversed bearing rotates counterclockwise.  
 ---@return boolean
 function Joint:isReversed() end
+
+---*Server only*  
+---Sets the color of a joint.  
+---@param color Color The new color.
+function Joint:setColor(color) end
 
 ---Sets the motor velocity for a bearing. The bearing will try to maintain the target velocity with the given amount of impulse/strength.  
 ---In Scrap Mechanic, the Gas Engine increases both velocity and impulse with every gear. The Electric Engine increases velocity, but maintains the same impulse for every gear, making it sturdier.  
@@ -1760,6 +1786,11 @@ Character.movementSpeedFraction = {}
 Character.publicData = {}
 
 ---**Get**:
+---Returns the smooth direction of where a character is viewing or aiming.  
+---@type Vec3
+Character.smoothDirection = {}
+
+---**Get**:
 ---Returns the velocity of a character.  
 ---@type Vec3
 Character.velocity = {}
@@ -1859,6 +1890,10 @@ function Character:getPublicData() end
 ---Returns the radius of a character  
 ---@return number
 function Character:getRadius() end
+
+---Returns the smooth direction of where a character is viewing or aiming.  
+---@return Vec3
+function Character:getSmoothViewDirection() end
 
 ---Returns the normal of the character's contact with a surface. Defaults to a zero vector when no contact is found.  
 ---@return Vec3
@@ -2873,8 +2908,8 @@ function Effect:isPlaying() end
 
 ---*Client only*  
 ---Sets an effect to start playing and repeating automatically.  
----@param Autoplay boolean enabled.
-function Effect:setAutoPlay(Autoplay) end
+---@param autoplay boolean Autoplay enabled.
+function Effect:setAutoPlay(autoplay) end
 
 ---*Client only*  
 ---Offsets the position of the effect relatively to the host interactable.  
@@ -2916,6 +2951,12 @@ function Effect:setRotation(rotation) end
 ---*Only applies to effect renderables.*
 ---@param scale Vec3 The scale.
 function Effect:setScale(scale) end
+
+---*Client only*  
+---Sets an effect to stop and restart depending on distance to the player.  
+---@param startDistance number The distance when effect will start
+---@param stopDistance number The distance when effect will stop
+function Effect:setStartStopDistance(startDistance, stopDistance) end
 
 ---*Client only*  
 ---Sets an effect to be active during specific period of the day / night cycle.  
@@ -3240,6 +3281,11 @@ function Tool:getPosition() end
 function Tool:getRelativeMoveDirection() end
 
 ---*Client only*  
+---Returns the smooth direction of where the player is viewing or aiming.  
+---@return Vec3
+function Tool:getSmoothDirection() end
+
+---*Client only*  
 ---Returns the world direction for a bone in the third person view animation skeleton.  
 ---@param jointName string The joint name.
 ---@return Vec3
@@ -3520,6 +3566,12 @@ function GuiInterface:addGridItemsFromFile(gridName, jsonPath, additionalData) e
 function GuiInterface:addListItem(listName, itemName, data) end
 
 ---*Client only*  
+---Adds an item to the item pickup display  
+---@param uuid uuid The item uuid
+---@param amount number Quantity of items picked up
+function GuiInterface:addToPickupDisplay(uuid, amount) end
+
+---*Client only*  
 ---Clears a grid  
 ---@param gridName string The name of the grid to clear
 function GuiInterface:clearGrid(gridName) end
@@ -3553,7 +3605,8 @@ function GuiInterface:createGridFromJson(gridName, index) end
 ---@param value number The start value on the slider
 ---@param functionName string Slider change callback function name
 ---@param numbered? boolean Enable numbered steps (Defaults to false)
-function GuiInterface:createHorizontalSlider(widgetName, range, value, functionName, numbered) end
+---@param inverted? boolean Invert slider direction
+function GuiInterface:createHorizontalSlider(widgetName, range, value, functionName, numbered, inverted) end
 
 ---*Client only*  
 ---Creates a slider at the specified widget  
@@ -3580,7 +3633,7 @@ function GuiInterface:open() end
 ---Plays an effect at a widget  
 ---@param widgetName string The name of the widget
 ---@param effectName string The name of the effect
----@param restart? boolean If the effect should restart if its already palying
+---@param restart? boolean If the effect should restart if its already playing
 function GuiInterface:playEffect(widgetName, effectName, restart) end
 
 ---*Client only*  
@@ -4434,6 +4487,18 @@ function sm.shape.createBlock(uuid, size, position, rotation, dynamic, forceSpaw
 ---@param forceSpawn? boolean Set true to force spawn the shape even if it will cause collision. Defaults to true (Optional)
 ---@return Shape							The created part
 function sm.shape.createPart(uuid, position, rotation, dynamic, forceSpawn) end
+
+---*Server only*  
+---Creates a wedge. The wedge is oriented with one   
+---cathetus along the Y-axis and the other along the Z-axis, forming a right angle.   
+---@param uuid Uuid The uuid of the shape.
+---@param size Vec3 The size of the wedge.
+---@param position Vec3 The shape's world position.
+---@param rotation? Quat The shape's world rotation. Defaults to no rotation (Optional)
+---@param dynamic? boolean Set true if the shape is dynamic or false if the shape is static. Defaults to true (Optional)
+---@param forceSpawn? boolean Set true to force spawn the shape even if it will cause collision. Defaults to true (Optional)
+---@return Shape							The created wedge
+function sm.shape.createWedge(uuid, size, position, rotation, dynamic, forceSpawn) end
 
 ---Returns the block/part description for the given uuid.  
 ---@param uuid Uuid The uuid.
@@ -8087,6 +8152,11 @@ WorldClass.groundMaterialSet = {}
 ---Indoor worlds have only one terrain cell in (0, 0)  
 ---@type boolean
 WorldClass.isIndoor = {}
+
+---Enables or disables static mode. (Defaults to false)  
+---Static worlds are created at load time and doesn't stream in and out.  
+---@type boolean
+WorldClass.isStatic = {}
 
 ---Sets the render mode for this world. (Default "outdoor")  
 ---Possible values: "outdoor", "challenge", "warehouse"  

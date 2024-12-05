@@ -172,6 +172,7 @@
   <ul>
    <li><a href="#createBlock" class="code">createBlock</a></li>
    <li><a href="#createPart" class="code">createPart</a></li>
+   <li><a href="#createWedge" class="code">createWedge</a></li>
    <li><a href="#getAllSeatedCharacter" class="code">getAllSeatedCharacter</a></li>
    <li><a href="#getAngularVelocity" class="code">getAngularVelocity</a></li>
    <li><a href="#getCenterOfMassPosition" class="code">getCenterOfMassPosition</a></li>
@@ -322,6 +323,23 @@
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The parent body.</td></tr>
    <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">uuid</td><td>The uuid of the shape.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The shape's local position.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">z-axis</td><td>The shape's local z direction.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">x-axis</td><td>The shape's local x direction.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">forceAccept=nil</td><td>Set true to force the body to accept the shape. (Defaults to true)</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="createWedge"></a>createWedge(body, uuid, size, position, z-axis, x-axis, forceAccept=nil)</h2>
+  <p>Server only</p>
+  <p>Creates a wedge attached to a body. The wedge is oriented with one </p>
+  <p>cathetus along the Y-axis and the other along the Z-axis, forming a right angle. The wedge's </p>
+  <p>rotation is controlled by z-axis and x-axis parameters, similar to standard part rotation.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The parent body.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">uuid</td><td>The uuid of the shape.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">size</td><td>The shape's size.</td></tr>
    <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The shape's local position.</td></tr>
    <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">z-axis</td><td>The shape's local z direction.</td></tr>
    <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">x-axis</td><td>The shape's local x direction.</td></tr>

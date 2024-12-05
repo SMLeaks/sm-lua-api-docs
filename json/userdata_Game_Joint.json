@@ -101,6 +101,26 @@
 						]
 					]
 				}
+			},
+			"set": {
+				"doc": {
+					"text": [
+						"Sets the color of a joint."
+					],
+					"params": [
+						[
+							"[Joint]",
+							"joint",
+							"The joint."
+						],
+						[
+							"[Color]",
+							"color",
+							"The new color."
+						]
+					],
+					"server_only": true
+				}
 			}
 		},
 		{
@@ -902,6 +922,27 @@
 						"Whether the bearing is reversed (rotating counterclockwise)."
 					]
 				]
+			}
+		},
+		{
+			"name": "setColor",
+			"doc": {
+				"text": [
+					"Sets the color of a joint."
+				],
+				"params": [
+					[
+						"[Joint]",
+						"joint",
+						"The joint."
+					],
+					[
+						"[Color]",
+						"color",
+						"The new color."
+					]
+				],
+				"server_only": true
 			}
 		},
 		{

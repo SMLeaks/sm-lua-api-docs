@@ -594,6 +594,54 @@
 			}
 		},
 		{
+			"name": "createWedge",
+			"doc": {
+				"text": [
+					"Creates a wedge attached to a body. The wedge is oriented with one ",
+					"cathetus along the Y-axis and the other along the Z-axis, forming a right angle. The wedge's ",
+					"rotation is controlled by z-axis and x-axis parameters, similar to standard part rotation."
+				],
+				"params": [
+					[
+						"[Body]",
+						"body",
+						"The parent body."
+					],
+					[
+						"[Uuid]",
+						"uuid",
+						"The uuid of the shape."
+					],
+					[
+						"[Vec3]",
+						"size",
+						"The shape's size."
+					],
+					[
+						"[Vec3]",
+						"position",
+						"The shape's local position."
+					],
+					[
+						"[Vec3]",
+						"z-axis",
+						"The shape's local z direction."
+					],
+					[
+						"[Vec3]",
+						"x-axis",
+						"The shape's local x direction."
+					],
+					[
+						"boolean",
+						"forceAccept=nil",
+						"Set true to force the body to accept the shape. (Defaults to true)"
+					]
+				],
+				"server_only": true
+			}
+		},
+		{
 			"name": "getAllSeatedCharacter",
 			"doc": {
 				"text": [

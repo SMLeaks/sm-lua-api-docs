@@ -252,6 +252,29 @@
 			}
 		},
 		{
+			"name": "smoothDirection",
+			"get": {
+				"doc": {
+					"text": [
+						"Returns the smooth direction of where a character is viewing or aiming."
+					],
+					"params": [
+						[
+							"[Character]",
+							"character",
+							"The character."
+						]
+					],
+					"return": [
+						[
+							"[Vec3]",
+							"The character's smooth view direction."
+						]
+					]
+				}
+			}
+		},
+		{
 			"name": "velocity",
 			"get": {
 				"doc": {
@@ -750,6 +773,27 @@
 					[
 						"number",
 						"The character's radius."
+					]
+				]
+			}
+		},
+		{
+			"name": "getSmoothViewDirection",
+			"doc": {
+				"text": [
+					"Returns the smooth direction of where a character is viewing or aiming."
+				],
+				"params": [
+					[
+						"[Character]",
+						"character",
+						"The character."
+					]
+				],
+				"return": [
+					[
+						"[Vec3]",
+						"The character's smooth view direction."
 					]
 				]
 			}

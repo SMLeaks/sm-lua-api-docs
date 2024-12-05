@@ -99,6 +99,54 @@
 			}
 		},
 		{
+			"name": "createWedge",
+			"doc": {
+				"text": [
+					"Creates a wedge. The wedge is oriented with one ",
+					"cathetus along the Y-axis and the other along the Z-axis, forming a right angle. "
+				],
+				"params": [
+					[
+						"[Uuid]",
+						"uuid",
+						"The uuid of the shape."
+					],
+					[
+						"[Vec3]",
+						"size",
+						"The size of the wedge."
+					],
+					[
+						"[Vec3]",
+						"position",
+						"The shape's world position."
+					],
+					[
+						"[Quat]",
+						"rotation=nil",
+						"The shape's world rotation. Defaults to no rotation (Optional)"
+					],
+					[
+						"boolean",
+						"dynamic=true",
+						"Set true if the shape is dynamic or false if the shape is static. Defaults to true (Optional)"
+					],
+					[
+						"boolean",
+						"forceSpawn=true",
+						"Set true to force spawn the shape even if it will cause collision. Defaults to true (Optional)"
+					]
+				],
+				"return": [
+					[
+						"[Shape]\t\t\t\t\t\t\tThe created wedge",
+						""
+					]
+				],
+				"server_only": true
+			}
+		},
+		{
 			"name": "getShapeDescription",
 			"doc": {
 				"text": [
