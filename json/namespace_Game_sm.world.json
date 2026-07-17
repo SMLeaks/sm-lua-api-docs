@@ -19,6 +19,44 @@
 					"@table"
 				]
 			}
+		},
+		{
+			"name": "voxelFilter",
+			"doc": {
+				"text": [
+					"Filters are used to specify what materials a terrain modification sphere can destroy.",
+					"The filters are:",
+					"@list",
+					"<strong>material0</strong> &ndash; Allows destruction of material 0 in the voxel material set.",
+					"<strong>material1</strong> &ndash; Allows destruction of material 1 in the voxel material set.",
+					"<strong>material2</strong> &ndash; Allows destruction of material 2 in the voxel material set.",
+					"<strong>material3</strong> &ndash; Allows destruction of material 3 in the voxel material set.",
+					"<strong>material4</strong> &ndash; Allows destruction of material 4 in the voxel material set.",
+					"<strong>material5</strong> &ndash; Allows destruction of material 5 in the voxel material set.",
+					"<strong>material6</strong> &ndash; Allows destruction of material 6 in the voxel material set.",
+					"<strong>material7</strong> &ndash; Allows destruction of material 7 in the voxel material set.",
+					"<strong>all</strong> &ndash; Allows destruction of all materials in the voxel material set.",
+					"@list",
+					"@table",
+					"none; 0",
+					"material0; 1",
+					"material1; 2",
+					"material2; 4",
+					"material3; 8",
+					"material4; 16",
+					"material5; 32",
+					"material6; 64",
+					"material7; 128",
+					"all; 255",
+					"@table"
+				],
+				"return": [
+					[
+						"table",
+						"The filter type list."
+					]
+				]
+			}
 		}
 	],
 	"functions": [
@@ -26,7 +64,7 @@
 			"name": "createWorld",
 			"doc": {
 				"text": [
-					"Creates a new world object. Can only be called from inside the Game script environment."
+					"Creates a new world object."
 				],
 				"params": [
 					[
@@ -41,12 +79,12 @@
 					],
 					[
 						"any",
-						"terrainParams=nil",
+						"terrainParams?",
 						"The world's terrain parameters. (Optional)"
 					],
 					[
 						"integer",
-						"seed=0",
+						"seed?",
 						"The world's seed. Defaults to 0 (Optional)"
 					]
 				],
@@ -83,12 +121,12 @@
 				"params": [
 					[
 						"[Vec3]",
-						"position=nil",
+						"position?",
 						"The world position of the sphere. (Optional)"
 					],
 					[
 						"number",
-						"radius=nil",
+						"radius?",
 						"The radius of the sphere. (Optional)"
 					]
 				],
@@ -119,7 +157,7 @@
 			"name": "loadWorld",
 			"doc": {
 				"text": [
-					"Loads a previously created world. Can only be called from inside the Game script environment."
+					"Loads a previously created world."
 				],
 				"params": [
 					[

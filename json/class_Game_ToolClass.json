@@ -28,7 +28,12 @@
 			]
 		]
 	},
-	"constants": [],
+	"constants": [
+		{
+			"name": "equipWhileSeated",
+			"doc": {}
+		}
+	],
 	"common_callbacks": [
 		{
 			"name": "server_onCreate",

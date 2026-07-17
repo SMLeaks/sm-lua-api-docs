@@ -17,6 +17,7 @@
   <h3>Classes</h3>
   <ul>
    <li><a href="class_Game_CharacterClass.html" class="code">CharacterClass</a></li>
+   <li><a href="class_Game_ClientScriptableObjectClass.html" class="code">ClientScriptableObjectClass</a></li>
    <li><a href="class_Game_GameClass.html" class="code">GameClass</a></li>
    <li><a href="class_Game_HarvestableClass.html" class="code">HarvestableClass</a></li>
    <li><a href="class_Game_PlayerClass.html" class="code">PlayerClass</a></li>
@@ -34,14 +35,18 @@
    <li><a href="userdata_Game_Body.html" class="code">Body</a></li>
    <li><a href="userdata_Game_BuilderGuide.html" class="code">BuilderGuide</a></li>
    <li><a href="userdata_Game_Character.html" class="code">Character</a></li>
+   <li><a href="userdata_Game_ClientScriptableObject.html" class="code">ClientScriptableObject</a></li>
    <li><a href="userdata_Game_Color.html" class="code">Color</a></li>
    <li><a href="userdata_Game_Container.html" class="code">Container</a></li>
    <li><a href="userdata_Game_CullSphereGroup.html" class="code">CullSphereGroup</a></li>
    <li><a href="userdata_Game_Effect.html" class="code">Effect</a></li>
+   <li><a href="userdata_Game_Garage.html" class="code">Garage</a></li>
    <li><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></li>
    <li><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></li>
    <li><a href="userdata_Game_Interactable.html" class="code">Interactable</a></li>
    <li><a href="userdata_Game_Joint.html" class="code">Joint</a></li>
+   <li><a href="userdata_Game_JsonGui.html" class="code">JsonGui</a></li>
+   <li><a href="userdata_Game_JsonWidget.html" class="code">JsonWidget</a></li>
    <li><a href="userdata_Game_Lift.html" class="code">Lift</a></li>
    <li><a href="userdata_Game_LoadCellHandle.html" class="code">LoadCellHandle</a></li>
    <li><a href="userdata_Game_Network.html" class="code">Network</a></li>
@@ -73,6 +78,7 @@
    <li><a href="namespace_Game_sm_cell.html" class="code">sm.cell</a></li>
    <li><a href="namespace_Game_sm_challenge.html" class="code">sm.challenge</a></li>
    <li><a href="namespace_Game_sm_character.html" class="code">sm.character</a></li>
+   <li><a href="namespace_Game_sm_clientScriptableObject.html" class="code">sm.clientScriptableObject</a></li>
    <li><a href="namespace_Game_sm_color.html" class="code">sm.color</a></li>
    <li><a href="namespace_Game_sm_construction.html" class="code">sm.construction</a></li>
    <li><a href="namespace_Game_sm_container.html" class="code">sm.container</a></li>
@@ -80,9 +86,11 @@
    <li><a href="namespace_Game_sm_cullSphereGroup.html" class="code">sm.cullSphereGroup</a></li>
    <li><a href="namespace_Game_sm_debris.html" class="code">sm.debris</a></li>
    <li><a href="namespace_Game_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
+   <li><a href="namespace_Game_sm_debugGui.html" class="code">sm.debugGui</a></li>
    <li><a href="namespace_Game_sm_effect.html" class="code">sm.effect</a></li>
    <li><a href="namespace_Game_sm_event.html" class="code">sm.event</a></li>
    <li><a href="namespace_Game_sm_game.html" class="code">sm.game</a></li>
+   <li><a href="namespace_Game_sm_garage.html" class="code">sm.garage</a></li>
    <li><a href="namespace_Game_sm_gui.html" class="code">sm.gui</a></li>
    <li><a href="namespace_Game_sm_gui_widget.html" class="code">sm.gui.widget</a></li>
    <li><a href="namespace_Game_sm_harvestable.html" class="code">sm.harvestable</a></li>
@@ -90,15 +98,19 @@
    <li><a href="namespace_Game_sm_item.html" class="code">sm.item</a></li>
    <li><a href="namespace_Game_sm_joint.html" class="code">sm.joint</a></li>
    <li><a href="namespace_Game_sm_json.html" class="code">sm.json</a></li>
+   <li><a href="namespace_Game_sm_jsonGui.html" class="code">sm.jsonGui</a></li>
+   <li><a href="namespace_Game_sm_lift.html" class="code">sm.lift</a></li>
    <li><a href="namespace_Game_sm_localPlayer.html" class="code">sm.localPlayer</a></li>
    <li><a href="namespace_Game_sm_log.html" class="code">sm.log</a></li>
    <li><a href="namespace_Game_sm_melee.html" class="code">sm.melee</a></li>
    <li><a href="namespace_Game_sm_menuCreation.html" class="code">sm.menuCreation</a></li>
+   <li><a href="namespace_Game_sm_message.html" class="code">sm.message</a></li>
    <li><a href="namespace_Game_sm_noise.html" class="code">sm.noise</a></li>
    <li><a href="namespace_Game_sm_particle.html" class="code">sm.particle</a></li>
    <li><a href="namespace_Game_sm_pathNode.html" class="code">sm.pathNode</a></li>
    <li><a href="namespace_Game_sm_pathfinder.html" class="code">sm.pathfinder</a></li>
    <li><a href="namespace_Game_sm_physics.html" class="code">sm.physics</a></li>
+   <li><a href="namespace_Game_sm_pipeGraph.html" class="code">sm.pipeGraph</a></li>
    <li><a href="namespace_Game_sm_player.html" class="code">sm.player</a></li>
    <li><a href="namespace_Game_sm_portal.html" class="code">sm.portal</a></li>
    <li><a href="namespace_Game_sm_projectile.html" class="code">sm.projectile</a></li>
@@ -122,8 +134,12 @@
   <h3>Object Types 'userdata'</h3>
   <ul>
    <li><a href="userdata_Terrain_Color.html" class="code">Color</a></li>
+   <li><a href="userdata_Terrain_Container.html" class="code">Container</a></li>
    <li><a href="userdata_Terrain_Harvestable.html" class="code">Harvestable</a></li>
+   <li><a href="userdata_Terrain_Interactable.html" class="code">Interactable</a></li>
+   <li><a href="userdata_Terrain_Portal.html" class="code">Portal</a></li>
    <li><a href="userdata_Terrain_Quat.html" class="code">Quat</a></li>
+   <li><a href="userdata_Terrain_ScriptableObject.html" class="code">ScriptableObject</a></li>
    <li><a href="userdata_Terrain_Uuid.html" class="code">Uuid</a></li>
    <li><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></li>
    <li><a href="userdata_Terrain_World.html" class="code">World</a></li>
@@ -133,25 +149,31 @@
    <li><a href="namespace_Terrain_GLOBAL.html" class="code">GLOBAL</a></li>
    <li><a href="namespace_Terrain_sm.html" class="code">sm</a></li>
    <li><a href="namespace_Terrain_sm_color.html" class="code">sm.color</a></li>
+   <li><a href="namespace_Terrain_sm_container.html" class="code">sm.container</a></li>
    <li><a href="namespace_Terrain_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
-   <li><a href="namespace_Terrain_sm_harvestable.html" class="code">sm.harvestable</a></li>
+   <li><a href="namespace_Terrain_sm_debugGui.html" class="code">sm.debugGui</a></li>
+   <li><a href="namespace_Terrain_sm_interactable.html" class="code">sm.interactable</a></li>
    <li><a href="namespace_Terrain_sm_json.html" class="code">sm.json</a></li>
    <li><a href="namespace_Terrain_sm_log.html" class="code">sm.log</a></li>
    <li><a href="namespace_Terrain_sm_noise.html" class="code">sm.noise</a></li>
    <li><a href="namespace_Terrain_sm_quat.html" class="code">sm.quat</a></li>
+   <li><a href="namespace_Terrain_sm_scriptableObject.html" class="code">sm.scriptableObject</a></li>
    <li><a href="namespace_Terrain_sm_terrainData.html" class="code">sm.terrainData</a></li>
    <li><a href="namespace_Terrain_sm_terrainGeneration.html" class="code">sm.terrainGeneration</a></li>
+   <li><a href="namespace_Terrain_sm_terrainHarvestable.html" class="code">sm.terrainHarvestable</a></li>
    <li><a href="namespace_Terrain_sm_terrainTile.html" class="code">sm.terrainTile</a></li>
+   <li><a href="namespace_Terrain_sm_tunnelGenerator.html" class="code">sm.tunnelGenerator</a></li>
    <li><a href="namespace_Terrain_sm_util.html" class="code">sm.util</a></li>
    <li><a href="namespace_Terrain_sm_uuid.html" class="code">sm.uuid</a></li>
    <li><a href="namespace_Terrain_sm_vec3.html" class="code">sm.vec3</a></li>
+   <li><a href="namespace_Terrain_sm_voxelTerrainCell.html" class="code">sm.voxelTerrainCell</a></li>
   </ul>
  </div>
  <div id="content">
   <h1 class="code">sm.localPlayer</h1>
   <p><strong>Local player</strong> represents the current character being controlled on the client's computer. This library can only be used on the <a href="index.html#client">client</a>.</p>
   <p>For more information about other players in the world, see <a href="namespace_Game_sm_player.html" class="code">sm.player</a>.</p>
-  <h4>Functions:</h4  <ul>   <li><a href="#addRenderable" class="code">addRenderable</a></li>   <li><a href="#getActiveItem" class="code">getActiveItem</a></li>   <li><a href="#getAimSensitivity" class="code">getAimSensitivity</a></li>   <li><a href="#getCarry" class="code">getCarry</a></li>   <li><a href="#getCarryColor" class="code">getCarryColor</a></li>   <li><a href="#getDirection" class="code">getDirection</a></li>   <li><a href="#getFpAnimationInfo" class="code">getFpAnimationInfo</a></li>   <li><a href="#getFpBonePos" class="code">getFpBonePos</a></li>   <li><a href="#getHotbar" class="code">getHotbar</a></li>   <li><a href="#getId" class="code">getId</a></li>   <li><a href="#getInventory" class="code">getInventory</a></li>   <li><a href="#getMouseDelta" class="code">getMouseDelta</a></li>   <li><a href="#getOwnedLift" class="code">getOwnedLift</a></li>   <li><a href="#getPlayer" class="code">getPlayer</a></li>   <li><a href="#getPosition" class="code">getPosition</a></li>   <li><a href="#getRaycast" class="code">getRaycast</a></li>   <li><a href="#getRaycastStart" class="code">getRaycastStart</a></li>   <li><a href="#getRight" class="code">getRight</a></li>   <li><a href="#getSelectedHotbarSlot" class="code">getSelectedHotbarSlot</a></li>   <li><a href="#getUp" class="code">getUp</a></li>   <li><a href="#isGarmentUnlocked" class="code">isGarmentUnlocked</a></li>   <li><a href="#isInFirstPersonView" class="code">isInFirstPersonView</a></li>   <li><a href="#removeRenderable" class="code">removeRenderable</a></li>   <li><a href="#setBlockSprinting" class="code">setBlockSprinting</a></li>   <li><a href="#setDirection" class="code">setDirection</a></li>   <li><a href="#setLockedControls" class="code">setLockedControls</a></li>   <li><a href="#updateFpAnimation" class="code">updateFpAnimation</a></li>  </ul>  <hr>
+  <h4>Functions:</h4  <ul>   <li><a href="#addRenderable" class="code">addRenderable</a></li>   <li><a href="#getActiveItem" class="code">getActiveItem</a></li>   <li><a href="#getAimSensitivity" class="code">getAimSensitivity</a></li>   <li><a href="#getCarry" class="code">getCarry</a></li>   <li><a href="#getCarryColor" class="code">getCarryColor</a></li>   <li><a href="#getConstructionPlacement" class="code">getConstructionPlacement</a></li>   <li><a href="#getDirection" class="code">getDirection</a></li>   <li><a href="#getFpAnimationInfo" class="code">getFpAnimationInfo</a></li>   <li><a href="#getFpBonePos" class="code">getFpBonePos</a></li>   <li><a href="#getGarmentName" class="code">getGarmentName</a></li>   <li><a href="#getGarmentUpperCaseTitle" class="code">getGarmentUpperCaseTitle</a></li>   <li><a href="#getHotbar" class="code">getHotbar</a></li>   <li><a href="#getId" class="code">getId</a></li>   <li><a href="#getInventory" class="code">getInventory</a></li>   <li><a href="#getLatestRaycast" class="code">getLatestRaycast</a></li>   <li><a href="#getMouseDelta" class="code">getMouseDelta</a></li>   <li><a href="#getOwnedLift" class="code">getOwnedLift</a></li>   <li><a href="#getPlayer" class="code">getPlayer</a></li>   <li><a href="#getPosition" class="code">getPosition</a></li>   <li><a href="#getRaycast" class="code">getRaycast</a></li>   <li><a href="#getRaycastStart" class="code">getRaycastStart</a></li>   <li><a href="#getRight" class="code">getRight</a></li>   <li><a href="#getSelectedHotbarSlot" class="code">getSelectedHotbarSlot</a></li>   <li><a href="#getUp" class="code">getUp</a></li>   <li><a href="#getWantsSprint" class="code">getWantsSprint</a></li>   <li><a href="#getWorld" class="code">getWorld</a></li>   <li><a href="#grantQuestItem" class="code">grantQuestItem</a></li>   <li><a href="#isGarmentUnlocked" class="code">isGarmentUnlocked</a></li>   <li><a href="#isInFirstPersonView" class="code">isInFirstPersonView</a></li>   <li><a href="#removeRenderable" class="code">removeRenderable</a></li>   <li><a href="#secondaryInteractBusy" class="code">secondaryInteractBusy</a></li>   <li><a href="#setBlockSprinting" class="code">setBlockSprinting</a></li>   <li><a href="#setDirection" class="code">setDirection</a></li>   <li><a href="#setLockedControls" class="code">setLockedControls</a></li>   <li><a href="#updateFpAnimation" class="code">updateFpAnimation</a></li>  </ul>  <hr>
   <h2 class="code"><a id="addRenderable"></a>sm.localPlayer.addRenderable(renderable)</h2>
   <p>Client only</p>
   <p>Adds a renderable (file containing model data) to be used for the local player in first person view.</p>
@@ -197,6 +219,15 @@
    <tr><td class="code"><a href="userdata_Game_Color.html" class="code">Color</a></td><td>The color of the shape the local player is carrying.</td></tr>
   </table>
   <hr>
+  <h2 class="code"><a id="getConstructionPlacement"></a>sm.localPlayer.getConstructionPlacement()</h2>
+  <p>Client only</p>
+  <p>Gets the world position and rotation of the local player's shape placement if it is not colliding. Otherwise nil is returned.</p>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a>, <a href="userdata_Game_Quat.html" class="code">Quat</a></td><td>World position and rotation.</td></tr>
+  </table>
+  <hr>
   <h2 class="code"><a id="getDirection"></a>sm.localPlayer.getDirection()</h2>
   <p>Client only</p>
   <p>Returns the direction the local player is aiming.</p>
@@ -234,6 +265,34 @@
    <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The joint position.</td></tr>
   </table>
   <hr>
+  <h2 class="code"><a id="getGarmentName"></a>sm.localPlayer.getGarmentName(uuid)</h2>
+  <p>Client only</p>
+  <p>Gets the title of the garment with the given uuid in the current language.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">uuid</td><td>The garment.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">string</td><td>The title of the garment</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getGarmentUpperCaseTitle"></a>sm.localPlayer.getGarmentUpperCaseTitle(uuid)</h2>
+  <p>Client only</p>
+  <p>Gets the UPPER CASE title of the garment with the given uuid in the current language.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">uuid</td><td>The garment.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">string</td><td>The title of the garment</td></tr>
+  </table>
+  <hr>
   <h2 class="code"><a id="getHotbar"></a>sm.localPlayer.getHotbar()</h2>
   <p>Client only</p>
   <p>Returns the hotbar container of the player.</p>
@@ -259,6 +318,15 @@
   <table>
    <tr><th>Type</th><th>Description</th></tr>
    <tr><td class="code"><a href="userdata_Game_Container.html" class="code">Container</a></td><td>The player's inventory.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getLatestRaycast"></a>sm.localPlayer.getLatestRaycast()</h2>
+  <p>Client only</p>
+  <p>Returns the latest interaction raycast result of the local player. This is the raycast that is constantly performed to detect interactable objects up to a range of 7.5.</p>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">bool, <a href="userdata_Game_RaycastResult.html" class="code">RaycastResult</a></td><td>True if raycast was successful; Raycast result data.</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="getMouseDelta"></a>sm.localPlayer.getMouseDelta()</h2>
@@ -301,15 +369,15 @@
    <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The player's world position.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="getRaycast"></a>sm.localPlayer.getRaycast(range, origin=nil, direction=nil)</h2>
+  <h2 class="code"><a id="getRaycast"></a>sm.localPlayer.getRaycast(range, origin?, direction?)</h2>
   <p>Client only</p>
   <p>Performs a <a target="_blank" href="https://en.wikipedia.org/wiki/Ray_casting">raycast</a> relative to the local player's perspective.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code">number</td><td class="code">range</td><td>The maximum range.</td></tr>
-   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">origin=nil</td><td>The start position. (Defaults to <a href="namespace_Game_sm_localPlayer.html#getRaycastStart" class="code">sm.localPlayer.getRaycastStart</a>)</td></tr>
-   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">direction=nil</td><td>The direction. (Defaults to <a href="namespace_Game_sm_localPlayer.html#getDirection" class="code">sm.localPlayer.getDirection</a>)</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">origin?</td><td>The start position. (Defaults to <a href="namespace_Game_sm_localPlayer.html#getRaycastStart" class="code">sm.localPlayer.getRaycastStart</a>)</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">direction?</td><td>The direction. (Defaults to <a href="namespace_Game_sm_localPlayer.html#getDirection" class="code">sm.localPlayer.getDirection</a>)</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -353,6 +421,33 @@
    <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The up-vector of the player's aim.</td></tr>
   </table>
   <hr>
+  <h2 class="code"><a id="getWantsSprint"></a>sm.localPlayer.getWantsSprint()</h2>
+  <p>Client only</p>
+  <p>Checks if local player wants to sprint (pressing the sprint key).</p>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>Whether the player is holding the sprint key.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getWorld"></a>sm.localPlayer.getWorld()</h2>
+  <p>Client only</p>
+  <p>Gets the world the local player's character is in, if any, otherwise nil.</p>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_World.html" class="code">World</a></td><td>The world the local player is in, if any.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="grantQuestItem"></a>sm.localPlayer.grantQuestItem(uid)</h2>
+  <p>Client only</p>
+  <p>Unlocks a cosmetic with the given uuid for the player. Requires survival mode, non modified core files and no active mods to function.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">uid</td><td>The uuid of the unlocked cosmetic.</td></tr>
+  </table>
+  <hr>
   <h2 class="code"><a id="isGarmentUnlocked"></a>sm.localPlayer.isGarmentUnlocked(uuid)</h2>
   <p>Client only</p>
   <p>Check if the garment has been granted to the local player.</p>
@@ -385,6 +480,15 @@
    <tr><td class="code">string</td><td class="code">renderable</td><td>The renderable path.</td></tr>
   </table>
   <hr>
+  <h2 class="code"><a id="secondaryInteractBusy"></a>sm.localPlayer.secondaryInteractBusy()</h2>
+  <p>Client only</p>
+  <p>Returns if the currently equipped tool consumes the secondary interaction, such as aiming with the spudgun.</p>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>True if the tool consumes the secondary interaction.</td></tr>
+  </table>
+  <hr>
   <h2 class="code"><a id="setBlockSprinting"></a>sm.localPlayer.setBlockSprinting(blockSprinting)</h2>
   <p>Client only</p>
   <p>Stops the local player from sprinting.</p>
@@ -412,7 +516,7 @@
    <tr><td class="code">boolean</td><td class="code">locked</td><td>The lock state.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="updateFpAnimation"></a>sm.localPlayer.updateFpAnimation(name, time, weight=-1.0, looping=false)</h2>
+  <h2 class="code"><a id="updateFpAnimation"></a>sm.localPlayer.updateFpAnimation(name, time, weight?, looping?)</h2>
   <p>Client only</p>
   <p>Updates a first person view animation.</p>
   <h4>Parameters:</h4>
@@ -420,8 +524,8 @@
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code">string</td><td class="code">name</td><td>The name.</td></tr>
    <tr><td class="code">number</td><td class="code">time</td><td>The time.</td></tr>
-   <tr><td class="code">number</td><td class="code">weight=-1.0</td><td>The weight.</td></tr>
-   <tr><td class="code">boolean</td><td class="code">looping=false</td><td>The looping.</td></tr>
+   <tr><td class="code">number</td><td class="code">weight?</td><td>The weight. (Defaults to -1.0)</td></tr>
+   <tr><td class="code">boolean</td><td class="code">looping?</td><td>The looping. (Defaults to false)</td></tr>
   </table>
  </div>
 </body>

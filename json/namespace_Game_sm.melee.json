@@ -8,6 +8,42 @@
 	"constants": [],
 	"functions": [
 		{
+			"name": "getMeleeAttackHits",
+			"doc": {
+				"text": [
+					"Performs melee attack check and returns a table of raycast results."
+				],
+				"params": [
+					[
+						"[Uuid]",
+						"uuid",
+						"The uuid of the melee attack."
+					],
+					[
+						"[Vec3]",
+						"origin",
+						"The source position of the attack."
+					],
+					[
+						"[Vec3]",
+						"directionRange",
+						"The direction and reach of the attack."
+					],
+					[
+						"[Unit]",
+						"source",
+						"The unit that is the source of the attack."
+					]
+				],
+				"return": [
+					[
+						"table",
+						"RaycastResult\t\tA table containing [RaycastResult] data."
+					]
+				]
+			}
+		},
+		{
 			"name": "meleeAttack",
 			"doc": {
 				"text": [
@@ -44,13 +80,18 @@
 					],
 					[
 						"integer",
-						"delay=0",
+						"delay?",
 						"The number of ticks before performing the attack. (Defaults to 0)"
 					],
 					[
 						"number",
-						"power=5000",
-						"The strength of the knockback power."
+						"power?",
+						"The strength of the knockback power. (Defaults to 5000)"
+					],
+					[
+						"table",
+						"ignoreCharacters",
+						"A table of characters to ignore in the attack. (optional)"
 					]
 				]
 			}
@@ -92,13 +133,18 @@
 					],
 					[
 						"integer",
-						"delay=0",
+						"delay?",
 						"The number of ticks before performing the attack. (Defaults to 0)"
 					],
 					[
 						"number",
-						"power=5000",
-						"The strength of the knockback power."
+						"power?",
+						"The strength of the knockback power. (Defaults to 5000)"
+					],
+					[
+						"table",
+						"ignoreCharacters",
+						"A table of characters to ignore in the attack. (optional)"
 					]
 				]
 			}
@@ -137,13 +183,18 @@
 					],
 					[
 						"integer",
-						"delay=0",
+						"delay?",
 						"The number of ticks before performing the attack. (Defaults to 0)"
 					],
 					[
 						"number",
-						"power=5000",
-						"The strength of the knockback power."
+						"power?",
+						"The strength of the knockback power. (Defaults to 5000)"
+					],
+					[
+						"table",
+						"ignoreCharacters",
+						"A table of characters to ignore in the attack. (optional)"
 					]
 				]
 			}
@@ -182,13 +233,18 @@
 					],
 					[
 						"integer",
-						"delay=0",
+						"delay?",
 						"The number of ticks before performing the attack. (Defaults to 0)"
 					],
 					[
 						"number",
-						"power=5000",
-						"The strength of the knockback power."
+						"power?",
+						"The strength of the knockback power. (Defaults to 5000)"
+					],
+					[
+						"table",
+						"ignoreCharacters",
+						"A table of characters to ignore in the attack. (optional)"
 					]
 				]
 			}

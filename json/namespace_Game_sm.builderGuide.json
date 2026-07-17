@@ -27,8 +27,18 @@
 					],
 					[
 						"boolean",
-						"ignoreBlockUuid=nil",
+						"ignoreBlockUuid?",
 						"Should block uuid be ignored for stage completion. (Defaults to false)"
+					],
+					[
+						"boolean",
+						"recordErrors?",
+						"Should errors be recorded. Needed for getErrorInfo (Defaults to false)"
+					],
+					[
+						"boolean",
+						"allowExtraBlocks?",
+						"Should extra blocks be ignored for stage completion. (Defaults to true)"
 					]
 				],
 				"return": [

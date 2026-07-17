@@ -77,6 +77,28 @@
 			}
 		},
 		{
+			"name": "getWantsCrouch",
+			"doc": {
+				"text": [
+					"Check if the state wants to crouch."
+				],
+				"params": [
+					[
+						"[AiState]",
+						"state",
+						"The state."
+					]
+				],
+				"return": [
+					[
+						"boolean",
+						"Returns true when the state wants to crouch."
+					]
+				],
+				"server_only": true
+			}
+		},
+		{
 			"name": "getWantsJump",
 			"doc": {
 				"text": [
@@ -205,7 +227,7 @@
 			"doc": {
 				"meta": [
 					[
-						"[AiState],[AiState]",
+						"[AiState],[AiState],boolean",
 						"Checks if two instances of [AiState] are refer to the same AiState."
 					]
 				]

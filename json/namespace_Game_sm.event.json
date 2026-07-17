@@ -5,7 +5,27 @@
 			"Events for communicating between scripts by running callbacks."
 		]
 	},
-	"constants": [],
+	"constants": [
+		{
+			"name": "types",
+			"doc": {
+				"text": [
+					"Event types",
+					"@table",
+					"validate; Will make sure script instance exists, and that the callback is declared on the receiving end, before queuing the event. This is the default type.",
+					"blind; Will blindly queue the event without making any validation checks. Can be useful for sending events to script we know will come alive the next tick.",
+					"instant; Same as blind event, but sent immediately.",
+					"@table"
+				],
+				"return": [
+					[
+						"table",
+						"The event types list."
+					]
+				]
+			}
+		}
+	],
 	"functions": [
 		{
 			"name": "sendToCharacter",
@@ -26,14 +46,24 @@
 					],
 					[
 						"any",
-						"args=nil",
+						"args?",
 						"Optional arguments to be sent to the callback."
+					],
+					[
+						"integer",
+						"eventType?",
+						"The type of event. Defaults to [sm.event.types, sm.event.types.validate]."
+					],
+					[
+						"boolean",
+						"pauseSave?",
+						"Optional, defaults to true. If true, pauses saving for 1 tick for delayed event types (server only)."
 					]
 				],
 				"return": [
 					[
 						"boolean",
-						"result\t\t\t\t\tReturns true if the callback was found."
+						"result\t\t\t\t\tReturns true if the event was successfully processed."
 					]
 				]
 			}
@@ -52,14 +82,24 @@
 					],
 					[
 						"any",
-						"args=nil",
+						"args?",
 						"Optional arguments to be sent to the callback."
+					],
+					[
+						"integer",
+						"eventType?",
+						"The type of event. Defaults to [sm.event.types, sm.event.types.validate]."
+					],
+					[
+						"boolean",
+						"pauseSave?",
+						"Optional, defaults to true. If true, pauses saving for 1 tick for delayed event types (server only)."
 					]
 				],
 				"return": [
 					[
 						"boolean",
-						"result\t\t\tReturns true if the callback was found."
+						"result\t\t\tReturns true if the event was successfully processed."
 					]
 				]
 			}
@@ -83,14 +123,24 @@
 					],
 					[
 						"any",
-						"args=nil",
+						"args?",
 						"Optional arguments to be sent to the callback."
+					],
+					[
+						"integer",
+						"eventType?",
+						"The type of event. Defaults to [sm.event.types, sm.event.types.validate]."
+					],
+					[
+						"boolean",
+						"pauseSave?",
+						"Optional, defaults to true. If true, pauses saving for 1 tick for delayed event types (server only)."
 					]
 				],
 				"return": [
 					[
 						"boolean",
-						"result\t\t\t\tReturns true if the callback was found."
+						"result\t\t\t\tReturns true if the event was successfully processed."
 					]
 				]
 			}
@@ -110,18 +160,28 @@
 					[
 						"string",
 						"callback",
-						"The function name in a interactable script."
+						"The function name in an interactable script."
 					],
 					[
 						"any",
-						"args=nil",
+						"args?",
 						"Optional arguments to be sent to the callback."
+					],
+					[
+						"integer",
+						"eventType?",
+						"The type of event. Defaults to [sm.event.types, sm.event.types.validate]."
+					],
+					[
+						"boolean",
+						"pauseSave?",
+						"Optional, defaults to true. If true, pauses saving for 1 tick for delayed event types (server only)."
 					]
 				],
 				"return": [
 					[
 						"boolean",
-						"result\t\t\t\tReturns true if the callback was found."
+						"result\t\t\t\tReturns true if the event was successfully processed."
 					]
 				]
 			}
@@ -145,14 +205,24 @@
 					],
 					[
 						"any",
-						"args=nil",
+						"args?",
 						"Optional arguments to be sent to the callback."
+					],
+					[
+						"integer",
+						"eventType?",
+						"The type of event. Defaults to [sm.event.types, sm.event.types.validate]."
+					],
+					[
+						"boolean",
+						"pauseSave?",
+						"Optional, defaults to true. If true, pauses saving for 1 tick for delayed event types (server only)."
 					]
 				],
 				"return": [
 					[
 						"boolean",
-						"result\t\t\t\tReturns true if the callback was found."
+						"result\t\t\t\tReturns true if the event was successfully processed."
 					]
 				]
 			}
@@ -176,14 +246,24 @@
 					],
 					[
 						"any",
-						"args=nil",
+						"args?",
 						"Optional arguments to be sent to the callback."
+					],
+					[
+						"integer",
+						"eventType?",
+						"The type of event. Defaults to [sm.event.types, sm.event.types.validate]."
+					],
+					[
+						"boolean",
+						"pauseSave?",
+						"Optional, defaults to true. If true, pauses saving for 1 tick for delayed event types (server only)."
 					]
 				],
 				"return": [
 					[
 						"boolean",
-						"result\t\t\t\tReturns true if the callback was found."
+						"result\t\t\t\tReturns true if the event was successfully processed."
 					]
 				]
 			}
@@ -207,14 +287,24 @@
 					],
 					[
 						"any",
-						"args=nil",
+						"args?",
 						"Optional arguments to be sent to the callback."
+					],
+					[
+						"integer",
+						"eventType?",
+						"The type of event. Defaults to [sm.event.types, sm.event.types.validate]."
+					],
+					[
+						"boolean",
+						"pauseSave?",
+						"Optional, defaults to true. If true, pauses saving for 1 tick for delayed event types (server only)."
 					]
 				],
 				"return": [
 					[
 						"boolean",
-						"result\t\t\t\tReturns true if the callback was found."
+						"result\t\t\t\tReturns true if the event was successfully queued."
 					]
 				]
 			}
@@ -238,14 +328,24 @@
 					],
 					[
 						"any",
-						"args=nil",
+						"args?",
 						"Optional arguments to be sent to the callback."
+					],
+					[
+						"integer",
+						"eventType?",
+						"The type of event. Defaults to [sm.event.types, sm.event.types.validate]."
+					],
+					[
+						"boolean",
+						"pauseSave?",
+						"Optional, defaults to true. If true, pauses saving for 1 tick for delayed event types (server only)."
 					]
 				],
 				"return": [
 					[
 						"boolean",
-						"result\t\t\tReturns true if the callback was found."
+						"result\t\t\tReturns true if the event was successfully processed."
 					]
 				]
 			}
@@ -269,14 +369,24 @@
 					],
 					[
 						"any",
-						"args=nil",
+						"args?",
 						"Optional arguments to be sent to the callback."
+					],
+					[
+						"integer",
+						"eventType?",
+						"The type of event. Defaults to [sm.event.types, sm.event.types.validate]."
+					],
+					[
+						"boolean",
+						"pauseSave?",
+						"Optional, defaults to true. If true, pauses saving for 1 tick for delayed event types (server only)."
 					]
 				],
 				"return": [
 					[
 						"boolean",
-						"result\t\t\tReturns true if the callback was found."
+						"result\t\t\tReturns true if the event was successfully processed."
 					]
 				]
 			}

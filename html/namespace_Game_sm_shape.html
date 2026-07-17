@@ -17,6 +17,7 @@
   <h3>Classes</h3>
   <ul>
    <li><a href="class_Game_CharacterClass.html" class="code">CharacterClass</a></li>
+   <li><a href="class_Game_ClientScriptableObjectClass.html" class="code">ClientScriptableObjectClass</a></li>
    <li><a href="class_Game_GameClass.html" class="code">GameClass</a></li>
    <li><a href="class_Game_HarvestableClass.html" class="code">HarvestableClass</a></li>
    <li><a href="class_Game_PlayerClass.html" class="code">PlayerClass</a></li>
@@ -34,14 +35,18 @@
    <li><a href="userdata_Game_Body.html" class="code">Body</a></li>
    <li><a href="userdata_Game_BuilderGuide.html" class="code">BuilderGuide</a></li>
    <li><a href="userdata_Game_Character.html" class="code">Character</a></li>
+   <li><a href="userdata_Game_ClientScriptableObject.html" class="code">ClientScriptableObject</a></li>
    <li><a href="userdata_Game_Color.html" class="code">Color</a></li>
    <li><a href="userdata_Game_Container.html" class="code">Container</a></li>
    <li><a href="userdata_Game_CullSphereGroup.html" class="code">CullSphereGroup</a></li>
    <li><a href="userdata_Game_Effect.html" class="code">Effect</a></li>
+   <li><a href="userdata_Game_Garage.html" class="code">Garage</a></li>
    <li><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></li>
    <li><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></li>
    <li><a href="userdata_Game_Interactable.html" class="code">Interactable</a></li>
    <li><a href="userdata_Game_Joint.html" class="code">Joint</a></li>
+   <li><a href="userdata_Game_JsonGui.html" class="code">JsonGui</a></li>
+   <li><a href="userdata_Game_JsonWidget.html" class="code">JsonWidget</a></li>
    <li><a href="userdata_Game_Lift.html" class="code">Lift</a></li>
    <li><a href="userdata_Game_LoadCellHandle.html" class="code">LoadCellHandle</a></li>
    <li><a href="userdata_Game_Network.html" class="code">Network</a></li>
@@ -73,6 +78,7 @@
    <li><a href="namespace_Game_sm_cell.html" class="code">sm.cell</a></li>
    <li><a href="namespace_Game_sm_challenge.html" class="code">sm.challenge</a></li>
    <li><a href="namespace_Game_sm_character.html" class="code">sm.character</a></li>
+   <li><a href="namespace_Game_sm_clientScriptableObject.html" class="code">sm.clientScriptableObject</a></li>
    <li><a href="namespace_Game_sm_color.html" class="code">sm.color</a></li>
    <li><a href="namespace_Game_sm_construction.html" class="code">sm.construction</a></li>
    <li><a href="namespace_Game_sm_container.html" class="code">sm.container</a></li>
@@ -80,9 +86,11 @@
    <li><a href="namespace_Game_sm_cullSphereGroup.html" class="code">sm.cullSphereGroup</a></li>
    <li><a href="namespace_Game_sm_debris.html" class="code">sm.debris</a></li>
    <li><a href="namespace_Game_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
+   <li><a href="namespace_Game_sm_debugGui.html" class="code">sm.debugGui</a></li>
    <li><a href="namespace_Game_sm_effect.html" class="code">sm.effect</a></li>
    <li><a href="namespace_Game_sm_event.html" class="code">sm.event</a></li>
    <li><a href="namespace_Game_sm_game.html" class="code">sm.game</a></li>
+   <li><a href="namespace_Game_sm_garage.html" class="code">sm.garage</a></li>
    <li><a href="namespace_Game_sm_gui.html" class="code">sm.gui</a></li>
    <li><a href="namespace_Game_sm_gui_widget.html" class="code">sm.gui.widget</a></li>
    <li><a href="namespace_Game_sm_harvestable.html" class="code">sm.harvestable</a></li>
@@ -90,15 +98,19 @@
    <li><a href="namespace_Game_sm_item.html" class="code">sm.item</a></li>
    <li><a href="namespace_Game_sm_joint.html" class="code">sm.joint</a></li>
    <li><a href="namespace_Game_sm_json.html" class="code">sm.json</a></li>
+   <li><a href="namespace_Game_sm_jsonGui.html" class="code">sm.jsonGui</a></li>
+   <li><a href="namespace_Game_sm_lift.html" class="code">sm.lift</a></li>
    <li><a href="namespace_Game_sm_localPlayer.html" class="code">sm.localPlayer</a></li>
    <li><a href="namespace_Game_sm_log.html" class="code">sm.log</a></li>
    <li><a href="namespace_Game_sm_melee.html" class="code">sm.melee</a></li>
    <li><a href="namespace_Game_sm_menuCreation.html" class="code">sm.menuCreation</a></li>
+   <li><a href="namespace_Game_sm_message.html" class="code">sm.message</a></li>
    <li><a href="namespace_Game_sm_noise.html" class="code">sm.noise</a></li>
    <li><a href="namespace_Game_sm_particle.html" class="code">sm.particle</a></li>
    <li><a href="namespace_Game_sm_pathNode.html" class="code">sm.pathNode</a></li>
    <li><a href="namespace_Game_sm_pathfinder.html" class="code">sm.pathfinder</a></li>
    <li><a href="namespace_Game_sm_physics.html" class="code">sm.physics</a></li>
+   <li><a href="namespace_Game_sm_pipeGraph.html" class="code">sm.pipeGraph</a></li>
    <li><a href="namespace_Game_sm_player.html" class="code">sm.player</a></li>
    <li><a href="namespace_Game_sm_portal.html" class="code">sm.portal</a></li>
    <li><a href="namespace_Game_sm_projectile.html" class="code">sm.projectile</a></li>
@@ -122,8 +134,12 @@
   <h3>Object Types 'userdata'</h3>
   <ul>
    <li><a href="userdata_Terrain_Color.html" class="code">Color</a></li>
+   <li><a href="userdata_Terrain_Container.html" class="code">Container</a></li>
    <li><a href="userdata_Terrain_Harvestable.html" class="code">Harvestable</a></li>
+   <li><a href="userdata_Terrain_Interactable.html" class="code">Interactable</a></li>
+   <li><a href="userdata_Terrain_Portal.html" class="code">Portal</a></li>
    <li><a href="userdata_Terrain_Quat.html" class="code">Quat</a></li>
+   <li><a href="userdata_Terrain_ScriptableObject.html" class="code">ScriptableObject</a></li>
    <li><a href="userdata_Terrain_Uuid.html" class="code">Uuid</a></li>
    <li><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></li>
    <li><a href="userdata_Terrain_World.html" class="code">World</a></li>
@@ -133,18 +149,24 @@
    <li><a href="namespace_Terrain_GLOBAL.html" class="code">GLOBAL</a></li>
    <li><a href="namespace_Terrain_sm.html" class="code">sm</a></li>
    <li><a href="namespace_Terrain_sm_color.html" class="code">sm.color</a></li>
+   <li><a href="namespace_Terrain_sm_container.html" class="code">sm.container</a></li>
    <li><a href="namespace_Terrain_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
-   <li><a href="namespace_Terrain_sm_harvestable.html" class="code">sm.harvestable</a></li>
+   <li><a href="namespace_Terrain_sm_debugGui.html" class="code">sm.debugGui</a></li>
+   <li><a href="namespace_Terrain_sm_interactable.html" class="code">sm.interactable</a></li>
    <li><a href="namespace_Terrain_sm_json.html" class="code">sm.json</a></li>
    <li><a href="namespace_Terrain_sm_log.html" class="code">sm.log</a></li>
    <li><a href="namespace_Terrain_sm_noise.html" class="code">sm.noise</a></li>
    <li><a href="namespace_Terrain_sm_quat.html" class="code">sm.quat</a></li>
+   <li><a href="namespace_Terrain_sm_scriptableObject.html" class="code">sm.scriptableObject</a></li>
    <li><a href="namespace_Terrain_sm_terrainData.html" class="code">sm.terrainData</a></li>
    <li><a href="namespace_Terrain_sm_terrainGeneration.html" class="code">sm.terrainGeneration</a></li>
+   <li><a href="namespace_Terrain_sm_terrainHarvestable.html" class="code">sm.terrainHarvestable</a></li>
    <li><a href="namespace_Terrain_sm_terrainTile.html" class="code">sm.terrainTile</a></li>
+   <li><a href="namespace_Terrain_sm_tunnelGenerator.html" class="code">sm.tunnelGenerator</a></li>
    <li><a href="namespace_Terrain_sm_util.html" class="code">sm.util</a></li>
    <li><a href="namespace_Terrain_sm_uuid.html" class="code">sm.uuid</a></li>
    <li><a href="namespace_Terrain_sm_vec3.html" class="code">sm.vec3</a></li>
+   <li><a href="namespace_Terrain_sm_voxelTerrainCell.html" class="code">sm.voxelTerrainCell</a></li>
   </ul>
  </div>
  <div id="content">
@@ -152,8 +174,18 @@
   <h3>Associated object type: <a href="userdata_Game_Shape.html" class="code">Shape</a></h3>
   <p>A <strong>shape</strong> is any block, part or basic material that can be built by a player. Shapes are always connected to a <a href="namespace_Game_sm_body.html" class="code">body</a>, which is a collection of shapes.</p>
   <p>For more information about creating your own scripted shapes, see <a href="class_Game_ShapeClass.html" class="code">ShapeClass</a>.</p>
-  <h4>Functions:</h4  <ul>   <li><a href="#createBlock" class="code">createBlock</a></li>   <li><a href="#createPart" class="code">createPart</a></li>   <li><a href="#createWedge" class="code">createWedge</a></li>   <li><a href="#getShapeDescription" class="code">getShapeDescription</a></li>   <li><a href="#getShapeIcon" class="code">getShapeIcon</a></li>   <li><a href="#getShapeTitle" class="code">getShapeTitle</a></li>   <li><a href="#getShapeTypeColor" class="code">getShapeTypeColor</a></li>   <li><a href="#uuidExists" class="code">uuidExists</a></li>  </ul>  <hr>
-  <h2 class="code"><a id="createBlock"></a>sm.shape.createBlock(uuid, size, position, rotation=nil, dynamic=true, forceSpawn=true)</h2>
+  <h4>Constants:</h4>  <ul>   <li><a href="#destructionType" class="code">destructionType</a></li>   <li><a href="#material" class="code">material</a></li>  </ul>  <h4>Functions:</h4  <ul>   <li><a href="#createBlock" class="code">createBlock</a></li>   <li><a href="#createPart" class="code">createPart</a></li>   <li><a href="#createWedge" class="code">createWedge</a></li>   <li><a href="#getIsHarvest" class="code">getIsHarvest</a></li>   <li><a href="#getIsStackable" class="code">getIsStackable</a></li>   <li><a href="#getShapeDescription" class="code">getShapeDescription</a></li>   <li><a href="#getShapeIcon" class="code">getShapeIcon</a></li>   <li><a href="#getShapeTitle" class="code">getShapeTitle</a></li>   <li><a href="#getShapeTypeColor" class="code">getShapeTypeColor</a></li>   <li><a href="#getShapeUpperCaseTitle" class="code">getShapeUpperCaseTitle</a></li>   <li><a href="#shapesInSphere" class="code">shapesInSphere</a></li>   <li><a href="#uuidExists" class="code">uuidExists</a></li>  </ul>  <hr>
+  <h2 class="code"><a id="destructionType"></a>sm.shape.destructionType <i>table</i></h2>
+  <p>Shape destruction types. Using these will handle the destruction as if it was caused by the specified type.</p>
+  <table>
+   <tr>    <td>None</td>   </tr>   <tr>    <td>Melee</td>   </tr>   <tr>    <td>Projectile</td>   </tr>   <tr>    <td>Explosion</td>   </tr>  </table>
+  <hr>
+  <h2 class="code"><a id="material"></a>sm.shape.material <i>table</i></h2>
+  <p>Shape physics materials</p>
+  <table>
+   <tr>    <td>None</td>   </tr>   <tr>    <td>Default</td>   </tr>   <tr>    <td>Grass</td>   </tr>   <tr>    <td>Dirt</td>   </tr>   <tr>    <td>Sand</td>   </tr>   <tr>    <td>Gravel</td>   </tr>   <tr>    <td>Rock</td>   </tr>   <tr>    <td>Wood</td>   </tr>   <tr>    <td>Plastic</td>   </tr>   <tr>    <td>Metal</td>   </tr>   <tr>    <td>Glass</td>   </tr>   <tr>    <td>Fence</td>   </tr>   <tr>    <td>Fabric</td>   </tr>   <tr>    <td>Cardboard</td>   </tr>   <tr>    <td>Foliage</td>   </tr>   <tr>    <td>Tape</td>   </tr>   <tr>    <td>Water</td>   </tr>   <tr>    <td>WaterSubmerged</td>   </tr>   <tr>    <td>RagdollHuman</td>   </tr>   <tr>    <td>Mechanical</td>   </tr>   <tr>    <td>Fruit</td>   </tr>   <tr>    <td>RagdollAnimal</td>   </tr>   <tr>    <td>Electronics</td>   </tr>   <tr>    <td>Sticky</td>   </tr>   <tr>    <td>Ice</td>   </tr>   <tr>    <td>Bubblewrap</td>   </tr>   <tr>    <td>Scrapmetal</td>   </tr>   <tr>    <td>Rewardlocker</td>   </tr>   <tr>    <td>Chili </td>   </tr>   <tr>    <td>VoxelBlueRock</td>   </tr>   <tr>    <td>VoxelPurpleRock</td>   </tr>   <tr>    <td>VoxelRedRock</td>   </tr>   <tr>    <td>VoxelBlueMineral</td>   </tr>   <tr>    <td>VoxelPurpleMineral</td>   </tr>   <tr>    <td>VoxelRedMineral</td>   </tr>  </table>
+  <hr>
+  <h2 class="code"><a id="createBlock"></a>sm.shape.createBlock(uuid, size, position, rotation?, dynamic?, forceSpawn?)</h2>
   <p>Server only</p>
   <p>Create a new block</p>
   <h4>Parameters:</h4>
@@ -162,9 +194,9 @@
    <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">uuid</td><td>The uuid of the shape.</td></tr>
    <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">size</td><td>The size of the block.</td></tr>
    <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The shape's world position.</td></tr>
-   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td class="code">rotation=nil</td><td>The shape's world rotation. Defaults to no rotation (Optional)</td></tr>
-   <tr><td class="code">boolean</td><td class="code">dynamic=true</td><td>Set true if the shape is dynamic or false if the shape is static. Defaults to true (Optional)</td></tr>
-   <tr><td class="code">boolean</td><td class="code">forceSpawn=true</td><td>Set true to force spawn the shape even if it will cause collision. Defaults to true (Optional)</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td class="code">rotation?</td><td>The shape's world rotation. Defaults to no rotation (Optional)</td></tr>
+   <tr><td class="code">boolean</td><td class="code">dynamic?</td><td>Set true if the shape is dynamic or false if the shape is static. Defaults to true (Optional)</td></tr>
+   <tr><td class="code">boolean</td><td class="code">forceSpawn?</td><td>Set true to force spawn the shape even if it will cause collision. Defaults to true (Optional)</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -172,7 +204,7 @@
    <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a>							The created block</td><td></td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="createPart"></a>sm.shape.createPart(uuid, position, rotation, dynamic=true, forceSpawn=true)</h2>
+  <h2 class="code"><a id="createPart"></a>sm.shape.createPart(uuid, position, rotation, dynamic?, forceSpawn?, world?)</h2>
   <p>Server only</p>
   <p>Create a new part</p>
   <h4>Parameters:</h4>
@@ -181,8 +213,9 @@
    <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">uuid</td><td>The uuid of the shape.</td></tr>
    <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The shape's world position.</td></tr>
    <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td class="code">rotation</td><td>The shape's world rotation. Defaults to no rotation (Optional)</td></tr>
-   <tr><td class="code">boolean</td><td class="code">dynamic=true</td><td>Set true if the shape is dynamic or false if the shape is static. Defaults to true (Optional)</td></tr>
-   <tr><td class="code">boolean</td><td class="code">forceSpawn=true</td><td>Set true to force spawn the shape even if it will cause collision. Defaults to true (Optional)</td></tr>
+   <tr><td class="code">boolean</td><td class="code">dynamic?</td><td>Set true if the shape is dynamic or false if the shape is static. Defaults to true (Optional)</td></tr>
+   <tr><td class="code">boolean</td><td class="code">forceSpawn?</td><td>Set true to force spawn the shape even if it will cause collision. Defaults to true (Optional)</td></tr>
+   <tr><td class="code"><a href="userdata_Game_World.html" class="code">World</a></td><td class="code">world?</td><td>The world to create the part in. Uses the script's world by default. (Optional)</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -190,7 +223,7 @@
    <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a>							The created part</td><td></td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="createWedge"></a>sm.shape.createWedge(uuid, size, position, rotation=nil, dynamic=true, forceSpawn=true)</h2>
+  <h2 class="code"><a id="createWedge"></a>sm.shape.createWedge(uuid, size, position, rotation?, dynamic?, forceSpawn?)</h2>
   <p>Server only</p>
   <p>Creates a wedge. The wedge is oriented with one </p>
   <p>cathetus along the Y-axis and the other along the Z-axis, forming a right angle. </p>
@@ -200,14 +233,40 @@
    <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">uuid</td><td>The uuid of the shape.</td></tr>
    <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">size</td><td>The size of the wedge.</td></tr>
    <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The shape's world position.</td></tr>
-   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td class="code">rotation=nil</td><td>The shape's world rotation. Defaults to no rotation (Optional)</td></tr>
-   <tr><td class="code">boolean</td><td class="code">dynamic=true</td><td>Set true if the shape is dynamic or false if the shape is static. Defaults to true (Optional)</td></tr>
-   <tr><td class="code">boolean</td><td class="code">forceSpawn=true</td><td>Set true to force spawn the shape even if it will cause collision. Defaults to true (Optional)</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td class="code">rotation?</td><td>The shape's world rotation. Defaults to no rotation (Optional)</td></tr>
+   <tr><td class="code">boolean</td><td class="code">dynamic?</td><td>Set true if the shape is dynamic or false if the shape is static. Defaults to true (Optional)</td></tr>
+   <tr><td class="code">boolean</td><td class="code">forceSpawn?</td><td>Set true to force spawn the shape even if it will cause collision. Defaults to true (Optional)</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
    <tr><th>Type</th><th>Description</th></tr>
    <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a>							The created wedge</td><td></td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getIsHarvest"></a>sm.shape.getIsHarvest(uuid)</h2>
+  <p>Return whether the shape uuid belongs to a harvest shape</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">uuid</td><td>The shape uuid.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>True if the shape is harvestable.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getIsStackable"></a>sm.shape.getIsStackable(uuid)</h2>
+  <p>Return whether the shape uuid belongs to a stackable shape</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">uuid</td><td>The shape uuid.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>True if the shape is stackable.</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="getShapeDescription"></a>sm.shape.getShapeDescription(uuid)</h2>
@@ -223,17 +282,12 @@
    <tr><td class="code">string</td><td>The shape description.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="getShapeIcon"></a>sm.shape.getShapeIcon(uuid)</h2>
-  <h4>Parameters:</h4>
-  <table>
-   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">uuid</td><td>The shape's uuid.</td></tr>
-  </table>
-  <h4>Returns:</h4>
-  <table>
-   <tr><th>Type</th><th>Description</th></tr>
-   <tr><td class="code">any</td><td>The shape's icon.</td></tr>
-  </table>
+  <h2 class="code"><a id="getShapeIcon"></a>sm.shape.getShapeIcon()</h2>
+  <div class="deprecated">
+   <h4>Deprecated:</h4>
+   <p>Deprecated function. Kept for compability with old scripts.</p>
+  </div>
+  <p>Does nothing.</p>
   <hr>
   <h2 class="code"><a id="getShapeTitle"></a>sm.shape.getShapeTitle(uuid)</h2>
   <p>Returns the block/part name for the given uuid.</p>
@@ -261,12 +315,39 @@
    <tr><td class="code"><a href="userdata_Game_Color.html" class="code">Color</a></td><td>The color of the shape type.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="uuidExists"></a>sm.shape.uuidExists(The)</h2>
+  <h2 class="code"><a id="getShapeUpperCaseTitle"></a>sm.shape.getShapeUpperCaseTitle(uuid)</h2>
+  <p>Returns the block/part name for the given uuid in uppercase as given in the inventory description translations. Defaults to the shape title if an upper case version does not exist.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">uuid</td><td>The uuid.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">string</td><td>The shape title in upper case.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="shapesInSphere"></a>sm.shape.shapesInSphere(center, radius)</h2>
+  <p>Returns a table of all shapes colliding with a given sphere.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">center</td><td>The center position of the sphere.</td></tr>
+   <tr><td class="code">number</td><td class="code">radius</td><td>The radius of the sphere.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td>The table of found shapes. {<a href="userdata_Game_Shape.html" class="code">Shape</a>, ..}</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="uuidExists"></a>sm.shape.uuidExists(uuid)</h2>
   <p>Return whether the shape uuid exists</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">The</td><td>shape uuid.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">uuid</td><td>The shape uuid.</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>

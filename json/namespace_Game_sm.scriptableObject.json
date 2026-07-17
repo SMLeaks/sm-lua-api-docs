@@ -22,12 +22,12 @@
 					],
 					[
 						"any",
-						"params=nil",
+						"params?",
 						"self.params on scriptable object."
 					],
 					[
 						"[World]",
-						"world=nil",
+						"world?",
 						"The world this script belongs to, for world dependent api calls. Defaults to [sm.world.ids, sm.world.ids.noWorld]"
 					]
 				],

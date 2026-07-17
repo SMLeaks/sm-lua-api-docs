@@ -32,13 +32,18 @@
 					],
 					[
 						"number",
-						"yaw=nil",
+						"yaw?",
 						"The initial yaw of the character (Optional)."
 					],
 					[
 						"number",
-						"pitch=nil",
+						"pitch?",
 						"The initial pitch of the character (Optional)."
+					],
+					[
+						"boolean",
+						"visible?",
+						"Whether the character is visible on spawn. Defaults to true. (Optional)"
 					]
 				],
 				"return": [

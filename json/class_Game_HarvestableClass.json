@@ -31,6 +31,11 @@
 				"any",
 				"params",
 				"Parameter sent to [sm.harvestable.create] or set in the terrain generation script."
+			],
+			[
+				"any",
+				"tags",
+				"The tags set on the harvestable from the editor."
 			]
 		]
 	},
@@ -275,24 +280,6 @@
 			"type": "serverEventCallback"
 		},
 		{
-			"name": "server_onReceiveUpdate",
-			"doc": {
-				"text": [
-					"Called occasionally on the [HarvestableClass] to indicate that some time has passed.",
-					"For performance reasons; it recommended to use this instead of [HarvestableClass.server_onFixedUpdate] for updates that do not need to happen frequently.",
-					"Use [sm.game.getCurrentTick] to calculate the time."
-				],
-				"params": [
-					[
-						"table",
-						"self",
-						"The class instance."
-					]
-				]
-			},
-			"type": "serverEventCallback"
-		},
-		{
 			"name": "client_onCollision",
 			"doc": {
 				"text": [
@@ -433,6 +420,11 @@
 						"[Uuid]",
 						"uuid",
 						"The uuid of the projectile."
+					],
+					[
+						"number",
+						"mass",
+						"The mass of the projectile."
 					]
 				]
 			},
@@ -497,6 +489,11 @@
 						"[Uuid]",
 						"uuid",
 						"The uuid of the projectile."
+					],
+					[
+						"number",
+						"mass",
+						"The mass of the projectile."
 					]
 				]
 			},
@@ -523,6 +520,11 @@
 						"integer",
 						"destructionLevel",
 						"The level of destruction done by this explosion. Corresponds to the \"durability\" rating of a [Shape]."
+					],
+					[
+						"integer",
+						"damage",
+						"The damage value of the explosion."
 					]
 				]
 			},
@@ -776,6 +778,38 @@
 				]
 			},
 			"type": "clientEventCallback"
+		},
+		{
+			"name": "server_onIgnite",
+			"doc": {
+				"text": [
+					"Called when the [Harvestable] is ignited by a nearby fire."
+				],
+				"params": [
+					[
+						"table",
+						"self",
+						"The class instance."
+					]
+				]
+			},
+			"type": "serverEventCallback"
+		},
+		{
+			"name": "server_onFloating",
+			"doc": {
+				"text": [
+					"Called when the [Harvestable] is floating."
+				],
+				"params": [
+					[
+						"table",
+						"self",
+						"The class instance."
+					]
+				]
+			},
+			"type": "serverEventCallback"
 		}
 	]
 }

@@ -3,7 +3,7 @@
 	"namespace_association": "sm.container",
 	"doc": {
 		"text": [
-			"A userdata object representing a <strong>container</strong> in the game."
+			"Represents a container"
 		]
 	},
 	"usage": "server and client",
@@ -146,6 +146,32 @@
 	],
 	"functions": [
 		{
+			"name": "bindOnTransaction",
+			"doc": {
+				"text": [
+					"Binds a container's onTransaction event to a custom callback. The event is triggered when a transaction is completed."
+				],
+				"params": [
+					[
+						"[Container]",
+						"container",
+						"The container instance."
+					],
+					[
+						"string",
+						"callback",
+						"The name of the Lua function to bind."
+					],
+					[
+						"table",
+						"object?",
+						"The object that will receive the callback. (optional)"
+					]
+				],
+				"server_only": true
+			}
+		},
+		{
 			"name": "canCollect",
 			"doc": {
 				"text": [
@@ -166,6 +192,37 @@
 						"integer",
 						"quantity",
 						"The number of items."
+					]
+				],
+				"return": [
+					[
+						"boolean",
+						"Indicates if the action is possible."
+					]
+				]
+			}
+		},
+		{
+			"name": "canCollectAll",
+			"doc": {
+				"text": [
+					"Checks if the container can collect a set of items."
+				],
+				"params": [
+					[
+						"[Container]",
+						"container",
+						"The container."
+					],
+					[
+						"table",
+						"uuids",
+						"The uuids of items to check."
+					],
+					[
+						"table",
+						"quantities",
+						"The number of items of each uuid. Needs to match the number of uuids."
 					]
 				],
 				"return": [
@@ -205,6 +262,59 @@
 						"Indicates if the action is possible."
 					]
 				]
+			}
+		},
+		{
+			"name": "clear",
+			"doc": {
+				"text": [
+					"Clears out the contents of the container."
+				],
+				"params": [
+					[
+						"[Container]",
+						"container",
+						"The container."
+					]
+				],
+				"server_only": true
+			}
+		},
+		{
+			"name": "collect",
+			"doc": {
+				"text": [
+					"Adds a quantity of a given item to a container."
+				],
+				"params": [
+					[
+						"[Container]",
+						"container",
+						"The container."
+					],
+					[
+						"[Uuid]",
+						"itemUuid",
+						"The uuid of the item."
+					],
+					[
+						"integer",
+						"quantity",
+						"The number of items."
+					],
+					[
+						"boolean",
+						"mustCollectAll?",
+						"Must collect all items for the transaction to be valid. Defaults to true. (Optional)"
+					]
+				],
+				"return": [
+					[
+						"integer",
+						"The number of items successfully added."
+					]
+				],
+				"server_only": true
 			}
 		},
 		{
@@ -299,6 +409,27 @@
 			}
 		},
 		{
+			"name": "getRevision",
+			"doc": {
+				"text": [
+					"Returns the network revision number of the container."
+				],
+				"params": [
+					[
+						"[Container]",
+						"container",
+						"The container."
+					]
+				],
+				"return": [
+					[
+						"number",
+						"The revision"
+					]
+				]
+			}
+		},
+		{
 			"name": "getSize",
 			"doc": {
 				"text": [
@@ -365,6 +496,53 @@
 						"Returns true if the container is empty."
 					]
 				]
+			}
+		},
+		{
+			"name": "isFull",
+			"doc": {
+				"text": [
+					"Returns true if all container slots in the container is at max capacity."
+				],
+				"params": [
+					[
+						"[Container]",
+						"container",
+						"The container."
+					]
+				],
+				"return": [
+					[
+						"boolean",
+						"Returns true if the container is empty."
+					]
+				]
+			}
+		},
+		{
+			"name": "resize",
+			"doc": {
+				"text": [
+					"Resize a container."
+				],
+				"params": [
+					[
+						"[Container]",
+						"container",
+						"The container instance."
+					],
+					[
+						"integer",
+						"size",
+						"The new size of the container."
+					],
+					[
+						"integer",
+						"stackSize?",
+						"The stack size. Defaults to maximum possible stack size(65535)."
+					]
+				],
+				"server_only": true
 			}
 		},
 		{
@@ -458,8 +636,8 @@
 						"The number of items."
 					],
 					[
-						"integer=nil",
-						"instance",
+						"integer",
+						"instance?",
 						"The instance id, if the item is a tool. (Optional)"
 					]
 				],
@@ -479,7 +657,7 @@
 			"doc": {
 				"meta": [
 					[
-						"[Container],[Container]",
+						"[Container],[Container],boolean",
 						"Checks if two instances of [Container] refer to the same Container."
 					]
 				]

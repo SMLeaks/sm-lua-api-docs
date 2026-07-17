@@ -157,6 +157,43 @@
 	],
 	"functions": [
 		{
+			"name": "addContainer",
+			"doc": {
+				"text": [
+					"Creates and stores a container in the given index inside the unit."
+				],
+				"params": [
+					[
+						"[Unit]",
+						"unit",
+						"The unit."
+					],
+					[
+						"integer",
+						"index",
+						"The index of the container [0-15]."
+					],
+					[
+						"integer",
+						"size",
+						"The number of slots in the container."
+					],
+					[
+						"integer",
+						"stackSize?",
+						"The stack size. Defaults to maximum possible stack size(65535)."
+					]
+				],
+				"return": [
+					[
+						"[Container]",
+						"The created container."
+					]
+				],
+				"server_only": true
+			}
+		},
+		{
 			"name": "createState",
 			"doc": {
 				"text": [
@@ -219,6 +256,32 @@
 					]
 				],
 				"server_only": true
+			}
+		},
+		{
+			"name": "getContainer",
+			"doc": {
+				"text": [
+					"Returns the container stored in the given index inside the unit."
+				],
+				"params": [
+					[
+						"[Unit]",
+						"unit",
+						"The unit."
+					],
+					[
+						"integer",
+						"index?",
+						"The index of the container (default: 0)."
+					]
+				],
+				"return": [
+					[
+						"[Container]",
+						"The container."
+					]
+				]
 			}
 		},
 		{
@@ -304,6 +367,27 @@
 					[
 						"table",
 						"The public data."
+					]
+				],
+				"server_only": true
+			}
+		},
+		{
+			"name": "removeContainer",
+			"doc": {
+				"text": [
+					"Removes the container stored in the given index inside the unit."
+				],
+				"params": [
+					[
+						"[Unit]",
+						"unit",
+						"The unit."
+					],
+					[
+						"integer",
+						"index",
+						"The index of the container."
 					]
 				],
 				"server_only": true
@@ -437,6 +521,27 @@
 			}
 		},
 		{
+			"name": "setWantsCrouch",
+			"doc": {
+				"text": [
+					"Set a unit to crouch"
+				],
+				"params": [
+					[
+						"[Unit]",
+						"unit",
+						"The unit."
+					],
+					[
+						"boolean",
+						"wantCrouch",
+						"True if the unit should crouch"
+					]
+				],
+				"server_only": true
+			}
+		},
+		{
 			"name": "setWantsJump",
 			"doc": {
 				"text": [
@@ -500,7 +605,7 @@
 			"doc": {
 				"meta": [
 					[
-						"[Unit],[Unit]",
+						"[Unit],[Unit],boolean",
 						"Checks if two instances of [Unit] refer to the same Unit."
 					]
 				]

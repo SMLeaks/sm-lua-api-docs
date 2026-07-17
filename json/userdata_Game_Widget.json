@@ -232,7 +232,7 @@
 			"doc": {
 				"meta": [
 					[
-						"[Widget],[Widget]",
+						"[Widget],[Widget],boolean",
 						"Checks if two instances of [Widget] refer to the same Widget."
 					]
 				]

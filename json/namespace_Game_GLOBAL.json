@@ -15,9 +15,15 @@
 				],
 				"params": [
 					[
-						"string",
-						"base=nil",
+						"table",
+						"base?",
 						"An optional base class to inherit from. (Defaults to inheriting from no class)"
+					]
+				],
+				"return": [
+					[
+						"table",
+						"Class table."
 					]
 				]
 			}
@@ -33,6 +39,27 @@
 						"string",
 						"filename",
 						"The name of the file to be loaded."
+					]
+				]
+			}
+		},
+		{
+			"name": "enumType",
+			"doc": {
+				"text": [
+					"Returns the type of an object as an enum integer. This includes standard Lua types and userdata types specific to this API."
+				],
+				"params": [
+					[
+						"any",
+						"object",
+						"The object instance."
+					]
+				],
+				"return": [
+					[
+						"integer",
+						"The object type."
 					]
 				]
 			}

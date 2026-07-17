@@ -17,6 +17,7 @@
   <h3>Classes</h3>
   <ul>
    <li><a href="class_Game_CharacterClass.html" class="code">CharacterClass</a></li>
+   <li><a href="class_Game_ClientScriptableObjectClass.html" class="code">ClientScriptableObjectClass</a></li>
    <li><a href="class_Game_GameClass.html" class="code">GameClass</a></li>
    <li><a href="class_Game_HarvestableClass.html" class="code">HarvestableClass</a></li>
    <li><a href="class_Game_PlayerClass.html" class="code">PlayerClass</a></li>
@@ -34,14 +35,18 @@
    <li><a href="userdata_Game_Body.html" class="code">Body</a></li>
    <li><a href="userdata_Game_BuilderGuide.html" class="code">BuilderGuide</a></li>
    <li><a href="userdata_Game_Character.html" class="code">Character</a></li>
+   <li><a href="userdata_Game_ClientScriptableObject.html" class="code">ClientScriptableObject</a></li>
    <li><a href="userdata_Game_Color.html" class="code">Color</a></li>
    <li><a href="userdata_Game_Container.html" class="code">Container</a></li>
    <li><a href="userdata_Game_CullSphereGroup.html" class="code">CullSphereGroup</a></li>
    <li><a href="userdata_Game_Effect.html" class="code">Effect</a></li>
+   <li><a href="userdata_Game_Garage.html" class="code">Garage</a></li>
    <li><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></li>
    <li><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></li>
    <li><a href="userdata_Game_Interactable.html" class="code">Interactable</a></li>
    <li><a href="userdata_Game_Joint.html" class="code">Joint</a></li>
+   <li><a href="userdata_Game_JsonGui.html" class="code">JsonGui</a></li>
+   <li><a href="userdata_Game_JsonWidget.html" class="code">JsonWidget</a></li>
    <li><a href="userdata_Game_Lift.html" class="code">Lift</a></li>
    <li><a href="userdata_Game_LoadCellHandle.html" class="code">LoadCellHandle</a></li>
    <li><a href="userdata_Game_Network.html" class="code">Network</a></li>
@@ -73,6 +78,7 @@
    <li><a href="namespace_Game_sm_cell.html" class="code">sm.cell</a></li>
    <li><a href="namespace_Game_sm_challenge.html" class="code">sm.challenge</a></li>
    <li><a href="namespace_Game_sm_character.html" class="code">sm.character</a></li>
+   <li><a href="namespace_Game_sm_clientScriptableObject.html" class="code">sm.clientScriptableObject</a></li>
    <li><a href="namespace_Game_sm_color.html" class="code">sm.color</a></li>
    <li><a href="namespace_Game_sm_construction.html" class="code">sm.construction</a></li>
    <li><a href="namespace_Game_sm_container.html" class="code">sm.container</a></li>
@@ -80,9 +86,11 @@
    <li><a href="namespace_Game_sm_cullSphereGroup.html" class="code">sm.cullSphereGroup</a></li>
    <li><a href="namespace_Game_sm_debris.html" class="code">sm.debris</a></li>
    <li><a href="namespace_Game_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
+   <li><a href="namespace_Game_sm_debugGui.html" class="code">sm.debugGui</a></li>
    <li><a href="namespace_Game_sm_effect.html" class="code">sm.effect</a></li>
    <li><a href="namespace_Game_sm_event.html" class="code">sm.event</a></li>
    <li><a href="namespace_Game_sm_game.html" class="code">sm.game</a></li>
+   <li><a href="namespace_Game_sm_garage.html" class="code">sm.garage</a></li>
    <li><a href="namespace_Game_sm_gui.html" class="code">sm.gui</a></li>
    <li><a href="namespace_Game_sm_gui_widget.html" class="code">sm.gui.widget</a></li>
    <li><a href="namespace_Game_sm_harvestable.html" class="code">sm.harvestable</a></li>
@@ -90,15 +98,19 @@
    <li><a href="namespace_Game_sm_item.html" class="code">sm.item</a></li>
    <li><a href="namespace_Game_sm_joint.html" class="code">sm.joint</a></li>
    <li><a href="namespace_Game_sm_json.html" class="code">sm.json</a></li>
+   <li><a href="namespace_Game_sm_jsonGui.html" class="code">sm.jsonGui</a></li>
+   <li><a href="namespace_Game_sm_lift.html" class="code">sm.lift</a></li>
    <li><a href="namespace_Game_sm_localPlayer.html" class="code">sm.localPlayer</a></li>
    <li><a href="namespace_Game_sm_log.html" class="code">sm.log</a></li>
    <li><a href="namespace_Game_sm_melee.html" class="code">sm.melee</a></li>
    <li><a href="namespace_Game_sm_menuCreation.html" class="code">sm.menuCreation</a></li>
+   <li><a href="namespace_Game_sm_message.html" class="code">sm.message</a></li>
    <li><a href="namespace_Game_sm_noise.html" class="code">sm.noise</a></li>
    <li><a href="namespace_Game_sm_particle.html" class="code">sm.particle</a></li>
    <li><a href="namespace_Game_sm_pathNode.html" class="code">sm.pathNode</a></li>
    <li><a href="namespace_Game_sm_pathfinder.html" class="code">sm.pathfinder</a></li>
    <li><a href="namespace_Game_sm_physics.html" class="code">sm.physics</a></li>
+   <li><a href="namespace_Game_sm_pipeGraph.html" class="code">sm.pipeGraph</a></li>
    <li><a href="namespace_Game_sm_player.html" class="code">sm.player</a></li>
    <li><a href="namespace_Game_sm_portal.html" class="code">sm.portal</a></li>
    <li><a href="namespace_Game_sm_projectile.html" class="code">sm.projectile</a></li>
@@ -122,8 +134,12 @@
   <h3>Object Types 'userdata'</h3>
   <ul>
    <li><a href="userdata_Terrain_Color.html" class="code">Color</a></li>
+   <li><a href="userdata_Terrain_Container.html" class="code">Container</a></li>
    <li><a href="userdata_Terrain_Harvestable.html" class="code">Harvestable</a></li>
+   <li><a href="userdata_Terrain_Interactable.html" class="code">Interactable</a></li>
+   <li><a href="userdata_Terrain_Portal.html" class="code">Portal</a></li>
    <li><a href="userdata_Terrain_Quat.html" class="code">Quat</a></li>
+   <li><a href="userdata_Terrain_ScriptableObject.html" class="code">ScriptableObject</a></li>
    <li><a href="userdata_Terrain_Uuid.html" class="code">Uuid</a></li>
    <li><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></li>
    <li><a href="userdata_Terrain_World.html" class="code">World</a></li>
@@ -133,33 +149,44 @@
    <li><a href="namespace_Terrain_GLOBAL.html" class="code">GLOBAL</a></li>
    <li><a href="namespace_Terrain_sm.html" class="code">sm</a></li>
    <li><a href="namespace_Terrain_sm_color.html" class="code">sm.color</a></li>
+   <li><a href="namespace_Terrain_sm_container.html" class="code">sm.container</a></li>
    <li><a href="namespace_Terrain_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
-   <li><a href="namespace_Terrain_sm_harvestable.html" class="code">sm.harvestable</a></li>
+   <li><a href="namespace_Terrain_sm_debugGui.html" class="code">sm.debugGui</a></li>
+   <li><a href="namespace_Terrain_sm_interactable.html" class="code">sm.interactable</a></li>
    <li><a href="namespace_Terrain_sm_json.html" class="code">sm.json</a></li>
    <li><a href="namespace_Terrain_sm_log.html" class="code">sm.log</a></li>
    <li><a href="namespace_Terrain_sm_noise.html" class="code">sm.noise</a></li>
    <li><a href="namespace_Terrain_sm_quat.html" class="code">sm.quat</a></li>
+   <li><a href="namespace_Terrain_sm_scriptableObject.html" class="code">sm.scriptableObject</a></li>
    <li><a href="namespace_Terrain_sm_terrainData.html" class="code">sm.terrainData</a></li>
    <li><a href="namespace_Terrain_sm_terrainGeneration.html" class="code">sm.terrainGeneration</a></li>
+   <li><a href="namespace_Terrain_sm_terrainHarvestable.html" class="code">sm.terrainHarvestable</a></li>
    <li><a href="namespace_Terrain_sm_terrainTile.html" class="code">sm.terrainTile</a></li>
+   <li><a href="namespace_Terrain_sm_tunnelGenerator.html" class="code">sm.tunnelGenerator</a></li>
    <li><a href="namespace_Terrain_sm_util.html" class="code">sm.util</a></li>
    <li><a href="namespace_Terrain_sm_uuid.html" class="code">sm.uuid</a></li>
    <li><a href="namespace_Terrain_sm_vec3.html" class="code">sm.vec3</a></li>
+   <li><a href="namespace_Terrain_sm_voxelTerrainCell.html" class="code">sm.voxelTerrainCell</a></li>
   </ul>
  </div>
  <div id="content">
   <h1 class="code">sm.terrainTile</h1>
   <p>Reads .tile file data</p>
-  <h4>Functions:</h4  <ul>   <li><a href="#getAssetsForCell" class="code">getAssetsForCell</a></li>   <li><a href="#getClutterIdxAt" class="code">getClutterIdxAt</a></li>   <li><a href="#getColorAt" class="code">getColorAt</a></li>   <li><a href="#getContentFromPrefab" class="code">getContentFromPrefab</a></li>   <li><a href="#getCreationsForCell" class="code">getCreationsForCell</a></li>   <li><a href="#getCreatorId" class="code">getCreatorId</a></li>   <li><a href="#getDecalsForCell" class="code">getDecalsForCell</a></li>   <li><a href="#getHarvestablesForCell" class="code">getHarvestablesForCell</a></li>   <li><a href="#getHeightAt" class="code">getHeightAt</a></li>   <li><a href="#getKinematicsForCell" class="code">getKinematicsForCell</a></li>   <li><a href="#getMaterialAt" class="code">getMaterialAt</a></li>   <li><a href="#getNodesForCell" class="code">getNodesForCell</a></li>   <li><a href="#getPrefabsForCell" class="code">getPrefabsForCell</a></li>   <li><a href="#getSize" class="code">getSize</a></li>   <li><a href="#getTileUuid" class="code">getTileUuid</a></li>  </ul>  <hr>
-  <h2 class="code"><a id="getAssetsForCell"></a>sm.terrainTile.getAssetsForCell(tileId, tileOffsetX, tileOffsetY, sizeLevel)</h2>
+  <h4>Constants:</h4>  <ul>   <li><a href="#loadFlags" class="code">loadFlags</a></li>  </ul>  <h4>Functions:</h4  <ul>   <li><a href="#getAssetsForCell" class="code">getAssetsForCell</a></li>   <li><a href="#getClutterIdxAt" class="code">getClutterIdxAt</a></li>   <li><a href="#getColorAt" class="code">getColorAt</a></li>   <li><a href="#getContentFromPrefab" class="code">getContentFromPrefab</a></li>   <li><a href="#getCreationsForCell" class="code">getCreationsForCell</a></li>   <li><a href="#getCreatorId" class="code">getCreatorId</a></li>   <li><a href="#getDecalsForCell" class="code">getDecalsForCell</a></li>   <li><a href="#getHarvestablesForCell" class="code">getHarvestablesForCell</a></li>   <li><a href="#getHeightAt" class="code">getHeightAt</a></li>   <li><a href="#getKinematicsForCell" class="code">getKinematicsForCell</a></li>   <li><a href="#getMaterialAt" class="code">getMaterialAt</a></li>   <li><a href="#getNodesForCell" class="code">getNodesForCell</a></li>   <li><a href="#getPrefabsForCell" class="code">getPrefabsForCell</a></li>   <li><a href="#getSize" class="code">getSize</a></li>   <li><a href="#getTileUuid" class="code">getTileUuid</a></li>  </ul>  <hr>
+  <h2 class="code"><a id="loadFlags"></a>sm.terrainTile.loadFlags <i>table</i></h2>
+  <p>Prefab content load flags.</p>
+  <table>
+   <tr>    <td>creations</td>   </tr>   <tr>    <td>nodes</td>   </tr>   <tr>    <td>assets</td>   </tr>   <tr>    <td>decals</td>   </tr>   <tr>    <td>harvestables</td>   </tr>   <tr>    <td>kinematics</td>   </tr>   <tr>    <td>voxelMeshes</td>   </tr>   <tr>    <td>all</td>   </tr>  </table>
+  <hr>
+  <h2 class="code"><a id="getAssetsForCell"></a>sm.terrainTile.getAssetsForCell(tileUid, cellOffsetX, cellOffsetY, sizeLevel)</h2>
   <p>Returns a table of all assets in a terrain cell.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code"><a href="userdata_Terrain_Uuid.html" class="code">Uuid</a></td><td class="code">tileId</td><td>The tile id.</td></tr>
-   <tr><td class="code">integer</td><td class="code">tileOffsetX</td><td>The tile offset X.</td></tr>
-   <tr><td class="code">integer</td><td class="code">tileOffsetY</td><td>The tile offset Y.</td></tr>
-   <tr><td class="code">integer</td><td class="code">sizeLevel</td><td>The size level of asset.</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Uuid.html" class="code">Uuid</a></td><td class="code">tileUid</td><td>The tile uuid.</td></tr>
+   <tr><td class="code">integer</td><td class="code">cellOffsetX</td><td>The cell X offset.</td></tr>
+   <tr><td class="code">integer</td><td class="code">cellOffsetY</td><td>The cell Y offset.</td></tr>
+   <tr><td class="code">integer</td><td class="code">sizeLevel</td><td>The size level of asset. [0-3]</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -167,71 +194,71 @@
    <tr><td class="code">table</td><td>A table { { uuid = <a href="userdata_Terrain_Uuid.html" class="code">Uuid</a>, pos = <a href="userdata_Terrain_Vec3.html" class="code">Vec3</a>, rot = <a href="userdata_Terrain_Quat.html" class="code">Quat</a>, colors = { string = <a href="userdata_Terrain_Color.html" class="code">Color</a>, ...}, tags = { string, ... } }, ... } of assets in the cell.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="getClutterIdxAt"></a>sm.terrainTile.getClutterIdxAt(tileId, tileOffsetX, tileOffsetY, x, y)</h2>
-  <p>Returns the clutter index at position (X,Y) in a tile.</p>
+  <h2 class="code"><a id="getClutterIdxAt"></a>sm.terrainTile.getClutterIdxAt(tileUid, cellOffsetX, cellOffsetY, x, y)</h2>
+  <p>Returns the clutter index at position (x,y) in a tile cell.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code">integer</td><td class="code">tileId</td><td>The tile id.</td></tr>
-   <tr><td class="code">integer</td><td class="code">tileOffsetX</td><td>The tile offset X.</td></tr>
-   <tr><td class="code">integer</td><td class="code">tileOffsetY</td><td>The tile offset Y.</td></tr>
-   <tr><td class="code">integer</td><td class="code">x</td><td>The X.</td></tr>
-   <tr><td class="code">integer</td><td class="code">y</td><td>The Y.</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Uuid.html" class="code">Uuid</a></td><td class="code">tileUid</td><td>The tile uuid.</td></tr>
+   <tr><td class="code">integer</td><td class="code">cellOffsetX</td><td>The cell X offset.</td></tr>
+   <tr><td class="code">integer</td><td class="code">cellOffsetY</td><td>The cell Y offset.</td></tr>
+   <tr><td class="code">integer</td><td class="code">x</td><td>The local X value.</td></tr>
+   <tr><td class="code">integer</td><td class="code">y</td><td>The local Y value.</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
    <tr><th>Type</th><th>Description</th></tr>
-   <tr><td class="code">number</td><td>The clutter index.</td></tr>
+   <tr><td class="code">integer</td><td>The clutter index.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="getColorAt"></a>sm.terrainTile.getColorAt(tileId, tileOffsetX, tileOffsetY, lod, x, y)</h2>
-  <p>Returns the terrain color at position (X,Y) in a tile.</p>
+  <h2 class="code"><a id="getColorAt"></a>sm.terrainTile.getColorAt(tileUid, cellOffsetX, cellOffsetY, lod, x, y)</h2>
+  <p>Returns the terrain color at position (x,y) in a tile cell.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code">integer</td><td class="code">tileId</td><td>The tile id.</td></tr>
-   <tr><td class="code">integer</td><td class="code">tileOffsetX</td><td>The tile offset X.</td></tr>
-   <tr><td class="code">integer</td><td class="code">tileOffsetY</td><td>The tile offset Y.</td></tr>
-   <tr><td class="code">integer</td><td class="code">lod</td><td>The level of detail.</td></tr>
-   <tr><td class="code">integer</td><td class="code">x</td><td>The X.</td></tr>
-   <tr><td class="code">integer</td><td class="code">y</td><td>The Y.</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Uuid.html" class="code">Uuid</a></td><td class="code">tileUid</td><td>The tile uuid.</td></tr>
+   <tr><td class="code">integer</td><td class="code">cellOffsetX</td><td>The cell X offset.</td></tr>
+   <tr><td class="code">integer</td><td class="code">cellOffsetY</td><td>The cell Y offset.</td></tr>
+   <tr><td class="code">integer</td><td class="code">lod</td><td>The level of detail. [0-5]</td></tr>
+   <tr><td class="code">integer</td><td class="code">x</td><td>The local X value.</td></tr>
+   <tr><td class="code">integer</td><td class="code">y</td><td>The local Y value.</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
    <tr><th>Type</th><th>Description</th></tr>
-   <tr><td class="code">number</td><td>The color R value.</td></tr>
-   <tr><td class="code">number</td><td>The color G value.</td></tr>
-   <tr><td class="code">number</td><td>The color B value.</td></tr>
+   <tr><td class="code">number,number,number</td><td>The color R, G, B values.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="getContentFromPrefab"></a>sm.terrainTile.getContentFromPrefab(prefabPath, loadFlags)</h2>
-  <p>Returns the content of prefab.</p>
+  <h2 class="code"><a id="getContentFromPrefab"></a>sm.terrainTile.getContentFromPrefab(prefabPath, loadFlags?)</h2>
+  <p>Returns the content of a prefab.</p>
+  <p>Return value 1: A table of creations in the prefab. { { name = string, pos = <a href="userdata_Terrain_Vec3.html" class="code">Vec3</a>, rot = <a href="userdata_Terrain_Quat.html" class="code">Quat</a>, sortingIndex = integer, tags = { string, ... } }, ... }</p>
+  <p>Return value 2: A table of prefabs in the prefab. { { name = string, pos = <a href="userdata_Terrain_Vec3.html" class="code">Vec3</a>, rot = <a href="userdata_Terrain_Vec3.html" class="code">Vec3</a>, scale = <a href="userdata_Terrain_Vec3.html" class="code">Vec3</a>, tags = { string, ... }, flags = integer }, ... }</p>
+  <p>Return value 3: A table of nodes in the prefab. { { pos = <a href="userdata_Terrain_Vec3.html" class="code">Vec3</a>, rot = <a href="userdata_Terrain_Quat.html" class="code">Quat</a>, scale = <a href="userdata_Terrain_Vec3.html" class="code">Vec3</a>, tags = { string, ... }, params = table } }</p>
+  <p>Return value 4: A table of assets in the prefab. { { uuid = <a href="userdata_Terrain_Uuid.html" class="code">Uuid</a>, pos = <a href="userdata_Terrain_Vec3.html" class="code">Vec3</a>, rot = <a href="userdata_Terrain_Quat.html" class="code">Quat</a>, slopeNormal = <a href="userdata_Terrain_Vec3.html" class="code">Vec3</a>, colors = { string = <a href="userdata_Terrain_Color.html" class="code">Color</a>, ...}, tags = { string, ... } }, ... }</p>
+  <p>Return value 5: A table of decals in the prefab. { { pos = <a href="userdata_Terrain_Vec3.html" class="code">Vec3</a>, rot = <a href="userdata_Terrain_Vec3.html" class="code">Vec3</a>, scale = <a href="userdata_Terrain_Vec3.html" class="code">Vec3</a>, decalId = integer, color = <a href="userdata_Terrain_Color.html" class="code">Color</a>, layer = integer,  tags = { string, ... } }, ... }</p>
+  <p>Return value 6: A table of harvestables in the prefab. { {uuid = <a href="userdata_Terrain_Uuid.html" class="code">Uuid</a>, pos = <a href="userdata_Terrain_Vec3.html" class="code">Vec3</a>, rot = <a href="userdata_Terrain_Quat.html" class="code">Quat</a>, color = <a href="userdata_Terrain_Color.html" class="code">Color</a>, params = table, tags = { string, ... } }, ... }</p>
+  <p>Return value 7: A table of kinematics in the prefab. { {uuid = <a href="userdata_Terrain_Uuid.html" class="code">Uuid</a>, pos = <a href="userdata_Terrain_Vec3.html" class="code">Vec3</a>, rot = <a href="userdata_Terrain_Quat.html" class="code">Quat</a>, scale = <a href="userdata_Terrain_Vec3.html" class="code">Vec3</a>, color = <a href="userdata_Terrain_Color.html" class="code">Color</a>, params = table, tags = { string, ... } }, .. }</p>
+  <p>Return value 8: A table containing the min and max bounds of the prefab. { min = <a href="userdata_Terrain_Vec3.html" class="code">Vec3</a>, max = <a href="userdata_Terrain_Vec3.html" class="code">Vec3</a> }</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code">string</td><td class="code">prefabPath</td><td>The path to the prefab file.</td></tr>
-   <tr><td class="code">integer</td><td class="code">loadFlags</td><td>A mask of content to load</td></tr>
+   <tr><td class="code">integer</td><td class="code">loadFlags?</td><td>A mask of content to load. Defaults to all objects (optional)</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
    <tr><th>Type</th><th>Description</th></tr>
-   <tr><td class="code">table</td><td>A table { { name = string, pos = <a href="userdata_Terrain_Vec3.html" class="code">Vec3</a>, rot = <a href="userdata_Terrain_Quat.html" class="code">Quat</a>, sortingIndex = integer, tags = { string, ... } }, ... } of creations in the prefab.</td></tr>
-   <tr><td class="code">table</td><td>A table { { name = string, pos = <a href="userdata_Terrain_Vec3.html" class="code">Vec3</a>, rot = <a href="userdata_Terrain_Vec3.html" class="code">Vec3</a>, scale = <a href="userdata_Terrain_Vec3.html" class="code">Vec3</a>, tags = { string, ... }, flags = integer }, ... } of prefabs in the prefab.</td></tr>
-   <tr><td class="code">table</td><td>A table { { pos = <a href="userdata_Terrain_Vec3.html" class="code">Vec3</a>, rot = <a href="userdata_Terrain_Quat.html" class="code">Quat</a>, scale = <a href="userdata_Terrain_Vec3.html" class="code">Vec3</a>, tags = { string, ... }, params = table } } of nodes in the prefab.</td></tr>
-   <tr><td class="code">table</td><td>A table { { uuid = <a href="userdata_Terrain_Uuid.html" class="code">Uuid</a>, pos = <a href="userdata_Terrain_Vec3.html" class="code">Vec3</a>, rot = <a href="userdata_Terrain_Quat.html" class="code">Quat</a>, slopeNormal = <a href="userdata_Terrain_Vec3.html" class="code">Vec3</a>, colors = { string = <a href="userdata_Terrain_Color.html" class="code">Color</a>, ...}, tags = { string, ... } }, ... } of assets in the prefab.</td></tr>
-   <tr><td class="code">table</td><td>A table { { pos = <a href="userdata_Terrain_Vec3.html" class="code">Vec3</a>, rot = <a href="userdata_Terrain_Vec3.html" class="code">Vec3</a>, scale = <a href="userdata_Terrain_Vec3.html" class="code">Vec3</a>, decalId = integer, color = <a href="userdata_Terrain_Color.html" class="code">Color</a>, layer = integer,  tags = { string, ... } }, ... } of decals in the prefab.</td></tr>
-   <tr><td class="code">table</td><td>A table { {uuid = <a href="userdata_Terrain_Uuid.html" class="code">Uuid</a>, pos = <a href="userdata_Terrain_Vec3.html" class="code">Vec3</a>, rot = <a href="userdata_Terrain_Quat.html" class="code">Quat</a>, color = <a href="userdata_Terrain_Color.html" class="code">Color</a>, params = table, tags = { string, ... } }, ... } of harvestables in the prefab.</td></tr>
-   <tr><td class="code">table</td><td>A table { {uuid = <a href="userdata_Terrain_Uuid.html" class="code">Uuid</a>, pos = <a href="userdata_Terrain_Vec3.html" class="code">Vec3</a>, rot = <a href="userdata_Terrain_Quat.html" class="code">Quat</a>, scale = <a href="userdata_Terrain_Vec3.html" class="code">Vec3</a>, color = <a href="userdata_Terrain_Color.html" class="code">Color</a>, params = table, tags = { string, ... } }, .. } of kinematics in the prefab.</td></tr>
+   <tr><td class="code">table,table,table,table,table,table,table,table</td><td>Prefab content tables.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="getCreationsForCell"></a>sm.terrainTile.getCreationsForCell(tileId, tileOffsetX, tileOffsetY)</h2>
+  <h2 class="code"><a id="getCreationsForCell"></a>sm.terrainTile.getCreationsForCell(tileUid, cellOffsetX, cellOffsetY)</h2>
   <p>Returns a table of all creations in a terrain cell.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code"><a href="userdata_Terrain_Uuid.html" class="code">Uuid</a></td><td class="code">tileId</td><td>The tile id.</td></tr>
-   <tr><td class="code">integer</td><td class="code">tileOffsetX</td><td>The tile offset X.</td></tr>
-   <tr><td class="code">integer</td><td class="code">tileOffsetY</td><td>The tile offset Y.</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Uuid.html" class="code">Uuid</a></td><td class="code">tileUid</td><td>The tile uuid.</td></tr>
+   <tr><td class="code">integer</td><td class="code">cellOffsetX</td><td>The cell X offset.</td></tr>
+   <tr><td class="code">integer</td><td class="code">cellOffsetY</td><td>The cell Y offset.</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -252,14 +279,14 @@
    <tr><td class="code">string</td><td>The creator's id.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="getDecalsForCell"></a>sm.terrainTile.getDecalsForCell(id, X-offset, Y-offset)</h2>
+  <h2 class="code"><a id="getDecalsForCell"></a>sm.terrainTile.getDecalsForCell(tileUid, cellOffsetX, cellOffsetY)</h2>
   <p>Returns all decals for a cell in a tile.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code"><a href="userdata_Terrain_Uuid.html" class="code">Uuid</a></td><td class="code">id</td><td>The tile id</td></tr>
-   <tr><td class="code">integer</td><td class="code">X-offset</td><td>The offset along the X axis</td></tr>
-   <tr><td class="code">integer</td><td class="code">Y-offset</td><td>The offset along the Y axis</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Uuid.html" class="code">Uuid</a></td><td class="code">tileUid</td><td>The tile uuid.</td></tr>
+   <tr><td class="code">integer</td><td class="code">cellOffsetX</td><td>The cell X offset.</td></tr>
+   <tr><td class="code">integer</td><td class="code">cellOffsetY</td><td>The cell Y offset.</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -267,15 +294,15 @@
    <tr><td class="code">table</td><td>A table { { pos = <a href="userdata_Terrain_Vec3.html" class="code">Vec3</a>, rot = <a href="userdata_Terrain_Vec3.html" class="code">Vec3</a>, scale = <a href="userdata_Terrain_Vec3.html" class="code">Vec3</a>, decalId = integer, color = <a href="userdata_Terrain_Color.html" class="code">Color</a>, layer = integer,  tags = { string, ... } }, ... } of decals in the cell.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="getHarvestablesForCell"></a>sm.terrainTile.getHarvestablesForCell(tileId, tileOffsetX, tileOffsetY, sizeLevel)</h2>
+  <h2 class="code"><a id="getHarvestablesForCell"></a>sm.terrainTile.getHarvestablesForCell(tileUid, cellOffsetX, cellOffsetY, sizeLevel)</h2>
   <p>Returns a table of all harvestables in a terrain cell.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code"><a href="userdata_Terrain_Uuid.html" class="code">Uuid</a></td><td class="code">tileId</td><td>The tile id.</td></tr>
-   <tr><td class="code">integer</td><td class="code">tileOffsetX</td><td>The tile offset X.</td></tr>
-   <tr><td class="code">integer</td><td class="code">tileOffsetY</td><td>The tile offset Y.</td></tr>
-   <tr><td class="code">integer</td><td class="code">sizeLevel</td><td>The size level of harvestables.</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Uuid.html" class="code">Uuid</a></td><td class="code">tileUid</td><td>The tile uuid.</td></tr>
+   <tr><td class="code">integer</td><td class="code">cellOffsetX</td><td>The cell X offset.</td></tr>
+   <tr><td class="code">integer</td><td class="code">cellOffsetY</td><td>The cell Y offset.</td></tr>
+   <tr><td class="code">integer</td><td class="code">sizeLevel</td><td>The size level of harvestables. [0-3]</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -283,17 +310,17 @@
    <tr><td class="code">table</td><td>A table { {uuid = <a href="userdata_Terrain_Uuid.html" class="code">Uuid</a>, pos = <a href="userdata_Terrain_Vec3.html" class="code">Vec3</a>, rot = <a href="userdata_Terrain_Quat.html" class="code">Quat</a>, color = <a href="userdata_Terrain_Color.html" class="code">Color</a>, params = table, tags = { string, ... } }, ... } of harvestables in the cell.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="getHeightAt"></a>sm.terrainTile.getHeightAt(tileId, tileOffsetX, tileOffsetY, lod, x, y)</h2>
-  <p>Returns the terrain height at position (X,Y) in a tile.</p>
+  <h2 class="code"><a id="getHeightAt"></a>sm.terrainTile.getHeightAt(tileUid, cellOffsetX, cellOffsetY, lod, x, y)</h2>
+  <p>Returns the terrain height at position (x,y) in a tile cell.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code">integer</td><td class="code">tileId</td><td>The tile id.</td></tr>
-   <tr><td class="code">integer</td><td class="code">tileOffsetX</td><td>The tile offset X.</td></tr>
-   <tr><td class="code">integer</td><td class="code">tileOffsetY</td><td>The tile offset Y.</td></tr>
-   <tr><td class="code">integer</td><td class="code">lod</td><td>The level of detail.</td></tr>
-   <tr><td class="code">integer</td><td class="code">x</td><td>The X.</td></tr>
-   <tr><td class="code">integer</td><td class="code">y</td><td>The Y.</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Uuid.html" class="code">Uuid</a></td><td class="code">tileUid</td><td>The tile uuid.</td></tr>
+   <tr><td class="code">integer</td><td class="code">cellOffsetX</td><td>The cell X offset.</td></tr>
+   <tr><td class="code">integer</td><td class="code">cellOffsetY</td><td>The cell Y offset.</td></tr>
+   <tr><td class="code">integer</td><td class="code">lod</td><td>The level of detail. [0-5]</td></tr>
+   <tr><td class="code">integer</td><td class="code">x</td><td>The local X value.</td></tr>
+   <tr><td class="code">integer</td><td class="code">y</td><td>The local Y value.</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -301,15 +328,15 @@
    <tr><td class="code">number</td><td>The height.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="getKinematicsForCell"></a>sm.terrainTile.getKinematicsForCell(tileId, tileOffsetX, tileOffsetY, sizeLevel)</h2>
+  <h2 class="code"><a id="getKinematicsForCell"></a>sm.terrainTile.getKinematicsForCell(tileUid, cellOffsetX, cellOffsetY, sizeLevel)</h2>
   <p>Returns a table of all kinematics in a terrain cell.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code"><a href="userdata_Terrain_Uuid.html" class="code">Uuid</a></td><td class="code">tileId</td><td>The tile id.</td></tr>
-   <tr><td class="code">integer</td><td class="code">tileOffsetX</td><td>The tile offset X.</td></tr>
-   <tr><td class="code">integer</td><td class="code">tileOffsetY</td><td>The tile offset Y.</td></tr>
-   <tr><td class="code">integer</td><td class="code">sizeLevel</td><td>The size level of kinematics.</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Uuid.html" class="code">Uuid</a></td><td class="code">tileUid</td><td>The tile uuid.</td></tr>
+   <tr><td class="code">integer</td><td class="code">cellOffsetX</td><td>The cell X offset.</td></tr>
+   <tr><td class="code">integer</td><td class="code">cellOffsetY</td><td>The cell Y offset.</td></tr>
+   <tr><td class="code">integer</td><td class="code">sizeLevel</td><td>The size level of kinematics. [0-3]</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -317,39 +344,32 @@
    <tr><td class="code">table</td><td>A table { {uuid = <a href="userdata_Terrain_Uuid.html" class="code">Uuid</a>, pos = <a href="userdata_Terrain_Vec3.html" class="code">Vec3</a>, rot = <a href="userdata_Terrain_Quat.html" class="code">Quat</a>, scale = <a href="userdata_Terrain_Vec3.html" class="code">Vec3</a>, color = <a href="userdata_Terrain_Color.html" class="code">Color</a>, params = table, tags = { string, ... } }, .. } of kinematics in the cell.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="getMaterialAt"></a>sm.terrainTile.getMaterialAt(tileId, tileOffsetX, tileOffsetY, lod, x, y)</h2>
-  <p>Returns the terrain material at position (X,Y) in a tile.</p>
+  <h2 class="code"><a id="getMaterialAt"></a>sm.terrainTile.getMaterialAt(tileUid, cellOffsetX, cellOffsetY, lod, x, y)</h2>
+  <p>Returns the terrain material at position (x,y) in a tile cell.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code">integer</td><td class="code">tileId</td><td>The tile id.</td></tr>
-   <tr><td class="code">integer</td><td class="code">tileOffsetX</td><td>The tile offset X.</td></tr>
-   <tr><td class="code">integer</td><td class="code">tileOffsetY</td><td>The tile offset Y.</td></tr>
-   <tr><td class="code">integer</td><td class="code">lod</td><td>The level of detail.</td></tr>
-   <tr><td class="code">integer</td><td class="code">x</td><td>The X.</td></tr>
-   <tr><td class="code">integer</td><td class="code">y</td><td>The Y.</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Uuid.html" class="code">Uuid</a></td><td class="code">tileUid</td><td>The tile uuid.</td></tr>
+   <tr><td class="code">integer</td><td class="code">cellOffsetX</td><td>The cell X offset.</td></tr>
+   <tr><td class="code">integer</td><td class="code">cellOffsetY</td><td>The cell Y offset.</td></tr>
+   <tr><td class="code">integer</td><td class="code">lod</td><td>The level of detail. [0-5]</td></tr>
+   <tr><td class="code">integer</td><td class="code">x</td><td>The local X value.</td></tr>
+   <tr><td class="code">integer</td><td class="code">y</td><td>The local Y value.</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
    <tr><th>Type</th><th>Description</th></tr>
-   <tr><td class="code">number</td><td>The first R value.</td></tr>
-   <tr><td class="code">number</td><td>The first G value.</td></tr>
-   <tr><td class="code">number</td><td>The first B value.</td></tr>
-   <tr><td class="code">number</td><td>The first A value.</td></tr>
-   <tr><td class="code">number</td><td>The second R value.</td></tr>
-   <tr><td class="code">number</td><td>The second G value.</td></tr>
-   <tr><td class="code">number</td><td>The second B value.</td></tr>
-   <tr><td class="code">number</td><td>The second A value.</td></tr>
+   <tr><td class="code">number,number,number,number,number,number,number,number</td><td>Material weights 1-8.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="getNodesForCell"></a>sm.terrainTile.getNodesForCell(id, X-offset, Y-offset)</h2>
+  <h2 class="code"><a id="getNodesForCell"></a>sm.terrainTile.getNodesForCell(tileUid, cellOffsetX, cellOffsetY)</h2>
   <p>Returns all nodes for a cell in a tile.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code"><a href="userdata_Terrain_Uuid.html" class="code">Uuid</a></td><td class="code">id</td><td>The tile id</td></tr>
-   <tr><td class="code">integer</td><td class="code">X-offset</td><td>The offset along the X axis</td></tr>
-   <tr><td class="code">integer</td><td class="code">Y-offset</td><td>The offset along the Y axis</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Uuid.html" class="code">Uuid</a></td><td class="code">tileUid</td><td>The tile uuid.</td></tr>
+   <tr><td class="code">integer</td><td class="code">cellOffsetX</td><td>The cell X offset.</td></tr>
+   <tr><td class="code">integer</td><td class="code">cellOffsetY</td><td>The cell Y offset.</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -357,14 +377,14 @@
    <tr><td class="code">table</td><td>A table { { pos = <a href="userdata_Terrain_Vec3.html" class="code">Vec3</a>, rot = <a href="userdata_Terrain_Quat.html" class="code">Quat</a>, scale = <a href="userdata_Terrain_Vec3.html" class="code">Vec3</a>, tags = { string, ... }, params = table } } of nodes in the cell.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="getPrefabsForCell"></a>sm.terrainTile.getPrefabsForCell(tileId, X-offset, Y-offset)</h2>
+  <h2 class="code"><a id="getPrefabsForCell"></a>sm.terrainTile.getPrefabsForCell(tileUid, cellOffsetX, cellOffsetY)</h2>
   <p>Returns all prefabs in a cell.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code"><a href="userdata_Terrain_Uuid.html" class="code">Uuid</a></td><td class="code">tileId</td><td>The tile id.</td></tr>
-   <tr><td class="code">integer</td><td class="code">X-offset</td><td>The offset along the X axis.</td></tr>
-   <tr><td class="code">integer</td><td class="code">Y-offset</td><td>The offset along the Y axis.</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Uuid.html" class="code">Uuid</a></td><td class="code">tileUid</td><td>The tile uuid.</td></tr>
+   <tr><td class="code">integer</td><td class="code">cellOffsetX</td><td>The cell X offset.</td></tr>
+   <tr><td class="code">integer</td><td class="code">cellOffsetY</td><td>The cell Y offset.</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>

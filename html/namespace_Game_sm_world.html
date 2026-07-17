@@ -17,6 +17,7 @@
   <h3>Classes</h3>
   <ul>
    <li><a href="class_Game_CharacterClass.html" class="code">CharacterClass</a></li>
+   <li><a href="class_Game_ClientScriptableObjectClass.html" class="code">ClientScriptableObjectClass</a></li>
    <li><a href="class_Game_GameClass.html" class="code">GameClass</a></li>
    <li><a href="class_Game_HarvestableClass.html" class="code">HarvestableClass</a></li>
    <li><a href="class_Game_PlayerClass.html" class="code">PlayerClass</a></li>
@@ -34,14 +35,18 @@
    <li><a href="userdata_Game_Body.html" class="code">Body</a></li>
    <li><a href="userdata_Game_BuilderGuide.html" class="code">BuilderGuide</a></li>
    <li><a href="userdata_Game_Character.html" class="code">Character</a></li>
+   <li><a href="userdata_Game_ClientScriptableObject.html" class="code">ClientScriptableObject</a></li>
    <li><a href="userdata_Game_Color.html" class="code">Color</a></li>
    <li><a href="userdata_Game_Container.html" class="code">Container</a></li>
    <li><a href="userdata_Game_CullSphereGroup.html" class="code">CullSphereGroup</a></li>
    <li><a href="userdata_Game_Effect.html" class="code">Effect</a></li>
+   <li><a href="userdata_Game_Garage.html" class="code">Garage</a></li>
    <li><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></li>
    <li><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></li>
    <li><a href="userdata_Game_Interactable.html" class="code">Interactable</a></li>
    <li><a href="userdata_Game_Joint.html" class="code">Joint</a></li>
+   <li><a href="userdata_Game_JsonGui.html" class="code">JsonGui</a></li>
+   <li><a href="userdata_Game_JsonWidget.html" class="code">JsonWidget</a></li>
    <li><a href="userdata_Game_Lift.html" class="code">Lift</a></li>
    <li><a href="userdata_Game_LoadCellHandle.html" class="code">LoadCellHandle</a></li>
    <li><a href="userdata_Game_Network.html" class="code">Network</a></li>
@@ -73,6 +78,7 @@
    <li><a href="namespace_Game_sm_cell.html" class="code">sm.cell</a></li>
    <li><a href="namespace_Game_sm_challenge.html" class="code">sm.challenge</a></li>
    <li><a href="namespace_Game_sm_character.html" class="code">sm.character</a></li>
+   <li><a href="namespace_Game_sm_clientScriptableObject.html" class="code">sm.clientScriptableObject</a></li>
    <li><a href="namespace_Game_sm_color.html" class="code">sm.color</a></li>
    <li><a href="namespace_Game_sm_construction.html" class="code">sm.construction</a></li>
    <li><a href="namespace_Game_sm_container.html" class="code">sm.container</a></li>
@@ -80,9 +86,11 @@
    <li><a href="namespace_Game_sm_cullSphereGroup.html" class="code">sm.cullSphereGroup</a></li>
    <li><a href="namespace_Game_sm_debris.html" class="code">sm.debris</a></li>
    <li><a href="namespace_Game_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
+   <li><a href="namespace_Game_sm_debugGui.html" class="code">sm.debugGui</a></li>
    <li><a href="namespace_Game_sm_effect.html" class="code">sm.effect</a></li>
    <li><a href="namespace_Game_sm_event.html" class="code">sm.event</a></li>
    <li><a href="namespace_Game_sm_game.html" class="code">sm.game</a></li>
+   <li><a href="namespace_Game_sm_garage.html" class="code">sm.garage</a></li>
    <li><a href="namespace_Game_sm_gui.html" class="code">sm.gui</a></li>
    <li><a href="namespace_Game_sm_gui_widget.html" class="code">sm.gui.widget</a></li>
    <li><a href="namespace_Game_sm_harvestable.html" class="code">sm.harvestable</a></li>
@@ -90,15 +98,19 @@
    <li><a href="namespace_Game_sm_item.html" class="code">sm.item</a></li>
    <li><a href="namespace_Game_sm_joint.html" class="code">sm.joint</a></li>
    <li><a href="namespace_Game_sm_json.html" class="code">sm.json</a></li>
+   <li><a href="namespace_Game_sm_jsonGui.html" class="code">sm.jsonGui</a></li>
+   <li><a href="namespace_Game_sm_lift.html" class="code">sm.lift</a></li>
    <li><a href="namespace_Game_sm_localPlayer.html" class="code">sm.localPlayer</a></li>
    <li><a href="namespace_Game_sm_log.html" class="code">sm.log</a></li>
    <li><a href="namespace_Game_sm_melee.html" class="code">sm.melee</a></li>
    <li><a href="namespace_Game_sm_menuCreation.html" class="code">sm.menuCreation</a></li>
+   <li><a href="namespace_Game_sm_message.html" class="code">sm.message</a></li>
    <li><a href="namespace_Game_sm_noise.html" class="code">sm.noise</a></li>
    <li><a href="namespace_Game_sm_particle.html" class="code">sm.particle</a></li>
    <li><a href="namespace_Game_sm_pathNode.html" class="code">sm.pathNode</a></li>
    <li><a href="namespace_Game_sm_pathfinder.html" class="code">sm.pathfinder</a></li>
    <li><a href="namespace_Game_sm_physics.html" class="code">sm.physics</a></li>
+   <li><a href="namespace_Game_sm_pipeGraph.html" class="code">sm.pipeGraph</a></li>
    <li><a href="namespace_Game_sm_player.html" class="code">sm.player</a></li>
    <li><a href="namespace_Game_sm_portal.html" class="code">sm.portal</a></li>
    <li><a href="namespace_Game_sm_projectile.html" class="code">sm.projectile</a></li>
@@ -122,8 +134,12 @@
   <h3>Object Types 'userdata'</h3>
   <ul>
    <li><a href="userdata_Terrain_Color.html" class="code">Color</a></li>
+   <li><a href="userdata_Terrain_Container.html" class="code">Container</a></li>
    <li><a href="userdata_Terrain_Harvestable.html" class="code">Harvestable</a></li>
+   <li><a href="userdata_Terrain_Interactable.html" class="code">Interactable</a></li>
+   <li><a href="userdata_Terrain_Portal.html" class="code">Portal</a></li>
    <li><a href="userdata_Terrain_Quat.html" class="code">Quat</a></li>
+   <li><a href="userdata_Terrain_ScriptableObject.html" class="code">ScriptableObject</a></li>
    <li><a href="userdata_Terrain_Uuid.html" class="code">Uuid</a></li>
    <li><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></li>
    <li><a href="userdata_Terrain_World.html" class="code">World</a></li>
@@ -133,18 +149,24 @@
    <li><a href="namespace_Terrain_GLOBAL.html" class="code">GLOBAL</a></li>
    <li><a href="namespace_Terrain_sm.html" class="code">sm</a></li>
    <li><a href="namespace_Terrain_sm_color.html" class="code">sm.color</a></li>
+   <li><a href="namespace_Terrain_sm_container.html" class="code">sm.container</a></li>
    <li><a href="namespace_Terrain_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
-   <li><a href="namespace_Terrain_sm_harvestable.html" class="code">sm.harvestable</a></li>
+   <li><a href="namespace_Terrain_sm_debugGui.html" class="code">sm.debugGui</a></li>
+   <li><a href="namespace_Terrain_sm_interactable.html" class="code">sm.interactable</a></li>
    <li><a href="namespace_Terrain_sm_json.html" class="code">sm.json</a></li>
    <li><a href="namespace_Terrain_sm_log.html" class="code">sm.log</a></li>
    <li><a href="namespace_Terrain_sm_noise.html" class="code">sm.noise</a></li>
    <li><a href="namespace_Terrain_sm_quat.html" class="code">sm.quat</a></li>
+   <li><a href="namespace_Terrain_sm_scriptableObject.html" class="code">sm.scriptableObject</a></li>
    <li><a href="namespace_Terrain_sm_terrainData.html" class="code">sm.terrainData</a></li>
    <li><a href="namespace_Terrain_sm_terrainGeneration.html" class="code">sm.terrainGeneration</a></li>
+   <li><a href="namespace_Terrain_sm_terrainHarvestable.html" class="code">sm.terrainHarvestable</a></li>
    <li><a href="namespace_Terrain_sm_terrainTile.html" class="code">sm.terrainTile</a></li>
+   <li><a href="namespace_Terrain_sm_tunnelGenerator.html" class="code">sm.tunnelGenerator</a></li>
    <li><a href="namespace_Terrain_sm_util.html" class="code">sm.util</a></li>
    <li><a href="namespace_Terrain_sm_uuid.html" class="code">sm.uuid</a></li>
    <li><a href="namespace_Terrain_sm_vec3.html" class="code">sm.vec3</a></li>
+   <li><a href="namespace_Terrain_sm_voxelTerrainCell.html" class="code">sm.voxelTerrainCell</a></li>
   </ul>
  </div>
  <div id="content">
@@ -152,22 +174,39 @@
   <h3>Associated object type: <a href="userdata_Game_World.html" class="code">World</a></h3>
   <p>The <strong>world</strong> api handles the creation and destruction of worlds.</p>
   <p>A world contains the terrain and simulates the physics environment in which other game objects can exist.</p>
-  <h4>Constants:</h4>  <ul>   <li><a href="#ids" class="code">ids</a></li>  </ul>  <h4>Functions:</h4  <ul>   <li><a href="#createWorld" class="code">createWorld</a></li>   <li><a href="#getCurrentWorld" class="code">getCurrentWorld</a></li>   <li><a href="#getDirtySpheres" class="code">getDirtySpheres</a></li>   <li><a href="#getLegacyCreativeWorld" class="code">getLegacyCreativeWorld</a></li>   <li><a href="#loadWorld" class="code">loadWorld</a></li>  </ul>  <hr>
+  <h4>Constants:</h4>  <ul>   <li><a href="#ids" class="code">ids</a></li>   <li><a href="#voxelFilter" class="code">voxelFilter</a></li>  </ul>  <h4>Functions:</h4  <ul>   <li><a href="#createWorld" class="code">createWorld</a></li>   <li><a href="#getCurrentWorld" class="code">getCurrentWorld</a></li>   <li><a href="#getDirtySpheres" class="code">getDirtySpheres</a></li>   <li><a href="#getLegacyCreativeWorld" class="code">getLegacyCreativeWorld</a></li>   <li><a href="#loadWorld" class="code">loadWorld</a></li>  </ul>  <hr>
   <h2 class="code"><a id="ids"></a>sm.world.ids <i></i></h2>
   <p>Predefined special world ids</p>
   <table>
    <tr>    <td>anyWorld</td>   </tr>   <tr>    <td>noWorld</td>   </tr>  </table>
   <hr>
-  <h2 class="code"><a id="createWorld"></a>sm.world.createWorld(filename, classname, terrainParams=nil, seed=0)</h2>
+  <h2 class="code"><a id="voxelFilter"></a>sm.world.voxelFilter <i>table</i></h2>
+  <p>Filters are used to specify what materials a terrain modification sphere can destroy.</p>
+  <p>The filters are:</p>
+  <ul>
+   <li><strong>material0</strong> &ndash; Allows destruction of material 0 in the voxel material set.</li>
+   <li><strong>material1</strong> &ndash; Allows destruction of material 1 in the voxel material set.</li>
+   <li><strong>material2</strong> &ndash; Allows destruction of material 2 in the voxel material set.</li>
+   <li><strong>material3</strong> &ndash; Allows destruction of material 3 in the voxel material set.</li>
+   <li><strong>material4</strong> &ndash; Allows destruction of material 4 in the voxel material set.</li>
+   <li><strong>material5</strong> &ndash; Allows destruction of material 5 in the voxel material set.</li>
+   <li><strong>material6</strong> &ndash; Allows destruction of material 6 in the voxel material set.</li>
+   <li><strong>material7</strong> &ndash; Allows destruction of material 7 in the voxel material set.</li>
+   <li><strong>all</strong> &ndash; Allows destruction of all materials in the voxel material set.</li>
+  </ul>
+  <table>
+   <tr>    <td>none</td>    <td>0</td>   </tr>   <tr>    <td>material0</td>    <td>1</td>   </tr>   <tr>    <td>material1</td>    <td>2</td>   </tr>   <tr>    <td>material2</td>    <td>4</td>   </tr>   <tr>    <td>material3</td>    <td>8</td>   </tr>   <tr>    <td>material4</td>    <td>16</td>   </tr>   <tr>    <td>material5</td>    <td>32</td>   </tr>   <tr>    <td>material6</td>    <td>64</td>   </tr>   <tr>    <td>material7</td>    <td>128</td>   </tr>   <tr>    <td>all</td>    <td>255</td>   </tr>  </table>
+  <hr>
+  <h2 class="code"><a id="createWorld"></a>sm.world.createWorld(filename, classname, terrainParams?, seed?)</h2>
   <p>Server only</p>
-  <p>Creates a new world object. Can only be called from inside the Game script environment.</p>
+  <p>Creates a new world object.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code">string</td><td class="code">filename</td><td>The world script filename.</td></tr>
    <tr><td class="code">string</td><td class="code">classname</td><td>The world script class name.</td></tr>
-   <tr><td class="code">any</td><td class="code">terrainParams=nil</td><td>The world's terrain parameters. (Optional)</td></tr>
-   <tr><td class="code">integer</td><td class="code">seed=0</td><td>The world's seed. Defaults to 0 (Optional)</td></tr>
+   <tr><td class="code">any</td><td class="code">terrainParams?</td><td>The world's terrain parameters. (Optional)</td></tr>
+   <tr><td class="code">integer</td><td class="code">seed?</td><td>The world's seed. Defaults to 0 (Optional)</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -183,14 +222,14 @@
    <tr><td class="code"><a href="userdata_Game_World.html" class="code">World</a></td><td>The world</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="getDirtySpheres"></a>sm.world.getDirtySpheres(position=nil, radius=nil)</h2>
+  <h2 class="code"><a id="getDirtySpheres"></a>sm.world.getDirtySpheres(position?, radius?)</h2>
   <p>Returns an array of tables representing spheres where something has changed in the world.</p>
   <p>The optional position and radius parameters will construct a sphere, and use it as a filter to only show results that intersect that sphere.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position=nil</td><td>The world position of the sphere. (Optional)</td></tr>
-   <tr><td class="code">number</td><td class="code">radius=nil</td><td>The radius of the sphere. (Optional)</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position?</td><td>The world position of the sphere. (Optional)</td></tr>
+   <tr><td class="code">number</td><td class="code">radius?</td><td>The radius of the sphere. (Optional)</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -209,7 +248,7 @@
   <hr>
   <h2 class="code"><a id="loadWorld"></a>sm.world.loadWorld(world)</h2>
   <p>Server only</p>
-  <p>Loads a previously created world. Can only be called from inside the Game script environment.</p>
+  <p>Loads a previously created world.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>

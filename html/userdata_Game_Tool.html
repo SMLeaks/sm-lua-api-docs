@@ -17,6 +17,7 @@
   <h3>Classes</h3>
   <ul>
    <li><a href="class_Game_CharacterClass.html" class="code">CharacterClass</a></li>
+   <li><a href="class_Game_ClientScriptableObjectClass.html" class="code">ClientScriptableObjectClass</a></li>
    <li><a href="class_Game_GameClass.html" class="code">GameClass</a></li>
    <li><a href="class_Game_HarvestableClass.html" class="code">HarvestableClass</a></li>
    <li><a href="class_Game_PlayerClass.html" class="code">PlayerClass</a></li>
@@ -34,14 +35,18 @@
    <li><a href="userdata_Game_Body.html" class="code">Body</a></li>
    <li><a href="userdata_Game_BuilderGuide.html" class="code">BuilderGuide</a></li>
    <li><a href="userdata_Game_Character.html" class="code">Character</a></li>
+   <li><a href="userdata_Game_ClientScriptableObject.html" class="code">ClientScriptableObject</a></li>
    <li><a href="userdata_Game_Color.html" class="code">Color</a></li>
    <li><a href="userdata_Game_Container.html" class="code">Container</a></li>
    <li><a href="userdata_Game_CullSphereGroup.html" class="code">CullSphereGroup</a></li>
    <li><a href="userdata_Game_Effect.html" class="code">Effect</a></li>
+   <li><a href="userdata_Game_Garage.html" class="code">Garage</a></li>
    <li><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></li>
    <li><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></li>
    <li><a href="userdata_Game_Interactable.html" class="code">Interactable</a></li>
    <li><a href="userdata_Game_Joint.html" class="code">Joint</a></li>
+   <li><a href="userdata_Game_JsonGui.html" class="code">JsonGui</a></li>
+   <li><a href="userdata_Game_JsonWidget.html" class="code">JsonWidget</a></li>
    <li><a href="userdata_Game_Lift.html" class="code">Lift</a></li>
    <li><a href="userdata_Game_LoadCellHandle.html" class="code">LoadCellHandle</a></li>
    <li><a href="userdata_Game_Network.html" class="code">Network</a></li>
@@ -73,6 +78,7 @@
    <li><a href="namespace_Game_sm_cell.html" class="code">sm.cell</a></li>
    <li><a href="namespace_Game_sm_challenge.html" class="code">sm.challenge</a></li>
    <li><a href="namespace_Game_sm_character.html" class="code">sm.character</a></li>
+   <li><a href="namespace_Game_sm_clientScriptableObject.html" class="code">sm.clientScriptableObject</a></li>
    <li><a href="namespace_Game_sm_color.html" class="code">sm.color</a></li>
    <li><a href="namespace_Game_sm_construction.html" class="code">sm.construction</a></li>
    <li><a href="namespace_Game_sm_container.html" class="code">sm.container</a></li>
@@ -80,9 +86,11 @@
    <li><a href="namespace_Game_sm_cullSphereGroup.html" class="code">sm.cullSphereGroup</a></li>
    <li><a href="namespace_Game_sm_debris.html" class="code">sm.debris</a></li>
    <li><a href="namespace_Game_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
+   <li><a href="namespace_Game_sm_debugGui.html" class="code">sm.debugGui</a></li>
    <li><a href="namespace_Game_sm_effect.html" class="code">sm.effect</a></li>
    <li><a href="namespace_Game_sm_event.html" class="code">sm.event</a></li>
    <li><a href="namespace_Game_sm_game.html" class="code">sm.game</a></li>
+   <li><a href="namespace_Game_sm_garage.html" class="code">sm.garage</a></li>
    <li><a href="namespace_Game_sm_gui.html" class="code">sm.gui</a></li>
    <li><a href="namespace_Game_sm_gui_widget.html" class="code">sm.gui.widget</a></li>
    <li><a href="namespace_Game_sm_harvestable.html" class="code">sm.harvestable</a></li>
@@ -90,15 +98,19 @@
    <li><a href="namespace_Game_sm_item.html" class="code">sm.item</a></li>
    <li><a href="namespace_Game_sm_joint.html" class="code">sm.joint</a></li>
    <li><a href="namespace_Game_sm_json.html" class="code">sm.json</a></li>
+   <li><a href="namespace_Game_sm_jsonGui.html" class="code">sm.jsonGui</a></li>
+   <li><a href="namespace_Game_sm_lift.html" class="code">sm.lift</a></li>
    <li><a href="namespace_Game_sm_localPlayer.html" class="code">sm.localPlayer</a></li>
    <li><a href="namespace_Game_sm_log.html" class="code">sm.log</a></li>
    <li><a href="namespace_Game_sm_melee.html" class="code">sm.melee</a></li>
    <li><a href="namespace_Game_sm_menuCreation.html" class="code">sm.menuCreation</a></li>
+   <li><a href="namespace_Game_sm_message.html" class="code">sm.message</a></li>
    <li><a href="namespace_Game_sm_noise.html" class="code">sm.noise</a></li>
    <li><a href="namespace_Game_sm_particle.html" class="code">sm.particle</a></li>
    <li><a href="namespace_Game_sm_pathNode.html" class="code">sm.pathNode</a></li>
    <li><a href="namespace_Game_sm_pathfinder.html" class="code">sm.pathfinder</a></li>
    <li><a href="namespace_Game_sm_physics.html" class="code">sm.physics</a></li>
+   <li><a href="namespace_Game_sm_pipeGraph.html" class="code">sm.pipeGraph</a></li>
    <li><a href="namespace_Game_sm_player.html" class="code">sm.player</a></li>
    <li><a href="namespace_Game_sm_portal.html" class="code">sm.portal</a></li>
    <li><a href="namespace_Game_sm_projectile.html" class="code">sm.projectile</a></li>
@@ -122,8 +134,12 @@
   <h3>Object Types 'userdata'</h3>
   <ul>
    <li><a href="userdata_Terrain_Color.html" class="code">Color</a></li>
+   <li><a href="userdata_Terrain_Container.html" class="code">Container</a></li>
    <li><a href="userdata_Terrain_Harvestable.html" class="code">Harvestable</a></li>
+   <li><a href="userdata_Terrain_Interactable.html" class="code">Interactable</a></li>
+   <li><a href="userdata_Terrain_Portal.html" class="code">Portal</a></li>
    <li><a href="userdata_Terrain_Quat.html" class="code">Quat</a></li>
+   <li><a href="userdata_Terrain_ScriptableObject.html" class="code">ScriptableObject</a></li>
    <li><a href="userdata_Terrain_Uuid.html" class="code">Uuid</a></li>
    <li><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></li>
    <li><a href="userdata_Terrain_World.html" class="code">World</a></li>
@@ -133,18 +149,24 @@
    <li><a href="namespace_Terrain_GLOBAL.html" class="code">GLOBAL</a></li>
    <li><a href="namespace_Terrain_sm.html" class="code">sm</a></li>
    <li><a href="namespace_Terrain_sm_color.html" class="code">sm.color</a></li>
+   <li><a href="namespace_Terrain_sm_container.html" class="code">sm.container</a></li>
    <li><a href="namespace_Terrain_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
-   <li><a href="namespace_Terrain_sm_harvestable.html" class="code">sm.harvestable</a></li>
+   <li><a href="namespace_Terrain_sm_debugGui.html" class="code">sm.debugGui</a></li>
+   <li><a href="namespace_Terrain_sm_interactable.html" class="code">sm.interactable</a></li>
    <li><a href="namespace_Terrain_sm_json.html" class="code">sm.json</a></li>
    <li><a href="namespace_Terrain_sm_log.html" class="code">sm.log</a></li>
    <li><a href="namespace_Terrain_sm_noise.html" class="code">sm.noise</a></li>
    <li><a href="namespace_Terrain_sm_quat.html" class="code">sm.quat</a></li>
+   <li><a href="namespace_Terrain_sm_scriptableObject.html" class="code">sm.scriptableObject</a></li>
    <li><a href="namespace_Terrain_sm_terrainData.html" class="code">sm.terrainData</a></li>
    <li><a href="namespace_Terrain_sm_terrainGeneration.html" class="code">sm.terrainGeneration</a></li>
+   <li><a href="namespace_Terrain_sm_terrainHarvestable.html" class="code">sm.terrainHarvestable</a></li>
    <li><a href="namespace_Terrain_sm_terrainTile.html" class="code">sm.terrainTile</a></li>
+   <li><a href="namespace_Terrain_sm_tunnelGenerator.html" class="code">sm.tunnelGenerator</a></li>
    <li><a href="namespace_Terrain_sm_util.html" class="code">sm.util</a></li>
    <li><a href="namespace_Terrain_sm_uuid.html" class="code">sm.uuid</a></li>
    <li><a href="namespace_Terrain_sm_vec3.html" class="code">sm.vec3</a></li>
+   <li><a href="namespace_Terrain_sm_voxelTerrainCell.html" class="code">sm.voxelTerrainCell</a></li>
   </ul>
  </div>
  <div id="content">
@@ -154,13 +176,16 @@
   <h4>Values:</h4>
   <ul>
    <li><a href="#id" class="code">id</a></li>
+   <li><a href="#uuid" class="code">uuid</a></li>
   </ul>  <h4>Functions:</h4>
   <ul>
    <li><a href="#getAnimationInfo" class="code">getAnimationInfo</a></li>
    <li><a href="#getCameraWeights" class="code">getCameraWeights</a></li>
    <li><a href="#getDirection" class="code">getDirection</a></li>
    <li><a href="#getFpAnimationInfo" class="code">getFpAnimationInfo</a></li>
+   <li><a href="#getFpBoneDir" class="code">getFpBoneDir</a></li>
    <li><a href="#getFpBonePos" class="code">getFpBonePos</a></li>
+   <li><a href="#getFpBoneRot" class="code">getFpBoneRot</a></li>
    <li><a href="#getId" class="code">getId</a></li>
    <li><a href="#getMovementSpeedFraction" class="code">getMovementSpeedFraction</a></li>
    <li><a href="#getMovementVelocity" class="code">getMovementVelocity</a></li>
@@ -170,6 +195,8 @@
    <li><a href="#getSmoothDirection" class="code">getSmoothDirection</a></li>
    <li><a href="#getTpBoneDir" class="code">getTpBoneDir</a></li>
    <li><a href="#getTpBonePos" class="code">getTpBonePos</a></li>
+   <li><a href="#getTpBoneRot" class="code">getTpBoneRot</a></li>
+   <li><a href="#getUuid" class="code">getUuid</a></li>
    <li><a href="#isCrouching" class="code">isCrouching</a></li>
    <li><a href="#isEquipped" class="code">isEquipped</a></li>
    <li><a href="#isInFirstPersonView" class="code">isInFirstPersonView</a></li>
@@ -178,6 +205,8 @@
    <li><a href="#isSprinting" class="code">isSprinting</a></li>
    <li><a href="#setBlockSprint" class="code">setBlockSprint</a></li>
    <li><a href="#setCrossHairAlpha" class="code">setCrossHairAlpha</a></li>
+   <li><a href="#setCrossHairColor" class="code">setCrossHairColor</a></li>
+   <li><a href="#setCrossHairType" class="code">setCrossHairType</a></li>
    <li><a href="#setDispersionFraction" class="code">setDispersionFraction</a></li>
    <li><a href="#setFpColor" class="code">setFpColor</a></li>
    <li><a href="#setFpRenderables" class="code">setFpRenderables</a></li>
@@ -197,6 +226,10 @@
   <h2 class="code"><a id="id"></a>id <i>integer</i></h2>
   <h4>Get:</h4>
   <p>Returns the id of a tool.</p>
+  <hr>
+  <h2 class="code"><a id="uuid"></a>uuid <i><a href="userdata_Game_Uuid.html" class="code">Uuid</a></i></h2>
+  <h4>Get:</h4>
+  <p>Returns the tool type uuid.</p>
   <hr>
   <h2 class="code"><a id="getAnimationInfo"></a>getAnimationInfo(tool, name)</h2>
   <p>Client only</p>
@@ -251,19 +284,52 @@
    <tr><td class="code">table</td><td>A table containing "name", "duration" and "looping".</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="getFpBonePos"></a>getFpBonePos(tool, jointName)</h2>
+  <h2 class="code"><a id="getFpBoneDir"></a>getFpBoneDir(tool, jointName, convertToWorldSpace?)</h2>
   <p>Client only</p>
-  <p>Returns the world position for a bone in the first person view animation skeleton.</p>
+  <p>Returns the local or world direction for a bone in the first person view animation skeleton.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code"><a href="userdata_Game_Tool.html" class="code">Tool</a></td><td class="code">tool</td><td>The tool.</td></tr>
    <tr><td class="code">string</td><td class="code">jointName</td><td>The joint name.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">convertToWorldSpace?</td><td>Whether to convert the position to world space. (Defaults to true)</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The joint direction.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getFpBonePos"></a>getFpBonePos(tool, jointName, convertToWorldSpace?)</h2>
+  <p>Client only</p>
+  <p>Returns the local or world position for a bone in the first person view animation skeleton.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Tool.html" class="code">Tool</a></td><td class="code">tool</td><td>The tool.</td></tr>
+   <tr><td class="code">string</td><td class="code">jointName</td><td>The joint name.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">convertToWorldSpace?</td><td>Whether to convert the position to world space. (Defaults to true)</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
    <tr><th>Type</th><th>Description</th></tr>
    <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The joint position.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getFpBoneRot"></a>getFpBoneRot(tool, jointName, convertToWorldSpace?)</h2>
+  <p>Client only</p>
+  <p>Returns the local or world rotation for a bone in the first person view animation skeleton.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Tool.html" class="code">Tool</a></td><td class="code">tool</td><td>The tool.</td></tr>
+   <tr><td class="code">string</td><td class="code">jointName</td><td>The joint name.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">convertToWorldSpace?</td><td>Whether to convert the position to world space. (Defaults to true)</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td>The joint rotation.</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="getId"></a>getId(tool)</h2>
@@ -394,6 +460,34 @@
    <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The joint position.</td></tr>
   </table>
   <hr>
+  <h2 class="code"><a id="getTpBoneRot"></a>getTpBoneRot(tool, jointName)</h2>
+  <p>Client only</p>
+  <p>Returns the world rotations for a bone in the third person view animation skeleton.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Tool.html" class="code">Tool</a></td><td class="code">tool</td><td>The tool.</td></tr>
+   <tr><td class="code">string</td><td class="code">jointName</td><td>The joint name.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td>The joint rotation.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getUuid"></a>getUuid(tool)</h2>
+  <p>Returns the tool type uuid.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Tool.html" class="code">Tool</a></td><td class="code">tool</td><td>The tool.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td>The tool's uuid.</td></tr>
+  </table>
+  <hr>
   <h2 class="code"><a id="isCrouching"></a>isCrouching(tool)</h2>
   <p>Client only</p>
   <p>Returns whether the player is currently crouching.</p>
@@ -410,7 +504,7 @@
   <hr>
   <h2 class="code"><a id="isEquipped"></a>isEquipped(tool)</h2>
   <p>Client only</p>
-  <p>Returns whether the the tool is equipped or not.</p>
+  <p>Returns whether the tool is equipped or not.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
@@ -419,7 +513,7 @@
   <h4>Returns:</h4>
   <table>
    <tr><th>Type</th><th>Description</th></tr>
-   <tr><td class="code">boolean</td><td>whether the the tool is equipped or not.</td></tr>
+   <tr><td class="code">boolean</td><td>whether the tool is equipped or not.</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="isInFirstPersonView"></a>isInFirstPersonView(tool)</h2>
@@ -498,7 +592,27 @@
    <tr><td class="code">number</td><td class="code">alpha</td><td>The alpha value for the crosshair.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="setDispersionFraction"></a>setDispersionFraction(tool, dispersion)</h2>
+  <h2 class="code"><a id="setCrossHairColor"></a>setCrossHairColor(tool, color)</h2>
+  <p>Client only</p>
+  <p>Sets the color of the crosshair. </p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Tool.html" class="code">Tool</a></td><td class="code">tool</td><td>The tool.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Color.html" class="code">Color</a></td><td class="code">color</td><td>The color.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setCrossHairType"></a>setCrossHairType(tool, type)</h2>
+  <p>Client only</p>
+  <p>Sets the type of the crosshair. </p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Tool.html" class="code">Tool</a></td><td class="code">tool</td><td>The tool.</td></tr>
+   <tr><td class="code">number</td><td class="code">type</td><td>The type value for the crosshair.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setDispersionFraction"></a>setDispersionFraction(tool, dispersion, dispersionSecondary?)</h2>
   <p>Client only</p>
   <p>Sets the tool's dispersion fraction. This represents the accuracy of the tool, and affects the size of the player's crosshair.</p>
   <p>A dispersion value of 0 is perfect accuracy, whereas 1 is the worst.</p>
@@ -507,6 +621,7 @@
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code"><a href="userdata_Game_Tool.html" class="code">Tool</a></td><td class="code">tool</td><td>The tool.</td></tr>
    <tr><td class="code">number</td><td class="code">dispersion</td><td>The dispersion fraction.</td></tr>
+   <tr><td class="code">number</td><td class="code">dispersionSecondary?</td><td>The secondary dispersion fraction for circles. (Optional)</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="setFpColor"></a>setFpColor(tool, color)</h2>
@@ -529,15 +644,12 @@
    <tr><td class="code">table</td><td class="code">renderables</td><td>The table of renderables names {string, ..}</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="setInteractionTextSuppressed"></a>setInteractionTextSuppressed(tool, suppressed)</h2>
-  <p>Client only</p>
-  <p>Sets whether interaction texts are suppressed for the player. This means the player won't be able to see "Press E to use", and similar texts, when looking at an interactable.</p>
-  <h4>Parameters:</h4>
-  <table>
-   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code"><a href="userdata_Game_Tool.html" class="code">Tool</a></td><td class="code">tool</td><td>The tool.</td></tr>
-   <tr><td class="code">boolean</td><td class="code">suppressed</td><td>Whether interaction texts are suppressed.</td></tr>
-  </table>
+  <h2 class="code"><a id="setInteractionTextSuppressed"></a>setInteractionTextSuppressed()</h2>
+  <div class="deprecated">
+   <h4>Deprecated:</h4>
+   <p>Deprecated function. Kept for compability with old scripts.</p>
+  </div>
+  <p>Does nothing.</p>
   <hr>
   <h2 class="code"><a id="setMovementAnimation"></a>setMovementAnimation(tool, name, animation)</h2>
   <p>Client only</p>
@@ -580,7 +692,7 @@
    <tr><td class="code">table</td><td class="code">renderables</td><td>The table of renderables names. {string, ..}</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="updateAnimation"></a>updateAnimation(tool, name, time, weight=-1.0)</h2>
+  <h2 class="code"><a id="updateAnimation"></a>updateAnimation(tool, name, time, weight?)</h2>
   <p>Client only</p>
   <p>Updates a third person view animation.</p>
   <h4>Parameters:</h4>
@@ -589,7 +701,7 @@
    <tr><td class="code"><a href="userdata_Game_Tool.html" class="code">Tool</a></td><td class="code">tool</td><td>The tool.</td></tr>
    <tr><td class="code">string</td><td class="code">name</td><td>The animation name.</td></tr>
    <tr><td class="code">number</td><td class="code">time</td><td>The time.</td></tr>
-   <tr><td class="code">number</td><td class="code">weight=-1.0</td><td>The weight.</td></tr>
+   <tr><td class="code">number</td><td class="code">weight?</td><td>The weight. (Defaults to -1.0)</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="updateCamera"></a>updateCamera(tool, distance, fov, offset, weight)</h2>
@@ -605,7 +717,7 @@
    <tr><td class="code">number</td><td class="code">weight</td><td>The weight.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="updateFpAnimation"></a>updateFpAnimation(tool, name, time, weight=-1.0, looping=false)</h2>
+  <h2 class="code"><a id="updateFpAnimation"></a>updateFpAnimation(tool, name, time, weight?, looping?)</h2>
   <p>Client only</p>
   <p>Updates a first person view animation.</p>
   <h4>Parameters:</h4>
@@ -614,8 +726,8 @@
    <tr><td class="code"><a href="userdata_Game_Tool.html" class="code">Tool</a></td><td class="code">tool</td><td>The tool.</td></tr>
    <tr><td class="code">string</td><td class="code">name</td><td>The name.</td></tr>
    <tr><td class="code">number</td><td class="code">time</td><td>The time.</td></tr>
-   <tr><td class="code">number</td><td class="code">weight=-1.0</td><td>The weight.</td></tr>
-   <tr><td class="code">boolean</td><td class="code">looping=false</td><td>The looping.</td></tr>
+   <tr><td class="code">number</td><td class="code">weight?</td><td>The weight. (Defaults to -1.0)</td></tr>
+   <tr><td class="code">boolean</td><td class="code">looping?</td><td>The looping. (Defaults to false)</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="updateFpCamera"></a>updateFpCamera(tool, fov, offset, weight, bobbing)</h2>
@@ -631,7 +743,7 @@
    <tr><td class="code">number</td><td class="code">bobbing</td><td>The bobbing.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="updateJoint"></a>updateJoint(tool, name, rotation, weight=-1.0)</h2>
+  <h2 class="code"><a id="updateJoint"></a>updateJoint(tool, name, rotation, weight?)</h2>
   <p>Client only</p>
   <p>Sets the rotation and weight for a bone in the animation skeleton.</p>
   <h4>Parameters:</h4>
@@ -640,10 +752,10 @@
    <tr><td class="code"><a href="userdata_Game_Tool.html" class="code">Tool</a></td><td class="code">tool</td><td>The tool.</td></tr>
    <tr><td class="code">string</td><td class="code">name</td><td>The name.</td></tr>
    <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">rotation</td><td>The rotation.</td></tr>
-   <tr><td class="code">number</td><td class="code">weight=-1.0</td><td>The weight.</td></tr>
+   <tr><td class="code">number</td><td class="code">weight?</td><td>The weight. (Defaults to -1.0)</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="updateMovementAnimation"></a>updateMovementAnimation(tool, time, weight=-1.0)</h2>
+  <h2 class="code"><a id="updateMovementAnimation"></a>updateMovementAnimation(tool, time, weight?)</h2>
   <p>Client only</p>
   <p>Updates the currently set third person view movement animation for the tool.</p>
   <h4>Parameters:</h4>
@@ -651,7 +763,7 @@
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code"><a href="userdata_Game_Tool.html" class="code">Tool</a></td><td class="code">tool</td><td>The tool.</td></tr>
    <tr><td class="code">number</td><td class="code">time</td><td>The time.</td></tr>
-   <tr><td class="code">number</td><td class="code">weight=-1.0</td><td>The weight.</td></tr>
+   <tr><td class="code">number</td><td class="code">weight?</td><td>The weight. (Defaults to -1.0)</td></tr>
   </table>
  </div>
 </body>

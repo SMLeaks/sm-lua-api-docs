@@ -61,7 +61,7 @@
 					],
 					[
 						"table",
-						"additionalData",
+						"additionalData?",
 						"Additional data to the json (Optional)"
 					]
 				],
@@ -112,7 +112,7 @@
 						"The players survival hud interface"
 					],
 					[
-						"[uuid]",
+						"[Uuid]",
 						"uuid",
 						"The item uuid"
 					],
@@ -168,6 +168,22 @@
 			}
 		},
 		{
+			"name": "clearOnCloseCallback",
+			"doc": {
+				"text": [
+					"Clears the close callback so it will not be called when the gui is closed"
+				],
+				"params": [
+					[
+						"[GuiInterface]",
+						"gui",
+						"The Gui interface"
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
 			"name": "close",
 			"doc": {
 				"text": [
@@ -178,6 +194,188 @@
 						"[GuiInterface]",
 						"gui",
 						"The Gui interface to close"
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "compassAddIcon",
+			"doc": {
+				"text": [
+					"Add an icon to the compass."
+				],
+				"params": [
+					[
+						"[GuiInterface]",
+						"compassHud",
+						"The compass hud GUI."
+					],
+					[
+						"string",
+						"iconName",
+						"Name of the new compass icon."
+					],
+					[
+						"string",
+						"image?",
+						"The name or path of the image. (Optional)"
+					],
+					[
+						"string",
+						"showDistance?",
+						"If the icon should display distance. (Optional)"
+					],
+					[
+						"string",
+						"width?",
+						"The width of the icon, defaults to 22. (Optional)"
+					],
+					[
+						"string",
+						"height?",
+						"The height of the icon, defaults to 22. (Optional)"
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "compassPingMarker",
+			"doc": {
+				"client_only": true
+			}
+		},
+		{
+			"name": "compassRemoveIcon",
+			"doc": {
+				"text": [
+					"Remove an icon from the compass."
+				],
+				"params": [
+					[
+						"[GuiInterface]",
+						"compassHud",
+						"The compass hud GUI."
+					],
+					[
+						"string",
+						"iconName",
+						"Name of a compass icon."
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "compassSetIconHost",
+			"doc": {
+				"text": [
+					"Sets a [Character] as host for a world gui"
+				],
+				"params": [
+					[
+						"[GuiInterface]",
+						"gui",
+						"The Gui interface"
+					],
+					[
+						"[Character]",
+						"host",
+						"The host of the icon"
+					],
+					[
+						"string",
+						"joint?",
+						"The joint/bone name (Optional)"
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "compassSetIconHost",
+			"doc": {
+				"text": [
+					"Sets a [Shape] as host for a compass icon"
+				],
+				"params": [
+					[
+						"[GuiInterface]",
+						"compassHud",
+						"The compass hud GUI."
+					],
+					[
+						"string",
+						"iconName",
+						"Name of a compass icon."
+					],
+					[
+						"[Shape]",
+						"host",
+						"The host of the icon"
+					],
+					[
+						"string",
+						"joint?",
+						"The host joint/bone name (Optional)"
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "compassSetIconStacking",
+			"doc": {
+				"text": [
+					"Sets whether the icon should be stacked on top of other icons."
+				],
+				"params": [
+					[
+						"[GuiInterface]",
+						"compassHud",
+						"The compass hud GUI."
+					],
+					[
+						"string",
+						"iconName",
+						"Name of a compass icon."
+					],
+					[
+						"boolean",
+						"stacking",
+						"The stacking setting."
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "compassSetIconWorldPosition",
+			"doc": {
+				"text": [
+					"Sets the world position for a world gui"
+				],
+				"params": [
+					[
+						"[GuiInterface]",
+						"compassHud",
+						"The compass hud GUI."
+					],
+					[
+						"string",
+						"iconName",
+						"Name of a compass icon."
+					],
+					[
+						"[Vec3]",
+						"worldPosition",
+						"The position to set."
+					],
+					[
+						"[World]",
+						"world?",
+						"The world, defaults to same as the script"
 					]
 				],
 				"client_only": true
@@ -274,13 +472,13 @@
 					],
 					[
 						"boolean",
-						"numbered=false",
+						"numbered?",
 						"Enable numbered steps (Defaults to false)"
 					],
 					[
 						"boolean",
-						"inverted=false",
-						"Invert slider direction"
+						"inverted?",
+						"Invert slider direction (Defaults to false)"
 					]
 				],
 				"client_only": true
@@ -333,6 +531,28 @@
 						"[GuiInterface]",
 						"gui",
 						"The interface to destroy"
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "getWorldPosition",
+			"doc": {
+				"text": [
+					"Gets the current world position of a world gui"
+				],
+				"params": [
+					[
+						"[GuiInterface]",
+						"gui",
+						"The Gui interface"
+					]
+				],
+				"return": [
+					[
+						"[Vec3]\t\t\t\t\t\t\t\tThe in world position of the gui",
+						""
 					]
 				],
 				"client_only": true
@@ -400,8 +620,13 @@
 					],
 					[
 						"boolean",
-						"restart=true",
-						"If the effect should restart if its already playing"
+						"restart?",
+						"If the effect should restart if its already playing (Defaults to true)"
+					],
+					[
+						"boolean",
+						"useHistory?",
+						"If the effect should use call history (Defaults to false)"
 					]
 				],
 				"client_only": true
@@ -436,8 +661,34 @@
 					],
 					[
 						"boolean",
-						"restart=true",
-						"If the effect should restart if its already palying"
+						"restart?",
+						"If the effect should restart if its already palying (Defaults to true)"
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "removeFromPickupDisplay",
+			"doc": {
+				"text": [
+					"Removes an item from the item pickup display"
+				],
+				"params": [
+					[
+						"[GuiInterface]",
+						"gui",
+						"The players survival hud interface"
+					],
+					[
+						"[Uuid]",
+						"uuid",
+						"The item uuid"
+					],
+					[
+						"number",
+						"amount",
+						"Quantity of items to remove"
 					]
 				],
 				"client_only": true
@@ -464,6 +715,32 @@
 						"string",
 						"callback",
 						"Function to be called when button is pressed"
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "setButtonEnabled",
+			"doc": {
+				"text": [
+					"Sets the enabled state of a widget"
+				],
+				"params": [
+					[
+						"[GuiInterface]",
+						"gui",
+						"The Gui interface"
+					],
+					[
+						"string",
+						"widgetName",
+						"The name of the widget"
+					],
+					[
+						"boolean",
+						"enabled",
+						"True if the widget should be enabled"
 					]
 				],
 				"client_only": true
@@ -600,6 +877,28 @@
 			}
 		},
 		{
+			"name": "setDressbotUnlockCallback",
+			"doc": {
+				"text": [
+					"Sets the Lua callback for when the DressbotGui unlocks something. The callback will receive the uuid of the unlocked customization item.",
+					"/"
+				],
+				"params": [
+					[
+						"[GuiInterface]",
+						"gui",
+						"The DressbotGui interface."
+					],
+					[
+						"string",
+						"function",
+						"The name function."
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
 			"name": "setFadeRange",
 			"doc": {
 				"text": [
@@ -624,7 +923,7 @@
 			"name": "setFocus",
 			"doc": {
 				"text": [
-					"Sets a widget to recieve key focus"
+					"Sets a widget to receive key focus"
 				],
 				"params": [
 					[
@@ -725,6 +1024,32 @@
 			}
 		},
 		{
+			"name": "setGridItemClickedCallback",
+			"doc": {
+				"text": [
+					"Sets a callback to be called when a grid item is changed"
+				],
+				"params": [
+					[
+						"[GuiInterface]",
+						"gui",
+						"The Gui interface"
+					],
+					[
+						"string",
+						"gridName",
+						"The grid name"
+					],
+					[
+						"string",
+						"callback",
+						"Function to be called when button is pressed"
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
 			"name": "setGridMouseFocusCallback",
 			"doc": {
 				"text": [
@@ -789,18 +1114,13 @@
 						"The Gui interface"
 					],
 					[
-						"string",
-						"widgetName",
-						"The name of the widget"
-					],
-					[
 						"[Character]",
 						"character",
 						"The character to host the gui"
 					],
 					[
 						"string",
-						"joint=nil",
+						"joint?",
 						"The joint (Optional)"
 					]
 				],
@@ -820,18 +1140,13 @@
 						"The Gui interface"
 					],
 					[
-						"string",
-						"widgetName",
-						"The name of the widget"
-					],
-					[
 						"[Shape]",
 						"shape",
 						"The shape to host the gui"
 					],
 					[
 						"string",
-						"joint=nil",
+						"joint?",
 						"The joint (Optional)"
 					]
 				],
@@ -1015,6 +1330,53 @@
 						"string",
 						"callback",
 						"Function to be called when gui is closed"
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "setOnOpenCallback",
+			"doc": {
+				"text": [
+					"Sets a callback to be called when the gui is opened"
+				],
+				"params": [
+					[
+						"[GuiInterface]",
+						"gui",
+						"The Gui interface"
+					],
+					[
+						"string",
+						"callback",
+						"Function to be called when gui is opened"
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "setOpenCloseEffect",
+			"doc": {
+				"text": [
+					"Overwrites default gui effects with specified open and close effects"
+				],
+				"params": [
+					[
+						"[GuiInterface]",
+						"gui",
+						"The Gui interface"
+					],
+					[
+						"string",
+						"openEffectName",
+						"The name of the open effect"
+					],
+					[
+						"string",
+						"closEffectName",
+						"The name of the close effect"
 					]
 				],
 				"client_only": true
@@ -1313,10 +1675,10 @@
 			}
 		},
 		{
-			"name": "setWorldPosition",
+			"name": "setWidgetState",
 			"doc": {
 				"text": [
-					"Sets the world position for a world gui"
+					"Sets the state of a widget"
 				],
 				"params": [
 					[
@@ -1330,8 +1692,34 @@
 						"The name of the widget"
 					],
 					[
+						"integer",
+						"state",
+						"The widget state [sm.gui.widgetStates]"
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "setWorldPosition",
+			"doc": {
+				"text": [
+					"Sets the world position for a world gui"
+				],
+				"params": [
+					[
+						"[GuiInterface]",
+						"gui",
+						"The Gui interface"
+					],
+					[
+						"[Vec3]",
+						"worldPosition",
+						"The position to set."
+					],
+					[
 						"[World]",
-						"world=nil",
+						"world?",
 						"The world, defaults to same as the script"
 					]
 				],
@@ -1362,8 +1750,13 @@
 					],
 					[
 						"boolean",
-						"immediate=nil",
+						"immediate?",
 						"When true, the effect stops immediately (Defaults to false)"
+					],
+					[
+						"boolean",
+						"useHistory?",
+						"If the effect should use call history (Defaults to false)"
 					]
 				],
 				"client_only": true
@@ -1431,6 +1824,11 @@
 						"table",
 						"questTasks",
 						"The table of quest tasks to display in the log Task{ name = string, text = string, count = number, target = number, complete = boolean }"
+					],
+					[
+						"string",
+						"icon?",
+						"The icon to display in the tracker (Optional)"
 					]
 				],
 				"client_only": true
@@ -1465,7 +1863,7 @@
 			"doc": {
 				"meta": [
 					[
-						"[GuiInterface],[GuiInterface]",
+						"[GuiInterface],[GuiInterface],boolean",
 						"Checks if two instances of [GuiInterface] refer to the same GuiInterface."
 					]
 				]

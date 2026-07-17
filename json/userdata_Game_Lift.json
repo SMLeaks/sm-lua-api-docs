@@ -1,5 +1,6 @@
 {
 	"userdata": "Lift",
+	"namespace_association": "sm.lift",
 	"doc": {
 		"text": [
 			"A userdata object representing a <strong>lift</strong> in the game."
@@ -186,7 +187,7 @@
 			"doc": {
 				"meta": [
 					[
-						"[Lift],[Lift]",
+						"[Lift],[Lift],boolean",
 						"Checks if two instances of [Lift] refer to the same Lift."
 					]
 				]

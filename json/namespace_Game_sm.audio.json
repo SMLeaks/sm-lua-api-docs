@@ -30,6 +30,28 @@
 	],
 	"functions": [
 		{
+			"name": "getGlobalParameter",
+			"doc": {
+				"text": [
+					"Gets a named global parameter value from FMOD."
+				],
+				"params": [
+					[
+						"string",
+						"name",
+						"The name."
+					]
+				],
+				"return": [
+					[
+						"number",
+						"The parameter value."
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
 			"name": "play",
 			"doc": {
 				"text": [
@@ -45,8 +67,29 @@
 					],
 					[
 						"[Vec3]",
-						"position=nil",
+						"position?",
 						"The world position of the sound. (Optional)"
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "setGlobalParameter",
+			"doc": {
+				"text": [
+					"Sets a named global parameter value in FMOD."
+				],
+				"params": [
+					[
+						"string",
+						"name",
+						"The name."
+					],
+					[
+						"number",
+						"value",
+						"The parameter value."
 					]
 				],
 				"client_only": true

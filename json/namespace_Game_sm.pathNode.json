@@ -23,7 +23,12 @@
 					[
 						"number",
 						"radius",
-						"The nodes's radius"
+						"The node's radius"
+					],
+					[
+						"boolean",
+						"temporary?",
+						"Temporary nodes are not saved and relies on lua garbage collection for removal (defaults to false)."
 					]
 				],
 				"return": [

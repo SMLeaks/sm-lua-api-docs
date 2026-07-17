@@ -1,11 +1,7 @@
 {
 	"namespace": "sm.interactable",
 	"userdata_association": "Interactable",
-	"doc": {
-		"text": [
-			"An <strong>interactable shape</strong> is any part that has additional functionality or abilities. The player can interact with an interactable shape by pressing `E` on it, or connect it to other interactables with the <em>Connect Tool</em>."
-		]
-	},
+	"doc": {},
 	"constants": [
 		{
 			"name": "actions",
@@ -42,6 +38,7 @@
 					"electricity;\t\t512",
 					"water;\t\t\t1024",
 					"ammo;\t\t\t\t2048",
+					"chemical;\t\t\t4096",
 					"@table"
 				],
 				"return": [

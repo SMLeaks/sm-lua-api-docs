@@ -17,6 +17,7 @@
   <h3>Classes</h3>
   <ul>
    <li><a href="class_Game_CharacterClass.html" class="code">CharacterClass</a></li>
+   <li><a href="class_Game_ClientScriptableObjectClass.html" class="code">ClientScriptableObjectClass</a></li>
    <li><a href="class_Game_GameClass.html" class="code">GameClass</a></li>
    <li><a href="class_Game_HarvestableClass.html" class="code">HarvestableClass</a></li>
    <li><a href="class_Game_PlayerClass.html" class="code">PlayerClass</a></li>
@@ -34,14 +35,18 @@
    <li><a href="userdata_Game_Body.html" class="code">Body</a></li>
    <li><a href="userdata_Game_BuilderGuide.html" class="code">BuilderGuide</a></li>
    <li><a href="userdata_Game_Character.html" class="code">Character</a></li>
+   <li><a href="userdata_Game_ClientScriptableObject.html" class="code">ClientScriptableObject</a></li>
    <li><a href="userdata_Game_Color.html" class="code">Color</a></li>
    <li><a href="userdata_Game_Container.html" class="code">Container</a></li>
    <li><a href="userdata_Game_CullSphereGroup.html" class="code">CullSphereGroup</a></li>
    <li><a href="userdata_Game_Effect.html" class="code">Effect</a></li>
+   <li><a href="userdata_Game_Garage.html" class="code">Garage</a></li>
    <li><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></li>
    <li><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></li>
    <li><a href="userdata_Game_Interactable.html" class="code">Interactable</a></li>
    <li><a href="userdata_Game_Joint.html" class="code">Joint</a></li>
+   <li><a href="userdata_Game_JsonGui.html" class="code">JsonGui</a></li>
+   <li><a href="userdata_Game_JsonWidget.html" class="code">JsonWidget</a></li>
    <li><a href="userdata_Game_Lift.html" class="code">Lift</a></li>
    <li><a href="userdata_Game_LoadCellHandle.html" class="code">LoadCellHandle</a></li>
    <li><a href="userdata_Game_Network.html" class="code">Network</a></li>
@@ -73,6 +78,7 @@
    <li><a href="namespace_Game_sm_cell.html" class="code">sm.cell</a></li>
    <li><a href="namespace_Game_sm_challenge.html" class="code">sm.challenge</a></li>
    <li><a href="namespace_Game_sm_character.html" class="code">sm.character</a></li>
+   <li><a href="namespace_Game_sm_clientScriptableObject.html" class="code">sm.clientScriptableObject</a></li>
    <li><a href="namespace_Game_sm_color.html" class="code">sm.color</a></li>
    <li><a href="namespace_Game_sm_construction.html" class="code">sm.construction</a></li>
    <li><a href="namespace_Game_sm_container.html" class="code">sm.container</a></li>
@@ -80,9 +86,11 @@
    <li><a href="namespace_Game_sm_cullSphereGroup.html" class="code">sm.cullSphereGroup</a></li>
    <li><a href="namespace_Game_sm_debris.html" class="code">sm.debris</a></li>
    <li><a href="namespace_Game_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
+   <li><a href="namespace_Game_sm_debugGui.html" class="code">sm.debugGui</a></li>
    <li><a href="namespace_Game_sm_effect.html" class="code">sm.effect</a></li>
    <li><a href="namespace_Game_sm_event.html" class="code">sm.event</a></li>
    <li><a href="namespace_Game_sm_game.html" class="code">sm.game</a></li>
+   <li><a href="namespace_Game_sm_garage.html" class="code">sm.garage</a></li>
    <li><a href="namespace_Game_sm_gui.html" class="code">sm.gui</a></li>
    <li><a href="namespace_Game_sm_gui_widget.html" class="code">sm.gui.widget</a></li>
    <li><a href="namespace_Game_sm_harvestable.html" class="code">sm.harvestable</a></li>
@@ -90,15 +98,19 @@
    <li><a href="namespace_Game_sm_item.html" class="code">sm.item</a></li>
    <li><a href="namespace_Game_sm_joint.html" class="code">sm.joint</a></li>
    <li><a href="namespace_Game_sm_json.html" class="code">sm.json</a></li>
+   <li><a href="namespace_Game_sm_jsonGui.html" class="code">sm.jsonGui</a></li>
+   <li><a href="namespace_Game_sm_lift.html" class="code">sm.lift</a></li>
    <li><a href="namespace_Game_sm_localPlayer.html" class="code">sm.localPlayer</a></li>
    <li><a href="namespace_Game_sm_log.html" class="code">sm.log</a></li>
    <li><a href="namespace_Game_sm_melee.html" class="code">sm.melee</a></li>
    <li><a href="namespace_Game_sm_menuCreation.html" class="code">sm.menuCreation</a></li>
+   <li><a href="namespace_Game_sm_message.html" class="code">sm.message</a></li>
    <li><a href="namespace_Game_sm_noise.html" class="code">sm.noise</a></li>
    <li><a href="namespace_Game_sm_particle.html" class="code">sm.particle</a></li>
    <li><a href="namespace_Game_sm_pathNode.html" class="code">sm.pathNode</a></li>
    <li><a href="namespace_Game_sm_pathfinder.html" class="code">sm.pathfinder</a></li>
    <li><a href="namespace_Game_sm_physics.html" class="code">sm.physics</a></li>
+   <li><a href="namespace_Game_sm_pipeGraph.html" class="code">sm.pipeGraph</a></li>
    <li><a href="namespace_Game_sm_player.html" class="code">sm.player</a></li>
    <li><a href="namespace_Game_sm_portal.html" class="code">sm.portal</a></li>
    <li><a href="namespace_Game_sm_projectile.html" class="code">sm.projectile</a></li>
@@ -122,8 +134,12 @@
   <h3>Object Types 'userdata'</h3>
   <ul>
    <li><a href="userdata_Terrain_Color.html" class="code">Color</a></li>
+   <li><a href="userdata_Terrain_Container.html" class="code">Container</a></li>
    <li><a href="userdata_Terrain_Harvestable.html" class="code">Harvestable</a></li>
+   <li><a href="userdata_Terrain_Interactable.html" class="code">Interactable</a></li>
+   <li><a href="userdata_Terrain_Portal.html" class="code">Portal</a></li>
    <li><a href="userdata_Terrain_Quat.html" class="code">Quat</a></li>
+   <li><a href="userdata_Terrain_ScriptableObject.html" class="code">ScriptableObject</a></li>
    <li><a href="userdata_Terrain_Uuid.html" class="code">Uuid</a></li>
    <li><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></li>
    <li><a href="userdata_Terrain_World.html" class="code">World</a></li>
@@ -133,24 +149,39 @@
    <li><a href="namespace_Terrain_GLOBAL.html" class="code">GLOBAL</a></li>
    <li><a href="namespace_Terrain_sm.html" class="code">sm</a></li>
    <li><a href="namespace_Terrain_sm_color.html" class="code">sm.color</a></li>
+   <li><a href="namespace_Terrain_sm_container.html" class="code">sm.container</a></li>
    <li><a href="namespace_Terrain_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
-   <li><a href="namespace_Terrain_sm_harvestable.html" class="code">sm.harvestable</a></li>
+   <li><a href="namespace_Terrain_sm_debugGui.html" class="code">sm.debugGui</a></li>
+   <li><a href="namespace_Terrain_sm_interactable.html" class="code">sm.interactable</a></li>
    <li><a href="namespace_Terrain_sm_json.html" class="code">sm.json</a></li>
    <li><a href="namespace_Terrain_sm_log.html" class="code">sm.log</a></li>
    <li><a href="namespace_Terrain_sm_noise.html" class="code">sm.noise</a></li>
    <li><a href="namespace_Terrain_sm_quat.html" class="code">sm.quat</a></li>
+   <li><a href="namespace_Terrain_sm_scriptableObject.html" class="code">sm.scriptableObject</a></li>
    <li><a href="namespace_Terrain_sm_terrainData.html" class="code">sm.terrainData</a></li>
    <li><a href="namespace_Terrain_sm_terrainGeneration.html" class="code">sm.terrainGeneration</a></li>
+   <li><a href="namespace_Terrain_sm_terrainHarvestable.html" class="code">sm.terrainHarvestable</a></li>
    <li><a href="namespace_Terrain_sm_terrainTile.html" class="code">sm.terrainTile</a></li>
+   <li><a href="namespace_Terrain_sm_tunnelGenerator.html" class="code">sm.tunnelGenerator</a></li>
    <li><a href="namespace_Terrain_sm_util.html" class="code">sm.util</a></li>
    <li><a href="namespace_Terrain_sm_uuid.html" class="code">sm.uuid</a></li>
    <li><a href="namespace_Terrain_sm_vec3.html" class="code">sm.vec3</a></li>
+   <li><a href="namespace_Terrain_sm_voxelTerrainCell.html" class="code">sm.voxelTerrainCell</a></li>
   </ul>
  </div>
  <div id="content">
   <h1 class="code">sm.game</h1>
   <p>Used to check the state of the game.</p>
-  <h4>Functions:</h4  <ul>   <li><a href="#bindChatCommand" class="code">bindChatCommand</a></li>   <li><a href="#getCurrentTick" class="code">getCurrentTick</a></li>   <li><a href="#getDifficulty" class="code">getDifficulty</a></li>   <li><a href="#getEnableAggro" class="code">getEnableAggro</a></li>   <li><a href="#getEnableAmmoConsumption" class="code">getEnableAmmoConsumption</a></li>   <li><a href="#getEnableFuelConsumption" class="code">getEnableFuelConsumption</a></li>   <li><a href="#getEnableRestrictions" class="code">getEnableRestrictions</a></li>   <li><a href="#getEnableUpgrade" class="code">getEnableUpgrade</a></li>   <li><a href="#getLimitedInventory" class="code">getLimitedInventory</a></li>   <li><a href="#getServerTick" class="code">getServerTick</a></li>   <li><a href="#getTimeOfDay" class="code">getTimeOfDay</a></li>   <li><a href="#setEnableAggro" class="code">setEnableAggro</a></li>   <li><a href="#setEnableAmmoConsumption" class="code">setEnableAmmoConsumption</a></li>   <li><a href="#setEnableFuelConsumption" class="code">setEnableFuelConsumption</a></li>   <li><a href="#setEnableRestrictions" class="code">setEnableRestrictions</a></li>   <li><a href="#setEnableUpgrade" class="code">setEnableUpgrade</a></li>   <li><a href="#setLimitedInventory" class="code">setLimitedInventory</a></li>   <li><a href="#setTimeOfDay" class="code">setTimeOfDay</a></li>  </ul>  <hr>
+  <h4>Functions:</h4  <ul>   <li><a href="#banPlayer" class="code">banPlayer</a></li>   <li><a href="#bindChatCommand" class="code">bindChatCommand</a></li>   <li><a href="#exitToMenu" class="code">exitToMenu</a></li>   <li><a href="#exitToMenuWithEndCredits" class="code">exitToMenuWithEndCredits</a></li>   <li><a href="#getCurrentTick" class="code">getCurrentTick</a></li>   <li><a href="#getDifficulty" class="code">getDifficulty</a></li>   <li><a href="#getEnableAggro" class="code">getEnableAggro</a></li>   <li><a href="#getEnableAmmoConsumption" class="code">getEnableAmmoConsumption</a></li>   <li><a href="#getEnableFuelConsumption" class="code">getEnableFuelConsumption</a></li>   <li><a href="#getEnableRestrictions" class="code">getEnableRestrictions</a></li>   <li><a href="#getEnableUpgrade" class="code">getEnableUpgrade</a></li>   <li><a href="#getLimitedInventory" class="code">getLimitedInventory</a></li>   <li><a href="#getRecipesEnabled" class="code">getRecipesEnabled</a></li>   <li><a href="#getServerTick" class="code">getServerTick</a></li>   <li><a href="#getSettingBoolean" class="code">getSettingBoolean</a></li>   <li><a href="#getSettingString" class="code">getSettingString</a></li>   <li><a href="#getSettingValue" class="code">getSettingValue</a></li>   <li><a href="#getTimeOfDay" class="code">getTimeOfDay</a></li>   <li><a href="#kickPlayer" class="code">kickPlayer</a></li>   <li><a href="#loadWatchedTutorials" class="code">loadWatchedTutorials</a></li>   <li><a href="#pauseSaving" class="code">pauseSaving</a></li>   <li><a href="#resumeSaving" class="code">resumeSaving</a></li>   <li><a href="#saveWatchedTutorials" class="code">saveWatchedTutorials</a></li>   <li><a href="#setEnableAggro" class="code">setEnableAggro</a></li>   <li><a href="#setEnableAmmoConsumption" class="code">setEnableAmmoConsumption</a></li>   <li><a href="#setEnableFuelConsumption" class="code">setEnableFuelConsumption</a></li>   <li><a href="#setEnableRecipes" class="code">setEnableRecipes</a></li>   <li><a href="#setEnableRestrictions" class="code">setEnableRestrictions</a></li>   <li><a href="#setEnableUpgrade" class="code">setEnableUpgrade</a></li>   <li><a href="#setLimitedInventory" class="code">setLimitedInventory</a></li>   <li><a href="#setTimeOfDay" class="code">setTimeOfDay</a></li>  </ul>  <hr>
+  <h2 class="code"><a id="banPlayer"></a>sm.game.banPlayer(player)</h2>
+  <p>Server only</p>
+  <p>Ban a player from the server.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Player.html" class="code">Player</a></td><td class="code">player</td><td>The player to be banned.</td></tr>
+  </table>
+  <hr>
   <h2 class="code"><a id="bindChatCommand"></a>sm.game.bindChatCommand(command, params, callback, help)</h2>
   <p>Binds a chat command to a callback function. The callback function receives an array of parameters. The first parameter is the command itself.</p>
   <p>Example:</p>
@@ -165,10 +196,16 @@ end</pre>  <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code">string</td><td class="code">command</td><td>The command.</td></tr>
-   <tr><td class="code">table</td><td class="code">params</td><td>An array of parameters the callback function expects in the form of { { type, name, optional }, ... }. The first is the <strong>type</strong> name of the parameter as a string. Valid types are "bool", "int", "number" and "string". The second is the <strong>name</strong> in the help text. Defaults to automatic naming ("p1", "p2", "p3", ...). The third is a bool value where true means that this parameter is <strong>optional</strong>. Defaults to false.</td></tr>
+   <tr><td class="code">table</td><td class="code">params</td><td>An array of parameters the callback function expects in the form of { { type, name (, optional, autocomplete ) }, ... }. The first is the <strong>type</strong> name of the parameter as a string. Valid types are "bool", "int", "number" and "string". The second is the <strong>name</strong> in the help text. Defaults to automatic naming ("p1", "p2", "p3", ...). The third is a bool value where true means that this parameter is <strong>optional</strong> (Optional, defaults to false). The fourth is a list of values that can be auto-completed to by pressing tab (Optional).</td></tr>
    <tr><td class="code">string</td><td class="code">callback</td><td>The name of the Lua function to bind.</td></tr>
    <tr><td class="code">string</td><td class="code">help</td><td>Help text.</td></tr>
   </table>
+  <hr>
+  <h2 class="code"><a id="exitToMenu"></a>sm.game.exitToMenu()</h2>
+  <p>Only for testing!</p>
+  <hr>
+  <h2 class="code"><a id="exitToMenuWithEndCredits"></a>sm.game.exitToMenuWithEndCredits()</h2>
+  <p>Exits to the main menu and requests the end-game credits sequence to play once there.</p>
   <hr>
   <h2 class="code"><a id="getCurrentTick"></a>sm.game.getCurrentTick()</h2>
   <p>Return the current game tick.</p>
@@ -234,6 +271,14 @@ end</pre>  <h4>Parameters:</h4>
    <tr><td class="code">boolean</td><td>Is limited.</td></tr>
   </table>
   <hr>
+  <h2 class="code"><a id="getRecipesEnabled"></a>sm.game.getRecipesEnabled()</h2>
+  <p>Returns true if recipes is enabled and false if recipes are is disabled.</p>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>The enable state.</td></tr>
+  </table>
+  <hr>
   <h2 class="code"><a id="getServerTick"></a>sm.game.getServerTick()</h2>
   <p>Return estimated game tick on the server.</p>
   <h4>Returns:</h4>
@@ -242,12 +287,98 @@ end</pre>  <h4>Parameters:</h4>
    <tr><td class="code">integer</td><td>The tick.</td></tr>
   </table>
   <hr>
+  <h2 class="code"><a id="getSettingBoolean"></a>sm.game.getSettingBoolean(name)</h2>
+  <p>Get the boolean value of a named setting.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">string</td><td class="code">name</td><td>The name of the setting</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>value	The value of the setting.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getSettingString"></a>sm.game.getSettingString(name)</h2>
+  <p>Get the string value of a named setting.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">string</td><td class="code">name</td><td>The name of the setting</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">string</td><td>value	The value of the setting.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getSettingValue"></a>sm.game.getSettingValue(name)</h2>
+  <p>Get the number value of a named setting.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">string</td><td class="code">name</td><td>The name of the setting</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">number</td><td>value	The value of the setting.</td></tr>
+  </table>
+  <hr>
   <h2 class="code"><a id="getTimeOfDay"></a>sm.game.getTimeOfDay()</h2>
   <p>Return the fraction value of how far the current day has progressed.</p>
   <h4>Returns:</h4>
   <table>
    <tr><th>Type</th><th>Description</th></tr>
    <tr><td class="code">number</td><td>The fraction of the day cycle.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="kickPlayer"></a>sm.game.kickPlayer(player)</h2>
+  <p>Server only</p>
+  <p>Kick a player from the server.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Player.html" class="code">Player</a></td><td class="code">player</td><td>The player to be kicked.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="loadWatchedTutorials"></a>sm.game.loadWatchedTutorials()</h2>
+  <p>Client only</p>
+  <p>Loads the users watched tutorials and returns it as a table.</p>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td>Users watched tutorials table.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="pauseSaving"></a>sm.game.pauseSaving(waitName, ticks)</h2>
+  <p>Server only</p>
+  <p>Pauses saving for the specified number of ticks. Server only.</p>
+  <p>If already paused, extends to the longer of current remaining and the requested ticks.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">string</td><td class="code">waitName</td><td>The name identifying this pause request.</td></tr>
+   <tr><td class="code">integer</td><td class="code">ticks</td><td>The number of ticks to pause saving for.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="resumeSaving"></a>sm.game.resumeSaving(waitName)</h2>
+  <p>Server only</p>
+  <p>Resumes saving by removing a named pause request. Server only.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">string</td><td class="code">waitName</td><td>The name identifying the pause request to remove.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="saveWatchedTutorials"></a>sm.game.saveWatchedTutorials(watchedTutorials)</h2>
+  <p>Client only</p>
+  <p>Saves the user's watched tutorials.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">watchedTutorials</td><td>The table of watched tutorials.</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="setEnableAggro"></a>sm.game.setEnableAggro(enableAggro)</h2>
@@ -275,6 +406,15 @@ end</pre>  <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code">boolean</td><td class="code">enableFuelConsumption</td><td>The enable state.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setEnableRecipes"></a>sm.game.setEnableRecipes(enableRecipes)</h2>
+  <p>Server only</p>
+  <p>Enables and disables recipes. If true, player's will need to unlock recipes before they become available for crafting.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td class="code">enableRecipes</td><td>The enable state.</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="setEnableRestrictions"></a>sm.game.setEnableRestrictions(enableRestrictions)</h2>

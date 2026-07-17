@@ -13,6 +13,58 @@
 	"constants": [],
 	"functions": [
 		{
+			"name": "lerp",
+			"doc": {
+				"text": [
+					"Linearly interpolates between two colors"
+				],
+				"params": [
+					[
+						"[Color]",
+						"color1",
+						"The first color."
+					],
+					[
+						"[Color]",
+						"color2",
+						"The second color."
+					],
+					[
+						"number",
+						"t",
+						"Interpolation amount between the two inputs."
+					]
+				],
+				"return": [
+					[
+						"[Color]",
+						"Interpolated color."
+					]
+				]
+			}
+		},
+		{
+			"name": "new",
+			"doc": {
+				"text": [
+					"Creates a new color object from another color object."
+				],
+				"params": [
+					[
+						"[Color]",
+						"color",
+						"The color to copy."
+					]
+				],
+				"return": [
+					[
+						"[Color]",
+						"The created color."
+					]
+				]
+			}
+		},
+		{
 			"name": "new",
 			"doc": {
 				"text": [
@@ -36,7 +88,7 @@
 					],
 					[
 						"number",
-						"a=nil",
+						"a?",
 						"The alpha value. Defaults to 1.0. (Optional)"
 					]
 				],

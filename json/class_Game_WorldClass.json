@@ -87,10 +87,94 @@
 			}
 		},
 		{
+			"name": "defaultVoxelDensity",
+			"doc": {
+				"text": [
+					"Default value when sampling voxel density. (Defaults to 0)"
+				],
+				"return": [
+					[
+						"integer",
+						""
+					]
+				]
+			}
+		},
+		{
+			"name": "defaultVoxelMaterial",
+			"doc": {
+				"text": [
+					"Default value when sampling voxel material. (Defaults to 0)"
+				],
+				"return": [
+					[
+						"integer",
+						""
+					]
+				]
+			}
+		},
+		{
 			"name": "enableAssets",
 			"doc": {
 				"text": [
 					"Enables or disables terrain assets for this world. (Defaults to true)"
+				],
+				"return": [
+					[
+						"boolean",
+						""
+					]
+				]
+			}
+		},
+		{
+			"name": "enableBuildOnAssets",
+			"doc": {
+				"text": [
+					"Enables or disables the ability to build on terrain assets. (Defaults to true)"
+				],
+				"return": [
+					[
+						"boolean",
+						""
+					]
+				]
+			}
+		},
+		{
+			"name": "enableBuildOnBodies",
+			"doc": {
+				"text": [
+					"Enables or disables the ability to build on bodies. (Defaults to true)"
+				],
+				"return": [
+					[
+						"boolean",
+						""
+					]
+				]
+			}
+		},
+		{
+			"name": "enableBuildOnLift",
+			"doc": {
+				"text": [
+					"Enables or disables the ability to build on lift. (Defaults to true)"
+				],
+				"return": [
+					[
+						"boolean",
+						""
+					]
+				]
+			}
+		},
+		{
+			"name": "enableBuildOnSurface",
+			"doc": {
+				"text": [
+					"Enables or disables the ability to build on terrain surface. (Defaults to true)"
 				],
 				"return": [
 					[
@@ -157,6 +241,20 @@
 			}
 		},
 		{
+			"name": "enableNavMesh",
+			"doc": {
+				"text": [
+					"Enables or disables navigation mesh generation for better AI path finding. (Defaults to true)"
+				],
+				"return": [
+					[
+						"boolean",
+						""
+					]
+				]
+			}
+		},
+		{
 			"name": "enableNodes",
 			"doc": {
 				"text": [
@@ -185,6 +283,20 @@
 			}
 		},
 		{
+			"name": "enableVoxelTerrain",
+			"doc": {
+				"text": [
+					"Enables or disables voxel terrain for this world. (Defaults to true)"
+				],
+				"return": [
+					[
+						"boolean",
+						""
+					]
+				]
+			}
+		},
+		{
 			"name": "groundMaterialSet",
 			"doc": {
 				"text": [
@@ -194,6 +306,34 @@
 				"return": [
 					[
 						"string",
+						""
+					]
+				]
+			}
+		},
+		{
+			"name": "hLod",
+			"doc": {
+				"text": [
+					"Enables or disables h lods."
+				],
+				"return": [
+					[
+						"integer",
+						""
+					]
+				]
+			}
+		},
+		{
+			"name": "horizonWater",
+			"doc": {
+				"text": [
+					"Enables or disables automatically placing water effects at the edge of the world."
+				],
+				"return": [
+					[
+						"integer",
 						""
 					]
 				]
@@ -250,6 +390,21 @@
 				"text": [
 					"Sets the script used to generate terrain.",
 					"Full $-path to the terrain generation script."
+				],
+				"return": [
+					[
+						"string",
+						""
+					]
+				]
+			}
+		},
+		{
+			"name": "voxelMaterialSet",
+			"doc": {
+				"text": [
+					"Sets the voxel material set used by the voxel terrain. (Defaults to \"$SURVIVAL_DATA/Terrain/Materials/voxel_materialset_drill1.voxelmaterialset\")",
+					"Full $-path to the material set."
 				],
 				"return": [
 					[
@@ -479,6 +634,110 @@
 		}
 	],
 	"callbacks": [
+		{
+			"name": "server_onUnload",
+			"doc": {
+				"text": [
+					"Called when the [World] is unloaded from the game on shutdown."
+				],
+				"params": [
+					[
+						"table",
+						"self",
+						"The class instance."
+					]
+				]
+			},
+			"type": "serverEventCallback"
+		},
+		{
+			"name": "server_onTerrainCreated",
+			"doc": {
+				"text": [
+					"Called when a world's terrain is created for the first time on the server.",
+					"This callback is triggered during the initial generation of the world terrain.",
+					"@code",
+					" * function World:server_onTerrainCreated()",
+					" *     -- Terrain creation logic here",
+					" * end",
+					"@code"
+				],
+				"params": [
+					[
+						"table",
+						"self",
+						"The class instance."
+					]
+				]
+			},
+			"type": "serverEventCallback"
+		},
+		{
+			"name": "server_onTerrainLoaded",
+			"doc": {
+				"text": [
+					"Called when a world's terrain is loaded (not created) on the server.",
+					"This is triggered when existing terrain data is loaded into the world.",
+					"@code",
+					" * function World:server_onTerrainLoaded()",
+					" *     -- Terrain loading logic here",
+					" * end",
+					"@code"
+				],
+				"params": [
+					[
+						"table",
+						"self",
+						"The class instance."
+					]
+				]
+			},
+			"type": "serverEventCallback"
+		},
+		{
+			"name": "client_onTerrainCreated",
+			"doc": {
+				"text": [
+					"Called on the client when a world's terrain is created for the first time.",
+					"This callback is used for client-side terrain generation tasks.",
+					"@code",
+					" * function World:client_onTerrainCreated()",
+					" *     -- Client-side terrain creation logic",
+					" * end",
+					"@code"
+				],
+				"params": [
+					[
+						"table",
+						"self",
+						"The class instance."
+					]
+				]
+			},
+			"type": "clientEventCallback"
+		},
+		{
+			"name": "client_onTerrainLoaded",
+			"doc": {
+				"text": [
+					"Called on the client when a world's terrain is loaded (not created).",
+					"This function is useful for initializing client-side elements based on the loaded terrain.",
+					"@code",
+					" * function World:client_onTerrainLoaded()",
+					" *     -- Client-side terrain loading logic",
+					" * end",
+					"@code"
+				],
+				"params": [
+					[
+						"table",
+						"self",
+						"The class instance."
+					]
+				]
+			},
+			"type": "clientEventCallback"
+		},
 		{
 			"name": "server_onCellCreated",
 			"doc": {
@@ -745,6 +1004,11 @@
 						"integer",
 						"destructionLevel",
 						"The level of destruction done by this explosion. Corresponds to the 'durability' rating of a [Shape]."
+					],
+					[
+						"integer",
+						"damage",
+						"The damage value of the explosion."
 					]
 				]
 			},
@@ -936,6 +1200,143 @@
 				]
 			},
 			"type": "clientEventCallback"
+		},
+		{
+			"name": "client_onProjectile",
+			"doc": {
+				"text": [
+					"Called when a projectile hits something in this world.",
+					"@note",
+					"If the shooter is destroyed before the projectile hits, the shooter value will be nil.",
+					"@note"
+				],
+				"params": [
+					[
+						"table",
+						"self",
+						"The class instance."
+					],
+					[
+						"[Vec3]",
+						"position",
+						"The position in world space where the projectile hit."
+					],
+					[
+						"number",
+						"airTime",
+						"The time, in seconds, that the projectile spent flying before the hit."
+					],
+					[
+						"[Vec3]",
+						"velocity",
+						"The velocity of the projectile at impact."
+					],
+					[
+						"string",
+						"projectileName",
+						"The name of the projectile. (Legacy, use uuid instead)"
+					],
+					[
+						"[Player]/[Character]/[Shape]/[Harvestable]/nil",
+						"shooter",
+						"The shooter. Can be a [Player], [Character], [Shape], [Harvestable] or nil if unknown."
+					],
+					[
+						"integer",
+						"damage",
+						"The damage value of the projectile."
+					],
+					[
+						"[Vec3]",
+						"normal",
+						"The normal at the point of impact."
+					],
+					[
+						"[Character]/[Shape]/[Harvestable]/[Lift]/nil",
+						"target",
+						"The hit target. Can be a [Character], [Shape], [Harvestable], [Lift] or nil if terrain or unknown."
+					],
+					[
+						"[Uuid]",
+						"uuid",
+						"The uuid of the projectile."
+					]
+				]
+			},
+			"type": "clientEventCallback"
+		},
+		{
+			"name": "server_onVoxelDestruction",
+			"doc": {
+				"text": [
+					"Called when a cluster of voxels are destroyed by a player or creation"
+				],
+				"params": [
+					[
+						"table",
+						"self",
+						"The class instance."
+					],
+					[
+						"table",
+						"densityLoss",
+						"A table containing information about density loss for all materials."
+					],
+					[
+						"table",
+						"positions",
+						"A table containing all positions where voxels were lost for each material."
+					]
+				]
+			},
+			"type": "serverEventCallback"
+		},
+		{
+			"name": "server_onVoxelConstruction",
+			"doc": {
+				"text": [
+					"Called when a cluster of voxels are added by a player"
+				],
+				"params": [
+					[
+						"table",
+						"self",
+						"The class instance."
+					],
+					[
+						"table",
+						"densityGain",
+						"A table containing information about density gain for all materials."
+					],
+					[
+						"table",
+						"positions",
+						"A table containing all positions where voxels were added for each material."
+					]
+				]
+			},
+			"type": "serverEventCallback"
+		},
+		{
+			"name": "server_onMining",
+			"doc": {
+				"text": [
+					"Called when the mining manager has filtered a batch of voxel loot candidates."
+				],
+				"params": [
+					[
+						"table",
+						"self",
+						"The class instance."
+					],
+					[
+						"table",
+						"spawns",
+						"An array of { position = [Vec3], spawnId = integer } describing where and what to spawn."
+					]
+				]
+			},
+			"type": "serverEventCallback"
 		}
 	]
 }

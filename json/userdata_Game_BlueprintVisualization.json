@@ -90,6 +90,27 @@
 			}
 		},
 		{
+			"name": "setVisualizationColor",
+			"doc": {
+				"text": [
+					"Controls the rendering of the [BlueprintVisualization]."
+				],
+				"params": [
+					[
+						"[BlueprintVisualization]",
+						"blueprintVisualization",
+						"A blueprint visualization"
+					],
+					[
+						"string",
+						"visualizationColor",
+						"Visualization color name to render the blueprint in."
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
 			"name": "updateBuilderGuide",
 			"doc": {
 				"text": [
@@ -113,7 +134,7 @@
 			"doc": {
 				"meta": [
 					[
-						"[BlueprintVisualization],[BlueprintVisualization]",
+						"[BlueprintVisualization],[BlueprintVisualization],boolean",
 						"Checks if two instances of [BlueprintVisualization] refer to the same BlueprintVisualization."
 					]
 				]

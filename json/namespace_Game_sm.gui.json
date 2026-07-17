@@ -6,8 +6,65 @@
 			"This library can only be used on the <a href=\"index.html#client\">client</a>."
 		]
 	},
-	"constants": [],
+	"constants": [
+		{
+			"name": "widgetStates",
+			"doc": {
+				"text": [
+					"Widget states",
+					"@table",
+					"disabled,",
+					"normal,",
+					"highlighted,",
+					"pushed,",
+					"disabled_checked,",
+					"normal_checked,",
+					"highlighted_checked,",
+					"pushed_checked",
+					"@table"
+				],
+				"return": [
+					[
+						"table",
+						"The widget states list."
+					]
+				]
+			}
+		}
+	],
 	"functions": [
+		{
+			"name": "bindDisplayMessageCallback",
+			"doc": {
+				"text": [
+					"Sets a target callback for generic notification popups"
+				],
+				"params": [
+					[
+						"string",
+						"callback",
+						"Function to be called when a alert message is called"
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "blockInGameMenu",
+			"doc": {
+				"text": [
+					"Sets the blocking state for the in game menu."
+				],
+				"params": [
+					[
+						"boolean",
+						"block",
+						"The new blocking state for the in game menu."
+					]
+				],
+				"client_only": true
+			}
+		},
 		{
 			"name": "chatMessage",
 			"doc": {
@@ -27,6 +84,48 @@
 			}
 		},
 		{
+			"name": "computeTextSize",
+			"doc": {
+				"text": [
+					"Calculates the 720 widget size required to display a text"
+				],
+				"params": [
+					[
+						"string",
+						"text",
+						"The text to compute."
+					],
+					[
+						"string",
+						"font",
+						"The font to use."
+					],
+					[
+						"string",
+						"align",
+						"The text alignment."
+					],
+					[
+						"number",
+						"maxWidth?",
+						"The maximum desired widget width before wrapping (optional) (Defaults to -1)"
+					],
+					[
+						"boolean",
+						"replaceTags?",
+						"Should tags be replaced before calculating? (optional) (Defaults to true)"
+					]
+				],
+				"return": [
+					[
+						"{number, number}",
+						"The calculated width and height."
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
 			"name": "createAmmunitionContainerGui",
 			"doc": {
 				"text": [
@@ -35,8 +134,8 @@
 				"params": [
 					[
 						"boolean",
-						"destroyOnClose=false",
-						"If true the gui is destroyed when closed, otherwise the gui can be reused."
+						"destroyOnClose?",
+						"If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)"
 					]
 				],
 				"return": [
@@ -60,8 +159,8 @@
 				"params": [
 					[
 						"boolean",
-						"destroyOnClose=false",
-						"If true the gui is destroyed when closed, otherwise the gui can be reused."
+						"destroyOnClose?",
+						"If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)"
 					]
 				],
 				"return": [
@@ -82,8 +181,8 @@
 				"params": [
 					[
 						"boolean",
-						"destroyOnClose=false",
-						"If true the gui is destroyed when closed, otherwise the gui can be reused."
+						"destroyOnClose?",
+						"If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)"
 					]
 				],
 				"return": [
@@ -107,8 +206,8 @@
 				"params": [
 					[
 						"boolean",
-						"destroyOnClose=false",
-						"If true the gui is destroyed when closed, otherwise the gui can be reused."
+						"destroyOnClose?",
+						"If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)"
 					]
 				],
 				"return": [
@@ -129,8 +228,8 @@
 				"params": [
 					[
 						"boolean",
-						"destroyOnClose=false",
-						"If true the gui is destroyed when closed, otherwise the gui can be reused."
+						"destroyOnClose?",
+						"If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)"
 					]
 				],
 				"return": [
@@ -151,8 +250,8 @@
 				"params": [
 					[
 						"boolean",
-						"destroyOnClose=false",
-						"If true the gui is destroyed when closed, otherwise the gui can be reused."
+						"destroyOnClose?",
+						"If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)"
 					]
 				],
 				"return": [
@@ -168,13 +267,18 @@
 			"name": "createCharacterCustomizationGui",
 			"doc": {
 				"text": [
-					"Create a character customization GUI."
+					"Create a character customization GUI.",
+					"@note",
+					"Character customization gui has two magic callbacks",
+					"Mouse drag cl_onDragZoneUsed ( number, number )",
+					"Mouse scroll cl_onDragZoneUsed ( number )",
+					"@note"
 				],
 				"params": [
 					[
 						"boolean",
-						"destroyOnClose=false",
-						"If true the gui is destroyed when closed, otherwise the gui can be reused."
+						"destroyOnClose?",
+						"If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)"
 					]
 				],
 				"return": [
@@ -195,8 +299,30 @@
 				"params": [
 					[
 						"boolean",
-						"destroyOnClose=false",
-						"If true the gui is destroyed when closed, otherwise the gui can be reused."
+						"destroyOnClose?",
+						"If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)"
+					]
+				],
+				"return": [
+					[
+						"[GuiInterface]",
+						"The gui interface to the created gui."
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "createCompassHudGui",
+			"doc": {
+				"text": [
+					"Create a compass hud GUI."
+				],
+				"params": [
+					[
+						"boolean",
+						"destroyOnClose?",
+						"If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)"
 					]
 				],
 				"return": [
@@ -217,8 +343,8 @@
 				"params": [
 					[
 						"boolean",
-						"destroyOnClose=false",
-						"If true the gui is destroyed when closed, otherwise the gui can be reused."
+						"destroyOnClose?",
+						"If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)"
 					]
 				],
 				"return": [
@@ -239,8 +365,8 @@
 				"params": [
 					[
 						"boolean",
-						"destroyOnClose=false",
-						"If true the gui is destroyed when closed, otherwise the gui can be reused."
+						"destroyOnClose?",
+						"If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)"
 					]
 				],
 				"return": [
@@ -261,8 +387,8 @@
 				"params": [
 					[
 						"boolean",
-						"destroyOnClose=false",
-						"If true the gui is destroyed when closed, otherwise the gui can be reused."
+						"destroyOnClose?",
+						"If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)"
 					]
 				],
 				"return": [
@@ -283,8 +409,8 @@
 				"params": [
 					[
 						"boolean",
-						"destroyOnClose=false",
-						"If true the gui is destroyed when closed, otherwise the gui can be reused."
+						"destroyOnClose?",
+						"If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)"
 					]
 				],
 				"return": [
@@ -305,8 +431,8 @@
 				"params": [
 					[
 						"boolean",
-						"destroyOnClose=false",
-						"If true the gui is destroyed when closed, otherwise the gui can be reused."
+						"destroyOnClose?",
+						"If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)"
 					]
 				],
 				"return": [
@@ -327,8 +453,30 @@
 				"params": [
 					[
 						"boolean",
-						"destroyOnClose=false",
-						"If true the gui is destroyed when closed, otherwise the gui can be reused."
+						"destroyOnClose?",
+						"If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)"
+					]
+				],
+				"return": [
+					[
+						"[GuiInterface]",
+						"The gui interface to the created gui."
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "createGlowstickContainerGui",
+			"doc": {
+				"text": [
+					"Create a glowstick container GUI."
+				],
+				"params": [
+					[
+						"boolean",
+						"destroyOnClose?",
+						"If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)"
 					]
 				],
 				"return": [
@@ -354,12 +502,12 @@
 					],
 					[
 						"boolean",
-						"destroyOnClose=false",
-						"If true the gui is destroyed when closed, otherwise the gui can be reused."
+						"destroyOnClose?",
+						"If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)"
 					],
 					[
 						"table",
-						"settings=nil",
+						"settings?",
 						"Table with bool settings for: isHud, isInteractive, needsCursor"
 					]
 				],
@@ -381,8 +529,8 @@
 				"params": [
 					[
 						"boolean",
-						"destroyOnClose=false",
-						"If true the gui is destroyed when closed, otherwise the gui can be reused."
+						"destroyOnClose?",
+						"If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)"
 					]
 				],
 				"return": [
@@ -403,8 +551,8 @@
 				"params": [
 					[
 						"boolean",
-						"destroyOnClose=false",
-						"If true the gui is destroyed when closed, otherwise the gui can be reused."
+						"destroyOnClose?",
+						"If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)"
 					]
 				],
 				"return": [
@@ -420,13 +568,35 @@
 			"name": "createMechanicStationGui",
 			"doc": {
 				"text": [
-					"Create a mechanical station GUI."
+					"Create a mechanic station dispenser GUI."
 				],
 				"params": [
 					[
 						"boolean",
-						"destroyOnClose=false",
-						"If true the gui is destroyed when closed, otherwise the gui can be reused."
+						"destroyOnClose?",
+						"If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)"
+					]
+				],
+				"return": [
+					[
+						"[GuiInterface]",
+						"The gui interface to the created gui."
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "createMininghubDispenserGui",
+			"doc": {
+				"text": [
+					"Create a mining hub dispenser GUI."
+				],
+				"params": [
+					[
+						"boolean",
+						"destroyOnClose?",
+						"If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)"
 					]
 				],
 				"return": [
@@ -447,8 +617,74 @@
 				"params": [
 					[
 						"boolean",
+						"destroyOnClose?",
+						"If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)"
+					]
+				],
+				"return": [
+					[
+						"[GuiInterface]",
+						"The gui interface to the created gui."
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "createOreCrusherContainerGui",
+			"doc": {
+				"text": [
+					"Create a ore crusher container GUI."
+				],
+				"params": [
+					[
+						"boolean",
 						"destroyOnClose=false",
 						"If true the gui is destroyed when closed, otherwise the gui can be reused."
+					]
+				],
+				"return": [
+					[
+						"[GuiInterface]",
+						"The gui interface to the created gui."
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "createPortableCrafterGui",
+			"doc": {
+				"text": [
+					"Create a portable craftbot GUI."
+				],
+				"params": [
+					[
+						"boolean",
+						"destroyOnClose?",
+						"If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)"
+					]
+				],
+				"return": [
+					[
+						"[GuiInterface]",
+						"The gui interface to the created gui."
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "createProspectorContainerGui",
+			"doc": {
+				"text": [
+					"Create a prospector container GUI."
+				],
+				"params": [
+					[
+						"boolean",
+						"destroyOnClose?",
+						"If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)"
 					]
 				],
 				"return": [
@@ -469,8 +705,52 @@
 				"params": [
 					[
 						"boolean",
+						"destroyOnClose?",
+						"If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)"
+					]
+				],
+				"return": [
+					[
+						"[GuiInterface]",
+						"The gui interface to the created gui."
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "createRefineryContainerGui",
+			"doc": {
+				"text": [
+					"Create a refinery container GUI."
+				],
+				"params": [
+					[
+						"boolean",
 						"destroyOnClose=false",
 						"If true the gui is destroyed when closed, otherwise the gui can be reused."
+					]
+				],
+				"return": [
+					[
+						"[GuiInterface]",
+						"The gui interface to the created gui."
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "createSawbotGui",
+			"doc": {
+				"text": [
+					"Create a saw bot GUI."
+				],
+				"params": [
+					[
+						"boolean",
+						"destroyOnClose?",
+						"If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)"
 					]
 				],
 				"return": [
@@ -491,8 +771,8 @@
 				"params": [
 					[
 						"boolean",
-						"destroyOnClose=false",
-						"If true the gui is destroyed when closed, otherwise the gui can be reused."
+						"destroyOnClose?",
+						"If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)"
 					]
 				],
 				"return": [
@@ -513,8 +793,8 @@
 				"params": [
 					[
 						"boolean",
-						"destroyOnClose=false",
-						"If true the gui is destroyed when closed, otherwise the gui can be reused."
+						"destroyOnClose?",
+						"If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)"
 					]
 				],
 				"return": [
@@ -535,8 +815,8 @@
 				"params": [
 					[
 						"boolean",
-						"destroyOnClose=false",
-						"If true the gui is destroyed when closed, otherwise the gui can be reused."
+						"destroyOnClose?",
+						"If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)"
 					]
 				],
 				"return": [
@@ -557,8 +837,8 @@
 				"params": [
 					[
 						"boolean",
-						"destroyOnClose=false",
-						"If true the gui is destroyed when closed, otherwise the gui can be reused."
+						"destroyOnClose?",
+						"If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)"
 					]
 				],
 				"return": [
@@ -579,8 +859,8 @@
 				"params": [
 					[
 						"boolean",
-						"destroyOnClose=false",
-						"If true the gui is destroyed when closed, otherwise the gui can be reused."
+						"destroyOnClose?",
+						"If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)"
 					]
 				],
 				"return": [
@@ -601,8 +881,8 @@
 				"params": [
 					[
 						"boolean",
-						"destroyOnClose=false",
-						"If true the gui is destroyed when closed, otherwise the gui can be reused."
+						"destroyOnClose?",
+						"If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)"
 					]
 				],
 				"return": [
@@ -626,8 +906,8 @@
 				"params": [
 					[
 						"boolean",
-						"destroyOnClose=false",
-						"If true the gui is destroyed when closed, otherwise the gui can be reused."
+						"destroyOnClose?",
+						"If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)"
 					]
 				],
 				"return": [
@@ -659,8 +939,8 @@
 				"params": [
 					[
 						"boolean",
-						"destroyOnClose=false",
-						"If true the gui is destroyed when closed, otherwise the gui can be reused."
+						"destroyOnClose?",
+						"If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)"
 					]
 				],
 				"return": [
@@ -691,12 +971,12 @@
 					],
 					[
 						"string",
-						"layout=nil",
+						"layout?",
 						"Path to the layout file (Defaults to \"$GAME_DATA/Gui/Layouts/Hud/Hud_WorldIcon.layout\")"
 					],
 					[
 						"boolean",
-						"destroyOnClose=nil",
+						"destroyOnClose?",
 						"If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)"
 					]
 				],
@@ -723,8 +1003,13 @@
 					],
 					[
 						"number",
-						"duration=4",
+						"duration?",
 						"The time in seconds during which the message is shown. Defaults to 4 seconds"
+					],
+					[
+						"boolean",
+						"queued?",
+						"If true the message is queued, otherwise it is displayed instantly. Defaults to false"
 					]
 				],
 				"client_only": true
@@ -741,6 +1026,11 @@
 						"number",
 						"duration",
 						"Animation duration"
+					],
+					[
+						"boolean",
+						"force?",
+						"If true, start the fade out from full black even if there was no fade to black active. (Defaults to false)"
 					]
 				],
 				"client_only": true
@@ -774,6 +1064,27 @@
 			}
 		},
 		{
+			"name": "getItemIconFromUuid",
+			"doc": {
+				"text": [
+					"Gets the item resource, group and name for an item icon from a uuid"
+				],
+				"params": [
+					[
+						"[Uuid]",
+						"uuid",
+						"The uuid."
+					]
+				],
+				"return": [
+					[
+						"{string, string, string, string, string}\tThe item resource, group, name, trackingType and shapeType.",
+						""
+					]
+				]
+			}
+		},
+		{
 			"name": "getKeyBinding",
 			"doc": {
 				"text": [
@@ -787,8 +1098,8 @@
 					],
 					[
 						"boolean",
-						"hyper=false",
-						"If the string should contain hyper text"
+						"hyper?",
+						"If the string should contain hyper text (Defaults to false)"
 					]
 				],
 				"return": [
@@ -816,6 +1127,21 @@
 			}
 		},
 		{
+			"name": "hasActiveGui",
+			"doc": {
+				"text": [
+					"Returns whether the player has an active gui or not"
+				],
+				"return": [
+					[
+						"boolean",
+						"guiActive\tWhether the player has an active gui or not."
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
 			"name": "hideGui",
 			"doc": {
 				"text": [
@@ -832,26 +1158,46 @@
 			}
 		},
 		{
-			"name": "setCenterIcon",
+			"name": "hideHotbar",
 			"doc": {
 				"text": [
-					"Set the icon displayed at the center."
+					"Set hotbar visibility."
 				],
 				"params": [
 					[
-						"string",
-						"iconName",
-						"The icon."
+						"boolean",
+						"visible",
+						"The hotbar visibility"
 					]
 				],
 				"client_only": true
 			}
 		},
 		{
+			"name": "openGarageImportGui",
+			"doc": {
+				"text": [
+					"Open the garage creation import GUI"
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "setCenterIcon",
+			"doc": {
+				"text": [
+					"Removed! Does nothing."
+				],
+				"deprecated": [
+					"Use [sm.gui.setInteractionText]"
+				]
+			}
+		},
+		{
 			"name": "setCharacterDebugText",
 			"doc": {
 				"text": [
-					"Set a text for the character that will be displayed above its head."
+					"Set a text for the character that will be displayed above its head. Only has effect in dev build."
 				],
 				"params": [
 					[
@@ -866,11 +1212,57 @@
 					],
 					[
 						"boolean",
-						"clear=true",
-						"If true the previous text will be overwritten."
+						"clear?",
+						"If true the previous text will be overwritten. (Defaults to true)"
+					]
+				]
+			}
+		},
+		{
+			"name": "setGarageButtonCallback",
+			"doc": {
+				"text": [
+					"Sets a button callback to be called when the button is pressed."
+				],
+				"params": [
+					[
+						"string",
+						"callback",
+						"Function to be called when button is pressed"
 					]
 				],
 				"client_only": true
+			}
+		},
+		{
+			"name": "setGarageErrorCallback",
+			"doc": {
+				"text": [
+					"Sets a callback to be called when an error with the import is met."
+				],
+				"params": [
+					[
+						"string",
+						"callback",
+						"Function to be called when error is met"
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "setGarageImportGuiStorage",
+			"doc": {
+				"text": [
+					"Set the storage container for the garage creation import gui to use"
+				],
+				"params": [
+					[
+						"[Container]",
+						"container",
+						"The container import gui should use for materials."
+					]
+				]
 			}
 		},
 		{
@@ -887,22 +1279,22 @@
 					],
 					[
 						"string",
-						"binding1=nil",
+						"binding1?",
 						"The left white segment."
 					],
 					[
 						"string",
-						"text2=nil",
+						"text2?",
 						"The mid or end segment."
 					],
 					[
 						"string",
-						"binding2=nil",
+						"binding2?",
 						"The right white segment."
 					],
 					[
 						"string",
-						"text3=nil",
+						"text3?",
 						"The rightmost segment."
 					]
 				],
@@ -919,7 +1311,7 @@
 					[
 						"number",
 						"progress",
-						"The fraction that determines how much of the circle is filled. "
+						"The fraction that determines how much of the circle is filled."
 					]
 				],
 				"client_only": true
@@ -941,6 +1333,28 @@
 						"number",
 						"timeout",
 						"Seconds until the fade fades back"
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "startFadeToBlackWaitForWorld",
+			"doc": {
+				"text": [
+					"Fades the screen to black, waits for the world to finish loading, then fades back.",
+					"First waits until timeout, then holds black until the world is ready or a max timeout is reached."
+				],
+				"params": [
+					[
+						"number",
+						"duration",
+						"Animation duration"
+					],
+					[
+						"number",
+						"timeout",
+						"Seconds until the fade starts waiting for the world"
 					]
 				],
 				"client_only": true

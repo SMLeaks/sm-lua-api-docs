@@ -17,6 +17,7 @@
   <h3>Classes</h3>
   <ul>
    <li><a href="class_Game_CharacterClass.html" class="code">CharacterClass</a></li>
+   <li><a href="class_Game_ClientScriptableObjectClass.html" class="code">ClientScriptableObjectClass</a></li>
    <li><a href="class_Game_GameClass.html" class="code">GameClass</a></li>
    <li><a href="class_Game_HarvestableClass.html" class="code">HarvestableClass</a></li>
    <li><a href="class_Game_PlayerClass.html" class="code">PlayerClass</a></li>
@@ -34,14 +35,18 @@
    <li><a href="userdata_Game_Body.html" class="code">Body</a></li>
    <li><a href="userdata_Game_BuilderGuide.html" class="code">BuilderGuide</a></li>
    <li><a href="userdata_Game_Character.html" class="code">Character</a></li>
+   <li><a href="userdata_Game_ClientScriptableObject.html" class="code">ClientScriptableObject</a></li>
    <li><a href="userdata_Game_Color.html" class="code">Color</a></li>
    <li><a href="userdata_Game_Container.html" class="code">Container</a></li>
    <li><a href="userdata_Game_CullSphereGroup.html" class="code">CullSphereGroup</a></li>
    <li><a href="userdata_Game_Effect.html" class="code">Effect</a></li>
+   <li><a href="userdata_Game_Garage.html" class="code">Garage</a></li>
    <li><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></li>
    <li><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></li>
    <li><a href="userdata_Game_Interactable.html" class="code">Interactable</a></li>
    <li><a href="userdata_Game_Joint.html" class="code">Joint</a></li>
+   <li><a href="userdata_Game_JsonGui.html" class="code">JsonGui</a></li>
+   <li><a href="userdata_Game_JsonWidget.html" class="code">JsonWidget</a></li>
    <li><a href="userdata_Game_Lift.html" class="code">Lift</a></li>
    <li><a href="userdata_Game_LoadCellHandle.html" class="code">LoadCellHandle</a></li>
    <li><a href="userdata_Game_Network.html" class="code">Network</a></li>
@@ -73,6 +78,7 @@
    <li><a href="namespace_Game_sm_cell.html" class="code">sm.cell</a></li>
    <li><a href="namespace_Game_sm_challenge.html" class="code">sm.challenge</a></li>
    <li><a href="namespace_Game_sm_character.html" class="code">sm.character</a></li>
+   <li><a href="namespace_Game_sm_clientScriptableObject.html" class="code">sm.clientScriptableObject</a></li>
    <li><a href="namespace_Game_sm_color.html" class="code">sm.color</a></li>
    <li><a href="namespace_Game_sm_construction.html" class="code">sm.construction</a></li>
    <li><a href="namespace_Game_sm_container.html" class="code">sm.container</a></li>
@@ -80,9 +86,11 @@
    <li><a href="namespace_Game_sm_cullSphereGroup.html" class="code">sm.cullSphereGroup</a></li>
    <li><a href="namespace_Game_sm_debris.html" class="code">sm.debris</a></li>
    <li><a href="namespace_Game_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
+   <li><a href="namespace_Game_sm_debugGui.html" class="code">sm.debugGui</a></li>
    <li><a href="namespace_Game_sm_effect.html" class="code">sm.effect</a></li>
    <li><a href="namespace_Game_sm_event.html" class="code">sm.event</a></li>
    <li><a href="namespace_Game_sm_game.html" class="code">sm.game</a></li>
+   <li><a href="namespace_Game_sm_garage.html" class="code">sm.garage</a></li>
    <li><a href="namespace_Game_sm_gui.html" class="code">sm.gui</a></li>
    <li><a href="namespace_Game_sm_gui_widget.html" class="code">sm.gui.widget</a></li>
    <li><a href="namespace_Game_sm_harvestable.html" class="code">sm.harvestable</a></li>
@@ -90,15 +98,19 @@
    <li><a href="namespace_Game_sm_item.html" class="code">sm.item</a></li>
    <li><a href="namespace_Game_sm_joint.html" class="code">sm.joint</a></li>
    <li><a href="namespace_Game_sm_json.html" class="code">sm.json</a></li>
+   <li><a href="namespace_Game_sm_jsonGui.html" class="code">sm.jsonGui</a></li>
+   <li><a href="namespace_Game_sm_lift.html" class="code">sm.lift</a></li>
    <li><a href="namespace_Game_sm_localPlayer.html" class="code">sm.localPlayer</a></li>
    <li><a href="namespace_Game_sm_log.html" class="code">sm.log</a></li>
    <li><a href="namespace_Game_sm_melee.html" class="code">sm.melee</a></li>
    <li><a href="namespace_Game_sm_menuCreation.html" class="code">sm.menuCreation</a></li>
+   <li><a href="namespace_Game_sm_message.html" class="code">sm.message</a></li>
    <li><a href="namespace_Game_sm_noise.html" class="code">sm.noise</a></li>
    <li><a href="namespace_Game_sm_particle.html" class="code">sm.particle</a></li>
    <li><a href="namespace_Game_sm_pathNode.html" class="code">sm.pathNode</a></li>
    <li><a href="namespace_Game_sm_pathfinder.html" class="code">sm.pathfinder</a></li>
    <li><a href="namespace_Game_sm_physics.html" class="code">sm.physics</a></li>
+   <li><a href="namespace_Game_sm_pipeGraph.html" class="code">sm.pipeGraph</a></li>
    <li><a href="namespace_Game_sm_player.html" class="code">sm.player</a></li>
    <li><a href="namespace_Game_sm_portal.html" class="code">sm.portal</a></li>
    <li><a href="namespace_Game_sm_projectile.html" class="code">sm.projectile</a></li>
@@ -122,8 +134,12 @@
   <h3>Object Types 'userdata'</h3>
   <ul>
    <li><a href="userdata_Terrain_Color.html" class="code">Color</a></li>
+   <li><a href="userdata_Terrain_Container.html" class="code">Container</a></li>
    <li><a href="userdata_Terrain_Harvestable.html" class="code">Harvestable</a></li>
+   <li><a href="userdata_Terrain_Interactable.html" class="code">Interactable</a></li>
+   <li><a href="userdata_Terrain_Portal.html" class="code">Portal</a></li>
    <li><a href="userdata_Terrain_Quat.html" class="code">Quat</a></li>
+   <li><a href="userdata_Terrain_ScriptableObject.html" class="code">ScriptableObject</a></li>
    <li><a href="userdata_Terrain_Uuid.html" class="code">Uuid</a></li>
    <li><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></li>
    <li><a href="userdata_Terrain_World.html" class="code">World</a></li>
@@ -133,18 +149,24 @@
    <li><a href="namespace_Terrain_GLOBAL.html" class="code">GLOBAL</a></li>
    <li><a href="namespace_Terrain_sm.html" class="code">sm</a></li>
    <li><a href="namespace_Terrain_sm_color.html" class="code">sm.color</a></li>
+   <li><a href="namespace_Terrain_sm_container.html" class="code">sm.container</a></li>
    <li><a href="namespace_Terrain_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
-   <li><a href="namespace_Terrain_sm_harvestable.html" class="code">sm.harvestable</a></li>
+   <li><a href="namespace_Terrain_sm_debugGui.html" class="code">sm.debugGui</a></li>
+   <li><a href="namespace_Terrain_sm_interactable.html" class="code">sm.interactable</a></li>
    <li><a href="namespace_Terrain_sm_json.html" class="code">sm.json</a></li>
    <li><a href="namespace_Terrain_sm_log.html" class="code">sm.log</a></li>
    <li><a href="namespace_Terrain_sm_noise.html" class="code">sm.noise</a></li>
    <li><a href="namespace_Terrain_sm_quat.html" class="code">sm.quat</a></li>
+   <li><a href="namespace_Terrain_sm_scriptableObject.html" class="code">sm.scriptableObject</a></li>
    <li><a href="namespace_Terrain_sm_terrainData.html" class="code">sm.terrainData</a></li>
    <li><a href="namespace_Terrain_sm_terrainGeneration.html" class="code">sm.terrainGeneration</a></li>
+   <li><a href="namespace_Terrain_sm_terrainHarvestable.html" class="code">sm.terrainHarvestable</a></li>
    <li><a href="namespace_Terrain_sm_terrainTile.html" class="code">sm.terrainTile</a></li>
+   <li><a href="namespace_Terrain_sm_tunnelGenerator.html" class="code">sm.tunnelGenerator</a></li>
    <li><a href="namespace_Terrain_sm_util.html" class="code">sm.util</a></li>
    <li><a href="namespace_Terrain_sm_uuid.html" class="code">sm.uuid</a></li>
    <li><a href="namespace_Terrain_sm_vec3.html" class="code">sm.vec3</a></li>
+   <li><a href="namespace_Terrain_sm_voxelTerrainCell.html" class="code">sm.voxelTerrainCell</a></li>
   </ul>
  </div>
  <div id="content">
@@ -153,34 +175,133 @@
   <p>A userdata object representing a <strong>world</strong> in the game.</p>
   <h4>Values:</h4>
   <ul>
+   <li><a href="#clientPublicData" class="code">clientPublicData</a></li>
    <li><a href="#id" class="code">id</a></li>
+   <li><a href="#indoor" class="code">indoor</a></li>
+   <li><a href="#publicData" class="code">publicData</a></li>
   </ul>  <h4>Functions:</h4>
   <ul>
+   <li><a href="#clearLightColorOverride" class="code">clearLightColorOverride</a></li>
    <li><a href="#destroy" class="code">destroy</a></li>
+   <li><a href="#getCellBounds" class="code">getCellBounds</a></li>
+   <li><a href="#getDominantMaterialInCapsule" class="code">getDominantMaterialInCapsule</a></li>
+   <li><a href="#getDominantMaterialInSphere" class="code">getDominantMaterialInSphere</a></li>
    <li><a href="#getId" class="code">getId</a></li>
+   <li><a href="#getVoxelMaterialFromWorldPosition" class="code">getVoxelMaterialFromWorldPosition</a></li>
+   <li><a href="#getWeightedVoxelDensityInWorldPoint" class="code">getWeightedVoxelDensityInWorldPoint</a></li>
+   <li><a href="#getZoneId" class="code">getZoneId</a></li>
+   <li><a href="#isCellInBounds" class="code">isCellInBounds</a></li>
+   <li><a href="#isCellLoadedClient" class="code">isCellLoadedClient</a></li>
+   <li><a href="#isCellLoadedServer" class="code">isCellLoadedServer</a></li>
    <li><a href="#isIndoor" class="code">isIndoor</a></li>
+   <li><a href="#isVoxelTerrainPointClear" class="code">isVoxelTerrainPointClear</a></li>
    <li><a href="#loadCell" class="code">loadCell</a></li>
+   <li><a href="#loadCellWithHandle" class="code">loadCellWithHandle</a></li>
+   <li><a href="#loadNavMeshWithHandle" class="code">loadNavMeshWithHandle</a></li>
    <li><a href="#reloadCell" class="code">reloadCell</a></li>
+   <li><a href="#setLightColorOverride" class="code">setLightColorOverride</a></li>
+   <li><a href="#setMiningConfig" class="code">setMiningConfig</a></li>
    <li><a href="#setTerrainScriptData" class="code">setTerrainScriptData</a></li>
-   <li><a href="#terrainSphereModification" class="code">terrainSphereModification</a></li>
+   <li><a href="#sphereVoxelDensityAddition" class="code">sphereVoxelDensityAddition</a></li>
+   <li><a href="#sphereVoxelDensitySubtraction" class="code">sphereVoxelDensitySubtraction</a></li>
+   <li><a href="#voxelDensityAddition" class="code">voxelDensityAddition</a></li>
+   <li><a href="#voxelDensitySubtraction" class="code">voxelDensitySubtraction</a></li>
+   <li><a href="#voxelDensitySubtraction" class="code">voxelDensitySubtraction</a></li>
   </ul>
   <h4>Operations:</h4>
   <table>
-   <tr><th>Operation</th><th>Description</th></tr>
-   <tr><td class="code"><a href="userdata_Game_World.html" class="code">World</a> == <a href="userdata_Game_World.html" class="code">World</a></td><td>Checks if two instances of <a href="userdata_Game_World.html" class="code">World</a> refer to the same World.</td></tr>
+   <tr><th>Operation</th><th>Return type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_World.html" class="code">World</a> == <a href="userdata_Game_World.html" class="code">World</a></td><td>boolean</td><td>Checks if two instances of <a href="userdata_Game_World.html" class="code">World</a> refer to the same World.</td></tr>
   </table>
+  <hr>
+  <h2 class="code"><a id="clientPublicData"></a>clientPublicData <i>table</i></h2>
+  <h4>Get:</h4>
+  <p>Client only</p>
+  <p>Returns client public data from a world.</p>
+  <h4>Set:</h4>
+  <p>Client only</p>
+  <p>Sets client public data on a World.</p>
   <hr>
   <h2 class="code"><a id="id"></a>id <i>integer</i></h2>
   <h4>Get:</h4>
   <p>Returns the id of a world.</p>
   <hr>
+  <h2 class="code"><a id="indoor"></a>indoor <i>boolean</i></h2>
+  <h4>Get:</h4>
+  <p>Returns true if the world is an indoor world.</p>
+  <hr>
+  <h2 class="code"><a id="publicData"></a>publicData <i>table</i></h2>
+  <h4>Get:</h4>
+  <p>Server only</p>
+  <p>Returns public data from a world.</p>
+  <h4>Set:</h4>
+  <p>Server only</p>
+  <p>Sets public data on a World.</p>
+  <hr>
+  <h2 class="code"><a id="clearLightColorOverride"></a>clearLightColorOverride(world)</h2>
+  <p>Server only</p>
+  <p>Clears the override light color on all light controllers in the world.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_World.html" class="code">World</a></td><td class="code">world</td><td>The world.</td></tr>
+  </table>
+  <hr>
   <h2 class="code"><a id="destroy"></a>destroy(world)</h2>
   <p>Server only</p>
-  <p>Destroys the given world. Can only be called from inside the Game script environment.</p>
+  <p>Destroys the given world.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code"><a href="userdata_Game_World.html" class="code">World</a></td><td class="code">world</td><td>The world that should be removed.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getCellBounds"></a>getCellBounds(world)</h2>
+  <p>Returns the minimum and maximum cell coordinates for the given world.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_World.html" class="code">World</a></td><td class="code">world</td><td>The world.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">integer, integer, integer, integer</td><td>The minimum and maximum cell coordinates (minX, maxX, minY, maxY).</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getDominantMaterialInCapsule"></a>getDominantMaterialInCapsule(world, position, radius, height)</h2>
+  <p>Finds the dominant voxel material inside a capsule volume.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_World.html" class="code">World</a></td><td class="code">world</td><td>The world to look in.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The center position of the capsule.</td></tr>
+   <tr><td class="code">number</td><td class="code">radius</td><td>The radius of the capsule.</td></tr>
+   <tr><td class="code">number</td><td class="code">height</td><td>The height of the cylindrical part of the capsule (Z-axis aligned, excluding hemispherical caps).</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">integer</td><td>The dominant material index value. (returns nil if no voxel was found)</td></tr>
+   <tr><td class="code">integer</td><td>The highest single-voxel density of the dominant material.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The weighted average world position of the dominant material (biased toward dense, nearby voxels)</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getDominantMaterialInSphere"></a>getDominantMaterialInSphere(world, position, radius)</h2>
+  <p>Finds the dominant voxel material inside a sphere volume.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_World.html" class="code">World</a></td><td class="code">world</td><td>The world to look in.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The center position of the sphere.</td></tr>
+   <tr><td class="code">number</td><td class="code">radius</td><td>The radius of the sphere.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">integer</td><td>The dominant material index value. (returns nil if no voxel was found)</td></tr>
+   <tr><td class="code">integer</td><td>The highest single-voxel density of the dominant material.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The weighted average world position of the dominant material (biased toward dense, nearby voxels).</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="getId"></a>getId(world)</h2>
@@ -196,6 +317,94 @@
    <tr><td class="code">integer</td><td>The world's id.</td></tr>
   </table>
   <hr>
+  <h2 class="code"><a id="getVoxelMaterialFromWorldPosition"></a>getVoxelMaterialFromWorldPosition(world, worldPosition)</h2>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_World.html" class="code">World</a></td><td class="code">world</td><td>The world to look in.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">worldPosition</td><td>The position of the voxel chunk in the world.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">integer</td><td>The material index value. (returns nil if no voxel was at point)</td></tr>
+   <tr><td class="code">integer</td><td>The density value. (returns nil if no voxel was at point)</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getWeightedVoxelDensityInWorldPoint"></a>getWeightedVoxelDensityInWorldPoint(world, point)</h2>
+  <p>Get weighted voxel density in world point.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_World.html" class="code">World</a></td><td class="code">world</td><td>The world to look in.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">point</td><td>The world space point to check density in.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">number</td><td>Weighted density. (returns 0 if world doesn't have voxels)</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>Weighted direction of voxel influence.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getZoneId"></a>getZoneId(world, position)</h2>
+  <p>Returns the zone id from a position.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_World.html" class="code">World</a></td><td class="code">world</td><td>The world.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The position.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td>The Zone id. (nil if position is invalid)</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="isCellInBounds"></a>isCellInBounds(world, x, y)</h2>
+  <p>Checks if the given cell coordinates are within the bounds of the world.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_World.html" class="code">World</a></td><td class="code">world</td><td>The world.</td></tr>
+   <tr><td class="code">integer</td><td class="code">x</td><td>The X coordinate of the cell.</td></tr>
+   <tr><td class="code">integer</td><td class="code">y</td><td>The Y coordinate of the cell.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>True if the cell is within the bounds of the world, false otherwise.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="isCellLoadedClient"></a>isCellLoadedClient(world, cellX, cellY)</h2>
+  <p>Client only</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_World.html" class="code">World</a></td><td class="code">world</td><td>The world to look in.</td></tr>
+   <tr><td class="code">integer</td><td class="code">cellX</td><td>The cell X value.</td></tr>
+   <tr><td class="code">integer</td><td class="code">cellY</td><td>The cell Y value.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>If the cell is loaded or not.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="isCellLoadedServer"></a>isCellLoadedServer(world, cellX, cellY)</h2>
+  <p>Server only</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_World.html" class="code">World</a></td><td class="code">world</td><td>The world to look in.</td></tr>
+   <tr><td class="code">integer</td><td class="code">cellX</td><td>The cell X value.</td></tr>
+   <tr><td class="code">integer</td><td class="code">cellY</td><td>The cell Y value.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>If the cell is loaded or not.</td></tr>
+  </table>
+  <hr>
   <h2 class="code"><a id="isIndoor"></a>isIndoor(world)</h2>
   <p>Returns true if the world is an indoor world.</p>
   <h4>Parameters:</h4>
@@ -209,9 +418,24 @@
    <tr><td class="code">boolean</td><td>True if indoor.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="loadCell"></a>loadCell(world, x, y, player, callback=nil, params=nil, ref=nil)</h2>
+  <h2 class="code"><a id="isVoxelTerrainPointClear"></a>isVoxelTerrainPointClear(world, referencePosition, testPosition)</h2>
+  <p>Tests if a world position is free from voxel terrain coverage.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_World.html" class="code">World</a></td><td class="code">world</td><td>The world.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">referencePosition</td><td>The reference position (e.g. character position).</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">testPosition</td><td>The position to test for voxel coverage (e.g. shape center).</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">bool</td><td>True if the position is clear of voxel terrain, false if covered.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="loadCell"></a>loadCell(world, x, y, player, callback?, params?, ref?)</h2>
   <p>Server only</p>
-  <p>Load a cell for player. The cell will stay loaded until the player steps into the cell, or the cell is released with releaseCell (and no player is close enough to load the cell).</p>
+  <p>Load a cell for player. The cell will stay loaded until the player steps into the cell.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
@@ -219,26 +443,82 @@
    <tr><td class="code">integer</td><td class="code">x</td><td>Cell X position.</td></tr>
    <tr><td class="code">integer</td><td class="code">y</td><td>Cell Y Position.</td></tr>
    <tr><td class="code"><a href="userdata_Game_Player.html" class="code">Player</a></td><td class="code">player</td><td>A player to load for, can be nil.</td></tr>
-   <tr><td class="code">string</td><td class="code">callback=nil</td><td>Lua function to call when cell is loaded. Callback parameters are ( world, x, y, player, params, handle )</td></tr>
-   <tr><td class="code">any</td><td class="code">params=nil</td><td>Parameter object passed to the callback.</td></tr>
-   <tr><td class="code">ref</td><td class="code">ref=nil</td><td>Script ref to callback object.</td></tr>
-  </table>
-  <h4>Returns:</h4>
-  <table>
-   <tr><th>Type</th><th>Description</th></tr>
-   <tr><td class="code">integer</td><td>Handle to use when explicitly releasing cell.</td></tr>
+   <tr><td class="code">string</td><td class="code">callback?</td><td>Lua function to call when cell is loaded. Callback parameters are ( world, x, y, player, params )</td></tr>
+   <tr><td class="code">any</td><td class="code">params?</td><td>Parameter object passed to the callback.</td></tr>
+   <tr><td class="code">ref</td><td class="code">ref?</td><td>Script ref to callback object.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="reloadCell"></a>reloadCell(world, x, y, callback=nil, ref=nil)</h2>
-  <p>Reload a cell. Callback result values, 0 means cell isnt active and wont be reloaded. 1 means success</p>
+  <h2 class="code"><a id="loadCellWithHandle"></a>loadCellWithHandle(world, x, y, callback?, params?, ref?)</h2>
+  <p>Load a cell. The cell will stay loaded until the cell is released with <a href="userdata_Game_LoadCellHandle.html" class="code">LoadCellHandle</a>.release()</p>
+  <p>or when the <a href="userdata_Game_LoadCellHandle.html" class="code">LoadCellHandle</a> is garbage collected</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code"><a href="userdata_Game_World.html" class="code">World</a></td><td class="code">world</td><td>The world.</td></tr>
    <tr><td class="code">integer</td><td class="code">x</td><td>Cell X position.</td></tr>
    <tr><td class="code">integer</td><td class="code">y</td><td>Cell Y Position.</td></tr>
-   <tr><td class="code">string</td><td class="code">callback=nil</td><td>Lua function to call when cell is reloaded. Callback parameters are ( world, x, y, result ) (Optional)</td></tr>
-   <tr><td class="code">ref</td><td class="code">ref=nil</td><td>Script ref to callback object. (Optional)</td></tr>
+   <tr><td class="code">string</td><td class="code">callback?</td><td>Lua function to call when cell is loaded. Callback parameters are ( world, x, y, params )</td></tr>
+   <tr><td class="code">any</td><td class="code">params?</td><td>Parameter object passed to the callback.</td></tr>
+   <tr><td class="code">ref</td><td class="code">ref?</td><td>Script ref to callback object.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_LoadCellHandle.html" class="code">LoadCellHandle</a></td><td>Handle to releasing cell.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="loadNavMeshWithHandle"></a>loadNavMeshWithHandle(world, x, y, callback?, params?, ref?)</h2>
+  <p>Server only</p>
+  <p>Load a cell and nav mesh. The cell will stay loaded until the cell is released with <a href="userdata_Game_LoadCellHandle.html" class="code">LoadCellHandle</a>.release()</p>
+  <p>or when the <a href="userdata_Game_LoadCellHandle.html" class="code">LoadCellHandle</a> is garbage collected</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_World.html" class="code">World</a></td><td class="code">world</td><td>The world.</td></tr>
+   <tr><td class="code">integer</td><td class="code">x</td><td>Cell X position.</td></tr>
+   <tr><td class="code">integer</td><td class="code">y</td><td>Cell Y Position.</td></tr>
+   <tr><td class="code">string</td><td class="code">callback?</td><td>Lua function to call when cell nav mesh is created. Callback parameters are ( world, x, y, params )</td></tr>
+   <tr><td class="code">any</td><td class="code">params?</td><td>Parameter object passed to the callback.</td></tr>
+   <tr><td class="code">ref</td><td class="code">ref?</td><td>Script ref to callback object.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_LoadCellHandle.html" class="code">LoadCellHandle</a></td><td>Handle to releasing cell.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="reloadCell"></a>reloadCell(world, x, y, callback?, ref?, params?)</h2>
+  <p>Reload a cell. Callback result values: 0 means cell isnt active and wont be reloaded, 1 means success</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_World.html" class="code">World</a></td><td class="code">world</td><td>The world.</td></tr>
+   <tr><td class="code">integer</td><td class="code">x</td><td>Cell X position.</td></tr>
+   <tr><td class="code">integer</td><td class="code">y</td><td>Cell Y Position.</td></tr>
+   <tr><td class="code">string</td><td class="code">callback?</td><td>Lua function to call when cell is reloaded. Callback parameters are ( world, x, y, result ) (Optional)</td></tr>
+   <tr><td class="code">ref</td><td class="code">ref?</td><td>Script ref to callback object. (Optional)</td></tr>
+   <tr><td class="code">any</td><td class="code">params?</td><td>Parameter passed to the callback. (Optional)</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setLightColorOverride"></a>setLightColorOverride(world, color)</h2>
+  <p>Server only</p>
+  <p>Sets the override light color on all light controllers in the world.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_World.html" class="code">World</a></td><td class="code">world</td><td>The world.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Color.html" class="code">Color</a></td><td class="code">color</td><td>The override color.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setMiningConfig"></a>setMiningConfig(world, config)</h2>
+  <p>Server only</p>
+  <p>Configures the mining loot population. Matched candidates are sent to the</p>
+  <p>world script via the server_onMining callback whenever voxels are removed.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_World.html" class="code">World</a></td><td class="code">world</td><td>The world.</td></tr>
+   <tr><td class="code">table</td><td class="code">config</td><td>Spawn rules keyed by voxel material index (1-8). Each value is an array of rule tables: { sizeX, sizeY, sizeZ, seed, spawnId = integers, tunnelType = string (optional), maxDist = number (optional) }.</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="setTerrainScriptData"></a>setTerrainScriptData(world, data)</h2>
@@ -250,7 +530,20 @@
    <tr><td class="code">any</td><td class="code">data</td><td>Any data, available to the terrain generation script as parameter 6 in the create callback.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="terrainSphereModification"></a>terrainSphereModification(world, position, radius, strength=1.0)</h2>
+  <h2 class="code"><a id="sphereVoxelDensityAddition"></a>sphereVoxelDensityAddition(world, position, radius, material, player?)</h2>
+  <p>Server only</p>
+  <p>Modify voxel terrain with a sphere shape</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_World.html" class="code">World</a></td><td class="code">world</td><td>The world.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The world position of the sphere.</td></tr>
+   <tr><td class="code">number</td><td class="code">radius</td><td>The radius of the sphere.</td></tr>
+   <tr><td class="code">integer</td><td class="code">material</td><td>The material to add [0-7].</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Player.html" class="code">Player</a></td><td class="code">player?</td><td>The player who constructed. (Optional)</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="sphereVoxelDensitySubtraction"></a>sphereVoxelDensitySubtraction(world, position, radius, filter?, strength?, callback?, params?)</h2>
   <p>Server only</p>
   <p>Modify destructable terrain with a sphere shape</p>
   <h4>Parameters:</h4>
@@ -259,7 +552,60 @@
    <tr><td class="code"><a href="userdata_Game_World.html" class="code">World</a></td><td class="code">world</td><td>The world.</td></tr>
    <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The world position of the sphere.</td></tr>
    <tr><td class="code">number</td><td class="code">radius</td><td>The radius of the sphere.</td></tr>
-   <tr><td class="code">number</td><td class="code">strength=1.0</td><td>The strength of the modification. (Optional)</td></tr>
+   <tr><td class="code">integer</td><td class="code">filter?</td><td>The materials the shape can modify. (See <a href="namespace_Game_sm_world.html#voxelFilter" class="code">sm.world.voxelFilter</a>). (Defaults to sm.world.voxelFilter.all)</td></tr>
+   <tr><td class="code">number</td><td class="code">strength?</td><td>The strength of the modification. (Defaults to radius)</td></tr>
+   <tr><td class="code">string</td><td class="code">callback?</td><td>Lua function to call when cell is loaded. Callback parameters are a table of destruction data { remDensities = {integer, ..}, avgPositions = {<a href="userdata_Game_Vec3.html" class="code">Vec3</a>, ..} } and (optional) pass-through params passed to this function.</td></tr>
+   <tr><td class="code">any</td><td class="code">params?</td><td>Parameter passed to the callback. (Optional)</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="voxelDensityAddition"></a>voxelDensityAddition(world, position, surfaceNormal, maxDistance, targetDensity, material, filter?, player?)</h2>
+  <p>Server only</p>
+  <p>Modify destructable terrain</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_World.html" class="code">World</a></td><td class="code">world</td><td>The world.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The voxel world position.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">surfaceNormal</td><td>The surface normal.</td></tr>
+   <tr><td class="code">number</td><td class="code">maxDistance</td><td>The maximum distance from position that can be modified.</td></tr>
+   <tr><td class="code">integer</td><td class="code">targetDensity</td><td>The target density to add.</td></tr>
+   <tr><td class="code">integer</td><td class="code">material</td><td>The material to add [0-7].</td></tr>
+   <tr><td class="code">integer</td><td class="code">filter?</td><td>The materials the shape can modify. (See <a href="namespace_Game_sm_world.html#voxelFilter" class="code">sm.world.voxelFilter</a>). (Defaults to sm.world.voxelFilter.all)</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Player.html" class="code">Player</a></td><td class="code">player?</td><td>The player who constructed. (Optional)</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="voxelDensitySubtraction"></a>voxelDensitySubtraction(world, position, direction, radius, targetDensity, filter?, enableDestructionEffect?, callback?, params?)</h2>
+  <p>Server only</p>
+  <p>Modify destructible terrain around a point or line with a radius.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_World.html" class="code">World</a></td><td class="code">world</td><td>The world.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The world position a of the modification.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">direction</td><td>The world direction of the modification. Non normalized direction that defines the center line of modification.</td></tr>
+   <tr><td class="code">number</td><td class="code">radius</td><td>The maximum distance from positions in the line defined by position and direction that can be modified.</td></tr>
+   <tr><td class="code">integer</td><td class="code">targetDensity</td><td>The target density to remove.</td></tr>
+   <tr><td class="code">integer</td><td class="code">filter?</td><td>The materials the shape can modify. (See <a href="namespace_Game_sm_world.html#voxelFilter" class="code">sm.world.voxelFilter</a>). (Defaults to sm.world.voxelFilter.all)</td></tr>
+   <tr><td class="code">boolean</td><td class="code">enableDestructionEffect?</td><td>Whether to enable destruction effect. (Defaults to true)</td></tr>
+   <tr><td class="code">string</td><td class="code">callback?</td><td>Lua function to call when cell is loaded. Callback parameters are a table of destruction data { remDensities = {integer, ..}, avgPositions = {<a href="userdata_Game_Vec3.html" class="code">Vec3</a>, ..} } and (optional) pass-through params passed to this function.</td></tr>
+   <tr><td class="code">any</td><td class="code">params?</td><td>Parameter passed to the callback. (Optional)</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="voxelDensitySubtraction"></a>voxelDensitySubtraction(world, position, direction, radius, targetDensities, filter?, enableDestructionEffect?, callback?, params?)</h2>
+  <p>Server only</p>
+  <p>Modify destructible terrain around a point or line with a radius.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_World.html" class="code">World</a></td><td class="code">world</td><td>The world.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The world position a of the modification.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">direction</td><td>The world direction of the modification. Non normalized direction that defines the center line of modification.</td></tr>
+   <tr><td class="code">number</td><td class="code">radius</td><td>The maximum distance from positions in the line defined by position and direction that can be modified.</td></tr>
+   <tr><td class="code">table</td><td class="code">targetDensities</td><td>A table of target densities to remove per material type {[1] = integer, .., [8] = integer}.</td></tr>
+   <tr><td class="code">integer</td><td class="code">filter?</td><td>The materials the shape can modify. (See <a href="namespace_Game_sm_world.html#voxelFilter" class="code">sm.world.voxelFilter</a>). (Defaults to sm.world.voxelFilter.all)</td></tr>
+   <tr><td class="code">boolean</td><td class="code">enableDestructionEffect?</td><td>Whether to enable destruction effect. (Defaults to true)</td></tr>
+   <tr><td class="code">string</td><td class="code">callback?</td><td>Lua function to call when cell is loaded. Callback parameters are a table of destruction data { remDensities = {integer, ..}, avgPositions = {<a href="userdata_Game_Vec3.html" class="code">Vec3</a>, ..} } and (optional) pass-through params passed to this function.</td></tr>
+   <tr><td class="code">any</td><td class="code">params?</td><td>Parameter passed to the callback. (Optional)</td></tr>
   </table>
  </div>
 </body>

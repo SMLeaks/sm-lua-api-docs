@@ -365,6 +365,27 @@
 					]
 				]
 			}
+		},
+		{
+			"name": "getTerrainAssetMaterialName",
+			"doc": {
+				"text": [
+					"Returns the material hit during the raycast. This is only possible if [RaycastResult.type] is equal to \"terrainAsset\", otherwise this will return empty."
+				],
+				"params": [
+					[
+						"[RaycastResult]",
+						"raycastResult",
+						"The raycast result."
+					]
+				],
+				"return": [
+					[
+						"string",
+						"The material name."
+					]
+				]
+			}
 		}
 	],
 	"metamethods": []

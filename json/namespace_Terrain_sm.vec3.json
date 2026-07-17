@@ -108,6 +108,84 @@
 			}
 		},
 		{
+			"name": "fuzzyEquals",
+			"doc": {
+				"text": [
+					"Compare vectors with threshold FLT_EPSILON."
+				],
+				"params": [
+					[
+						"[Vec3]",
+						"v1",
+						"The first vector."
+					],
+					[
+						"[Vec3]",
+						"v2",
+						"The second vector."
+					]
+				],
+				"return": [
+					[
+						"boolean\t\tThe result of the comparison.",
+						""
+					]
+				]
+			}
+		},
+		{
+			"name": "getDistance",
+			"doc": {
+				"text": [
+					"Get the distance between 2 vectors"
+				],
+				"params": [
+					[
+						"[Vec3]",
+						"vector",
+						"Vector A"
+					],
+					[
+						"[Vec3]",
+						"vector",
+						"Vector B"
+					]
+				],
+				"return": [
+					[
+						"number",
+						"distance\tThe distance between the vectors"
+					]
+				]
+			}
+		},
+		{
+			"name": "getDistanceSquared",
+			"doc": {
+				"text": [
+					"Get the distance between 2 vectors"
+				],
+				"params": [
+					[
+						"[Vec3]",
+						"vector",
+						"Vector A"
+					],
+					[
+						"[Vec3]",
+						"vector",
+						"Vector B"
+					]
+				],
+				"return": [
+					[
+						"number",
+						"distance\tThe squared distance between the vectors"
+					]
+				]
+			}
+		},
+		{
 			"name": "getRotation",
 			"doc": {
 				"text": [
@@ -171,6 +249,27 @@
 					[
 						"[Vec3]",
 						"Interpolated vector."
+					]
+				]
+			}
+		},
+		{
+			"name": "new",
+			"doc": {
+				"text": [
+					"Creates a new vector from an existing one."
+				],
+				"params": [
+					[
+						"[Vec3]",
+						"vector",
+						"The original vector."
+					]
+				],
+				"return": [
+					[
+						"[Vec3]",
+						"The created vector."
 					]
 				]
 			}

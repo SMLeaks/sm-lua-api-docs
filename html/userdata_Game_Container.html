@@ -17,6 +17,7 @@
   <h3>Classes</h3>
   <ul>
    <li><a href="class_Game_CharacterClass.html" class="code">CharacterClass</a></li>
+   <li><a href="class_Game_ClientScriptableObjectClass.html" class="code">ClientScriptableObjectClass</a></li>
    <li><a href="class_Game_GameClass.html" class="code">GameClass</a></li>
    <li><a href="class_Game_HarvestableClass.html" class="code">HarvestableClass</a></li>
    <li><a href="class_Game_PlayerClass.html" class="code">PlayerClass</a></li>
@@ -34,14 +35,18 @@
    <li><a href="userdata_Game_Body.html" class="code">Body</a></li>
    <li><a href="userdata_Game_BuilderGuide.html" class="code">BuilderGuide</a></li>
    <li><a href="userdata_Game_Character.html" class="code">Character</a></li>
+   <li><a href="userdata_Game_ClientScriptableObject.html" class="code">ClientScriptableObject</a></li>
    <li><a href="userdata_Game_Color.html" class="code">Color</a></li>
    <li><a href="userdata_Game_Container.html" class="code">Container</a></li>
    <li><a href="userdata_Game_CullSphereGroup.html" class="code">CullSphereGroup</a></li>
    <li><a href="userdata_Game_Effect.html" class="code">Effect</a></li>
+   <li><a href="userdata_Game_Garage.html" class="code">Garage</a></li>
    <li><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></li>
    <li><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></li>
    <li><a href="userdata_Game_Interactable.html" class="code">Interactable</a></li>
    <li><a href="userdata_Game_Joint.html" class="code">Joint</a></li>
+   <li><a href="userdata_Game_JsonGui.html" class="code">JsonGui</a></li>
+   <li><a href="userdata_Game_JsonWidget.html" class="code">JsonWidget</a></li>
    <li><a href="userdata_Game_Lift.html" class="code">Lift</a></li>
    <li><a href="userdata_Game_LoadCellHandle.html" class="code">LoadCellHandle</a></li>
    <li><a href="userdata_Game_Network.html" class="code">Network</a></li>
@@ -73,6 +78,7 @@
    <li><a href="namespace_Game_sm_cell.html" class="code">sm.cell</a></li>
    <li><a href="namespace_Game_sm_challenge.html" class="code">sm.challenge</a></li>
    <li><a href="namespace_Game_sm_character.html" class="code">sm.character</a></li>
+   <li><a href="namespace_Game_sm_clientScriptableObject.html" class="code">sm.clientScriptableObject</a></li>
    <li><a href="namespace_Game_sm_color.html" class="code">sm.color</a></li>
    <li><a href="namespace_Game_sm_construction.html" class="code">sm.construction</a></li>
    <li><a href="namespace_Game_sm_container.html" class="code">sm.container</a></li>
@@ -80,9 +86,11 @@
    <li><a href="namespace_Game_sm_cullSphereGroup.html" class="code">sm.cullSphereGroup</a></li>
    <li><a href="namespace_Game_sm_debris.html" class="code">sm.debris</a></li>
    <li><a href="namespace_Game_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
+   <li><a href="namespace_Game_sm_debugGui.html" class="code">sm.debugGui</a></li>
    <li><a href="namespace_Game_sm_effect.html" class="code">sm.effect</a></li>
    <li><a href="namespace_Game_sm_event.html" class="code">sm.event</a></li>
    <li><a href="namespace_Game_sm_game.html" class="code">sm.game</a></li>
+   <li><a href="namespace_Game_sm_garage.html" class="code">sm.garage</a></li>
    <li><a href="namespace_Game_sm_gui.html" class="code">sm.gui</a></li>
    <li><a href="namespace_Game_sm_gui_widget.html" class="code">sm.gui.widget</a></li>
    <li><a href="namespace_Game_sm_harvestable.html" class="code">sm.harvestable</a></li>
@@ -90,15 +98,19 @@
    <li><a href="namespace_Game_sm_item.html" class="code">sm.item</a></li>
    <li><a href="namespace_Game_sm_joint.html" class="code">sm.joint</a></li>
    <li><a href="namespace_Game_sm_json.html" class="code">sm.json</a></li>
+   <li><a href="namespace_Game_sm_jsonGui.html" class="code">sm.jsonGui</a></li>
+   <li><a href="namespace_Game_sm_lift.html" class="code">sm.lift</a></li>
    <li><a href="namespace_Game_sm_localPlayer.html" class="code">sm.localPlayer</a></li>
    <li><a href="namespace_Game_sm_log.html" class="code">sm.log</a></li>
    <li><a href="namespace_Game_sm_melee.html" class="code">sm.melee</a></li>
    <li><a href="namespace_Game_sm_menuCreation.html" class="code">sm.menuCreation</a></li>
+   <li><a href="namespace_Game_sm_message.html" class="code">sm.message</a></li>
    <li><a href="namespace_Game_sm_noise.html" class="code">sm.noise</a></li>
    <li><a href="namespace_Game_sm_particle.html" class="code">sm.particle</a></li>
    <li><a href="namespace_Game_sm_pathNode.html" class="code">sm.pathNode</a></li>
    <li><a href="namespace_Game_sm_pathfinder.html" class="code">sm.pathfinder</a></li>
    <li><a href="namespace_Game_sm_physics.html" class="code">sm.physics</a></li>
+   <li><a href="namespace_Game_sm_pipeGraph.html" class="code">sm.pipeGraph</a></li>
    <li><a href="namespace_Game_sm_player.html" class="code">sm.player</a></li>
    <li><a href="namespace_Game_sm_portal.html" class="code">sm.portal</a></li>
    <li><a href="namespace_Game_sm_projectile.html" class="code">sm.projectile</a></li>
@@ -122,8 +134,12 @@
   <h3>Object Types 'userdata'</h3>
   <ul>
    <li><a href="userdata_Terrain_Color.html" class="code">Color</a></li>
+   <li><a href="userdata_Terrain_Container.html" class="code">Container</a></li>
    <li><a href="userdata_Terrain_Harvestable.html" class="code">Harvestable</a></li>
+   <li><a href="userdata_Terrain_Interactable.html" class="code">Interactable</a></li>
+   <li><a href="userdata_Terrain_Portal.html" class="code">Portal</a></li>
    <li><a href="userdata_Terrain_Quat.html" class="code">Quat</a></li>
+   <li><a href="userdata_Terrain_ScriptableObject.html" class="code">ScriptableObject</a></li>
    <li><a href="userdata_Terrain_Uuid.html" class="code">Uuid</a></li>
    <li><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></li>
    <li><a href="userdata_Terrain_World.html" class="code">World</a></li>
@@ -133,24 +149,30 @@
    <li><a href="namespace_Terrain_GLOBAL.html" class="code">GLOBAL</a></li>
    <li><a href="namespace_Terrain_sm.html" class="code">sm</a></li>
    <li><a href="namespace_Terrain_sm_color.html" class="code">sm.color</a></li>
+   <li><a href="namespace_Terrain_sm_container.html" class="code">sm.container</a></li>
    <li><a href="namespace_Terrain_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
-   <li><a href="namespace_Terrain_sm_harvestable.html" class="code">sm.harvestable</a></li>
+   <li><a href="namespace_Terrain_sm_debugGui.html" class="code">sm.debugGui</a></li>
+   <li><a href="namespace_Terrain_sm_interactable.html" class="code">sm.interactable</a></li>
    <li><a href="namespace_Terrain_sm_json.html" class="code">sm.json</a></li>
    <li><a href="namespace_Terrain_sm_log.html" class="code">sm.log</a></li>
    <li><a href="namespace_Terrain_sm_noise.html" class="code">sm.noise</a></li>
    <li><a href="namespace_Terrain_sm_quat.html" class="code">sm.quat</a></li>
+   <li><a href="namespace_Terrain_sm_scriptableObject.html" class="code">sm.scriptableObject</a></li>
    <li><a href="namespace_Terrain_sm_terrainData.html" class="code">sm.terrainData</a></li>
    <li><a href="namespace_Terrain_sm_terrainGeneration.html" class="code">sm.terrainGeneration</a></li>
+   <li><a href="namespace_Terrain_sm_terrainHarvestable.html" class="code">sm.terrainHarvestable</a></li>
    <li><a href="namespace_Terrain_sm_terrainTile.html" class="code">sm.terrainTile</a></li>
+   <li><a href="namespace_Terrain_sm_tunnelGenerator.html" class="code">sm.tunnelGenerator</a></li>
    <li><a href="namespace_Terrain_sm_util.html" class="code">sm.util</a></li>
    <li><a href="namespace_Terrain_sm_uuid.html" class="code">sm.uuid</a></li>
    <li><a href="namespace_Terrain_sm_vec3.html" class="code">sm.vec3</a></li>
+   <li><a href="namespace_Terrain_sm_voxelTerrainCell.html" class="code">sm.voxelTerrainCell</a></li>
   </ul>
  </div>
  <div id="content">
   <h1 class="code">Container</h1>
   <h3>Associated namespace: <a href="namespace_Game_sm_container.html" class="code">sm.container</a></h3>
-  <p>A userdata object representing a <strong>container</strong> in the game.</p>
+  <p>Represents a container</p>
   <h4>Values:</h4>
   <ul>
    <li><a href="#allowCollect" class="code">allowCollect</a></li>
@@ -159,15 +181,22 @@
    <li><a href="#size" class="code">size</a></li>
   </ul>  <h4>Functions:</h4>
   <ul>
+   <li><a href="#bindOnTransaction" class="code">bindOnTransaction</a></li>
    <li><a href="#canCollect" class="code">canCollect</a></li>
+   <li><a href="#canCollectAll" class="code">canCollectAll</a></li>
    <li><a href="#canSpend" class="code">canSpend</a></li>
+   <li><a href="#clear" class="code">clear</a></li>
+   <li><a href="#collect" class="code">collect</a></li>
    <li><a href="#getAllowCollect" class="code">getAllowCollect</a></li>
    <li><a href="#getAllowSpend" class="code">getAllowSpend</a></li>
    <li><a href="#getItem" class="code">getItem</a></li>
    <li><a href="#getMaxStackSize" class="code">getMaxStackSize</a></li>
+   <li><a href="#getRevision" class="code">getRevision</a></li>
    <li><a href="#getSize" class="code">getSize</a></li>
    <li><a href="#hasChanged" class="code">hasChanged</a></li>
    <li><a href="#isEmpty" class="code">isEmpty</a></li>
+   <li><a href="#isFull" class="code">isFull</a></li>
+   <li><a href="#resize" class="code">resize</a></li>
    <li><a href="#setAllowCollect" class="code">setAllowCollect</a></li>
    <li><a href="#setAllowSpend" class="code">setAllowSpend</a></li>
    <li><a href="#setFilters" class="code">setFilters</a></li>
@@ -175,8 +204,8 @@
   </ul>
   <h4>Operations:</h4>
   <table>
-   <tr><th>Operation</th><th>Description</th></tr>
-   <tr><td class="code"><a href="userdata_Game_Container.html" class="code">Container</a> == <a href="userdata_Game_Container.html" class="code">Container</a></td><td>Checks if two instances of <a href="userdata_Game_Container.html" class="code">Container</a> refer to the same Container.</td></tr>
+   <tr><th>Operation</th><th>Return type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Container.html" class="code">Container</a> == <a href="userdata_Game_Container.html" class="code">Container</a></td><td>boolean</td><td>Checks if two instances of <a href="userdata_Game_Container.html" class="code">Container</a> refer to the same Container.</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="allowCollect"></a>allowCollect <i>boolean</i></h2>
@@ -203,14 +232,40 @@
   <h4>Get:</h4>
   <p>Returns the number of slots in a container.</p>
   <hr>
+  <h2 class="code"><a id="bindOnTransaction"></a>bindOnTransaction(container, callback, object?)</h2>
+  <p>Server only</p>
+  <p>Binds a container's onTransaction event to a custom callback. The event is triggered when a transaction is completed.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Container.html" class="code">Container</a></td><td class="code">container</td><td>The container instance.</td></tr>
+   <tr><td class="code">string</td><td class="code">callback</td><td>The name of the Lua function to bind.</td></tr>
+   <tr><td class="code">table</td><td class="code">object?</td><td>The object that will receive the callback. (optional)</td></tr>
+  </table>
+  <hr>
   <h2 class="code"><a id="canCollect"></a>canCollect(container, itemUuid, quantity)</h2>
-  <p>Checks if <a href="namespace_Game_sm_container.html#collect" class="code">sm.container.collect</a> is allowed using the same parameters.</p>
+  <p>Checks if <a href="userdata_Game_Container.html#collect" class="code">sm.container.collect</a> is allowed using the same parameters.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code"><a href="userdata_Game_Container.html" class="code">Container</a></td><td class="code">container</td><td>The container.</td></tr>
    <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">itemUuid</td><td>The uuid of the item.</td></tr>
    <tr><td class="code">integer</td><td class="code">quantity</td><td>The number of items.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>Indicates if the action is possible.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="canCollectAll"></a>canCollectAll(container, uuids, quantities)</h2>
+  <p>Checks if the container can collect a set of items.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Container.html" class="code">Container</a></td><td class="code">container</td><td>The container.</td></tr>
+   <tr><td class="code">table</td><td class="code">uuids</td><td>The uuids of items to check.</td></tr>
+   <tr><td class="code">table</td><td class="code">quantities</td><td>The number of items of each uuid. Needs to match the number of uuids.</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -231,6 +286,32 @@
   <table>
    <tr><th>Type</th><th>Description</th></tr>
    <tr><td class="code">boolean</td><td>Indicates if the action is possible.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="clear"></a>clear(container)</h2>
+  <p>Server only</p>
+  <p>Clears out the contents of the container.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Container.html" class="code">Container</a></td><td class="code">container</td><td>The container.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="collect"></a>collect(container, itemUuid, quantity, mustCollectAll?)</h2>
+  <p>Server only</p>
+  <p>Adds a quantity of a given item to a container.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Container.html" class="code">Container</a></td><td class="code">container</td><td>The container.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">itemUuid</td><td>The uuid of the item.</td></tr>
+   <tr><td class="code">integer</td><td class="code">quantity</td><td>The number of items.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">mustCollectAll?</td><td>Must collect all items for the transaction to be valid. Defaults to true. (Optional)</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">integer</td><td>The number of items successfully added.</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="getAllowCollect"></a>getAllowCollect(container)</h2>
@@ -288,6 +369,19 @@
    <tr><td class="code">integer</td><td>The max stack size.</td></tr>
   </table>
   <hr>
+  <h2 class="code"><a id="getRevision"></a>getRevision(container)</h2>
+  <p>Returns the network revision number of the container.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Container.html" class="code">Container</a></td><td class="code">container</td><td>The container.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">number</td><td>The revision</td></tr>
+  </table>
+  <hr>
   <h2 class="code"><a id="getSize"></a>getSize(container)</h2>
   <p>Returns the number of slots in a container.</p>
   <h4>Parameters:</h4>
@@ -329,6 +423,30 @@
    <tr><td class="code">boolean</td><td>Returns true if the container is empty.</td></tr>
   </table>
   <hr>
+  <h2 class="code"><a id="isFull"></a>isFull(container)</h2>
+  <p>Returns true if all container slots in the container is at max capacity.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Container.html" class="code">Container</a></td><td class="code">container</td><td>The container.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>Returns true if the container is empty.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="resize"></a>resize(container, size, stackSize?)</h2>
+  <p>Server only</p>
+  <p>Resize a container.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Container.html" class="code">Container</a></td><td class="code">container</td><td>The container instance.</td></tr>
+   <tr><td class="code">integer</td><td class="code">size</td><td>The new size of the container.</td></tr>
+   <tr><td class="code">integer</td><td class="code">stackSize?</td><td>The stack size. Defaults to maximum possible stack size(65535).</td></tr>
+  </table>
+  <hr>
   <h2 class="code"><a id="setAllowCollect"></a>setAllowCollect(container, allow)</h2>
   <p>Server only</p>
   <p>Sets whether the container can collect items.</p>
@@ -359,7 +477,7 @@
    <tr><td class="code">table</td><td class="code">filter</td><td>A table of the item uuid's {<a href="userdata_Game_Uuid.html" class="code">Uuid</a>, ...} allowed to be stored in the container.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="setItem"></a>setItem(container, slot, itemUuid, quantity, instance)</h2>
+  <h2 class="code"><a id="setItem"></a>setItem(container, slot, itemUuid, quantity, instance?)</h2>
   <p>Server only</p>
   <p>Sets the number of items stacked in a given container slot.</p>
   <h4>Parameters:</h4>
@@ -369,7 +487,7 @@
    <tr><td class="code">integer</td><td class="code">slot</td><td>The slot.</td></tr>
    <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">itemUuid</td><td>The uuid of the item.</td></tr>
    <tr><td class="code">integer</td><td class="code">quantity</td><td>The number of items.</td></tr>
-   <tr><td class="code">integer=nil</td><td class="code">instance</td><td>The instance id, if the item is a tool. (Optional)</td></tr>
+   <tr><td class="code">integer</td><td class="code">instance?</td><td>The instance id, if the item is a tool. (Optional)</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>

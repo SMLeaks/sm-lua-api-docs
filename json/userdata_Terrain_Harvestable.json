@@ -1,6 +1,6 @@
 {
 	"userdata": "Harvestable",
-	"namespace_association": "sm.harvestable",
+	"namespace_association": "sm.terrainHarvestable",
 	"doc": {
 		"text": [
 			"Represents a harvestable object in the game."

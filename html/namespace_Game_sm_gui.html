@@ -17,6 +17,7 @@
   <h3>Classes</h3>
   <ul>
    <li><a href="class_Game_CharacterClass.html" class="code">CharacterClass</a></li>
+   <li><a href="class_Game_ClientScriptableObjectClass.html" class="code">ClientScriptableObjectClass</a></li>
    <li><a href="class_Game_GameClass.html" class="code">GameClass</a></li>
    <li><a href="class_Game_HarvestableClass.html" class="code">HarvestableClass</a></li>
    <li><a href="class_Game_PlayerClass.html" class="code">PlayerClass</a></li>
@@ -34,14 +35,18 @@
    <li><a href="userdata_Game_Body.html" class="code">Body</a></li>
    <li><a href="userdata_Game_BuilderGuide.html" class="code">BuilderGuide</a></li>
    <li><a href="userdata_Game_Character.html" class="code">Character</a></li>
+   <li><a href="userdata_Game_ClientScriptableObject.html" class="code">ClientScriptableObject</a></li>
    <li><a href="userdata_Game_Color.html" class="code">Color</a></li>
    <li><a href="userdata_Game_Container.html" class="code">Container</a></li>
    <li><a href="userdata_Game_CullSphereGroup.html" class="code">CullSphereGroup</a></li>
    <li><a href="userdata_Game_Effect.html" class="code">Effect</a></li>
+   <li><a href="userdata_Game_Garage.html" class="code">Garage</a></li>
    <li><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></li>
    <li><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></li>
    <li><a href="userdata_Game_Interactable.html" class="code">Interactable</a></li>
    <li><a href="userdata_Game_Joint.html" class="code">Joint</a></li>
+   <li><a href="userdata_Game_JsonGui.html" class="code">JsonGui</a></li>
+   <li><a href="userdata_Game_JsonWidget.html" class="code">JsonWidget</a></li>
    <li><a href="userdata_Game_Lift.html" class="code">Lift</a></li>
    <li><a href="userdata_Game_LoadCellHandle.html" class="code">LoadCellHandle</a></li>
    <li><a href="userdata_Game_Network.html" class="code">Network</a></li>
@@ -73,6 +78,7 @@
    <li><a href="namespace_Game_sm_cell.html" class="code">sm.cell</a></li>
    <li><a href="namespace_Game_sm_challenge.html" class="code">sm.challenge</a></li>
    <li><a href="namespace_Game_sm_character.html" class="code">sm.character</a></li>
+   <li><a href="namespace_Game_sm_clientScriptableObject.html" class="code">sm.clientScriptableObject</a></li>
    <li><a href="namespace_Game_sm_color.html" class="code">sm.color</a></li>
    <li><a href="namespace_Game_sm_construction.html" class="code">sm.construction</a></li>
    <li><a href="namespace_Game_sm_container.html" class="code">sm.container</a></li>
@@ -80,9 +86,11 @@
    <li><a href="namespace_Game_sm_cullSphereGroup.html" class="code">sm.cullSphereGroup</a></li>
    <li><a href="namespace_Game_sm_debris.html" class="code">sm.debris</a></li>
    <li><a href="namespace_Game_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
+   <li><a href="namespace_Game_sm_debugGui.html" class="code">sm.debugGui</a></li>
    <li><a href="namespace_Game_sm_effect.html" class="code">sm.effect</a></li>
    <li><a href="namespace_Game_sm_event.html" class="code">sm.event</a></li>
    <li><a href="namespace_Game_sm_game.html" class="code">sm.game</a></li>
+   <li><a href="namespace_Game_sm_garage.html" class="code">sm.garage</a></li>
    <li><a href="namespace_Game_sm_gui.html" class="code">sm.gui</a></li>
    <li><a href="namespace_Game_sm_gui_widget.html" class="code">sm.gui.widget</a></li>
    <li><a href="namespace_Game_sm_harvestable.html" class="code">sm.harvestable</a></li>
@@ -90,15 +98,19 @@
    <li><a href="namespace_Game_sm_item.html" class="code">sm.item</a></li>
    <li><a href="namespace_Game_sm_joint.html" class="code">sm.joint</a></li>
    <li><a href="namespace_Game_sm_json.html" class="code">sm.json</a></li>
+   <li><a href="namespace_Game_sm_jsonGui.html" class="code">sm.jsonGui</a></li>
+   <li><a href="namespace_Game_sm_lift.html" class="code">sm.lift</a></li>
    <li><a href="namespace_Game_sm_localPlayer.html" class="code">sm.localPlayer</a></li>
    <li><a href="namespace_Game_sm_log.html" class="code">sm.log</a></li>
    <li><a href="namespace_Game_sm_melee.html" class="code">sm.melee</a></li>
    <li><a href="namespace_Game_sm_menuCreation.html" class="code">sm.menuCreation</a></li>
+   <li><a href="namespace_Game_sm_message.html" class="code">sm.message</a></li>
    <li><a href="namespace_Game_sm_noise.html" class="code">sm.noise</a></li>
    <li><a href="namespace_Game_sm_particle.html" class="code">sm.particle</a></li>
    <li><a href="namespace_Game_sm_pathNode.html" class="code">sm.pathNode</a></li>
    <li><a href="namespace_Game_sm_pathfinder.html" class="code">sm.pathfinder</a></li>
    <li><a href="namespace_Game_sm_physics.html" class="code">sm.physics</a></li>
+   <li><a href="namespace_Game_sm_pipeGraph.html" class="code">sm.pipeGraph</a></li>
    <li><a href="namespace_Game_sm_player.html" class="code">sm.player</a></li>
    <li><a href="namespace_Game_sm_portal.html" class="code">sm.portal</a></li>
    <li><a href="namespace_Game_sm_projectile.html" class="code">sm.projectile</a></li>
@@ -122,8 +134,12 @@
   <h3>Object Types 'userdata'</h3>
   <ul>
    <li><a href="userdata_Terrain_Color.html" class="code">Color</a></li>
+   <li><a href="userdata_Terrain_Container.html" class="code">Container</a></li>
    <li><a href="userdata_Terrain_Harvestable.html" class="code">Harvestable</a></li>
+   <li><a href="userdata_Terrain_Interactable.html" class="code">Interactable</a></li>
+   <li><a href="userdata_Terrain_Portal.html" class="code">Portal</a></li>
    <li><a href="userdata_Terrain_Quat.html" class="code">Quat</a></li>
+   <li><a href="userdata_Terrain_ScriptableObject.html" class="code">ScriptableObject</a></li>
    <li><a href="userdata_Terrain_Uuid.html" class="code">Uuid</a></li>
    <li><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></li>
    <li><a href="userdata_Terrain_World.html" class="code">World</a></li>
@@ -133,25 +149,54 @@
    <li><a href="namespace_Terrain_GLOBAL.html" class="code">GLOBAL</a></li>
    <li><a href="namespace_Terrain_sm.html" class="code">sm</a></li>
    <li><a href="namespace_Terrain_sm_color.html" class="code">sm.color</a></li>
+   <li><a href="namespace_Terrain_sm_container.html" class="code">sm.container</a></li>
    <li><a href="namespace_Terrain_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
-   <li><a href="namespace_Terrain_sm_harvestable.html" class="code">sm.harvestable</a></li>
+   <li><a href="namespace_Terrain_sm_debugGui.html" class="code">sm.debugGui</a></li>
+   <li><a href="namespace_Terrain_sm_interactable.html" class="code">sm.interactable</a></li>
    <li><a href="namespace_Terrain_sm_json.html" class="code">sm.json</a></li>
    <li><a href="namespace_Terrain_sm_log.html" class="code">sm.log</a></li>
    <li><a href="namespace_Terrain_sm_noise.html" class="code">sm.noise</a></li>
    <li><a href="namespace_Terrain_sm_quat.html" class="code">sm.quat</a></li>
+   <li><a href="namespace_Terrain_sm_scriptableObject.html" class="code">sm.scriptableObject</a></li>
    <li><a href="namespace_Terrain_sm_terrainData.html" class="code">sm.terrainData</a></li>
    <li><a href="namespace_Terrain_sm_terrainGeneration.html" class="code">sm.terrainGeneration</a></li>
+   <li><a href="namespace_Terrain_sm_terrainHarvestable.html" class="code">sm.terrainHarvestable</a></li>
    <li><a href="namespace_Terrain_sm_terrainTile.html" class="code">sm.terrainTile</a></li>
+   <li><a href="namespace_Terrain_sm_tunnelGenerator.html" class="code">sm.tunnelGenerator</a></li>
    <li><a href="namespace_Terrain_sm_util.html" class="code">sm.util</a></li>
    <li><a href="namespace_Terrain_sm_uuid.html" class="code">sm.uuid</a></li>
    <li><a href="namespace_Terrain_sm_vec3.html" class="code">sm.vec3</a></li>
+   <li><a href="namespace_Terrain_sm_voxelTerrainCell.html" class="code">sm.voxelTerrainCell</a></li>
   </ul>
  </div>
  <div id="content">
   <h1 class="code">sm.gui</h1>
   <p>The <strong>gui</strong> library contains various utility functions for handling user interfaces.</p>
   <p>This library can only be used on the <a href="index.html#client">client</a>.</p>
-  <h4>Functions:</h4  <ul>   <li><a href="#chatMessage" class="code">chatMessage</a></li>   <li><a href="#createAmmunitionContainerGui" class="code">createAmmunitionContainerGui</a></li>   <li><a href="#createBagIconGui" class="code">createBagIconGui</a></li>   <li><a href="#createBatteryContainerGui" class="code">createBatteryContainerGui</a></li>   <li><a href="#createBeaconIconGui" class="code">createBeaconIconGui</a></li>   <li><a href="#createChallengeHUDGui" class="code">createChallengeHUDGui</a></li>   <li><a href="#createChallengeMessageGui" class="code">createChallengeMessageGui</a></li>   <li><a href="#createCharacterCustomizationGui" class="code">createCharacterCustomizationGui</a></li>   <li><a href="#createChemicalContainerGui" class="code">createChemicalContainerGui</a></li>   <li><a href="#createContainerGui" class="code">createContainerGui</a></li>   <li><a href="#createCraftBotGui" class="code">createCraftBotGui</a></li>   <li><a href="#createDressBotGui" class="code">createDressBotGui</a></li>   <li><a href="#createEngineGui" class="code">createEngineGui</a></li>   <li><a href="#createFertilizerContainerGui" class="code">createFertilizerContainerGui</a></li>   <li><a href="#createGasContainerGui" class="code">createGasContainerGui</a></li>   <li><a href="#createGuiFromLayout" class="code">createGuiFromLayout</a></li>   <li><a href="#createHideoutGui" class="code">createHideoutGui</a></li>   <li><a href="#createLogbookGui" class="code">createLogbookGui</a></li>   <li><a href="#createMechanicStationGui" class="code">createMechanicStationGui</a></li>   <li><a href="#createNameTagGui" class="code">createNameTagGui</a></li>   <li><a href="#createQuestTrackerGui" class="code">createQuestTrackerGui</a></li>   <li><a href="#createSeatGui" class="code">createSeatGui</a></li>   <li><a href="#createSeatUpgradeGui" class="code">createSeatUpgradeGui</a></li>   <li><a href="#createSeedContainerGui" class="code">createSeedContainerGui</a></li>   <li><a href="#createSteeringBearingGui" class="code">createSteeringBearingGui</a></li>   <li><a href="#createSurvivalHudGui" class="code">createSurvivalHudGui</a></li>   <li><a href="#createWaterContainerGui" class="code">createWaterContainerGui</a></li>   <li><a href="#createWaypointIconGui" class="code">createWaypointIconGui</a></li>   <li><a href="#createWidget" class="code">createWidget</a></li>   <li><a href="#createWorkbenchGui" class="code">createWorkbenchGui</a></li>   <li><a href="#createWorldIconGui" class="code">createWorldIconGui</a></li>   <li><a href="#displayAlertText" class="code">displayAlertText</a></li>   <li><a href="#endFadeToBlack" class="code">endFadeToBlack</a></li>   <li><a href="#exitToMenu" class="code">exitToMenu</a></li>   <li><a href="#getCurrentLanguage" class="code">getCurrentLanguage</a></li>   <li><a href="#getKeyBinding" class="code">getKeyBinding</a></li>   <li><a href="#getScreenSize" class="code">getScreenSize</a></li>   <li><a href="#hideGui" class="code">hideGui</a></li>   <li><a href="#setCenterIcon" class="code">setCenterIcon</a></li>   <li><a href="#setCharacterDebugText" class="code">setCharacterDebugText</a></li>   <li><a href="#setInteractionText" class="code">setInteractionText</a></li>   <li><a href="#setProgressFraction" class="code">setProgressFraction</a></li>   <li><a href="#startFadeToBlack" class="code">startFadeToBlack</a></li>   <li><a href="#ticksToTimeString" class="code">ticksToTimeString</a></li>   <li><a href="#translateLocalizationTags" class="code">translateLocalizationTags</a></li>  </ul>  <hr>
+  <h4>Constants:</h4>  <ul>   <li><a href="#widgetStates" class="code">widgetStates</a></li>  </ul>  <h4>Functions:</h4  <ul>   <li><a href="#bindDisplayMessageCallback" class="code">bindDisplayMessageCallback</a></li>   <li><a href="#blockInGameMenu" class="code">blockInGameMenu</a></li>   <li><a href="#chatMessage" class="code">chatMessage</a></li>   <li><a href="#computeTextSize" class="code">computeTextSize</a></li>   <li><a href="#createAmmunitionContainerGui" class="code">createAmmunitionContainerGui</a></li>   <li><a href="#createBagIconGui" class="code">createBagIconGui</a></li>   <li><a href="#createBatteryContainerGui" class="code">createBatteryContainerGui</a></li>   <li><a href="#createBeaconIconGui" class="code">createBeaconIconGui</a></li>   <li><a href="#createChallengeHUDGui" class="code">createChallengeHUDGui</a></li>   <li><a href="#createChallengeMessageGui" class="code">createChallengeMessageGui</a></li>   <li><a href="#createCharacterCustomizationGui" class="code">createCharacterCustomizationGui</a></li>   <li><a href="#createChemicalContainerGui" class="code">createChemicalContainerGui</a></li>   <li><a href="#createCompassHudGui" class="code">createCompassHudGui</a></li>   <li><a href="#createContainerGui" class="code">createContainerGui</a></li>   <li><a href="#createCraftBotGui" class="code">createCraftBotGui</a></li>   <li><a href="#createDressBotGui" class="code">createDressBotGui</a></li>   <li><a href="#createEngineGui" class="code">createEngineGui</a></li>   <li><a href="#createFertilizerContainerGui" class="code">createFertilizerContainerGui</a></li>   <li><a href="#createGasContainerGui" class="code">createGasContainerGui</a></li>   <li><a href="#createGlowstickContainerGui" class="code">createGlowstickContainerGui</a></li>   <li><a href="#createGuiFromLayout" class="code">createGuiFromLayout</a></li>   <li><a href="#createHideoutGui" class="code">createHideoutGui</a></li>   <li><a href="#createLogbookGui" class="code">createLogbookGui</a></li>   <li><a href="#createMechanicStationGui" class="code">createMechanicStationGui</a></li>   <li><a href="#createMininghubDispenserGui" class="code">createMininghubDispenserGui</a></li>   <li><a href="#createNameTagGui" class="code">createNameTagGui</a></li>   <li><a href="#createOreCrusherContainerGui" class="code">createOreCrusherContainerGui</a></li>   <li><a href="#createPortableCrafterGui" class="code">createPortableCrafterGui</a></li>   <li><a href="#createProspectorContainerGui" class="code">createProspectorContainerGui</a></li>   <li><a href="#createQuestTrackerGui" class="code">createQuestTrackerGui</a></li>   <li><a href="#createRefineryContainerGui" class="code">createRefineryContainerGui</a></li>   <li><a href="#createSawbotGui" class="code">createSawbotGui</a></li>   <li><a href="#createSeatGui" class="code">createSeatGui</a></li>   <li><a href="#createSeatUpgradeGui" class="code">createSeatUpgradeGui</a></li>   <li><a href="#createSeedContainerGui" class="code">createSeedContainerGui</a></li>   <li><a href="#createSteeringBearingGui" class="code">createSteeringBearingGui</a></li>   <li><a href="#createSurvivalHudGui" class="code">createSurvivalHudGui</a></li>   <li><a href="#createWaterContainerGui" class="code">createWaterContainerGui</a></li>   <li><a href="#createWaypointIconGui" class="code">createWaypointIconGui</a></li>   <li><a href="#createWidget" class="code">createWidget</a></li>   <li><a href="#createWorkbenchGui" class="code">createWorkbenchGui</a></li>   <li><a href="#createWorldIconGui" class="code">createWorldIconGui</a></li>   <li><a href="#displayAlertText" class="code">displayAlertText</a></li>   <li><a href="#endFadeToBlack" class="code">endFadeToBlack</a></li>   <li><a href="#exitToMenu" class="code">exitToMenu</a></li>   <li><a href="#getCurrentLanguage" class="code">getCurrentLanguage</a></li>   <li><a href="#getItemIconFromUuid" class="code">getItemIconFromUuid</a></li>   <li><a href="#getKeyBinding" class="code">getKeyBinding</a></li>   <li><a href="#getScreenSize" class="code">getScreenSize</a></li>   <li><a href="#hasActiveGui" class="code">hasActiveGui</a></li>   <li><a href="#hideGui" class="code">hideGui</a></li>   <li><a href="#hideHotbar" class="code">hideHotbar</a></li>   <li><a href="#openGarageImportGui" class="code">openGarageImportGui</a></li>   <li><a href="#setCenterIcon" class="code">setCenterIcon</a></li>   <li><a href="#setCharacterDebugText" class="code">setCharacterDebugText</a></li>   <li><a href="#setGarageButtonCallback" class="code">setGarageButtonCallback</a></li>   <li><a href="#setGarageErrorCallback" class="code">setGarageErrorCallback</a></li>   <li><a href="#setGarageImportGuiStorage" class="code">setGarageImportGuiStorage</a></li>   <li><a href="#setInteractionText" class="code">setInteractionText</a></li>   <li><a href="#setProgressFraction" class="code">setProgressFraction</a></li>   <li><a href="#startFadeToBlack" class="code">startFadeToBlack</a></li>   <li><a href="#startFadeToBlackWaitForWorld" class="code">startFadeToBlackWaitForWorld</a></li>   <li><a href="#ticksToTimeString" class="code">ticksToTimeString</a></li>   <li><a href="#translateLocalizationTags" class="code">translateLocalizationTags</a></li>  </ul>  <hr>
+  <h2 class="code"><a id="widgetStates"></a>sm.gui.widgetStates <i>table</i></h2>
+  <p>Widget states</p>
+  <table>
+   <tr>    <td>disabled,</td>   </tr>   <tr>    <td>normal,</td>   </tr>   <tr>    <td>highlighted,</td>   </tr>   <tr>    <td>pushed,</td>   </tr>   <tr>    <td>disabled_checked,</td>   </tr>   <tr>    <td>normal_checked,</td>   </tr>   <tr>    <td>highlighted_checked,</td>   </tr>   <tr>    <td>pushed_checked</td>   </tr>  </table>
+  <hr>
+  <h2 class="code"><a id="bindDisplayMessageCallback"></a>sm.gui.bindDisplayMessageCallback(callback)</h2>
+  <p>Client only</p>
+  <p>Sets a target callback for generic notification popups</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">string</td><td class="code">callback</td><td>Function to be called when a alert message is called</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="blockInGameMenu"></a>sm.gui.blockInGameMenu(block)</h2>
+  <p>Client only</p>
+  <p>Sets the blocking state for the in game menu.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td class="code">block</td><td>The new blocking state for the in game menu.</td></tr>
+  </table>
+  <hr>
   <h2 class="code"><a id="chatMessage"></a>sm.gui.chatMessage(message)</h2>
   <p>Prints text in the chat gui.</p>
   <div class="note">
@@ -164,13 +209,31 @@
    <tr><td class="code">string</td><td class="code">message</td><td>The message.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="createAmmunitionContainerGui"></a>sm.gui.createAmmunitionContainerGui(destroyOnClose=false)</h2>
+  <h2 class="code"><a id="computeTextSize"></a>sm.gui.computeTextSize(text, font, align, maxWidth?, replaceTags?)</h2>
+  <p>Client only</p>
+  <p>Calculates the 720 widget size required to display a text</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">string</td><td class="code">text</td><td>The text to compute.</td></tr>
+   <tr><td class="code">string</td><td class="code">font</td><td>The font to use.</td></tr>
+   <tr><td class="code">string</td><td class="code">align</td><td>The text alignment.</td></tr>
+   <tr><td class="code">number</td><td class="code">maxWidth?</td><td>The maximum desired widget width before wrapping (optional) (Defaults to -1)</td></tr>
+   <tr><td class="code">boolean</td><td class="code">replaceTags?</td><td>Should tags be replaced before calculating? (optional) (Defaults to true)</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">{number, number}</td><td>The calculated width and height.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="createAmmunitionContainerGui"></a>sm.gui.createAmmunitionContainerGui(destroyOnClose?)</h2>
   <p>Client only</p>
   <p>Create a ammunition container GUI.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code">boolean</td><td class="code">destroyOnClose=false</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">destroyOnClose?</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -178,7 +241,7 @@
    <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td>The gui interface to the created gui.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="createBagIconGui"></a>sm.gui.createBagIconGui(destroyOnClose=false)</h2>
+  <h2 class="code"><a id="createBagIconGui"></a>sm.gui.createBagIconGui(destroyOnClose?)</h2>
   <div class="deprecated">
    <h4>Deprecated:</h4>
    <p>use createWorldIconGui</p>
@@ -188,7 +251,7 @@
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code">boolean</td><td class="code">destroyOnClose=false</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">destroyOnClose?</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -196,13 +259,13 @@
    <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td>The gui interface to the created gui.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="createBatteryContainerGui"></a>sm.gui.createBatteryContainerGui(destroyOnClose=false)</h2>
+  <h2 class="code"><a id="createBatteryContainerGui"></a>sm.gui.createBatteryContainerGui(destroyOnClose?)</h2>
   <p>Client only</p>
   <p>Create a battery container GUI.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code">boolean</td><td class="code">destroyOnClose=false</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">destroyOnClose?</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -210,7 +273,7 @@
    <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td>The gui interface to the created gui.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="createBeaconIconGui"></a>sm.gui.createBeaconIconGui(destroyOnClose=false)</h2>
+  <h2 class="code"><a id="createBeaconIconGui"></a>sm.gui.createBeaconIconGui(destroyOnClose?)</h2>
   <div class="deprecated">
    <h4>Deprecated:</h4>
    <p>use createWorldIconGui</p>
@@ -220,7 +283,7 @@
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code">boolean</td><td class="code">destroyOnClose=false</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">destroyOnClose?</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -228,13 +291,13 @@
    <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td>The gui interface to the created gui.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="createChallengeHUDGui"></a>sm.gui.createChallengeHUDGui(destroyOnClose=false)</h2>
+  <h2 class="code"><a id="createChallengeHUDGui"></a>sm.gui.createChallengeHUDGui(destroyOnClose?)</h2>
   <p>Client only</p>
   <p>Create a challenge HUD GUI.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code">boolean</td><td class="code">destroyOnClose=false</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">destroyOnClose?</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -242,13 +305,13 @@
    <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td>The gui interface to the created gui.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="createChallengeMessageGui"></a>sm.gui.createChallengeMessageGui(destroyOnClose=false)</h2>
+  <h2 class="code"><a id="createChallengeMessageGui"></a>sm.gui.createChallengeMessageGui(destroyOnClose?)</h2>
   <p>Client only</p>
   <p>Create a challenge message HUD GUI.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code">boolean</td><td class="code">destroyOnClose=false</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">destroyOnClose?</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -256,13 +319,19 @@
    <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td>The gui interface to the created gui.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="createCharacterCustomizationGui"></a>sm.gui.createCharacterCustomizationGui(destroyOnClose=false)</h2>
+  <h2 class="code"><a id="createCharacterCustomizationGui"></a>sm.gui.createCharacterCustomizationGui(destroyOnClose?)</h2>
   <p>Client only</p>
   <p>Create a character customization GUI.</p>
+  <div class="note">
+   <h4>Note:</h4>
+   <p>Character customization gui has two magic callbacks</p>
+   <p>Mouse drag cl_onDragZoneUsed ( number, number )</p>
+   <p>Mouse scroll cl_onDragZoneUsed ( number )</p>
+  </div>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code">boolean</td><td class="code">destroyOnClose=false</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">destroyOnClose?</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -270,13 +339,13 @@
    <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td>The gui interface to the created gui.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="createChemicalContainerGui"></a>sm.gui.createChemicalContainerGui(destroyOnClose=false)</h2>
+  <h2 class="code"><a id="createChemicalContainerGui"></a>sm.gui.createChemicalContainerGui(destroyOnClose?)</h2>
   <p>Client only</p>
   <p>Create a chemical container GUI.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code">boolean</td><td class="code">destroyOnClose=false</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">destroyOnClose?</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -284,13 +353,27 @@
    <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td>The gui interface to the created gui.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="createContainerGui"></a>sm.gui.createContainerGui(destroyOnClose=false)</h2>
+  <h2 class="code"><a id="createCompassHudGui"></a>sm.gui.createCompassHudGui(destroyOnClose?)</h2>
+  <p>Client only</p>
+  <p>Create a compass hud GUI.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td class="code">destroyOnClose?</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td>The gui interface to the created gui.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="createContainerGui"></a>sm.gui.createContainerGui(destroyOnClose?)</h2>
   <p>Client only</p>
   <p>Create a container GUI, for showing two containers.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code">boolean</td><td class="code">destroyOnClose=false</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">destroyOnClose?</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -298,13 +381,13 @@
    <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td>The gui interface to the created gui.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="createCraftBotGui"></a>sm.gui.createCraftBotGui(destroyOnClose=false)</h2>
+  <h2 class="code"><a id="createCraftBotGui"></a>sm.gui.createCraftBotGui(destroyOnClose?)</h2>
   <p>Client only</p>
   <p>Create a craft bot GUI.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code">boolean</td><td class="code">destroyOnClose=false</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">destroyOnClose?</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -312,13 +395,13 @@
    <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td>The gui interface to the created gui.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="createDressBotGui"></a>sm.gui.createDressBotGui(destroyOnClose=false)</h2>
+  <h2 class="code"><a id="createDressBotGui"></a>sm.gui.createDressBotGui(destroyOnClose?)</h2>
   <p>Client only</p>
   <p>Create a dress bot GUI.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code">boolean</td><td class="code">destroyOnClose=false</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">destroyOnClose?</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -326,13 +409,13 @@
    <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td>The gui interface to the created gui.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="createEngineGui"></a>sm.gui.createEngineGui(destroyOnClose=false)</h2>
+  <h2 class="code"><a id="createEngineGui"></a>sm.gui.createEngineGui(destroyOnClose?)</h2>
   <p>Client only</p>
   <p>Create a engine GUI.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code">boolean</td><td class="code">destroyOnClose=false</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">destroyOnClose?</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -340,13 +423,13 @@
    <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td>The gui interface to the created gui.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="createFertilizerContainerGui"></a>sm.gui.createFertilizerContainerGui(destroyOnClose=false)</h2>
+  <h2 class="code"><a id="createFertilizerContainerGui"></a>sm.gui.createFertilizerContainerGui(destroyOnClose?)</h2>
   <p>Client only</p>
   <p>Create a fertilizer container GUI.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code">boolean</td><td class="code">destroyOnClose=false</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">destroyOnClose?</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -354,13 +437,13 @@
    <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td>The gui interface to the created gui.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="createGasContainerGui"></a>sm.gui.createGasContainerGui(destroyOnClose=false)</h2>
+  <h2 class="code"><a id="createGasContainerGui"></a>sm.gui.createGasContainerGui(destroyOnClose?)</h2>
   <p>Client only</p>
   <p>Create a gas container GUI.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code">boolean</td><td class="code">destroyOnClose=false</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">destroyOnClose?</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -368,15 +451,29 @@
    <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td>The gui interface to the created gui.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="createGuiFromLayout"></a>sm.gui.createGuiFromLayout(layout, destroyOnClose=false, settings=nil)</h2>
+  <h2 class="code"><a id="createGlowstickContainerGui"></a>sm.gui.createGlowstickContainerGui(destroyOnClose?)</h2>
+  <p>Client only</p>
+  <p>Create a glowstick container GUI.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td class="code">destroyOnClose?</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td>The gui interface to the created gui.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="createGuiFromLayout"></a>sm.gui.createGuiFromLayout(layout, destroyOnClose?, settings?)</h2>
   <p>Client only</p>
   <p>Create a GUI from a layout file.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code">string</td><td class="code">layout</td><td>Path to the layout file</td></tr>
-   <tr><td class="code">boolean</td><td class="code">destroyOnClose=false</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused.</td></tr>
-   <tr><td class="code">table</td><td class="code">settings=nil</td><td>Table with bool settings for: isHud, isInteractive, needsCursor</td></tr>
+   <tr><td class="code">boolean</td><td class="code">destroyOnClose?</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)</td></tr>
+   <tr><td class="code">table</td><td class="code">settings?</td><td>Table with bool settings for: isHud, isInteractive, needsCursor</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -384,13 +481,13 @@
    <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td>The gui interface to the created gui.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="createHideoutGui"></a>sm.gui.createHideoutGui(destroyOnClose=false)</h2>
+  <h2 class="code"><a id="createHideoutGui"></a>sm.gui.createHideoutGui(destroyOnClose?)</h2>
   <p>Client only</p>
   <p>Create a hideout gui GUI.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code">boolean</td><td class="code">destroyOnClose=false</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">destroyOnClose?</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -398,13 +495,13 @@
    <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td>The gui interface to the created gui.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="createLogbookGui"></a>sm.gui.createLogbookGui(destroyOnClose=false)</h2>
+  <h2 class="code"><a id="createLogbookGui"></a>sm.gui.createLogbookGui(destroyOnClose?)</h2>
   <p>Client only</p>
   <p>Create a log book GUI.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code">boolean</td><td class="code">destroyOnClose=false</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">destroyOnClose?</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -412,13 +509,13 @@
    <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td>The gui interface to the created gui.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="createMechanicStationGui"></a>sm.gui.createMechanicStationGui(destroyOnClose=false)</h2>
+  <h2 class="code"><a id="createMechanicStationGui"></a>sm.gui.createMechanicStationGui(destroyOnClose?)</h2>
   <p>Client only</p>
-  <p>Create a mechanical station GUI.</p>
+  <p>Create a mechanic station dispenser GUI.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code">boolean</td><td class="code">destroyOnClose=false</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">destroyOnClose?</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -426,12 +523,40 @@
    <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td>The gui interface to the created gui.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="createNameTagGui"></a>sm.gui.createNameTagGui(destroyOnClose=false)</h2>
+  <h2 class="code"><a id="createMininghubDispenserGui"></a>sm.gui.createMininghubDispenserGui(destroyOnClose?)</h2>
+  <p>Client only</p>
+  <p>Create a mining hub dispenser GUI.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td class="code">destroyOnClose?</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td>The gui interface to the created gui.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="createNameTagGui"></a>sm.gui.createNameTagGui(destroyOnClose?)</h2>
   <p>Client only</p>
   <p>Create a name tag GUI.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td class="code">destroyOnClose?</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td>The gui interface to the created gui.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="createOreCrusherContainerGui"></a>sm.gui.createOreCrusherContainerGui(destroyOnClose=false)</h2>
+  <p>Client only</p>
+  <p>Create a ore crusher container GUI.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code">boolean</td><td class="code">destroyOnClose=false</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused.</td></tr>
   </table>
   <h4>Returns:</h4>
@@ -440,12 +565,54 @@
    <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td>The gui interface to the created gui.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="createQuestTrackerGui"></a>sm.gui.createQuestTrackerGui(destroyOnClose=false)</h2>
+  <h2 class="code"><a id="createPortableCrafterGui"></a>sm.gui.createPortableCrafterGui(destroyOnClose?)</h2>
+  <p>Client only</p>
+  <p>Create a portable craftbot GUI.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td class="code">destroyOnClose?</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td>The gui interface to the created gui.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="createProspectorContainerGui"></a>sm.gui.createProspectorContainerGui(destroyOnClose?)</h2>
+  <p>Client only</p>
+  <p>Create a prospector container GUI.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td class="code">destroyOnClose?</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td>The gui interface to the created gui.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="createQuestTrackerGui"></a>sm.gui.createQuestTrackerGui(destroyOnClose?)</h2>
   <p>Client only</p>
   <p>Create a quest tracker GUI.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td class="code">destroyOnClose?</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td>The gui interface to the created gui.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="createRefineryContainerGui"></a>sm.gui.createRefineryContainerGui(destroyOnClose=false)</h2>
+  <p>Client only</p>
+  <p>Create a refinery container GUI.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code">boolean</td><td class="code">destroyOnClose=false</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused.</td></tr>
   </table>
   <h4>Returns:</h4>
@@ -454,13 +621,27 @@
    <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td>The gui interface to the created gui.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="createSeatGui"></a>sm.gui.createSeatGui(destroyOnClose=false)</h2>
+  <h2 class="code"><a id="createSawbotGui"></a>sm.gui.createSawbotGui(destroyOnClose?)</h2>
+  <p>Client only</p>
+  <p>Create a saw bot GUI.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td class="code">destroyOnClose?</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td>The gui interface to the created gui.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="createSeatGui"></a>sm.gui.createSeatGui(destroyOnClose?)</h2>
   <p>Client only</p>
   <p>Create a seat GUI.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code">boolean</td><td class="code">destroyOnClose=false</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">destroyOnClose?</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -468,13 +649,13 @@
    <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td>The gui interface to the created gui.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="createSeatUpgradeGui"></a>sm.gui.createSeatUpgradeGui(destroyOnClose=false)</h2>
+  <h2 class="code"><a id="createSeatUpgradeGui"></a>sm.gui.createSeatUpgradeGui(destroyOnClose?)</h2>
   <p>Client only</p>
   <p>Create a seat upgrade GUI.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code">boolean</td><td class="code">destroyOnClose=false</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">destroyOnClose?</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -482,13 +663,13 @@
    <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td>The gui interface to the created gui.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="createSeedContainerGui"></a>sm.gui.createSeedContainerGui(destroyOnClose=false)</h2>
+  <h2 class="code"><a id="createSeedContainerGui"></a>sm.gui.createSeedContainerGui(destroyOnClose?)</h2>
   <p>Client only</p>
   <p>Create a seed container GUI.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code">boolean</td><td class="code">destroyOnClose=false</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">destroyOnClose?</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -496,13 +677,13 @@
    <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td>The gui interface to the created gui.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="createSteeringBearingGui"></a>sm.gui.createSteeringBearingGui(destroyOnClose=false)</h2>
+  <h2 class="code"><a id="createSteeringBearingGui"></a>sm.gui.createSteeringBearingGui(destroyOnClose?)</h2>
   <p>Client only</p>
   <p>Create a steering bearing upgrade GUI.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code">boolean</td><td class="code">destroyOnClose=false</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">destroyOnClose?</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -510,13 +691,13 @@
    <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td>The gui interface to the created gui.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="createSurvivalHudGui"></a>sm.gui.createSurvivalHudGui(destroyOnClose=false)</h2>
+  <h2 class="code"><a id="createSurvivalHudGui"></a>sm.gui.createSurvivalHudGui(destroyOnClose?)</h2>
   <p>Client only</p>
   <p>Create a survival hud GUI.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code">boolean</td><td class="code">destroyOnClose=false</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">destroyOnClose?</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -524,13 +705,13 @@
    <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td>The gui interface to the created gui.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="createWaterContainerGui"></a>sm.gui.createWaterContainerGui(destroyOnClose=false)</h2>
+  <h2 class="code"><a id="createWaterContainerGui"></a>sm.gui.createWaterContainerGui(destroyOnClose?)</h2>
   <p>Client only</p>
   <p>Create a water container GUI.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code">boolean</td><td class="code">destroyOnClose=false</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">destroyOnClose?</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -538,7 +719,7 @@
    <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td>The gui interface to the created gui.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="createWaypointIconGui"></a>sm.gui.createWaypointIconGui(destroyOnClose=false)</h2>
+  <h2 class="code"><a id="createWaypointIconGui"></a>sm.gui.createWaypointIconGui(destroyOnClose?)</h2>
   <div class="deprecated">
    <h4>Deprecated:</h4>
    <p>use createWorldIconGui</p>
@@ -548,7 +729,7 @@
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code">boolean</td><td class="code">destroyOnClose=false</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">destroyOnClose?</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -563,13 +744,13 @@
   </div>
   <p>Removed! Does nothing.</p>
   <hr>
-  <h2 class="code"><a id="createWorkbenchGui"></a>sm.gui.createWorkbenchGui(destroyOnClose=false)</h2>
+  <h2 class="code"><a id="createWorkbenchGui"></a>sm.gui.createWorkbenchGui(destroyOnClose?)</h2>
   <p>Client only</p>
   <p>Create a workbench GUI.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code">boolean</td><td class="code">destroyOnClose=false</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">destroyOnClose?</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -577,7 +758,7 @@
    <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td>The gui interface to the created gui.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="createWorldIconGui"></a>sm.gui.createWorldIconGui(width, height, layout=nil, destroyOnClose=nil)</h2>
+  <h2 class="code"><a id="createWorldIconGui"></a>sm.gui.createWorldIconGui(width, height, layout?, destroyOnClose?)</h2>
   <p>Client only</p>
   <p>Create a world icon GUI from a layout file.</p>
   <h4>Parameters:</h4>
@@ -585,8 +766,8 @@
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code">integer</td><td class="code">width</td><td>The width.</td></tr>
    <tr><td class="code">integer</td><td class="code">height</td><td>The height.</td></tr>
-   <tr><td class="code">string</td><td class="code">layout=nil</td><td>Path to the layout file (Defaults to "$GAME_DATA/Gui/Layouts/Hud/Hud_WorldIcon.layout")</td></tr>
-   <tr><td class="code">boolean</td><td class="code">destroyOnClose=nil</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)</td></tr>
+   <tr><td class="code">string</td><td class="code">layout?</td><td>Path to the layout file (Defaults to "$GAME_DATA/Gui/Layouts/Hud/Hud_WorldIcon.layout")</td></tr>
+   <tr><td class="code">boolean</td><td class="code">destroyOnClose?</td><td>If true the gui is destroyed when closed, otherwise the gui can be reused. (Defaults to false)</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -594,23 +775,25 @@
    <tr><td class="code"><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></td><td>The gui interface to the created gui.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="displayAlertText"></a>sm.gui.displayAlertText(text, duration=4)</h2>
+  <h2 class="code"><a id="displayAlertText"></a>sm.gui.displayAlertText(text, duration?, queued?)</h2>
   <p>Client only</p>
   <p>Displays an alert message at the top of the screen for a set duration.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code">string</td><td class="code">text</td><td>The message to be displayed</td></tr>
-   <tr><td class="code">number</td><td class="code">duration=4</td><td>The time in seconds during which the message is shown. Defaults to 4 seconds</td></tr>
+   <tr><td class="code">number</td><td class="code">duration?</td><td>The time in seconds during which the message is shown. Defaults to 4 seconds</td></tr>
+   <tr><td class="code">boolean</td><td class="code">queued?</td><td>If true the message is queued, otherwise it is displayed instantly. Defaults to false</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="endFadeToBlack"></a>sm.gui.endFadeToBlack(duration)</h2>
+  <h2 class="code"><a id="endFadeToBlack"></a>sm.gui.endFadeToBlack(duration, force?)</h2>
   <p>Client only</p>
   <p>Fades the screen back from a fade to black.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code">number</td><td class="code">duration</td><td>Animation duration</td></tr>
+   <tr><td class="code">boolean</td><td class="code">force?</td><td>If true, start the fade out from full black even if there was no fade to black active. (Defaults to false)</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="exitToMenu"></a>sm.gui.exitToMenu()</h2>
@@ -630,14 +813,27 @@
    <tr><td class="code">string</td><td>The language setting ex. "English".</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="getKeyBinding"></a>sm.gui.getKeyBinding(action, hyper=false)</h2>
+  <h2 class="code"><a id="getItemIconFromUuid"></a>sm.gui.getItemIconFromUuid(uuid)</h2>
+  <p>Gets the item resource, group and name for an item icon from a uuid</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">uuid</td><td>The uuid.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">{string, string, string, string, string}	The item resource, group, name, trackingType and shapeType.</td><td></td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getKeyBinding"></a>sm.gui.getKeyBinding(action, hyper?)</h2>
   <p>Client only</p>
   <p>Returns the set binding for an action as a string</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code">string</td><td class="code">action</td><td>The action</td></tr>
-   <tr><td class="code">boolean</td><td class="code">hyper=false</td><td>If the string should contain hyper text</td></tr>
+   <tr><td class="code">boolean</td><td class="code">hyper?</td><td>If the string should contain hyper text (Defaults to false)</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -654,6 +850,15 @@
    <tr><td class="code">integer,integer</td><td>The screen size as width and height.</td></tr>
   </table>
   <hr>
+  <h2 class="code"><a id="hasActiveGui"></a>sm.gui.hasActiveGui()</h2>
+  <p>Client only</p>
+  <p>Returns whether the player has an active gui or not</p>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>guiActive	Whether the player has an active gui or not.</td></tr>
+  </table>
+  <hr>
   <h2 class="code"><a id="hideGui"></a>sm.gui.hideGui(visible)</h2>
   <p>Client only</p>
   <p>Set gui visibility.</p>
@@ -663,37 +868,73 @@
    <tr><td class="code">boolean</td><td class="code">visible</td><td>The gui visibility</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="setCenterIcon"></a>sm.gui.setCenterIcon(iconName)</h2>
+  <h2 class="code"><a id="hideHotbar"></a>sm.gui.hideHotbar(visible)</h2>
   <p>Client only</p>
-  <p>Set the icon displayed at the center.</p>
+  <p>Set hotbar visibility.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code">string</td><td class="code">iconName</td><td>The icon.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">visible</td><td>The hotbar visibility</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="setCharacterDebugText"></a>sm.gui.setCharacterDebugText(character, text, clear=true)</h2>
+  <h2 class="code"><a id="openGarageImportGui"></a>sm.gui.openGarageImportGui()</h2>
   <p>Client only</p>
-  <p>Set a text for the character that will be displayed above its head.</p>
+  <p>Open the garage creation import GUI</p>
+  <hr>
+  <h2 class="code"><a id="setCenterIcon"></a>sm.gui.setCenterIcon()</h2>
+  <div class="deprecated">
+   <h4>Deprecated:</h4>
+   <p>Use <a href="namespace_Game_sm_gui.html#setInteractionText" class="code">sm.gui.setInteractionText</a></p>
+  </div>
+  <p>Removed! Does nothing.</p>
+  <hr>
+  <h2 class="code"><a id="setCharacterDebugText"></a>sm.gui.setCharacterDebugText(character, text, clear?)</h2>
+  <p>Set a text for the character that will be displayed above its head. Only has effect in dev build.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The character.</td></tr>
    <tr><td class="code">string</td><td class="code">text</td><td>The debug text.</td></tr>
-   <tr><td class="code">boolean</td><td class="code">clear=true</td><td>If true the previous text will be overwritten.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">clear?</td><td>If true the previous text will be overwritten. (Defaults to true)</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="setInteractionText"></a>sm.gui.setInteractionText(text1, binding1=nil, text2=nil, binding2=nil, text3=nil)</h2>
+  <h2 class="code"><a id="setGarageButtonCallback"></a>sm.gui.setGarageButtonCallback(callback)</h2>
+  <p>Client only</p>
+  <p>Sets a button callback to be called when the button is pressed.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">string</td><td class="code">callback</td><td>Function to be called when button is pressed</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setGarageErrorCallback"></a>sm.gui.setGarageErrorCallback(callback)</h2>
+  <p>Client only</p>
+  <p>Sets a callback to be called when an error with the import is met.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">string</td><td class="code">callback</td><td>Function to be called when error is met</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setGarageImportGuiStorage"></a>sm.gui.setGarageImportGuiStorage(container)</h2>
+  <p>Set the storage container for the garage creation import gui to use</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Container.html" class="code">Container</a></td><td class="code">container</td><td>The container import gui should use for materials.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setInteractionText"></a>sm.gui.setInteractionText(text1, binding1?, text2?, binding2?, text3?)</h2>
   <p>Client only</p>
   <p>Set the binding text displayed at the center.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code">string</td><td class="code">text1</td><td>The leftmost segment.</td></tr>
-   <tr><td class="code">string</td><td class="code">binding1=nil</td><td>The left white segment.</td></tr>
-   <tr><td class="code">string</td><td class="code">text2=nil</td><td>The mid or end segment.</td></tr>
-   <tr><td class="code">string</td><td class="code">binding2=nil</td><td>The right white segment.</td></tr>
-   <tr><td class="code">string</td><td class="code">text3=nil</td><td>The rightmost segment.</td></tr>
+   <tr><td class="code">string</td><td class="code">binding1?</td><td>The left white segment.</td></tr>
+   <tr><td class="code">string</td><td class="code">text2?</td><td>The mid or end segment.</td></tr>
+   <tr><td class="code">string</td><td class="code">binding2?</td><td>The right white segment.</td></tr>
+   <tr><td class="code">string</td><td class="code">text3?</td><td>The rightmost segment.</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="setProgressFraction"></a>sm.gui.setProgressFraction(progress)</h2>
@@ -702,7 +943,7 @@
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code">number</td><td class="code">progress</td><td>The fraction that determines how much of the circle is filled. </td></tr>
+   <tr><td class="code">number</td><td class="code">progress</td><td>The fraction that determines how much of the circle is filled.</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="startFadeToBlack"></a>sm.gui.startFadeToBlack(duration, timeout)</h2>
@@ -713,6 +954,17 @@
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code">number</td><td class="code">duration</td><td>Animation duration</td></tr>
    <tr><td class="code">number</td><td class="code">timeout</td><td>Seconds until the fade fades back</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="startFadeToBlackWaitForWorld"></a>sm.gui.startFadeToBlackWaitForWorld(duration, timeout)</h2>
+  <p>Client only</p>
+  <p>Fades the screen to black, waits for the world to finish loading, then fades back.</p>
+  <p>First waits until timeout, then holds black until the world is ready or a max timeout is reached.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">number</td><td class="code">duration</td><td>Animation duration</td></tr>
+   <tr><td class="code">number</td><td class="code">timeout</td><td>Seconds until the fade starts waiting for the world</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="ticksToTimeString"></a>sm.gui.ticksToTimeString(ticks)</h2>

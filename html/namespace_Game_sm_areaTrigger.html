@@ -17,6 +17,7 @@
   <h3>Classes</h3>
   <ul>
    <li><a href="class_Game_CharacterClass.html" class="code">CharacterClass</a></li>
+   <li><a href="class_Game_ClientScriptableObjectClass.html" class="code">ClientScriptableObjectClass</a></li>
    <li><a href="class_Game_GameClass.html" class="code">GameClass</a></li>
    <li><a href="class_Game_HarvestableClass.html" class="code">HarvestableClass</a></li>
    <li><a href="class_Game_PlayerClass.html" class="code">PlayerClass</a></li>
@@ -34,14 +35,18 @@
    <li><a href="userdata_Game_Body.html" class="code">Body</a></li>
    <li><a href="userdata_Game_BuilderGuide.html" class="code">BuilderGuide</a></li>
    <li><a href="userdata_Game_Character.html" class="code">Character</a></li>
+   <li><a href="userdata_Game_ClientScriptableObject.html" class="code">ClientScriptableObject</a></li>
    <li><a href="userdata_Game_Color.html" class="code">Color</a></li>
    <li><a href="userdata_Game_Container.html" class="code">Container</a></li>
    <li><a href="userdata_Game_CullSphereGroup.html" class="code">CullSphereGroup</a></li>
    <li><a href="userdata_Game_Effect.html" class="code">Effect</a></li>
+   <li><a href="userdata_Game_Garage.html" class="code">Garage</a></li>
    <li><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></li>
    <li><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></li>
    <li><a href="userdata_Game_Interactable.html" class="code">Interactable</a></li>
    <li><a href="userdata_Game_Joint.html" class="code">Joint</a></li>
+   <li><a href="userdata_Game_JsonGui.html" class="code">JsonGui</a></li>
+   <li><a href="userdata_Game_JsonWidget.html" class="code">JsonWidget</a></li>
    <li><a href="userdata_Game_Lift.html" class="code">Lift</a></li>
    <li><a href="userdata_Game_LoadCellHandle.html" class="code">LoadCellHandle</a></li>
    <li><a href="userdata_Game_Network.html" class="code">Network</a></li>
@@ -73,6 +78,7 @@
    <li><a href="namespace_Game_sm_cell.html" class="code">sm.cell</a></li>
    <li><a href="namespace_Game_sm_challenge.html" class="code">sm.challenge</a></li>
    <li><a href="namespace_Game_sm_character.html" class="code">sm.character</a></li>
+   <li><a href="namespace_Game_sm_clientScriptableObject.html" class="code">sm.clientScriptableObject</a></li>
    <li><a href="namespace_Game_sm_color.html" class="code">sm.color</a></li>
    <li><a href="namespace_Game_sm_construction.html" class="code">sm.construction</a></li>
    <li><a href="namespace_Game_sm_container.html" class="code">sm.container</a></li>
@@ -80,9 +86,11 @@
    <li><a href="namespace_Game_sm_cullSphereGroup.html" class="code">sm.cullSphereGroup</a></li>
    <li><a href="namespace_Game_sm_debris.html" class="code">sm.debris</a></li>
    <li><a href="namespace_Game_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
+   <li><a href="namespace_Game_sm_debugGui.html" class="code">sm.debugGui</a></li>
    <li><a href="namespace_Game_sm_effect.html" class="code">sm.effect</a></li>
    <li><a href="namespace_Game_sm_event.html" class="code">sm.event</a></li>
    <li><a href="namespace_Game_sm_game.html" class="code">sm.game</a></li>
+   <li><a href="namespace_Game_sm_garage.html" class="code">sm.garage</a></li>
    <li><a href="namespace_Game_sm_gui.html" class="code">sm.gui</a></li>
    <li><a href="namespace_Game_sm_gui_widget.html" class="code">sm.gui.widget</a></li>
    <li><a href="namespace_Game_sm_harvestable.html" class="code">sm.harvestable</a></li>
@@ -90,15 +98,19 @@
    <li><a href="namespace_Game_sm_item.html" class="code">sm.item</a></li>
    <li><a href="namespace_Game_sm_joint.html" class="code">sm.joint</a></li>
    <li><a href="namespace_Game_sm_json.html" class="code">sm.json</a></li>
+   <li><a href="namespace_Game_sm_jsonGui.html" class="code">sm.jsonGui</a></li>
+   <li><a href="namespace_Game_sm_lift.html" class="code">sm.lift</a></li>
    <li><a href="namespace_Game_sm_localPlayer.html" class="code">sm.localPlayer</a></li>
    <li><a href="namespace_Game_sm_log.html" class="code">sm.log</a></li>
    <li><a href="namespace_Game_sm_melee.html" class="code">sm.melee</a></li>
    <li><a href="namespace_Game_sm_menuCreation.html" class="code">sm.menuCreation</a></li>
+   <li><a href="namespace_Game_sm_message.html" class="code">sm.message</a></li>
    <li><a href="namespace_Game_sm_noise.html" class="code">sm.noise</a></li>
    <li><a href="namespace_Game_sm_particle.html" class="code">sm.particle</a></li>
    <li><a href="namespace_Game_sm_pathNode.html" class="code">sm.pathNode</a></li>
    <li><a href="namespace_Game_sm_pathfinder.html" class="code">sm.pathfinder</a></li>
    <li><a href="namespace_Game_sm_physics.html" class="code">sm.physics</a></li>
+   <li><a href="namespace_Game_sm_pipeGraph.html" class="code">sm.pipeGraph</a></li>
    <li><a href="namespace_Game_sm_player.html" class="code">sm.player</a></li>
    <li><a href="namespace_Game_sm_portal.html" class="code">sm.portal</a></li>
    <li><a href="namespace_Game_sm_projectile.html" class="code">sm.projectile</a></li>
@@ -122,8 +134,12 @@
   <h3>Object Types 'userdata'</h3>
   <ul>
    <li><a href="userdata_Terrain_Color.html" class="code">Color</a></li>
+   <li><a href="userdata_Terrain_Container.html" class="code">Container</a></li>
    <li><a href="userdata_Terrain_Harvestable.html" class="code">Harvestable</a></li>
+   <li><a href="userdata_Terrain_Interactable.html" class="code">Interactable</a></li>
+   <li><a href="userdata_Terrain_Portal.html" class="code">Portal</a></li>
    <li><a href="userdata_Terrain_Quat.html" class="code">Quat</a></li>
+   <li><a href="userdata_Terrain_ScriptableObject.html" class="code">ScriptableObject</a></li>
    <li><a href="userdata_Terrain_Uuid.html" class="code">Uuid</a></li>
    <li><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></li>
    <li><a href="userdata_Terrain_World.html" class="code">World</a></li>
@@ -133,18 +149,24 @@
    <li><a href="namespace_Terrain_GLOBAL.html" class="code">GLOBAL</a></li>
    <li><a href="namespace_Terrain_sm.html" class="code">sm</a></li>
    <li><a href="namespace_Terrain_sm_color.html" class="code">sm.color</a></li>
+   <li><a href="namespace_Terrain_sm_container.html" class="code">sm.container</a></li>
    <li><a href="namespace_Terrain_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
-   <li><a href="namespace_Terrain_sm_harvestable.html" class="code">sm.harvestable</a></li>
+   <li><a href="namespace_Terrain_sm_debugGui.html" class="code">sm.debugGui</a></li>
+   <li><a href="namespace_Terrain_sm_interactable.html" class="code">sm.interactable</a></li>
    <li><a href="namespace_Terrain_sm_json.html" class="code">sm.json</a></li>
    <li><a href="namespace_Terrain_sm_log.html" class="code">sm.log</a></li>
    <li><a href="namespace_Terrain_sm_noise.html" class="code">sm.noise</a></li>
    <li><a href="namespace_Terrain_sm_quat.html" class="code">sm.quat</a></li>
+   <li><a href="namespace_Terrain_sm_scriptableObject.html" class="code">sm.scriptableObject</a></li>
    <li><a href="namespace_Terrain_sm_terrainData.html" class="code">sm.terrainData</a></li>
    <li><a href="namespace_Terrain_sm_terrainGeneration.html" class="code">sm.terrainGeneration</a></li>
+   <li><a href="namespace_Terrain_sm_terrainHarvestable.html" class="code">sm.terrainHarvestable</a></li>
    <li><a href="namespace_Terrain_sm_terrainTile.html" class="code">sm.terrainTile</a></li>
+   <li><a href="namespace_Terrain_sm_tunnelGenerator.html" class="code">sm.tunnelGenerator</a></li>
    <li><a href="namespace_Terrain_sm_util.html" class="code">sm.util</a></li>
    <li><a href="namespace_Terrain_sm_uuid.html" class="code">sm.uuid</a></li>
    <li><a href="namespace_Terrain_sm_vec3.html" class="code">sm.vec3</a></li>
+   <li><a href="namespace_Terrain_sm_voxelTerrainCell.html" class="code">sm.voxelTerrainCell</a></li>
   </ul>
  </div>
  <div id="content">
@@ -181,7 +203,19 @@
 		if #results > 0 then
 			print( "Intruder alert!" )
 		end
-	end</pre>  <h4>Constants:</h4>  <ul>   <li><a href="#filter" class="code">filter</a></li>  </ul>  <h4>Functions:</h4  <ul>   <li><a href="#createAttachedBox" class="code">createAttachedBox</a></li>   <li><a href="#createAttachedSphere" class="code">createAttachedSphere</a></li>   <li><a href="#createBox" class="code">createBox</a></li>   <li><a href="#createBoxWater" class="code">createBoxWater</a></li>   <li><a href="#createSphere" class="code">createSphere</a></li>   <li><a href="#destroy" class="code">destroy</a></li>  </ul>  <hr>
+	end</pre>  <h4>Constants:</h4>  <ul>   <li><a href="#areaTriggerProxyType" class="code">areaTriggerProxyType</a></li>   <li><a href="#filter" class="code">filter</a></li>   <li><a href="#liquidType" class="code">liquidType</a></li>  </ul>  <h4>Functions:</h4  <ul>   <li><a href="#createAttachedBox" class="code">createAttachedBox</a></li>   <li><a href="#createAttachedBox" class="code">createAttachedBox</a></li>   <li><a href="#createAttachedBox" class="code">createAttachedBox</a></li>   <li><a href="#createAttachedBox" class="code">createAttachedBox</a></li>   <li><a href="#createAttachedCylinder" class="code">createAttachedCylinder</a></li>   <li><a href="#createAttachedCylinder" class="code">createAttachedCylinder</a></li>   <li><a href="#createAttachedCylinder" class="code">createAttachedCylinder</a></li>   <li><a href="#createAttachedCylinder" class="code">createAttachedCylinder</a></li>   <li><a href="#createAttachedHull" class="code">createAttachedHull</a></li>   <li><a href="#createAttachedHull" class="code">createAttachedHull</a></li>   <li><a href="#createAttachedHull" class="code">createAttachedHull</a></li>   <li><a href="#createAttachedHull" class="code">createAttachedHull</a></li>   <li><a href="#createAttachedSphere" class="code">createAttachedSphere</a></li>   <li><a href="#createAttachedSphere" class="code">createAttachedSphere</a></li>   <li><a href="#createAttachedSphere" class="code">createAttachedSphere</a></li>   <li><a href="#createAttachedSphere" class="code">createAttachedSphere</a></li>   <li><a href="#createBox" class="code">createBox</a></li>   <li><a href="#createBoxWater" class="code">createBoxWater</a></li>   <li><a href="#createCylinder" class="code">createCylinder</a></li>   <li><a href="#createHull" class="code">createHull</a></li>   <li><a href="#createSphere" class="code">createSphere</a></li>  </ul>  <hr>
+  <h2 class="code"><a id="areaTriggerProxyType"></a>sm.areaTrigger.areaTriggerProxyType <i>table</i></h2>
+  <p>Defines special area trigger features:</p>
+  <ul>
+   <li><strong>default</strong> &ndash; Nothing special.</li>
+   <li><strong>water</strong> &ndash; Buoyancy applied to colliding objects.</li>
+   <li><strong>interactable</strong> &ndash; Can be interacted with if implementing bindCanInteract, bindOnInteract, bindCanErase and bindOnDestroy.</li>
+   <li><strong>ladder</strong> &ndash; Attach colliding players to the trigger.</li>
+   <li><strong>melee</strong> &ndash; Can react to melee attack callbacks if implementing bindOnMelee.</li>
+  </ul>
+  <table>
+   <tr>    <td>default</td>    <td>0</td>   </tr>   <tr>    <td>water</td>    <td>1</td>   </tr>   <tr>    <td>interactable</td>    <td>2</td>   </tr>   <tr>    <td>ladder</td>    <td>3</td>   </tr>  </table>
+  <hr>
   <h2 class="code"><a id="filter"></a>sm.areaTrigger.filter <i>table</i></h2>
   <p>Filters are used to specify what object types an area trigger is able to detect. If an area trigger is created with a filter, it will <strong>only</strong> react to objects of that type. Filters can be combined by adding them.</p>
   <p>The filters are:</p>
@@ -198,7 +232,80 @@
   <table>
    <tr>    <td>dynamicBody</td>    <td>1</td>   </tr>   <tr>    <td>staticBody</td>    <td>2</td>   </tr>   <tr>    <td>character</td>    <td>4</td>   </tr>   <tr>    <td>areatrigger</td>    <td>8</td>   </tr>   <tr>    <td>harvestable</td>    <td>512</td>   </tr>   <tr>    <td>lift</td>    <td>1024</td>   </tr>   <tr>    <td>voxelTerrain</td>    <td>32768</td>   </tr>   <tr>    <td>all</td>    <td>34319</td>   </tr>  </table>
   <hr>
-  <h2 class="code"><a id="createAttachedBox"></a>sm.areaTrigger.createAttachedBox(interactable, dimension, position=nil, rotation=nil, filter=nil, userdata=nil)</h2>
+  <h2 class="code"><a id="liquidType"></a>sm.areaTrigger.liquidType <i>table</i></h2>
+  <p>Defines the liquid type of an area trigger.</p>
+  <p>Only has an effect on area triggers with the <strong>water</strong> proxy type; setting it on any other proxy type has no effect.</p>
+  <p>Currently only <strong>lava</strong> has special behavior.</p>
+  <ul>
+   <li><strong>water</strong> &ndash; Water. The default. No special behavior beyond the water proxy buoyancy.</li>
+   <li><strong>chemical</strong> &ndash; Chemical. No special behavior beyond the water proxy buoyancy.</li>
+   <li><strong>oil</strong> &ndash; Oil. No special behavior beyond the water proxy buoyancy.</li>
+   <li><strong>lava</strong> &ndash; Lava. Occasionally destroys submerged shapes. Requires <a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a>: setIncludeShapesInContent.</li>
+  </ul>
+  <hr>
+  <h2 class="code"><a id="createAttachedBox"></a>sm.areaTrigger.createAttachedBox(character, dimension, position?, rotation?, filter?, userdata?, areaTriggerProxyType?, boneName?)</h2>
+  <p>Creates an area trigger box with a given size that stays attached to an <a href="namespace_Game_sm_character.html" class="code">character</a></p>
+  <p>If a filter is specified, the trigger area will only be able to detects objects of that certain type. See <a href="namespace_Game_sm_areaTrigger.html#filter" class="code">sm.areaTrigger.filter</a> for more information about filters.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The host character.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">dimension</td><td>The size of the box</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position?</td><td>The position offset (Defaults to <a href="namespace_Game_sm_vec3.html#zero" class="code">sm.vec3.zero</a>)</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td class="code">rotation?</td><td>The rotation offset (Defaults to <a href="namespace_Game_sm_quat.html#identity" class="code">sm.quat.identity</a>)</td></tr>
+   <tr><td class="code">integer</td><td class="code">filter?</td><td>The object types the area trigger may detect. (See <a href="namespace_Game_sm_areaTrigger.html#filter" class="code">sm.areaTrigger.filter</a>). (Defaults to sm.areaTrigger.filter.all)</td></tr>
+   <tr><td class="code">table</td><td class="code">userdata?</td><td>An optional table of user data</td></tr>
+   <tr><td class="code">integer</td><td class="code">areaTriggerProxyType?</td><td>The proxy type of the area trigger. (See <a href="namespace_Game_sm_areaTrigger.html#areaTriggerProxyType" class="code">sm.areaTrigger.areaTriggerProxyType</a>) (Defaults to sm.areaTrigger.areaTriggerProxyType.default)</td></tr>
+   <tr><td class="code">string</td><td class="code">boneName?</td><td>The bone name of the character to attach the area trigger to. (optional)</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></td><td>The created area trigger.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="createAttachedBox"></a>sm.areaTrigger.createAttachedBox(harvestable, dimension, position?, rotation?, filter?, userdata?, areaTriggerProxyType?)</h2>
+  <p>Creates an area trigger box with a given size that stays attached to an <a href="namespace_Game_sm_harvestable.html" class="code">harvestable</a></p>
+  <p>If a filter is specified, the trigger area will only be able to detects objects of that certain type. See <a href="namespace_Game_sm_areaTrigger.html#filter" class="code">sm.areaTrigger.filter</a> for more information about filters.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></td><td class="code">harvestable</td><td>The host harvestable.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">dimension</td><td>The size of the box</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position?</td><td>The position offset (Defaults to <a href="namespace_Game_sm_vec3.html#zero" class="code">sm.vec3.zero</a>)</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td class="code">rotation?</td><td>The rotation offset (Defaults to <a href="namespace_Game_sm_quat.html#identity" class="code">sm.quat.identity</a>)</td></tr>
+   <tr><td class="code">integer</td><td class="code">filter?</td><td>The object types the area trigger may detect. (See <a href="namespace_Game_sm_areaTrigger.html#filter" class="code">sm.areaTrigger.filter</a>). (Defaults to sm.areaTrigger.filter.all)</td></tr>
+   <tr><td class="code">table</td><td class="code">userdata?</td><td>An optional table of user data</td></tr>
+   <tr><td class="code">integer</td><td class="code">areaTriggerProxyType?</td><td>The proxy type of the area trigger. (See <a href="namespace_Game_sm_areaTrigger.html#areaTriggerProxyType" class="code">sm.areaTrigger.areaTriggerProxyType</a>) (Defaults to sm.areaTrigger.areaTriggerProxyType.default)</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></td><td>The created area trigger.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="createAttachedBox"></a>sm.areaTrigger.createAttachedBox(shape, dimension, position?, rotation?, filter?, userdata?, areaTriggerProxyType?, boneName?)</h2>
+  <p>Creates an area trigger box with a given size that stays attached to an <a href="namespace_Game_sm_shape.html" class="code">shape</a></p>
+  <p>If a filter is specified, the trigger area will only be able to detects objects of that certain type. See <a href="namespace_Game_sm_areaTrigger.html#filter" class="code">sm.areaTrigger.filter</a> for more information about filters.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">shape</td><td>The host shape</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">dimension</td><td>The size of the box</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position?</td><td>The position offset (Defaults to <a href="namespace_Game_sm_vec3.html#zero" class="code">sm.vec3.zero</a>)</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td class="code">rotation?</td><td>The rotation offset (Defaults to <a href="namespace_Game_sm_quat.html#identity" class="code">sm.quat.identity</a>)</td></tr>
+   <tr><td class="code">integer</td><td class="code">filter?</td><td>The object types the area trigger may detect. (See <a href="namespace_Game_sm_areaTrigger.html#filter" class="code">sm.areaTrigger.filter</a>). (Defaults to sm.areaTrigger.filter.all)</td></tr>
+   <tr><td class="code">table</td><td class="code">userdata?</td><td>An optional table of user data</td></tr>
+   <tr><td class="code">integer</td><td class="code">areaTriggerProxyType?</td><td>The proxy type of the area trigger. (See <a href="namespace_Game_sm_areaTrigger.html#areaTriggerProxyType" class="code">sm.areaTrigger.areaTriggerProxyType</a>) (Defaults to sm.areaTrigger.areaTriggerProxyType.default)</td></tr>
+   <tr><td class="code">string</td><td class="code">boneName?</td><td>The bone name of the shape to attach the area trigger to. (optional)</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></td><td>The created area trigger.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="createAttachedBox"></a>sm.areaTrigger.createAttachedBox(interactable, dimension, position?, rotation?, filter?, userdata?, areaTriggerProxyType?, boneName?)</h2>
   <p>Creates an area trigger box with a given size that stays attached to an <a href="namespace_Game_sm_interactable.html" class="code">interactable</a></p>
   <p>If a filter is specified, the trigger area will only be able to detects objects of that certain type. See <a href="namespace_Game_sm_areaTrigger.html#filter" class="code">sm.areaTrigger.filter</a> for more information about filters.</p>
   <h4>Parameters:</h4>
@@ -206,10 +313,12 @@
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code"><a href="userdata_Game_Interactable.html" class="code">Interactable</a></td><td class="code">interactable</td><td>The host interactable</td></tr>
    <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">dimension</td><td>The size of the box</td></tr>
-   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position=nil</td><td>The position offset (Defaults to <a href="namespace_Game_sm_vec3.html#zero" class="code">sm.vec3.zero</a>)</td></tr>
-   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td class="code">rotation=nil</td><td>The rotation offset (Defaults to <a href="namespace_Game_sm_quat.html#identity" class="code">sm.quat.identity</a>)</td></tr>
-   <tr><td class="code">integer</td><td class="code">filter=nil</td><td>The object types the area trigger may detect. (See <a href="namespace_Game_sm_areaTrigger.html#filter" class="code">sm.areaTrigger.filter</a>). (Defaults to sm.areaTrigger.filter.all)</td></tr>
-   <tr><td class="code">table</td><td class="code">userdata=nil</td><td>An optional table of user data</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position?</td><td>The position offset (Defaults to <a href="namespace_Game_sm_vec3.html#zero" class="code">sm.vec3.zero</a>)</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td class="code">rotation?</td><td>The rotation offset (Defaults to <a href="namespace_Game_sm_quat.html#identity" class="code">sm.quat.identity</a>)</td></tr>
+   <tr><td class="code">integer</td><td class="code">filter?</td><td>The object types the area trigger may detect. (See <a href="namespace_Game_sm_areaTrigger.html#filter" class="code">sm.areaTrigger.filter</a>). (Defaults to sm.areaTrigger.filter.all)</td></tr>
+   <tr><td class="code">table</td><td class="code">userdata?</td><td>An optional table of user data</td></tr>
+   <tr><td class="code">integer</td><td class="code">areaTriggerProxyType?</td><td>The proxy type of the area trigger. (See <a href="namespace_Game_sm_areaTrigger.html#areaTriggerProxyType" class="code">sm.areaTrigger.areaTriggerProxyType</a>) (Defaults to sm.areaTrigger.areaTriggerProxyType.default)</td></tr>
+   <tr><td class="code">string</td><td class="code">boneName?</td><td>The bone name of the interactable to attach the area trigger to. (optional)</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -217,7 +326,239 @@
    <tr><td class="code"><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></td><td>The created area trigger.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="createAttachedSphere"></a>sm.areaTrigger.createAttachedSphere(interactable, radius, position=nil, rotation=nil, filter=nil, userdata=nil)</h2>
+  <h2 class="code"><a id="createAttachedCylinder"></a>sm.areaTrigger.createAttachedCylinder(character, radius, halfLength, position?, rotation?, filter?, userdata?, areaTriggerProxyType?, boneName?)</h2>
+  <p>Creates an area trigger cylinder with a given size that stays attached to a <a href="namespace_Game_sm_character.html" class="code">character</a></p>
+  <p>If a filter is specified, the trigger area will only be able to detects objects of that certain type. See <a href="namespace_Game_sm_areaTrigger.html#filter" class="code">sm.areaTrigger.filter</a> for more information about filters.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The host character.</td></tr>
+   <tr><td class="code">number</td><td class="code">radius</td><td>The radius of the cylinder.</td></tr>
+   <tr><td class="code">number</td><td class="code">halfLength</td><td>The lengthwise extent of the cylinder (i.e. half the length of the cylinder).</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position?</td><td>The position offset (Defaults to <a href="namespace_Game_sm_vec3.html#zero" class="code">sm.vec3.zero</a>)</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td class="code">rotation?</td><td>The rotation offset (Defaults to <a href="namespace_Game_sm_quat.html#identity" class="code">sm.quat.identity</a>)</td></tr>
+   <tr><td class="code">integer</td><td class="code">filter?</td><td>The object types the area trigger may detect. (See <a href="namespace_Game_sm_areaTrigger.html#filter" class="code">sm.areaTrigger.filter</a>). (Defaults to sm.areaTrigger.filter.all)</td></tr>
+   <tr><td class="code">table</td><td class="code">userdata?</td><td>An optional table of user data</td></tr>
+   <tr><td class="code">integer</td><td class="code">areaTriggerProxyType?</td><td>The proxy type of the area trigger. (See <a href="namespace_Game_sm_areaTrigger.html#areaTriggerProxyType" class="code">sm.areaTrigger.areaTriggerProxyType</a>) (Defaults to sm.areaTrigger.areaTriggerProxyType.default)</td></tr>
+   <tr><td class="code">string</td><td class="code">boneName?</td><td>The bone name of the character to attach the area trigger to. (optional)</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></td><td>The created area trigger.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="createAttachedCylinder"></a>sm.areaTrigger.createAttachedCylinder(harvestable, radius, halfLength, position?, rotation?, filter?, userdata?, areaTriggerProxyType?)</h2>
+  <p>Creates an area trigger cylinder with a given size that stays attached to an <a href="namespace_Game_sm_harvestable.html" class="code">harvestable</a></p>
+  <p>If a filter is specified, the trigger area will only be able to detects objects of that certain type. See <a href="namespace_Game_sm_areaTrigger.html#filter" class="code">sm.areaTrigger.filter</a> for more information about filters.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></td><td class="code">harvestable</td><td>The host harvestable.</td></tr>
+   <tr><td class="code">number</td><td class="code">radius</td><td>The radius of the cylinder.</td></tr>
+   <tr><td class="code">number</td><td class="code">halfLength</td><td>The lengthwise extent of the cylinder (i.e. half the length of the cylinder).</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position?</td><td>The position offset (Defaults to <a href="namespace_Game_sm_vec3.html#zero" class="code">sm.vec3.zero</a>)</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td class="code">rotation?</td><td>The rotation offset (Defaults to <a href="namespace_Game_sm_quat.html#identity" class="code">sm.quat.identity</a>)</td></tr>
+   <tr><td class="code">integer</td><td class="code">filter?</td><td>The object types the area trigger may detect. (See <a href="namespace_Game_sm_areaTrigger.html#filter" class="code">sm.areaTrigger.filter</a>). (Defaults to sm.areaTrigger.filter.all)</td></tr>
+   <tr><td class="code">table</td><td class="code">userdata?</td><td>An optional table of user data</td></tr>
+   <tr><td class="code">integer</td><td class="code">areaTriggerProxyType?</td><td>The proxy type of the area trigger. (See <a href="namespace_Game_sm_areaTrigger.html#areaTriggerProxyType" class="code">sm.areaTrigger.areaTriggerProxyType</a>) (Defaults to sm.areaTrigger.areaTriggerProxyType.default)</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></td><td>The created area trigger.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="createAttachedCylinder"></a>sm.areaTrigger.createAttachedCylinder(shape, radius, halfLength, position?, rotation?, filter?, userdata?, areaTriggerProxyType?, boneName?)</h2>
+  <p>Creates an area trigger cylinder with a given size that stays attached to an <a href="namespace_Game_sm_shape.html" class="code">shape</a></p>
+  <p>If a filter is specified, the trigger area will only be able to detects objects of that certain type. See <a href="namespace_Game_sm_areaTrigger.html#filter" class="code">sm.areaTrigger.filter</a> for more information about filters.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">shape</td><td>The host shape</td></tr>
+   <tr><td class="code">number</td><td class="code">radius</td><td>The radius of the cylinder.</td></tr>
+   <tr><td class="code">number</td><td class="code">halfLength</td><td>The lengthwise extent of the cylinder (i.e. half the length of the cylinder).</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position?</td><td>The position offset (Defaults to <a href="namespace_Game_sm_vec3.html#zero" class="code">sm.vec3.zero</a>)</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td class="code">rotation?</td><td>The rotation offset (Defaults to <a href="namespace_Game_sm_quat.html#identity" class="code">sm.quat.identity</a>)</td></tr>
+   <tr><td class="code">integer</td><td class="code">filter?</td><td>The object types the area trigger may detect. (See <a href="namespace_Game_sm_areaTrigger.html#filter" class="code">sm.areaTrigger.filter</a>). (Defaults to sm.areaTrigger.filter.all)</td></tr>
+   <tr><td class="code">table</td><td class="code">userdata?</td><td>An optional table of user data</td></tr>
+   <tr><td class="code">integer</td><td class="code">areaTriggerProxyType?</td><td>The proxy type of the area trigger. (See <a href="namespace_Game_sm_areaTrigger.html#areaTriggerProxyType" class="code">sm.areaTrigger.areaTriggerProxyType</a>) (Defaults to sm.areaTrigger.areaTriggerProxyType.default)</td></tr>
+   <tr><td class="code">string</td><td class="code">boneName?</td><td>The bone name of the shape to attach the area trigger to. (optional)</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></td><td>The created area trigger.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="createAttachedCylinder"></a>sm.areaTrigger.createAttachedCylinder(interactable, radius, halfLength, position?, rotation?, filter?, userdata?, areaTriggerProxyType?, boneName?)</h2>
+  <p>Creates an area trigger cylinder with a given size that stays attached to an <a href="namespace_Game_sm_interactable.html" class="code">interactable</a></p>
+  <p>If a filter is specified, the trigger area will only be able to detects objects of that certain type. See <a href="namespace_Game_sm_areaTrigger.html#filter" class="code">sm.areaTrigger.filter</a> for more information about filters.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Interactable.html" class="code">Interactable</a></td><td class="code">interactable</td><td>The host interactable</td></tr>
+   <tr><td class="code">number</td><td class="code">radius</td><td>The radius of the cylinder.</td></tr>
+   <tr><td class="code">number</td><td class="code">halfLength</td><td>The lengthwise extent of the cylinder (i.e. half the length of the cylinder).</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position?</td><td>The position offset (Defaults to <a href="namespace_Game_sm_vec3.html#zero" class="code">sm.vec3.zero</a>)</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td class="code">rotation?</td><td>The rotation offset (Defaults to <a href="namespace_Game_sm_quat.html#identity" class="code">sm.quat.identity</a>)</td></tr>
+   <tr><td class="code">integer</td><td class="code">filter?</td><td>The object types the area trigger may detect. (See <a href="namespace_Game_sm_areaTrigger.html#filter" class="code">sm.areaTrigger.filter</a>). (Defaults to sm.areaTrigger.filter.all)</td></tr>
+   <tr><td class="code">table</td><td class="code">userdata?</td><td>An optional table of user data</td></tr>
+   <tr><td class="code">integer</td><td class="code">areaTriggerProxyType?</td><td>The proxy type of the area trigger. (See <a href="namespace_Game_sm_areaTrigger.html#areaTriggerProxyType" class="code">sm.areaTrigger.areaTriggerProxyType</a>) (Defaults to sm.areaTrigger.areaTriggerProxyType.default)</td></tr>
+   <tr><td class="code">string</td><td class="code">boneName?</td><td>The bone name of the interactable to attach the area trigger to. (optional)</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></td><td>The created area trigger.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="createAttachedHull"></a>sm.areaTrigger.createAttachedHull(character, hull, position?, rotation?, filter?, userdata?, areaTriggerProxyType?, boneName?)</h2>
+  <p>Creates an area trigger hull with a given size that stays attached to a <a href="namespace_Game_sm_character.html" class="code">character</a></p>
+  <p>If a filter is specified, the trigger area will only be able to detects objects of that certain type. See <a href="namespace_Game_sm_areaTrigger.html#filter" class="code">sm.areaTrigger.filter</a> for more information about filters.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The host character.</td></tr>
+   <tr><td class="code">string</td><td class="code">hull</td><td>The path to the hull file.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position?</td><td>The position offset (Defaults to <a href="namespace_Game_sm_vec3.html#zero" class="code">sm.vec3.zero</a>)</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td class="code">rotation?</td><td>The rotation offset (Defaults to <a href="namespace_Game_sm_quat.html#identity" class="code">sm.quat.identity</a>)</td></tr>
+   <tr><td class="code">integer</td><td class="code">filter?</td><td>The object types the area trigger may detect. (See <a href="namespace_Game_sm_areaTrigger.html#filter" class="code">sm.areaTrigger.filter</a>). (Defaults to sm.areaTrigger.filter.all)</td></tr>
+   <tr><td class="code">table</td><td class="code">userdata?</td><td>An optional table of user data</td></tr>
+   <tr><td class="code">integer</td><td class="code">areaTriggerProxyType?</td><td>The proxy type of the area trigger. (See <a href="namespace_Game_sm_areaTrigger.html#areaTriggerProxyType" class="code">sm.areaTrigger.areaTriggerProxyType</a>) (Defaults to sm.areaTrigger.areaTriggerProxyType.default)</td></tr>
+   <tr><td class="code">string</td><td class="code">boneName?</td><td>The bone name of the character to attach the area trigger to. (optional)</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></td><td>The created area trigger.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="createAttachedHull"></a>sm.areaTrigger.createAttachedHull(harvestable, hull, position?, rotation?, filter?, userdata?, areaTriggerProxyType?)</h2>
+  <p>Creates an area trigger hull with a given size that stays attached to an <a href="namespace_Game_sm_harvestable.html" class="code">harvestable</a></p>
+  <p>If a filter is specified, the trigger area will only be able to detects objects of that certain type. See <a href="namespace_Game_sm_areaTrigger.html#filter" class="code">sm.areaTrigger.filter</a> for more information about filters.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></td><td class="code">harvestable</td><td>The host harvestable.</td></tr>
+   <tr><td class="code">string</td><td class="code">hull</td><td>The path to the hull file.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position?</td><td>The position offset (Defaults to <a href="namespace_Game_sm_vec3.html#zero" class="code">sm.vec3.zero</a>)</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td class="code">rotation?</td><td>The rotation offset (Defaults to <a href="namespace_Game_sm_quat.html#identity" class="code">sm.quat.identity</a>)</td></tr>
+   <tr><td class="code">integer</td><td class="code">filter?</td><td>The object types the area trigger may detect. (See <a href="namespace_Game_sm_areaTrigger.html#filter" class="code">sm.areaTrigger.filter</a>). (Defaults to sm.areaTrigger.filter.all)</td></tr>
+   <tr><td class="code">table</td><td class="code">userdata?</td><td>An optional table of user data</td></tr>
+   <tr><td class="code">integer</td><td class="code">areaTriggerProxyType?</td><td>The proxy type of the area trigger. (See <a href="namespace_Game_sm_areaTrigger.html#areaTriggerProxyType" class="code">sm.areaTrigger.areaTriggerProxyType</a>) (Defaults to sm.areaTrigger.areaTriggerProxyType.default)</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></td><td>The created area trigger.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="createAttachedHull"></a>sm.areaTrigger.createAttachedHull(shape, hull, position?, rotation?, filter?, userdata?, areaTriggerProxyType?, boneName?)</h2>
+  <p>Creates an area trigger hull with a given size that stays attached to an <a href="namespace_Game_sm_shape.html" class="code">shape</a></p>
+  <p>If a filter is specified, the trigger area will only be able to detects objects of that certain type. See <a href="namespace_Game_sm_areaTrigger.html#filter" class="code">sm.areaTrigger.filter</a> for more information about filters.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">shape</td><td>The host shape</td></tr>
+   <tr><td class="code">string</td><td class="code">hull</td><td>The path to the hull file.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position?</td><td>The position offset (Defaults to <a href="namespace_Game_sm_vec3.html#zero" class="code">sm.vec3.zero</a>)</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td class="code">rotation?</td><td>The rotation offset (Defaults to <a href="namespace_Game_sm_quat.html#identity" class="code">sm.quat.identity</a>)</td></tr>
+   <tr><td class="code">integer</td><td class="code">filter?</td><td>The object types the area trigger may detect. (See <a href="namespace_Game_sm_areaTrigger.html#filter" class="code">sm.areaTrigger.filter</a>). (Defaults to sm.areaTrigger.filter.all)</td></tr>
+   <tr><td class="code">table</td><td class="code">userdata?</td><td>An optional table of user data</td></tr>
+   <tr><td class="code">integer</td><td class="code">areaTriggerProxyType?</td><td>The proxy type of the area trigger. (See <a href="namespace_Game_sm_areaTrigger.html#areaTriggerProxyType" class="code">sm.areaTrigger.areaTriggerProxyType</a>) (Defaults to sm.areaTrigger.areaTriggerProxyType.default)</td></tr>
+   <tr><td class="code">string</td><td class="code">boneName?</td><td>The bone name of the shape to attach the area trigger to. (optional)</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></td><td>The created area trigger.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="createAttachedHull"></a>sm.areaTrigger.createAttachedHull(interactable, hull, position?, rotation?, filter?, userdata?, areaTriggerProxyType?, boneName?)</h2>
+  <p>Creates an area trigger hull with a given size that stays attached to an <a href="namespace_Game_sm_interactable.html" class="code">interactable</a></p>
+  <p>If a filter is specified, the trigger area will only be able to detects objects of that certain type. See <a href="namespace_Game_sm_areaTrigger.html#filter" class="code">sm.areaTrigger.filter</a> for more information about filters.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Interactable.html" class="code">Interactable</a></td><td class="code">interactable</td><td>The host interactable</td></tr>
+   <tr><td class="code">string</td><td class="code">hull</td><td>The path to the hull file.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position?</td><td>The position offset (Defaults to <a href="namespace_Game_sm_vec3.html#zero" class="code">sm.vec3.zero</a>)</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td class="code">rotation?</td><td>The rotation offset (Defaults to <a href="namespace_Game_sm_quat.html#identity" class="code">sm.quat.identity</a>)</td></tr>
+   <tr><td class="code">integer</td><td class="code">filter?</td><td>The object types the area trigger may detect. (See <a href="namespace_Game_sm_areaTrigger.html#filter" class="code">sm.areaTrigger.filter</a>). (Defaults to sm.areaTrigger.filter.all)</td></tr>
+   <tr><td class="code">table</td><td class="code">userdata?</td><td>An optional table of user data</td></tr>
+   <tr><td class="code">integer</td><td class="code">areaTriggerProxyType?</td><td>The proxy type of the area trigger. (See <a href="namespace_Game_sm_areaTrigger.html#areaTriggerProxyType" class="code">sm.areaTrigger.areaTriggerProxyType</a>) (Defaults to sm.areaTrigger.areaTriggerProxyType.default)</td></tr>
+   <tr><td class="code">string</td><td class="code">boneName?</td><td>The bone name of the interactable to attach the area trigger to. (optional)</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></td><td>The created area trigger.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="createAttachedSphere"></a>sm.areaTrigger.createAttachedSphere(character, radius, position?, rotation?, filter?, userdata?, areaTriggerProxyType?, boneName?)</h2>
+  <p>Creates an area trigger sphere with a given size that stays attached to a <a href="namespace_Game_sm_character.html" class="code">character</a></p>
+  <p>If a filter is specified, the trigger area will only be able to detects objects of that certain type. See <a href="namespace_Game_sm_areaTrigger.html#filter" class="code">sm.areaTrigger.filter</a> for more information about filters.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The host character.</td></tr>
+   <tr><td class="code">number</td><td class="code">radius</td><td>The radius of the sphere.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position?</td><td>The position offset (Defaults to <a href="namespace_Game_sm_vec3.html#zero" class="code">sm.vec3.zero</a>)</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td class="code">rotation?</td><td>The rotation offset (Defaults to <a href="namespace_Game_sm_quat.html#identity" class="code">sm.quat.identity</a>)</td></tr>
+   <tr><td class="code">integer</td><td class="code">filter?</td><td>The object types the area trigger may detect. (See <a href="namespace_Game_sm_areaTrigger.html#filter" class="code">sm.areaTrigger.filter</a>). (Defaults to sm.areaTrigger.filter.all)</td></tr>
+   <tr><td class="code">table</td><td class="code">userdata?</td><td>An optional table of user data</td></tr>
+   <tr><td class="code">integer</td><td class="code">areaTriggerProxyType?</td><td>The proxy type of the area trigger. (See <a href="namespace_Game_sm_areaTrigger.html#areaTriggerProxyType" class="code">sm.areaTrigger.areaTriggerProxyType</a>) (Defaults to sm.areaTrigger.areaTriggerProxyType.default)</td></tr>
+   <tr><td class="code">string</td><td class="code">boneName?</td><td>The bone name of the character to attach the area trigger to. (optional)</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></td><td>The created area trigger.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="createAttachedSphere"></a>sm.areaTrigger.createAttachedSphere(harvestable, radius, position?, rotation?, filter?, userdata?, areaTriggerProxyType?)</h2>
+  <p>Creates an area trigger sphere with a given size that stays attached to an <a href="namespace_Game_sm_harvestable.html" class="code">harvestable</a></p>
+  <p>If a filter is specified, the trigger area will only be able to detects objects of that certain type. See <a href="namespace_Game_sm_areaTrigger.html#filter" class="code">sm.areaTrigger.filter</a> for more information about filters.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></td><td class="code">harvestable</td><td>The host harvestable.</td></tr>
+   <tr><td class="code">number</td><td class="code">radius</td><td>The radius of the sphere.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position?</td><td>The position offset (Defaults to <a href="namespace_Game_sm_vec3.html#zero" class="code">sm.vec3.zero</a>)</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td class="code">rotation?</td><td>The rotation offset (Defaults to <a href="namespace_Game_sm_quat.html#identity" class="code">sm.quat.identity</a>)</td></tr>
+   <tr><td class="code">integer</td><td class="code">filter?</td><td>The object types the area trigger may detect. (See <a href="namespace_Game_sm_areaTrigger.html#filter" class="code">sm.areaTrigger.filter</a>). (Defaults to sm.areaTrigger.filter.all)</td></tr>
+   <tr><td class="code">table</td><td class="code">userdata?</td><td>An optional table of user data</td></tr>
+   <tr><td class="code">integer</td><td class="code">areaTriggerProxyType?</td><td>The proxy type of the area trigger. (See <a href="namespace_Game_sm_areaTrigger.html#areaTriggerProxyType" class="code">sm.areaTrigger.areaTriggerProxyType</a>) (Defaults to sm.areaTrigger.areaTriggerProxyType.default)</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></td><td>The created area trigger.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="createAttachedSphere"></a>sm.areaTrigger.createAttachedSphere(shape, radius, position?, rotation?, filter?, userdata?, areaTriggerProxyType?, boneName?)</h2>
+  <p>Creates an area trigger sphere with a given size that stays attached to an <a href="namespace_Game_sm_shape.html" class="code">shape</a></p>
+  <p>If a filter is specified, the trigger area will only be able to detects objects of that certain type. See <a href="namespace_Game_sm_areaTrigger.html#filter" class="code">sm.areaTrigger.filter</a> for more information about filters.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">shape</td><td>The host shape</td></tr>
+   <tr><td class="code">number</td><td class="code">radius</td><td>The radius of the sphere.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position?</td><td>The position offset (Defaults to <a href="namespace_Game_sm_vec3.html#zero" class="code">sm.vec3.zero</a>)</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td class="code">rotation?</td><td>The rotation offset (Defaults to <a href="namespace_Game_sm_quat.html#identity" class="code">sm.quat.identity</a>)</td></tr>
+   <tr><td class="code">integer</td><td class="code">filter?</td><td>The object types the area trigger may detect. (See <a href="namespace_Game_sm_areaTrigger.html#filter" class="code">sm.areaTrigger.filter</a>). (Defaults to sm.areaTrigger.filter.all)</td></tr>
+   <tr><td class="code">table</td><td class="code">userdata?</td><td>An optional table of user data</td></tr>
+   <tr><td class="code">integer</td><td class="code">areaTriggerProxyType?</td><td>The proxy type of the area trigger. (See <a href="namespace_Game_sm_areaTrigger.html#areaTriggerProxyType" class="code">sm.areaTrigger.areaTriggerProxyType</a>) (Defaults to sm.areaTrigger.areaTriggerProxyType.default)</td></tr>
+   <tr><td class="code">string</td><td class="code">boneName?</td><td>The bone name of the shape to attach the area trigger to. (optional)</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></td><td>The created area trigger.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="createAttachedSphere"></a>sm.areaTrigger.createAttachedSphere(interactable, radius, position?, rotation?, filter?, userdata?, areaTriggerProxyType?, boneName?)</h2>
   <p>Creates an area trigger sphere with a given size that stays attached to an <a href="namespace_Game_sm_interactable.html" class="code">interactable</a></p>
   <p>If a filter is specified, the trigger area will only be able to detects objects of that certain type. See <a href="namespace_Game_sm_areaTrigger.html#filter" class="code">sm.areaTrigger.filter</a> for more information about filters.</p>
   <h4>Parameters:</h4>
@@ -225,10 +566,12 @@
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code"><a href="userdata_Game_Interactable.html" class="code">Interactable</a></td><td class="code">interactable</td><td>The host interactable</td></tr>
    <tr><td class="code">number</td><td class="code">radius</td><td>The radius of the sphere.</td></tr>
-   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position=nil</td><td>The position offset (Defaults to <a href="namespace_Game_sm_vec3.html#zero" class="code">sm.vec3.zero</a>)</td></tr>
-   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td class="code">rotation=nil</td><td>The rotation offset (Defaults to <a href="namespace_Game_sm_quat.html#identity" class="code">sm.quat.identity</a>)</td></tr>
-   <tr><td class="code">integer</td><td class="code">filter=nil</td><td>The object types the area trigger may detect. (See <a href="namespace_Game_sm_areaTrigger.html#filter" class="code">sm.areaTrigger.filter</a>). (Defaults to sm.areaTrigger.filter.all)</td></tr>
-   <tr><td class="code">table</td><td class="code">userdata=nil</td><td>An optional table of user data</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position?</td><td>The position offset (Defaults to <a href="namespace_Game_sm_vec3.html#zero" class="code">sm.vec3.zero</a>)</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td class="code">rotation?</td><td>The rotation offset (Defaults to <a href="namespace_Game_sm_quat.html#identity" class="code">sm.quat.identity</a>)</td></tr>
+   <tr><td class="code">integer</td><td class="code">filter?</td><td>The object types the area trigger may detect. (See <a href="namespace_Game_sm_areaTrigger.html#filter" class="code">sm.areaTrigger.filter</a>). (Defaults to sm.areaTrigger.filter.all)</td></tr>
+   <tr><td class="code">table</td><td class="code">userdata?</td><td>An optional table of user data</td></tr>
+   <tr><td class="code">integer</td><td class="code">areaTriggerProxyType?</td><td>The proxy type of the area trigger. (See <a href="namespace_Game_sm_areaTrigger.html#areaTriggerProxyType" class="code">sm.areaTrigger.areaTriggerProxyType</a>) (Defaults to sm.areaTrigger.areaTriggerProxyType.default)</td></tr>
+   <tr><td class="code">string</td><td class="code">boneName?</td><td>The bone name of the interactable to attach the area trigger to. (optional)</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -236,7 +579,7 @@
    <tr><td class="code"><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></td><td>The created area trigger.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="createBox"></a>sm.areaTrigger.createBox(dimension, position, rotation=nil, filter=nil, userdata=nil)</h2>
+  <h2 class="code"><a id="createBox"></a>sm.areaTrigger.createBox(dimension, position, rotation?, filter?, userdata?, world?, areaTriggerProxyType?)</h2>
   <p>Creates a new box area trigger at a given position with a given size.</p>
   <p>If a filter is specified, the trigger area will only be able to detects objects of that certain type. See <a href="namespace_Game_sm_areaTrigger.html#filter" class="code">sm.areaTrigger.filter</a> for more information about filters.</p>
   <h4>Parameters:</h4>
@@ -244,9 +587,11 @@
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">dimension</td><td>The dimensions of the box.</td></tr>
    <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The world position.</td></tr>
-   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td class="code">rotation=nil</td><td>The world rotation. (Defaults to <a href="namespace_Game_sm_quat.html#identity" class="code">sm.quat.identity</a>)</td></tr>
-   <tr><td class="code">integer</td><td class="code">filter=nil</td><td>The object types the area trigger may detect. (See <a href="namespace_Game_sm_areaTrigger.html#filter" class="code">sm.areaTrigger.filter</a>). (Defaults to sm.areaTrigger.filter.all)</td></tr>
-   <tr><td class="code">table</td><td class="code">userdata=nil</td><td>An optional table of user data</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td class="code">rotation?</td><td>The world rotation. (Defaults to <a href="namespace_Game_sm_quat.html#identity" class="code">sm.quat.identity</a>)</td></tr>
+   <tr><td class="code">integer</td><td class="code">filter?</td><td>The object types the area trigger may detect. (See <a href="namespace_Game_sm_areaTrigger.html#filter" class="code">sm.areaTrigger.filter</a>). (Defaults to sm.areaTrigger.filter.all)</td></tr>
+   <tr><td class="code">table</td><td class="code">userdata?</td><td>An optional table of user data</td></tr>
+   <tr><td class="code"><a href="userdata_Game_World.html" class="code">World</a></td><td class="code">world?</td><td>The world to create the area trigger in. (optional)</td></tr>
+   <tr><td class="code">integer</td><td class="code">areaTriggerProxyType?</td><td>The proxy type of the area trigger. (See <a href="namespace_Game_sm_areaTrigger.html#areaTriggerProxyType" class="code">sm.areaTrigger.areaTriggerProxyType</a>) (Defaults to sm.areaTrigger.areaTriggerProxyType.default)</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -254,7 +599,11 @@
    <tr><td class="code"><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></td><td>The created area trigger.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="createBoxWater"></a>sm.areaTrigger.createBoxWater(dimension, position, rotation=nil, filter=nil, userdata=nil)</h2>
+  <h2 class="code"><a id="createBoxWater"></a>sm.areaTrigger.createBoxWater(dimension, position, rotation?, filter?, userdata?)</h2>
+  <div class="deprecated">
+   <h4>Deprecated:</h4>
+   <p>use <a href="namespace_Game_sm_areaTrigger.html#createBox" class="code">sm.areaTrigger.createBox</a> with <a href="namespace_Game_sm_areaTrigger.html#areaTriggerProxyType" class="code">sm.areaTrigger.areaTriggerProxyType</a> instead.</p>
+  </div>
   <p>Creates a new box area trigger that represent water ie. certain objects cant be placed in it.</p>
   <p>If a filter is specified, the trigger area will only be able to detects objects of that certain type. See <a href="namespace_Game_sm_areaTrigger.html#filter" class="code">sm.areaTrigger.filter</a> for more information about filters.</p>
   <h4>Parameters:</h4>
@@ -262,9 +611,9 @@
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">dimension</td><td>The dimensions of the box.</td></tr>
    <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The world position.</td></tr>
-   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td class="code">rotation=nil</td><td>The world rotation. (Defaults to <a href="namespace_Game_sm_quat.html#identity" class="code">sm.quat.identity</a>)</td></tr>
-   <tr><td class="code">integer</td><td class="code">filter=nil</td><td>The object types the area trigger may detect. (See <a href="namespace_Game_sm_areaTrigger.html#filter" class="code">sm.areaTrigger.filter</a>). (Defaults to sm.areaTrigger.filter.all)</td></tr>
-   <tr><td class="code">table</td><td class="code">userdata=nil</td><td>An optional table of user data</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td class="code">rotation?</td><td>The world rotation. (Defaults to <a href="namespace_Game_sm_quat.html#identity" class="code">sm.quat.identity</a>)</td></tr>
+   <tr><td class="code">integer</td><td class="code">filter?</td><td>The object types the area trigger may detect. (See <a href="namespace_Game_sm_areaTrigger.html#filter" class="code">sm.areaTrigger.filter</a>). (Defaults to sm.areaTrigger.filter.all)</td></tr>
+   <tr><td class="code">table</td><td class="code">userdata?</td><td>An optional table of user data</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -272,7 +621,48 @@
    <tr><td class="code"><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></td><td>The created area trigger.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="createSphere"></a>sm.areaTrigger.createSphere(radius, position, rotation=nil, filter=nil, userdata=nil)</h2>
+  <h2 class="code"><a id="createCylinder"></a>sm.areaTrigger.createCylinder(radius, halfLength, position, rotation?, filter?, userdata?, world?, areaTriggerProxyType?)</h2>
+  <p>Creates a new cylinder area trigger at a given position with a given size.</p>
+  <p>If a filter is specified, the trigger area will only be able to detects objects of that certain type. See <a href="namespace_Game_sm_areaTrigger.html#filter" class="code">sm.areaTrigger.filter</a> for more information about filters.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">number</td><td class="code">radius</td><td>The radius of the cylinder.</td></tr>
+   <tr><td class="code">number</td><td class="code">halfLength</td><td>The lengthwise extent of the cylinder (i.e. half the length of the cylinder).</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The world position.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td class="code">rotation?</td><td>The world rotation. (Defaults to <a href="namespace_Game_sm_quat.html#identity" class="code">sm.quat.identity</a>)</td></tr>
+   <tr><td class="code">integer</td><td class="code">filter?</td><td>The object types the area trigger may detect. (See <a href="namespace_Game_sm_areaTrigger.html#filter" class="code">sm.areaTrigger.filter</a>). (Defaults to sm.areaTrigger.filter.all)</td></tr>
+   <tr><td class="code">table</td><td class="code">userdata?</td><td>An optional table of user data</td></tr>
+   <tr><td class="code"><a href="userdata_Game_World.html" class="code">World</a></td><td class="code">world?</td><td>The world to create the area trigger in. (optional)</td></tr>
+   <tr><td class="code">integer</td><td class="code">areaTriggerProxyType?</td><td>The proxy type of the area trigger. (See <a href="namespace_Game_sm_areaTrigger.html#areaTriggerProxyType" class="code">sm.areaTrigger.areaTriggerProxyType</a>) (Defaults to sm.areaTrigger.areaTriggerProxyType.default)</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></td><td>The created area trigger.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="createHull"></a>sm.areaTrigger.createHull(hull, position, rotation?, filter?, userdata?, world?, areaTriggerProxyType?)</h2>
+  <p>Creates a new hull area trigger at a given position with a given size.</p>
+  <p>If a filter is specified, the trigger area will only be able to detects objects of that certain type. See <a href="namespace_Game_sm_areaTrigger.html#filter" class="code">sm.areaTrigger.filter</a> for more information about filters.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">string</td><td class="code">hull</td><td>The path to the hull file.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The world position.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td class="code">rotation?</td><td>The world rotation. (Defaults to <a href="namespace_Game_sm_quat.html#identity" class="code">sm.quat.identity</a>)</td></tr>
+   <tr><td class="code">integer</td><td class="code">filter?</td><td>The object types the area trigger may detect. (See <a href="namespace_Game_sm_areaTrigger.html#filter" class="code">sm.areaTrigger.filter</a>). (Defaults to sm.areaTrigger.filter.all)</td></tr>
+   <tr><td class="code">table</td><td class="code">userdata?</td><td>An optional table of user data</td></tr>
+   <tr><td class="code"><a href="userdata_Game_World.html" class="code">World</a></td><td class="code">world?</td><td>The world to create the area trigger in. (optional)</td></tr>
+   <tr><td class="code">integer</td><td class="code">areaTriggerProxyType?</td><td>The proxy type of the area trigger. (See <a href="namespace_Game_sm_areaTrigger.html#areaTriggerProxyType" class="code">sm.areaTrigger.areaTriggerProxyType</a>) (Defaults to sm.areaTrigger.areaTriggerProxyType.default)</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></td><td>The created area trigger.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="createSphere"></a>sm.areaTrigger.createSphere(radius, position, rotation?, filter?, userdata?, world?, areaTriggerProxyType?)</h2>
   <p>Creates a new sphere area trigger at a given position with a given size.</p>
   <p>If a filter is specified, the trigger area will only be able to detects objects of that certain type. See <a href="namespace_Game_sm_areaTrigger.html#filter" class="code">sm.areaTrigger.filter</a> for more information about filters.</p>
   <h4>Parameters:</h4>
@@ -280,22 +670,16 @@
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code">number</td><td class="code">radius</td><td>The radius of the sphere.</td></tr>
    <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The world position.</td></tr>
-   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td class="code">rotation=nil</td><td>The world rotation. (Defaults to <a href="namespace_Game_sm_quat.html#identity" class="code">sm.quat.identity</a>)</td></tr>
-   <tr><td class="code">integer</td><td class="code">filter=nil</td><td>The object types the area trigger may detect. (See <a href="namespace_Game_sm_areaTrigger.html#filter" class="code">sm.areaTrigger.filter</a>). (Defaults to sm.areaTrigger.filter.all)</td></tr>
-   <tr><td class="code">table</td><td class="code">userdata=nil</td><td>An optional table of user data</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td class="code">rotation?</td><td>The world rotation. (Defaults to <a href="namespace_Game_sm_quat.html#identity" class="code">sm.quat.identity</a>)</td></tr>
+   <tr><td class="code">integer</td><td class="code">filter?</td><td>The object types the area trigger may detect. (See <a href="namespace_Game_sm_areaTrigger.html#filter" class="code">sm.areaTrigger.filter</a>). (Defaults to sm.areaTrigger.filter.all)</td></tr>
+   <tr><td class="code">table</td><td class="code">userdata?</td><td>An optional table of user data</td></tr>
+   <tr><td class="code"><a href="userdata_Game_World.html" class="code">World</a></td><td class="code">world?</td><td>The world to create the area trigger in. (optional)</td></tr>
+   <tr><td class="code">integer</td><td class="code">areaTriggerProxyType?</td><td>The proxy type of the area trigger. (See <a href="namespace_Game_sm_areaTrigger.html#areaTriggerProxyType" class="code">sm.areaTrigger.areaTriggerProxyType</a>) (Defaults to sm.areaTrigger.areaTriggerProxyType.default)</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
    <tr><th>Type</th><th>Description</th></tr>
    <tr><td class="code"><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></td><td>The created area trigger.</td></tr>
-  </table>
-  <hr>
-  <h2 class="code"><a id="destroy"></a>sm.areaTrigger.destroy(areaTrigger)</h2>
-  <p>Destroys an area trigger.</p>
-  <h4>Parameters:</h4>
-  <table>
-   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code"><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></td><td class="code">areaTrigger</td><td>The area trigger to be destroyed.</td></tr>
   </table>
  </div>
 </body>

@@ -8,6 +8,36 @@
 	"constants": [],
 	"functions": [
 		{
+			"name": "addAabb",
+			"doc": {
+				"text": [
+					"Adds a named aabb debug draw."
+				],
+				"params": [
+					[
+						"string",
+						"name",
+						"The debug transform name."
+					],
+					[
+						"[Vec3]",
+						"min",
+						"The box minimum extent."
+					],
+					[
+						"[Vec3]",
+						"max",
+						"The box maximum extent."
+					],
+					[
+						"[Color]",
+						"color?",
+						"The color. Defaults to white."
+					]
+				]
+			}
+		},
+		{
 			"name": "addArrow",
 			"doc": {
 				"text": [
@@ -26,12 +56,52 @@
 					],
 					[
 						"[Vec3]",
-						"to=nil",
+						"to?",
 						"The to position. Defaults to the from position plus one along the z axis. (World up vector)"
 					],
 					[
 						"[Color]",
-						"color=nil",
+						"color?",
+						"The color. Defaults to white."
+					]
+				]
+			}
+		},
+		{
+			"name": "addBox",
+			"doc": {
+				"text": [
+					"Adds a named box debug draw."
+				],
+				"params": [
+					[
+						"string",
+						"name",
+						"The debug transform name."
+					],
+					[
+						"[Vec3]",
+						"min",
+						"The box minimum extent."
+					],
+					[
+						"[Vec3]",
+						"max",
+						"The box maximum extent."
+					],
+					[
+						"[Vec3]",
+						"position",
+						"The box position."
+					],
+					[
+						"[Quat]",
+						"rotation?",
+						"The box rotation. Defaults to identity."
+					],
+					[
+						"[Color]",
+						"color?",
 						"The color. Defaults to white."
 					]
 				]
@@ -55,13 +125,53 @@
 						"The sphere center."
 					],
 					[
-						"[Vec3]",
-						"radius=nil",
+						"number",
+						"radius?",
 						"The sphere radius. Defaults to 0.125."
 					],
 					[
 						"[Color]",
-						"color=nil",
+						"color?",
+						"The color. Defaults to white."
+					]
+				]
+			}
+		},
+		{
+			"name": "addText",
+			"doc": {
+				"text": [
+					"Adds text in world debug draw."
+				],
+				"params": [
+					[
+						"string",
+						"name",
+						"The text name."
+					],
+					[
+						"string",
+						"text",
+						"The text content."
+					],
+					[
+						"[Vec3]",
+						"position",
+						"The world position of the text."
+					],
+					[
+						"boolean",
+						"fade?",
+						"If the text should fade. Defaults to false."
+					],
+					[
+						"number",
+						"scale?",
+						"The scale of the text. Defaults to 30."
+					],
+					[
+						"[Color]",
+						"color?",
 						"The color. Defaults to white."
 					]
 				]
@@ -91,7 +201,7 @@
 					],
 					[
 						"number",
-						"scale=nil",
+						"scale?",
 						"The transform scale. Defaults to 1.0."
 					]
 				]
@@ -101,14 +211,483 @@
 			"name": "clear",
 			"doc": {
 				"text": [
-					"Removes all debug draws beginning with a given name. ",
-					" "
+					"Removes all debug draws beginning with a given name."
 				],
 				"params": [
 					[
 						"string",
-						"name=\"\"",
+						"name?",
 						"The name to match (Defaults to \"\", matching all debug draws)."
+					]
+				]
+			}
+		},
+		{
+			"name": "drawArrowTopDown",
+			"doc": {
+				"text": [
+					"Draws an arrow."
+				],
+				"params": [
+					[
+						"[Vec3]",
+						"from",
+						"The starting position of the arrow."
+					],
+					[
+						"[Vec3]",
+						"to?",
+						"The ending position of the arrow. Defaults to the starting position plus one unit along the z-axis (world up vector)."
+					],
+					[
+						"[Color]",
+						"color?",
+						"The color of the arrow. Defaults to white."
+					]
+				]
+			}
+		},
+		{
+			"name": "drawBoxTopDown",
+			"doc": {
+				"text": [
+					"Draws a box."
+				],
+				"params": [
+					[
+						"[Vec3]",
+						"min",
+						"The minimum extent of the box."
+					],
+					[
+						"[Vec3]",
+						"max",
+						"The maximum extent of the box."
+					],
+					[
+						"[Vec3]",
+						"position",
+						"The position of the box."
+					],
+					[
+						"[Quat]",
+						"rotation?",
+						"The rotation of the box. Defaults to identity."
+					],
+					[
+						"[Color]",
+						"color?",
+						"The color of the box. Defaults to white."
+					],
+					[
+						"number",
+						"duration?",
+						"The duration of the flash animation in seconds. Defaults to 0.5 seconds."
+					]
+				]
+			}
+		},
+		{
+			"name": "drawCircleTopDown",
+			"doc": {
+				"text": [
+					"Draws a circle."
+				],
+				"params": [
+					[
+						"[Vec3]",
+						"center",
+						"The center position of the circle."
+					],
+					[
+						"number",
+						"radius?",
+						"The radius of the circle. Defaults to 0.125."
+					],
+					[
+						"[Color]",
+						"color?",
+						"The color of the circle. Defaults to white."
+					]
+				]
+			}
+		},
+		{
+			"name": "drawRectTopDown",
+			"doc": {
+				"text": [
+					"Draws a rectangle."
+				],
+				"params": [
+					[
+						"[Vec3]",
+						"min",
+						"The minimum extent of the rectangle."
+					],
+					[
+						"[Vec3]",
+						"max",
+						"The maximum extent of the rectangle."
+					],
+					[
+						"[Color]",
+						"color?",
+						"The color of the rectangle. Defaults to white."
+					]
+				]
+			}
+		},
+		{
+			"name": "drawSphereTopDown",
+			"doc": {
+				"text": [
+					"Draws a sphere."
+				],
+				"params": [
+					[
+						"[Vec3]",
+						"center",
+						"The center position of the sphere."
+					],
+					[
+						"number",
+						"radius?",
+						"The radius of the sphere. Defaults to 0.125."
+					],
+					[
+						"[Color]",
+						"color?",
+						"The color of the sphere. Defaults to white."
+					]
+				]
+			}
+		},
+		{
+			"name": "flashAabb",
+			"doc": {
+				"text": [
+					"Flashes an axis-aligned bounding box for a specified duration."
+				],
+				"params": [
+					[
+						"[Vec3]",
+						"min",
+						"The minimum world extent of the box."
+					],
+					[
+						"[Vec3]",
+						"max",
+						"The maximum world extent of the box."
+					],
+					[
+						"[Color]",
+						"color?",
+						"The color of the box. Defaults to white."
+					],
+					[
+						"number",
+						"duration?",
+						"The duration of the flash animation in seconds. Defaults to 0.5 seconds."
+					]
+				]
+			}
+		},
+		{
+			"name": "flashArrow",
+			"doc": {
+				"text": [
+					"Flashes an arrow for a specified duration."
+				],
+				"params": [
+					[
+						"[Vec3]",
+						"from",
+						"The starting position of the arrow."
+					],
+					[
+						"[Vec3]",
+						"to?",
+						"The ending position of the arrow. Defaults to the starting position plus one unit along the z-axis (world up vector)."
+					],
+					[
+						"[Color]",
+						"color?",
+						"The color of the arrow. Defaults to white."
+					],
+					[
+						"number",
+						"duration?",
+						"The duration of the flash animation in seconds. Defaults to 0.5 seconds."
+					]
+				]
+			}
+		},
+		{
+			"name": "flashArrowTopDown",
+			"doc": {
+				"text": [
+					"Flashes an arrow for a specified duration."
+				],
+				"params": [
+					[
+						"[Vec3]",
+						"from",
+						"The starting position of the arrow."
+					],
+					[
+						"[Vec3]",
+						"to?",
+						"The ending position of the arrow. Defaults to the starting position plus one unit along the z-axis (world up vector)."
+					],
+					[
+						"[Color]",
+						"color?",
+						"The color of the arrow. Defaults to white."
+					],
+					[
+						"number",
+						"duration?",
+						"The duration of the flash animation in seconds. Defaults to 0.5 seconds."
+					]
+				]
+			}
+		},
+		{
+			"name": "flashBox",
+			"doc": {
+				"text": [
+					"Flashes a box for a specified duration."
+				],
+				"params": [
+					[
+						"[Vec3]",
+						"min",
+						"The minimum extent of the box."
+					],
+					[
+						"[Vec3]",
+						"max",
+						"The maximum extent of the box."
+					],
+					[
+						"[Vec3]",
+						"position",
+						"The position of the box."
+					],
+					[
+						"[Quat]",
+						"rotation?",
+						"The rotation of the box. Defaults to identity."
+					],
+					[
+						"[Color]",
+						"color?",
+						"The color of the box. Defaults to white."
+					],
+					[
+						"number",
+						"duration?",
+						"The duration of the flash animation in seconds. Defaults to 0.5 seconds."
+					]
+				]
+			}
+		},
+		{
+			"name": "flashBoxTopDown",
+			"doc": {
+				"text": [
+					"Flashes a box for a specified duration."
+				],
+				"params": [
+					[
+						"[Vec3]",
+						"min",
+						"The minimum extent of the box."
+					],
+					[
+						"[Vec3]",
+						"max",
+						"The maximum extent of the box."
+					],
+					[
+						"[Vec3]",
+						"position",
+						"The position of the box."
+					],
+					[
+						"[Quat]",
+						"rotation?",
+						"The rotation of the box. Defaults to identity."
+					],
+					[
+						"[Color]",
+						"color?",
+						"The color of the box. Defaults to white."
+					],
+					[
+						"number",
+						"duration?",
+						"The duration of the flash animation in seconds. Defaults to 0.5 seconds."
+					]
+				]
+			}
+		},
+		{
+			"name": "flashCircleTopDown",
+			"doc": {
+				"text": [
+					"Flashes a circle for a specified duration."
+				],
+				"params": [
+					[
+						"[Vec3]",
+						"center",
+						"The center position of the circle."
+					],
+					[
+						"number",
+						"radius?",
+						"The radius of the circle. Defaults to 0.125."
+					],
+					[
+						"[Color]",
+						"color?",
+						"The color of the circle. Defaults to white."
+					],
+					[
+						"number",
+						"duration?",
+						"The duration of the flash animation in seconds. Defaults to 0.5 seconds."
+					]
+				]
+			}
+		},
+		{
+			"name": "flashRectTopDown",
+			"doc": {
+				"text": [
+					"Flashes a rectangle for a specified duration."
+				],
+				"params": [
+					[
+						"[Vec3]",
+						"min",
+						"The minimum extent of the rectangle."
+					],
+					[
+						"[Vec3]",
+						"max",
+						"The maximum extent of the rectangle."
+					],
+					[
+						"[Color]",
+						"color?",
+						"The color of the rectangle. Defaults to white."
+					],
+					[
+						"number",
+						"duration?",
+						"The duration of the flash animation in seconds. Defaults to 0.5 seconds."
+					]
+				]
+			}
+		},
+		{
+			"name": "flashSphere",
+			"doc": {
+				"text": [
+					"Flashes a sphere for a specified duration."
+				],
+				"params": [
+					[
+						"[Vec3]",
+						"center",
+						"The center position of the sphere."
+					],
+					[
+						"number",
+						"radius?",
+						"The radius of the sphere. Defaults to 0.125."
+					],
+					[
+						"[Color]",
+						"color?",
+						"The color of the sphere. Defaults to white."
+					],
+					[
+						"number",
+						"duration?",
+						"The duration of the flash animation in seconds. Defaults to 0.5 seconds."
+					]
+				]
+			}
+		},
+		{
+			"name": "flashSphereTopDown",
+			"doc": {
+				"text": [
+					"Flashes a sphere for a specified duration."
+				],
+				"params": [
+					[
+						"[Vec3]",
+						"center",
+						"The center position of the sphere."
+					],
+					[
+						"number",
+						"radius?",
+						"The radius of the sphere. Defaults to 0.125."
+					],
+					[
+						"[Color]",
+						"color?",
+						"The color of the sphere. Defaults to white."
+					],
+					[
+						"number",
+						"duration?",
+						"The duration of the flash animation in seconds. Defaults to 0.5 seconds."
+					]
+				]
+			}
+		},
+		{
+			"name": "flashText",
+			"doc": {
+				"text": [
+					"Draws text in world debug draw."
+				],
+				"params": [
+					[
+						"string",
+						"text",
+						"The text content."
+					],
+					[
+						"[Vec3]",
+						"position",
+						"The world position of the text."
+					],
+					[
+						"boolean",
+						"fade?",
+						"If the text should fade. Defaults to false."
+					],
+					[
+						"number",
+						"scale?",
+						"The scale of the text. Defaults to 30."
+					],
+					[
+						"[Color]",
+						"color?",
+						"The color. Defaults to white."
+					],
+					[
+						"number",
+						"time?",
+						"Time to show text. Defaults to 0.5."
 					]
 				]
 			}
@@ -117,7 +696,7 @@
 			"name": "removeArrow",
 			"doc": {
 				"text": [
-					"Removes a named arrow debug draw. "
+					"Removes a named arrow debug draw."
 				],
 				"params": [
 					[
@@ -129,10 +708,25 @@
 			}
 		},
 		{
+			"name": "removeBox",
+			"doc": {
+				"text": [
+					"Removes a named box debug draw."
+				],
+				"params": [
+					[
+						"string",
+						"name",
+						"The debug box name."
+					]
+				]
+			}
+		},
+		{
 			"name": "removeSphere",
 			"doc": {
 				"text": [
-					"Removes a named sphere debug draw. "
+					"Removes a named sphere debug draw."
 				],
 				"params": [
 					[
@@ -144,10 +738,25 @@
 			}
 		},
 		{
+			"name": "removeText",
+			"doc": {
+				"text": [
+					"Remove text in world debug draw."
+				],
+				"params": [
+					[
+						"string",
+						"name",
+						"The text name."
+					]
+				]
+			}
+		},
+		{
 			"name": "removeTransform",
 			"doc": {
 				"text": [
-					"Removes a named transform debug draw. "
+					"Removes a named transform debug draw."
 				],
 				"params": [
 					[

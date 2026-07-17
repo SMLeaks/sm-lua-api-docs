@@ -72,19 +72,50 @@
 					],
 					[
 						"boolean",
-						"ignoreBlockUuid=false",
-						"Should block uuid be evaluated for stage completion"
+						"ignoreBlockUuid?",
+						"Should block uuid be evaluated for stage completion (Defaults to false)"
 					],
 					[
 						"string",
-						"completeEffectName=\"\"",
-						"The name a effect that should be played once the builder guide is completed"
+						"completeEffectName?",
+						"The name of the effect that should be played at the placed block once the builder guide stage is completed (Defaults to \"\")"
+					],
+					[
+						"string",
+						"completeEffectAtBaseName?",
+						"The name of the effect that should be played at the base once the builder guide stage is completed (Defaults to \"\")"
 					]
 				],
 				"return": [
 					[
 						"[BlueprintVisualization]",
 						"The builder guide blueprint visualization"
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "drawLine",
+			"doc": {
+				"text": [
+					"Adds a builderguide connection guide line between two points."
+				],
+				"params": [
+					[
+						"[Vec3]",
+						"startingPoint",
+						"The starting point for the line."
+					],
+					[
+						"[Vec3]",
+						"endPoint",
+						"The end point for the line."
+					],
+					[
+						"[Color]",
+						"color?",
+						"The color for the line. Defaults to yellow. (Optional)"
 					]
 				],
 				"client_only": true
@@ -119,8 +150,8 @@
 					],
 					[
 						"boolean",
-						"illegal=false",
-						"Whether the visualization should render as illegal"
+						"illegal?",
+						"Whether the visualization should render as illegal (Defaults to false)"
 					],
 					[
 						"[Shape]",
@@ -145,8 +176,8 @@
 					],
 					[
 						"boolean",
-						"illegal=false",
-						"Whether the visualization should render as illegal"
+						"illegal?",
+						"Whether the visualization should render as illegal (Defaults to false)"
 					],
 					[
 						"[Joint]",
@@ -171,8 +202,8 @@
 					],
 					[
 						"boolean",
-						"illegal=false",
-						"Whether the visualization should render as illegal"
+						"illegal?",
+						"Whether the visualization should render as illegal (Defaults to false)"
 					]
 				],
 				"client_only": true
@@ -257,8 +288,8 @@
 					],
 					[
 						"boolean",
-						"lift=false",
-						"Should the visualization should render be lift or place"
+						"lift?",
+						"Should the visualization should render be lift or place (Defaults to false)"
 					]
 				],
 				"client_only": true

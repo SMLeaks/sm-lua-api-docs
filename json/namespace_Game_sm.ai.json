@@ -23,6 +23,11 @@
 						"[Vec3]",
 						"position",
 						"The target position."
+					],
+					[
+						"number",
+						"range",
+						"The maximum allowed distance to target position."
 					]
 				],
 				"return": [
@@ -75,7 +80,8 @@
 			"doc": {
 				"text": [
 					"Returns true if the character can fire at the target character within a given fire lane.",
-					"Also returns the aim position that allows the character to succeed."
+					"Also returns the aim position that allows the character to succeed.",
+					"Any obstacle shape that blocks the target, but can be destroyed by the projectile, will be targeted instead."
 				],
 				"params": [
 					[
@@ -97,6 +103,11 @@
 						"number",
 						"width",
 						"The width of the fire lane."
+					],
+					[
+						"integer",
+						"attack",
+						"The attack level of the projectile. (Defaults to 5)"
 					]
 				],
 				"return": [
@@ -173,7 +184,7 @@
 					],
 					[
 						"[World]",
-						"world=nil",
+						"world?",
 						"The world to search in. (Defaults to the world of the script that is calling the function)"
 					]
 				],

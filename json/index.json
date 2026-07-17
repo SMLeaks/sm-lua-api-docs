@@ -2,6 +2,7 @@
 	"Game": {
 		"classes": [
 			"CharacterClass",
+			"ClientScriptableObjectClass",
 			"GameClass",
 			"HarvestableClass",
 			"PlayerClass",
@@ -32,8 +33,11 @@
 			"Harvestable",
 			"Lift",
 			"ScriptableObject",
+			"ClientScriptableObject",
 			"BuilderGuide",
 			"CullSphereGroup",
+			"JsonGui",
+			"JsonWidget",
 			"Effect",
 			"Storage",
 			"Unit",
@@ -42,7 +46,8 @@
 			"Tool",
 			"Widget",
 			"BlueprintVisualization",
-			"GuiInterface"
+			"GuiInterface",
+			"Garage"
 		],
 		"namespaces": [
 			"GLOBAL",
@@ -69,25 +74,31 @@
 			"sm.character",
 			"sm.player",
 			"sm.areaTrigger",
-			"sm.game",
 			"sm.world",
 			"sm.event",
+			"sm.message",
 			"sm.item",
 			"sm.challenge",
 			"sm.menuCreation",
 			"sm.portal",
 			"sm.harvestable",
+			"sm.lift",
 			"sm.construction",
 			"sm.scriptableObject",
+			"sm.clientScriptableObject",
 			"sm.builderGuide",
 			"sm.cullSphereGroup",
+			"sm.jsonGui",
 			"sm.effect",
 			"sm.debris",
+			"sm.pipeGraph",
 			"sm.debugDraw",
+			"sm.debugGui",
 			"sm.storage",
 			"sm.unit",
 			"sm.pathfinder",
 			"sm.pathNode",
+			"sm.game",
 			"sm.tool",
 			"sm.audio",
 			"sm.particle",
@@ -96,7 +107,8 @@
 			"sm.gui",
 			"sm.gui.widget",
 			"sm.visualization",
-			"sm.render"
+			"sm.render",
+			"sm.garage"
 		]
 	},
 	"Terrain": {
@@ -107,7 +119,11 @@
 			"Uuid",
 			"Color",
 			"World",
-			"Harvestable"
+			"Harvestable",
+			"Interactable",
+			"Container",
+			"ScriptableObject",
+			"Portal"
 		],
 		"namespaces": [
 			"GLOBAL",
@@ -123,8 +139,14 @@
 			"sm.terrainData",
 			"sm.terrainTile",
 			"sm.terrainGeneration",
+			"sm.voxelTerrainCell",
 			"sm.debugDraw",
-			"sm.harvestable"
+			"sm.debugGui",
+			"sm.terrainHarvestable",
+			"sm.interactable",
+			"sm.container",
+			"sm.scriptableObject",
+			"sm.tunnelGenerator"
 		]
 	}
 }

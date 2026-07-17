@@ -125,7 +125,7 @@
 			"get": {
 				"doc": {
 					"text": [
-						"Returns the worldId of a scriptable object."
+						"Returns the world of a scriptable object."
 					],
 					"params": [
 						[
@@ -184,6 +184,27 @@
 			}
 		},
 		{
+			"name": "getData",
+			"doc": {
+				"text": [
+					"Returns json data from a scriptableObject."
+				],
+				"params": [
+					[
+						"[ScriptableObject]",
+						"scriptableObject",
+						"The scriptableObject."
+					]
+				],
+				"return": [
+					[
+						"table",
+						"The json data."
+					]
+				]
+			}
+		},
+		{
 			"name": "getId",
 			"doc": {
 				"text": [
@@ -230,7 +251,7 @@
 			"name": "getWorld",
 			"doc": {
 				"text": [
-					"Returns the worldId of a scriptable object."
+					"Returns the world of a scriptable object."
 				],
 				"params": [
 					[
@@ -296,7 +317,7 @@
 			"doc": {
 				"meta": [
 					[
-						"[ScriptableObject],[ScriptableObject]",
+						"[ScriptableObject],[ScriptableObject],boolean",
 						"Checks if two instances of [ScriptableObject] refer to the same ScriptableObject."
 					]
 				]

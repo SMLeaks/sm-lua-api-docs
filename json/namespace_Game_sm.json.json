@@ -98,9 +98,14 @@
 				],
 				"params": [
 					[
-						"string",
+						"table",
 						"root",
 						"The lua table."
+					],
+					[
+						"boolean",
+						"stylized?",
+						"Generates stylized json if true, compact if false. (Defaults to false)"
 					]
 				],
 				"return": [

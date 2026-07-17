@@ -98,6 +98,14 @@
 			}
 		},
 		{
+			"name": "enableRecipes",
+			"doc": {
+				"text": [
+					"Enables or disables recipes being locked and needing to be learned to build items. (Defaults to true)"
+				]
+			}
+		},
+		{
 			"name": "enableRestrictions",
 			"doc": {
 				"text": [
@@ -464,6 +472,22 @@
 			"type": "serverEventCallback"
 		},
 		{
+			"name": "server_onUnload",
+			"doc": {
+				"text": [
+					"Called when a game session ends."
+				],
+				"params": [
+					[
+						"table",
+						"self",
+						"The class instance."
+					]
+				]
+			},
+			"type": "serverEventCallback"
+		},
+		{
 			"name": "client_onLoadingScreenLifted",
 			"doc": {
 				"text": [
@@ -497,6 +521,22 @@
 						"string",
 						"language",
 						"The new language."
+					]
+				]
+			},
+			"type": "clientEventCallback"
+		},
+		{
+			"name": "client_onUnstuck",
+			"doc": {
+				"text": [
+					"Called when the user presses unstuck in the in-game main menu."
+				],
+				"params": [
+					[
+						"table",
+						"self",
+						"The class instance."
 					]
 				]
 			},

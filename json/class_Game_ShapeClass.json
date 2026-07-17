@@ -69,6 +69,34 @@
 			}
 		},
 		{
+			"name": "connectIcon",
+			"doc": {
+				"text": [
+					"Sets the connection-point texture name that maps to texture specified in connectIcons.json. The connection-point is shown when using the <em>Connect Tool</em> and selecting the interactable. (Defaults to empty)"
+				],
+				"return": [
+					[
+						"string",
+						""
+					]
+				]
+			}
+		},
+		{
+			"name": "connectIconScale",
+			"doc": {
+				"text": [
+					"Sets the connection-point visualization scale. The connection-point is shown when using the <em>Connect Tool</em> and selecting the interactable. (Defaults to 0.75)"
+				],
+				"return": [
+					[
+						"integer",
+						""
+					]
+				]
+			}
+		},
+		{
 			"name": "connectionInput",
 			"doc": {
 				"text": [
@@ -382,7 +410,7 @@
 					"@note",
 					"@code",
 					"-- Example of interaction",
-					"function MySwitch.client_onInteract( self, _, state ) ",
+					"function MySwitch.client_onInteract( self, character, state ) ",
 					"\tif state == true then",
 					"\t\tself.network:sendToServer( 'sv_n_toggle' )",
 					"\tend",
@@ -560,6 +588,11 @@
 						"[Uuid]",
 						"uuid",
 						"The uuid of the projectile."
+					],
+					[
+						"number",
+						"mass",
+						"The mass of the projectile."
 					]
 				]
 			},
@@ -624,6 +657,11 @@
 						"[Uuid]",
 						"uuid",
 						"The uuid of the projectile."
+					],
+					[
+						"number",
+						"mass",
+						"The mass of the projectile."
 					]
 				]
 			},
@@ -758,6 +796,11 @@
 						"integer",
 						"destructionLevel",
 						"The level of destruction done by this explosion. Corresponds to the 'durability' rating of a [Shape]."
+					],
+					[
+						"integer",
+						"damage",
+						"The damage value of the explosion."
 					]
 				]
 			},
@@ -947,6 +990,11 @@
 						"[Character]",
 						"character",
 						"The [Character] of the [Player] that is looking at the [Joint]."
+					],
+					[
+						"[Joint]",
+						"joint",
+						"The [Joint]."
 					]
 				],
 				"return": [
@@ -1098,6 +1146,44 @@
 					[
 						"boolean",
 						"A boolean indicating whether the interacable must be carried or not. (Defaults to false)"
+					]
+				]
+			},
+			"type": "clientEventCallback"
+		},
+		{
+			"name": "server_onWorldChanged",
+			"doc": {
+				"text": [
+					"Called when a shape changes world"
+				],
+				"params": [
+					[
+						"table",
+						"self",
+						"The class instance."
+					]
+				]
+			},
+			"type": "serverEventCallback"
+		},
+		{
+			"name": "client_onChildJointRemoved",
+			"doc": {
+				"text": [
+					"Called when a child [Joint] is removed from the [Interactable]'s connection list.",
+					"This can happen when a player explicitly disconnects the [Joint] or when the [Joint] is destroyed."
+				],
+				"params": [
+					[
+						"table",
+						"self",
+						"The class instance."
+					],
+					[
+						"[Joint]",
+						"joint",
+						"The [Joint] that was removed."
 					]
 				]
 			},

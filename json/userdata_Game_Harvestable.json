@@ -10,6 +10,29 @@
 	"serializable": true,
 	"members": [
 		{
+			"name": "angularVelocity",
+			"get": {
+				"doc": {
+					"text": [
+						"Returns the angular velocity of the harvestable."
+					],
+					"params": [
+						[
+							"[Harvestable]",
+							"harvestable",
+							"The harvestable."
+						]
+					],
+					"return": [
+						[
+							"[Vec3]",
+							"The angular velocity."
+						]
+					]
+				}
+			}
+		},
+		{
 			"name": "clientPublicData",
 			"get": {
 				"doc": {
@@ -71,6 +94,30 @@
 						[
 							"integer",
 							"The harvestable id."
+						]
+					]
+				}
+			}
+		},
+		{
+			"name": "initialHash",
+			"get": {
+				"doc": {
+					"text": [
+						"Gets the initial hash of a kinematic. The initial hash identifies the kinematic by its initial world position, uuid and world id.",
+						"This can be used to match kinematics spawned from the same entity in a tile even though each loaded kinematic is technically a different object."
+					],
+					"params": [
+						[
+							"[Harvestable]",
+							"harvestable",
+							"The kinematic to get the initial hash from."
+						]
+					],
+					"return": [
+						[
+							"number",
+							"The initial hash. Returns 0 if the harvestable is not kinematic."
 						]
 					]
 				}
@@ -305,6 +352,29 @@
 			}
 		},
 		{
+			"name": "velocity",
+			"get": {
+				"doc": {
+					"text": [
+						"Returns the velocity of the harvestable."
+					],
+					"params": [
+						[
+							"[Harvestable]",
+							"harvestable",
+							"The harvestable."
+						]
+					],
+					"return": [
+						[
+							"[Vec3]",
+							"The velocity."
+						]
+					]
+				}
+			}
+		},
+		{
 			"name": "worldPosition",
 			"get": {
 				"doc": {
@@ -353,6 +423,27 @@
 	],
 	"functions": [
 		{
+			"name": "applyShakeImpulse",
+			"doc": {
+				"text": [
+					"Applies a shake impulse to the harvestable."
+				],
+				"params": [
+					[
+						"[Harvestable]",
+						"harvestable",
+						"The harvestable."
+					],
+					[
+						"number",
+						"shake",
+						"The shake impulse value."
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
 			"name": "destroy",
 			"doc": {
 				"text": [
@@ -372,7 +463,7 @@
 			"name": "getAabb",
 			"doc": {
 				"text": [
-					"Returns the bounds of the harvestable shape."
+					"Returns the axis aligned world space bounds of the harvestable."
 				],
 				"params": [
 					[
@@ -385,6 +476,27 @@
 					[
 						"[Vec3],[Vec3]",
 						"The min and max bounds."
+					]
+				]
+			}
+		},
+		{
+			"name": "getAngularVelocity",
+			"doc": {
+				"text": [
+					"Returns the angular velocity of the harvestable."
+				],
+				"params": [
+					[
+						"[Harvestable]",
+						"harvestable",
+						"The harvestable."
+					]
+				],
+				"return": [
+					[
+						"[Vec3]",
+						"The angular velocity."
 					]
 				]
 			}
@@ -470,6 +582,49 @@
 					[
 						"integer",
 						"The harvestable id."
+					]
+				]
+			}
+		},
+		{
+			"name": "getInitialHash",
+			"doc": {
+				"text": [
+					"Gets the initial hash of a kinematic. The initial hash identifies the kinematic by its initial world position, uuid and world id.",
+					"This can be used to match kinematics spawned from the same entity in a tile even though each loaded kinematic is technically a different object."
+				],
+				"params": [
+					[
+						"[Harvestable]",
+						"harvestable",
+						"The kinematic to get the initial hash from."
+					]
+				],
+				"return": [
+					[
+						"number",
+						"The initial hash. Returns 0 if the harvestable is not kinematic."
+					]
+				]
+			}
+		},
+		{
+			"name": "getLocalAabb",
+			"doc": {
+				"text": [
+					"Returns the axis aligned local space bounds of the harvestable."
+				],
+				"params": [
+					[
+						"[Harvestable]",
+						"harvestable",
+						"The harvestable."
+					]
+				],
+				"return": [
+					[
+						"[Vec3],[Vec3]",
+						"The min and max bounds."
 					]
 				]
 			}
@@ -756,6 +911,27 @@
 			}
 		},
 		{
+			"name": "getVelocity",
+			"doc": {
+				"text": [
+					"Returns the velocity of the harvestable."
+				],
+				"params": [
+					[
+						"[Harvestable]",
+						"harvestable",
+						"The harvestable."
+					]
+				],
+				"return": [
+					[
+						"[Vec3]",
+						"The velocity."
+					]
+				]
+			}
+		},
+		{
 			"name": "getWorld",
 			"doc": {
 				"text": [
@@ -798,6 +974,27 @@
 			}
 		},
 		{
+			"name": "isCellKinematic",
+			"doc": {
+				"text": [
+					"Check if a kinematic comes from a cell or is created from a script."
+				],
+				"params": [
+					[
+						"[Harvestable]",
+						"harvestable",
+						"The harvestable to check."
+					]
+				],
+				"return": [
+					[
+						"boolean",
+						"True if it is a kinematic from a cell, false if it is not. Nil if it is not a kinematic."
+					]
+				]
+			}
+		},
+		{
 			"name": "isKinematic",
 			"doc": {
 				"text": [
@@ -816,6 +1013,27 @@
 						"Return true if the harvestable is kinematic."
 					]
 				]
+			}
+		},
+		{
+			"name": "setAllSubMeshVisible",
+			"doc": {
+				"text": [
+					"Set the visibility of all submeshes"
+				],
+				"params": [
+					[
+						"[Harvestable]",
+						"harvestable",
+						"The harvestable."
+					],
+					[
+						"boolean",
+						"visible",
+						"True if the submeshes should be visible."
+					]
+				],
+				"client_only": true
 			}
 		},
 		{
@@ -989,6 +1207,32 @@
 			}
 		},
 		{
+			"name": "setSubMeshVisible",
+			"doc": {
+				"text": [
+					"Set the visibility of a submesh"
+				],
+				"params": [
+					[
+						"[Harvestable]",
+						"harvestable",
+						"The harvestable."
+					],
+					[
+						"string",
+						"name",
+						"Name of the submesh."
+					],
+					[
+						"boolean",
+						"visible",
+						"True if the submesh should be visible."
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
 			"name": "setUvFrameIndex",
 			"doc": {
 				"text": [
@@ -1008,6 +1252,90 @@
 				],
 				"client_only": true
 			}
+		},
+		{
+			"name": "transformDirection",
+			"doc": {
+				"text": [
+					"Transforms a direction in the world into a local direction of the harvestable"
+				],
+				"params": [
+					[
+						"[Harvestable]",
+						"harvestable",
+						"The harvestable."
+					],
+					[
+						"[Vec3]",
+						"direction",
+						"The world direction."
+					]
+				],
+				"return": [
+					[
+						"[Vec3]",
+						"The local direction."
+					]
+				]
+			}
+		},
+		{
+			"name": "transformLocalPoint",
+			"doc": {
+				"text": [
+					"Transform a local point to world space.",
+					"@code",
+					"local worldPos = self.harvestable:transformLocalPoint( localPos )",
+					"@code"
+				],
+				"params": [
+					[
+						"[Harvestable]",
+						"harvetable",
+						"The harvestable."
+					],
+					[
+						"[Vec3]",
+						"vector",
+						"The local point."
+					]
+				],
+				"return": [
+					[
+						"[Vec3]",
+						"The world point."
+					]
+				]
+			}
+		},
+		{
+			"name": "transformPoint",
+			"doc": {
+				"text": [
+					"Transform a world point to the local harvestable transform.",
+					"@code",
+					"local localPos = self.harvestable:transformPoint( worldPos )",
+					"@code"
+				],
+				"params": [
+					[
+						"[Harvestable]",
+						"harvestable",
+						"The harvestable."
+					],
+					[
+						"[Vec3]",
+						"vector",
+						"The world point."
+					]
+				],
+				"return": [
+					[
+						"[Vec3]",
+						"The local point."
+					]
+				]
+			}
 		}
 	],
 	"metamethods": [
@@ -1016,7 +1344,7 @@
 			"doc": {
 				"meta": [
 					[
-						"[Harvestable],[Harvestable]",
+						"[Harvestable],[Harvestable],boolean",
 						"Checks if two instances of [Harvestable] refer to the same Harvestable."
 					]
 				]

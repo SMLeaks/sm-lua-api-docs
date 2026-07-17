@@ -314,6 +314,11 @@
 						"[Uuid]",
 						"uuid",
 						"The uuid of the projectile."
+					],
+					[
+						"number",
+						"mass",
+						"The mass of the projectile."
 					]
 				]
 			},
@@ -340,6 +345,11 @@
 						"integer",
 						"destructionLevel",
 						"The level of destruction done by this explosion. Corresponds to the 'durability' rating of a [Shape]."
+					],
+					[
+						"integer",
+						"damage",
+						"The damage value of the explosion."
 					]
 				]
 			},

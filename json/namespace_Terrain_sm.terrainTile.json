@@ -5,7 +5,32 @@
 			"Reads .tile file data"
 		]
 	},
-	"constants": [],
+	"constants": [
+		{
+			"name": "loadFlags",
+			"doc": {
+				"text": [
+					"Prefab content load flags.",
+					"@table",
+					"creations",
+					"nodes",
+					"assets",
+					"decals",
+					"harvestables",
+					"kinematics",
+					"voxelMeshes",
+					"all",
+					"@table"
+				],
+				"return": [
+					[
+						"table",
+						"List of flags for use with getContentFromPrefab."
+					]
+				]
+			}
+		}
+	],
 	"functions": [
 		{
 			"name": "getAssetsForCell",
@@ -16,23 +41,23 @@
 				"params": [
 					[
 						"[Uuid]",
-						"tileId",
-						"The tile id."
+						"tileUid",
+						"The tile uuid."
 					],
 					[
 						"integer",
-						"tileOffsetX",
-						"The tile offset X."
+						"cellOffsetX",
+						"The cell X offset."
 					],
 					[
 						"integer",
-						"tileOffsetY",
-						"The tile offset Y."
+						"cellOffsetY",
+						"The cell Y offset."
 					],
 					[
 						"integer",
 						"sizeLevel",
-						"The size level of asset."
+						"The size level of asset. [0-3]"
 					]
 				],
 				"return": [
@@ -47,38 +72,38 @@
 			"name": "getClutterIdxAt",
 			"doc": {
 				"text": [
-					"Returns the clutter index at position (X,Y) in a tile."
+					"Returns the clutter index at position (x,y) in a tile cell."
 				],
 				"params": [
 					[
-						"integer",
-						"tileId",
-						"The tile id."
+						"[Uuid]",
+						"tileUid",
+						"The tile uuid."
 					],
 					[
 						"integer",
-						"tileOffsetX",
-						"The tile offset X."
+						"cellOffsetX",
+						"The cell X offset."
 					],
 					[
 						"integer",
-						"tileOffsetY",
-						"The tile offset Y."
+						"cellOffsetY",
+						"The cell Y offset."
 					],
 					[
 						"integer",
 						"x",
-						"The X."
+						"The local X value."
 					],
 					[
 						"integer",
 						"y",
-						"The Y."
+						"The local Y value."
 					]
 				],
 				"return": [
 					[
-						"number",
+						"integer",
 						"The clutter index."
 					]
 				]
@@ -88,52 +113,44 @@
 			"name": "getColorAt",
 			"doc": {
 				"text": [
-					"Returns the terrain color at position (X,Y) in a tile."
+					"Returns the terrain color at position (x,y) in a tile cell."
 				],
 				"params": [
 					[
-						"integer",
-						"tileId",
-						"The tile id."
+						"[Uuid]",
+						"tileUid",
+						"The tile uuid."
 					],
 					[
 						"integer",
-						"tileOffsetX",
-						"The tile offset X."
+						"cellOffsetX",
+						"The cell X offset."
 					],
 					[
 						"integer",
-						"tileOffsetY",
-						"The tile offset Y."
+						"cellOffsetY",
+						"The cell Y offset."
 					],
 					[
 						"integer",
 						"lod",
-						"The level of detail."
+						"The level of detail. [0-5]"
 					],
 					[
 						"integer",
 						"x",
-						"The X."
+						"The local X value."
 					],
 					[
 						"integer",
 						"y",
-						"The Y."
+						"The local Y value."
 					]
 				],
 				"return": [
 					[
-						"number",
-						"The color R value."
-					],
-					[
-						"number",
-						"The color G value."
-					],
-					[
-						"number",
-						"The color B value."
+						"number,number,number",
+						"The color R, G, B values."
 					]
 				]
 			}
@@ -142,7 +159,15 @@
 			"name": "getContentFromPrefab",
 			"doc": {
 				"text": [
-					"Returns the content of prefab."
+					"Returns the content of a prefab.",
+					"Return value 1: A table of creations in the prefab. { { name = string, pos = [Vec3], rot = [Quat], sortingIndex = integer, tags = { string, ... } }, ... }",
+					"Return value 2: A table of prefabs in the prefab. { { name = string, pos = [Vec3], rot = [Vec3], scale = [Vec3], tags = { string, ... }, flags = integer }, ... }",
+					"Return value 3: A table of nodes in the prefab. { { pos = [Vec3], rot = [Quat], scale = [Vec3], tags = { string, ... }, params = table } }",
+					"Return value 4: A table of assets in the prefab. { { uuid = [Uuid], pos = [Vec3], rot = [Quat], slopeNormal = [Vec3], colors = { string = [Color], ...}, tags = { string, ... } }, ... }",
+					"Return value 5: A table of decals in the prefab. { { pos = [Vec3], rot = [Vec3], scale = [Vec3], decalId = integer, color = [Color], layer = integer,  tags = { string, ... } }, ... }",
+					"Return value 6: A table of harvestables in the prefab. { {uuid = [Uuid], pos = [Vec3], rot = [Quat], color = [Color], params = table, tags = { string, ... } }, ... }",
+					"Return value 7: A table of kinematics in the prefab. { {uuid = [Uuid], pos = [Vec3], rot = [Quat], scale = [Vec3], color = [Color], params = table, tags = { string, ... } }, .. }",
+					"Return value 8: A table containing the min and max bounds of the prefab. { min = [Vec3], max = [Vec3] }"
 				],
 				"params": [
 					[
@@ -152,38 +177,14 @@
 					],
 					[
 						"integer",
-						"loadFlags",
-						"A mask of content to load"
+						"loadFlags?",
+						"A mask of content to load. Defaults to all objects (optional)"
 					]
 				],
 				"return": [
 					[
-						"table",
-						"A table { { name = string, pos = [Vec3], rot = [Quat], sortingIndex = integer, tags = { string, ... } }, ... } of creations in the prefab."
-					],
-					[
-						"table",
-						"A table { { name = string, pos = [Vec3], rot = [Vec3], scale = [Vec3], tags = { string, ... }, flags = integer }, ... } of prefabs in the prefab."
-					],
-					[
-						"table",
-						"A table { { pos = [Vec3], rot = [Quat], scale = [Vec3], tags = { string, ... }, params = table } } of nodes in the prefab."
-					],
-					[
-						"table",
-						"A table { { uuid = [Uuid], pos = [Vec3], rot = [Quat], slopeNormal = [Vec3], colors = { string = [Color], ...}, tags = { string, ... } }, ... } of assets in the prefab."
-					],
-					[
-						"table",
-						"A table { { pos = [Vec3], rot = [Vec3], scale = [Vec3], decalId = integer, color = [Color], layer = integer,  tags = { string, ... } }, ... } of decals in the prefab."
-					],
-					[
-						"table",
-						"A table { {uuid = [Uuid], pos = [Vec3], rot = [Quat], color = [Color], params = table, tags = { string, ... } }, ... } of harvestables in the prefab."
-					],
-					[
-						"table",
-						"A table { {uuid = [Uuid], pos = [Vec3], rot = [Quat], scale = [Vec3], color = [Color], params = table, tags = { string, ... } }, .. } of kinematics in the prefab."
+						"table,table,table,table,table,table,table,table",
+						"Prefab content tables."
 					]
 				]
 			}
@@ -197,18 +198,18 @@
 				"params": [
 					[
 						"[Uuid]",
-						"tileId",
-						"The tile id."
+						"tileUid",
+						"The tile uuid."
 					],
 					[
 						"integer",
-						"tileOffsetX",
-						"The tile offset X."
+						"cellOffsetX",
+						"The cell X offset."
 					],
 					[
 						"integer",
-						"tileOffsetY",
-						"The tile offset Y."
+						"cellOffsetY",
+						"The cell Y offset."
 					]
 				],
 				"return": [
@@ -249,18 +250,18 @@
 				"params": [
 					[
 						"[Uuid]",
-						"id",
-						"The tile id"
+						"tileUid",
+						"The tile uuid."
 					],
 					[
 						"integer",
-						"X-offset",
-						"The offset along the X axis"
+						"cellOffsetX",
+						"The cell X offset."
 					],
 					[
 						"integer",
-						"Y-offset",
-						"The offset along the Y axis"
+						"cellOffsetY",
+						"The cell Y offset."
 					]
 				],
 				"return": [
@@ -280,23 +281,23 @@
 				"params": [
 					[
 						"[Uuid]",
-						"tileId",
-						"The tile id."
+						"tileUid",
+						"The tile uuid."
 					],
 					[
 						"integer",
-						"tileOffsetX",
-						"The tile offset X."
+						"cellOffsetX",
+						"The cell X offset."
 					],
 					[
 						"integer",
-						"tileOffsetY",
-						"The tile offset Y."
+						"cellOffsetY",
+						"The cell Y offset."
 					],
 					[
 						"integer",
 						"sizeLevel",
-						"The size level of harvestables."
+						"The size level of harvestables. [0-3]"
 					]
 				],
 				"return": [
@@ -311,38 +312,38 @@
 			"name": "getHeightAt",
 			"doc": {
 				"text": [
-					"Returns the terrain height at position (X,Y) in a tile."
+					"Returns the terrain height at position (x,y) in a tile cell."
 				],
 				"params": [
 					[
-						"integer",
-						"tileId",
-						"The tile id."
+						"[Uuid]",
+						"tileUid",
+						"The tile uuid."
 					],
 					[
 						"integer",
-						"tileOffsetX",
-						"The tile offset X."
+						"cellOffsetX",
+						"The cell X offset."
 					],
 					[
 						"integer",
-						"tileOffsetY",
-						"The tile offset Y."
+						"cellOffsetY",
+						"The cell Y offset."
 					],
 					[
 						"integer",
 						"lod",
-						"The level of detail."
+						"The level of detail. [0-5]"
 					],
 					[
 						"integer",
 						"x",
-						"The X."
+						"The local X value."
 					],
 					[
 						"integer",
 						"y",
-						"The Y."
+						"The local Y value."
 					]
 				],
 				"return": [
@@ -362,23 +363,23 @@
 				"params": [
 					[
 						"[Uuid]",
-						"tileId",
-						"The tile id."
+						"tileUid",
+						"The tile uuid."
 					],
 					[
 						"integer",
-						"tileOffsetX",
-						"The tile offset X."
+						"cellOffsetX",
+						"The cell X offset."
 					],
 					[
 						"integer",
-						"tileOffsetY",
-						"The tile offset Y."
+						"cellOffsetY",
+						"The cell Y offset."
 					],
 					[
 						"integer",
 						"sizeLevel",
-						"The size level of kinematics."
+						"The size level of kinematics. [0-3]"
 					]
 				],
 				"return": [
@@ -393,72 +394,44 @@
 			"name": "getMaterialAt",
 			"doc": {
 				"text": [
-					"Returns the terrain material at position (X,Y) in a tile."
+					"Returns the terrain material at position (x,y) in a tile cell."
 				],
 				"params": [
 					[
-						"integer",
-						"tileId",
-						"The tile id."
+						"[Uuid]",
+						"tileUid",
+						"The tile uuid."
 					],
 					[
 						"integer",
-						"tileOffsetX",
-						"The tile offset X."
+						"cellOffsetX",
+						"The cell X offset."
 					],
 					[
 						"integer",
-						"tileOffsetY",
-						"The tile offset Y."
+						"cellOffsetY",
+						"The cell Y offset."
 					],
 					[
 						"integer",
 						"lod",
-						"The level of detail."
+						"The level of detail. [0-5]"
 					],
 					[
 						"integer",
 						"x",
-						"The X."
+						"The local X value."
 					],
 					[
 						"integer",
 						"y",
-						"The Y."
+						"The local Y value."
 					]
 				],
 				"return": [
 					[
-						"number",
-						"The first R value."
-					],
-					[
-						"number",
-						"The first G value."
-					],
-					[
-						"number",
-						"The first B value."
-					],
-					[
-						"number",
-						"The first A value."
-					],
-					[
-						"number",
-						"The second R value."
-					],
-					[
-						"number",
-						"The second G value."
-					],
-					[
-						"number",
-						"The second B value."
-					],
-					[
-						"number",
-						"The second A value."
+						"number,number,number,number,number,number,number,number",
+						"Material weights 1-8."
 					]
 				]
 			}
@@ -472,18 +445,18 @@
 				"params": [
 					[
 						"[Uuid]",
-						"id",
-						"The tile id"
+						"tileUid",
+						"The tile uuid."
 					],
 					[
 						"integer",
-						"X-offset",
-						"The offset along the X axis"
+						"cellOffsetX",
+						"The cell X offset."
 					],
 					[
 						"integer",
-						"Y-offset",
-						"The offset along the Y axis"
+						"cellOffsetY",
+						"The cell Y offset."
 					]
 				],
 				"return": [
@@ -503,18 +476,18 @@
 				"params": [
 					[
 						"[Uuid]",
-						"tileId",
-						"The tile id."
+						"tileUid",
+						"The tile uuid."
 					],
 					[
 						"integer",
-						"X-offset",
-						"The offset along the X axis."
+						"cellOffsetX",
+						"The cell X offset."
 					],
 					[
 						"integer",
-						"Y-offset",
-						"The offset along the Y axis."
+						"cellOffsetY",
+						"The cell Y offset."
 					]
 				],
 				"return": [

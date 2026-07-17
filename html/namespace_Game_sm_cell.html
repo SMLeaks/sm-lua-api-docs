@@ -17,6 +17,7 @@
   <h3>Classes</h3>
   <ul>
    <li><a href="class_Game_CharacterClass.html" class="code">CharacterClass</a></li>
+   <li><a href="class_Game_ClientScriptableObjectClass.html" class="code">ClientScriptableObjectClass</a></li>
    <li><a href="class_Game_GameClass.html" class="code">GameClass</a></li>
    <li><a href="class_Game_HarvestableClass.html" class="code">HarvestableClass</a></li>
    <li><a href="class_Game_PlayerClass.html" class="code">PlayerClass</a></li>
@@ -34,14 +35,18 @@
    <li><a href="userdata_Game_Body.html" class="code">Body</a></li>
    <li><a href="userdata_Game_BuilderGuide.html" class="code">BuilderGuide</a></li>
    <li><a href="userdata_Game_Character.html" class="code">Character</a></li>
+   <li><a href="userdata_Game_ClientScriptableObject.html" class="code">ClientScriptableObject</a></li>
    <li><a href="userdata_Game_Color.html" class="code">Color</a></li>
    <li><a href="userdata_Game_Container.html" class="code">Container</a></li>
    <li><a href="userdata_Game_CullSphereGroup.html" class="code">CullSphereGroup</a></li>
    <li><a href="userdata_Game_Effect.html" class="code">Effect</a></li>
+   <li><a href="userdata_Game_Garage.html" class="code">Garage</a></li>
    <li><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></li>
    <li><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></li>
    <li><a href="userdata_Game_Interactable.html" class="code">Interactable</a></li>
    <li><a href="userdata_Game_Joint.html" class="code">Joint</a></li>
+   <li><a href="userdata_Game_JsonGui.html" class="code">JsonGui</a></li>
+   <li><a href="userdata_Game_JsonWidget.html" class="code">JsonWidget</a></li>
    <li><a href="userdata_Game_Lift.html" class="code">Lift</a></li>
    <li><a href="userdata_Game_LoadCellHandle.html" class="code">LoadCellHandle</a></li>
    <li><a href="userdata_Game_Network.html" class="code">Network</a></li>
@@ -73,6 +78,7 @@
    <li><a href="namespace_Game_sm_cell.html" class="code">sm.cell</a></li>
    <li><a href="namespace_Game_sm_challenge.html" class="code">sm.challenge</a></li>
    <li><a href="namespace_Game_sm_character.html" class="code">sm.character</a></li>
+   <li><a href="namespace_Game_sm_clientScriptableObject.html" class="code">sm.clientScriptableObject</a></li>
    <li><a href="namespace_Game_sm_color.html" class="code">sm.color</a></li>
    <li><a href="namespace_Game_sm_construction.html" class="code">sm.construction</a></li>
    <li><a href="namespace_Game_sm_container.html" class="code">sm.container</a></li>
@@ -80,9 +86,11 @@
    <li><a href="namespace_Game_sm_cullSphereGroup.html" class="code">sm.cullSphereGroup</a></li>
    <li><a href="namespace_Game_sm_debris.html" class="code">sm.debris</a></li>
    <li><a href="namespace_Game_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
+   <li><a href="namespace_Game_sm_debugGui.html" class="code">sm.debugGui</a></li>
    <li><a href="namespace_Game_sm_effect.html" class="code">sm.effect</a></li>
    <li><a href="namespace_Game_sm_event.html" class="code">sm.event</a></li>
    <li><a href="namespace_Game_sm_game.html" class="code">sm.game</a></li>
+   <li><a href="namespace_Game_sm_garage.html" class="code">sm.garage</a></li>
    <li><a href="namespace_Game_sm_gui.html" class="code">sm.gui</a></li>
    <li><a href="namespace_Game_sm_gui_widget.html" class="code">sm.gui.widget</a></li>
    <li><a href="namespace_Game_sm_harvestable.html" class="code">sm.harvestable</a></li>
@@ -90,15 +98,19 @@
    <li><a href="namespace_Game_sm_item.html" class="code">sm.item</a></li>
    <li><a href="namespace_Game_sm_joint.html" class="code">sm.joint</a></li>
    <li><a href="namespace_Game_sm_json.html" class="code">sm.json</a></li>
+   <li><a href="namespace_Game_sm_jsonGui.html" class="code">sm.jsonGui</a></li>
+   <li><a href="namespace_Game_sm_lift.html" class="code">sm.lift</a></li>
    <li><a href="namespace_Game_sm_localPlayer.html" class="code">sm.localPlayer</a></li>
    <li><a href="namespace_Game_sm_log.html" class="code">sm.log</a></li>
    <li><a href="namespace_Game_sm_melee.html" class="code">sm.melee</a></li>
    <li><a href="namespace_Game_sm_menuCreation.html" class="code">sm.menuCreation</a></li>
+   <li><a href="namespace_Game_sm_message.html" class="code">sm.message</a></li>
    <li><a href="namespace_Game_sm_noise.html" class="code">sm.noise</a></li>
    <li><a href="namespace_Game_sm_particle.html" class="code">sm.particle</a></li>
    <li><a href="namespace_Game_sm_pathNode.html" class="code">sm.pathNode</a></li>
    <li><a href="namespace_Game_sm_pathfinder.html" class="code">sm.pathfinder</a></li>
    <li><a href="namespace_Game_sm_physics.html" class="code">sm.physics</a></li>
+   <li><a href="namespace_Game_sm_pipeGraph.html" class="code">sm.pipeGraph</a></li>
    <li><a href="namespace_Game_sm_player.html" class="code">sm.player</a></li>
    <li><a href="namespace_Game_sm_portal.html" class="code">sm.portal</a></li>
    <li><a href="namespace_Game_sm_projectile.html" class="code">sm.projectile</a></li>
@@ -122,8 +134,12 @@
   <h3>Object Types 'userdata'</h3>
   <ul>
    <li><a href="userdata_Terrain_Color.html" class="code">Color</a></li>
+   <li><a href="userdata_Terrain_Container.html" class="code">Container</a></li>
    <li><a href="userdata_Terrain_Harvestable.html" class="code">Harvestable</a></li>
+   <li><a href="userdata_Terrain_Interactable.html" class="code">Interactable</a></li>
+   <li><a href="userdata_Terrain_Portal.html" class="code">Portal</a></li>
    <li><a href="userdata_Terrain_Quat.html" class="code">Quat</a></li>
+   <li><a href="userdata_Terrain_ScriptableObject.html" class="code">ScriptableObject</a></li>
    <li><a href="userdata_Terrain_Uuid.html" class="code">Uuid</a></li>
    <li><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></li>
    <li><a href="userdata_Terrain_World.html" class="code">World</a></li>
@@ -133,25 +149,31 @@
    <li><a href="namespace_Terrain_GLOBAL.html" class="code">GLOBAL</a></li>
    <li><a href="namespace_Terrain_sm.html" class="code">sm</a></li>
    <li><a href="namespace_Terrain_sm_color.html" class="code">sm.color</a></li>
+   <li><a href="namespace_Terrain_sm_container.html" class="code">sm.container</a></li>
    <li><a href="namespace_Terrain_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
-   <li><a href="namespace_Terrain_sm_harvestable.html" class="code">sm.harvestable</a></li>
+   <li><a href="namespace_Terrain_sm_debugGui.html" class="code">sm.debugGui</a></li>
+   <li><a href="namespace_Terrain_sm_interactable.html" class="code">sm.interactable</a></li>
    <li><a href="namespace_Terrain_sm_json.html" class="code">sm.json</a></li>
    <li><a href="namespace_Terrain_sm_log.html" class="code">sm.log</a></li>
    <li><a href="namespace_Terrain_sm_noise.html" class="code">sm.noise</a></li>
    <li><a href="namespace_Terrain_sm_quat.html" class="code">sm.quat</a></li>
+   <li><a href="namespace_Terrain_sm_scriptableObject.html" class="code">sm.scriptableObject</a></li>
    <li><a href="namespace_Terrain_sm_terrainData.html" class="code">sm.terrainData</a></li>
    <li><a href="namespace_Terrain_sm_terrainGeneration.html" class="code">sm.terrainGeneration</a></li>
+   <li><a href="namespace_Terrain_sm_terrainHarvestable.html" class="code">sm.terrainHarvestable</a></li>
    <li><a href="namespace_Terrain_sm_terrainTile.html" class="code">sm.terrainTile</a></li>
+   <li><a href="namespace_Terrain_sm_tunnelGenerator.html" class="code">sm.tunnelGenerator</a></li>
    <li><a href="namespace_Terrain_sm_util.html" class="code">sm.util</a></li>
    <li><a href="namespace_Terrain_sm_uuid.html" class="code">sm.uuid</a></li>
    <li><a href="namespace_Terrain_sm_vec3.html" class="code">sm.vec3</a></li>
+   <li><a href="namespace_Terrain_sm_voxelTerrainCell.html" class="code">sm.voxelTerrainCell</a></li>
   </ul>
  </div>
  <div id="content">
   <h1 class="code">sm.cell</h1>
   <p>The <strong>cell</strong> api exposes and expands on parts of the world loading process.</p>
   <p>These methods are commonly called from cell loading callbacks in World type scripts.</p>
-  <h4>Functions:</h4  <ul>   <li><a href="#getHarvestables" class="code">getHarvestables</a></li>   <li><a href="#getInteractablesByAnyUuid" class="code">getInteractablesByAnyUuid</a></li>   <li><a href="#getInteractablesByTag" class="code">getInteractablesByTag</a></li>   <li><a href="#getInteractablesByTags" class="code">getInteractablesByTags</a></li>   <li><a href="#getInteractablesByUuid" class="code">getInteractablesByUuid</a></li>   <li><a href="#getNodesByTag" class="code">getNodesByTag</a></li>   <li><a href="#getNodesByTags" class="code">getNodesByTags</a></li>   <li><a href="#getTags" class="code">getTags</a></li>  </ul>  <hr>
+  <h4>Functions:</h4  <ul>   <li><a href="#getHarvestables" class="code">getHarvestables</a></li>   <li><a href="#getHarvestablesByUuid" class="code">getHarvestablesByUuid</a></li>   <li><a href="#getInteractablesByAnyUuid" class="code">getInteractablesByAnyUuid</a></li>   <li><a href="#getInteractablesByTag" class="code">getInteractablesByTag</a></li>   <li><a href="#getInteractablesByTags" class="code">getInteractablesByTags</a></li>   <li><a href="#getInteractablesByUuid" class="code">getInteractablesByUuid</a></li>   <li><a href="#getNodesByTag" class="code">getNodesByTag</a></li>   <li><a href="#getNodesByTags" class="code">getNodesByTags</a></li>   <li><a href="#getTags" class="code">getTags</a></li>  </ul>  <hr>
   <h2 class="code"><a id="getHarvestables"></a>sm.cell.getHarvestables(x, y, size)</h2>
   <p>Server only</p>
   <p>Returns a table of <a href="namespace_Game_sm_harvestable.html" class="code">harvestables</a> of a given size for a cell coordinate.</p>
@@ -165,6 +187,28 @@
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code">integer</td><td class="code">x</td><td>The X-coordinate.</td></tr>
    <tr><td class="code">integer</td><td class="code">y</td><td>The Y-coordinate.</td></tr>
+   <tr><td class="code">integer</td><td class="code">size</td><td>Size of harvestable (defaults to any size).</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td>A table {<a href="namespace_Game_sm_harvestable.html" class="code">harvestable</a>, ...} of harvestables.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getHarvestablesByUuid"></a>sm.cell.getHarvestablesByUuid(x, y, uuid, size)</h2>
+  <p>Server only</p>
+  <p>Returns a table of <a href="namespace_Game_sm_harvestable.html" class="code">harvestables</a> of a given size for a cell coordinate and Uuid.</p>
+  <p>Sizes are:</p>
+  <p>0: Tiny - plants and crops.</p>
+  <p>1: Small - small trees and rocks.</p>
+  <p>2: Medium - medium trees, visible at a long distance.</p>
+  <p>3: Large - large trees, visible at a very long distance.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">integer</td><td class="code">x</td><td>The X-coordinate.</td></tr>
+   <tr><td class="code">integer</td><td class="code">y</td><td>The Y-coordinate.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">uuid</td><td>The uuid of the harvestable(s)</td></tr>
    <tr><td class="code">integer</td><td class="code">size</td><td>Size of harvestable (defaults to any size).</td></tr>
   </table>
   <h4>Returns:</h4>
@@ -193,7 +237,7 @@
    <tr><td class="code">table</td><td>A table {<a href="namespace_Game_sm_interactable.html" class="code">interactable</a>} of found interactables with matching uuid.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="getInteractablesByTag"></a>sm.cell.getInteractablesByTag(x, y, tags)</h2>
+  <h2 class="code"><a id="getInteractablesByTag"></a>sm.cell.getInteractablesByTag(x, y, tag)</h2>
   <p>Server only</p>
   <p>Returns a table of <a href="namespace_Game_sm_interactable.html" class="code">interactables</a> which contain the given tag for a cell coordinate.</p>
   <div class="note">
@@ -205,7 +249,7 @@
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code">integer</td><td class="code">x</td><td>The X-coordinate.</td></tr>
    <tr><td class="code">integer</td><td class="code">y</td><td>The Y-coordinate.</td></tr>
-   <tr><td class="code">table</td><td class="code">tags</td><td>A table {string, ...} of tags to match with.</td></tr>
+   <tr><td class="code">string</td><td class="code">tag</td><td>A tag to match with.</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -216,6 +260,7 @@
   <h2 class="code"><a id="getInteractablesByTags"></a>sm.cell.getInteractablesByTags(x, y, tags)</h2>
   <p>Server only</p>
   <p>Returns a table of <a href="namespace_Game_sm_interactable.html" class="code">interactables</a> which contain all of the given tags for a cell coordinate.</p>
+  <p>~ can be used to exclude a specific tag. Example: { "FRUIT", "~BANANA" } finds interactables tagged with FRUIT but excludes interactables that are also tagged with BANANA.</p>
   <div class="note">
    <h4>Note:</h4>
    <p>Can only be used in a server_onCellLoaded callback</p>
@@ -253,7 +298,7 @@
    <tr><td class="code">table</td><td>A table {<a href="namespace_Game_sm_interactable.html" class="code">interactable</a>, ...} of found interactables with matching uuid.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="getNodesByTag"></a>sm.cell.getNodesByTag(x, y, tag)</h2>
+  <h2 class="code"><a id="getNodesByTag"></a>sm.cell.getNodesByTag(x, y, tag, world?)</h2>
   <p>Returns a table of nodes which contains the given tag for a cell coordinate.</p>
   <h4>Parameters:</h4>
   <table>
@@ -261,6 +306,7 @@
    <tr><td class="code">integer</td><td class="code">x</td><td>X-coordinate.</td></tr>
    <tr><td class="code">integer</td><td class="code">y</td><td>Y-coordinate.</td></tr>
    <tr><td class="code">string</td><td class="code">tag</td><td>Tag to match with.</td></tr>
+   <tr><td class="code">world</td><td class="code">world?</td><td>The world we are searching in. (Optional, defaults to current world)</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -268,7 +314,7 @@
    <tr><td class="code">table</td><td>Table containing { position = <a href="userdata_Game_Vec3.html" class="code">Vec3</a>, rotation = <a href="userdata_Game_Quat.html" class="code">Quat</a>, scale = <a href="userdata_Game_Vec3.html" class="code">Vec3</a>, tags = {string, ...}, params = table } for each node.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="getNodesByTags"></a>sm.cell.getNodesByTags(x, y, tags)</h2>
+  <h2 class="code"><a id="getNodesByTags"></a>sm.cell.getNodesByTags(x, y, tags, world?)</h2>
   <p>Returns a table of nodes which contain all of the given tags for a cell coordinate.</p>
   <h4>Parameters:</h4>
   <table>
@@ -276,6 +322,7 @@
    <tr><td class="code">integer</td><td class="code">x</td><td>X-coordinate.</td></tr>
    <tr><td class="code">integer</td><td class="code">y</td><td>Y-coordinate.</td></tr>
    <tr><td class="code">table</td><td class="code">tags</td><td>A table {string, ...} of tags to match with.</td></tr>
+   <tr><td class="code">world</td><td class="code">world?</td><td>The world we are searching in (Optional, defaults to current world)</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -283,13 +330,14 @@
    <tr><td class="code">table</td><td>Table containing { position = <a href="userdata_Game_Vec3.html" class="code">Vec3</a>, rotation = <a href="userdata_Game_Quat.html" class="code">Quat</a>, scale = <a href="userdata_Game_Vec3.html" class="code">Vec3</a>, tags = {string, ...}, params = table } for each node.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="getTags"></a>sm.cell.getTags(x, y)</h2>
+  <h2 class="code"><a id="getTags"></a>sm.cell.getTags(x, y, world?)</h2>
   <p>Returns a table of tags for a cell coordinate.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code">integer</td><td class="code">x</td><td>X-coordinate</td></tr>
    <tr><td class="code">integer</td><td class="code">y</td><td>Y-coordinate</td></tr>
+   <tr><td class="code">world</td><td class="code">world?</td><td>The world we are searching in. (Optional, defaults to current world)</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>

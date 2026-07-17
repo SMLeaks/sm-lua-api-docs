@@ -27,7 +27,7 @@
 					],
 					"return": [
 						[
-							"int",
+							"integer",
 							"The world's id."
 						]
 					]
@@ -42,7 +42,7 @@
 			"doc": {
 				"meta": [
 					[
-						"[World],[World]",
+						"[World],[World],boolean",
 						"Checks if two instances of [World] refer to the same World."
 					]
 				]

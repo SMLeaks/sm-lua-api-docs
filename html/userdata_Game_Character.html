@@ -17,6 +17,7 @@
   <h3>Classes</h3>
   <ul>
    <li><a href="class_Game_CharacterClass.html" class="code">CharacterClass</a></li>
+   <li><a href="class_Game_ClientScriptableObjectClass.html" class="code">ClientScriptableObjectClass</a></li>
    <li><a href="class_Game_GameClass.html" class="code">GameClass</a></li>
    <li><a href="class_Game_HarvestableClass.html" class="code">HarvestableClass</a></li>
    <li><a href="class_Game_PlayerClass.html" class="code">PlayerClass</a></li>
@@ -34,14 +35,18 @@
    <li><a href="userdata_Game_Body.html" class="code">Body</a></li>
    <li><a href="userdata_Game_BuilderGuide.html" class="code">BuilderGuide</a></li>
    <li><a href="userdata_Game_Character.html" class="code">Character</a></li>
+   <li><a href="userdata_Game_ClientScriptableObject.html" class="code">ClientScriptableObject</a></li>
    <li><a href="userdata_Game_Color.html" class="code">Color</a></li>
    <li><a href="userdata_Game_Container.html" class="code">Container</a></li>
    <li><a href="userdata_Game_CullSphereGroup.html" class="code">CullSphereGroup</a></li>
    <li><a href="userdata_Game_Effect.html" class="code">Effect</a></li>
+   <li><a href="userdata_Game_Garage.html" class="code">Garage</a></li>
    <li><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></li>
    <li><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></li>
    <li><a href="userdata_Game_Interactable.html" class="code">Interactable</a></li>
    <li><a href="userdata_Game_Joint.html" class="code">Joint</a></li>
+   <li><a href="userdata_Game_JsonGui.html" class="code">JsonGui</a></li>
+   <li><a href="userdata_Game_JsonWidget.html" class="code">JsonWidget</a></li>
    <li><a href="userdata_Game_Lift.html" class="code">Lift</a></li>
    <li><a href="userdata_Game_LoadCellHandle.html" class="code">LoadCellHandle</a></li>
    <li><a href="userdata_Game_Network.html" class="code">Network</a></li>
@@ -73,6 +78,7 @@
    <li><a href="namespace_Game_sm_cell.html" class="code">sm.cell</a></li>
    <li><a href="namespace_Game_sm_challenge.html" class="code">sm.challenge</a></li>
    <li><a href="namespace_Game_sm_character.html" class="code">sm.character</a></li>
+   <li><a href="namespace_Game_sm_clientScriptableObject.html" class="code">sm.clientScriptableObject</a></li>
    <li><a href="namespace_Game_sm_color.html" class="code">sm.color</a></li>
    <li><a href="namespace_Game_sm_construction.html" class="code">sm.construction</a></li>
    <li><a href="namespace_Game_sm_container.html" class="code">sm.container</a></li>
@@ -80,9 +86,11 @@
    <li><a href="namespace_Game_sm_cullSphereGroup.html" class="code">sm.cullSphereGroup</a></li>
    <li><a href="namespace_Game_sm_debris.html" class="code">sm.debris</a></li>
    <li><a href="namespace_Game_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
+   <li><a href="namespace_Game_sm_debugGui.html" class="code">sm.debugGui</a></li>
    <li><a href="namespace_Game_sm_effect.html" class="code">sm.effect</a></li>
    <li><a href="namespace_Game_sm_event.html" class="code">sm.event</a></li>
    <li><a href="namespace_Game_sm_game.html" class="code">sm.game</a></li>
+   <li><a href="namespace_Game_sm_garage.html" class="code">sm.garage</a></li>
    <li><a href="namespace_Game_sm_gui.html" class="code">sm.gui</a></li>
    <li><a href="namespace_Game_sm_gui_widget.html" class="code">sm.gui.widget</a></li>
    <li><a href="namespace_Game_sm_harvestable.html" class="code">sm.harvestable</a></li>
@@ -90,15 +98,19 @@
    <li><a href="namespace_Game_sm_item.html" class="code">sm.item</a></li>
    <li><a href="namespace_Game_sm_joint.html" class="code">sm.joint</a></li>
    <li><a href="namespace_Game_sm_json.html" class="code">sm.json</a></li>
+   <li><a href="namespace_Game_sm_jsonGui.html" class="code">sm.jsonGui</a></li>
+   <li><a href="namespace_Game_sm_lift.html" class="code">sm.lift</a></li>
    <li><a href="namespace_Game_sm_localPlayer.html" class="code">sm.localPlayer</a></li>
    <li><a href="namespace_Game_sm_log.html" class="code">sm.log</a></li>
    <li><a href="namespace_Game_sm_melee.html" class="code">sm.melee</a></li>
    <li><a href="namespace_Game_sm_menuCreation.html" class="code">sm.menuCreation</a></li>
+   <li><a href="namespace_Game_sm_message.html" class="code">sm.message</a></li>
    <li><a href="namespace_Game_sm_noise.html" class="code">sm.noise</a></li>
    <li><a href="namespace_Game_sm_particle.html" class="code">sm.particle</a></li>
    <li><a href="namespace_Game_sm_pathNode.html" class="code">sm.pathNode</a></li>
    <li><a href="namespace_Game_sm_pathfinder.html" class="code">sm.pathfinder</a></li>
    <li><a href="namespace_Game_sm_physics.html" class="code">sm.physics</a></li>
+   <li><a href="namespace_Game_sm_pipeGraph.html" class="code">sm.pipeGraph</a></li>
    <li><a href="namespace_Game_sm_player.html" class="code">sm.player</a></li>
    <li><a href="namespace_Game_sm_portal.html" class="code">sm.portal</a></li>
    <li><a href="namespace_Game_sm_projectile.html" class="code">sm.projectile</a></li>
@@ -122,8 +134,12 @@
   <h3>Object Types 'userdata'</h3>
   <ul>
    <li><a href="userdata_Terrain_Color.html" class="code">Color</a></li>
+   <li><a href="userdata_Terrain_Container.html" class="code">Container</a></li>
    <li><a href="userdata_Terrain_Harvestable.html" class="code">Harvestable</a></li>
+   <li><a href="userdata_Terrain_Interactable.html" class="code">Interactable</a></li>
+   <li><a href="userdata_Terrain_Portal.html" class="code">Portal</a></li>
    <li><a href="userdata_Terrain_Quat.html" class="code">Quat</a></li>
+   <li><a href="userdata_Terrain_ScriptableObject.html" class="code">ScriptableObject</a></li>
    <li><a href="userdata_Terrain_Uuid.html" class="code">Uuid</a></li>
    <li><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></li>
    <li><a href="userdata_Terrain_World.html" class="code">World</a></li>
@@ -133,18 +149,24 @@
    <li><a href="namespace_Terrain_GLOBAL.html" class="code">GLOBAL</a></li>
    <li><a href="namespace_Terrain_sm.html" class="code">sm</a></li>
    <li><a href="namespace_Terrain_sm_color.html" class="code">sm.color</a></li>
+   <li><a href="namespace_Terrain_sm_container.html" class="code">sm.container</a></li>
    <li><a href="namespace_Terrain_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
-   <li><a href="namespace_Terrain_sm_harvestable.html" class="code">sm.harvestable</a></li>
+   <li><a href="namespace_Terrain_sm_debugGui.html" class="code">sm.debugGui</a></li>
+   <li><a href="namespace_Terrain_sm_interactable.html" class="code">sm.interactable</a></li>
    <li><a href="namespace_Terrain_sm_json.html" class="code">sm.json</a></li>
    <li><a href="namespace_Terrain_sm_log.html" class="code">sm.log</a></li>
    <li><a href="namespace_Terrain_sm_noise.html" class="code">sm.noise</a></li>
    <li><a href="namespace_Terrain_sm_quat.html" class="code">sm.quat</a></li>
+   <li><a href="namespace_Terrain_sm_scriptableObject.html" class="code">sm.scriptableObject</a></li>
    <li><a href="namespace_Terrain_sm_terrainData.html" class="code">sm.terrainData</a></li>
    <li><a href="namespace_Terrain_sm_terrainGeneration.html" class="code">sm.terrainGeneration</a></li>
+   <li><a href="namespace_Terrain_sm_terrainHarvestable.html" class="code">sm.terrainHarvestable</a></li>
    <li><a href="namespace_Terrain_sm_terrainTile.html" class="code">sm.terrainTile</a></li>
+   <li><a href="namespace_Terrain_sm_tunnelGenerator.html" class="code">sm.tunnelGenerator</a></li>
    <li><a href="namespace_Terrain_sm_util.html" class="code">sm.util</a></li>
    <li><a href="namespace_Terrain_sm_uuid.html" class="code">sm.uuid</a></li>
    <li><a href="namespace_Terrain_sm_vec3.html" class="code">sm.vec3</a></li>
+   <li><a href="namespace_Terrain_sm_voxelTerrainCell.html" class="code">sm.voxelTerrainCell</a></li>
   </ul>
  </div>
  <div id="content">
@@ -162,6 +184,7 @@
    <li><a href="#publicData" class="code">publicData</a></li>
    <li><a href="#smoothDirection" class="code">smoothDirection</a></li>
    <li><a href="#velocity" class="code">velocity</a></li>
+   <li><a href="#world" class="code">world</a></li>
    <li><a href="#worldPosition" class="code">worldPosition</a></li>
   </ul>  <h4>Functions:</h4>
   <ul>
@@ -180,16 +203,22 @@
    <li><a href="#getGlowMultiplier" class="code">getGlowMultiplier</a></li>
    <li><a href="#getHeight" class="code">getHeight</a></li>
    <li><a href="#getId" class="code">getId</a></li>
+   <li><a href="#getImmovable" class="code">getImmovable</a></li>
+   <li><a href="#getJumpSpeedFraction" class="code">getJumpSpeedFraction</a></li>
+   <li><a href="#getLockingHarvestable" class="code">getLockingHarvestable</a></li>
    <li><a href="#getLockingInteractable" class="code">getLockingInteractable</a></li>
    <li><a href="#getMass" class="code">getMass</a></li>
+   <li><a href="#getMoveSpeed" class="code">getMoveSpeed</a></li>
    <li><a href="#getMovementSpeedFraction" class="code">getMovementSpeedFraction</a></li>
    <li><a href="#getPlayer" class="code">getPlayer</a></li>
    <li><a href="#getPublicData" class="code">getPublicData</a></li>
    <li><a href="#getRadius" class="code">getRadius</a></li>
    <li><a href="#getSmoothViewDirection" class="code">getSmoothViewDirection</a></li>
+   <li><a href="#getSprintSpeed" class="code">getSprintSpeed</a></li>
    <li><a href="#getSurfaceNormal" class="code">getSurfaceNormal</a></li>
    <li><a href="#getTpBonePos" class="code">getTpBonePos</a></li>
    <li><a href="#getTpBoneRot" class="code">getTpBoneRot</a></li>
+   <li><a href="#getTumblingAngularVelocity" class="code">getTumblingAngularVelocity</a></li>
    <li><a href="#getTumblingExtent" class="code">getTumblingExtent</a></li>
    <li><a href="#getTumblingLinearVelocity" class="code">getTumblingLinearVelocity</a></li>
    <li><a href="#getTumblingWorldPosition" class="code">getTumblingWorldPosition</a></li>
@@ -198,17 +227,26 @@
    <li><a href="#getVelocity" class="code">getVelocity</a></li>
    <li><a href="#getWorld" class="code">getWorld</a></li>
    <li><a href="#getWorldPosition" class="code">getWorldPosition</a></li>
+   <li><a href="#hasActiveOverrideAnimation" class="code">hasActiveOverrideAnimation</a></li>
+   <li><a href="#hasGraphics" class="code">hasGraphics</a></li>
    <li><a href="#isAiming" class="code">isAiming</a></li>
    <li><a href="#isClimbing" class="code">isClimbing</a></li>
    <li><a href="#isCrouching" class="code">isCrouching</a></li>
    <li><a href="#isDefaultColor" class="code">isDefaultColor</a></li>
    <li><a href="#isDiving" class="code">isDiving</a></li>
    <li><a href="#isDowned" class="code">isDowned</a></li>
+   <li><a href="#isFlying" class="code">isFlying</a></li>
+   <li><a href="#isHovering" class="code">isHovering</a></li>
+   <li><a href="#isLadderClimbing" class="code">isLadderClimbing</a></li>
+   <li><a href="#isMoving" class="code">isMoving</a></li>
    <li><a href="#isOnGround" class="code">isOnGround</a></li>
    <li><a href="#isPlayer" class="code">isPlayer</a></li>
+   <li><a href="#isSeated" class="code">isSeated</a></li>
    <li><a href="#isSprinting" class="code">isSprinting</a></li>
    <li><a href="#isSwimming" class="code">isSwimming</a></li>
    <li><a href="#isTumbling" class="code">isTumbling</a></li>
+   <li><a href="#isVisible" class="code">isVisible</a></li>
+   <li><a href="#overrideRenderableList" class="code">overrideRenderableList</a></li>
    <li><a href="#removeAnimationCallbacks" class="code">removeAnimationCallbacks</a></li>
    <li><a href="#removeRenderable" class="code">removeRenderable</a></li>
    <li><a href="#setAllowTumbleAnimations" class="code">setAllowTumbleAnimations</a></li>
@@ -217,7 +255,12 @@
    <li><a href="#setColor" class="code">setColor</a></li>
    <li><a href="#setDiving" class="code">setDiving</a></li>
    <li><a href="#setDowned" class="code">setDowned</a></li>
+   <li><a href="#setFlying" class="code">setFlying</a></li>
    <li><a href="#setGlowMultiplier" class="code">setGlowMultiplier</a></li>
+   <li><a href="#setHovering" class="code">setHovering</a></li>
+   <li><a href="#setImmovable" class="code">setImmovable</a></li>
+   <li><a href="#setJumpSpeedFraction" class="code">setJumpSpeedFraction</a></li>
+   <li><a href="#setLockingHarvestable" class="code">setLockingHarvestable</a></li>
    <li><a href="#setLockingInteractable" class="code">setLockingInteractable</a></li>
    <li><a href="#setMovementEffects" class="code">setMovementEffects</a></li>
    <li><a href="#setMovementSpeedFraction" class="code">setMovementSpeedFraction</a></li>
@@ -227,13 +270,14 @@
    <li><a href="#setSwimming" class="code">setSwimming</a></li>
    <li><a href="#setTumbling" class="code">setTumbling</a></li>
    <li><a href="#setUpDirection" class="code">setUpDirection</a></li>
+   <li><a href="#setVisible" class="code">setVisible</a></li>
    <li><a href="#setWorldPosition" class="code">setWorldPosition</a></li>
    <li><a href="#updateAnimation" class="code">updateAnimation</a></li>
   </ul>
   <h4>Operations:</h4>
   <table>
-   <tr><th>Operation</th><th>Description</th></tr>
-   <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a> == <a href="userdata_Game_Character.html" class="code">Character</a></td><td>Checks if two instances of <a href="userdata_Game_Character.html" class="code">Character</a> refer to the same Character.</td></tr>
+   <tr><th>Operation</th><th>Return type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a> == <a href="userdata_Game_Character.html" class="code">Character</a></td><td>boolean</td><td>Checks if two instances of <a href="userdata_Game_Character.html" class="code">Character</a> refer to the same Character.</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="clientPublicData"></a>clientPublicData <i>table</i></h2>
@@ -285,9 +329,16 @@
   <h4>Get:</h4>
   <p>Returns the velocity of a character.</p>
   <hr>
+  <h2 class="code"><a id="world"></a>world <i><a href="userdata_Game_World.html" class="code">World</a></i></h2>
+  <h4>Get:</h4>
+  <p>Returns the world a character exists in.</p>
+  <hr>
   <h2 class="code"><a id="worldPosition"></a>worldPosition <i><a href="userdata_Game_Vec3.html" class="code">Vec3</a></i></h2>
   <h4>Get:</h4>
   <p>Returns the world position of a character.</p>
+  <h4>Set:</h4>
+  <p>Server only</p>
+  <p>Sets the world position of a character.</p>
   <hr>
   <h2 class="code"><a id="addRenderable"></a>addRenderable(character, renderable)</h2>
   <p>Client only</p>
@@ -299,13 +350,14 @@
    <tr><td class="code">string</td><td class="code">renderable</td><td>The renderable path.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="applyTumblingImpulse"></a>applyTumblingImpulse(character, impulse)</h2>
+  <h2 class="code"><a id="applyTumblingImpulse"></a>applyTumblingImpulse(character, impulse, offset?)</h2>
   <p>Applies impulse to the characters tumbling shape.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The character.</td></tr>
    <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">impulse</td><td>The impulse.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">offset?</td><td>The offset from the center point. (Defaults to no offset)</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="bindAnimationCallback"></a>bindAnimationCallback(character, animationName, triggerTime, callback)</h2>
@@ -324,12 +376,12 @@
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The character. </td></tr>
+   <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The character.</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
    <tr><th>Type</th><th>Description</th></tr>
-   <tr><td class="code">table</td><td>The set of active animatons { { name = string, weight = number }, ...}</td></tr>
+   <tr><td class="code">table</td><td>The set of active animations { { name = string, weight = number }, ...}</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="getAnimationInfo"></a>getAnimationInfo(character, name)</h2>
@@ -478,6 +530,46 @@
    <tr><td class="code">integer</td><td>The character's id.</td></tr>
   </table>
   <hr>
+  <h2 class="code"><a id="getImmovable"></a>getImmovable(character)</h2>
+  <p>Server only</p>
+  <p>Returns whether a non-player character is immovable,</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The character.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>The immovable state of the character.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getJumpSpeedFraction"></a>getJumpSpeedFraction(character)</h2>
+  <p>Gets the current fraction multiplier applied on the character's jump speed.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The character.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">number</td><td>The jump speed fraction.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getLockingHarvestable"></a>getLockingHarvestable(character)</h2>
+  <p>Get the <a href="userdata_Game_Harvestable.html" class="code">Harvestable</a> that the <a href="userdata_Game_Character.html" class="code">Character</a> is locked to.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The character.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></td><td>The harvestable.</td></tr>
+  </table>
+  <hr>
   <h2 class="code"><a id="getLockingInteractable"></a>getLockingInteractable(character)</h2>
   <p>Get the <a href="userdata_Game_Interactable.html" class="code">Interactable</a> that the <a href="userdata_Game_Character.html" class="code">Character</a> is locked to.</p>
   <h4>Parameters:</h4>
@@ -502,6 +594,19 @@
   <table>
    <tr><th>Type</th><th>Description</th></tr>
    <tr><td class="code">number</td><td>The character's mass.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getMoveSpeed"></a>getMoveSpeed(character)</h2>
+  <p>Returns the move speed of a character</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The character.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">number</td><td>The character's move speed.</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="getMovementSpeedFraction"></a>getMovementSpeedFraction(character)</h2>
@@ -570,6 +675,19 @@
    <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The character's smooth view direction.</td></tr>
   </table>
   <hr>
+  <h2 class="code"><a id="getSprintSpeed"></a>getSprintSpeed(character)</h2>
+  <p>Returns the sprint speed of a character</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The character.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">number</td><td>The character's sprint speed.</td></tr>
+  </table>
+  <hr>
   <h2 class="code"><a id="getSurfaceNormal"></a>getSurfaceNormal(character)</h2>
   <p>Returns the normal of the character's contact with a surface. Defaults to a zero vector when no contact is found.</p>
   <h4>Parameters:</h4>
@@ -611,8 +729,21 @@
    <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td>The joint rotation.</td></tr>
   </table>
   <hr>
+  <h2 class="code"><a id="getTumblingAngularVelocity"></a>getTumblingAngularVelocity(character)</h2>
+  <p>Returns the angular velocity of the characters tumbling shape.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The character.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The tumbling shape's angular velocity.</td></tr>
+  </table>
+  <hr>
   <h2 class="code"><a id="getTumblingExtent"></a>getTumblingExtent(character)</h2>
-  <p>Returns the extent of the characters tumbeling shape.</p>
+  <p>Returns the extent of the characters tumbling shape.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
@@ -638,7 +769,7 @@
   </table>
   <hr>
   <h2 class="code"><a id="getTumblingWorldPosition"></a>getTumblingWorldPosition(character)</h2>
-  <p>Returns the world position of the characters tumbeling shape.</p>
+  <p>Returns the world position of the characters tumbling shape.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
@@ -651,7 +782,7 @@
   </table>
   <hr>
   <h2 class="code"><a id="getTumblingWorldRotation"></a>getTumblingWorldRotation(character)</h2>
-  <p>Returns the world rotation of the characters tumbeling shape.</p>
+  <p>Returns the world rotation of the characters tumbling shape.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
@@ -715,6 +846,35 @@
    <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The character's world position.</td></tr>
   </table>
   <hr>
+  <h2 class="code"><a id="hasActiveOverrideAnimation"></a>hasActiveOverrideAnimation(player)</h2>
+  <p>Client only</p>
+  <p>Returns whether or not the character has an active animation override on its third person animations.</p>
+  <p>A third person animation override could be the crowbar animation when picking something up or the hammer when placing something.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">player</td><td>The player.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">bool</td><td>Has active animation override.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="hasGraphics"></a>hasGraphics(character)</h2>
+  <p>Client only</p>
+  <p>Checks if a character has graphics.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The character.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>Whether the character has graphics.</td></tr>
+  </table>
+  <hr>
   <h2 class="code"><a id="isAiming"></a>isAiming(character)</h2>
   <p>Returns whether a character is currently aiming with a weapon.</p>
   <h4>Parameters:</h4>
@@ -728,13 +888,17 @@
    <tr><td class="code">boolean</td><td>Whether the character is aiming.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="isClimbing"></a>isClimbing(character, state)</h2>
+  <h2 class="code"><a id="isClimbing"></a>isClimbing(character)</h2>
   <p>Get the character climbing state.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The character.</td></tr>
-   <tr><td class="code">boolean</td><td class="code">state</td><td>The state.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>The climbing state.</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="isCrouching"></a>isCrouching(character)</h2>
@@ -763,22 +927,82 @@
    <tr><td class="code">boolean</td><td>True if the color is the base color.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="isDiving"></a>isDiving(character, state)</h2>
+  <h2 class="code"><a id="isDiving"></a>isDiving(character)</h2>
   <p>Get the character diving state.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The character.</td></tr>
-   <tr><td class="code">boolean</td><td class="code">state</td><td>The state.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>The diving state.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="isDowned"></a>isDowned(character, state)</h2>
+  <h2 class="code"><a id="isDowned"></a>isDowned(character)</h2>
   <p>Get the character downed state.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The character.</td></tr>
-   <tr><td class="code">boolean</td><td class="code">state</td><td>The state.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>The downed state.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="isFlying"></a>isFlying(character)</h2>
+  <p>Get the character flying state.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The character.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>The flying state.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="isHovering"></a>isHovering(character)</h2>
+  <p>Get the character hovering state.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The character.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>The hovering state.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="isLadderClimbing"></a>isLadderClimbing(character)</h2>
+  <p>Get whether the character is climbing a ladder.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The character.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>The ladder climbing state.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="isMoving"></a>isMoving(character)</h2>
+  <p>Returns whether a character is currently moving.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The character.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>Whether the character is moving.</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="isOnGround"></a>isOnGround(character)</h2>
@@ -807,6 +1031,19 @@
    <tr><td class="code">boolean</td><td>Whether the character is owned by a player.</td></tr>
   </table>
   <hr>
+  <h2 class="code"><a id="isSeated"></a>isSeated(character)</h2>
+  <p>Returns whether the character is currently seated.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The character.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>Whether the character is seated.</td></tr>
+  </table>
+  <hr>
   <h2 class="code"><a id="isSprinting"></a>isSprinting(character)</h2>
   <p>Returns whether a character is currently sprinting.</p>
   <h4>Parameters:</h4>
@@ -820,22 +1057,54 @@
    <tr><td class="code">boolean</td><td>Whether the character is sprinting.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="isSwimming"></a>isSwimming(character, state)</h2>
+  <h2 class="code"><a id="isSwimming"></a>isSwimming(character)</h2>
   <p>Get the character swimming state.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The character.</td></tr>
-   <tr><td class="code">boolean</td><td class="code">state</td><td>The state.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>The swimming state.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="isTumbling"></a>isTumbling(character, state)</h2>
+  <h2 class="code"><a id="isTumbling"></a>isTumbling(character)</h2>
   <p>Get the character tumbling state.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The character.</td></tr>
-   <tr><td class="code">boolean</td><td class="code">state</td><td>The state.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>The tumbling state.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="isVisible"></a>isVisible(character)</h2>
+  <p>Client only</p>
+  <p>Returns whether a character is visible.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The character.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>Whether the character is visible.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="overrideRenderableList"></a>overrideRenderableList(character, renderables)</h2>
+  <p>Client only</p>
+  <p>Overrides a non player character's third person renderable list with a new list of renderables. Will trigger a rebuild of the character's graphics.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The character.</td></tr>
+   <tr><td class="code">table</td><td class="code">renderables</td><td>An array of renderable file paths to override with.</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="removeAnimationCallbacks"></a>removeAnimationCallbacks(character)</h2>
@@ -884,7 +1153,7 @@
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The character.</td></tr>
-   <tr><td class="code">boolean</td><td class="code">state</td><td>The state.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">state</td><td>The climbing state.</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="setColor"></a>setColor(character, color)</h2>
@@ -904,7 +1173,7 @@
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The character.</td></tr>
-   <tr><td class="code">boolean</td><td class="code">state</td><td>The state.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">state</td><td>The diving state.</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="setDowned"></a>setDowned(character, state)</h2>
@@ -914,7 +1183,18 @@
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The character.</td></tr>
-   <tr><td class="code">boolean</td><td class="code">state</td><td>The state.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">state</td><td>The downed state.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setFlying"></a>setFlying(character, state)</h2>
+  <p>Server only</p>
+  <p>Sets whether the character is flying.</p>
+  <p>Will not activate flight for player characters.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The character.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">state</td><td>The flying state.</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="setGlowMultiplier"></a>setGlowMultiplier(character, value)</h2>
@@ -925,6 +1205,50 @@
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The character.</td></tr>
    <tr><td class="code">number</td><td class="code">value</td><td>The glow multiplier (0.0 - 1.0).</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setHovering"></a>setHovering(character, state)</h2>
+  <p>Server only</p>
+  <p>Sets whether the character is hovering.</p>
+  <p>Will not activate hover for player characters.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The character.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">state</td><td>The hovering state.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setImmovable"></a>setImmovable(character, enable)</h2>
+  <p>Server only</p>
+  <p>Sets the immovable state on a non-player character. This prevents the character from updating its physics.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The character.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">enable</td><td>Set immovable state.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setJumpSpeedFraction"></a>setJumpSpeedFraction(character, fraction)</h2>
+  <p>Sets a fraction multiplier to the character's jump speed.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The character.</td></tr>
+   <tr><td class="code">number</td><td class="code">fraction</td><td>The jump speed fraction.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setLockingHarvestable"></a>setLockingHarvestable(character, harvestable)</h2>
+  <p>Set the <a href="userdata_Game_Harvestable.html" class="code">Harvestable</a> that the <a href="userdata_Game_Character.html" class="code">Character</a> is locked to. Set <a href="userdata_Game_Harvestable.html" class="code">Harvestable</a> to nil to unlock.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The character.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></td><td class="code">harvestable</td><td>The harvestable.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>True if the character was successfully locked or unlocked.</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="setLockingInteractable"></a>setLockingInteractable(character, interactable)</h2>
@@ -941,13 +1265,13 @@
    <tr><td class="code">boolean</td><td>True if the character was successfully locked or unlocked.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="setMovementEffects"></a>setMovementEffects(character, Effect)</h2>
+  <h2 class="code"><a id="setMovementEffects"></a>setMovementEffects(character, filepath)</h2>
   <p>Sets the movement effect set filepath.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The character.</td></tr>
-   <tr><td class="code">string</td><td class="code">Effect</td><td>set filepath		The effect set filepath.</td></tr>
+   <tr><td class="code">string</td><td class="code">filepath</td><td>The effect set filepath.</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="setMovementSpeedFraction"></a>setMovementSpeedFraction(character, fraction)</h2>
@@ -971,7 +1295,7 @@
    <tr><td class="code">number</td><td class="code">upper</td><td>The upper weight.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="setNameTag"></a>setNameTag(character, name, color=nil, requiresLoS=false, renderDistance=10000, fadeDistance=9500)</h2>
+  <h2 class="code"><a id="setNameTag"></a>setNameTag(character, name, color?, requiresLoS?, renderDistance?, fadeDistance?)</h2>
   <p>Client only</p>
   <p>Sets the name tag display value for the character</p>
   <h4>Parameters:</h4>
@@ -979,10 +1303,10 @@
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The character.</td></tr>
    <tr><td class="code">string</td><td class="code">name</td><td>The new name tag text value.</td></tr>
-   <tr><td class="code">color</td><td class="code">color=nil</td><td>The color of the name. (defaults to white)</td></tr>
-   <tr><td class="code">bool</td><td class="code">requiresLoS=false</td><td>Whether broken line of sight will hide the name tag.</td></tr>
-   <tr><td class="code">float</td><td class="code">renderDistance=10000</td><td>Max distance the name tag will render in.</td></tr>
-   <tr><td class="code">float</td><td class="code">fadeDistance=9500</td><td>Distance where fade out will start.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Color.html" class="code">Color</a></td><td class="code">color?</td><td>The color of the name. (defaults to white)</td></tr>
+   <tr><td class="code">boolean</td><td class="code">requiresLoS?</td><td>Whether broken line of sight will hide the name tag. (Defaults to false)</td></tr>
+   <tr><td class="code">number</td><td class="code">renderDistance?</td><td>Max distance the name tag will render in. (Defaults to 10000)</td></tr>
+   <tr><td class="code">number</td><td class="code">fadeDistance?</td><td>Distance where fade out will start. (Defaults to 9500)</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="setPublicData"></a>setPublicData(character, data)</h2>
@@ -998,11 +1322,15 @@
   <h2 class="code"><a id="setSwimming"></a>setSwimming(character, state)</h2>
   <p>Server only</p>
   <p>Sets whether the character is swimming.</p>
+  <div class="note">
+   <h4>Note:</h4>
+   <p>By default the swimming state is controlled by the client as part of the player movement. This value is treated like an override that is synchronized from the server. Buoyancy calculations in the character controller require that the character touches a liquid volume.</p>
+  </div>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The character.</td></tr>
-   <tr><td class="code">boolean</td><td class="code">state</td><td>The state.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">state</td><td>The swimming state.</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="setTumbling"></a>setTumbling(character, state)</h2>
@@ -1012,7 +1340,7 @@
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The character.</td></tr>
-   <tr><td class="code">boolean</td><td class="code">state</td><td>The state.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">state</td><td>The tumbling state.</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="setUpDirection"></a>setUpDirection(character, up)</h2>
@@ -1025,17 +1353,27 @@
    <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">up</td><td>The direction.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="setWorldPosition"></a>setWorldPosition(character, The)</h2>
+  <h2 class="code"><a id="setVisible"></a>setVisible(character, visible)</h2>
+  <p>Client only</p>
+  <p>Sets the visibility.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The character.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">visible</td><td>Whether the character should be visible.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setWorldPosition"></a>setWorldPosition(character, position)</h2>
   <p>Server only</p>
   <p>Sets the world position of a character.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The character.</td></tr>
-   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">The</td><td>character's new world position.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The character's new world position.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="updateAnimation"></a>updateAnimation(character, name, time, weight=nil, additive=nil)</h2>
+  <h2 class="code"><a id="updateAnimation"></a>updateAnimation(character, name, time, weight?, additive?)</h2>
   <p>Client only</p>
   <p>Updates a character animation.</p>
   <h4>Parameters:</h4>
@@ -1044,8 +1382,8 @@
    <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The character.</td></tr>
    <tr><td class="code">string</td><td class="code">name</td><td>The animation name.</td></tr>
    <tr><td class="code">number</td><td class="code">time</td><td>The time.</td></tr>
-   <tr><td class="code">number</td><td class="code">weight=nil</td><td>The weight. Defaults to -1.0. (Optional)</td></tr>
-   <tr><td class="code">boolean</td><td class="code">additive=nil</td><td>Whether the animation will be added to the default animation. Defaults to false. (Optional)</td></tr>
+   <tr><td class="code">number</td><td class="code">weight?</td><td>The weight. Defaults to -1.0. (Optional)</td></tr>
+   <tr><td class="code">boolean</td><td class="code">additive?</td><td>Whether the animation will be added to the default animation. Defaults to false. (Optional)</td></tr>
   </table>
  </div>
 </body>

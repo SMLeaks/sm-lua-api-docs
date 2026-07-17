@@ -17,6 +17,7 @@
   <h3>Classes</h3>
   <ul>
    <li><a href="class_Game_CharacterClass.html" class="code">CharacterClass</a></li>
+   <li><a href="class_Game_ClientScriptableObjectClass.html" class="code">ClientScriptableObjectClass</a></li>
    <li><a href="class_Game_GameClass.html" class="code">GameClass</a></li>
    <li><a href="class_Game_HarvestableClass.html" class="code">HarvestableClass</a></li>
    <li><a href="class_Game_PlayerClass.html" class="code">PlayerClass</a></li>
@@ -34,14 +35,18 @@
    <li><a href="userdata_Game_Body.html" class="code">Body</a></li>
    <li><a href="userdata_Game_BuilderGuide.html" class="code">BuilderGuide</a></li>
    <li><a href="userdata_Game_Character.html" class="code">Character</a></li>
+   <li><a href="userdata_Game_ClientScriptableObject.html" class="code">ClientScriptableObject</a></li>
    <li><a href="userdata_Game_Color.html" class="code">Color</a></li>
    <li><a href="userdata_Game_Container.html" class="code">Container</a></li>
    <li><a href="userdata_Game_CullSphereGroup.html" class="code">CullSphereGroup</a></li>
    <li><a href="userdata_Game_Effect.html" class="code">Effect</a></li>
+   <li><a href="userdata_Game_Garage.html" class="code">Garage</a></li>
    <li><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></li>
    <li><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></li>
    <li><a href="userdata_Game_Interactable.html" class="code">Interactable</a></li>
    <li><a href="userdata_Game_Joint.html" class="code">Joint</a></li>
+   <li><a href="userdata_Game_JsonGui.html" class="code">JsonGui</a></li>
+   <li><a href="userdata_Game_JsonWidget.html" class="code">JsonWidget</a></li>
    <li><a href="userdata_Game_Lift.html" class="code">Lift</a></li>
    <li><a href="userdata_Game_LoadCellHandle.html" class="code">LoadCellHandle</a></li>
    <li><a href="userdata_Game_Network.html" class="code">Network</a></li>
@@ -73,6 +78,7 @@
    <li><a href="namespace_Game_sm_cell.html" class="code">sm.cell</a></li>
    <li><a href="namespace_Game_sm_challenge.html" class="code">sm.challenge</a></li>
    <li><a href="namespace_Game_sm_character.html" class="code">sm.character</a></li>
+   <li><a href="namespace_Game_sm_clientScriptableObject.html" class="code">sm.clientScriptableObject</a></li>
    <li><a href="namespace_Game_sm_color.html" class="code">sm.color</a></li>
    <li><a href="namespace_Game_sm_construction.html" class="code">sm.construction</a></li>
    <li><a href="namespace_Game_sm_container.html" class="code">sm.container</a></li>
@@ -80,9 +86,11 @@
    <li><a href="namespace_Game_sm_cullSphereGroup.html" class="code">sm.cullSphereGroup</a></li>
    <li><a href="namespace_Game_sm_debris.html" class="code">sm.debris</a></li>
    <li><a href="namespace_Game_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
+   <li><a href="namespace_Game_sm_debugGui.html" class="code">sm.debugGui</a></li>
    <li><a href="namespace_Game_sm_effect.html" class="code">sm.effect</a></li>
    <li><a href="namespace_Game_sm_event.html" class="code">sm.event</a></li>
    <li><a href="namespace_Game_sm_game.html" class="code">sm.game</a></li>
+   <li><a href="namespace_Game_sm_garage.html" class="code">sm.garage</a></li>
    <li><a href="namespace_Game_sm_gui.html" class="code">sm.gui</a></li>
    <li><a href="namespace_Game_sm_gui_widget.html" class="code">sm.gui.widget</a></li>
    <li><a href="namespace_Game_sm_harvestable.html" class="code">sm.harvestable</a></li>
@@ -90,15 +98,19 @@
    <li><a href="namespace_Game_sm_item.html" class="code">sm.item</a></li>
    <li><a href="namespace_Game_sm_joint.html" class="code">sm.joint</a></li>
    <li><a href="namespace_Game_sm_json.html" class="code">sm.json</a></li>
+   <li><a href="namespace_Game_sm_jsonGui.html" class="code">sm.jsonGui</a></li>
+   <li><a href="namespace_Game_sm_lift.html" class="code">sm.lift</a></li>
    <li><a href="namespace_Game_sm_localPlayer.html" class="code">sm.localPlayer</a></li>
    <li><a href="namespace_Game_sm_log.html" class="code">sm.log</a></li>
    <li><a href="namespace_Game_sm_melee.html" class="code">sm.melee</a></li>
    <li><a href="namespace_Game_sm_menuCreation.html" class="code">sm.menuCreation</a></li>
+   <li><a href="namespace_Game_sm_message.html" class="code">sm.message</a></li>
    <li><a href="namespace_Game_sm_noise.html" class="code">sm.noise</a></li>
    <li><a href="namespace_Game_sm_particle.html" class="code">sm.particle</a></li>
    <li><a href="namespace_Game_sm_pathNode.html" class="code">sm.pathNode</a></li>
    <li><a href="namespace_Game_sm_pathfinder.html" class="code">sm.pathfinder</a></li>
    <li><a href="namespace_Game_sm_physics.html" class="code">sm.physics</a></li>
+   <li><a href="namespace_Game_sm_pipeGraph.html" class="code">sm.pipeGraph</a></li>
    <li><a href="namespace_Game_sm_player.html" class="code">sm.player</a></li>
    <li><a href="namespace_Game_sm_portal.html" class="code">sm.portal</a></li>
    <li><a href="namespace_Game_sm_projectile.html" class="code">sm.projectile</a></li>
@@ -122,8 +134,12 @@
   <h3>Object Types 'userdata'</h3>
   <ul>
    <li><a href="userdata_Terrain_Color.html" class="code">Color</a></li>
+   <li><a href="userdata_Terrain_Container.html" class="code">Container</a></li>
    <li><a href="userdata_Terrain_Harvestable.html" class="code">Harvestable</a></li>
+   <li><a href="userdata_Terrain_Interactable.html" class="code">Interactable</a></li>
+   <li><a href="userdata_Terrain_Portal.html" class="code">Portal</a></li>
    <li><a href="userdata_Terrain_Quat.html" class="code">Quat</a></li>
+   <li><a href="userdata_Terrain_ScriptableObject.html" class="code">ScriptableObject</a></li>
    <li><a href="userdata_Terrain_Uuid.html" class="code">Uuid</a></li>
    <li><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></li>
    <li><a href="userdata_Terrain_World.html" class="code">World</a></li>
@@ -133,24 +149,86 @@
    <li><a href="namespace_Terrain_GLOBAL.html" class="code">GLOBAL</a></li>
    <li><a href="namespace_Terrain_sm.html" class="code">sm</a></li>
    <li><a href="namespace_Terrain_sm_color.html" class="code">sm.color</a></li>
+   <li><a href="namespace_Terrain_sm_container.html" class="code">sm.container</a></li>
    <li><a href="namespace_Terrain_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
-   <li><a href="namespace_Terrain_sm_harvestable.html" class="code">sm.harvestable</a></li>
+   <li><a href="namespace_Terrain_sm_debugGui.html" class="code">sm.debugGui</a></li>
+   <li><a href="namespace_Terrain_sm_interactable.html" class="code">sm.interactable</a></li>
    <li><a href="namespace_Terrain_sm_json.html" class="code">sm.json</a></li>
    <li><a href="namespace_Terrain_sm_log.html" class="code">sm.log</a></li>
    <li><a href="namespace_Terrain_sm_noise.html" class="code">sm.noise</a></li>
    <li><a href="namespace_Terrain_sm_quat.html" class="code">sm.quat</a></li>
+   <li><a href="namespace_Terrain_sm_scriptableObject.html" class="code">sm.scriptableObject</a></li>
    <li><a href="namespace_Terrain_sm_terrainData.html" class="code">sm.terrainData</a></li>
    <li><a href="namespace_Terrain_sm_terrainGeneration.html" class="code">sm.terrainGeneration</a></li>
+   <li><a href="namespace_Terrain_sm_terrainHarvestable.html" class="code">sm.terrainHarvestable</a></li>
    <li><a href="namespace_Terrain_sm_terrainTile.html" class="code">sm.terrainTile</a></li>
+   <li><a href="namespace_Terrain_sm_tunnelGenerator.html" class="code">sm.tunnelGenerator</a></li>
    <li><a href="namespace_Terrain_sm_util.html" class="code">sm.util</a></li>
    <li><a href="namespace_Terrain_sm_uuid.html" class="code">sm.uuid</a></li>
    <li><a href="namespace_Terrain_sm_vec3.html" class="code">sm.vec3</a></li>
+   <li><a href="namespace_Terrain_sm_voxelTerrainCell.html" class="code">sm.voxelTerrainCell</a></li>
   </ul>
  </div>
  <div id="content">
   <h1 class="code">sm.render</h1>
   <p>Render settings</p>
-  <h4>Functions:</h4  <ul>   <li><a href="#getDrawDistance" class="code">getDrawDistance</a></li>   <li><a href="#getOutdoorLighting" class="code">getOutdoorLighting</a></li>   <li><a href="#getScreenCoordinatesFromWorldPosition" class="code">getScreenCoordinatesFromWorldPosition</a></li>   <li><a href="#isOutdoor" class="code">isOutdoor</a></li>   <li><a href="#setOutdoorLighting" class="code">setOutdoorLighting</a></li>  </ul>  <hr>
+  <h4>Functions:</h4  <ul>   <li><a href="#getDefaultCameraLight" class="code">getDefaultCameraLight</a></li>   <li><a href="#getDefaultFog" class="code">getDefaultFog</a></li>   <li><a href="#getDefaultGI" class="code">getDefaultGI</a></li>   <li><a href="#getDefaultHorizonLight" class="code">getDefaultHorizonLight</a></li>   <li><a href="#getDefaultReflectionColor" class="code">getDefaultReflectionColor</a></li>   <li><a href="#getDefaultVolumetricFog" class="code">getDefaultVolumetricFog</a></li>   <li><a href="#getDefaultVoxelLODBoost" class="code">getDefaultVoxelLODBoost</a></li>   <li><a href="#getDrawDistance" class="code">getDrawDistance</a></li>   <li><a href="#getOutdoorLighting" class="code">getOutdoorLighting</a></li>   <li><a href="#getScreenCoordinatesFromWorldPosition" class="code">getScreenCoordinatesFromWorldPosition</a></li>   <li><a href="#isOutdoor" class="code">isOutdoor</a></li>   <li><a href="#resetAllReflectionColor" class="code">resetAllReflectionColor</a></li>   <li><a href="#resetCameraLight" class="code">resetCameraLight</a></li>   <li><a href="#resetFog" class="code">resetFog</a></li>   <li><a href="#resetGI" class="code">resetGI</a></li>   <li><a href="#resetHorizonLight" class="code">resetHorizonLight</a></li>   <li><a href="#resetLUT" class="code">resetLUT</a></li>   <li><a href="#resetVolumetricFog" class="code">resetVolumetricFog</a></li>   <li><a href="#resetVoxelLODBoost" class="code">resetVoxelLODBoost</a></li>   <li><a href="#setCameraLight" class="code">setCameraLight</a></li>   <li><a href="#setCinematic" class="code">setCinematic</a></li>   <li><a href="#setCloudSettings" class="code">setCloudSettings</a></li>   <li><a href="#setFog" class="code">setFog</a></li>   <li><a href="#setGI" class="code">setGI</a></li>   <li><a href="#setHorizonLight" class="code">setHorizonLight</a></li>   <li><a href="#setLUT" class="code">setLUT</a></li>   <li><a href="#setOutdoorLighting" class="code">setOutdoorLighting</a></li>   <li><a href="#setReflectionLevelColor" class="code">setReflectionLevelColor</a></li>   <li><a href="#setVolumetricFog" class="code">setVolumetricFog</a></li>   <li><a href="#setVoxelLODBoost" class="code">setVoxelLODBoost</a></li>  </ul>  <hr>
+  <h2 class="code"><a id="getDefaultCameraLight"></a>sm.render.getDefaultCameraLight()</h2>
+  <p>Gets a table of the default camera light render settings.</p>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td>The default camera light render settings.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getDefaultFog"></a>sm.render.getDefaultFog()</h2>
+  <p>Gets a table of the default fog render settings.</p>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td>The default fog render settings.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getDefaultGI"></a>sm.render.getDefaultGI()</h2>
+  <p>Gets a table of the default GI render settings.</p>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td>The default GI render settings.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getDefaultHorizonLight"></a>sm.render.getDefaultHorizonLight()</h2>
+  <p>Gets a table of the default horizon light render settings.</p>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td>The default horizon light render settings.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getDefaultReflectionColor"></a>sm.render.getDefaultReflectionColor()</h2>
+  <p>Gets a table of the default reflection color render settings.</p>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td>The default reflection color render settings.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getDefaultVolumetricFog"></a>sm.render.getDefaultVolumetricFog()</h2>
+  <p>Gets a table of the default Volumetric fog render settings.</p>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td>The default Volumetric fog render settings.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getDefaultVoxelLODBoost"></a>sm.render.getDefaultVoxelLODBoost()</h2>
+  <p>Gets the default voxel LOD boost render setting.</p>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">number</td><td>The default voxel LOD boost render setting.</td></tr>
+  </table>
+  <hr>
   <h2 class="code"><a id="getDrawDistance"></a>sm.render.getDrawDistance()</h2>
   <p>Client only</p>
   <p>Gets the draw distance.</p>
@@ -193,6 +271,132 @@
    <tr><td class="code">boolean</td><td>True if local client is outdoor.</td></tr>
   </table>
   <hr>
+  <h2 class="code"><a id="resetAllReflectionColor"></a>sm.render.resetAllReflectionColor()</h2>
+  <p>Client only</p>
+  <p>Resets all the reflection color settings.</p>
+  <hr>
+  <h2 class="code"><a id="resetCameraLight"></a>sm.render.resetCameraLight()</h2>
+  <p>Resets the camera light override settings.</p>
+  <hr>
+  <h2 class="code"><a id="resetFog"></a>sm.render.resetFog()</h2>
+  <p>Client only</p>
+  <p>Resets the fog override settings.</p>
+  <hr>
+  <h2 class="code"><a id="resetGI"></a>sm.render.resetGI()</h2>
+  <p>Client only</p>
+  <p>Resets the global illumination override settings.</p>
+  <hr>
+  <h2 class="code"><a id="resetHorizonLight"></a>sm.render.resetHorizonLight()</h2>
+  <p>Client only</p>
+  <p>Resets the Horizon light settings.</p>
+  <hr>
+  <h2 class="code"><a id="resetLUT"></a>sm.render.resetLUT()</h2>
+  <p>Client only</p>
+  <p>Resets the LUT override settings.</p>
+  <hr>
+  <h2 class="code"><a id="resetVolumetricFog"></a>sm.render.resetVolumetricFog()</h2>
+  <p>Client only</p>
+  <p>Resets the Volumetric fog override settings.</p>
+  <hr>
+  <h2 class="code"><a id="resetVoxelLODBoost"></a>sm.render.resetVoxelLODBoost()</h2>
+  <p>Client only</p>
+  <p>Resets the voxel terrain LOD boost override setting.</p>
+  <hr>
+  <h2 class="code"><a id="setCameraLight"></a>sm.render.setCameraLight(intensity, range, color, farIntensity?, farRange?, farColor?)</h2>
+  <p>Client only</p>
+  <p>Sets the camera light override settings.</p>
+  <p>Optionally sets far camera light settings (used for camera pullback lerp).</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">number</td><td class="code">intensity</td><td>The light intensity.</td></tr>
+   <tr><td class="code">number</td><td class="code">range</td><td>Light range.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Color.html" class="code">Color</a></td><td class="code">color</td><td>Light color.</td></tr>
+   <tr><td class="code">number</td><td class="code">farIntensity?</td><td>Far light intensity. (Optional)</td></tr>
+   <tr><td class="code">number</td><td class="code">farRange?</td><td>Far light range. (Optional)</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Color.html" class="code">Color</a></td><td class="code">farColor?</td><td>Far light color. (Optional)</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setCinematic"></a>sm.render.setCinematic(cinematic)</h2>
+  <p>Client only</p>
+  <p>Sets if a cinematic is playing</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td class="code">cinematic</td><td>If true, sets to cinematic</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setCloudSettings"></a>sm.render.setCloudSettings(coverage, height, radius, tallnessScale, directionalLightMod, scroll, scrollRotation)</h2>
+  <p>Client only</p>
+  <p>Sets the cloud settings.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">number</td><td class="code">coverage</td><td>The fraction of the cloud coverage.</td></tr>
+   <tr><td class="code">number</td><td class="code">height</td><td>The cloud height.</td></tr>
+   <tr><td class="code">number</td><td class="code">radius</td><td>The atmosphere radius.</td></tr>
+   <tr><td class="code">number</td><td class="code">tallnessScale</td><td>The tallness scale(0.1 - 4.0).</td></tr>
+   <tr><td class="code">number</td><td class="code">directionalLightMod</td><td>Directional light mod (0.0 - 1.0).</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">scroll</td><td>Cloud scroll.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">scrollRotation</td><td>Cloud scroll rotation.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setFog"></a>sm.render.setFog(startDistance, endDistance, falloffFactor, startColor, endColor, verticalOpacity, verticalFadeDistance, verticalFalloff, verticalStart, verticalEnd, verticalStartColor, verticalEndColor, fadeDistance)</h2>
+  <p>Client only</p>
+  <p>Sets the fog override settings.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">number</td><td class="code">startDistance</td><td>Fog start distance.</td></tr>
+   <tr><td class="code">number</td><td class="code">endDistance</td><td>Fog end distance.</td></tr>
+   <tr><td class="code">number</td><td class="code">falloffFactor</td><td>Fog falloff.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Color.html" class="code">Color</a></td><td class="code">startColor</td><td>Fog start color.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Color.html" class="code">Color</a></td><td class="code">endColor</td><td>Fog end color.</td></tr>
+   <tr><td class="code">number</td><td class="code">verticalOpacity</td><td>Vertical fog opacity. (Optional)</td></tr>
+   <tr><td class="code">number</td><td class="code">verticalFadeDistance</td><td>Vertical fog fade distance.  (Optional)</td></tr>
+   <tr><td class="code">number</td><td class="code">verticalFalloff</td><td>Vertical fog falloff.  (Optional)</td></tr>
+   <tr><td class="code">number</td><td class="code">verticalStart</td><td>Vertical fog start distance.  (Optional)</td></tr>
+   <tr><td class="code">number</td><td class="code">verticalEnd</td><td>Vertical fog end distance.  (Optional)</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Color.html" class="code">Color</a></td><td class="code">verticalStartColor</td><td>Vertical fog start color.  (Optional)</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Color.html" class="code">Color</a></td><td class="code">verticalEndColor</td><td>Vertical fog end color.  (Optional)</td></tr>
+   <tr><td class="code">number</td><td class="code">fadeDistance</td><td>Fog fade distance. (Optional)</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setGI"></a>sm.render.setGI(weight)</h2>
+  <p>Client only</p>
+  <p>Sets the global illumination override settings.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">number</td><td class="code">weight</td><td>GI weight.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setHorizonLight"></a>sm.render.setHorizonLight(topColor, horizonColor, bottomColor, direction, start, end, falloff)</h2>
+  <p>Client only</p>
+  <p>Sets the Horizon light settings.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Color.html" class="code">Color</a></td><td class="code">topColor</td><td>Color of the top of the horizon light.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Color.html" class="code">Color</a></td><td class="code">horizonColor</td><td>Color of the horizon of the horizon light.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Color.html" class="code">Color</a></td><td class="code">bottomColor</td><td>Color of the bottom of the horizon light.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">direction</td><td>Direction of the horizon light.</td></tr>
+   <tr><td class="code">number</td><td class="code">start</td><td>Start distance for the horizon light. (Optional)</td></tr>
+   <tr><td class="code">number</td><td class="code">end</td><td>End distance for the horizon light. (Optional)</td></tr>
+   <tr><td class="code">number</td><td class="code">falloff</td><td>Falloff factor for the horizon light. (Optional)</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setLUT"></a>sm.render.setLUT(LUT-A, LUT-B?, blend?)</h2>
+  <p>Client only</p>
+  <p>Sets the LUT override settings.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">string</td><td class="code">LUT-A</td><td>Name of LUT A.</td></tr>
+   <tr><td class="code">string</td><td class="code">LUT-B?</td><td>Name of LUT B.</td></tr>
+   <tr><td class="code">number</td><td class="code">blend?</td><td>blend between 0.0 and 1.0 for LUT A and B. (Defaults to 0.0)</td></tr>
+  </table>
+  <hr>
   <h2 class="code"><a id="setOutdoorLighting"></a>sm.render.setOutdoorLighting(value)</h2>
   <p>Client only</p>
   <p>Sets the lighting cycle fraction.</p>
@@ -200,6 +404,42 @@
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code">number</td><td class="code">value</td><td>The fraction of the day cycle lighting.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setReflectionLevelColor"></a>sm.render.setReflectionLevelColor(settingsLevel, min, max, mul)</h2>
+  <p>Client only</p>
+  <p>Sets the reflection color correction settings for one reflection level.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">string</td><td class="code">settingsLevel</td><td>Off/Low/Medium/High.</td></tr>
+   <tr><td class="code">number</td><td class="code">min</td><td>Color min.</td></tr>
+   <tr><td class="code">number</td><td class="code">max</td><td>Color max.</td></tr>
+   <tr><td class="code">number</td><td class="code">mul</td><td>Color mul.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setVolumetricFog"></a>sm.render.setVolumetricFog(min, max, loopSpeed, scrollSpeed, scale, intensity)</h2>
+  <p>Client only</p>
+  <p>Sets the Volumetric fog override settings.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">number</td><td class="code">min</td><td>Fog min.</td></tr>
+   <tr><td class="code">number</td><td class="code">max</td><td>Fog max.</td></tr>
+   <tr><td class="code">number</td><td class="code">loopSpeed</td><td>Fog loop speed.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">scrollSpeed</td><td>Fog scroll speed.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">scale</td><td>Fog scale.</td></tr>
+   <tr><td class="code">number</td><td class="code">intensity</td><td>Fog intensity.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setVoxelLODBoost"></a>sm.render.setVoxelLODBoost(boost)</h2>
+  <p>Client only</p>
+  <p>Sets the voxel terrain LOD boost override setting.</p>
+  <p>The value is capped by the current draw distance quality.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">number</td><td class="code">boost</td><td>Voxel terrain LOD boost.</td></tr>
   </table>
  </div>
 </body>

@@ -17,6 +17,7 @@
   <h3>Classes</h3>
   <ul>
    <li><a href="class_Game_CharacterClass.html" class="code">CharacterClass</a></li>
+   <li><a href="class_Game_ClientScriptableObjectClass.html" class="code">ClientScriptableObjectClass</a></li>
    <li><a href="class_Game_GameClass.html" class="code">GameClass</a></li>
    <li><a href="class_Game_HarvestableClass.html" class="code">HarvestableClass</a></li>
    <li><a href="class_Game_PlayerClass.html" class="code">PlayerClass</a></li>
@@ -34,14 +35,18 @@
    <li><a href="userdata_Game_Body.html" class="code">Body</a></li>
    <li><a href="userdata_Game_BuilderGuide.html" class="code">BuilderGuide</a></li>
    <li><a href="userdata_Game_Character.html" class="code">Character</a></li>
+   <li><a href="userdata_Game_ClientScriptableObject.html" class="code">ClientScriptableObject</a></li>
    <li><a href="userdata_Game_Color.html" class="code">Color</a></li>
    <li><a href="userdata_Game_Container.html" class="code">Container</a></li>
    <li><a href="userdata_Game_CullSphereGroup.html" class="code">CullSphereGroup</a></li>
    <li><a href="userdata_Game_Effect.html" class="code">Effect</a></li>
+   <li><a href="userdata_Game_Garage.html" class="code">Garage</a></li>
    <li><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></li>
    <li><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></li>
    <li><a href="userdata_Game_Interactable.html" class="code">Interactable</a></li>
    <li><a href="userdata_Game_Joint.html" class="code">Joint</a></li>
+   <li><a href="userdata_Game_JsonGui.html" class="code">JsonGui</a></li>
+   <li><a href="userdata_Game_JsonWidget.html" class="code">JsonWidget</a></li>
    <li><a href="userdata_Game_Lift.html" class="code">Lift</a></li>
    <li><a href="userdata_Game_LoadCellHandle.html" class="code">LoadCellHandle</a></li>
    <li><a href="userdata_Game_Network.html" class="code">Network</a></li>
@@ -73,6 +78,7 @@
    <li><a href="namespace_Game_sm_cell.html" class="code">sm.cell</a></li>
    <li><a href="namespace_Game_sm_challenge.html" class="code">sm.challenge</a></li>
    <li><a href="namespace_Game_sm_character.html" class="code">sm.character</a></li>
+   <li><a href="namespace_Game_sm_clientScriptableObject.html" class="code">sm.clientScriptableObject</a></li>
    <li><a href="namespace_Game_sm_color.html" class="code">sm.color</a></li>
    <li><a href="namespace_Game_sm_construction.html" class="code">sm.construction</a></li>
    <li><a href="namespace_Game_sm_container.html" class="code">sm.container</a></li>
@@ -80,9 +86,11 @@
    <li><a href="namespace_Game_sm_cullSphereGroup.html" class="code">sm.cullSphereGroup</a></li>
    <li><a href="namespace_Game_sm_debris.html" class="code">sm.debris</a></li>
    <li><a href="namespace_Game_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
+   <li><a href="namespace_Game_sm_debugGui.html" class="code">sm.debugGui</a></li>
    <li><a href="namespace_Game_sm_effect.html" class="code">sm.effect</a></li>
    <li><a href="namespace_Game_sm_event.html" class="code">sm.event</a></li>
    <li><a href="namespace_Game_sm_game.html" class="code">sm.game</a></li>
+   <li><a href="namespace_Game_sm_garage.html" class="code">sm.garage</a></li>
    <li><a href="namespace_Game_sm_gui.html" class="code">sm.gui</a></li>
    <li><a href="namespace_Game_sm_gui_widget.html" class="code">sm.gui.widget</a></li>
    <li><a href="namespace_Game_sm_harvestable.html" class="code">sm.harvestable</a></li>
@@ -90,15 +98,19 @@
    <li><a href="namespace_Game_sm_item.html" class="code">sm.item</a></li>
    <li><a href="namespace_Game_sm_joint.html" class="code">sm.joint</a></li>
    <li><a href="namespace_Game_sm_json.html" class="code">sm.json</a></li>
+   <li><a href="namespace_Game_sm_jsonGui.html" class="code">sm.jsonGui</a></li>
+   <li><a href="namespace_Game_sm_lift.html" class="code">sm.lift</a></li>
    <li><a href="namespace_Game_sm_localPlayer.html" class="code">sm.localPlayer</a></li>
    <li><a href="namespace_Game_sm_log.html" class="code">sm.log</a></li>
    <li><a href="namespace_Game_sm_melee.html" class="code">sm.melee</a></li>
    <li><a href="namespace_Game_sm_menuCreation.html" class="code">sm.menuCreation</a></li>
+   <li><a href="namespace_Game_sm_message.html" class="code">sm.message</a></li>
    <li><a href="namespace_Game_sm_noise.html" class="code">sm.noise</a></li>
    <li><a href="namespace_Game_sm_particle.html" class="code">sm.particle</a></li>
    <li><a href="namespace_Game_sm_pathNode.html" class="code">sm.pathNode</a></li>
    <li><a href="namespace_Game_sm_pathfinder.html" class="code">sm.pathfinder</a></li>
    <li><a href="namespace_Game_sm_physics.html" class="code">sm.physics</a></li>
+   <li><a href="namespace_Game_sm_pipeGraph.html" class="code">sm.pipeGraph</a></li>
    <li><a href="namespace_Game_sm_player.html" class="code">sm.player</a></li>
    <li><a href="namespace_Game_sm_portal.html" class="code">sm.portal</a></li>
    <li><a href="namespace_Game_sm_projectile.html" class="code">sm.projectile</a></li>
@@ -122,8 +134,12 @@
   <h3>Object Types 'userdata'</h3>
   <ul>
    <li><a href="userdata_Terrain_Color.html" class="code">Color</a></li>
+   <li><a href="userdata_Terrain_Container.html" class="code">Container</a></li>
    <li><a href="userdata_Terrain_Harvestable.html" class="code">Harvestable</a></li>
+   <li><a href="userdata_Terrain_Interactable.html" class="code">Interactable</a></li>
+   <li><a href="userdata_Terrain_Portal.html" class="code">Portal</a></li>
    <li><a href="userdata_Terrain_Quat.html" class="code">Quat</a></li>
+   <li><a href="userdata_Terrain_ScriptableObject.html" class="code">ScriptableObject</a></li>
    <li><a href="userdata_Terrain_Uuid.html" class="code">Uuid</a></li>
    <li><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></li>
    <li><a href="userdata_Terrain_World.html" class="code">World</a></li>
@@ -133,18 +149,24 @@
    <li><a href="namespace_Terrain_GLOBAL.html" class="code">GLOBAL</a></li>
    <li><a href="namespace_Terrain_sm.html" class="code">sm</a></li>
    <li><a href="namespace_Terrain_sm_color.html" class="code">sm.color</a></li>
+   <li><a href="namespace_Terrain_sm_container.html" class="code">sm.container</a></li>
    <li><a href="namespace_Terrain_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
-   <li><a href="namespace_Terrain_sm_harvestable.html" class="code">sm.harvestable</a></li>
+   <li><a href="namespace_Terrain_sm_debugGui.html" class="code">sm.debugGui</a></li>
+   <li><a href="namespace_Terrain_sm_interactable.html" class="code">sm.interactable</a></li>
    <li><a href="namespace_Terrain_sm_json.html" class="code">sm.json</a></li>
    <li><a href="namespace_Terrain_sm_log.html" class="code">sm.log</a></li>
    <li><a href="namespace_Terrain_sm_noise.html" class="code">sm.noise</a></li>
    <li><a href="namespace_Terrain_sm_quat.html" class="code">sm.quat</a></li>
+   <li><a href="namespace_Terrain_sm_scriptableObject.html" class="code">sm.scriptableObject</a></li>
    <li><a href="namespace_Terrain_sm_terrainData.html" class="code">sm.terrainData</a></li>
    <li><a href="namespace_Terrain_sm_terrainGeneration.html" class="code">sm.terrainGeneration</a></li>
+   <li><a href="namespace_Terrain_sm_terrainHarvestable.html" class="code">sm.terrainHarvestable</a></li>
    <li><a href="namespace_Terrain_sm_terrainTile.html" class="code">sm.terrainTile</a></li>
+   <li><a href="namespace_Terrain_sm_tunnelGenerator.html" class="code">sm.tunnelGenerator</a></li>
    <li><a href="namespace_Terrain_sm_util.html" class="code">sm.util</a></li>
    <li><a href="namespace_Terrain_sm_uuid.html" class="code">sm.uuid</a></li>
    <li><a href="namespace_Terrain_sm_vec3.html" class="code">sm.vec3</a></li>
+   <li><a href="namespace_Terrain_sm_voxelTerrainCell.html" class="code">sm.voxelTerrainCell</a></li>
   </ul>
  </div>
  <div id="content">
@@ -173,6 +195,7 @@
    <li><a href="#createBlock" class="code">createBlock</a></li>
    <li><a href="#createPart" class="code">createPart</a></li>
    <li><a href="#createWedge" class="code">createWedge</a></li>
+   <li><a href="#destroyCreation" class="code">destroyCreation</a></li>
    <li><a href="#getAllSeatedCharacter" class="code">getAllSeatedCharacter</a></li>
    <li><a href="#getAngularVelocity" class="code">getAngularVelocity</a></li>
    <li><a href="#getCenterOfMassPosition" class="code">getCenterOfMassPosition</a></li>
@@ -185,7 +208,10 @@
    <li><a href="#getJoints" class="code">getJoints</a></li>
    <li><a href="#getLocalAabb" class="code">getLocalAabb</a></li>
    <li><a href="#getMass" class="code">getMass</a></li>
+   <li><a href="#getShape" class="code">getShape</a></li>
+   <li><a href="#getShapeCount" class="code">getShapeCount</a></li>
    <li><a href="#getShapes" class="code">getShapes</a></li>
+   <li><a href="#getShapesByUuid" class="code">getShapesByUuid</a></li>
    <li><a href="#getVelocity" class="code">getVelocity</a></li>
    <li><a href="#getWorld" class="code">getWorld</a></li>
    <li><a href="#getWorldAabb" class="code">getWorldAabb</a></li>
@@ -197,8 +223,10 @@
    <li><a href="#isDestructable" class="code">isDestructable</a></li>
    <li><a href="#isDynamic" class="code">isDynamic</a></li>
    <li><a href="#isErasable" class="code">isErasable</a></li>
+   <li><a href="#isGhost" class="code">isGhost</a></li>
    <li><a href="#isLiftable" class="code">isLiftable</a></li>
    <li><a href="#isOnLift" class="code">isOnLift</a></li>
+   <li><a href="#isOnVirtualLift" class="code">isOnVirtualLift</a></li>
    <li><a href="#isPaintable" class="code">isPaintable</a></li>
    <li><a href="#isStatic" class="code">isStatic</a></li>
    <li><a href="#isUsable" class="code">isUsable</a></li>
@@ -210,12 +238,13 @@
    <li><a href="#setLiftable" class="code">setLiftable</a></li>
    <li><a href="#setPaintable" class="code">setPaintable</a></li>
    <li><a href="#setUsable" class="code">setUsable</a></li>
-   <li><a href="#transformPoint" class="code">transformPoint</a></li>
+   <li><a href="#transformLocalPoint" class="code">transformLocalPoint</a></li>
+   <li><a href="#transformWorldPoint" class="code">transformWorldPoint</a></li>
   </ul>
   <h4>Operations:</h4>
   <table>
-   <tr><th>Operation</th><th>Description</th></tr>
-   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a> == <a href="userdata_Game_Body.html" class="code">Body</a></td><td>Checks if two instances of <a href="userdata_Game_Body.html" class="code">Body</a> refer to the same Body.</td></tr>
+   <tr><th>Operation</th><th>Return type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a> == <a href="userdata_Game_Body.html" class="code">Body</a></td><td>boolean</td><td>Checks if two instances of <a href="userdata_Game_Body.html" class="code">Body</a> refer to the same Body.</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="angularVelocity"></a>angularVelocity <i><a href="userdata_Game_Vec3.html" class="code">Vec3</a></i></h2>
@@ -302,7 +331,7 @@
   <h4>Get:</h4>
   <p>Returns the world rotation of a body.</p>
   <hr>
-  <h2 class="code"><a id="createBlock"></a>createBlock(body, uuid, size, position, forceAccept=nil)</h2>
+  <h2 class="code"><a id="createBlock"></a>createBlock(body, uuid, size, position, forceAccept?)</h2>
   <p>Server only</p>
   <p>Create a block on body</p>
   <h4>Parameters:</h4>
@@ -312,10 +341,15 @@
    <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">uuid</td><td>The uuid of the shape.</td></tr>
    <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">size</td><td>The shape's size.</td></tr>
    <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The shape's local position.</td></tr>
-   <tr><td class="code">boolean</td><td class="code">forceAccept=nil</td><td>Set true to force the body to accept the shape. (Defaults to true)</td></tr>
+   <tr><td class="code">boolean</td><td class="code">forceAccept?</td><td>Set true to force the body to accept the shape. (Defaults to true)</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td>The created block</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="createPart"></a>createPart(body, uuid, position, z-axis, x-axis, forceAccept=nil)</h2>
+  <h2 class="code"><a id="createPart"></a>createPart(body, uuid, position, z-axis, x-axis, forceAccept?)</h2>
   <p>Server only</p>
   <p>Create a part on body</p>
   <h4>Parameters:</h4>
@@ -326,10 +360,15 @@
    <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The shape's local position.</td></tr>
    <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">z-axis</td><td>The shape's local z direction.</td></tr>
    <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">x-axis</td><td>The shape's local x direction.</td></tr>
-   <tr><td class="code">boolean</td><td class="code">forceAccept=nil</td><td>Set true to force the body to accept the shape. (Defaults to true)</td></tr>
+   <tr><td class="code">boolean</td><td class="code">forceAccept?</td><td>Set true to force the body to accept the shape. (Defaults to true)</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td>The created part</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="createWedge"></a>createWedge(body, uuid, size, position, z-axis, x-axis, forceAccept=nil)</h2>
+  <h2 class="code"><a id="createWedge"></a>createWedge(body, uuid, size, position, z-axis, x-axis, forceAccept?)</h2>
   <p>Server only</p>
   <p>Creates a wedge attached to a body. The wedge is oriented with one </p>
   <p>cathetus along the Y-axis and the other along the Z-axis, forming a right angle. The wedge's </p>
@@ -343,7 +382,16 @@
    <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The shape's local position.</td></tr>
    <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">z-axis</td><td>The shape's local z direction.</td></tr>
    <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">x-axis</td><td>The shape's local x direction.</td></tr>
-   <tr><td class="code">boolean</td><td class="code">forceAccept=nil</td><td>Set true to force the body to accept the shape. (Defaults to true)</td></tr>
+   <tr><td class="code">boolean</td><td class="code">forceAccept?</td><td>Set true to force the body to accept the shape. (Defaults to true)</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="destroyCreation"></a>destroyCreation(body)</h2>
+  <p>Server only</p>
+  <p>Destroys the entire creation connected to this body</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The body.</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="getAllSeatedCharacter"></a>getAllSeatedCharacter(body)</h2>
@@ -397,12 +445,15 @@
   <h4>Returns:</h4>
   <table>
    <tr><th>Type</th><th>Description</th></tr>
-   <tr><td class="code">table</td><td>The table all bodies in a creation. {<a href="userdata_Game_Body.html" class="code">Body</a>, ...}</td></tr>
+   <tr><td class="code">table</td><td>An array table of all bodies in a creation. {<a href="userdata_Game_Body.html" class="code">Body</a>, ...}</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="getCreationId"></a>getCreationId(body)</h2>
-  <p>Server only</p>
-  <p>Returns the id of the creation</p>
+  <p>Returns the local id of the creation</p>
+  <div class="note">
+   <h4>Note:</h4>
+   <p>Server and client ids will not match</p>
+  </div>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
@@ -411,7 +462,7 @@
   <h4>Returns:</h4>
   <table>
    <tr><th>Type</th><th>Description</th></tr>
-   <tr><td class="code">integer</td><td>The creation's id</td></tr>
+   <tr><td class="code">integer</td><td>The creation's local id</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="getCreationJoints"></a>getCreationJoints(body)</h2>
@@ -509,6 +560,33 @@
    <tr><td class="code">number</td><td>The body's mass.</td></tr>
   </table>
   <hr>
+  <h2 class="code"><a id="getShape"></a>getShape(body, index)</h2>
+  <p>Returns a shape that is part of a body by index.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The body.</td></tr>
+   <tr><td class="code">integer</td><td class="code">index</td><td>The index of the shape.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td>The shape at the specified index, or nil if the index is out of range.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getShapeCount"></a>getShapeCount(body)</h2>
+  <p>Returns the number of shapes in a body.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The body.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">integer</td><td>The number of shapes in the body.</td></tr>
+  </table>
+  <hr>
   <h2 class="code"><a id="getShapes"></a>getShapes(body)</h2>
   <p>Returns a table of all <a href="userdata_Game_Shape.html" class="code">shapes</a> that are part of a body.</p>
   <p>This will <strong>not</strong> return shapes in neighbouring bodies connected by <a href="userdata_Game_Joint.html" class="code">joints</a>, etc.</p>
@@ -516,6 +594,21 @@
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The body.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td>The table of shapes in a body. {<a href="userdata_Game_Shape.html" class="code">Shape</a>, ...}</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getShapesByUuid"></a>getShapesByUuid(body, uuid)</h2>
+  <p>Returns a table of all <a href="userdata_Game_Shape.html" class="code">shapes</a> that are part of a body and have a specified uuid.</p>
+  <p>This will <strong>not</strong> return shapes in neighbouring bodies connected by <a href="userdata_Game_Joint.html" class="code">joints</a>, etc.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The body.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">uuid</td><td>The uuid to look for.</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -667,6 +760,19 @@
    <tr><td class="code">boolean</td><td>Return true if the body is erasable.</td></tr>
   </table>
   <hr>
+  <h2 class="code"><a id="isGhost"></a>isGhost(body)</h2>
+  <p>Check if the body is a ghost body.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The body.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>Returns true if the body is a ghost body.</td></tr>
+  </table>
+  <hr>
   <h2 class="code"><a id="isLiftable"></a>isLiftable(body)</h2>
   <p>Check if a body is liftable</p>
   <h4>Parameters:</h4>
@@ -682,6 +788,19 @@
   <hr>
   <h2 class="code"><a id="isOnLift"></a>isOnLift(body)</h2>
   <p>Check if a body is on a lift</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The body.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>Return true if the body is on a lift</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="isOnVirtualLift"></a>isOnVirtualLift(body)</h2>
+  <p>Check if a body is on a virtual lift</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
@@ -812,7 +931,7 @@
    <tr><td class="code">boolean</td><td class="code">value</td><td>Whether the body is interactable.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="transformPoint"></a>transformPoint(body, point)</h2>
+  <h2 class="code"><a id="transformLocalPoint"></a>transformLocalPoint(body, point)</h2>
   <p>Transforms a point from local space to world space.</p>
   <h4>Parameters:</h4>
   <table>
@@ -824,6 +943,20 @@
   <table>
    <tr><th>Type</th><th>Description</th></tr>
    <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The point in world space.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="transformWorldPoint"></a>transformWorldPoint(body, point)</h2>
+  <p>Transforms a point from world space to local space.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td class="code">body</td><td>The body.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">point</td><td>The point in world space.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td>The point in local space.</td></tr>
   </table>
  </div>
 </body>

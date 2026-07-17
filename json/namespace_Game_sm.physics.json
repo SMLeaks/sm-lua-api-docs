@@ -24,6 +24,7 @@
 					"static",
 					"default",
 					"all",
+					"allTerrain",
 					"@table"
 				],
 				"return": [
@@ -80,12 +81,12 @@
 					],
 					[
 						"boolean",
-						"worldSpace=false",
+						"worldSpace?",
 						"Whether the impulse is applied in world space coordinates. (Defaults to local rotation)"
 					],
 					[
 						"[Vec3]",
-						"offset=nil",
+						"offset?",
 						"The offset from the center point. (Defaults to no offset)"
 					]
 				]
@@ -110,12 +111,12 @@
 					],
 					[
 						"boolean",
-						"worldSpace=false",
+						"worldSpace?",
 						"Whether the impulse is applied in world space coordinates. (Defaults to local rotation)"
 					],
 					[
 						"[Vec3]",
-						"offset=nil",
+						"offset?",
 						"The offset from the center point. (Defaults to no offset)"
 					]
 				]
@@ -160,8 +161,141 @@
 					],
 					[
 						"boolean",
-						"worldSpace=false",
+						"worldSpace?",
 						"Whether the torque is applied in world space coordinates. (Defaults to local rotation)"
+					]
+				]
+			}
+		},
+		{
+			"name": "capsuleContactCount",
+			"doc": {
+				"text": [
+					"Returns the number of collision objects that are found inside a given capsule.",
+					"The capsule is formed by connecting two spheres."
+				],
+				"params": [
+					[
+						"[Vec3]",
+						"from",
+						"The world position of the first sphere."
+					],
+					[
+						"[Vec3]",
+						"to",
+						"The world position of the second sphere."
+					],
+					[
+						"number",
+						"radius",
+						"The radius of the spheres."
+					],
+					[
+						"integer",
+						"mask?",
+						"The collision mask. Defaults to [sm.physics.filter, sm.physics.filter.default] (Optional)"
+					]
+				],
+				"return": [
+					[
+						"integer",
+						"The number of objects."
+					]
+				]
+			}
+		},
+		{
+			"name": "capsuleHasContact",
+			"doc": {
+				"text": [
+					"Returns true if any collision object is found inside a given capsule.",
+					"Faster than capsuleContactCount when only checking for existence.",
+					"The capsule is formed by connecting two spheres."
+				],
+				"params": [
+					[
+						"[Vec3]",
+						"from",
+						"The world position of the first sphere."
+					],
+					[
+						"[Vec3]",
+						"to",
+						"The world position of the second sphere."
+					],
+					[
+						"number",
+						"radius",
+						"The radius of the spheres."
+					],
+					[
+						"integer",
+						"mask?",
+						"The collision mask. Defaults to [sm.physics.filter, sm.physics.filter.default] (Optional)"
+					]
+				],
+				"return": [
+					[
+						"boolean",
+						"True if any contact was found."
+					]
+				]
+			}
+		},
+		{
+			"name": "capsulecast",
+			"doc": {
+				"text": [
+					"Performs a capsule <a target=\"_blank\" href=\"https://en.wikipedia.org/wiki/Ray_casting\">ray cast</a> (Z-axis aligned) between two positions.",
+					"The returned [RaycastResult] contains information about any object intersected by the ray.",
+					"If the ray cast is called from within a shape (e.g. a Sensor), a [Body] may be provided which the ray will not intersect."
+				],
+				"params": [
+					[
+						"[Vec3]",
+						"start",
+						"The start position."
+					],
+					[
+						"[Vec3]",
+						"end",
+						"The end position."
+					],
+					[
+						"number",
+						"radius",
+						"The radius of the capsule."
+					],
+					[
+						"number",
+						"height",
+						"The height of the cylindrical part of the capsule."
+					],
+					[
+						"[Body]|[Shape]|[Harvestable]|[Character]|[AreaTrigger]",
+						"ignore?",
+						"An object to be ignored. (Optional)"
+					],
+					[
+						"integer",
+						"mask?",
+						"The collision mask. Defaults to [sm.physics.filter, sm.physics.filter.default] (Optional)"
+					],
+					[
+						"[World]",
+						"world?",
+						"The world to perform the cast in. (Optional)"
+					],
+					[
+						"table",
+						"ignoreUuids?",
+						"A table of uuids {[Uuid], ...} of [Shape], [Harvestable] or [Character] type to be ignored. (Optional)"
+					]
+				],
+				"return": [
+					[
+						"boolean,\t[RaycastResult]",
+						"True if raycast was successful; The raycast result data."
 					]
 				]
 			}
@@ -235,21 +369,82 @@
 					],
 					[
 						"string",
-						"effectName=nil",
+						"effectName?",
 						"The name of the effect to be played upon explosion. (Optional)"
 					],
 					[
 						"[Shape]",
-						"ignoreShape=nil",
+						"ignoreShape?",
 						"The shape to be ignored. (Optional)"
 					],
 					[
 						"table",
-						"parameters=nil",
+						"parameters?",
 						"The table containing the parameters for the effect. (Optional)"
+					],
+					[
+						"[World]",
+						"world?",
+						"The world to cause the explosion in. (Optional)"
+					],
+					[
+						"integer",
+						"damage?",
+						"The damage of the explosion. Defaults to 2 * destruction level (Optional)"
+					],
+					[
+						"userdata",
+						"source?",
+						"The source of the explosion. Defaults to none (Optional)"
+					],
+					[
+						"[Uuid]",
+						"type?",
+						"The explosionType. Defaults to nil uuid (Optional)"
 					]
 				],
 				"server_only": true
+			}
+		},
+		{
+			"name": "getBoxContacts",
+			"doc": {
+				"text": [
+					"Returns a table of the game objects that are found inside the given box"
+				],
+				"params": [
+					[
+						"[Vec3]",
+						"pos",
+						"The world position of the box center."
+					],
+					[
+						"[Quat]",
+						"rotation",
+						"The rotation of the box."
+					],
+					[
+						"[Vec3]",
+						"halfExtents",
+						"The half extents of the box."
+					],
+					[
+						"[World]",
+						"world",
+						"The world to search in. (optional)"
+					],
+					[
+						"integer",
+						"mask?",
+						"The collision mask. Defaults to [sm.physics.filter, sm.physics.filter.static] and [sm.physics.filter, sm.physics.filter.dynamicBody] and [sm.physics.filter, sm.physics.filter.character] (Optional)"
+					]
+				],
+				"return": [
+					[
+						"table",
+						"The table with tables of objects found inside the box. { bodies={[Body], ..}, characters={[Character], ..}, harvestables={[Harvestable], ..}, lifts={[Lift], ..} }"
+					]
+				]
 			}
 		},
 		{
@@ -289,6 +484,94 @@
 			}
 		},
 		{
+			"name": "getMaterialId",
+			"doc": {
+				"text": [
+					"Returns the material id from name"
+				],
+				"params": [
+					[
+						"string",
+						"materialName",
+						"Material name."
+					]
+				],
+				"return": [
+					[
+						"integer",
+						"The id of the material."
+					]
+				]
+			}
+		},
+		{
+			"name": "getShapeContactsInBox",
+			"doc": {
+				"text": [
+					"Returns a table of all shapes colliding with a given box."
+				],
+				"params": [
+					[
+						"[Vec3]",
+						"position",
+						"The center position of the box."
+					],
+					[
+						"[Quat]",
+						"rotation",
+						"The rotation of the box."
+					],
+					[
+						"[Vec3]",
+						"halfExtents",
+						"The halved size of the box."
+					],
+					[
+						"[World]",
+						"world",
+						"The world to search in. (optional)"
+					]
+				],
+				"return": [
+					[
+						"table",
+						"The table of found shapes. {{shape=[Shape], contactWorldPosition=[Vec3] }, ..}"
+					]
+				]
+			}
+		},
+		{
+			"name": "getShapeContactsInSphere",
+			"doc": {
+				"text": [
+					"Returns a table of all shapes colliding with a given sphere."
+				],
+				"params": [
+					[
+						"[Vec3]",
+						"center",
+						"The center position of the sphere."
+					],
+					[
+						"number",
+						"radius",
+						"The radius of the sphere."
+					],
+					[
+						"[World]",
+						"world",
+						"The world to search in. (optional)"
+					]
+				],
+				"return": [
+					[
+						"table",
+						"The table of found shapes. {{shape=[Shape], contactWorldPosition=[Vec3] }, ..}"
+					]
+				]
+			}
+		},
+		{
 			"name": "getSphereContacts",
 			"doc": {
 				"text": [
@@ -304,6 +587,16 @@
 						"number",
 						"radius",
 						"The radius of the sphere."
+					],
+					[
+						"[World]",
+						"world?",
+						"The world to search in. Defaults to current world (Optional)"
+					],
+					[
+						"integer",
+						"mask?",
+						"The collision mask. Defaults to [sm.physics.filter, sm.physics.filter.static] and [sm.physics.filter, sm.physics.filter.dynamicBody] and [sm.physics.filter, sm.physics.filter.character] (Optional)"
 					]
 				],
 				"return": [
@@ -311,8 +604,64 @@
 						"table",
 						"The table with tables of objects found inside the sphere. { bodies={[Body], ..}, characters={[Character], ..}, harvestables={[Harvestable], ..}, lifts={[Lift], ..} }"
 					]
+				]
+			}
+		},
+		{
+			"name": "isPointInLiquid",
+			"doc": {
+				"text": [
+					"Returns whether a point is in a liquid or not."
 				],
-				"server_only": true
+				"params": [
+					[
+						"[Vec3]",
+						"position",
+						"The world position to check."
+					],
+					[
+						"[World]",
+						"world?",
+						"The world to check in."
+					]
+				],
+				"return": [
+					[
+						"boolean",
+						"Whether the point is inside liquid or not"
+					]
+				]
+			}
+		},
+		{
+			"name": "isSphereHittingLiquid",
+			"doc": {
+				"text": [
+					"Returns whether a sphere is hitting a liquid or not."
+				],
+				"params": [
+					[
+						"[Vec3]",
+						"position",
+						"The world position to check."
+					],
+					[
+						"[World]",
+						"world?",
+						"The world to check in."
+					],
+					[
+						"number",
+						"radius",
+						"The radius of the sphere."
+					]
+				],
+				"return": [
+					[
+						"boolean",
+						"Whether the sphere is hitting a liquid or not"
+					]
+				]
 			}
 		},
 		{
@@ -320,13 +669,19 @@
 			"doc": {
 				"text": [
 					"Performs multiple sphere and/or raycasts given a table of parameters.",
-					"Type can be \"sphere\" or \"ray\". Radius is ignored for rays."
+					"Type can be \"sphere\" or \"ray\". Radius is ignored for rays.",
+					"ignoreUuids option is a table of uuids {[Uuid], ...} of [Shape], [Harvestable] or [Character] type to be ignored."
 				],
 				"params": [
 					[
 						"table",
 						"casts",
-						"Table of casts. { type=string, startPoint=[Vec3], endPoint=[Vec3], radius=number, mask=[sm.physics.filter] }"
+						"Table of casts. { type=string, startPoint=[Vec3], endPoint=[Vec3], radius=number, mask=[sm.physics.filter], ignoreUuids=table }"
+					],
+					[
+						"[World]",
+						"world?",
+						"The world to perform the cast in. (Optional)"
 					]
 				],
 				"return": [
@@ -358,13 +713,23 @@
 					],
 					[
 						"[Body]",
-						"body=nil",
+						"body?",
 						"The body to be ignored. (Optional)"
 					],
 					[
 						"integer",
-						"mask=nil",
+						"mask?",
 						"The collision mask. Defaults to [sm.physics.filter, sm.physics.filter.default] (Optional)"
+					],
+					[
+						"[World]",
+						"world?",
+						"The world to perform the raycast in. (Optional)"
+					],
+					[
+						"table",
+						"ignoreUuids?",
+						"A table of uuids {[Uuid], ...} of [Shape], [Harvestable] or [Character] type to be ignored. (Optional)"
 					]
 				],
 				"return": [
@@ -398,6 +763,16 @@
 						"[Body]",
 						"body",
 						"The body to be exclusively checked."
+					],
+					[
+						"[World]",
+						"world?",
+						"The world to perform the raycast in. (Optional)"
+					],
+					[
+						"table",
+						"ignoreUuids?",
+						"A table of uuids {[Uuid], ...} of [Shape], [Harvestable] or [Character] type to be ignored. (Optional)"
 					]
 				],
 				"return": [
@@ -443,19 +818,66 @@
 					],
 					[
 						"boolean",
-						"includeTerrain=false",
-						"True if terrain should be included in the test"
+						"includeTerrain?",
+						"True if terrain should be included in the test (Defaults to false)"
 					],
 					[
 						"boolean",
-						"countWater=false",
-						"True if water should be included"
+						"countWater?",
+						"True if water should be included (Defaults to false)"
+					],
+					[
+						"integer",
+						"mask?",
+						"The collision mask. Defaults to [sm.physics.filter, sm.physics.filter.default]. Using this will override \"includeTerrain\" and \"countWater\". (Optional)"
 					]
 				],
 				"return": [
 					[
 						"integer",
 						"The number of objects."
+					]
+				]
+			}
+		},
+		{
+			"name": "sphereHasContact",
+			"doc": {
+				"text": [
+					"Returns true if any collision object is found inside the given sphere.",
+					"Faster than sphereContactCount when only checking for existence."
+				],
+				"params": [
+					[
+						"[Vec3]",
+						"worldPosition",
+						"The world position of the sphere."
+					],
+					[
+						"number",
+						"radius",
+						"The radius of the sphere."
+					],
+					[
+						"boolean",
+						"includeTerrain?",
+						"True if terrain should be included in the test (Defaults to false)"
+					],
+					[
+						"boolean",
+						"countWater?",
+						"True if water should be included (Defaults to false)"
+					],
+					[
+						"integer",
+						"mask?",
+						"The collision mask. Defaults to [sm.physics.filter, sm.physics.filter.default]. Using this will override \"includeTerrain\" and \"countWater\". (Optional)"
+					]
+				],
+				"return": [
+					[
+						"boolean",
+						"True if any contact was found."
 					]
 				]
 			}
@@ -485,14 +907,24 @@
 						"The radius of the sphere."
 					],
 					[
-						"[Body]",
-						"body=nil",
-						"The body to be ignored. (Optional)"
+						"[Body]|[Shape]|[Harvestable]|[Character]|[AreaTrigger]",
+						"ignore?",
+						"An object to be ignored. (Optional)"
 					],
 					[
 						"integer",
-						"mask=nil",
+						"mask?",
 						"The collision mask. Defaults to [sm.physics.filter, sm.physics.filter.default] (Optional)"
+					],
+					[
+						"[World]",
+						"world?",
+						"The world to perform the cast in. (Optional)"
+					],
+					[
+						"table",
+						"ignoreUuids?",
+						"A table of uuids {[Uuid], ...} of [Shape], [Harvestable] or [Character] type to be ignored. (Optional)"
 					]
 				],
 				"return": [

@@ -17,6 +17,7 @@
   <h3>Classes</h3>
   <ul>
    <li><a href="class_Game_CharacterClass.html" class="code">CharacterClass</a></li>
+   <li><a href="class_Game_ClientScriptableObjectClass.html" class="code">ClientScriptableObjectClass</a></li>
    <li><a href="class_Game_GameClass.html" class="code">GameClass</a></li>
    <li><a href="class_Game_HarvestableClass.html" class="code">HarvestableClass</a></li>
    <li><a href="class_Game_PlayerClass.html" class="code">PlayerClass</a></li>
@@ -34,14 +35,18 @@
    <li><a href="userdata_Game_Body.html" class="code">Body</a></li>
    <li><a href="userdata_Game_BuilderGuide.html" class="code">BuilderGuide</a></li>
    <li><a href="userdata_Game_Character.html" class="code">Character</a></li>
+   <li><a href="userdata_Game_ClientScriptableObject.html" class="code">ClientScriptableObject</a></li>
    <li><a href="userdata_Game_Color.html" class="code">Color</a></li>
    <li><a href="userdata_Game_Container.html" class="code">Container</a></li>
    <li><a href="userdata_Game_CullSphereGroup.html" class="code">CullSphereGroup</a></li>
    <li><a href="userdata_Game_Effect.html" class="code">Effect</a></li>
+   <li><a href="userdata_Game_Garage.html" class="code">Garage</a></li>
    <li><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></li>
    <li><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></li>
    <li><a href="userdata_Game_Interactable.html" class="code">Interactable</a></li>
    <li><a href="userdata_Game_Joint.html" class="code">Joint</a></li>
+   <li><a href="userdata_Game_JsonGui.html" class="code">JsonGui</a></li>
+   <li><a href="userdata_Game_JsonWidget.html" class="code">JsonWidget</a></li>
    <li><a href="userdata_Game_Lift.html" class="code">Lift</a></li>
    <li><a href="userdata_Game_LoadCellHandle.html" class="code">LoadCellHandle</a></li>
    <li><a href="userdata_Game_Network.html" class="code">Network</a></li>
@@ -73,6 +78,7 @@
    <li><a href="namespace_Game_sm_cell.html" class="code">sm.cell</a></li>
    <li><a href="namespace_Game_sm_challenge.html" class="code">sm.challenge</a></li>
    <li><a href="namespace_Game_sm_character.html" class="code">sm.character</a></li>
+   <li><a href="namespace_Game_sm_clientScriptableObject.html" class="code">sm.clientScriptableObject</a></li>
    <li><a href="namespace_Game_sm_color.html" class="code">sm.color</a></li>
    <li><a href="namespace_Game_sm_construction.html" class="code">sm.construction</a></li>
    <li><a href="namespace_Game_sm_container.html" class="code">sm.container</a></li>
@@ -80,9 +86,11 @@
    <li><a href="namespace_Game_sm_cullSphereGroup.html" class="code">sm.cullSphereGroup</a></li>
    <li><a href="namespace_Game_sm_debris.html" class="code">sm.debris</a></li>
    <li><a href="namespace_Game_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
+   <li><a href="namespace_Game_sm_debugGui.html" class="code">sm.debugGui</a></li>
    <li><a href="namespace_Game_sm_effect.html" class="code">sm.effect</a></li>
    <li><a href="namespace_Game_sm_event.html" class="code">sm.event</a></li>
    <li><a href="namespace_Game_sm_game.html" class="code">sm.game</a></li>
+   <li><a href="namespace_Game_sm_garage.html" class="code">sm.garage</a></li>
    <li><a href="namespace_Game_sm_gui.html" class="code">sm.gui</a></li>
    <li><a href="namespace_Game_sm_gui_widget.html" class="code">sm.gui.widget</a></li>
    <li><a href="namespace_Game_sm_harvestable.html" class="code">sm.harvestable</a></li>
@@ -90,15 +98,19 @@
    <li><a href="namespace_Game_sm_item.html" class="code">sm.item</a></li>
    <li><a href="namespace_Game_sm_joint.html" class="code">sm.joint</a></li>
    <li><a href="namespace_Game_sm_json.html" class="code">sm.json</a></li>
+   <li><a href="namespace_Game_sm_jsonGui.html" class="code">sm.jsonGui</a></li>
+   <li><a href="namespace_Game_sm_lift.html" class="code">sm.lift</a></li>
    <li><a href="namespace_Game_sm_localPlayer.html" class="code">sm.localPlayer</a></li>
    <li><a href="namespace_Game_sm_log.html" class="code">sm.log</a></li>
    <li><a href="namespace_Game_sm_melee.html" class="code">sm.melee</a></li>
    <li><a href="namespace_Game_sm_menuCreation.html" class="code">sm.menuCreation</a></li>
+   <li><a href="namespace_Game_sm_message.html" class="code">sm.message</a></li>
    <li><a href="namespace_Game_sm_noise.html" class="code">sm.noise</a></li>
    <li><a href="namespace_Game_sm_particle.html" class="code">sm.particle</a></li>
    <li><a href="namespace_Game_sm_pathNode.html" class="code">sm.pathNode</a></li>
    <li><a href="namespace_Game_sm_pathfinder.html" class="code">sm.pathfinder</a></li>
    <li><a href="namespace_Game_sm_physics.html" class="code">sm.physics</a></li>
+   <li><a href="namespace_Game_sm_pipeGraph.html" class="code">sm.pipeGraph</a></li>
    <li><a href="namespace_Game_sm_player.html" class="code">sm.player</a></li>
    <li><a href="namespace_Game_sm_portal.html" class="code">sm.portal</a></li>
    <li><a href="namespace_Game_sm_projectile.html" class="code">sm.projectile</a></li>
@@ -122,8 +134,12 @@
   <h3>Object Types 'userdata'</h3>
   <ul>
    <li><a href="userdata_Terrain_Color.html" class="code">Color</a></li>
+   <li><a href="userdata_Terrain_Container.html" class="code">Container</a></li>
    <li><a href="userdata_Terrain_Harvestable.html" class="code">Harvestable</a></li>
+   <li><a href="userdata_Terrain_Interactable.html" class="code">Interactable</a></li>
+   <li><a href="userdata_Terrain_Portal.html" class="code">Portal</a></li>
    <li><a href="userdata_Terrain_Quat.html" class="code">Quat</a></li>
+   <li><a href="userdata_Terrain_ScriptableObject.html" class="code">ScriptableObject</a></li>
    <li><a href="userdata_Terrain_Uuid.html" class="code">Uuid</a></li>
    <li><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></li>
    <li><a href="userdata_Terrain_World.html" class="code">World</a></li>
@@ -133,18 +149,24 @@
    <li><a href="namespace_Terrain_GLOBAL.html" class="code">GLOBAL</a></li>
    <li><a href="namespace_Terrain_sm.html" class="code">sm</a></li>
    <li><a href="namespace_Terrain_sm_color.html" class="code">sm.color</a></li>
+   <li><a href="namespace_Terrain_sm_container.html" class="code">sm.container</a></li>
    <li><a href="namespace_Terrain_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
-   <li><a href="namespace_Terrain_sm_harvestable.html" class="code">sm.harvestable</a></li>
+   <li><a href="namespace_Terrain_sm_debugGui.html" class="code">sm.debugGui</a></li>
+   <li><a href="namespace_Terrain_sm_interactable.html" class="code">sm.interactable</a></li>
    <li><a href="namespace_Terrain_sm_json.html" class="code">sm.json</a></li>
    <li><a href="namespace_Terrain_sm_log.html" class="code">sm.log</a></li>
    <li><a href="namespace_Terrain_sm_noise.html" class="code">sm.noise</a></li>
    <li><a href="namespace_Terrain_sm_quat.html" class="code">sm.quat</a></li>
+   <li><a href="namespace_Terrain_sm_scriptableObject.html" class="code">sm.scriptableObject</a></li>
    <li><a href="namespace_Terrain_sm_terrainData.html" class="code">sm.terrainData</a></li>
    <li><a href="namespace_Terrain_sm_terrainGeneration.html" class="code">sm.terrainGeneration</a></li>
+   <li><a href="namespace_Terrain_sm_terrainHarvestable.html" class="code">sm.terrainHarvestable</a></li>
    <li><a href="namespace_Terrain_sm_terrainTile.html" class="code">sm.terrainTile</a></li>
+   <li><a href="namespace_Terrain_sm_tunnelGenerator.html" class="code">sm.tunnelGenerator</a></li>
    <li><a href="namespace_Terrain_sm_util.html" class="code">sm.util</a></li>
    <li><a href="namespace_Terrain_sm_uuid.html" class="code">sm.uuid</a></li>
    <li><a href="namespace_Terrain_sm_vec3.html" class="code">sm.vec3</a></li>
+   <li><a href="namespace_Terrain_sm_voxelTerrainCell.html" class="code">sm.voxelTerrainCell</a></li>
   </ul>
  </div>
  <div id="content">
@@ -166,18 +188,29 @@
    <li><a href="#cellMaxY" class="code">cellMaxY</a></li>
    <li><a href="#cellMinX" class="code">cellMinX</a></li>
    <li><a href="#cellMinY" class="code">cellMinY</a></li>
+   <li><a href="#defaultVoxelDensity" class="code">defaultVoxelDensity</a></li>
+   <li><a href="#defaultVoxelMaterial" class="code">defaultVoxelMaterial</a></li>
    <li><a href="#enableAssets" class="code">enableAssets</a></li>
+   <li><a href="#enableBuildOnAssets" class="code">enableBuildOnAssets</a></li>
+   <li><a href="#enableBuildOnBodies" class="code">enableBuildOnBodies</a></li>
+   <li><a href="#enableBuildOnLift" class="code">enableBuildOnLift</a></li>
+   <li><a href="#enableBuildOnSurface" class="code">enableBuildOnSurface</a></li>
    <li><a href="#enableClutter" class="code">enableClutter</a></li>
    <li><a href="#enableCreations" class="code">enableCreations</a></li>
    <li><a href="#enableHarvestables" class="code">enableHarvestables</a></li>
    <li><a href="#enableKinematics" class="code">enableKinematics</a></li>
+   <li><a href="#enableNavMesh" class="code">enableNavMesh</a></li>
    <li><a href="#enableNodes" class="code">enableNodes</a></li>
    <li><a href="#enableSurface" class="code">enableSurface</a></li>
+   <li><a href="#enableVoxelTerrain" class="code">enableVoxelTerrain</a></li>
    <li><a href="#groundMaterialSet" class="code">groundMaterialSet</a></li>
+   <li><a href="#hLod" class="code">hLod</a></li>
+   <li><a href="#horizonWater" class="code">horizonWater</a></li>
    <li><a href="#isIndoor" class="code">isIndoor</a></li>
    <li><a href="#isStatic" class="code">isStatic</a></li>
    <li><a href="#renderMode" class="code">renderMode</a></li>
    <li><a href="#terrainScript" class="code">terrainScript</a></li>
+   <li><a href="#voxelMaterialSet" class="code">voxelMaterialSet</a></li>
    <li><a href="#worldBorder" class="code">worldBorder</a></li>
   </ul>
   <h4>Common callbacks:</h4>
@@ -195,6 +228,11 @@
   </ul>
   <h4>Callbacks:</h4>
   <ul>
+   <li><a href="#server_onUnload" class="code">server_onUnload</a></li>
+   <li><a href="#server_onTerrainCreated" class="code">server_onTerrainCreated</a></li>
+   <li><a href="#server_onTerrainLoaded" class="code">server_onTerrainLoaded</a></li>
+   <li><a href="#client_onTerrainCreated" class="code">client_onTerrainCreated</a></li>
+   <li><a href="#client_onTerrainLoaded" class="code">client_onTerrainLoaded</a></li>
    <li><a href="#server_onCellCreated" class="code">server_onCellCreated</a></li>
    <li><a href="#server_onCellLoaded" class="code">server_onCellLoaded</a></li>
    <li><a href="#server_onCellUnloaded" class="code">server_onCellUnloaded</a></li>
@@ -208,6 +246,10 @@
    <li><a href="#server_onProjectileFire" class="code">server_onProjectileFire</a></li>
    <li><a href="#server_onCollision" class="code">server_onCollision</a></li>
    <li><a href="#client_onCollision" class="code">client_onCollision</a></li>
+   <li><a href="#client_onProjectile" class="code">client_onProjectile</a></li>
+   <li><a href="#server_onVoxelDestruction" class="code">server_onVoxelDestruction</a></li>
+   <li><a href="#server_onVoxelConstruction" class="code">server_onVoxelConstruction</a></li>
+   <li><a href="#server_onMining" class="code">server_onMining</a></li>
   </ul>
   <hr>
   <h2 class="code"><a id="cellMaxX"></a>cellMaxX <i>integer</i></h2>
@@ -222,8 +264,26 @@
   <h2 class="code"><a id="cellMinY"></a>cellMinY <i>integer</i></h2>
   <p>Terrain generation minimum cell position in Y axis. (Defaults to 0)</p>
   <hr>
+  <h2 class="code"><a id="defaultVoxelDensity"></a>defaultVoxelDensity <i>integer</i></h2>
+  <p>Default value when sampling voxel density. (Defaults to 0)</p>
+  <hr>
+  <h2 class="code"><a id="defaultVoxelMaterial"></a>defaultVoxelMaterial <i>integer</i></h2>
+  <p>Default value when sampling voxel material. (Defaults to 0)</p>
+  <hr>
   <h2 class="code"><a id="enableAssets"></a>enableAssets <i>boolean</i></h2>
   <p>Enables or disables terrain assets for this world. (Defaults to true)</p>
+  <hr>
+  <h2 class="code"><a id="enableBuildOnAssets"></a>enableBuildOnAssets <i>boolean</i></h2>
+  <p>Enables or disables the ability to build on terrain assets. (Defaults to true)</p>
+  <hr>
+  <h2 class="code"><a id="enableBuildOnBodies"></a>enableBuildOnBodies <i>boolean</i></h2>
+  <p>Enables or disables the ability to build on bodies. (Defaults to true)</p>
+  <hr>
+  <h2 class="code"><a id="enableBuildOnLift"></a>enableBuildOnLift <i>boolean</i></h2>
+  <p>Enables or disables the ability to build on lift. (Defaults to true)</p>
+  <hr>
+  <h2 class="code"><a id="enableBuildOnSurface"></a>enableBuildOnSurface <i>boolean</i></h2>
+  <p>Enables or disables the ability to build on terrain surface. (Defaults to true)</p>
   <hr>
   <h2 class="code"><a id="enableClutter"></a>enableClutter <i>boolean</i></h2>
   <p>Enables or disables terrain clutter for this world. (Defaults to true)</p>
@@ -237,15 +297,27 @@
   <h2 class="code"><a id="enableKinematics"></a>enableKinematics <i>boolean</i></h2>
   <p>Enables or disables terrain kinematics for this world. (Defaults to true)</p>
   <hr>
+  <h2 class="code"><a id="enableNavMesh"></a>enableNavMesh <i>boolean</i></h2>
+  <p>Enables or disables navigation mesh generation for better AI path finding. (Defaults to true)</p>
+  <hr>
   <h2 class="code"><a id="enableNodes"></a>enableNodes <i>boolean</i></h2>
   <p>Enables or disables nodes for this world. (Defaults to true)</p>
   <hr>
   <h2 class="code"><a id="enableSurface"></a>enableSurface <i>boolean</i></h2>
   <p>Enables or disables terrain surface for this world. (Defaults to true)</p>
   <hr>
+  <h2 class="code"><a id="enableVoxelTerrain"></a>enableVoxelTerrain <i>boolean</i></h2>
+  <p>Enables or disables voxel terrain for this world. (Defaults to true)</p>
+  <hr>
   <h2 class="code"><a id="groundMaterialSet"></a>groundMaterialSet <i>string</i></h2>
   <p>Sets the ground material set used by the terrain. (Defaults to "$GAME_DATA/Terrain/Materials/gnd_standard_materialset.json")</p>
   <p>Full $-path to the material set.</p>
+  <hr>
+  <h2 class="code"><a id="hLod"></a>hLod <i>integer</i></h2>
+  <p>Enables or disables h lods.</p>
+  <hr>
+  <h2 class="code"><a id="horizonWater"></a>horizonWater <i>integer</i></h2>
+  <p>Enables or disables automatically placing water effects at the edge of the world.</p>
   <hr>
   <h2 class="code"><a id="isIndoor"></a>isIndoor <i>boolean</i></h2>
   <p>Enables or disables indoor mode. (Defaults to false)</p>
@@ -262,6 +334,10 @@
   <h2 class="code"><a id="terrainScript"></a>terrainScript <i>string</i></h2>
   <p>Sets the script used to generate terrain.</p>
   <p>Full $-path to the terrain generation script.</p>
+  <hr>
+  <h2 class="code"><a id="voxelMaterialSet"></a>voxelMaterialSet <i>string</i></h2>
+  <p>Sets the voxel material set used by the voxel terrain. (Defaults to "$SURVIVAL_DATA/Terrain/Materials/voxel_materialset_drill1.voxelmaterialset")</p>
+  <p>Full $-path to the material set.</p>
   <hr>
   <h2 class="code"><a id="worldBorder"></a>worldBorder <i>boolean</i></h2>
   <p>Adds borders to the world to prevent objects falling through the ground. (Defaults to true)</p>
@@ -371,6 +447,58 @@
    <tr><td class="code">integer</td><td class="code">channel</td><td>Client data channel, 1 or 2. (default: 1)</td></tr>
   </table>
   <hr>
+  <h2 class="code"><a id="server_onUnload"></a>server_onUnload(self) <i>serverEventCallback</i></h2>
+  <p>Called when the <a href="userdata_Game_World.html" class="code">World</a> is unloaded from the game on shutdown.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="server_onTerrainCreated"></a>server_onTerrainCreated(self) <i>serverEventCallback</i></h2>
+  <p>Called when a world's terrain is created for the first time on the server.</p>
+  <p>This callback is triggered during the initial generation of the world terrain.</p>
+  <pre class="code"> * function World:server_onTerrainCreated()
+ *     -- Terrain creation logic here
+ * end</pre>  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="server_onTerrainLoaded"></a>server_onTerrainLoaded(self) <i>serverEventCallback</i></h2>
+  <p>Called when a world's terrain is loaded (not created) on the server.</p>
+  <p>This is triggered when existing terrain data is loaded into the world.</p>
+  <pre class="code"> * function World:server_onTerrainLoaded()
+ *     -- Terrain loading logic here
+ * end</pre>  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="client_onTerrainCreated"></a>client_onTerrainCreated(self) <i>clientEventCallback</i></h2>
+  <p>Called on the client when a world's terrain is created for the first time.</p>
+  <p>This callback is used for client-side terrain generation tasks.</p>
+  <pre class="code"> * function World:client_onTerrainCreated()
+ *     -- Client-side terrain creation logic
+ * end</pre>  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="client_onTerrainLoaded"></a>client_onTerrainLoaded(self) <i>clientEventCallback</i></h2>
+  <p>Called on the client when a world's terrain is loaded (not created).</p>
+  <p>This function is useful for initializing client-side elements based on the loaded terrain.</p>
+  <pre class="code"> * function World:client_onTerrainLoaded()
+ *     -- Client-side terrain loading logic
+ * end</pre>  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+  </table>
+  <hr>
   <h2 class="code"><a id="server_onCellCreated"></a>server_onCellCreated(self, x, y) <i>serverEventCallback</i></h2>
   <p>Called when a world cell is loaded and feature complete for the first time.</p>
   <div class="note">
@@ -466,7 +594,7 @@
    <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">uuid</td><td>The uuid of the projectile.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="server_onExplosion"></a>server_onExplosion(self, center, destructionLevel) <i>serverEventCallback</i></h2>
+  <h2 class="code"><a id="server_onExplosion"></a>server_onExplosion(self, center, destructionLevel, damage) <i>serverEventCallback</i></h2>
   <p>Called when an explosion occurs in this world.</p>
   <h4>Parameters:</h4>
   <table>
@@ -474,6 +602,7 @@
    <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
    <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">center</td><td>The center of the explosion.</td></tr>
    <tr><td class="code">integer</td><td class="code">destructionLevel</td><td>The level of destruction done by this explosion. Corresponds to the 'durability' rating of a <a href="userdata_Game_Shape.html" class="code">Shape</a>.</td></tr>
+   <tr><td class="code">integer</td><td class="code">damage</td><td>The damage value of the explosion.</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="server_onMelee"></a>server_onMelee(self, position, attacker, target, damage, power, direction, normal) <i>serverEventCallback</i></h2>
@@ -534,6 +663,56 @@
    <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">pointVelocityA</td><td>The velocity that that the first object had at the point of collision.</td></tr>
    <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">pointVelocityB</td><td>The velocity that that the other object had at the point of collision.</td></tr>
    <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">normal</td><td>The collision normal from objectA to objectB.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="client_onProjectile"></a>client_onProjectile(self, position, airTime, velocity, projectileName, shooter, damage, normal, target, uuid) <i>clientEventCallback</i></h2>
+  <p>Called when a projectile hits something in this world.</p>
+  <div class="note">
+   <h4>Note:</h4>
+   <p>If the shooter is destroyed before the projectile hits, the shooter value will be nil.</p>
+  </div>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The position in world space where the projectile hit.</td></tr>
+   <tr><td class="code">number</td><td class="code">airTime</td><td>The time, in seconds, that the projectile spent flying before the hit.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">velocity</td><td>The velocity of the projectile at impact.</td></tr>
+   <tr><td class="code">string</td><td class="code">projectileName</td><td>The name of the projectile. (Legacy, use uuid instead)</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Player.html" class="code">Player</a>/<a href="userdata_Game_Character.html" class="code">Character</a>/<a href="userdata_Game_Shape.html" class="code">Shape</a>/<a href="userdata_Game_Harvestable.html" class="code">Harvestable</a>/nil</td><td class="code">shooter</td><td>The shooter. Can be a <a href="userdata_Game_Player.html" class="code">Player</a>, <a href="userdata_Game_Character.html" class="code">Character</a>, <a href="userdata_Game_Shape.html" class="code">Shape</a>, <a href="userdata_Game_Harvestable.html" class="code">Harvestable</a> or nil if unknown.</td></tr>
+   <tr><td class="code">integer</td><td class="code">damage</td><td>The damage value of the projectile.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">normal</td><td>The normal at the point of impact.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a>/<a href="userdata_Game_Shape.html" class="code">Shape</a>/<a href="userdata_Game_Harvestable.html" class="code">Harvestable</a>/<a href="userdata_Game_Lift.html" class="code">Lift</a>/nil</td><td class="code">target</td><td>The hit target. Can be a <a href="userdata_Game_Character.html" class="code">Character</a>, <a href="userdata_Game_Shape.html" class="code">Shape</a>, <a href="userdata_Game_Harvestable.html" class="code">Harvestable</a>, <a href="userdata_Game_Lift.html" class="code">Lift</a> or nil if terrain or unknown.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">uuid</td><td>The uuid of the projectile.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="server_onVoxelDestruction"></a>server_onVoxelDestruction(self, densityLoss, positions) <i>serverEventCallback</i></h2>
+  <p>Called when a cluster of voxels are destroyed by a player or creation</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+   <tr><td class="code">table</td><td class="code">densityLoss</td><td>A table containing information about density loss for all materials.</td></tr>
+   <tr><td class="code">table</td><td class="code">positions</td><td>A table containing all positions where voxels were lost for each material.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="server_onVoxelConstruction"></a>server_onVoxelConstruction(self, densityGain, positions) <i>serverEventCallback</i></h2>
+  <p>Called when a cluster of voxels are added by a player</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+   <tr><td class="code">table</td><td class="code">densityGain</td><td>A table containing information about density gain for all materials.</td></tr>
+   <tr><td class="code">table</td><td class="code">positions</td><td>A table containing all positions where voxels were added for each material.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="server_onMining"></a>server_onMining(self, spawns) <i>serverEventCallback</i></h2>
+  <p>Called when the mining manager has filtered a batch of voxel loot candidates.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+   <tr><td class="code">table</td><td class="code">spawns</td><td>An array of { position = <a href="userdata_Game_Vec3.html" class="code">Vec3</a>, spawnId = integer } describing where and what to spawn.</td></tr>
   </table>
  </div>
 </body>

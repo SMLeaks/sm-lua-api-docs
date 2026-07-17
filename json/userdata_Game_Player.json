@@ -205,6 +205,15 @@
 			}
 		},
 		{
+			"name": "getCarryData",
+			"doc": {
+				"text": [
+					"get the carry data on a player."
+				],
+				"server_only": true
+			}
+		},
+		{
 			"name": "getCharacter",
 			"doc": {
 				"text": [
@@ -245,6 +254,54 @@
 					]
 				],
 				"client_only": true
+			}
+		},
+		{
+			"name": "getCurrentToolUuid",
+			"doc": {
+				"text": [
+					"Returns the uuid of the tool the player is currently holding."
+				],
+				"params": [
+					[
+						"[Uuid]",
+						"player",
+						"The player."
+					]
+				],
+				"return": [
+					[
+						"[Tool]",
+						"The player's held tool uuid."
+					]
+				]
+			}
+		},
+		{
+			"name": "getCustomizationUuid",
+			"doc": {
+				"text": [
+					"Get uuid of customization from index"
+				],
+				"params": [
+					[
+						"[player]",
+						"player",
+						""
+					],
+					[
+						"integer",
+						"customization",
+						"index"
+					]
+				],
+				"return": [
+					[
+						"uuid",
+						"uuid"
+					]
+				],
+				"server_only": true
 			}
 		},
 		{
@@ -351,6 +408,27 @@
 					]
 				],
 				"server_only": true
+			}
+		},
+		{
+			"name": "isActive",
+			"doc": {
+				"text": [
+					"Returns true if the player is currently in the game."
+				],
+				"params": [
+					[
+						"[Player]",
+						"player",
+						"The player."
+					]
+				],
+				"return": [
+					[
+						"boolean",
+						"True if active."
+					]
+				]
 			}
 		},
 		{
@@ -469,6 +547,15 @@
 			}
 		},
 		{
+			"name": "setCarryData",
+			"doc": {
+				"text": [
+					"Set the carry data on a player."
+				],
+				"server_only": true
+			}
+		},
+		{
 			"name": "setCharacter",
 			"doc": {
 				"text": [
@@ -538,7 +625,7 @@
 			"doc": {
 				"meta": [
 					[
-						"[Player],[Player]",
+						"[Player],[Player],boolean",
 						"Checks if two instances of [Player] refer to the same Player."
 					]
 				]

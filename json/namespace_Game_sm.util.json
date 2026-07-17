@@ -5,7 +5,56 @@
 			"Offers various math-related functions."
 		]
 	},
-	"constants": [],
+	"constants": [
+		{
+			"name": "easingFunctionIds",
+			"doc": {
+				"text": [
+					"Easing function ids can be passed to the easing function instead of the easing function's name.",
+					"The easings are:",
+					"@list",
+					"<strong>linear</strong>",
+					"<strong>easeInQuad</strong>",
+					"<strong>easeOutQuad</strong>",
+					"<strong>easeInOutQuad</strong>",
+					"<strong>easeInCubic</strong>",
+					"<strong>easeOutCubic</strong>",
+					"<strong>easeInOutCubic</strong>",
+					"<strong>easeInQuart</strong>",
+					"<strong>easeOutQuart</strong>",
+					"<strong>easeInOutQuart</strong>",
+					"<strong>easeInQuint</strong>",
+					"<strong>easeOutQuint</strong>",
+					"<strong>easeInOutQuint</strong>",
+					"<strong>easeInSine</strong>",
+					"<strong>easeOutSine</strong>",
+					"<strong>easeInOutSine</strong>",
+					"<strong>easeInCirc</strong>",
+					"<strong>easeOutCirc</strong>",
+					"<strong>easeInOutCirc</strong>",
+					"<strong>easeInExpo</strong>",
+					"<strong>easeOutExpo</strong>",
+					"<strong>easeInOutExpo</strong>",
+					"<strong>easeInElastic</strong>",
+					"<strong>easeOutElastic</strong>",
+					"<strong>easeInOutElastic</strong>",
+					"<strong>easeInBack</strong>",
+					"<strong>easeOutBack</strong>",
+					"<strong>easeInOutBack</strong>",
+					"<strong>easeInBounce</strong>",
+					"<strong>easeOutBounce</strong>",
+					"<strong>easeInOutBounce</strong>",
+					"@list"
+				],
+				"return": [
+					[
+						"table",
+						"The area trigger type list."
+					]
+				]
+			}
+		}
+	],
 	"functions": [
 		{
 			"name": "axesToQuat",
@@ -142,6 +191,58 @@
 			}
 		},
 		{
+			"name": "clampUtf8String",
+			"doc": {
+				"text": [
+					"Clamps a UTF-8 string to a maximum number of characters without splitting multi-byte sequences."
+				],
+				"params": [
+					[
+						"string",
+						"string",
+						"The input string."
+					],
+					[
+						"integer",
+						"maxLength",
+						"The maximum number of UTF-8 characters."
+					]
+				],
+				"return": [
+					[
+						"string",
+						"The clamped string."
+					]
+				]
+			}
+		},
+		{
+			"name": "easing",
+			"doc": {
+				"text": [
+					"Applies an easing function to a given input."
+				],
+				"params": [
+					[
+						"integer",
+						"easingFunctionId",
+						"The easing function to use. (See [sm.util.easingFunctionIds])"
+					],
+					[
+						"number",
+						"p",
+						"The easing function input."
+					]
+				],
+				"return": [
+					[
+						"number",
+						"The output."
+					]
+				]
+			}
+		},
+		{
 			"name": "easing",
 			"doc": {
 				"text": [
@@ -197,6 +298,59 @@
 					[
 						"number",
 						"The output."
+					]
+				]
+			}
+		},
+		{
+			"name": "geometricMedian",
+			"doc": {
+				"text": [
+					"Numerically approximates the geometric median from a table of points.",
+					"If no initial guess is made, the mean position of all the points will be used as a guess."
+				],
+				"params": [
+					[
+						"table",
+						"points",
+						"The table of points. { [Vec3], ... }."
+					],
+					[
+						"[Vec3]",
+						"initialGuess?",
+						"A guessed position to start searching from. (Optional)"
+					],
+					[
+						"integer",
+						"iterations?",
+						"The number of iterations. (Defaults to 1)"
+					]
+				],
+				"return": [
+					[
+						"[Vec3]",
+						"The estimated geometric median."
+					]
+				]
+			}
+		},
+		{
+			"name": "hash",
+			"doc": {
+				"text": [
+					"Create a hash from arguments."
+				],
+				"params": [
+					[
+						"any",
+						"...",
+						"The arguments to be hashed."
+					]
+				],
+				"return": [
+					[
+						"integer",
+						"The hash."
 					]
 				]
 			}
@@ -316,6 +470,27 @@
 					[
 						"number",
 						"The value."
+					]
+				]
+			}
+		},
+		{
+			"name": "utf8StringLength",
+			"doc": {
+				"text": [
+					"Returns the number of UTF-8 characters in a string."
+				],
+				"params": [
+					[
+						"string",
+						"string",
+						"The input string."
+					]
+				],
+				"return": [
+					[
+						"integer",
+						"The number of UTF-8 characters."
 					]
 				]
 			}

@@ -85,6 +85,21 @@
 			}
 		},
 		{
+			"name": "getConstructionPlacement",
+			"doc": {
+				"text": [
+					"Gets the world position and rotation of the local player's shape placement if it is not colliding. Otherwise nil is returned."
+				],
+				"return": [
+					[
+						"[Vec3], [Quat]",
+						"World position and rotation."
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
 			"name": "getDirection",
 			"doc": {
 				"text": [
@@ -144,6 +159,50 @@
 			}
 		},
 		{
+			"name": "getGarmentName",
+			"doc": {
+				"text": [
+					"Gets the title of the garment with the given uuid in the current language."
+				],
+				"params": [
+					[
+						"[Uuid]",
+						"uuid",
+						"The garment."
+					]
+				],
+				"return": [
+					[
+						"string",
+						"The title of the garment"
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "getGarmentUpperCaseTitle",
+			"doc": {
+				"text": [
+					"Gets the UPPER CASE title of the garment with the given uuid in the current language."
+				],
+				"params": [
+					[
+						"[Uuid]",
+						"uuid",
+						"The garment."
+					]
+				],
+				"return": [
+					[
+						"string",
+						"The title of the garment"
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
 			"name": "getHotbar",
 			"doc": {
 				"text": [
@@ -183,6 +242,21 @@
 					[
 						"[Container]",
 						"The player's inventory."
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "getLatestRaycast",
+			"doc": {
+				"text": [
+					"Returns the latest interaction raycast result of the local player. This is the raycast that is constantly performed to detect interactable objects up to a range of 7.5."
+				],
+				"return": [
+					[
+						"bool, [RaycastResult]",
+						"True if raycast was successful; Raycast result data."
 					]
 				],
 				"client_only": true
@@ -265,12 +339,12 @@
 					],
 					[
 						"[Vec3]",
-						"origin=nil",
+						"origin?",
 						"The start position. (Defaults to [sm.localPlayer.getRaycastStart])"
 					],
 					[
 						"[Vec3]",
-						"direction=nil",
+						"direction?",
 						"The direction. (Defaults to [sm.localPlayer.getDirection])"
 					]
 				],
@@ -344,6 +418,55 @@
 			}
 		},
 		{
+			"name": "getWantsSprint",
+			"doc": {
+				"text": [
+					"Checks if local player wants to sprint (pressing the sprint key)."
+				],
+				"return": [
+					[
+						"boolean",
+						"Whether the player is holding the sprint key."
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "getWorld",
+			"doc": {
+				"text": [
+					"Gets the world the local player's character is in, if any, otherwise nil."
+				],
+				"return": [
+					[
+						"[World]",
+						"The world the local player is in, if any."
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "grantQuestItem",
+			"doc": {
+				"text": [
+					"Unlocks a cosmetic with the given uuid for the player. Requires survival mode, non modified core files and no active mods to function."
+				],
+				"hidden": [
+					[]
+				],
+				"params": [
+					[
+						"[Uuid]",
+						"uid",
+						"The uuid of the unlocked cosmetic."
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
 			"name": "isGarmentUnlocked",
 			"doc": {
 				"text": [
@@ -391,6 +514,21 @@
 						"string",
 						"renderable",
 						"The renderable path."
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "secondaryInteractBusy",
+			"doc": {
+				"text": [
+					"Returns if the currently equipped tool consumes the secondary interaction, such as aiming with the spudgun."
+				],
+				"return": [
+					[
+						"boolean",
+						"True if the tool consumes the secondary interaction."
 					]
 				],
 				"client_only": true
@@ -463,13 +601,13 @@
 					],
 					[
 						"number",
-						"weight=-1.0",
-						"The weight."
+						"weight?",
+						"The weight. (Defaults to -1.0)"
 					],
 					[
 						"boolean",
-						"looping=false",
-						"The looping."
+						"looping?",
+						"The looping. (Defaults to false)"
 					]
 				],
 				"client_only": true

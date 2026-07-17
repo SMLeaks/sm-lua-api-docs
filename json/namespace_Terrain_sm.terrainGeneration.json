@@ -92,10 +92,30 @@
 			}
 		},
 		{
+			"name": "setAndSyncGameStorageNoSave",
+			"doc": {
+				"text": [
+					"Sets data produced from terrain generation and synchronizes to clients. This data is only valid during the game session."
+				],
+				"params": [
+					[
+						"any",
+						"key",
+						"Key used to lookup the saved data."
+					],
+					[
+						"any",
+						"data",
+						"Data to save."
+					]
+				]
+			}
+		},
+		{
 			"name": "setGameStorageNoSave",
 			"doc": {
 				"text": [
-					"Sets data produced from terrain generation and synchronizes to clients. This data is only valid during the game session.",
+					"Sets data produced from terrain generation. This data is only valid during the game session. Does not synchronize to clients",
 					" "
 				],
 				"params": [
@@ -116,7 +136,7 @@
 			"name": "setTempData",
 			"doc": {
 				"text": [
-					"Sets temporary data produced from terrain generation and synchronizes to clients.",
+					"Sets temporary data produced from terrain generation.",
 					" "
 				],
 				"params": [

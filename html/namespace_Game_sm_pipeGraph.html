@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>sm.pipeGraph - Lua API Reference - Scrap Mechanic</title>
+ <link rel="stylesheet" href="styles.css">
+ <script src="script.js"></script>
+ <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+ <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+ <div id="menu">
+  <h2>Lua API Reference</h2>
+  <ul>
+   <li><a href="index.html">Introduction</a></li>
+  </ul>
+  <h2>Game environment</h2>
+  <h3>Classes</h3>
+  <ul>
+   <li><a href="class_Game_CharacterClass.html" class="code">CharacterClass</a></li>
+   <li><a href="class_Game_ClientScriptableObjectClass.html" class="code">ClientScriptableObjectClass</a></li>
+   <li><a href="class_Game_GameClass.html" class="code">GameClass</a></li>
+   <li><a href="class_Game_HarvestableClass.html" class="code">HarvestableClass</a></li>
+   <li><a href="class_Game_PlayerClass.html" class="code">PlayerClass</a></li>
+   <li><a href="class_Game_ScriptableObjectClass.html" class="code">ScriptableObjectClass</a></li>
+   <li><a href="class_Game_ShapeClass.html" class="code">ShapeClass</a></li>
+   <li><a href="class_Game_ToolClass.html" class="code">ToolClass</a></li>
+   <li><a href="class_Game_UnitClass.html" class="code">UnitClass</a></li>
+   <li><a href="class_Game_WorldClass.html" class="code">WorldClass</a></li>
+  </ul>
+  <h3>Object Types 'userdata'</h3>
+  <ul>
+   <li><a href="userdata_Game_AiState.html" class="code">AiState</a></li>
+   <li><a href="userdata_Game_AreaTrigger.html" class="code">AreaTrigger</a></li>
+   <li><a href="userdata_Game_BlueprintVisualization.html" class="code">BlueprintVisualization</a></li>
+   <li><a href="userdata_Game_Body.html" class="code">Body</a></li>
+   <li><a href="userdata_Game_BuilderGuide.html" class="code">BuilderGuide</a></li>
+   <li><a href="userdata_Game_Character.html" class="code">Character</a></li>
+   <li><a href="userdata_Game_ClientScriptableObject.html" class="code">ClientScriptableObject</a></li>
+   <li><a href="userdata_Game_Color.html" class="code">Color</a></li>
+   <li><a href="userdata_Game_Container.html" class="code">Container</a></li>
+   <li><a href="userdata_Game_CullSphereGroup.html" class="code">CullSphereGroup</a></li>
+   <li><a href="userdata_Game_Effect.html" class="code">Effect</a></li>
+   <li><a href="userdata_Game_Garage.html" class="code">Garage</a></li>
+   <li><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></li>
+   <li><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></li>
+   <li><a href="userdata_Game_Interactable.html" class="code">Interactable</a></li>
+   <li><a href="userdata_Game_Joint.html" class="code">Joint</a></li>
+   <li><a href="userdata_Game_JsonGui.html" class="code">JsonGui</a></li>
+   <li><a href="userdata_Game_JsonWidget.html" class="code">JsonWidget</a></li>
+   <li><a href="userdata_Game_Lift.html" class="code">Lift</a></li>
+   <li><a href="userdata_Game_LoadCellHandle.html" class="code">LoadCellHandle</a></li>
+   <li><a href="userdata_Game_Network.html" class="code">Network</a></li>
+   <li><a href="userdata_Game_PathNode.html" class="code">PathNode</a></li>
+   <li><a href="userdata_Game_Player.html" class="code">Player</a></li>
+   <li><a href="userdata_Game_Portal.html" class="code">Portal</a></li>
+   <li><a href="userdata_Game_Quat.html" class="code">Quat</a></li>
+   <li><a href="userdata_Game_RaycastResult.html" class="code">RaycastResult</a></li>
+   <li><a href="userdata_Game_ScriptableObject.html" class="code">ScriptableObject</a></li>
+   <li><a href="userdata_Game_Shape.html" class="code">Shape</a></li>
+   <li><a href="userdata_Game_Storage.html" class="code">Storage</a></li>
+   <li><a href="userdata_Game_Tool.html" class="code">Tool</a></li>
+   <li><a href="userdata_Game_Unit.html" class="code">Unit</a></li>
+   <li><a href="userdata_Game_Uuid.html" class="code">Uuid</a></li>
+   <li><a href="userdata_Game_Vec3.html" class="code">Vec3</a></li>
+   <li><a href="userdata_Game_Widget.html" class="code">Widget</a></li>
+   <li><a href="userdata_Game_World.html" class="code">World</a></li>
+  </ul>
+  <h3>Static Function Namespaces</h3>
+  <ul>
+   <li><a href="namespace_Game_GLOBAL.html" class="code">GLOBAL</a></li>
+   <li><a href="namespace_Game_sm.html" class="code">sm</a></li>
+   <li><a href="namespace_Game_sm_ai.html" class="code">sm.ai</a></li>
+   <li><a href="namespace_Game_sm_areaTrigger.html" class="code">sm.areaTrigger</a></li>
+   <li><a href="namespace_Game_sm_audio.html" class="code">sm.audio</a></li>
+   <li><a href="namespace_Game_sm_body.html" class="code">sm.body</a></li>
+   <li><a href="namespace_Game_sm_builderGuide.html" class="code">sm.builderGuide</a></li>
+   <li><a href="namespace_Game_sm_camera.html" class="code">sm.camera</a></li>
+   <li><a href="namespace_Game_sm_cell.html" class="code">sm.cell</a></li>
+   <li><a href="namespace_Game_sm_challenge.html" class="code">sm.challenge</a></li>
+   <li><a href="namespace_Game_sm_character.html" class="code">sm.character</a></li>
+   <li><a href="namespace_Game_sm_clientScriptableObject.html" class="code">sm.clientScriptableObject</a></li>
+   <li><a href="namespace_Game_sm_color.html" class="code">sm.color</a></li>
+   <li><a href="namespace_Game_sm_construction.html" class="code">sm.construction</a></li>
+   <li><a href="namespace_Game_sm_container.html" class="code">sm.container</a></li>
+   <li><a href="namespace_Game_sm_creation.html" class="code">sm.creation</a></li>
+   <li><a href="namespace_Game_sm_cullSphereGroup.html" class="code">sm.cullSphereGroup</a></li>
+   <li><a href="namespace_Game_sm_debris.html" class="code">sm.debris</a></li>
+   <li><a href="namespace_Game_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
+   <li><a href="namespace_Game_sm_debugGui.html" class="code">sm.debugGui</a></li>
+   <li><a href="namespace_Game_sm_effect.html" class="code">sm.effect</a></li>
+   <li><a href="namespace_Game_sm_event.html" class="code">sm.event</a></li>
+   <li><a href="namespace_Game_sm_game.html" class="code">sm.game</a></li>
+   <li><a href="namespace_Game_sm_garage.html" class="code">sm.garage</a></li>
+   <li><a href="namespace_Game_sm_gui.html" class="code">sm.gui</a></li>
+   <li><a href="namespace_Game_sm_gui_widget.html" class="code">sm.gui.widget</a></li>
+   <li><a href="namespace_Game_sm_harvestable.html" class="code">sm.harvestable</a></li>
+   <li><a href="namespace_Game_sm_interactable.html" class="code">sm.interactable</a></li>
+   <li><a href="namespace_Game_sm_item.html" class="code">sm.item</a></li>
+   <li><a href="namespace_Game_sm_joint.html" class="code">sm.joint</a></li>
+   <li><a href="namespace_Game_sm_json.html" class="code">sm.json</a></li>
+   <li><a href="namespace_Game_sm_jsonGui.html" class="code">sm.jsonGui</a></li>
+   <li><a href="namespace_Game_sm_lift.html" class="code">sm.lift</a></li>
+   <li><a href="namespace_Game_sm_localPlayer.html" class="code">sm.localPlayer</a></li>
+   <li><a href="namespace_Game_sm_log.html" class="code">sm.log</a></li>
+   <li><a href="namespace_Game_sm_melee.html" class="code">sm.melee</a></li>
+   <li><a href="namespace_Game_sm_menuCreation.html" class="code">sm.menuCreation</a></li>
+   <li><a href="namespace_Game_sm_message.html" class="code">sm.message</a></li>
+   <li><a href="namespace_Game_sm_noise.html" class="code">sm.noise</a></li>
+   <li><a href="namespace_Game_sm_particle.html" class="code">sm.particle</a></li>
+   <li><a href="namespace_Game_sm_pathNode.html" class="code">sm.pathNode</a></li>
+   <li><a href="namespace_Game_sm_pathfinder.html" class="code">sm.pathfinder</a></li>
+   <li><a href="namespace_Game_sm_physics.html" class="code">sm.physics</a></li>
+   <li><a href="namespace_Game_sm_pipeGraph.html" class="code">sm.pipeGraph</a></li>
+   <li><a href="namespace_Game_sm_player.html" class="code">sm.player</a></li>
+   <li><a href="namespace_Game_sm_portal.html" class="code">sm.portal</a></li>
+   <li><a href="namespace_Game_sm_projectile.html" class="code">sm.projectile</a></li>
+   <li><a href="namespace_Game_sm_quat.html" class="code">sm.quat</a></li>
+   <li><a href="namespace_Game_sm_render.html" class="code">sm.render</a></li>
+   <li><a href="namespace_Game_sm_scriptableObject.html" class="code">sm.scriptableObject</a></li>
+   <li><a href="namespace_Game_sm_shape.html" class="code">sm.shape</a></li>
+   <li><a href="namespace_Game_sm_storage.html" class="code">sm.storage</a></li>
+   <li><a href="namespace_Game_sm_tool.html" class="code">sm.tool</a></li>
+   <li><a href="namespace_Game_sm_unit.html" class="code">sm.unit</a></li>
+   <li><a href="namespace_Game_sm_util.html" class="code">sm.util</a></li>
+   <li><a href="namespace_Game_sm_uuid.html" class="code">sm.uuid</a></li>
+   <li><a href="namespace_Game_sm_vec3.html" class="code">sm.vec3</a></li>
+   <li><a href="namespace_Game_sm_visualization.html" class="code">sm.visualization</a></li>
+   <li><a href="namespace_Game_sm_world.html" class="code">sm.world</a></li>
+  </ul>
+  <h2>Terrain environment</h2>
+  <h3>Classes</h3>
+  <ul>
+  </ul>
+  <h3>Object Types 'userdata'</h3>
+  <ul>
+   <li><a href="userdata_Terrain_Color.html" class="code">Color</a></li>
+   <li><a href="userdata_Terrain_Container.html" class="code">Container</a></li>
+   <li><a href="userdata_Terrain_Harvestable.html" class="code">Harvestable</a></li>
+   <li><a href="userdata_Terrain_Interactable.html" class="code">Interactable</a></li>
+   <li><a href="userdata_Terrain_Portal.html" class="code">Portal</a></li>
+   <li><a href="userdata_Terrain_Quat.html" class="code">Quat</a></li>
+   <li><a href="userdata_Terrain_ScriptableObject.html" class="code">ScriptableObject</a></li>
+   <li><a href="userdata_Terrain_Uuid.html" class="code">Uuid</a></li>
+   <li><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></li>
+   <li><a href="userdata_Terrain_World.html" class="code">World</a></li>
+  </ul>
+  <h3>Static Function Namespaces</h3>
+  <ul>
+   <li><a href="namespace_Terrain_GLOBAL.html" class="code">GLOBAL</a></li>
+   <li><a href="namespace_Terrain_sm.html" class="code">sm</a></li>
+   <li><a href="namespace_Terrain_sm_color.html" class="code">sm.color</a></li>
+   <li><a href="namespace_Terrain_sm_container.html" class="code">sm.container</a></li>
+   <li><a href="namespace_Terrain_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
+   <li><a href="namespace_Terrain_sm_debugGui.html" class="code">sm.debugGui</a></li>
+   <li><a href="namespace_Terrain_sm_interactable.html" class="code">sm.interactable</a></li>
+   <li><a href="namespace_Terrain_sm_json.html" class="code">sm.json</a></li>
+   <li><a href="namespace_Terrain_sm_log.html" class="code">sm.log</a></li>
+   <li><a href="namespace_Terrain_sm_noise.html" class="code">sm.noise</a></li>
+   <li><a href="namespace_Terrain_sm_quat.html" class="code">sm.quat</a></li>
+   <li><a href="namespace_Terrain_sm_scriptableObject.html" class="code">sm.scriptableObject</a></li>
+   <li><a href="namespace_Terrain_sm_terrainData.html" class="code">sm.terrainData</a></li>
+   <li><a href="namespace_Terrain_sm_terrainGeneration.html" class="code">sm.terrainGeneration</a></li>
+   <li><a href="namespace_Terrain_sm_terrainHarvestable.html" class="code">sm.terrainHarvestable</a></li>
+   <li><a href="namespace_Terrain_sm_terrainTile.html" class="code">sm.terrainTile</a></li>
+   <li><a href="namespace_Terrain_sm_tunnelGenerator.html" class="code">sm.tunnelGenerator</a></li>
+   <li><a href="namespace_Terrain_sm_util.html" class="code">sm.util</a></li>
+   <li><a href="namespace_Terrain_sm_uuid.html" class="code">sm.uuid</a></li>
+   <li><a href="namespace_Terrain_sm_vec3.html" class="code">sm.vec3</a></li>
+   <li><a href="namespace_Terrain_sm_voxelTerrainCell.html" class="code">sm.voxelTerrainCell</a></li>
+  </ul>
+ </div>
+ <div id="content">
+  <h1 class="code">sm.pipeGraph</h1>
+  <p>Pipe utility functions.</p>
+  <h4>Constants:</h4>  <ul>   <li><a href="#direction" class="code">direction</a></li>  </ul>  <h4>Functions:</h4  <ul>   <li><a href="#getContainerPath" class="code">getContainerPath</a></li>   <li><a href="#getContainerShapeToCollectTo" class="code">getContainerShapeToCollectTo</a></li>   <li><a href="#getContainerShapeToSpendFrom" class="code">getContainerShapeToSpendFrom</a></li>   <li><a href="#getInputContainers" class="code">getInputContainers</a></li>   <li><a href="#getInteractableConditionTicks" class="code">getInteractableConditionTicks</a></li>   <li><a href="#getMatchingPipedContainers" class="code">getMatchingPipedContainers</a></li>   <li><a href="#getOutputContainers" class="code">getOutputContainers</a></li>   <li><a href="#releaseLightingOverride" class="code">releaseLightingOverride</a></li>   <li><a href="#removeAutomatedTask" class="code">removeAutomatedTask</a></li>   <li><a href="#removeAutomatedTasks" class="code">removeAutomatedTasks</a></li>   <li><a href="#requestLightingOverride" class="code">requestLightingOverride</a></li>   <li><a href="#setAutomatedTask" class="code">setAutomatedTask</a></li>   <li><a href="#setInteractableCondition" class="code">setInteractableCondition</a></li>   <li><a href="#setParallelLimit" class="code">setParallelLimit</a></li>  </ul>  <hr>
+  <h2 class="code"><a id="direction"></a>sm.pipeGraph.direction <i>table</i></h2>
+  <p>Pipe direction types</p>
+  <table>
+   <tr>    <td>any</td>   </tr>   <tr>    <td>incoming</td>   </tr>   <tr>    <td>outgoing</td>   </tr>  </table>
+  <hr>
+  <h2 class="code"><a id="getContainerPath"></a>sm.pipeGraph.getContainerPath(requester, target, direction?)</h2>
+  <p>Client only</p>
+  <p>Returns a table of shapes on the path between the requesting shape and target container shape.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">requester</td><td>The requesting shape.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">target</td><td>The target container shape.</td></tr>
+   <tr><td class="code">integer</td><td class="code">direction?</td><td>The direction to fetch in. Defaults to <a href="namespace_Game_sm_pipeGraph.html#direction" class="code">sm.pipeGraph.direction.any</a> (Optional)</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td>shapes			The shapes on the path between requesting shape to target. Requester not included in table.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getContainerShapeToCollectTo"></a>sm.pipeGraph.getContainerShapeToCollectTo(requester, items, quantities)</h2>
+  <p>Returns a chest which allows for collection of specified items of the specified quantities.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">requester</td><td>The shape connected to the pipe graph who requests the information.</td></tr>
+   <tr><td class="code">table</td><td class="code">items</td><td>The uuids of items to check.</td></tr>
+   <tr><td class="code">table</td><td class="code">quantities</td><td>The number of items of each uuid. Needs to match the number of uuids.	</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td>container		The shape of the container which was the first one that allows the collection.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getContainerShapeToSpendFrom"></a>sm.pipeGraph.getContainerShapeToSpendFrom(requester, item, quantities)</h2>
+  <p>Returns a chest which allows for spending of specific item with a given quantity.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">requester</td><td>The shape connected to the pipe graph who requests the information.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">item</td><td>The uuid of the target item.</td></tr>
+   <tr><td class="code">number</td><td class="code">quantities</td><td>The target spending amount.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td>container		The shape of the container which was the first one that allows spending.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getInputContainers"></a>sm.pipeGraph.getInputContainers(requester)</h2>
+  <p>Returns a table of all connected input containers sorted by closest first. If the asking shape doesn't have input and output directions it returns all connected containers.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">requester</td><td>The shape connected to the pipe graph who's connected chests you want.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td>containers		A table of connected container shapes sorted by closest first.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getInteractableConditionTicks"></a>sm.pipeGraph.getInteractableConditionTicks(requester)</h2>
+  <p>Server only</p>
+  <p>Returns the remaining of special condition, nil if no data is available.</p>
+  <p>return integer:	remainingTicks	The remaining ticks of the special condition.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">requester</td><td>The requesting shape.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getMatchingPipedContainers"></a>sm.pipeGraph.getMatchingPipedContainers(originInteractable)</h2>
+  <p>Returns the containers of all chests connected to the given shape through the pipe connections. Will only return containers from shapes of the same type as the original.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Interactable.html" class="code">Interactable</a></td><td class="code">originInteractable</td><td>The interactable where the search will start from.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td>containers				The container of the originInteractable as well as those of the same type connected through pipes.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getOutputContainers"></a>sm.pipeGraph.getOutputContainers(requester)</h2>
+  <p>Returns a table of all connected output containers sorted by closest first. If the asking shape doesn't have input and output directions it returns all connected containers.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">requester</td><td>The shape connected to the pipe graph who's connected chests you want.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td>containers		A table of connected container shapes sorted by closest first.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="releaseLightingOverride"></a>sm.pipeGraph.releaseLightingOverride(requester)</h2>
+  <p>Client only</p>
+  <p>Releases any glow and UV overrides made by the shape.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">requester</td><td>The requesting shape.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="removeAutomatedTask"></a>sm.pipeGraph.removeAutomatedTask(requester, item)</h2>
+  <p>Server only</p>
+  <p>Removes all stored automated tasks capable of producing the specified item from a producing shape.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">requester</td><td>The requesting shape.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">item</td><td>The production to stop.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="removeAutomatedTasks"></a>sm.pipeGraph.removeAutomatedTasks(requester)</h2>
+  <p>Server only</p>
+  <p>Removes any stored automated tasks for the requesting shape.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">requester</td><td>The requesting shape.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="requestLightingOverride"></a>sm.pipeGraph.requestLightingOverride(requester, target, uvIndex, glow)</h2>
+  <p>Client only</p>
+  <p>Requests a glow and UV override for pipes between requesting shape and target container.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">requester</td><td>The requesting shape.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">target</td><td>The target container shape.</td></tr>
+   <tr><td class="code">integer</td><td class="code">uvIndex</td><td>The uv frame index for the affected pipes. Ranges 0 to 3.</td></tr>
+   <tr><td class="code">number</td><td class="code">glow</td><td>The glow multiplier of the pipes.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setAutomatedTask"></a>sm.pipeGraph.setAutomatedTask(requester, recipe, parallel?)</h2>
+  <p>Server only</p>
+  <p>Sets an automated task to be performed by the pipe graph when the body is unloaded.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">requester</td><td>The shape which requests the automated process.</td></tr>
+   <tr><td class="code">table</td><td class="code">recipe</td><td>A table with information on the recipe. Uses the crafter recipe format. Can have "craftTime", "quantity", "itemId", "externalContainers"(containers targeted outside pipe graph for consumption, example: refinery), "selfOutputContainer"(if the shape has it's own collection container), "ingredientList", "randomCraftList" random weighted crafts (see prospector), "specialCrafting" used to target specific container slots with custom information (see ore crusher).</td></tr>
+   <tr><td class="code">boolean</td><td class="code">parallel?</td><td>Whether the craft tasks should be carried out in parallel or not, off by default. A parallel task will be carried out independently of other automated tasks on this shape. (Optional)</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setInteractableCondition"></a>sm.pipeGraph.setInteractableCondition(requester, condition)</h2>
+  <p>Server only</p>
+  <p>Sets special conditions for allowing an interactable to craft.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">requester</td><td>The requesting shape.</td></tr>
+   <tr><td class="code">table</td><td class="code">condition</td><td>Values for special conditions to allow crafting. Uses "uuid", "tickFrequency", "remainingTicks"(optional), "consumptionCount", "onlyExternal". See Prospector.lua for example.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setParallelLimit"></a>sm.pipeGraph.setParallelLimit(requester, amount)</h2>
+  <p>Server only</p>
+  <p>Sets the maximum amount of parallel crafts, 65535 if not set.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">requester</td><td>The requesting shape.</td></tr>
+   <tr><td class="code">integer</td><td class="code">amount</td><td>The number of parallel crafts allowed to be done at once.</td></tr>
+  </table>
+ </div>
+</body>
+</html>

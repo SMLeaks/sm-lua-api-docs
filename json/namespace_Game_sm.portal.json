@@ -73,6 +73,37 @@
 			}
 		},
 		{
+			"name": "findBestPortalToWorld",
+			"doc": {
+				"text": [
+					"Finds the portal position that has the best path to the given world."
+				],
+				"params": [
+					[
+						"integer",
+						"playerWorld",
+						"The player's current world id."
+					],
+					[
+						"integer",
+						"targetWorld",
+						"The world id we wanna get a path towards."
+					],
+					[
+						"[Vec3]",
+						"fromPosition",
+						"The position we wanna get a path from."
+					]
+				],
+				"return": [
+					[
+						"[Vec3], [Portal]",
+						"The position of the portal, and the portal with the shortest path to the given world."
+					]
+				]
+			}
+		},
+		{
 			"name": "popWorldPortalHook",
 			"doc": {
 				"text": [
@@ -83,12 +114,51 @@
 						"string",
 						"name",
 						"The portal name."
+					],
+					[
+						"[World]",
+						"world?",
+						"The world to look in (Optional, defaults to world from script context)"
 					]
 				],
 				"return": [
 					[
 						"[Portal]",
 						"The portal. Nil if nothing was found."
+					]
+				],
+				"server_only": true
+			}
+		},
+		{
+			"name": "transferBToB",
+			"doc": {
+				"text": [
+					"Transfers objects inside one B opening to the B opening of another portal.",
+					"Can be used to make elevators with several floors.",
+					"Portal sizes and opening A must match (world, position and rotation)."
+				],
+				"params": [
+					[
+						"[Portal]",
+						"fromPortal",
+						"The portal to transfer from."
+					],
+					[
+						"[Portal]",
+						"toPortal",
+						"The portal to transfer to."
+					],
+					[
+						"integer",
+						"filter?",
+						"A [sm.physics.filter] mask selecting which contents to transfer. Only [sm.physics.filter, dynamicBody], [sm.physics.filter, staticBody] and [sm.physics.filter, character] are meaningful. Defaults to transferring bodies and characters. (Optional)"
+					]
+				],
+				"return": [
+					[
+						"boolean",
+						"True if successful, false on failure."
 					]
 				],
 				"server_only": true

@@ -545,8 +545,14 @@
 					],
 					[
 						"boolean",
-						"forceAccept=nil",
+						"forceAccept?",
 						"Set true to force the body to accept the shape. (Defaults to true)"
+					]
+				],
+				"return": [
+					[
+						"[Shape]",
+						"The created block"
 					]
 				],
 				"server_only": true
@@ -586,8 +592,14 @@
 					],
 					[
 						"boolean",
-						"forceAccept=nil",
+						"forceAccept?",
 						"Set true to force the body to accept the shape. (Defaults to true)"
+					]
+				],
+				"return": [
+					[
+						"[Shape]",
+						"The created part"
 					]
 				],
 				"server_only": true
@@ -634,8 +646,24 @@
 					],
 					[
 						"boolean",
-						"forceAccept=nil",
+						"forceAccept?",
 						"Set true to force the body to accept the shape. (Defaults to true)"
+					]
+				],
+				"server_only": true
+			}
+		},
+		{
+			"name": "destroyCreation",
+			"doc": {
+				"text": [
+					"Destroys the entire creation connected to this body"
+				],
+				"params": [
+					[
+						"[Body]",
+						"body",
+						"The body."
 					]
 				],
 				"server_only": true
@@ -722,7 +750,7 @@
 				"return": [
 					[
 						"table",
-						"The table all bodies in a creation. {[Body], ...}"
+						"An array table of all bodies in a creation. {[Body], ...}"
 					]
 				]
 			}
@@ -731,7 +759,10 @@
 			"name": "getCreationId",
 			"doc": {
 				"text": [
-					"Returns the id of the creation"
+					"Returns the local id of the creation",
+					"@note",
+					"Server and client ids will not match",
+					"@note"
 				],
 				"params": [
 					[
@@ -743,10 +774,9 @@
 				"return": [
 					[
 						"integer",
-						"The creation's id"
+						"The creation's local id"
 					]
-				],
-				"server_only": true
+				]
 			}
 		},
 		{
@@ -901,6 +931,53 @@
 			}
 		},
 		{
+			"name": "getShape",
+			"doc": {
+				"text": [
+					"Returns a shape that is part of a body by index."
+				],
+				"params": [
+					[
+						"[Body]",
+						"body",
+						"The body."
+					],
+					[
+						"integer",
+						"index",
+						"The index of the shape."
+					]
+				],
+				"return": [
+					[
+						"[Shape]",
+						"The shape at the specified index, or nil if the index is out of range."
+					]
+				]
+			}
+		},
+		{
+			"name": "getShapeCount",
+			"doc": {
+				"text": [
+					"Returns the number of shapes in a body."
+				],
+				"params": [
+					[
+						"[Body]",
+						"body",
+						"The body."
+					]
+				],
+				"return": [
+					[
+						"integer",
+						"The number of shapes in the body."
+					]
+				]
+			}
+		},
+		{
 			"name": "getShapes",
 			"doc": {
 				"text": [
@@ -912,6 +989,33 @@
 						"[Body]",
 						"body",
 						"The body."
+					]
+				],
+				"return": [
+					[
+						"table",
+						"The table of shapes in a body. {[Shape], ...}"
+					]
+				]
+			}
+		},
+		{
+			"name": "getShapesByUuid",
+			"doc": {
+				"text": [
+					"Returns a table of all [Shape, shapes] that are part of a body and have a specified uuid.",
+					"This will <strong>not</strong> return shapes in neighbouring bodies connected by [Joint, joints], etc."
+				],
+				"params": [
+					[
+						"[Body]",
+						"body",
+						"The body."
+					],
+					[
+						"[Uuid]",
+						"uuid",
+						"The uuid to look for."
 					]
 				],
 				"return": [
@@ -1159,6 +1263,27 @@
 			}
 		},
 		{
+			"name": "isGhost",
+			"doc": {
+				"text": [
+					"Check if the body is a ghost body."
+				],
+				"params": [
+					[
+						"[Body]",
+						"body",
+						"The body."
+					]
+				],
+				"return": [
+					[
+						"boolean",
+						"Returns true if the body is a ghost body."
+					]
+				]
+			}
+		},
+		{
 			"name": "isLiftable",
 			"doc": {
 				"text": [
@@ -1184,6 +1309,27 @@
 			"doc": {
 				"text": [
 					"Check if a body is on a lift"
+				],
+				"params": [
+					[
+						"[Body]",
+						"body",
+						"The body."
+					]
+				],
+				"return": [
+					[
+						"boolean",
+						"Return true if the body is on a lift"
+					]
+				]
+			}
+		},
+		{
+			"name": "isOnVirtualLift",
+			"doc": {
+				"text": [
+					"Check if a body is on a virtual lift"
 				],
 				"params": [
 					[
@@ -1432,7 +1578,7 @@
 			}
 		},
 		{
-			"name": "transformPoint",
+			"name": "transformLocalPoint",
 			"doc": {
 				"text": [
 					"Transforms a point from local space to world space."
@@ -1456,6 +1602,32 @@
 					]
 				]
 			}
+		},
+		{
+			"name": "transformWorldPoint",
+			"doc": {
+				"text": [
+					"Transforms a point from world space to local space."
+				],
+				"params": [
+					[
+						"[Body]",
+						"body",
+						"The body."
+					],
+					[
+						"[Vec3]",
+						"point",
+						"The point in world space."
+					]
+				],
+				"return": [
+					[
+						"[Vec3]",
+						"The point in local space."
+					]
+				]
+			}
 		}
 	],
 	"metamethods": [
@@ -1464,7 +1636,7 @@
 			"doc": {
 				"meta": [
 					[
-						"[Body],[Body]",
+						"[Body],[Body],boolean",
 						"Checks if two instances of [Body] refer to the same Body."
 					]
 				]

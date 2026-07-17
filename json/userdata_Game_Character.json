@@ -298,6 +298,29 @@
 			}
 		},
 		{
+			"name": "world",
+			"get": {
+				"doc": {
+					"text": [
+						"Returns the world a character exists in."
+					],
+					"params": [
+						[
+							"[Character]",
+							"character",
+							"The character."
+						]
+					],
+					"return": [
+						[
+							"[World]",
+							"The world the character exists in."
+						]
+					]
+				}
+			}
+		},
+		{
 			"name": "worldPosition",
 			"get": {
 				"doc": {
@@ -317,6 +340,26 @@
 							"The character's world position."
 						]
 					]
+				}
+			},
+			"set": {
+				"doc": {
+					"text": [
+						"Sets the world position of a character."
+					],
+					"params": [
+						[
+							"[Character]",
+							"character",
+							"The character."
+						],
+						[
+							"[Vec3]",
+							"position",
+							"The character's new world position."
+						]
+					],
+					"server_only": true
 				}
 			}
 		}
@@ -359,6 +402,11 @@
 						"[Vec3]",
 						"impulse",
 						"The impulse."
+					],
+					[
+						"[Vec3]",
+						"offset?",
+						"The offset from the center point. (Defaults to no offset)"
 					]
 				]
 			}
@@ -403,13 +451,13 @@
 					[
 						"[Character]",
 						"character",
-						"The character. "
+						"The character."
 					]
 				],
 				"return": [
 					[
 						"table",
-						"The set of active animatons { { name = string, weight = number }, ...}"
+						"The set of active animations { { name = string, weight = number }, ...}"
 					]
 				]
 			}
@@ -651,6 +699,70 @@
 			}
 		},
 		{
+			"name": "getImmovable",
+			"doc": {
+				"text": [
+					"Returns whether a non-player character is immovable,"
+				],
+				"params": [
+					[
+						"[Character]",
+						"character",
+						"The character."
+					]
+				],
+				"return": [
+					[
+						"boolean",
+						"The immovable state of the character."
+					]
+				],
+				"server_only": true
+			}
+		},
+		{
+			"name": "getJumpSpeedFraction",
+			"doc": {
+				"text": [
+					"Gets the current fraction multiplier applied on the character's jump speed."
+				],
+				"params": [
+					[
+						"[Character]",
+						"character",
+						"The character."
+					]
+				],
+				"return": [
+					[
+						"number",
+						"The jump speed fraction."
+					]
+				]
+			}
+		},
+		{
+			"name": "getLockingHarvestable",
+			"doc": {
+				"text": [
+					"Get the [Harvestable] that the [Character] is locked to."
+				],
+				"params": [
+					[
+						"[Character]",
+						"character",
+						"The character."
+					]
+				],
+				"return": [
+					[
+						"[Harvestable]",
+						"The harvestable."
+					]
+				]
+			}
+		},
+		{
 			"name": "getLockingInteractable",
 			"doc": {
 				"text": [
@@ -688,6 +800,27 @@
 					[
 						"number",
 						"The character's mass."
+					]
+				]
+			}
+		},
+		{
+			"name": "getMoveSpeed",
+			"doc": {
+				"text": [
+					"Returns the move speed of a character"
+				],
+				"params": [
+					[
+						"[Character]",
+						"character",
+						"The character."
+					]
+				],
+				"return": [
+					[
+						"number",
+						"The character's move speed."
 					]
 				]
 			}
@@ -799,6 +932,27 @@
 			}
 		},
 		{
+			"name": "getSprintSpeed",
+			"doc": {
+				"text": [
+					"Returns the sprint speed of a character"
+				],
+				"params": [
+					[
+						"[Character]",
+						"character",
+						"The character."
+					]
+				],
+				"return": [
+					[
+						"number",
+						"The character's sprint speed."
+					]
+				]
+			}
+		},
+		{
 			"name": "getSurfaceNormal",
 			"doc": {
 				"text": [
@@ -872,10 +1026,31 @@
 			}
 		},
 		{
+			"name": "getTumblingAngularVelocity",
+			"doc": {
+				"text": [
+					"Returns the angular velocity of the characters tumbling shape."
+				],
+				"params": [
+					[
+						"[Character]",
+						"character",
+						"The character."
+					]
+				],
+				"return": [
+					[
+						"[Vec3]",
+						"The tumbling shape's angular velocity."
+					]
+				]
+			}
+		},
+		{
 			"name": "getTumblingExtent",
 			"doc": {
 				"text": [
-					"Returns the extent of the characters tumbeling shape."
+					"Returns the extent of the characters tumbling shape."
 				],
 				"params": [
 					[
@@ -917,7 +1092,7 @@
 			"name": "getTumblingWorldPosition",
 			"doc": {
 				"text": [
-					"Returns the world position of the characters tumbeling shape."
+					"Returns the world position of the characters tumbling shape."
 				],
 				"params": [
 					[
@@ -938,7 +1113,7 @@
 			"name": "getTumblingWorldRotation",
 			"doc": {
 				"text": [
-					"Returns the world rotation of the characters tumbeling shape."
+					"Returns the world rotation of the characters tumbling shape."
 				],
 				"params": [
 					[
@@ -1040,6 +1215,51 @@
 			}
 		},
 		{
+			"name": "hasActiveOverrideAnimation",
+			"doc": {
+				"text": [
+					"Returns whether or not the character has an active animation override on its third person animations.",
+					"A third person animation override could be the crowbar animation when picking something up or the hammer when placing something."
+				],
+				"params": [
+					[
+						"[Character]",
+						"player",
+						"The player."
+					]
+				],
+				"return": [
+					[
+						"bool",
+						"Has active animation override."
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "hasGraphics",
+			"doc": {
+				"text": [
+					"Checks if a character has graphics."
+				],
+				"params": [
+					[
+						"[Character]",
+						"character",
+						"The character."
+					]
+				],
+				"return": [
+					[
+						"boolean",
+						"Whether the character has graphics."
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
 			"name": "isAiming",
 			"doc": {
 				"text": [
@@ -1071,11 +1291,12 @@
 						"[Character]",
 						"character",
 						"The character."
-					],
+					]
+				],
+				"return": [
 					[
 						"boolean",
-						"state",
-						"The state."
+						"The climbing state."
 					]
 				]
 			}
@@ -1133,11 +1354,12 @@
 						"[Character]",
 						"character",
 						"The character."
-					],
+					]
+				],
+				"return": [
 					[
 						"boolean",
-						"state",
-						"The state."
+						"The diving state."
 					]
 				]
 			}
@@ -1153,11 +1375,96 @@
 						"[Character]",
 						"character",
 						"The character."
-					],
+					]
+				],
+				"return": [
 					[
 						"boolean",
-						"state",
-						"The state."
+						"The downed state."
+					]
+				]
+			}
+		},
+		{
+			"name": "isFlying",
+			"doc": {
+				"text": [
+					"Get the character flying state."
+				],
+				"params": [
+					[
+						"[Character]",
+						"character",
+						"The character."
+					]
+				],
+				"return": [
+					[
+						"boolean",
+						"The flying state."
+					]
+				]
+			}
+		},
+		{
+			"name": "isHovering",
+			"doc": {
+				"text": [
+					"Get the character hovering state."
+				],
+				"params": [
+					[
+						"[Character]",
+						"character",
+						"The character."
+					]
+				],
+				"return": [
+					[
+						"boolean",
+						"The hovering state."
+					]
+				]
+			}
+		},
+		{
+			"name": "isLadderClimbing",
+			"doc": {
+				"text": [
+					"Get whether the character is climbing a ladder."
+				],
+				"params": [
+					[
+						"[Character]",
+						"character",
+						"The character."
+					]
+				],
+				"return": [
+					[
+						"boolean",
+						"The ladder climbing state."
+					]
+				]
+			}
+		},
+		{
+			"name": "isMoving",
+			"doc": {
+				"text": [
+					"Returns whether a character is currently moving."
+				],
+				"params": [
+					[
+						"[Character]",
+						"character",
+						"The character."
+					]
+				],
+				"return": [
+					[
+						"boolean",
+						"Whether the character is moving."
 					]
 				]
 			}
@@ -1205,6 +1512,27 @@
 			}
 		},
 		{
+			"name": "isSeated",
+			"doc": {
+				"text": [
+					"Returns whether the character is currently seated."
+				],
+				"params": [
+					[
+						"[Character]",
+						"character",
+						"The character."
+					]
+				],
+				"return": [
+					[
+						"boolean",
+						"Whether the character is seated."
+					]
+				]
+			}
+		},
+		{
 			"name": "isSprinting",
 			"doc": {
 				"text": [
@@ -1236,11 +1564,12 @@
 						"[Character]",
 						"character",
 						"The character."
-					],
+					]
+				],
+				"return": [
 					[
 						"boolean",
-						"state",
-						"The state."
+						"The swimming state."
 					]
 				]
 			}
@@ -1256,13 +1585,57 @@
 						"[Character]",
 						"character",
 						"The character."
-					],
+					]
+				],
+				"return": [
 					[
 						"boolean",
-						"state",
-						"The state."
+						"The tumbling state."
 					]
 				]
+			}
+		},
+		{
+			"name": "isVisible",
+			"doc": {
+				"text": [
+					"Returns whether a character is visible."
+				],
+				"params": [
+					[
+						"[Character]",
+						"character",
+						"The character."
+					]
+				],
+				"return": [
+					[
+						"boolean",
+						"Whether the character is visible."
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "overrideRenderableList",
+			"doc": {
+				"text": [
+					"Overrides a non player character's third person renderable list with a new list of renderables. Will trigger a rebuild of the character's graphics."
+				],
+				"params": [
+					[
+						"[Character]",
+						"character",
+						"The character."
+					],
+					[
+						"table",
+						"renderables",
+						"An array of renderable file paths to override with."
+					]
+				],
+				"client_only": true
 			}
 		},
 		{
@@ -1359,7 +1732,7 @@
 					[
 						"boolean",
 						"state",
-						"The state."
+						"The climbing state."
 					]
 				],
 				"server_only": true
@@ -1401,7 +1774,7 @@
 					[
 						"boolean",
 						"state",
-						"The state."
+						"The diving state."
 					]
 				],
 				"server_only": true
@@ -1422,7 +1795,29 @@
 					[
 						"boolean",
 						"state",
-						"The state."
+						"The downed state."
+					]
+				],
+				"server_only": true
+			}
+		},
+		{
+			"name": "setFlying",
+			"doc": {
+				"text": [
+					"Sets whether the character is flying.",
+					"Will not activate flight for player characters."
+				],
+				"params": [
+					[
+						"[Character]",
+						"character",
+						"The character."
+					],
+					[
+						"boolean",
+						"state",
+						"The flying state."
 					]
 				],
 				"server_only": true
@@ -1447,6 +1842,95 @@
 					]
 				],
 				"client_only": true
+			}
+		},
+		{
+			"name": "setHovering",
+			"doc": {
+				"text": [
+					"Sets whether the character is hovering.",
+					"Will not activate hover for player characters."
+				],
+				"params": [
+					[
+						"[Character]",
+						"character",
+						"The character."
+					],
+					[
+						"boolean",
+						"state",
+						"The hovering state."
+					]
+				],
+				"server_only": true
+			}
+		},
+		{
+			"name": "setImmovable",
+			"doc": {
+				"text": [
+					"Sets the immovable state on a non-player character. This prevents the character from updating its physics."
+				],
+				"params": [
+					[
+						"[Character]",
+						"character",
+						"The character."
+					],
+					[
+						"boolean",
+						"enable",
+						"Set immovable state."
+					]
+				],
+				"server_only": true
+			}
+		},
+		{
+			"name": "setJumpSpeedFraction",
+			"doc": {
+				"text": [
+					"Sets a fraction multiplier to the character's jump speed."
+				],
+				"params": [
+					[
+						"[Character]",
+						"character",
+						"The character."
+					],
+					[
+						"number",
+						"fraction",
+						"The jump speed fraction."
+					]
+				]
+			}
+		},
+		{
+			"name": "setLockingHarvestable",
+			"doc": {
+				"text": [
+					"Set the [Harvestable] that the [Character] is locked to. Set [Harvestable] to nil to unlock."
+				],
+				"params": [
+					[
+						"[Character]",
+						"character",
+						"The character."
+					],
+					[
+						"[Harvestable]",
+						"harvestable",
+						"The harvestable."
+					]
+				],
+				"return": [
+					[
+						"boolean",
+						"True if the character was successfully locked or unlocked."
+					]
+				]
 			}
 		},
 		{
@@ -1489,8 +1973,8 @@
 					],
 					[
 						"string",
-						"Effect",
-						"set filepath\t\tThe effect set filepath."
+						"filepath",
+						"The effect set filepath."
 					]
 				]
 			}
@@ -1560,24 +2044,24 @@
 						"The new name tag text value."
 					],
 					[
-						"color",
-						"color=nil",
+						"[Color]",
+						"color?",
 						"The color of the name. (defaults to white)"
 					],
 					[
-						"bool",
-						"requiresLoS=false",
-						"Whether broken line of sight will hide the name tag."
+						"boolean",
+						"requiresLoS?",
+						"Whether broken line of sight will hide the name tag. (Defaults to false)"
 					],
 					[
-						"float",
-						"renderDistance=10000",
-						"Max distance the name tag will render in."
+						"number",
+						"renderDistance?",
+						"Max distance the name tag will render in. (Defaults to 10000)"
 					],
 					[
-						"float",
-						"fadeDistance=9500",
-						"Distance where fade out will start."
+						"number",
+						"fadeDistance?",
+						"Distance where fade out will start. (Defaults to 9500)"
 					]
 				],
 				"client_only": true
@@ -1608,7 +2092,10 @@
 			"name": "setSwimming",
 			"doc": {
 				"text": [
-					"Sets whether the character is swimming."
+					"Sets whether the character is swimming.",
+					"@note",
+					"By default the swimming state is controlled by the client as part of the player movement. This value is treated like an override that is synchronized from the server. Buoyancy calculations in the character controller require that the character touches a liquid volume.",
+					"@note"
 				],
 				"params": [
 					[
@@ -1619,7 +2106,7 @@
 					[
 						"boolean",
 						"state",
-						"The state."
+						"The swimming state."
 					]
 				],
 				"server_only": true
@@ -1640,7 +2127,7 @@
 					[
 						"boolean",
 						"state",
-						"The state."
+						"The tumbling state."
 					]
 				],
 				"server_only": true
@@ -1668,6 +2155,27 @@
 			}
 		},
 		{
+			"name": "setVisible",
+			"doc": {
+				"text": [
+					"Sets the visibility."
+				],
+				"params": [
+					[
+						"[Character]",
+						"character",
+						"The character."
+					],
+					[
+						"boolean",
+						"visible",
+						"Whether the character should be visible."
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
 			"name": "setWorldPosition",
 			"doc": {
 				"text": [
@@ -1681,8 +2189,8 @@
 					],
 					[
 						"[Vec3]",
-						"The",
-						"character's new world position."
+						"position",
+						"The character's new world position."
 					]
 				],
 				"server_only": true
@@ -1712,12 +2220,12 @@
 					],
 					[
 						"number",
-						"weight=nil",
+						"weight?",
 						"The weight. Defaults to -1.0. (Optional)"
 					],
 					[
 						"boolean",
-						"additive=nil",
+						"additive?",
 						"Whether the animation will be added to the default animation. Defaults to false. (Optional)"
 					]
 				],
@@ -1731,7 +2239,7 @@
 			"doc": {
 				"meta": [
 					[
-						"[Character],[Character]",
+						"[Character],[Character],boolean",
 						"Checks if two instances of [Character] refer to the same Character."
 					]
 				]

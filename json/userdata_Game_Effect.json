@@ -38,7 +38,10 @@
 			"name": "bindEventCallback",
 			"doc": {
 				"text": [
-					"Bind an lua callback to be triggerd by the effect."
+					"Bind a lua callback to be triggered by the effect."
+				],
+				"deprecated": [
+					"use [Effect.bindEventClientCallback] instead."
 				],
 				"params": [
 					[
@@ -53,13 +56,81 @@
 					],
 					[
 						"any",
-						"params=nil",
+						"params?",
 						"Parameter object passed to the callback. (Optional)"
 					],
 					[
 						"table",
-						"reference=nil",
-						"Table to recieve the callback. (Optional)"
+						"reference?",
+						"Table to receive the callback. (Optional)"
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "bindEventClientCallback",
+			"doc": {
+				"text": [
+					"Bind a lua client callback script reference to be used by the effect."
+				],
+				"params": [
+					[
+						"[Effect]",
+						"effect",
+						"The effect."
+					],
+					[
+						"any",
+						"params?",
+						"Parameter object passed to the callback. (Optional)"
+					],
+					[
+						"table",
+						"reference?",
+						"Table to receive the callback. (Optional)"
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "bindEventServerCallback",
+			"doc": {
+				"text": [
+					"Bind a lua server callback script reference to be used by the effect. Host only."
+				],
+				"params": [
+					[
+						"[Effect]",
+						"effect",
+						"The effect."
+					],
+					[
+						"any",
+						"params?",
+						"Parameter object passed to the callback. (Optional)"
+					],
+					[
+						"table",
+						"reference?",
+						"Table to receive the callback. (Optional)"
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "clearClientEventCallback",
+			"doc": {
+				"text": [
+					"Clear the effect lua client callback script reference."
+				],
+				"params": [
+					[
+						"[Effect]",
+						"effect",
+						"The effect."
 					]
 				],
 				"client_only": true
@@ -70,6 +141,25 @@
 			"doc": {
 				"text": [
 					"Clear all lua effect callbacks."
+				],
+				"deprecated": [
+					"use [Effect.clearClientEventCallback] together with [Effect.bindEventClientCallback] instead."
+				],
+				"params": [
+					[
+						"[Effect]",
+						"effect",
+						"The effect."
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "clearServerEventCallback",
+			"doc": {
+				"text": [
+					"Clear the effect lua server callback script reference."
 				],
 				"params": [
 					[
@@ -97,34 +187,27 @@
 			}
 		},
 		{
-			"name": "getCameraFov",
+			"name": "detach",
 			"doc": {
 				"text": [
-					"Get the desired camera FOV.",
-					"Will return nil if the effect is not playing."
+					"Detaches the effect from its host object."
 				],
 				"params": [
 					[
 						"[Effect]",
 						"effect",
 						"The effect."
-					]
-				],
-				"return": [
-					[
-						"number",
-						"The FOV."
 					]
 				],
 				"client_only": true
 			}
 		},
 		{
-			"name": "getCameraPosition",
+			"name": "getCameraData",
 			"doc": {
 				"text": [
-					"Get the desired camera position.",
-					"Will return nil if the effect is not playing."
+					"Get a table of camera effect data.",
+					"Returns nil if the effect is not a camera effect."
 				],
 				"params": [
 					[
@@ -135,31 +218,8 @@
 				],
 				"return": [
 					[
-						"[Vec3]",
-						"The position vector."
-					]
-				],
-				"client_only": true
-			}
-		},
-		{
-			"name": "getCameraRotation",
-			"doc": {
-				"text": [
-					"Get the desired camera rotation.",
-					"Will return nil if the effect is not playing."
-				],
-				"params": [
-					[
-						"[Effect]",
-						"effect",
-						"The effect."
-					]
-				],
-				"return": [
-					[
-						"[Quat]",
-						"The rotation."
+						"table",
+						"The settings. { hasBlendIn = boolean, hasBlendOut = boolean, active = boolean, cameraPosition = [Vec3], cameraRotation = [Quat], cameraFov = number }"
 					]
 				],
 				"client_only": true
@@ -187,6 +247,28 @@
 			}
 		},
 		{
+			"name": "getWorldPosition",
+			"doc": {
+				"text": [
+					"Gets the current world position"
+				],
+				"params": [
+					[
+						"[Effect]",
+						"effect",
+						"The effect."
+					]
+				],
+				"return": [
+					[
+						"[Vec3]\t\t\t\t\t\t\t\tThe world position.",
+						""
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
 			"name": "hasActiveCamera",
 			"doc": {
 				"text": [
@@ -203,6 +285,50 @@
 					[
 						"boolean",
 						"Is active."
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "hasHost",
+			"doc": {
+				"text": [
+					"Returns whether the effect has a host."
+				],
+				"params": [
+					[
+						"[Effect]",
+						"effect",
+						"The effect."
+					]
+				],
+				"return": [
+					[
+						"boolean",
+						"Whether the effect is hosted."
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "isBreakSustaining",
+			"doc": {
+				"text": [
+					"Returns whether the effect is break sustained."
+				],
+				"params": [
+					[
+						"[Effect]",
+						"effect",
+						"The effect."
+					]
+				],
+				"return": [
+					[
+						"boolean",
+						"Whether effect is break sustained."
 					]
 				],
 				"client_only": true
@@ -268,6 +394,162 @@
 						"boolean",
 						"autoplay",
 						"Autoplay enabled."
+					],
+					[
+						"boolean",
+						"autoPlayOnce?",
+						"If set the effect will not loop when autoplaying. (Defaults to false) (Optional)"
+					],
+					[
+						"boolean",
+						"resetPlayOnce?",
+						"Will reset the autoPlayOnce condition, allowing the effect to play again if it already has since earlier. (Defaults to false) (Optional)"
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "setDetachOnHostDestroy",
+			"doc": {
+				"text": [
+					"Detaches the effect from its host object when the host disappears."
+				],
+				"params": [
+					[
+						"[Effect]",
+						"effect",
+						"The effect."
+					],
+					[
+						"boolean",
+						"detach",
+						"If the effect should automatically detach from the host or not."
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "setHost",
+			"doc": {
+				"text": [
+					"Sets a [Interactable] as host for an effect."
+				],
+				"params": [
+					[
+						"[Effect]",
+						"effect",
+						"The effect."
+					],
+					[
+						"[Interactable]",
+						"Interactable",
+						"The Interactable the effect is attached to."
+					],
+					[
+						"string",
+						"boneName?",
+						"The bone name to attach effect to. (Defaults to not attached to a bone) (Optional)"
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "setHost",
+			"doc": {
+				"text": [
+					"Sets a [Shape] as host for an effect."
+				],
+				"params": [
+					[
+						"[Effect]",
+						"effect",
+						"The effect."
+					],
+					[
+						"[Shape]",
+						"shape",
+						"The shape the effect is attached to."
+					],
+					[
+						"string",
+						"boneName?",
+						"The bone name to attach effect to. (Defaults to not attached to a bone) (Optional)"
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "setHost",
+			"doc": {
+				"text": [
+					"Sets a [Character] as host for an effect."
+				],
+				"params": [
+					[
+						"[Effect]",
+						"effect",
+						"The effect."
+					],
+					[
+						"[Character]",
+						"Character",
+						"The Character the effect is attached to."
+					],
+					[
+						"string",
+						"boneName?",
+						"The bone name to attach effect to. (Defaults to not attached to a bone) (Optional)"
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "setHost",
+			"doc": {
+				"text": [
+					"Sets a [Harvestable] as host for an effect."
+				],
+				"params": [
+					[
+						"[Effect]",
+						"effect",
+						"The effect."
+					],
+					[
+						"[Harvestable]",
+						"pHarvestable",
+						"The pHarvestable the effect is attached to."
+					],
+					[
+						"string",
+						"boneName?",
+						"The bone name to attach effect to. (Defaults to not attached to a bone) (Optional)"
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "setHostAxisIgnore",
+			"doc": {
+				"text": [
+					"Sets a rotation axis which hosted effects will ignore."
+				],
+				"params": [
+					[
+						"[Effect]",
+						"effect",
+						"The effect."
+					],
+					[
+						"integer",
+						"axis",
+						"The rotation axis."
 					]
 				],
 				"client_only": true
@@ -277,9 +559,9 @@
 			"name": "setOffsetPosition",
 			"doc": {
 				"text": [
-					"Offsets the position of the effect relatively to the host interactable.",
+					"Offsets the position of the effect relatively to the host.",
 					"@note",
-					"Does not work if the effect was created without a host interactable.",
+					"Does not work if the effect was created without a host.",
 					"@note"
 				],
 				"params": [
@@ -301,9 +583,9 @@
 			"name": "setOffsetRotation",
 			"doc": {
 				"text": [
-					"Offsets the orientation of the effect relatively to the host interactable.",
+					"Offsets the orientation of the effect relatively to the host.",
 					"@note",
-					"Does not work if the effect was created without a host interactable.",
+					"Does not work if the effect was created without a host.",
 					"@note"
 				],
 				"params": [
@@ -353,7 +635,7 @@
 				"text": [
 					"Sets the position of an effect.",
 					"@note",
-					"Does not work if the effect was created with a host interactable.",
+					"Does not work if the effect has a host.",
 					"@note"
 				],
 				"params": [
@@ -377,7 +659,7 @@
 				"text": [
 					"Sets the orientation of an effect using a quaternion.",
 					"@note",
-					"Does not work if the effect was created with a host interactable.",
+					"Does not work if the effect has a host.",
 					"@note"
 				],
 				"params": [
@@ -487,7 +769,7 @@
 				"text": [
 					"Sets the velocity of an effect. The effect will move along at the set velocity until it receives a new position.",
 					"@note",
-					"Does not work if the effect was created with a host interactable.",
+					"Does not work if the effect has a host.",
 					"@note"
 				],
 				"params": [
@@ -520,7 +802,23 @@
 					[
 						"[World]",
 						"world",
-						"The world. Defaults to world from script constext. (optional)"
+						"The world. Defaults to world from script context. (optional)"
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "setWorldAny",
+			"doc": {
+				"text": [
+					"Sets the effect's world to UWorldId_Any, used to play global sounds through the dialog manager."
+				],
+				"params": [
+					[
+						"[Effect]",
+						"effect",
+						"The effect."
 					]
 				],
 				"client_only": true
@@ -537,6 +835,11 @@
 						"[Effect]",
 						"effect",
 						"The effect."
+					],
+					[
+						"number",
+						"startTime?",
+						"The start time of the effect. Only applies to audio and cinematic effects. (Defaults to 0)"
 					]
 				],
 				"client_only": true
@@ -597,7 +900,7 @@
 			"doc": {
 				"meta": [
 					[
-						"[Effect],[Effect]",
+						"[Effect],[Effect],boolean",
 						"Checks if two instances of [Effect] refer to the same Effect."
 					]
 				]

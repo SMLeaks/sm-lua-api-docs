@@ -76,7 +76,7 @@
 			"doc": {
 				"meta": [
 					[
-						"[PathNode],[PathNode]",
+						"[PathNode],[PathNode],boolean",
 						"Checks if two instances of [PathNode] refer to the same PathNode."
 					]
 				]

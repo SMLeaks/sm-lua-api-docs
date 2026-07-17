@@ -453,8 +453,8 @@
 					],
 					[
 						"boolean",
-						"forceCreate=true",
-						"Set true to force create the shape."
+						"forceCreate?",
+						"Set true to force create the shape. (Defaults to true)"
 					]
 				],
 				"server_only": true
@@ -494,8 +494,8 @@
 					],
 					[
 						"boolean",
-						"forceCreate=true",
-						"Set true to force create the shape."
+						"forceCreate?",
+						"Set true to force create the shape. (Defaults to true)"
 					]
 				],
 				"server_only": true
@@ -545,6 +545,27 @@
 			}
 		},
 		{
+			"name": "getAngularVelocityVector",
+			"doc": {
+				"text": [
+					"Returns the angular velocity of a generic joint."
+				],
+				"params": [
+					[
+						"[Joint]",
+						"joint",
+						"The joint."
+					]
+				],
+				"return": [
+					[
+						"[Vec3]",
+						"The joint's angular velocities."
+					]
+				]
+			}
+		},
+		{
 			"name": "getAppliedImpulse",
 			"doc": {
 				"text": [
@@ -562,6 +583,27 @@
 					[
 						"number",
 						"The bearing's applied impulse."
+					]
+				]
+			}
+		},
+		{
+			"name": "getBearingEnabled",
+			"doc": {
+				"text": [
+					"Returns whether a joint has a bearing enabled."
+				],
+				"params": [
+					[
+						"[Joint]",
+						"joint",
+						"The joint."
+					]
+				],
+				"return": [
+					[
+						"boolean",
+						"Whether the joint has a bearing enabled. Springs return whether their bearing is enabled, bearings always return true, pistons always return false."
 					]
 				]
 			}
@@ -688,6 +730,42 @@
 					[
 						"[Quat]",
 						"The joint's local rotation."
+					]
+				]
+			}
+		},
+		{
+			"name": "getMultiShapeJoints",
+			"doc": {
+				"params": [
+					[
+						"[Joint]",
+						"joint",
+						"A Join that is part of a multishape"
+					]
+				],
+				"return": [
+					[
+						"table",
+						"A table of joints contained in the multishape (returns nil if joint wasn't a multishape)"
+					]
+				]
+			}
+		},
+		{
+			"name": "getMultiShapeShapes",
+			"doc": {
+				"params": [
+					[
+						"[Joint]",
+						"joint",
+						"A joint that is part of a multishape"
+					]
+				],
+				"return": [
+					[
+						"table",
+						"A table of shapes contained in the multishape (returns nil if joint wasn't a multishape)"
 					]
 				]
 			}
@@ -1030,7 +1108,7 @@
 					],
 					[
 						"number",
-						"maxImpulse=100000",
+						"maxImpulse?",
 						"The max impulse. (Defaults to impulse used in game)"
 					]
 				],
@@ -1044,7 +1122,7 @@
 			"doc": {
 				"meta": [
 					[
-						"[Joint],[Joint]",
+						"[Joint],[Joint],boolean",
 						"Checks if two instances of [Joint] refer to the same Joint."
 					]
 				]

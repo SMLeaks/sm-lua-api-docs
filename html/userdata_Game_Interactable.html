@@ -17,6 +17,7 @@
   <h3>Classes</h3>
   <ul>
    <li><a href="class_Game_CharacterClass.html" class="code">CharacterClass</a></li>
+   <li><a href="class_Game_ClientScriptableObjectClass.html" class="code">ClientScriptableObjectClass</a></li>
    <li><a href="class_Game_GameClass.html" class="code">GameClass</a></li>
    <li><a href="class_Game_HarvestableClass.html" class="code">HarvestableClass</a></li>
    <li><a href="class_Game_PlayerClass.html" class="code">PlayerClass</a></li>
@@ -34,14 +35,18 @@
    <li><a href="userdata_Game_Body.html" class="code">Body</a></li>
    <li><a href="userdata_Game_BuilderGuide.html" class="code">BuilderGuide</a></li>
    <li><a href="userdata_Game_Character.html" class="code">Character</a></li>
+   <li><a href="userdata_Game_ClientScriptableObject.html" class="code">ClientScriptableObject</a></li>
    <li><a href="userdata_Game_Color.html" class="code">Color</a></li>
    <li><a href="userdata_Game_Container.html" class="code">Container</a></li>
    <li><a href="userdata_Game_CullSphereGroup.html" class="code">CullSphereGroup</a></li>
    <li><a href="userdata_Game_Effect.html" class="code">Effect</a></li>
+   <li><a href="userdata_Game_Garage.html" class="code">Garage</a></li>
    <li><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></li>
    <li><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></li>
    <li><a href="userdata_Game_Interactable.html" class="code">Interactable</a></li>
    <li><a href="userdata_Game_Joint.html" class="code">Joint</a></li>
+   <li><a href="userdata_Game_JsonGui.html" class="code">JsonGui</a></li>
+   <li><a href="userdata_Game_JsonWidget.html" class="code">JsonWidget</a></li>
    <li><a href="userdata_Game_Lift.html" class="code">Lift</a></li>
    <li><a href="userdata_Game_LoadCellHandle.html" class="code">LoadCellHandle</a></li>
    <li><a href="userdata_Game_Network.html" class="code">Network</a></li>
@@ -73,6 +78,7 @@
    <li><a href="namespace_Game_sm_cell.html" class="code">sm.cell</a></li>
    <li><a href="namespace_Game_sm_challenge.html" class="code">sm.challenge</a></li>
    <li><a href="namespace_Game_sm_character.html" class="code">sm.character</a></li>
+   <li><a href="namespace_Game_sm_clientScriptableObject.html" class="code">sm.clientScriptableObject</a></li>
    <li><a href="namespace_Game_sm_color.html" class="code">sm.color</a></li>
    <li><a href="namespace_Game_sm_construction.html" class="code">sm.construction</a></li>
    <li><a href="namespace_Game_sm_container.html" class="code">sm.container</a></li>
@@ -80,9 +86,11 @@
    <li><a href="namespace_Game_sm_cullSphereGroup.html" class="code">sm.cullSphereGroup</a></li>
    <li><a href="namespace_Game_sm_debris.html" class="code">sm.debris</a></li>
    <li><a href="namespace_Game_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
+   <li><a href="namespace_Game_sm_debugGui.html" class="code">sm.debugGui</a></li>
    <li><a href="namespace_Game_sm_effect.html" class="code">sm.effect</a></li>
    <li><a href="namespace_Game_sm_event.html" class="code">sm.event</a></li>
    <li><a href="namespace_Game_sm_game.html" class="code">sm.game</a></li>
+   <li><a href="namespace_Game_sm_garage.html" class="code">sm.garage</a></li>
    <li><a href="namespace_Game_sm_gui.html" class="code">sm.gui</a></li>
    <li><a href="namespace_Game_sm_gui_widget.html" class="code">sm.gui.widget</a></li>
    <li><a href="namespace_Game_sm_harvestable.html" class="code">sm.harvestable</a></li>
@@ -90,15 +98,19 @@
    <li><a href="namespace_Game_sm_item.html" class="code">sm.item</a></li>
    <li><a href="namespace_Game_sm_joint.html" class="code">sm.joint</a></li>
    <li><a href="namespace_Game_sm_json.html" class="code">sm.json</a></li>
+   <li><a href="namespace_Game_sm_jsonGui.html" class="code">sm.jsonGui</a></li>
+   <li><a href="namespace_Game_sm_lift.html" class="code">sm.lift</a></li>
    <li><a href="namespace_Game_sm_localPlayer.html" class="code">sm.localPlayer</a></li>
    <li><a href="namespace_Game_sm_log.html" class="code">sm.log</a></li>
    <li><a href="namespace_Game_sm_melee.html" class="code">sm.melee</a></li>
    <li><a href="namespace_Game_sm_menuCreation.html" class="code">sm.menuCreation</a></li>
+   <li><a href="namespace_Game_sm_message.html" class="code">sm.message</a></li>
    <li><a href="namespace_Game_sm_noise.html" class="code">sm.noise</a></li>
    <li><a href="namespace_Game_sm_particle.html" class="code">sm.particle</a></li>
    <li><a href="namespace_Game_sm_pathNode.html" class="code">sm.pathNode</a></li>
    <li><a href="namespace_Game_sm_pathfinder.html" class="code">sm.pathfinder</a></li>
    <li><a href="namespace_Game_sm_physics.html" class="code">sm.physics</a></li>
+   <li><a href="namespace_Game_sm_pipeGraph.html" class="code">sm.pipeGraph</a></li>
    <li><a href="namespace_Game_sm_player.html" class="code">sm.player</a></li>
    <li><a href="namespace_Game_sm_portal.html" class="code">sm.portal</a></li>
    <li><a href="namespace_Game_sm_projectile.html" class="code">sm.projectile</a></li>
@@ -122,8 +134,12 @@
   <h3>Object Types 'userdata'</h3>
   <ul>
    <li><a href="userdata_Terrain_Color.html" class="code">Color</a></li>
+   <li><a href="userdata_Terrain_Container.html" class="code">Container</a></li>
    <li><a href="userdata_Terrain_Harvestable.html" class="code">Harvestable</a></li>
+   <li><a href="userdata_Terrain_Interactable.html" class="code">Interactable</a></li>
+   <li><a href="userdata_Terrain_Portal.html" class="code">Portal</a></li>
    <li><a href="userdata_Terrain_Quat.html" class="code">Quat</a></li>
+   <li><a href="userdata_Terrain_ScriptableObject.html" class="code">ScriptableObject</a></li>
    <li><a href="userdata_Terrain_Uuid.html" class="code">Uuid</a></li>
    <li><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></li>
    <li><a href="userdata_Terrain_World.html" class="code">World</a></li>
@@ -133,28 +149,35 @@
    <li><a href="namespace_Terrain_GLOBAL.html" class="code">GLOBAL</a></li>
    <li><a href="namespace_Terrain_sm.html" class="code">sm</a></li>
    <li><a href="namespace_Terrain_sm_color.html" class="code">sm.color</a></li>
+   <li><a href="namespace_Terrain_sm_container.html" class="code">sm.container</a></li>
    <li><a href="namespace_Terrain_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
-   <li><a href="namespace_Terrain_sm_harvestable.html" class="code">sm.harvestable</a></li>
+   <li><a href="namespace_Terrain_sm_debugGui.html" class="code">sm.debugGui</a></li>
+   <li><a href="namespace_Terrain_sm_interactable.html" class="code">sm.interactable</a></li>
    <li><a href="namespace_Terrain_sm_json.html" class="code">sm.json</a></li>
    <li><a href="namespace_Terrain_sm_log.html" class="code">sm.log</a></li>
    <li><a href="namespace_Terrain_sm_noise.html" class="code">sm.noise</a></li>
    <li><a href="namespace_Terrain_sm_quat.html" class="code">sm.quat</a></li>
+   <li><a href="namespace_Terrain_sm_scriptableObject.html" class="code">sm.scriptableObject</a></li>
    <li><a href="namespace_Terrain_sm_terrainData.html" class="code">sm.terrainData</a></li>
    <li><a href="namespace_Terrain_sm_terrainGeneration.html" class="code">sm.terrainGeneration</a></li>
+   <li><a href="namespace_Terrain_sm_terrainHarvestable.html" class="code">sm.terrainHarvestable</a></li>
    <li><a href="namespace_Terrain_sm_terrainTile.html" class="code">sm.terrainTile</a></li>
+   <li><a href="namespace_Terrain_sm_tunnelGenerator.html" class="code">sm.tunnelGenerator</a></li>
    <li><a href="namespace_Terrain_sm_util.html" class="code">sm.util</a></li>
    <li><a href="namespace_Terrain_sm_uuid.html" class="code">sm.uuid</a></li>
    <li><a href="namespace_Terrain_sm_vec3.html" class="code">sm.vec3</a></li>
+   <li><a href="namespace_Terrain_sm_voxelTerrainCell.html" class="code">sm.voxelTerrainCell</a></li>
   </ul>
  </div>
  <div id="content">
   <h1 class="code">Interactable</h1>
   <h3>Associated namespace: <a href="namespace_Game_sm_interactable.html" class="code">sm.interactable</a></h3>
-  <p>A userdata object representing an <strong>interactable shape</strong> in the game.</p>
+  <p>Represents an interactable object in the game</p>
   <h4>Values:</h4>
   <ul>
    <li><a href="#active" class="code">active</a></li>
    <li><a href="#body" class="code">body</a></li>
+   <li><a href="#clientPublicData" class="code">clientPublicData</a></li>
    <li><a href="#id" class="code">id</a></li>
    <li><a href="#power" class="code">power</a></li>
    <li><a href="#publicData" class="code">publicData</a></li>
@@ -163,13 +186,17 @@
   </ul>  <h4>Functions:</h4>
   <ul>
    <li><a href="#addContainer" class="code">addContainer</a></li>
+   <li><a href="#bindDamageDestruction" class="code">bindDamageDestruction</a></li>
+   <li><a href="#clearLightOverrideColor" class="code">clearLightOverrideColor</a></li>
    <li><a href="#connect" class="code">connect</a></li>
    <li><a href="#connectToJoint" class="code">connectToJoint</a></li>
    <li><a href="#disconnect" class="code">disconnect</a></li>
    <li><a href="#getAnimDuration" class="code">getAnimDuration</a></li>
    <li><a href="#getBearings" class="code">getBearings</a></li>
    <li><a href="#getBody" class="code">getBody</a></li>
+   <li><a href="#getCarryData" class="code">getCarryData</a></li>
    <li><a href="#getChildren" class="code">getChildren</a></li>
+   <li><a href="#getClientPublicData" class="code">getClientPublicData</a></li>
    <li><a href="#getColorHighlight" class="code">getColorHighlight</a></li>
    <li><a href="#getColorNormal" class="code">getColorNormal</a></li>
    <li><a href="#getConnectionInputType" class="code">getConnectionInputType</a></li>
@@ -177,6 +204,7 @@
    <li><a href="#getContainer" class="code">getContainer</a></li>
    <li><a href="#getGlowMultiplier" class="code">getGlowMultiplier</a></li>
    <li><a href="#getId" class="code">getId</a></li>
+   <li><a href="#getJointCustomData" class="code">getJointCustomData</a></li>
    <li><a href="#getJoints" class="code">getJoints</a></li>
    <li><a href="#getLocalBonePosition" class="code">getLocalBonePosition</a></li>
    <li><a href="#getMaxChildCount" class="code">getMaxChildCount</a></li>
@@ -198,22 +226,31 @@
    <li><a href="#getSteeringJointSettings" class="code">getSteeringJointSettings</a></li>
    <li><a href="#getSteeringJointUnlocked" class="code">getSteeringJointUnlocked</a></li>
    <li><a href="#getSteeringPower" class="code">getSteeringPower</a></li>
+   <li><a href="#getSteeringSprint" class="code">getSteeringSprint</a></li>
    <li><a href="#getType" class="code">getType</a></li>
    <li><a href="#getUvFrameIndex" class="code">getUvFrameIndex</a></li>
    <li><a href="#getWorldBonePosition" class="code">getWorldBonePosition</a></li>
    <li><a href="#hasAnim" class="code">hasAnim</a></li>
+   <li><a href="#hasChanged" class="code">hasChanged</a></li>
    <li><a href="#hasOutputType" class="code">hasOutputType</a></li>
    <li><a href="#hasSeat" class="code">hasSeat</a></li>
    <li><a href="#hasSteering" class="code">hasSteering</a></li>
    <li><a href="#isActive" class="code">isActive</a></li>
+   <li><a href="#isAnimLooping" class="code">isAnimLooping</a></li>
    <li><a href="#pressSeatInteractable" class="code">pressSeatInteractable</a></li>
    <li><a href="#releaseSeatInteractable" class="code">releaseSeatInteractable</a></li>
    <li><a href="#removeContainer" class="code">removeContainer</a></li>
    <li><a href="#setActive" class="code">setActive</a></li>
    <li><a href="#setAnimEnabled" class="code">setAnimEnabled</a></li>
    <li><a href="#setAnimProgress" class="code">setAnimProgress</a></li>
+   <li><a href="#setCarryData" class="code">setCarryData</a></li>
+   <li><a href="#setClientPublicData" class="code">setClientPublicData</a></li>
    <li><a href="#setGlowMultiplier" class="code">setGlowMultiplier</a></li>
    <li><a href="#setGyroDirection" class="code">setGyroDirection</a></li>
+   <li><a href="#setGyroForce" class="code">setGyroForce</a></li>
+   <li><a href="#setGyroMaxSpeed" class="code">setGyroMaxSpeed</a></li>
+   <li><a href="#setJointCustomData" class="code">setJointCustomData</a></li>
+   <li><a href="#setLightOverrideColor" class="code">setLightOverrideColor</a></li>
    <li><a href="#setParams" class="code">setParams</a></li>
    <li><a href="#setPoseWeight" class="code">setPoseWeight</a></li>
    <li><a href="#setPower" class="code">setPower</a></li>
@@ -232,8 +269,8 @@
   </ul>
   <h4>Operations:</h4>
   <table>
-   <tr><th>Operation</th><th>Description</th></tr>
-   <tr><td class="code"><a href="userdata_Game_Interactable.html" class="code">Interactable</a> == <a href="userdata_Game_Interactable.html" class="code">Interactable</a></td><td>Checks if two instances of <a href="userdata_Game_Interactable.html" class="code">Interactable</a> refer to the same Interactable.</td></tr>
+   <tr><th>Operation</th><th>Return type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Interactable.html" class="code">Interactable</a> == <a href="userdata_Game_Interactable.html" class="code">Interactable</a></td><td>boolean</td><td>Checks if two instances of <a href="userdata_Game_Interactable.html" class="code">Interactable</a> refer to the same Interactable.</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="active"></a>active <i>boolean</i></h2>
@@ -246,6 +283,14 @@
   <h2 class="code"><a id="body"></a>body <i><a href="userdata_Game_Body.html" class="code">Body</a></i></h2>
   <h4>Get:</h4>
   <p>Returns the <a href="userdata_Game_Body.html" class="code">Body</a> an interactable's <a href="userdata_Game_Shape.html" class="code">Shape</a> is part of.</p>
+  <hr>
+  <h2 class="code"><a id="clientPublicData"></a>clientPublicData <i>table</i></h2>
+  <h4>Get:</h4>
+  <p>Client only</p>
+  <p>Returns (client) public data from a interactable.</p>
+  <h4>Set:</h4>
+  <p>Client only</p>
+  <p>Sets (client) public data on a interactable.</p>
   <hr>
   <h2 class="code"><a id="id"></a>id <i>integer</i></h2>
   <h4>Get:</h4>
@@ -274,7 +319,7 @@
   <h4>Get:</h4>
   <p>Returns the interactable type of an interactable.</p>
   <hr>
-  <h2 class="code"><a id="addContainer"></a>addContainer(interactable, index, size, stackSize=MaxSize)</h2>
+  <h2 class="code"><a id="addContainer"></a>addContainer(interactable, index, size, stackSize?)</h2>
   <p>Server only</p>
   <p>Creates and stores a container in the given index inside the controller</p>
   <h4>Parameters:</h4>
@@ -283,12 +328,31 @@
    <tr><td class="code"><a href="userdata_Game_Interactable.html" class="code">Interactable</a></td><td class="code">interactable</td><td>The interactable.</td></tr>
    <tr><td class="code">integer</td><td class="code">index</td><td>The index of the container [0-15].</td></tr>
    <tr><td class="code">integer</td><td class="code">size</td><td>The number of slots in the container.</td></tr>
-   <tr><td class="code">integer</td><td class="code">stackSize=MaxSize</td><td>The stack size. Defaults to maximum possible stack size(65535).</td></tr>
+   <tr><td class="code">integer</td><td class="code">stackSize?</td><td>The stack size. Defaults to maximum possible stack size(65535).</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
    <tr><th>Type</th><th>Description</th></tr>
    <tr><td class="code"><a href="userdata_Game_Container.html" class="code">Container</a></td><td>The created container.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="bindDamageDestruction"></a>bindDamageDestruction(interactable, callback)</h2>
+  <p>Server only</p>
+  <p>Binds a callback to be called if the interactable is destroyed through a source of damage.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Interactable.html" class="code">Interactable</a></td><td class="code">interactable</td><td>The interactable.</td></tr>
+   <tr><td class="code">string</td><td class="code">callback</td><td>The name of the lua function to bind.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="clearLightOverrideColor"></a>clearLightOverrideColor(interactable)</h2>
+  <p>Server only</p>
+  <p>Clear the override color of a light controller.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Interactable.html" class="code">Interactable</a></td><td class="code">interactable</td><td>The interactable.</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="connect"></a>connect(parent, child)</h2>
@@ -372,18 +436,46 @@
    <tr><td class="code"><a href="userdata_Game_Body.html" class="code">Body</a></td><td>The body an interactable's shape is part of.</td></tr>
   </table>
   <hr>
+  <h2 class="code"><a id="getCarryData"></a>getCarryData(interactable)</h2>
+  <p>Server only</p>
+  <p>Get carry data for a script interactable</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Interactable.html" class="code">Interactable</a></td><td class="code">interactable</td><td>The interactable, needs to be of script type.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">any</td><td>The data</td></tr>
+  </table>
+  <hr>
   <h2 class="code"><a id="getChildren"></a>getChildren(interactable, flags)</h2>
   <p>Returns a table of child <a href="userdata_Game_Interactable.html" class="code">interactables</a> that an interactable is connected to. The children listen to the interactable's output.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code"><a href="userdata_Game_Interactable.html" class="code">Interactable</a></td><td class="code">interactable</td><td>The interactable.</td></tr>
-   <tr><td class="code">integer</td><td class="code">flags</td><td>Connection type flags filter. (defaults to all types except for sm.interactable.connectionType.bearing (for backwards compability))</td></tr>
+   <tr><td class="code">integer</td><td class="code">flags</td><td>Connection type flags filter. (defaults to all types except for sm.interactable.connectionType.bearing and sm.interactable.connectionType.steering (for backwards compability))</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
    <tr><th>Type</th><th>Description</th></tr>
    <tr><td class="code">table</td><td>A table of the connected child <a href="userdata_Game_Interactable.html" class="code">interactables</a> {<a href="userdata_Game_Interactable.html" class="code">Interactable</a>, ..}.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getClientPublicData"></a>getClientPublicData(interactable)</h2>
+  <p>Client only</p>
+  <p>Returns (client) public data from a interactable.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Interactable.html" class="code">Interactable</a></td><td class="code">interactable</td><td>The interactable.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td>The public data.</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="getColorHighlight"></a>getColorHighlight(interactable)</h2>
@@ -438,13 +530,13 @@
    <tr><td class="code">integer</td><td>connection type The output connection type.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="getContainer"></a>getContainer(interactable, index=0)</h2>
+  <h2 class="code"><a id="getContainer"></a>getContainer(interactable, index?)</h2>
   <p>Returns the container stored in the given index inside the controller</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code"><a href="userdata_Game_Interactable.html" class="code">Interactable</a></td><td class="code">interactable</td><td>The interactable.</td></tr>
-   <tr><td class="code">integer</td><td class="code">index=0</td><td>The index of the container (default: 0).</td></tr>
+   <tr><td class="code">integer</td><td class="code">index?</td><td>The index of the container (default: 0).</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -477,6 +569,20 @@
   <table>
    <tr><th>Type</th><th>Description</th></tr>
    <tr><td class="code">integer</td><td>The interactable's id.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="getJointCustomData"></a>getJointCustomData(interactable, joint)</h2>
+  <p>Returns custom joint script data.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Interactable.html" class="code">Interactable</a></td><td class="code">interactable</td><td>The interactable, needs to be of script type.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Joint.html" class="code">Joint</a></td><td class="code">joint</td><td>The joint.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">any</td><td>The data.</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="getJoints"></a>getJoints(interactable)</h2>
@@ -767,6 +873,19 @@
    <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td>The character.</td></tr>
   </table>
   <hr>
+  <h2 class="code"><a id="getSteeringSprint"></a>getSteeringSprint(interactable)</h2>
+  <p>Returns the sprint value of an steering interactable.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Interactable.html" class="code">Interactable</a></td><td class="code">interactable</td><td>The interactable.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>The sprint value</td></tr>
+  </table>
+  <hr>
   <h2 class="code"><a id="getType"></a>getType(interactable)</h2>
   <p>Returns the interactable type of an interactable.</p>
   <h4>Parameters:</h4>
@@ -823,6 +942,20 @@
    <tr><td class="code">boolean</td><td>True if exists, false otherwise.</td></tr>
   </table>
   <hr>
+  <h2 class="code"><a id="hasChanged"></a>hasChanged(interactable, tick)</h2>
+  <p>Returns true if the interactable had updates since the given tick.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Interactable.html" class="code">Interactable</a></td><td class="code">interactable</td><td>The interactable.</td></tr>
+   <tr><td class="code">integer</td><td class="code">tick</td><td>The tick.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">boolean</td><td>Returns true if the interactable has been updated.</td></tr>
+  </table>
+  <hr>
   <h2 class="code"><a id="hasOutputType"></a>hasOutputType(interactable, flags)</h2>
   <p>Returns true if the <a href="userdata_Game_Interactable.html" class="code">Interactable</a> has the output type.</p>
   <h4>Parameters:</h4>
@@ -874,6 +1007,21 @@
   <table>
    <tr><th>Type</th><th>Description</th></tr>
    <tr><td class="code">boolean</td><td>The logic output signal.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="isAnimLooping"></a>isAnimLooping(interactable, name)</h2>
+  <p>Client only</p>
+  <p>Returns if the animation isLooping or not.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Interactable.html" class="code">Interactable</a></td><td class="code">interactable</td><td>The interactable.</td></tr>
+   <tr><td class="code">string</td><td class="code">name</td><td>The name of the animation.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">bool</td><td>Is the animation looping.</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="pressSeatInteractable"></a>pressSeatInteractable(interactable, index)</h2>
@@ -946,6 +1094,26 @@
    <tr><td class="code">number</td><td class="code">progress</td><td>The animation's progress between 0 and 1.</td></tr>
   </table>
   <hr>
+  <h2 class="code"><a id="setCarryData"></a>setCarryData(interactable, data)</h2>
+  <p>Server only</p>
+  <p>Set carry data for a script interactable</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Interactable.html" class="code">Interactable</a></td><td class="code">interactable</td><td>The interactable, needs to be of script type.</td></tr>
+   <tr><td class="code">any</td><td class="code">data</td><td>The carry data.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setClientPublicData"></a>setClientPublicData(interactable, data)</h2>
+  <p>Client only</p>
+  <p>Sets (client) public data on a interactable.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Interactable.html" class="code">Interactable</a></td><td class="code">interactable</td><td>The interactable.</td></tr>
+   <tr><td class="code">table</td><td class="code">data</td><td>The public data.</td></tr>
+  </table>
+  <hr>
   <h2 class="code"><a id="setGlowMultiplier"></a>setGlowMultiplier(interactable, value)</h2>
   <p>Client only</p>
   <p>Sets a value to multiply the glow from asg texture with.</p>
@@ -964,6 +1132,43 @@
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code"><a href="userdata_Game_Interactable.html" class="code">Interactable</a></td><td class="code">interactable</td><td>The interactable.</td></tr>
    <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">direction</td><td>The gyro direction.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setGyroForce"></a>setGyroForce(force)</h2>
+  <p>Sets a max motor force on the turret seat</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">number</td><td class="code">force</td><td>The maximum motor force.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setGyroMaxSpeed"></a>setGyroMaxSpeed(speedModifier)</h2>
+  <p>Sets a target speed multiplier on the turret seat</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">number</td><td class="code">speedModifier</td><td>The speed modifier.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setJointCustomData"></a>setJointCustomData(interactable, joint, data)</h2>
+  <p>Server only</p>
+  <p>Sets custom joint script data.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Interactable.html" class="code">Interactable</a></td><td class="code">interactable</td><td>The interactable, needs to be of script type.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Joint.html" class="code">Joint</a></td><td class="code">joint</td><td>The joint.</td></tr>
+   <tr><td class="code">any</td><td class="code">data</td><td>The data.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="setLightOverrideColor"></a>setLightOverrideColor(interactable, color)</h2>
+  <p>Server only</p>
+  <p>Set the override color of a light controller, ignoring the color of the shape.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Interactable.html" class="code">Interactable</a></td><td class="code">interactable</td><td>The interactable.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Color.html" class="code">Color</a></td><td class="code">color</td><td>The color to override with.</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="setParams"></a>setParams(interactable, data)</h2>
@@ -1015,13 +1220,13 @@
    <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The character.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="setSteeringFlag"></a>setSteeringFlag(interactable, steering)</h2>
+  <h2 class="code"><a id="setSteeringFlag"></a>setSteeringFlag(interactable, steeringFlags)</h2>
   <p>Set the steering flag for a steering interactable.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code"><a href="userdata_Game_Interactable.html" class="code">Interactable</a></td><td class="code">interactable</td><td>The interactable.</td></tr>
-   <tr><td class="code">integer</td><td class="code">steering</td><td>flags	The steering flags.</td></tr>
+   <tr><td class="code">integer</td><td class="code">steeringFlags</td><td>The steering flags.</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="setSteeringJointLeftAngleLimit"></a>setSteeringJointLeftAngleLimit(interactable, joint, value)</h2>
@@ -1068,7 +1273,7 @@
    <tr><td class="code">number</td><td class="code">value</td><td>The right angle speed.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="setSteeringJointSettings"></a>setSteeringJointSettings(interactable, joint, left, right, left, right, unlocked)</h2>
+  <h2 class="code"><a id="setSteeringJointSettings"></a>setSteeringJointSettings(interactable, joint, leftAngleSpeed, rightAngleSpeed, leftAngleLimit, rightAngleLimit, unlocked)</h2>
   <p>Client only</p>
   <p>Sets the settings of a <a href="userdata_Game_Joint.html" class="code">Joint</a> connected to a steering <a href="userdata_Game_Interactable.html" class="code">Interactable</a>.</p>
   <h4>Parameters:</h4>
@@ -1076,11 +1281,11 @@
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code"><a href="userdata_Game_Interactable.html" class="code">Interactable</a></td><td class="code">interactable</td><td>The interactable.</td></tr>
    <tr><td class="code"><a href="userdata_Game_Joint.html" class="code">Joint</a></td><td class="code">joint</td><td>The joint.</td></tr>
-   <tr><td class="code">number</td><td class="code">left</td><td>angle speed	The left angle speed.</td></tr>
-   <tr><td class="code">number</td><td class="code">right</td><td>angle speed	The right angle speed.</td></tr>
-   <tr><td class="code">number</td><td class="code">left</td><td>angle limit	The left angle limit.</td></tr>
-   <tr><td class="code">number</td><td class="code">right</td><td>angle limit	The right angle limit.</td></tr>
-   <tr><td class="code">boolean</td><td class="code">unlocked</td><td>Returns true if the joint is unlocked.</td></tr>
+   <tr><td class="code">number</td><td class="code">leftAngleSpeed</td><td>The left angle speed.</td></tr>
+   <tr><td class="code">number</td><td class="code">rightAngleSpeed</td><td>The right angle speed.</td></tr>
+   <tr><td class="code">number</td><td class="code">leftAngleLimit</td><td>The left angle limit.</td></tr>
+   <tr><td class="code">number</td><td class="code">rightAngleLimit</td><td>The right angle limit.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">unlocked</td><td>Whether the joint is unlocked.</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="setSteeringJointUnlocked"></a>setSteeringJointUnlocked(interactable, joint, value)</h2>
@@ -1115,13 +1320,13 @@
    <tr><td class="code">integer</td><td class="code">index</td><td>The index.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="unsetSteeringFlag"></a>unsetSteeringFlag(interactable, steering)</h2>
+  <h2 class="code"><a id="unsetSteeringFlag"></a>unsetSteeringFlag(interactable, steeringFlags)</h2>
   <p>Unset the steering flag for a steering interactable.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code"><a href="userdata_Game_Interactable.html" class="code">Interactable</a></td><td class="code">interactable</td><td>The interactable.</td></tr>
-   <tr><td class="code">integer</td><td class="code">steering</td><td>flags	The steering flags.</td></tr>
+   <tr><td class="code">integer</td><td class="code">steeringFlags</td><td>The steering flags.</td></tr>
   </table>
  </div>
 </body>

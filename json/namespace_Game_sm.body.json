@@ -22,13 +22,19 @@
 					],
 					[
 						"[Quat]",
-						"rotation=nil",
+						"rotation?",
 						"The body's world rotation. (Defaults to [sm.quat.identity])"
 					],
 					[
 						"boolean",
-						"isDynamic=nil",
+						"isDynamic?",
 						"Set true if the body is dynamic or false if the body is static. (Defaults to true)"
+					]
+				],
+				"return": [
+					[
+						"[Body]",
+						"The created body"
 					]
 				],
 				"server_only": true
@@ -40,13 +46,19 @@
 				"text": [
 					"Returns a table with all the bodies in the world."
 				],
+				"params": [
+					[
+						"[World]",
+						"world?",
+						"The world, will default to the script's world. (optional)"
+					]
+				],
 				"return": [
 					[
 						"table",
 						"The table of all bodies. {[Body], ...}"
 					]
-				],
-				"server_only": true
+				]
 			}
 		},
 		{
@@ -67,6 +79,27 @@
 					[
 						"table",
 						"The table array containing tables of all the bodies, grouped by creation. { {[Body], ...}, ... }"
+					]
+				]
+			}
+		},
+		{
+			"name": "getLift",
+			"doc": {
+				"text": [
+					"Get the lift a body is on."
+				],
+				"params": [
+					[
+						"[Body]",
+						"body",
+						"The body."
+					]
+				],
+				"return": [
+					[
+						"[Lift]",
+						"The lift the body is on, or nil if the body is not on a lift."
 					]
 				]
 			}

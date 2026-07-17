@@ -31,6 +31,29 @@
 					]
 				}
 			}
+		},
+		{
+			"name": "uuid",
+			"get": {
+				"doc": {
+					"text": [
+						"Returns the tool type uuid."
+					],
+					"params": [
+						[
+							"[Tool]",
+							"tool",
+							"The tool."
+						]
+					],
+					"return": [
+						[
+							"[Uuid]",
+							"The tool's uuid."
+						]
+					]
+				}
+			}
 		}
 	],
 	"functions": [
@@ -126,10 +149,10 @@
 			}
 		},
 		{
-			"name": "getFpBonePos",
+			"name": "getFpBoneDir",
 			"doc": {
 				"text": [
-					"Returns the world position for a bone in the first person view animation skeleton."
+					"Returns the local or world direction for a bone in the first person view animation skeleton."
 				],
 				"params": [
 					[
@@ -141,12 +164,81 @@
 						"string",
 						"jointName",
 						"The joint name."
+					],
+					[
+						"boolean",
+						"convertToWorldSpace?",
+						"Whether to convert the position to world space. (Defaults to true)"
+					]
+				],
+				"return": [
+					[
+						"[Vec3]",
+						"The joint direction."
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "getFpBonePos",
+			"doc": {
+				"text": [
+					"Returns the local or world position for a bone in the first person view animation skeleton."
+				],
+				"params": [
+					[
+						"[Tool]",
+						"tool",
+						"The tool."
+					],
+					[
+						"string",
+						"jointName",
+						"The joint name."
+					],
+					[
+						"boolean",
+						"convertToWorldSpace?",
+						"Whether to convert the position to world space. (Defaults to true)"
 					]
 				],
 				"return": [
 					[
 						"[Vec3]",
 						"The joint position."
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "getFpBoneRot",
+			"doc": {
+				"text": [
+					"Returns the local or world rotation for a bone in the first person view animation skeleton."
+				],
+				"params": [
+					[
+						"[Tool]",
+						"tool",
+						"The tool."
+					],
+					[
+						"string",
+						"jointName",
+						"The joint name."
+					],
+					[
+						"boolean",
+						"convertToWorldSpace?",
+						"Whether to convert the position to world space. (Defaults to true)"
+					]
+				],
+				"return": [
+					[
+						"[Quat]",
+						"The joint rotation."
 					]
 				],
 				"client_only": true
@@ -365,6 +457,54 @@
 			}
 		},
 		{
+			"name": "getTpBoneRot",
+			"doc": {
+				"text": [
+					"Returns the world rotations for a bone in the third person view animation skeleton."
+				],
+				"params": [
+					[
+						"[Tool]",
+						"tool",
+						"The tool."
+					],
+					[
+						"string",
+						"jointName",
+						"The joint name."
+					]
+				],
+				"return": [
+					[
+						"[Quat]",
+						"The joint rotation."
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "getUuid",
+			"doc": {
+				"text": [
+					"Returns the tool type uuid."
+				],
+				"params": [
+					[
+						"[Tool]",
+						"tool",
+						"The tool."
+					]
+				],
+				"return": [
+					[
+						"[Uuid]",
+						"The tool's uuid."
+					]
+				]
+			}
+		},
+		{
 			"name": "isCrouching",
 			"doc": {
 				"text": [
@@ -390,7 +530,7 @@
 			"name": "isEquipped",
 			"doc": {
 				"text": [
-					"Returns whether the the tool is equipped or not."
+					"Returns whether the tool is equipped or not."
 				],
 				"params": [
 					[
@@ -402,7 +542,7 @@
 				"return": [
 					[
 						"boolean",
-						"whether the the tool is equipped or not."
+						"whether the tool is equipped or not."
 					]
 				],
 				"client_only": true
@@ -539,6 +679,48 @@
 			}
 		},
 		{
+			"name": "setCrossHairColor",
+			"doc": {
+				"text": [
+					"Sets the color of the crosshair. "
+				],
+				"params": [
+					[
+						"[Tool]",
+						"tool",
+						"The tool."
+					],
+					[
+						"[Color]",
+						"color",
+						"The color."
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "setCrossHairType",
+			"doc": {
+				"text": [
+					"Sets the type of the crosshair. "
+				],
+				"params": [
+					[
+						"[Tool]",
+						"tool",
+						"The tool."
+					],
+					[
+						"number",
+						"type",
+						"The type value for the crosshair."
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
 			"name": "setDispersionFraction",
 			"doc": {
 				"text": [
@@ -555,6 +737,11 @@
 						"number",
 						"dispersion",
 						"The dispersion fraction."
+					],
+					[
+						"number",
+						"dispersionSecondary?",
+						"The secondary dispersion fraction for circles. (Optional)"
 					]
 				],
 				"client_only": true
@@ -606,21 +793,11 @@
 			"name": "setInteractionTextSuppressed",
 			"doc": {
 				"text": [
-					"Sets whether interaction texts are suppressed for the player. This means the player won't be able to see \"Press E to use\", and similar texts, when looking at an interactable."
+					"Does nothing."
 				],
-				"params": [
-					[
-						"[Tool]",
-						"tool",
-						"The tool."
-					],
-					[
-						"boolean",
-						"suppressed",
-						"Whether interaction texts are suppressed."
-					]
-				],
-				"client_only": true
+				"deprecated": [
+					"Deprecated function. Kept for compability with old scripts."
+				]
 			}
 		},
 		{
@@ -736,8 +913,8 @@
 					],
 					[
 						"number",
-						"weight=-1.0",
-						"The weight."
+						"weight?",
+						"The weight. (Defaults to -1.0)"
 					]
 				],
 				"client_only": true
@@ -803,13 +980,13 @@
 					],
 					[
 						"number",
-						"weight=-1.0",
-						"The weight."
+						"weight?",
+						"The weight. (Defaults to -1.0)"
 					],
 					[
 						"boolean",
-						"looping=false",
-						"The looping."
+						"looping?",
+						"The looping. (Defaults to false)"
 					]
 				],
 				"client_only": true
@@ -875,8 +1052,8 @@
 					],
 					[
 						"number",
-						"weight=-1.0",
-						"The weight."
+						"weight?",
+						"The weight. (Defaults to -1.0)"
 					]
 				],
 				"client_only": true
@@ -901,8 +1078,8 @@
 					],
 					[
 						"number",
-						"weight=-1.0",
-						"The weight."
+						"weight?",
+						"The weight. (Defaults to -1.0)"
 					]
 				],
 				"client_only": true

@@ -30,12 +30,12 @@
 					],
 					[
 						"[Quat]",
-						"rotation=nil",
+						"rotation?",
 						"The rotation. (Defaults to no rotation)"
 					],
 					[
 						"[Color]",
-						"color=nil",
+						"color?",
 						"The blend color. (Defaults to white)"
 					]
 				],

@@ -17,6 +17,7 @@
   <h3>Classes</h3>
   <ul>
    <li><a href="class_Game_CharacterClass.html" class="code">CharacterClass</a></li>
+   <li><a href="class_Game_ClientScriptableObjectClass.html" class="code">ClientScriptableObjectClass</a></li>
    <li><a href="class_Game_GameClass.html" class="code">GameClass</a></li>
    <li><a href="class_Game_HarvestableClass.html" class="code">HarvestableClass</a></li>
    <li><a href="class_Game_PlayerClass.html" class="code">PlayerClass</a></li>
@@ -34,14 +35,18 @@
    <li><a href="userdata_Game_Body.html" class="code">Body</a></li>
    <li><a href="userdata_Game_BuilderGuide.html" class="code">BuilderGuide</a></li>
    <li><a href="userdata_Game_Character.html" class="code">Character</a></li>
+   <li><a href="userdata_Game_ClientScriptableObject.html" class="code">ClientScriptableObject</a></li>
    <li><a href="userdata_Game_Color.html" class="code">Color</a></li>
    <li><a href="userdata_Game_Container.html" class="code">Container</a></li>
    <li><a href="userdata_Game_CullSphereGroup.html" class="code">CullSphereGroup</a></li>
    <li><a href="userdata_Game_Effect.html" class="code">Effect</a></li>
+   <li><a href="userdata_Game_Garage.html" class="code">Garage</a></li>
    <li><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></li>
    <li><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></li>
    <li><a href="userdata_Game_Interactable.html" class="code">Interactable</a></li>
    <li><a href="userdata_Game_Joint.html" class="code">Joint</a></li>
+   <li><a href="userdata_Game_JsonGui.html" class="code">JsonGui</a></li>
+   <li><a href="userdata_Game_JsonWidget.html" class="code">JsonWidget</a></li>
    <li><a href="userdata_Game_Lift.html" class="code">Lift</a></li>
    <li><a href="userdata_Game_LoadCellHandle.html" class="code">LoadCellHandle</a></li>
    <li><a href="userdata_Game_Network.html" class="code">Network</a></li>
@@ -73,6 +78,7 @@
    <li><a href="namespace_Game_sm_cell.html" class="code">sm.cell</a></li>
    <li><a href="namespace_Game_sm_challenge.html" class="code">sm.challenge</a></li>
    <li><a href="namespace_Game_sm_character.html" class="code">sm.character</a></li>
+   <li><a href="namespace_Game_sm_clientScriptableObject.html" class="code">sm.clientScriptableObject</a></li>
    <li><a href="namespace_Game_sm_color.html" class="code">sm.color</a></li>
    <li><a href="namespace_Game_sm_construction.html" class="code">sm.construction</a></li>
    <li><a href="namespace_Game_sm_container.html" class="code">sm.container</a></li>
@@ -80,9 +86,11 @@
    <li><a href="namespace_Game_sm_cullSphereGroup.html" class="code">sm.cullSphereGroup</a></li>
    <li><a href="namespace_Game_sm_debris.html" class="code">sm.debris</a></li>
    <li><a href="namespace_Game_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
+   <li><a href="namespace_Game_sm_debugGui.html" class="code">sm.debugGui</a></li>
    <li><a href="namespace_Game_sm_effect.html" class="code">sm.effect</a></li>
    <li><a href="namespace_Game_sm_event.html" class="code">sm.event</a></li>
    <li><a href="namespace_Game_sm_game.html" class="code">sm.game</a></li>
+   <li><a href="namespace_Game_sm_garage.html" class="code">sm.garage</a></li>
    <li><a href="namespace_Game_sm_gui.html" class="code">sm.gui</a></li>
    <li><a href="namespace_Game_sm_gui_widget.html" class="code">sm.gui.widget</a></li>
    <li><a href="namespace_Game_sm_harvestable.html" class="code">sm.harvestable</a></li>
@@ -90,15 +98,19 @@
    <li><a href="namespace_Game_sm_item.html" class="code">sm.item</a></li>
    <li><a href="namespace_Game_sm_joint.html" class="code">sm.joint</a></li>
    <li><a href="namespace_Game_sm_json.html" class="code">sm.json</a></li>
+   <li><a href="namespace_Game_sm_jsonGui.html" class="code">sm.jsonGui</a></li>
+   <li><a href="namespace_Game_sm_lift.html" class="code">sm.lift</a></li>
    <li><a href="namespace_Game_sm_localPlayer.html" class="code">sm.localPlayer</a></li>
    <li><a href="namespace_Game_sm_log.html" class="code">sm.log</a></li>
    <li><a href="namespace_Game_sm_melee.html" class="code">sm.melee</a></li>
    <li><a href="namespace_Game_sm_menuCreation.html" class="code">sm.menuCreation</a></li>
+   <li><a href="namespace_Game_sm_message.html" class="code">sm.message</a></li>
    <li><a href="namespace_Game_sm_noise.html" class="code">sm.noise</a></li>
    <li><a href="namespace_Game_sm_particle.html" class="code">sm.particle</a></li>
    <li><a href="namespace_Game_sm_pathNode.html" class="code">sm.pathNode</a></li>
    <li><a href="namespace_Game_sm_pathfinder.html" class="code">sm.pathfinder</a></li>
    <li><a href="namespace_Game_sm_physics.html" class="code">sm.physics</a></li>
+   <li><a href="namespace_Game_sm_pipeGraph.html" class="code">sm.pipeGraph</a></li>
    <li><a href="namespace_Game_sm_player.html" class="code">sm.player</a></li>
    <li><a href="namespace_Game_sm_portal.html" class="code">sm.portal</a></li>
    <li><a href="namespace_Game_sm_projectile.html" class="code">sm.projectile</a></li>
@@ -122,8 +134,12 @@
   <h3>Object Types 'userdata'</h3>
   <ul>
    <li><a href="userdata_Terrain_Color.html" class="code">Color</a></li>
+   <li><a href="userdata_Terrain_Container.html" class="code">Container</a></li>
    <li><a href="userdata_Terrain_Harvestable.html" class="code">Harvestable</a></li>
+   <li><a href="userdata_Terrain_Interactable.html" class="code">Interactable</a></li>
+   <li><a href="userdata_Terrain_Portal.html" class="code">Portal</a></li>
    <li><a href="userdata_Terrain_Quat.html" class="code">Quat</a></li>
+   <li><a href="userdata_Terrain_ScriptableObject.html" class="code">ScriptableObject</a></li>
    <li><a href="userdata_Terrain_Uuid.html" class="code">Uuid</a></li>
    <li><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></li>
    <li><a href="userdata_Terrain_World.html" class="code">World</a></li>
@@ -133,18 +149,24 @@
    <li><a href="namespace_Terrain_GLOBAL.html" class="code">GLOBAL</a></li>
    <li><a href="namespace_Terrain_sm.html" class="code">sm</a></li>
    <li><a href="namespace_Terrain_sm_color.html" class="code">sm.color</a></li>
+   <li><a href="namespace_Terrain_sm_container.html" class="code">sm.container</a></li>
    <li><a href="namespace_Terrain_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
-   <li><a href="namespace_Terrain_sm_harvestable.html" class="code">sm.harvestable</a></li>
+   <li><a href="namespace_Terrain_sm_debugGui.html" class="code">sm.debugGui</a></li>
+   <li><a href="namespace_Terrain_sm_interactable.html" class="code">sm.interactable</a></li>
    <li><a href="namespace_Terrain_sm_json.html" class="code">sm.json</a></li>
    <li><a href="namespace_Terrain_sm_log.html" class="code">sm.log</a></li>
    <li><a href="namespace_Terrain_sm_noise.html" class="code">sm.noise</a></li>
    <li><a href="namespace_Terrain_sm_quat.html" class="code">sm.quat</a></li>
+   <li><a href="namespace_Terrain_sm_scriptableObject.html" class="code">sm.scriptableObject</a></li>
    <li><a href="namespace_Terrain_sm_terrainData.html" class="code">sm.terrainData</a></li>
    <li><a href="namespace_Terrain_sm_terrainGeneration.html" class="code">sm.terrainGeneration</a></li>
+   <li><a href="namespace_Terrain_sm_terrainHarvestable.html" class="code">sm.terrainHarvestable</a></li>
    <li><a href="namespace_Terrain_sm_terrainTile.html" class="code">sm.terrainTile</a></li>
+   <li><a href="namespace_Terrain_sm_tunnelGenerator.html" class="code">sm.tunnelGenerator</a></li>
    <li><a href="namespace_Terrain_sm_util.html" class="code">sm.util</a></li>
    <li><a href="namespace_Terrain_sm_uuid.html" class="code">sm.uuid</a></li>
    <li><a href="namespace_Terrain_sm_vec3.html" class="code">sm.vec3</a></li>
+   <li><a href="namespace_Terrain_sm_voxelTerrainCell.html" class="code">sm.voxelTerrainCell</a></li>
   </ul>
  </div>
  <div id="content">
@@ -166,6 +188,8 @@
   <ul>
    <li><a href="#colorHighlight" class="code">colorHighlight</a></li>
    <li><a href="#colorNormal" class="code">colorNormal</a></li>
+   <li><a href="#connectIcon" class="code">connectIcon</a></li>
+   <li><a href="#connectIconScale" class="code">connectIconScale</a></li>
    <li><a href="#connectionInput" class="code">connectionInput</a></li>
    <li><a href="#connectionOutput" class="code">connectionOutput</a></li>
    <li><a href="#maxChildCount" class="code">maxChildCount</a></li>
@@ -208,6 +232,8 @@
    <li><a href="#client_getAvailableParentConnectionCount" class="code">client_getAvailableParentConnectionCount</a></li>
    <li><a href="#client_getAvailableChildConnectionCount" class="code">client_getAvailableChildConnectionCount</a></li>
    <li><a href="#client_canCarry" class="code">client_canCarry</a></li>
+   <li><a href="#server_onWorldChanged" class="code">server_onWorldChanged</a></li>
+   <li><a href="#client_onChildJointRemoved" class="code">client_onChildJointRemoved</a></li>
   </ul>
   <hr>
   <h2 class="code"><a id="colorHighlight"></a>colorHighlight <i><a href="userdata_Game_Color.html" class="code">Color</a></i></h2>
@@ -215,6 +241,12 @@
   <hr>
   <h2 class="code"><a id="colorNormal"></a>colorNormal <i><a href="userdata_Game_Color.html" class="code">Color</a></i></h2>
   <p>Sets the connection-point normal color. The connection-point is shown when using the <em>Connect Tool</em>. (Defaults to gray)</p>
+  <hr>
+  <h2 class="code"><a id="connectIcon"></a>connectIcon <i>string</i></h2>
+  <p>Sets the connection-point texture name that maps to texture specified in connectIcons.json. The connection-point is shown when using the <em>Connect Tool</em> and selecting the interactable. (Defaults to empty)</p>
+  <hr>
+  <h2 class="code"><a id="connectIconScale"></a>connectIconScale <i>integer</i></h2>
+  <p>Sets the connection-point visualization scale. The connection-point is shown when using the <em>Connect Tool</em> and selecting the interactable. (Defaults to 0.75)</p>
   <hr>
   <h2 class="code"><a id="connectionInput"></a>connectionInput <i>integer</i></h2>
   <p>Sets the connection input type flags. (See <a href="namespace_Game_sm_interactable.html#connectionType" class="code">sm.interactable.connectionType</a>) (Defaults to 0, no input)</p>
@@ -366,7 +398,7 @@
    <p>If this method is defined, the player will see the interaction text "E Use" when looking at the <a href="userdata_Game_Shape.html" class="code">Shape</a>.</p>
   </div>
   <pre class="code">-- Example of interaction
-function MySwitch.client_onInteract( self, _, state ) 
+function MySwitch.client_onInteract( self, character, state ) 
 	if state == true then
 		self.network:sendToServer( 'sv_n_toggle' )
 	end
@@ -419,7 +451,7 @@ end</pre>  <h4>Parameters:</h4>
    <tr><td class="code">boolean</td><td class="code">state</td><td>True on begin action, false on end action.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="client_onProjectile"></a>client_onProjectile(self, position, airTime, velocity, projectileName, shooter, damage, customData, normal, uuid) <i>clientEventCallback</i></h2>
+  <h2 class="code"><a id="client_onProjectile"></a>client_onProjectile(self, position, airTime, velocity, projectileName, shooter, damage, customData, normal, uuid, mass) <i>clientEventCallback</i></h2>
   <p>Called when the <a href="userdata_Game_Shape.html" class="code">Shape</a> is hit by a projectile.</p>
   <div class="note">
    <h4>Note:</h4>
@@ -438,9 +470,10 @@ end</pre>  <h4>Parameters:</h4>
    <tr><td class="code">any</td><td class="code">customData</td><td>A Lua object that can be defined at shoot time using <a href="namespace_Game_sm_projectile.html#customProjectileAttack" class="code">sm.projectile.customProjectileAttack</a> or an other custom version. </td></tr>
    <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">normal</td><td>The normal at the point of impact.</td></tr>
    <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">uuid</td><td>The uuid of the projectile.</td></tr>
+   <tr><td class="code">number</td><td class="code">mass</td><td>The mass of the projectile.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="server_onProjectile"></a>server_onProjectile(self, position, airTime, velocity, projectileName, shooter, damage, customData, normal, uuid) <i>serverEventCallback</i></h2>
+  <h2 class="code"><a id="server_onProjectile"></a>server_onProjectile(self, position, airTime, velocity, projectileName, shooter, damage, customData, normal, uuid, mass) <i>serverEventCallback</i></h2>
   <p>Called when the <a href="userdata_Game_Shape.html" class="code">Shape</a> is hit by a projectile.</p>
   <div class="note">
    <h4>Note:</h4>
@@ -459,6 +492,7 @@ end</pre>  <h4>Parameters:</h4>
    <tr><td class="code">any</td><td class="code">customData</td><td>A Lua object that can be defined at shoot time using <a href="namespace_Game_sm_projectile.html#customProjectileAttack" class="code">sm.projectile.customProjectileAttack</a> or an other custom version. </td></tr>
    <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">normal</td><td>The normal at the point of impact.</td></tr>
    <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td class="code">uuid</td><td>The uuid of the projectile.</td></tr>
+   <tr><td class="code">number</td><td class="code">mass</td><td>The mass of the projectile.</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="server_onSledgehammer"></a>server_onSledgehammer() <i>serverEventCallback</i></h2>
@@ -503,7 +537,7 @@ end</pre>  <h4>Parameters:</h4>
    <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">normal</td><td>The normal at the point of impact.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="server_onExplosion"></a>server_onExplosion(self, center, destructionLevel) <i>serverEventCallback</i></h2>
+  <h2 class="code"><a id="server_onExplosion"></a>server_onExplosion(self, center, destructionLevel, damage) <i>serverEventCallback</i></h2>
   <p>Called when the <a href="userdata_Game_Shape.html" class="code">Shape</a> is hit by an explosion.</p>
   <p>For more information about explosions, see <a href="namespace_Game_sm_physics.html#explode" class="code">sm.physics.explode</a>.</p>
   <h4>Parameters:</h4>
@@ -512,6 +546,7 @@ end</pre>  <h4>Parameters:</h4>
    <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
    <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">center</td><td>The center of the explosion.</td></tr>
    <tr><td class="code">integer</td><td class="code">destructionLevel</td><td>The level of destruction done by this explosion. Corresponds to the 'durability' rating of a <a href="userdata_Game_Shape.html" class="code">Shape</a>.</td></tr>
+   <tr><td class="code">integer</td><td class="code">damage</td><td>The damage value of the explosion.</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="client_onCollision"></a>client_onCollision(self, other, position, selfPointVelocity, otherPointVelocity, normal) <i>clientEventCallback</i></h2>
@@ -596,7 +631,7 @@ end</pre>  <h4>Parameters:</h4>
    <tr><td class="code">boolean</td><td>A boolean indicating whether the interactable can be interacted with or not. (Defaults to true if <a href="class_Game_ShapeClass.html#client_onInteract" class="code">client_onInteract</a> is implemented, otherwise false)</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="client_canInteractThroughJoint"></a>client_canInteractThroughJoint(self, character) <i>clientEventCallback</i></h2>
+  <h2 class="code"><a id="client_canInteractThroughJoint"></a>client_canInteractThroughJoint(self, character, joint) <i>clientEventCallback</i></h2>
   <p>Called to check whether the <a href="userdata_Game_Interactable.html" class="code">Interactable</a> can be interacted with through a child <a href="userdata_Game_Joint.html" class="code">Joint</a> at this moment.</p>
   <div class="note">
    <h4>Note:</h4>
@@ -607,6 +642,7 @@ end</pre>  <h4>Parameters:</h4>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
    <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The <a href="userdata_Game_Character.html" class="code">Character</a> of the <a href="userdata_Game_Player.html" class="code">Player</a> that is looking at the <a href="userdata_Game_Joint.html" class="code">Joint</a>.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Joint.html" class="code">Joint</a></td><td class="code">joint</td><td>The <a href="userdata_Game_Joint.html" class="code">Joint</a>.</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -707,6 +743,24 @@ end</pre>  <div class="note">
   <table>
    <tr><th>Type</th><th>Description</th></tr>
    <tr><td class="code">boolean</td><td>A boolean indicating whether the interacable must be carried or not. (Defaults to false)</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="server_onWorldChanged"></a>server_onWorldChanged(self) <i>serverEventCallback</i></h2>
+  <p>Called when a shape changes world</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="client_onChildJointRemoved"></a>client_onChildJointRemoved(self, joint) <i>clientEventCallback</i></h2>
+  <p>Called when a child <a href="userdata_Game_Joint.html" class="code">Joint</a> is removed from the <a href="userdata_Game_Interactable.html" class="code">Interactable</a>'s connection list.</p>
+  <p>This can happen when a player explicitly disconnects the <a href="userdata_Game_Joint.html" class="code">Joint</a> or when the <a href="userdata_Game_Joint.html" class="code">Joint</a> is destroyed.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Joint.html" class="code">Joint</a></td><td class="code">joint</td><td>The <a href="userdata_Game_Joint.html" class="code">Joint</a> that was removed.</td></tr>
   </table>
  </div>
 </body>

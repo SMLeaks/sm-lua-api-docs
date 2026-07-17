@@ -6,7 +6,7 @@
 		]
 	},
 	"usage": "server only",
-	"serializable": true,
+	"serializable": false,
 	"members": [],
 	"functions": [
 		{
@@ -24,8 +24,7 @@
 						"boolean",
 						"True if succesful "
 					]
-				],
-				"server_only": true
+				]
 			}
 		}
 	],
@@ -35,7 +34,7 @@
 			"doc": {
 				"meta": [
 					[
-						"[LoadCellHandle],[LoadCellHandle]",
+						"[LoadCellHandle],[LoadCellHandle],boolean",
 						"Checks if two instances of [LoadCellHandle] refer to the same LoadCellHandle."
 					]
 				]

@@ -69,6 +69,61 @@
 			}
 		},
 		{
+			"name": "checkLiftCollisionAtLevel",
+			"doc": {
+				"text": [
+					"Checks whether a specific lift level is valid (no collision) for a creation at the given position and rotation."
+				],
+				"params": [
+					[
+						"table",
+						"creation",
+						"A table of all the bodies belonging to the creation placed on the lift."
+					],
+					[
+						"[Vec3]",
+						"position",
+						"The lift position."
+					],
+					[
+						"integer",
+						"rotation",
+						"The rotation of the creation on the lift."
+					],
+					[
+						"integer",
+						"level",
+						"The specific lift level to test."
+					],
+					[
+						"integer",
+						"timeStamp",
+						"The timestamp of when the body set was initialized"
+					]
+				],
+				"return": [
+					[
+						"boolean\t\t\t\t\t\t\t\tTrue if the level is valid (no collision).",
+						""
+					]
+				]
+			}
+		},
+		{
+			"name": "findPaintToolPaletteColumnIndex",
+			"doc": {
+				"text": [
+					"Find index of column of shades that best matches given color."
+				],
+				"return": [
+					[
+						"integer",
+						"Palette column index."
+					]
+				]
+			}
+		},
+		{
 			"name": "forceTool",
 			"doc": {
 				"text": [
@@ -82,6 +137,20 @@
 					]
 				],
 				"client_only": true
+			}
+		},
+		{
+			"name": "getLiftMaxLevel",
+			"doc": {
+				"text": [
+					"Returns the maximum number of lift levels."
+				],
+				"return": [
+					[
+						"integer\t\t\t\t\t\t\t\tThe maximum lift level count.",
+						""
+					]
+				]
 			}
 		},
 		{
@@ -109,8 +178,8 @@
 				"params": [
 					[
 						"[Uuid]",
-						"The",
-						"shape uuid."
+						"uuid",
+						"The shape uuid."
 					]
 				],
 				"return": [

@@ -2,7 +2,7 @@
 	"namespace": "sm.projectile",
 	"doc": {
 		"text": [
-			"Information about projectiles are located in `/Data/Projectiles/projectiles.json`."
+			"Information about projectiles are located in `/Data/Projectiles/ProjectileSets/projectiles.json`."
 		]
 	},
 	"constants": [],
@@ -49,17 +49,17 @@
 					],
 					[
 						"[Vec3]",
-						"fakePosThird=nil",
+						"fakePosThird?",
 						"The visual start position in third-person. (Defaults to position)"
 					],
 					[
 						"[Vec3]",
-						"fakePosFirst=nil",
+						"fakePosFirst?",
 						"The visual start position in first-person. (Defaults to position)"
 					],
 					[
 						"integer",
-						"delay=0",
+						"delay?",
 						"The number of ticks before firing. (Defaults to 0)"
 					]
 				],
@@ -108,18 +108,84 @@
 					],
 					[
 						"[Vec3]",
-						"fakePosThird=nil",
+						"fakePosThird?",
 						"The visual start position in third-person. (Defaults to position)"
 					],
 					[
 						"[Vec3]",
-						"fakePosFirst=nil",
+						"fakePosFirst?",
 						"The visual start position in first-person. (Defaults to position)"
 					],
 					[
 						"integer",
-						"delay=0",
+						"delay?",
 						"The number of ticks before firing. (Defaults to 0)"
+					]
+				],
+				"server_only": true
+			}
+		},
+		{
+			"name": "customProjectileAttack",
+			"doc": {
+				"text": [
+					"Perform a customized projectile attack"
+				],
+				"params": [
+					[
+						"table",
+						"userdata",
+						"The custom user data"
+					],
+					[
+						"[Uuid]",
+						"uuid",
+						"The projectile's uuid."
+					],
+					[
+						"integer",
+						"damage",
+						"The damage the projectile will inflict."
+					],
+					[
+						"[Vec3]",
+						"position",
+						"The start position in world space."
+					],
+					[
+						"[Vec3]",
+						"velocity",
+						"The direction and velocity."
+					],
+					[
+						"[World]",
+						"source",
+						"The world that is the source of the projectile."
+					],
+					[
+						"[Vec3]",
+						"fakePosThird?",
+						"The visual start position in third-person. (Defaults to position)"
+					],
+					[
+						"[Vec3]",
+						"fakePosFirst?",
+						"The visual start position in first-person. (Defaults to position)"
+					],
+					[
+						"integer",
+						"delay?",
+						"The number of ticks before firing. (Defaults to 0)"
+					],
+					[
+						"number",
+						"acceleration?",
+						"The acceleration of the projectile. (Defaults to 0)"
+					],
+					[
+						"integer",
+						"lifetime?",
+						"The max lifetime of the projectile in ticks. (Defaults to 400)"
 					]
 				],
 				"server_only": true
@@ -164,18 +230,28 @@
 					],
 					[
 						"[Vec3]",
-						"fakePosThird=nil",
+						"fakePosThird?",
 						"The visual start position in third-person. (Defaults to position)"
 					],
 					[
 						"[Vec3]",
-						"fakePosFirst=nil",
+						"fakePosFirst?",
 						"The visual start position in first-person. (Defaults to position)"
 					],
 					[
 						"integer",
-						"delay=0",
+						"delay?",
 						"The number of ticks before firing. (Defaults to 0)"
+					],
+					[
+						"number",
+						"acceleration?",
+						"The acceleration of the projectile. (Defaults to 0)"
+					],
+					[
+						"integer",
+						"lifetime?",
+						"The max lifetime of the projectile in ticks. (Defaults to 400)"
 					]
 				],
 				"server_only": true
@@ -220,18 +296,28 @@
 					],
 					[
 						"[Vec3]",
-						"fakePosThird=nil",
+						"fakePosThird?",
 						"The visual start position in third-person. (Defaults to position)"
 					],
 					[
 						"[Vec3]",
-						"fakePosFirst=nil",
+						"fakePosFirst?",
 						"The visual start position in first-person. (Defaults to position)"
 					],
 					[
 						"integer",
-						"delay=0",
+						"delay?",
 						"The number of ticks before firing. (Defaults to 0)"
+					],
+					[
+						"number",
+						"acceleration?",
+						"The acceleration of the projectile. (Defaults to 0)"
+					],
+					[
+						"integer",
+						"lifetime?",
+						"The max lifetime of the projectile in ticks. (Defaults to 400)"
 					]
 				],
 				"server_only": true
@@ -283,6 +369,27 @@
 			}
 		},
 		{
+			"name": "getProjectileRadius",
+			"doc": {
+				"text": [
+					"Returns the radius of a projectile."
+				],
+				"params": [
+					[
+						"[Uuid]",
+						"uuid",
+						"The projectile's uuid."
+					]
+				],
+				"return": [
+					[
+						"number",
+						"The radius."
+					]
+				]
+			}
+		},
+		{
 			"name": "harvestableCustomProjectileAttack",
 			"doc": {
 				"text": [
@@ -324,7 +431,7 @@
 					],
 					[
 						"integer",
-						"delay=0",
+						"delay?",
 						"The number of ticks before firing. (Defaults to 0)"
 					]
 				],
@@ -370,8 +477,18 @@
 					],
 					[
 						"integer",
-						"delay=0",
+						"delay?",
 						"The number of ticks before firing. (Defaults to 0)"
+					],
+					[
+						"number",
+						"acceleration?",
+						"The acceleration of the projectile. (Defaults to 0)"
+					],
+					[
+						"integer",
+						"lifetime?",
+						"The max lifetime of the projectile in ticks. (Defaults to 400)"
 					]
 				],
 				"server_only": true
@@ -414,7 +531,7 @@
 					],
 					[
 						"integer",
-						"delay=0",
+						"delay?",
 						"The number of ticks before firing. (Defaults to 0)"
 					]
 				]
@@ -454,8 +571,18 @@
 					],
 					[
 						"integer",
-						"delay=0",
+						"delay?",
 						"The number of ticks before firing. (Defaults to 0)"
+					],
+					[
+						"number",
+						"acceleration?",
+						"The acceleration of the projectile. (Defaults to 0)"
+					],
+					[
+						"integer",
+						"lifetime?",
+						"The max lifetime of the projectile in ticks. (Defaults to 400)"
 					]
 				]
 			}
@@ -488,17 +615,17 @@
 					],
 					[
 						"[Vec3]",
-						"fakePosThird=nil",
+						"fakePosThird?",
 						"The visual start position in third-person. (Defaults to position)"
 					],
 					[
 						"[Vec3]",
-						"fakePosFirst=nil",
+						"fakePosFirst?",
 						"The visual start position in first-person. (Defaults to position)"
 					],
 					[
 						"integer",
-						"delay=0",
+						"delay?",
 						"The number of ticks before firing. (Defaults to 0)"
 					]
 				],
@@ -530,17 +657,17 @@
 					],
 					[
 						"[Vec3]",
-						"fakePosThird=nil",
+						"fakePosThird?",
 						"The visual start position in third-person. (Defaults to position)"
 					],
 					[
 						"[Vec3]",
-						"fakePosFirst=nil",
+						"fakePosFirst?",
 						"The visual start position in first-person. (Defaults to position)"
 					],
 					[
 						"integer",
-						"delay=0",
+						"delay?",
 						"The number of ticks before firing. (Defaults to 0)"
 					]
 				],
@@ -584,17 +711,17 @@
 					],
 					[
 						"[Vec3]",
-						"fakePosThird=nil",
+						"fakePosThird?",
 						"The visual start position in third-person. (Defaults to position)"
 					],
 					[
 						"[Vec3]",
-						"fakePosFirst=nil",
+						"fakePosFirst?",
 						"The visual start position in first-person. (Defaults to position)"
 					],
 					[
 						"integer",
-						"delay=0",
+						"delay?",
 						"The number of ticks before firing. (Defaults to 0)"
 					]
 				]
@@ -637,17 +764,17 @@
 					],
 					[
 						"[Vec3]",
-						"fakePosThird=nil",
+						"fakePosThird?",
 						"The visual start position in third-person. (Defaults to position)"
 					],
 					[
 						"[Vec3]",
-						"fakePosFirst=nil",
+						"fakePosFirst?",
 						"The visual start position in first-person. (Defaults to position)"
 					],
 					[
 						"integer",
-						"delay=0",
+						"delay?",
 						"The number of ticks before firing. (Defaults to 0)"
 					]
 				]
@@ -687,18 +814,28 @@
 					],
 					[
 						"[Vec3]",
-						"fakePosThird=nil",
+						"fakePosThird?",
 						"The visual start position in third-person. (Defaults to position)"
 					],
 					[
 						"[Vec3]",
-						"fakePosFirst=nil",
+						"fakePosFirst?",
 						"The visual start position in first-person. (Defaults to position)"
 					],
 					[
 						"integer",
-						"delay=0",
+						"delay?",
 						"The number of ticks before firing. (Defaults to 0)"
+					],
+					[
+						"number",
+						"acceleration?",
+						"The acceleration of the projectile. (Defaults to 0)"
+					],
+					[
+						"integer",
+						"lifetime?",
+						"The max lifetime of the projectile in ticks. (Defaults to 400)"
 					]
 				]
 			}
@@ -737,20 +874,98 @@
 					],
 					[
 						"[Vec3]",
-						"fakePosThird=nil",
+						"fakePosThird?",
 						"The visual start position in third-person. (Defaults to position)"
 					],
 					[
 						"[Vec3]",
-						"fakePosFirst=nil",
+						"fakePosFirst?",
 						"The visual start position in first-person. (Defaults to position)"
 					],
 					[
 						"integer",
-						"delay=0",
+						"delay?",
 						"The number of ticks before firing. (Defaults to 0)"
+					],
+					[
+						"number",
+						"acceleration?",
+						"The acceleration of the projectile. (Defaults to 0)"
+					],
+					[
+						"integer",
+						"lifetime?",
+						"The max lifetime of the projectile in ticks. (Defaults to 400)"
 					]
 				]
+			}
+		},
+		{
+			"name": "removeProjectilesWithSource",
+			"doc": {
+				"text": [
+					"Removes projectiles created by a given source. The source world must exist."
+				],
+				"params": [
+					[
+						"[World]",
+						"source",
+						"The world that is the source of the projectile."
+					],
+					[
+						"integer",
+						"delay?",
+						"The number of ticks before destroying the projectile. (Defaults to 0)"
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "removeProjectilesWithSource",
+			"doc": {
+				"text": [
+					"Removes projectiles created by a given source. The source player must exist."
+				],
+				"params": [
+					[
+						"[Player]",
+						"source",
+						"The player that is the source of the projectile."
+					],
+					[
+						"integer",
+						"delay?",
+						"The number of ticks before destroying the projectile. (Defaults to 0)"
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "removeProjectilesWithSource",
+			"doc": {
+				"text": [
+					"Removes projectiles created by a given character source. Can remove projectiles from a source that doesn't exist, in this case a world to remove from is required."
+				],
+				"params": [
+					[
+						"[Character]",
+						"source",
+						"The Character that is the source of the projectile."
+					],
+					[
+						"integer",
+						"delay?",
+						"The number of ticks before destroying the projectile. (Defaults to 0)"
+					],
+					[
+						"[World]",
+						"world?",
+						"The world the projectiles should be removed from. (Defaults to same world as source.)"
+					]
+				],
+				"client_only": true
 			}
 		},
 		{
@@ -795,7 +1010,7 @@
 					],
 					[
 						"integer",
-						"delay=0",
+						"delay?",
 						"The number of ticks before firing. (Defaults to 0)"
 					]
 				],
@@ -841,8 +1056,18 @@
 					],
 					[
 						"integer",
-						"delay=0",
+						"delay?",
 						"The number of ticks before firing. (Defaults to 0)"
+					],
+					[
+						"number",
+						"acceleration?",
+						"The acceleration of the projectile. (Defaults to 0)"
+					],
+					[
+						"integer",
+						"lifetime?",
+						"The max lifetime of the projectile in ticks. (Defaults to 400)"
 					]
 				],
 				"server_only": true
@@ -880,7 +1105,7 @@
 					],
 					[
 						"integer",
-						"delay=0",
+						"delay?",
 						"The number of ticks before firing. (Defaults to 0)"
 					]
 				],
@@ -916,8 +1141,13 @@
 					],
 					[
 						"integer",
-						"delay=0",
+						"delay?",
 						"The number of ticks before firing. (Defaults to 0)"
+					],
+					[
+						"integer",
+						"projectileAmount?",
+						"The amount of shots that will be fired. Uses projectile amount from json if not set (Optional, range of 0-255)"
 					]
 				],
 				"server_only": true
@@ -960,7 +1190,7 @@
 					],
 					[
 						"integer",
-						"delay=0",
+						"delay?",
 						"The number of ticks before firing. (Defaults to 0)"
 					]
 				]
@@ -1000,8 +1230,18 @@
 					],
 					[
 						"integer",
-						"delay=0",
+						"delay?",
 						"The number of ticks before firing. (Defaults to 0)"
+					],
+					[
+						"number",
+						"acceleration?",
+						"The acceleration of the projectile. (Defaults to 0)"
+					],
+					[
+						"integer",
+						"lifetime?",
+						"The max lifetime of the projectile in ticks. (Defaults to 400)"
 					]
 				]
 			}

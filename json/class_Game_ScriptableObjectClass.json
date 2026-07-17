@@ -258,5 +258,22 @@
 			"type": "clientEventCallback"
 		}
 	],
-	"callbacks": []
+	"callbacks": [
+		{
+			"name": "server_onUnload",
+			"doc": {
+				"text": [
+					"Called when the [ScriptableObject] is unloaded when exiting the game."
+				],
+				"params": [
+					[
+						"table",
+						"self",
+						"The class instance."
+					]
+				]
+			},
+			"type": "serverEventCallback"
+		}
+	]
 }

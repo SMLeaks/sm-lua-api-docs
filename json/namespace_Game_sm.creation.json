@@ -8,6 +8,42 @@
 	"constants": [],
 	"functions": [
 		{
+			"name": "buildMultiShape",
+			"doc": {
+				"text": [
+					"Builds a multi shape"
+				],
+				"params": [
+					[
+						"[Uuid]",
+						"shape",
+						"The uuid of shape to build."
+					],
+					[
+						"[Vec3]",
+						"worldPosition",
+						"World position of shape."
+					],
+					[
+						"[Quat]",
+						"worldRotation",
+						"World rotation of shape."
+					],
+					[
+						"[Vec3]",
+						"localPosition",
+						"Local position of shape."
+					],
+					[
+						"[Quat]",
+						"localRotation",
+						"Local rotation of shape."
+					]
+				],
+				"server_only": true
+			}
+		},
+		{
 			"name": "exportToString",
 			"doc": {
 				"text": [
@@ -21,12 +57,12 @@
 					],
 					[
 						"boolean",
-						"exportTransforms=nil",
+						"exportTransforms?",
 						"Export the current world transform of bodies. Defaults to false."
 					],
 					[
 						"boolean",
-						"forceDynamic=nil",
+						"forceDynamic?",
 						"Force export to dynamic bodies. Defaults to false."
 					]
 				],
@@ -53,12 +89,12 @@
 					],
 					[
 						"boolean",
-						"exportTransforms=nil",
+						"exportTransforms?",
 						"Export the current world transform of bodies. Defaults to false."
 					],
 					[
 						"boolean",
-						"forceDynamic=nil",
+						"forceDynamic?",
 						"Force export to dynamic bodies. Defaults to false."
 					]
 				],
@@ -69,6 +105,58 @@
 					]
 				],
 				"server_only": true
+			}
+		},
+		{
+			"name": "getBlueprintCost",
+			"doc": {
+				"text": [
+					"Returns a table with uuid's and quantity. A body can be sent in to remove from blueprint cost."
+				],
+				"params": [
+					[
+						"string",
+						"filePath",
+						"The file path for the blueprint."
+					],
+					[
+						"integer",
+						"bodyId?",
+						"The id of a body.(Optional)"
+					]
+				],
+				"return": [
+					[
+						"table",
+						"The table of { [Uuid], quantity }"
+					]
+				]
+			}
+		},
+		{
+			"name": "getBlueprintCost",
+			"doc": {
+				"text": [
+					"Returns a table with uuid's and quantity. A body can be sent in to remove from blueprint cost."
+				],
+				"params": [
+					[
+						"table",
+						"table",
+						"The lua table for the blueprint."
+					],
+					[
+						"integer",
+						"bodyId?",
+						"The id of a body.(Optional)"
+					]
+				],
+				"return": [
+					[
+						"table",
+						"The table of { [Uuid], quantity }"
+					]
+				]
 			}
 		},
 		{
@@ -93,23 +181,23 @@
 					],
 					[
 						"[Vec3]",
-						"worldPosition=nil",
+						"worldPosition?",
 						"World position of import. If importTransforms is enabled position is applied to the imported transform. (Defaults to vec3.zero().)"
 					],
 					[
 						"[Quat]",
-						"worldRotation=nil",
+						"worldRotation?",
 						"World rotation of import. If importTransforms is enabled rotation is applied to the imported transform. (Defaults to quat.identity().)"
 					],
 					[
 						"boolean",
-						"importTransforms=nil",
+						"importTransforms?",
 						"Import world transforms from bodies. (Defaults to false.)"
 					],
 					[
 						"boolean",
-						"indestructible=false",
-						"(DEPRECATED) Ignored, use setDestructable(false) on each body in creation."
+						"indestructible?",
+						"(DEPRECATED) Ignored, use setDestructable(false) on each body in creation. (Defaults to false)"
 					]
 				],
 				"return": [
@@ -143,22 +231,22 @@
 					],
 					[
 						"[Vec3]",
-						"worldPosition=nil",
+						"worldPosition?",
 						"World position of import. If importTransforms is enabled position is applied to the imported transform. (Defaults to vec3.zero().)"
 					],
 					[
 						"[Quat]",
-						"worldRotation=nil",
+						"worldRotation?",
 						"World rotation of import. If importTransforms is enabled rotation is applied to the imported transform. (Defaults to quat.identity().)"
 					],
 					[
 						"boolean",
-						"importTransforms=nil",
+						"importTransforms?",
 						"Import world transforms from bodies. (Defaults to false.)"
 					],
 					[
 						"boolean",
-						"forceInactive=nil",
+						"forceInactive?",
 						"Import interactables in an inactive state. (Defaults to false.)"
 					]
 				],

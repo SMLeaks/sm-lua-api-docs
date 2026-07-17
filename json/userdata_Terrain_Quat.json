@@ -178,14 +178,167 @@
 			}
 		}
 	],
-	"functions": [],
+	"functions": [
+		{
+			"name": "getAt",
+			"doc": {
+				"text": [
+					"Returns the quaternions at vector."
+				],
+				"params": [
+					[
+						"[Quat]",
+						"quaternion",
+						"The quaternion."
+					]
+				],
+				"return": [
+					[
+						"[Vec3]",
+						"The at vector.\t"
+					]
+				]
+			}
+		},
+		{
+			"name": "getRight",
+			"doc": {
+				"text": [
+					"Returns the quaternions right vector."
+				],
+				"params": [
+					[
+						"[Quat]",
+						"quaternion",
+						"The quaternion."
+					]
+				],
+				"return": [
+					[
+						"[Vec3]",
+						"The right vector."
+					]
+				]
+			}
+		},
+		{
+			"name": "getUp",
+			"doc": {
+				"text": [
+					"Returns the quaternions up vector."
+				],
+				"params": [
+					[
+						"[Quat]",
+						"quaternion",
+						"The quaternion."
+					]
+				],
+				"return": [
+					[
+						"[Vec3]",
+						"The up vector."
+					]
+				]
+			}
+		},
+		{
+			"name": "inverse",
+			"doc": {
+				"text": [
+					"Inverts the quaternion."
+				],
+				"params": [
+					[
+						"[Quat]",
+						"quaternion",
+						"The quaternion."
+					]
+				],
+				"return": [
+					[
+						"[Quat]",
+						"The inverted quaternion."
+					]
+				]
+			}
+		},
+		{
+			"name": "normalize",
+			"doc": {
+				"text": [
+					"Normalizes a quaternion, ie. converts to a unit quaternion of length 1."
+				],
+				"params": [
+					[
+						"[Quat]",
+						"quaternion",
+						"The quaternion."
+					]
+				],
+				"return": [
+					[
+						"[Quat]",
+						"The normalized quaternion."
+					]
+				]
+			}
+		},
+		{
+			"name": "round90",
+			"doc": {
+				"text": [
+					"Rounds the quaternion rotation into 90 degree steps"
+				],
+				"params": [
+					[
+						"[Quat]",
+						"quaternion",
+						"The quaternion."
+					]
+				],
+				"return": [
+					[
+						"[Quat]",
+						"The rounded quaternion."
+					]
+				]
+			}
+		},
+		{
+			"name": "safeNormalize",
+			"doc": {
+				"text": [
+					"Normalizes a quaternion with safety, ie. converts to a unit quaternion of length 1."
+				],
+				"params": [
+					[
+						"[Quat]",
+						"quaternion",
+						"The quaternion."
+					],
+					[
+						"[Quat]",
+						"fallback",
+						"The fallback quaternion"
+					]
+				],
+				"return": [
+					[
+						"[Quat]",
+						"The normalized quaternion."
+					]
+				]
+			}
+		}
+	],
 	"metamethods": [
 		{
 			"name": "__eq",
 			"doc": {
 				"meta": [
 					[
-						"[Quat],[Quat]",
+						"[Quat],[Quat],boolean",
 						"Checks if two quaternions are equal."
 					]
 				]
@@ -196,11 +349,11 @@
 			"doc": {
 				"meta": [
 					[
-						"[Quat],[Quat]",
+						"[Quat],[Quat],[Quat]",
 						"Returns the <a target=\"_blank\" href=\"https://en.wikipedia.org/wiki/Quaternion#Hamilton_product\">Hamilton product</a> of two quaternions."
 					],
 					[
-						"[Quat],[Vec3]",
+						"[Quat],[Vec3],[Vec3]",
 						"Returns the rotation by a quaternion on a vector."
 					]
 				]

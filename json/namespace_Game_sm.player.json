@@ -14,10 +14,31 @@
 				"text": [
 					"Returns a table of all [Player, players] that are currently in the game."
 				],
+				"params": [
+					[
+						"boolean",
+						"getInactive?",
+						"Include getting inactive players. Defaults to false. (Optional)"
+					]
+				],
 				"return": [
 					[
 						"table",
 						"Table of all players in the game. {[Player], ..}"
+					]
+				]
+			}
+		},
+		{
+			"name": "getHostPlayer",
+			"doc": {
+				"text": [
+					"Returns the player of the game host."
+				],
+				"return": [
+					[
+						"[Player]",
+						"The host player."
 					]
 				]
 			}

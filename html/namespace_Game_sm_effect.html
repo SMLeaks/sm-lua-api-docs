@@ -17,6 +17,7 @@
   <h3>Classes</h3>
   <ul>
    <li><a href="class_Game_CharacterClass.html" class="code">CharacterClass</a></li>
+   <li><a href="class_Game_ClientScriptableObjectClass.html" class="code">ClientScriptableObjectClass</a></li>
    <li><a href="class_Game_GameClass.html" class="code">GameClass</a></li>
    <li><a href="class_Game_HarvestableClass.html" class="code">HarvestableClass</a></li>
    <li><a href="class_Game_PlayerClass.html" class="code">PlayerClass</a></li>
@@ -34,14 +35,18 @@
    <li><a href="userdata_Game_Body.html" class="code">Body</a></li>
    <li><a href="userdata_Game_BuilderGuide.html" class="code">BuilderGuide</a></li>
    <li><a href="userdata_Game_Character.html" class="code">Character</a></li>
+   <li><a href="userdata_Game_ClientScriptableObject.html" class="code">ClientScriptableObject</a></li>
    <li><a href="userdata_Game_Color.html" class="code">Color</a></li>
    <li><a href="userdata_Game_Container.html" class="code">Container</a></li>
    <li><a href="userdata_Game_CullSphereGroup.html" class="code">CullSphereGroup</a></li>
    <li><a href="userdata_Game_Effect.html" class="code">Effect</a></li>
+   <li><a href="userdata_Game_Garage.html" class="code">Garage</a></li>
    <li><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></li>
    <li><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></li>
    <li><a href="userdata_Game_Interactable.html" class="code">Interactable</a></li>
    <li><a href="userdata_Game_Joint.html" class="code">Joint</a></li>
+   <li><a href="userdata_Game_JsonGui.html" class="code">JsonGui</a></li>
+   <li><a href="userdata_Game_JsonWidget.html" class="code">JsonWidget</a></li>
    <li><a href="userdata_Game_Lift.html" class="code">Lift</a></li>
    <li><a href="userdata_Game_LoadCellHandle.html" class="code">LoadCellHandle</a></li>
    <li><a href="userdata_Game_Network.html" class="code">Network</a></li>
@@ -73,6 +78,7 @@
    <li><a href="namespace_Game_sm_cell.html" class="code">sm.cell</a></li>
    <li><a href="namespace_Game_sm_challenge.html" class="code">sm.challenge</a></li>
    <li><a href="namespace_Game_sm_character.html" class="code">sm.character</a></li>
+   <li><a href="namespace_Game_sm_clientScriptableObject.html" class="code">sm.clientScriptableObject</a></li>
    <li><a href="namespace_Game_sm_color.html" class="code">sm.color</a></li>
    <li><a href="namespace_Game_sm_construction.html" class="code">sm.construction</a></li>
    <li><a href="namespace_Game_sm_container.html" class="code">sm.container</a></li>
@@ -80,9 +86,11 @@
    <li><a href="namespace_Game_sm_cullSphereGroup.html" class="code">sm.cullSphereGroup</a></li>
    <li><a href="namespace_Game_sm_debris.html" class="code">sm.debris</a></li>
    <li><a href="namespace_Game_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
+   <li><a href="namespace_Game_sm_debugGui.html" class="code">sm.debugGui</a></li>
    <li><a href="namespace_Game_sm_effect.html" class="code">sm.effect</a></li>
    <li><a href="namespace_Game_sm_event.html" class="code">sm.event</a></li>
    <li><a href="namespace_Game_sm_game.html" class="code">sm.game</a></li>
+   <li><a href="namespace_Game_sm_garage.html" class="code">sm.garage</a></li>
    <li><a href="namespace_Game_sm_gui.html" class="code">sm.gui</a></li>
    <li><a href="namespace_Game_sm_gui_widget.html" class="code">sm.gui.widget</a></li>
    <li><a href="namespace_Game_sm_harvestable.html" class="code">sm.harvestable</a></li>
@@ -90,15 +98,19 @@
    <li><a href="namespace_Game_sm_item.html" class="code">sm.item</a></li>
    <li><a href="namespace_Game_sm_joint.html" class="code">sm.joint</a></li>
    <li><a href="namespace_Game_sm_json.html" class="code">sm.json</a></li>
+   <li><a href="namespace_Game_sm_jsonGui.html" class="code">sm.jsonGui</a></li>
+   <li><a href="namespace_Game_sm_lift.html" class="code">sm.lift</a></li>
    <li><a href="namespace_Game_sm_localPlayer.html" class="code">sm.localPlayer</a></li>
    <li><a href="namespace_Game_sm_log.html" class="code">sm.log</a></li>
    <li><a href="namespace_Game_sm_melee.html" class="code">sm.melee</a></li>
    <li><a href="namespace_Game_sm_menuCreation.html" class="code">sm.menuCreation</a></li>
+   <li><a href="namespace_Game_sm_message.html" class="code">sm.message</a></li>
    <li><a href="namespace_Game_sm_noise.html" class="code">sm.noise</a></li>
    <li><a href="namespace_Game_sm_particle.html" class="code">sm.particle</a></li>
    <li><a href="namespace_Game_sm_pathNode.html" class="code">sm.pathNode</a></li>
    <li><a href="namespace_Game_sm_pathfinder.html" class="code">sm.pathfinder</a></li>
    <li><a href="namespace_Game_sm_physics.html" class="code">sm.physics</a></li>
+   <li><a href="namespace_Game_sm_pipeGraph.html" class="code">sm.pipeGraph</a></li>
    <li><a href="namespace_Game_sm_player.html" class="code">sm.player</a></li>
    <li><a href="namespace_Game_sm_portal.html" class="code">sm.portal</a></li>
    <li><a href="namespace_Game_sm_projectile.html" class="code">sm.projectile</a></li>
@@ -122,8 +134,12 @@
   <h3>Object Types 'userdata'</h3>
   <ul>
    <li><a href="userdata_Terrain_Color.html" class="code">Color</a></li>
+   <li><a href="userdata_Terrain_Container.html" class="code">Container</a></li>
    <li><a href="userdata_Terrain_Harvestable.html" class="code">Harvestable</a></li>
+   <li><a href="userdata_Terrain_Interactable.html" class="code">Interactable</a></li>
+   <li><a href="userdata_Terrain_Portal.html" class="code">Portal</a></li>
    <li><a href="userdata_Terrain_Quat.html" class="code">Quat</a></li>
+   <li><a href="userdata_Terrain_ScriptableObject.html" class="code">ScriptableObject</a></li>
    <li><a href="userdata_Terrain_Uuid.html" class="code">Uuid</a></li>
    <li><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></li>
    <li><a href="userdata_Terrain_World.html" class="code">World</a></li>
@@ -133,18 +149,24 @@
    <li><a href="namespace_Terrain_GLOBAL.html" class="code">GLOBAL</a></li>
    <li><a href="namespace_Terrain_sm.html" class="code">sm</a></li>
    <li><a href="namespace_Terrain_sm_color.html" class="code">sm.color</a></li>
+   <li><a href="namespace_Terrain_sm_container.html" class="code">sm.container</a></li>
    <li><a href="namespace_Terrain_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
-   <li><a href="namespace_Terrain_sm_harvestable.html" class="code">sm.harvestable</a></li>
+   <li><a href="namespace_Terrain_sm_debugGui.html" class="code">sm.debugGui</a></li>
+   <li><a href="namespace_Terrain_sm_interactable.html" class="code">sm.interactable</a></li>
    <li><a href="namespace_Terrain_sm_json.html" class="code">sm.json</a></li>
    <li><a href="namespace_Terrain_sm_log.html" class="code">sm.log</a></li>
    <li><a href="namespace_Terrain_sm_noise.html" class="code">sm.noise</a></li>
    <li><a href="namespace_Terrain_sm_quat.html" class="code">sm.quat</a></li>
+   <li><a href="namespace_Terrain_sm_scriptableObject.html" class="code">sm.scriptableObject</a></li>
    <li><a href="namespace_Terrain_sm_terrainData.html" class="code">sm.terrainData</a></li>
    <li><a href="namespace_Terrain_sm_terrainGeneration.html" class="code">sm.terrainGeneration</a></li>
+   <li><a href="namespace_Terrain_sm_terrainHarvestable.html" class="code">sm.terrainHarvestable</a></li>
    <li><a href="namespace_Terrain_sm_terrainTile.html" class="code">sm.terrainTile</a></li>
+   <li><a href="namespace_Terrain_sm_tunnelGenerator.html" class="code">sm.tunnelGenerator</a></li>
    <li><a href="namespace_Terrain_sm_util.html" class="code">sm.util</a></li>
    <li><a href="namespace_Terrain_sm_uuid.html" class="code">sm.uuid</a></li>
    <li><a href="namespace_Terrain_sm_vec3.html" class="code">sm.vec3</a></li>
+   <li><a href="namespace_Terrain_sm_voxelTerrainCell.html" class="code">sm.voxelTerrainCell</a></li>
   </ul>
  </div>
  <div id="content">
@@ -153,7 +175,12 @@
   <p>The <strong>effect</strong> api handles the creation and playing of audio and visual effects.</p>
   <p>Effects can consist of multiple components each being of separate types and with unique offsets, rotations and delays.</p>
   <p>For more information on how to setup effects please take a look in the Effects/Database/EffectSets folder in the game data.</p>
-  <h4>Functions:</h4  <ul>   <li><a href="#createEffect" class="code">createEffect</a></li>   <li><a href="#createEffect" class="code">createEffect</a></li>   <li><a href="#createEffect" class="code">createEffect</a></li>   <li><a href="#createEffect" class="code">createEffect</a></li>   <li><a href="#createEffect2D" class="code">createEffect2D</a></li>   <li><a href="#estimateSize" class="code">estimateSize</a></li>   <li><a href="#playEffect" class="code">playEffect</a></li>   <li><a href="#playHostedEffect" class="code">playHostedEffect</a></li>   <li><a href="#playHostedEffect" class="code">playHostedEffect</a></li>   <li><a href="#playHostedEffect" class="code">playHostedEffect</a></li>  </ul>  <hr>
+  <h4>Constants:</h4>  <ul>   <li><a href="#axis" class="code">axis</a></li>  </ul>  <h4>Functions:</h4  <ul>   <li><a href="#createEffect" class="code">createEffect</a></li>   <li><a href="#createEffect" class="code">createEffect</a></li>   <li><a href="#createEffect" class="code">createEffect</a></li>   <li><a href="#createEffect" class="code">createEffect</a></li>   <li><a href="#createEffect" class="code">createEffect</a></li>   <li><a href="#createEffect2D" class="code">createEffect2D</a></li>   <li><a href="#createEffectFirstPerson" class="code">createEffectFirstPerson</a></li>   <li><a href="#createEffectSky" class="code">createEffectSky</a></li>   <li><a href="#estimateSize" class="code">estimateSize</a></li>   <li><a href="#playEffect" class="code">playEffect</a></li>   <li><a href="#playHostedEffect" class="code">playHostedEffect</a></li>   <li><a href="#playHostedEffect" class="code">playHostedEffect</a></li>   <li><a href="#playHostedEffect" class="code">playHostedEffect</a></li>   <li><a href="#playHostedEffect" class="code">playHostedEffect</a></li>  </ul>  <hr>
+  <h2 class="code"><a id="axis"></a>sm.effect.axis <i>table</i></h2>
+  <p>Rotation axis removal types for hosted effects. Not combinable</p>
+  <table>
+   <tr>    <td>xaxis</td>   </tr>   <tr>    <td>yaxis</td>   </tr>   <tr>    <td>zaxis</td>   </tr>   <tr>    <td>all</td>   </tr>   <tr>    <td>none</td>   </tr>  </table>
+  <hr>
   <h2 class="code"><a id="createEffect"></a>sm.effect.createEffect(name)</h2>
   <p>Client only</p>
   <p>Creates an effect.</p>
@@ -168,7 +195,7 @@
    <tr><td class="code"><a href="userdata_Game_Effect.html" class="code">Effect</a></td><td>The created effect.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="createEffect"></a>sm.effect.createEffect(name, interactable, name=nil)</h2>
+  <h2 class="code"><a id="createEffect"></a>sm.effect.createEffect(name, interactable, boneName?, axis?)</h2>
   <p>Client only</p>
   <p>Creates an effect.</p>
   <p>If you provide a host interactable to the effect then it will fetch position, velocity and orientation data from the interactable instead of relying on this information being fed to it.</p>
@@ -178,7 +205,8 @@
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code">string</td><td class="code">name</td><td>The name.</td></tr>
    <tr><td class="code"><a href="userdata_Game_Interactable.html" class="code">Interactable</a></td><td class="code">interactable</td><td>The interactable the effect is attached to.</td></tr>
-   <tr><td class="code">string</td><td class="code">name=nil</td><td>The bone name. (Defaults to not attached to a bone) (Optional)</td></tr>
+   <tr><td class="code">string</td><td class="code">boneName?</td><td>Bone name to attach effect to. (Defaults to not attached to a bone) (Optional)</td></tr>
+   <tr><td class="code">integer</td><td class="code">axis?</td><td>The axis of which the effect will ignore the hosts rotation around. (Defaults to <a href="namespace_Game_sm_effect.html#axis" class="code">sm.effect.axis.none</a>) (Optional)</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -186,7 +214,26 @@
    <tr><td class="code"><a href="userdata_Game_Effect.html" class="code">Effect</a></td><td>The created effect.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="createEffect"></a>sm.effect.createEffect(name, harvestable)</h2>
+  <h2 class="code"><a id="createEffect"></a>sm.effect.createEffect(name, shape, boneName?, axis?)</h2>
+  <p>Client only</p>
+  <p>Creates an effect.</p>
+  <p>If you provide a host shape to the effect then it will fetch position, velocity and orientation data from the shape instead of relying on this information being fed to it.</p>
+  <p>This results in far more accurate positioning of effects that are supposed to stay attached to an object.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">string</td><td class="code">name</td><td>The name.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">shape</td><td>The shape the effect is attached to.</td></tr>
+   <tr><td class="code">string</td><td class="code">boneName?</td><td>Bone name to attach effect to. (Defaults to not attached to a bone) (Optional)</td></tr>
+   <tr><td class="code">integer</td><td class="code">axis?</td><td>The axis of which the effect will ignore the hosts rotation around. (Defaults to <a href="namespace_Game_sm_effect.html#axis" class="code">sm.effect.axis.none</a>) (Optional)</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Effect.html" class="code">Effect</a></td><td>The created effect.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="createEffect"></a>sm.effect.createEffect(name, harvestable, axis?)</h2>
   <p>Client only</p>
   <p>Creates an effect.</p>
   <p>If you provide a host harvestable to the effect then it will fetch position, velocity and orientation data from the harvestable instead of relying on this information being fed to it.</p>
@@ -196,6 +243,7 @@
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code">string</td><td class="code">name</td><td>The name.</td></tr>
    <tr><td class="code"><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></td><td class="code">harvestable</td><td>The harvestable the effect is attached to.</td></tr>
+   <tr><td class="code">integer</td><td class="code">axis?</td><td>The axis of which the effect will ignore the hosts rotation around. (Defaults to <a href="namespace_Game_sm_effect.html#axis" class="code">sm.effect.axis.none</a>) (Optional)</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -203,7 +251,7 @@
    <tr><td class="code"><a href="userdata_Game_Effect.html" class="code">Effect</a></td><td>The created effect.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="createEffect"></a>sm.effect.createEffect(name, character, name=nil)</h2>
+  <h2 class="code"><a id="createEffect"></a>sm.effect.createEffect(name, character, boneName?, axis?)</h2>
   <p>Client only</p>
   <p>Creates an effect.</p>
   <p>If you provide a host character to the effect then it will fetch position, velocity and orientation data from the character instead of relying on this information being fed to it.</p>
@@ -213,7 +261,8 @@
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code">string</td><td class="code">name</td><td>The name.</td></tr>
    <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The character the effect is attached to.</td></tr>
-   <tr><td class="code">string</td><td class="code">name=nil</td><td>The bone name. (Defaults to not attached to a bone) (Optional)</td></tr>
+   <tr><td class="code">string</td><td class="code">boneName?</td><td>Bone name to attach effect to. (Defaults to not attached to a bone) (Optional)</td></tr>
+   <tr><td class="code">integer</td><td class="code">axis?</td><td>The axis of which the effect will ignore the hosts rotation around. (Defaults to <a href="namespace_Game_sm_effect.html#axis" class="code">sm.effect.axis.none</a>) (Optional)</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
@@ -224,6 +273,34 @@
   <h2 class="code"><a id="createEffect2D"></a>sm.effect.createEffect2D(name)</h2>
   <p>Client only</p>
   <p>Creates an 2d effect.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">string</td><td class="code">name</td><td>The name of the effect.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Effect.html" class="code">Effect</a></td><td>The created effect.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="createEffectFirstPerson"></a>sm.effect.createEffectFirstPerson(name)</h2>
+  <p>Client only</p>
+  <p>Creates an effect that is only visible in the first person scene.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">string</td><td class="code">name</td><td>The name of the effect.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Effect.html" class="code">Effect</a></td><td>The created effect.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="createEffectSky"></a>sm.effect.createEffectSky(name)</h2>
+  <p>Client only</p>
+  <p>Creates an Sky effect.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
@@ -250,7 +327,7 @@
    <tr><td class="code">number</td><td>The Range</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="playEffect"></a>sm.effect.playEffect(name, position, velocity=nil, rotation=nil, scale=nil, parameters=nil)</h2>
+  <h2 class="code"><a id="playEffect"></a>sm.effect.playEffect(name, position?, velocity?, rotation?, scale?, parameters?, startTime?, world?)</h2>
   <p>Plays an effect. If this function is called on the server it will play the effect on all clients.</p>
   <div class="note">
    <h4>Note:</h4>
@@ -260,14 +337,16 @@
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code">string</td><td class="code">name</td><td>The name.</td></tr>
-   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The position.</td></tr>
-   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">velocity=nil</td><td>The velocity. (Defaults to no velocity)</td></tr>
-   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td class="code">rotation=nil</td><td>The rotation. (Defaults to no rotation)</td></tr>
-   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">scale=nil</td><td>The scale. (Defaults to no scale, only applied to renderables)</td></tr>
-   <tr><td class="code">table</td><td class="code">parameters=nil</td><td>The table containing the parameters for the effect.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">position?</td><td>The position. (Defaults to [0,0,0])</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">velocity?</td><td>The velocity. (Defaults to no velocity)</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td class="code">rotation?</td><td>The rotation. (Defaults to no rotation)</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">scale?</td><td>The scale. (Defaults to no scale, only applied to renderables)</td></tr>
+   <tr><td class="code">table</td><td class="code">parameters?</td><td>The table containing the parameters for the effect. (Defaults to no parameters)</td></tr>
+   <tr><td class="code">number</td><td class="code">startTime?</td><td>The initial time progression of the effect. Can be used to fast forward some effect parts. Can be used to delay effect part activation if negative.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_World.html" class="code">World</a></td><td class="code">world?</td><td>The world to play the effect in. (Defaults to <a href="userdata_Game_World.html" class="code">World</a> from script context)</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="playHostedEffect"></a>sm.effect.playHostedEffect(name, interactable, boneName=nil, parameters=nil)</h2>
+  <h2 class="code"><a id="playHostedEffect"></a>sm.effect.playHostedEffect(name, interactable, boneName?, parameters?, axis?, startTime?, offsetPosition?, offsetRotation?, scale?)</h2>
   <p>Client only</p>
   <p>Plays an effect. It will fetch position, velocity and orientation data from the host interactable.</p>
   <div class="note">
@@ -279,11 +358,37 @@
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code">string</td><td class="code">name</td><td>The effect name.</td></tr>
    <tr><td class="code"><a href="userdata_Game_Interactable.html" class="code">Interactable</a></td><td class="code">interactable</td><td>The interactable the effect is attached to.</td></tr>
-   <tr><td class="code">string</td><td class="code">boneName=nil</td><td>The bone name. (Optional)</td></tr>
-   <tr><td class="code">table</td><td class="code">parameters=nil</td><td>The table containing the parameters for the effect. (Optional)</td></tr>
+   <tr><td class="code">string</td><td class="code">boneName?</td><td>The bone name. (Optional)</td></tr>
+   <tr><td class="code">table</td><td class="code">parameters?</td><td>The table containing the parameters for the effect. (Optional)</td></tr>
+   <tr><td class="code">integer</td><td class="code">axis?</td><td>The axis of which the effect will ignore the hosts rotation around. (Defaults to <a href="namespace_Game_sm_effect.html#axis" class="code">sm.effect.axis.none</a>) (Optional)</td></tr>
+   <tr><td class="code">number</td><td class="code">startTime?</td><td>The initial time progression of the effect. Can be used to fast forward some effect parts. Can be used to delay effect part activation if negative.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">offsetPosition?</td><td>The host object relative offset position. (Defaults to sm.vec3.zero())</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td class="code">offsetRotation?</td><td>The host object relative offset rotation. (Defaults to sm.quat.identity())</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">scale?</td><td>The scale, only applied to renderables. (Defaults to sm.vec3.one())</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="playHostedEffect"></a>sm.effect.playHostedEffect(name, harvestable, parameters=nil)</h2>
+  <h2 class="code"><a id="playHostedEffect"></a>sm.effect.playHostedEffect(name, shape, boneName?, parameters?, axis?, startTime?, offsetPosition?, offsetRotation?, scale?)</h2>
+  <p>Client only</p>
+  <p>Plays an effect. It will fetch position, velocity and orientation data from the host shape.</p>
+  <div class="note">
+   <h4>Note:</h4>
+   <p>If you start a looping effect using this function you will not be able to stop it.<br>Please use <a href="namespace_Game_sm_effect.html#createEffect" class="code">createEffect</a> for looping effects</p>
+  </div>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">string</td><td class="code">name</td><td>The effect name.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Shape.html" class="code">Shape</a></td><td class="code">shape</td><td>The shape the effect is attached to.</td></tr>
+   <tr><td class="code">string</td><td class="code">boneName?</td><td>The bone name. (Optional)</td></tr>
+   <tr><td class="code">table</td><td class="code">parameters?</td><td>The table containing the parameters for the effect. (Optional)</td></tr>
+   <tr><td class="code">integer</td><td class="code">axis?</td><td>The axis of which the effect will ignore the hosts rotation around. (Defaults to <a href="namespace_Game_sm_effect.html#axis" class="code">sm.effect.axis.none</a>) (Optional)</td></tr>
+   <tr><td class="code">number</td><td class="code">startTime?</td><td>The initial time progression of the effect. Can be used to fast forward some effect parts. Can be used to delay effect part activation if negative.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">offsetPosition?</td><td>The host object relative offset position. (Defaults to sm.vec3.zero())</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td class="code">offsetRotation?</td><td>The host object relative offset rotation. (Defaults to sm.quat.identity())</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">scale?</td><td>The scale, only applied to renderables. (Defaults to sm.vec3.one())</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="playHostedEffect"></a>sm.effect.playHostedEffect(name, harvestable, boneName?, parameters?, axis?, startTime?, offsetPosition?, offsetRotation?, scale?)</h2>
   <p>Client only</p>
   <p>Plays an effect. It will fetch position, velocity and orientation data from the host harvestable.</p>
   <div class="note">
@@ -295,10 +400,16 @@
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code">string</td><td class="code">name</td><td>The effect name.</td></tr>
    <tr><td class="code"><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></td><td class="code">harvestable</td><td>The harvestable the effect is attached to.</td></tr>
-   <tr><td class="code">table</td><td class="code">parameters=nil</td><td>The table containing the parameters for the effect. (Optional)</td></tr>
+   <tr><td class="code">string</td><td class="code">boneName?</td><td>The bone name. (Optional)</td></tr>
+   <tr><td class="code">table</td><td class="code">parameters?</td><td>The table containing the parameters for the effect. (Optional)</td></tr>
+   <tr><td class="code">integer</td><td class="code">axis?</td><td>The axis of which the effect will ignore the hosts rotation around. (Defaults to <a href="namespace_Game_sm_effect.html#axis" class="code">sm.effect.axis.none</a>) (Optional)</td></tr>
+   <tr><td class="code">number</td><td class="code">startTime?</td><td>The initial time progression of the effect. Can be used to fast forward some effect parts. Can be used to delay effect part activation if negative.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">offsetPosition?</td><td>The host object relative offset position. (Defaults to sm.vec3.zero())</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td class="code">offsetRotation?</td><td>The host object relative offset rotation. (Defaults to sm.quat.identity())</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">scale?</td><td>The scale, only applied to renderables. (Defaults to sm.vec3.one())</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="playHostedEffect"></a>sm.effect.playHostedEffect(name, character, boneName=nil, parameters=nil)</h2>
+  <h2 class="code"><a id="playHostedEffect"></a>sm.effect.playHostedEffect(name, character, boneName?, parameters?, axis?, startTime?, offsetPosition?, offsetRotation?, scale?)</h2>
   <p>Client only</p>
   <p>Plays an effect. It will fetch position, velocity and orientation data from the host character.</p>
   <div class="note">
@@ -309,9 +420,14 @@
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code">string</td><td class="code">name</td><td>The effect name.</td></tr>
-   <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The charcater the effect is attached to.</td></tr>
-   <tr><td class="code">string</td><td class="code">boneName=nil</td><td>The bone name. (Optional)</td></tr>
-   <tr><td class="code">table</td><td class="code">parameters=nil</td><td>The table containing the parameters for the effect. (Optional)</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Character.html" class="code">Character</a></td><td class="code">character</td><td>The character the effect is attached to.</td></tr>
+   <tr><td class="code">string</td><td class="code">boneName?</td><td>The bone name. (Optional)</td></tr>
+   <tr><td class="code">table</td><td class="code">parameters?</td><td>The table containing the parameters for the effect. (Optional)</td></tr>
+   <tr><td class="code">integer</td><td class="code">axis?</td><td>The axis of which the effect will ignore the hosts rotation around. (Defaults to <a href="namespace_Game_sm_effect.html#axis" class="code">sm.effect.axis.none</a>) (Optional)</td></tr>
+   <tr><td class="code">number</td><td class="code">startTime?</td><td>The initial time progression of the effect. Can be used to fast forward some effect parts. Can be used to delay effect part activation if negative.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">offsetPosition?</td><td>The host object relative offset position. (Defaults to sm.vec3.zero())</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Quat.html" class="code">Quat</a></td><td class="code">offsetRotation?</td><td>The host object relative offset rotation. (Defaults to sm.quat.identity())</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Vec3.html" class="code">Vec3</a></td><td class="code">scale?</td><td>The scale, only applied to renderables. (Defaults to sm.vec3.one())</td></tr>
   </table>
  </div>
 </body>

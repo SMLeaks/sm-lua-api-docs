@@ -60,69 +60,6 @@
 			}
 		},
 		{
-			"name": "getAt",
-			"doc": {
-				"text": [
-					"Returns the quaternions at vector."
-				],
-				"params": [
-					[
-						"[Quat]",
-						"quaternion",
-						"The quaternion."
-					]
-				],
-				"return": [
-					[
-						"[Vec3]",
-						"The at vector.\t"
-					]
-				]
-			}
-		},
-		{
-			"name": "getRight",
-			"doc": {
-				"text": [
-					"Returns the quaternions right vector."
-				],
-				"params": [
-					[
-						"[Quat]",
-						"quaternion",
-						"The quaternion."
-					]
-				],
-				"return": [
-					[
-						"[Vec3]",
-						"The right vector."
-					]
-				]
-			}
-		},
-		{
-			"name": "getUp",
-			"doc": {
-				"text": [
-					"Returns the quaternions up vector."
-				],
-				"params": [
-					[
-						"[Quat]",
-						"quaternion",
-						"The quaternion."
-					]
-				],
-				"return": [
-					[
-						"[Vec3]",
-						"The up vector."
-					]
-				]
-			}
-		},
-		{
 			"name": "identity",
 			"doc": {
 				"text": [
@@ -132,27 +69,6 @@
 					[
 						"[Quat]",
 						"The created quaternion."
-					]
-				]
-			}
-		},
-		{
-			"name": "inverse",
-			"doc": {
-				"text": [
-					"Inverts the quaternion."
-				],
-				"params": [
-					[
-						"[Quat]",
-						"quaternion",
-						"The quaternion."
-					]
-				],
-				"return": [
-					[
-						"[Quat]",
-						"The inverted quaternion."
 					]
 				]
 			}
@@ -179,6 +95,27 @@
 					[
 						"[Quat]",
 						"The quaternion."
+					]
+				]
+			}
+		},
+		{
+			"name": "new",
+			"doc": {
+				"text": [
+					"Creates a new quaternion."
+				],
+				"params": [
+					[
+						"[Quat]",
+						"quaternion",
+						"The original quaternion."
+					]
+				],
+				"return": [
+					[
+						"[Quat]",
+						"The created quaternion."
 					]
 				]
 			}
@@ -220,22 +157,127 @@
 			}
 		},
 		{
-			"name": "round90",
+			"name": "rotNegX90",
 			"doc": {
 				"text": [
-					"Rounds the quaternion rotation into 90 degree steps"
-				],
-				"params": [
-					[
-						"[Quat]",
-						"quaternion",
-						"The quaternion."
-					]
+					"Returns the rotation constant for rotating -90 degrees around the X-axis."
 				],
 				"return": [
 					[
 						"[Quat]",
-						"The rounded quaternion."
+						"The rotation quaternion."
+					]
+				]
+			}
+		},
+		{
+			"name": "rotNegY90",
+			"doc": {
+				"text": [
+					"Returns the rotation constant for rotating -90 degrees around the Y-axis."
+				],
+				"return": [
+					[
+						"[Quat]",
+						"The rotation quaternion."
+					]
+				]
+			}
+		},
+		{
+			"name": "rotNegZ90",
+			"doc": {
+				"text": [
+					"Returns the rotation constant for rotating -90 degrees around the Z-axis."
+				],
+				"return": [
+					[
+						"[Quat]",
+						"The rotation quaternion."
+					]
+				]
+			}
+		},
+		{
+			"name": "rotX180",
+			"doc": {
+				"text": [
+					"Returns the rotation constant for rotating 180 degrees around the X-axis."
+				],
+				"return": [
+					[
+						"[Quat]",
+						"The rotation quaternion."
+					]
+				]
+			}
+		},
+		{
+			"name": "rotX90",
+			"doc": {
+				"text": [
+					"Returns the rotation constant for rotating 90 degrees around the X-axis."
+				],
+				"return": [
+					[
+						"[Quat]",
+						"The rotation quaternion."
+					]
+				]
+			}
+		},
+		{
+			"name": "rotY180",
+			"doc": {
+				"text": [
+					"Returns the rotation constant for rotating 180 degrees around the Y-axis."
+				],
+				"return": [
+					[
+						"[Quat]",
+						"The rotation quaternion."
+					]
+				]
+			}
+		},
+		{
+			"name": "rotY90",
+			"doc": {
+				"text": [
+					"Returns the rotation constant for rotating 90 degrees around the Y-axis."
+				],
+				"return": [
+					[
+						"[Quat]",
+						"The rotation quaternion."
+					]
+				]
+			}
+		},
+		{
+			"name": "rotZ180",
+			"doc": {
+				"text": [
+					"Returns the rotation constant for rotating 180 degrees around the Z-axis."
+				],
+				"return": [
+					[
+						"[Quat]",
+						"The rotation quaternion."
+					]
+				]
+			}
+		},
+		{
+			"name": "rotZ90",
+			"doc": {
+				"text": [
+					"Returns the rotation constant for rotating 90 degrees around the Z-axis."
+				],
+				"return": [
+					[
+						"[Quat]",
+						"The rotation quaternion."
 					]
 				]
 			}

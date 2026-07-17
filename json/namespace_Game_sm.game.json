@@ -8,6 +8,22 @@
 	"constants": [],
 	"functions": [
 		{
+			"name": "banPlayer",
+			"doc": {
+				"text": [
+					"Ban a player from the server."
+				],
+				"params": [
+					[
+						"[Player]",
+						"player",
+						"The player to be banned."
+					]
+				],
+				"server_only": true
+			}
+		},
+		{
 			"name": "bindChatCommand",
 			"doc": {
 				"text": [
@@ -36,7 +52,7 @@
 					[
 						"table",
 						"params",
-						"An array of parameters the callback function expects in the form of { { type, name, optional }, ... }. The first is the <strong>type</strong> name of the parameter as a string. Valid types are \"bool\", \"int\", \"number\" and \"string\". The second is the <strong>name</strong> in the help text. Defaults to automatic naming (\"p1\", \"p2\", \"p3\", ...). The third is a bool value where true means that this parameter is <strong>optional</strong>. Defaults to false."
+						"An array of parameters the callback function expects in the form of { { type, name (, optional, autocomplete ) }, ... }. The first is the <strong>type</strong> name of the parameter as a string. Valid types are \"bool\", \"int\", \"number\" and \"string\". The second is the <strong>name</strong> in the help text. Defaults to automatic naming (\"p1\", \"p2\", \"p3\", ...). The third is a bool value where true means that this parameter is <strong>optional</strong> (Optional, defaults to false). The fourth is a list of values that can be auto-completed to by pressing tab (Optional)."
 					],
 					[
 						"string",
@@ -48,6 +64,22 @@
 						"help",
 						"Help text."
 					]
+				]
+			}
+		},
+		{
+			"name": "exitToMenu",
+			"doc": {
+				"text": [
+					"Only for testing!"
+				]
+			}
+		},
+		{
+			"name": "exitToMenuWithEndCredits",
+			"doc": {
+				"text": [
+					"Exits to the main menu and requests the end-game credits sequence to play once there."
 				]
 			}
 		},
@@ -164,6 +196,20 @@
 			}
 		},
 		{
+			"name": "getRecipesEnabled",
+			"doc": {
+				"text": [
+					"Returns true if recipes is enabled and false if recipes are is disabled."
+				],
+				"return": [
+					[
+						"boolean",
+						"The enable state."
+					]
+				]
+			}
+		},
+		{
 			"name": "getServerTick",
 			"doc": {
 				"text": [
@@ -173,6 +219,69 @@
 					[
 						"integer",
 						"The tick."
+					]
+				]
+			}
+		},
+		{
+			"name": "getSettingBoolean",
+			"doc": {
+				"text": [
+					"Get the boolean value of a named setting."
+				],
+				"params": [
+					[
+						"string",
+						"name",
+						"The name of the setting"
+					]
+				],
+				"return": [
+					[
+						"boolean",
+						"value\tThe value of the setting."
+					]
+				]
+			}
+		},
+		{
+			"name": "getSettingString",
+			"doc": {
+				"text": [
+					"Get the string value of a named setting."
+				],
+				"params": [
+					[
+						"string",
+						"name",
+						"The name of the setting"
+					]
+				],
+				"return": [
+					[
+						"string",
+						"value\tThe value of the setting."
+					]
+				]
+			}
+		},
+		{
+			"name": "getSettingValue",
+			"doc": {
+				"text": [
+					"Get the number value of a named setting."
+				],
+				"params": [
+					[
+						"string",
+						"name",
+						"The name of the setting"
+					]
+				],
+				"return": [
+					[
+						"number",
+						"value\tThe value of the setting."
 					]
 				]
 			}
@@ -189,6 +298,91 @@
 						"The fraction of the day cycle."
 					]
 				]
+			}
+		},
+		{
+			"name": "kickPlayer",
+			"doc": {
+				"text": [
+					"Kick a player from the server."
+				],
+				"params": [
+					[
+						"[Player]",
+						"player",
+						"The player to be kicked."
+					]
+				],
+				"server_only": true
+			}
+		},
+		{
+			"name": "loadWatchedTutorials",
+			"doc": {
+				"text": [
+					"Loads the users watched tutorials and returns it as a table."
+				],
+				"return": [
+					[
+						"table",
+						"Users watched tutorials table."
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "pauseSaving",
+			"doc": {
+				"text": [
+					"Pauses saving for the specified number of ticks. Server only.",
+					"If already paused, extends to the longer of current remaining and the requested ticks."
+				],
+				"params": [
+					[
+						"string",
+						"waitName",
+						"The name identifying this pause request."
+					],
+					[
+						"integer",
+						"ticks",
+						"The number of ticks to pause saving for."
+					]
+				],
+				"server_only": true
+			}
+		},
+		{
+			"name": "resumeSaving",
+			"doc": {
+				"text": [
+					"Resumes saving by removing a named pause request. Server only."
+				],
+				"params": [
+					[
+						"string",
+						"waitName",
+						"The name identifying the pause request to remove."
+					]
+				],
+				"server_only": true
+			}
+		},
+		{
+			"name": "saveWatchedTutorials",
+			"doc": {
+				"text": [
+					"Saves the user's watched tutorials."
+				],
+				"params": [
+					[
+						"table",
+						"watchedTutorials",
+						"The table of watched tutorials."
+					]
+				],
+				"client_only": true
 			}
 		},
 		{
@@ -233,6 +427,22 @@
 					[
 						"boolean",
 						"enableFuelConsumption",
+						"The enable state."
+					]
+				],
+				"server_only": true
+			}
+		},
+		{
+			"name": "setEnableRecipes",
+			"doc": {
+				"text": [
+					"Enables and disables recipes. If true, player's will need to unlock recipes before they become available for crafting."
+				],
+				"params": [
+					[
+						"boolean",
+						"enableRecipes",
 						"The enable state."
 					]
 				],

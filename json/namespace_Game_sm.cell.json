@@ -46,6 +46,48 @@
 			}
 		},
 		{
+			"name": "getHarvestablesByUuid",
+			"doc": {
+				"text": [
+					"Returns a table of [sm.harvestable, harvestables] of a given size for a cell coordinate and Uuid.",
+					"Sizes are:",
+					"0: Tiny - plants and crops.",
+					"1: Small - small trees and rocks.",
+					"2: Medium - medium trees, visible at a long distance.",
+					"3: Large - large trees, visible at a very long distance."
+				],
+				"params": [
+					[
+						"integer",
+						"x",
+						"The X-coordinate."
+					],
+					[
+						"integer",
+						"y",
+						"The Y-coordinate."
+					],
+					[
+						"[Uuid]",
+						"uuid",
+						"The uuid of the harvestable(s)"
+					],
+					[
+						"integer",
+						"size",
+						"Size of harvestable (defaults to any size)."
+					]
+				],
+				"return": [
+					[
+						"table",
+						"A table {[sm.harvestable, harvestable], ...} of harvestables."
+					]
+				],
+				"server_only": true
+			}
+		},
+		{
 			"name": "getInteractablesByAnyUuid",
 			"doc": {
 				"text": [
@@ -101,9 +143,9 @@
 						"The Y-coordinate."
 					],
 					[
-						"table",
-						"tags",
-						"A table {string, ...} of tags to match with."
+						"string",
+						"tag",
+						"A tag to match with."
 					]
 				],
 				"return": [
@@ -120,6 +162,7 @@
 			"doc": {
 				"text": [
 					"Returns a table of [sm.interactable, interactables] which contain all of the given tags for a cell coordinate.",
+					"~ can be used to exclude a specific tag. Example: { \"FRUIT\", \"~BANANA\" } finds interactables tagged with FRUIT but excludes interactables that are also tagged with BANANA.",
 					"@note",
 					"Can only be used in a server_onCellLoaded callback",
 					"@note"
@@ -206,6 +249,11 @@
 						"string",
 						"tag",
 						"Tag to match with."
+					],
+					[
+						"world",
+						"world?",
+						"The world we are searching in. (Optional, defaults to current world)"
 					]
 				],
 				"return": [
@@ -237,6 +285,11 @@
 						"table",
 						"tags",
 						"A table {string, ...} of tags to match with."
+					],
+					[
+						"world",
+						"world?",
+						"The world we are searching in (Optional, defaults to current world)"
 					]
 				],
 				"return": [
@@ -263,6 +316,11 @@
 						"integer",
 						"y",
 						"Y-coordinate"
+					],
+					[
+						"world",
+						"world?",
+						"The world we are searching in. (Optional, defaults to current world)"
 					]
 				],
 				"return": [

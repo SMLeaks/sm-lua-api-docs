@@ -71,8 +71,29 @@
 				],
 				"params": [
 					[
+						"[Uuid]",
+						"uuid?",
+						"The uuid to create a uuid instance from. If none is provided, generate a random uuid."
+					]
+				],
+				"return": [
+					[
+						"[Uuid]",
+						"The created uuid."
+					]
+				]
+			}
+		},
+		{
+			"name": "new",
+			"doc": {
+				"text": [
+					"Creates a uuid from a string or generates a random uuid (version 4)."
+				],
+				"params": [
+					[
 						"string",
-						"uuid=nil",
+						"uuid?",
 						"The uuid string to create a uuid instance from. If none is provided, generate a random uuid."
 					]
 				],

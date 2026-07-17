@@ -7,7 +7,79 @@
 			"For more information about creating your own scripted shapes, see [ShapeClass, ShapeClass]."
 		]
 	},
-	"constants": [],
+	"constants": [
+		{
+			"name": "destructionType",
+			"doc": {
+				"text": [
+					"Shape destruction types. Using these will handle the destruction as if it was caused by the specified type.",
+					"@table",
+					"None",
+					"Melee",
+					"Projectile",
+					"Explosion",
+					"@table"
+				],
+				"return": [
+					[
+						"table",
+						"The destruction type list."
+					]
+				]
+			}
+		},
+		{
+			"name": "material",
+			"doc": {
+				"text": [
+					"Shape physics materials",
+					"@table",
+					"None",
+					"Default",
+					"Grass",
+					"Dirt",
+					"Sand",
+					"Gravel",
+					"Rock",
+					"Wood",
+					"Plastic",
+					"Metal",
+					"Glass",
+					"Fence",
+					"Fabric",
+					"Cardboard",
+					"Foliage",
+					"Tape",
+					"Water",
+					"WaterSubmerged",
+					"RagdollHuman",
+					"Mechanical",
+					"Fruit",
+					"RagdollAnimal",
+					"Electronics",
+					"Sticky",
+					"Ice",
+					"Bubblewrap",
+					"Scrapmetal",
+					"Rewardlocker",
+					"Chili ",
+					"VoxelBlueRock",
+					"VoxelPurpleRock",
+					"VoxelRedRock",
+					"VoxelBlueMineral",
+					"VoxelPurpleMineral",
+					"VoxelRedMineral",
+					"@table"
+				],
+				"return": [
+					[
+						"table",
+						"The physics material types list."
+					]
+				]
+			}
+		}
+	],
 	"functions": [
 		{
 			"name": "createBlock",
@@ -33,17 +105,17 @@
 					],
 					[
 						"[Quat]",
-						"rotation=nil",
+						"rotation?",
 						"The shape's world rotation. Defaults to no rotation (Optional)"
 					],
 					[
 						"boolean",
-						"dynamic=true",
+						"dynamic?",
 						"Set true if the shape is dynamic or false if the shape is static. Defaults to true (Optional)"
 					],
 					[
 						"boolean",
-						"forceSpawn=true",
+						"forceSpawn?",
 						"Set true to force spawn the shape even if it will cause collision. Defaults to true (Optional)"
 					]
 				],
@@ -80,13 +152,18 @@
 					],
 					[
 						"boolean",
-						"dynamic=true",
+						"dynamic?",
 						"Set true if the shape is dynamic or false if the shape is static. Defaults to true (Optional)"
 					],
 					[
 						"boolean",
-						"forceSpawn=true",
+						"forceSpawn?",
 						"Set true to force spawn the shape even if it will cause collision. Defaults to true (Optional)"
+					],
+					[
+						"[World]",
+						"world?",
+						"The world to create the part in. Uses the script's world by default. (Optional)"
 					]
 				],
 				"return": [
@@ -123,17 +200,17 @@
 					],
 					[
 						"[Quat]",
-						"rotation=nil",
+						"rotation?",
 						"The shape's world rotation. Defaults to no rotation (Optional)"
 					],
 					[
 						"boolean",
-						"dynamic=true",
+						"dynamic?",
 						"Set true if the shape is dynamic or false if the shape is static. Defaults to true (Optional)"
 					],
 					[
 						"boolean",
-						"forceSpawn=true",
+						"forceSpawn?",
 						"Set true to force spawn the shape even if it will cause collision. Defaults to true (Optional)"
 					]
 				],
@@ -144,6 +221,48 @@
 					]
 				],
 				"server_only": true
+			}
+		},
+		{
+			"name": "getIsHarvest",
+			"doc": {
+				"text": [
+					"Return whether the shape uuid belongs to a harvest shape"
+				],
+				"params": [
+					[
+						"[Uuid]",
+						"uuid",
+						"The shape uuid."
+					]
+				],
+				"return": [
+					[
+						"boolean",
+						"True if the shape is harvestable."
+					]
+				]
+			}
+		},
+		{
+			"name": "getIsStackable",
+			"doc": {
+				"text": [
+					"Return whether the shape uuid belongs to a stackable shape"
+				],
+				"params": [
+					[
+						"[Uuid]",
+						"uuid",
+						"The shape uuid."
+					]
+				],
+				"return": [
+					[
+						"boolean",
+						"True if the shape is stackable."
+					]
+				]
 			}
 		},
 		{
@@ -170,18 +289,11 @@
 		{
 			"name": "getShapeIcon",
 			"doc": {
-				"params": [
-					[
-						"[Uuid]",
-						"uuid",
-						"The shape's uuid."
-					]
+				"text": [
+					"Does nothing."
 				],
-				"return": [
-					[
-						"any",
-						"The shape's icon."
-					]
+				"deprecated": [
+					"Deprecated function. Kept for compability with old scripts."
 				]
 			}
 		},
@@ -228,6 +340,53 @@
 			}
 		},
 		{
+			"name": "getShapeUpperCaseTitle",
+			"doc": {
+				"text": [
+					"Returns the block/part name for the given uuid in uppercase as given in the inventory description translations. Defaults to the shape title if an upper case version does not exist."
+				],
+				"params": [
+					[
+						"[Uuid]",
+						"uuid",
+						"The uuid."
+					]
+				],
+				"return": [
+					[
+						"string",
+						"The shape title in upper case."
+					]
+				]
+			}
+		},
+		{
+			"name": "shapesInSphere",
+			"doc": {
+				"text": [
+					"Returns a table of all shapes colliding with a given sphere."
+				],
+				"params": [
+					[
+						"[Vec3]",
+						"center",
+						"The center position of the sphere."
+					],
+					[
+						"number",
+						"radius",
+						"The radius of the sphere."
+					]
+				],
+				"return": [
+					[
+						"table",
+						"The table of found shapes. {[Shape], ..}"
+					]
+				]
+			}
+		},
+		{
 			"name": "uuidExists",
 			"doc": {
 				"text": [
@@ -236,8 +395,8 @@
 				"params": [
 					[
 						"[Uuid]",
-						"The",
-						"shape uuid."
+						"uuid",
+						"The shape uuid."
 					]
 				],
 				"return": [

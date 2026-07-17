@@ -1,11 +1,7 @@
 {
 	"namespace": "sm.container",
 	"userdata_association": "Container",
-	"doc": {
-		"text": [
-			"A <strong>container</strong> keeps track of items and stores them in slots. Each slot holds one item type and a quantity, if the item is stackable."
-		]
-	},
+	"doc": {},
 	"constants": [],
 	"functions": [
 		{
@@ -34,47 +30,10 @@
 			}
 		},
 		{
-			"name": "collect",
-			"doc": {
-				"text": [
-					"Adds a quantity of a given item to a container."
-				],
-				"params": [
-					[
-						"[Container]",
-						"container",
-						"The container."
-					],
-					[
-						"[Uuid]",
-						"itemUuid",
-						"The uuid of the item."
-					],
-					[
-						"integer",
-						"quantity",
-						"The number of items."
-					],
-					[
-						"boolean",
-						"mustCollectAll=nil",
-						"Must collect all items for the transaction to be valid. Defaults to true. (Optional)"
-					]
-				],
-				"return": [
-					[
-						"integer",
-						"The number of items successfully added."
-					]
-				],
-				"server_only": true
-			}
-		},
-		{
 			"name": "collectToSlot",
 			"doc": {
 				"text": [
-					"Performs a [sm.container.collect] operation to a specific slot."
+					"Performs a collect operation to a specific slot."
 				],
 				"params": [
 					[
@@ -188,8 +147,8 @@
 					],
 					[
 						"boolean",
-						"moveAll=nil",
-						"If true, requires that all items can be moved. "
+						"moveAll?",
+						"If true, requires that all items can be moved. Defaults to true. (Optional)"
 					]
 				],
 				"server_only": true
@@ -266,8 +225,13 @@
 					],
 					[
 						"boolean",
-						"mustSpendAll=nil",
+						"mustSpendAll?",
 						"If true, only remove items if there are enough. If false, remove as many items as possible. Defaults to true. (Optional)"
+					],
+					[
+						"integer",
+						"avoidSlot?",
+						"If the spending should try and avoid a specific inventory slot if the resource is available in inventory. (Optional)"
 					]
 				],
 				"return": [
@@ -308,7 +272,7 @@
 					],
 					[
 						"boolean",
-						"mustSpendAll=nil",
+						"mustSpendAll?",
 						"If true, only remove items if there are enough. If false, remove as many items as possible. Defaults to true. (Optional)"
 					]
 				],
@@ -380,6 +344,27 @@
 					[
 						"integer",
 						"The quantity of the given item uuid."
+					]
+				]
+			}
+		},
+		{
+			"name": "uniqueItemUuids",
+			"doc": {
+				"text": [
+					"Returns a table containing all item uuids in a container."
+				],
+				"params": [
+					[
+						"[Container]",
+						"container",
+						"The container."
+					]
+				],
+				"return": [
+					[
+						"table",
+						"The table of item uuids {[Uuid], ..}."
 					]
 				]
 			}

@@ -31,9 +31,109 @@
 					]
 				}
 			}
+		},
+		{
+			"name": "world",
+			"get": {
+				"doc": {
+					"text": [
+						"Returns the world id of the area trigger. Keep in mind that area triggers can move between worlds, so world id might change!"
+					],
+					"params": [
+						[
+							"[AreaTrigger]",
+							"areaTrigger",
+							"The area trigger user."
+						]
+					],
+					"return": [
+						[
+							"[World]",
+							"The _current_ world id of the area trigger."
+						]
+					]
+				}
+			}
 		}
 	],
 	"functions": [
+		{
+			"name": "bindCanErase",
+			"doc": {
+				"text": [
+					"Bind a callback that checks if the area trigger can be erased."
+				],
+				"params": [
+					[
+						"[AreaTrigger]",
+						"areaTrigger",
+						"The area trigger instance."
+					],
+					[
+						"string",
+						"callback",
+						"The name of the Lua function to bind."
+					],
+					[
+						"table",
+						"object?",
+						"The object that will receive the callback. (optional)"
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "bindCanInteract",
+			"doc": {
+				"text": [
+					"Bind the lua function to be used when checking for player interaction with the area trigger"
+				],
+				"params": [
+					[
+						"[AreaTrigger]",
+						"areaTrigger",
+						"The area trigger instance."
+					],
+					[
+						"string",
+						"callback",
+						"The name of the Lua function to bind."
+					],
+					[
+						"table",
+						"object?",
+						"The object that will receive the callback. (optional)"
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "bindOnDestroy",
+			"doc": {
+				"text": [
+					"Bind the lua function to be called when the area trigger is destroyed"
+				],
+				"params": [
+					[
+						"[AreaTrigger]",
+						"areaTrigger",
+						"The area trigger instance."
+					],
+					[
+						"string",
+						"callback",
+						"The name of the Lua function to bind."
+					],
+					[
+						"table",
+						"object?",
+						"The object that will receive the callback. (optional)"
+					]
+				]
+			}
+		},
 		{
 			"name": "bindOnEnter",
 			"doc": {
@@ -62,10 +162,36 @@
 					],
 					[
 						"table",
-						"object=nil",
+						"object?",
 						"The object that will receive the callback. (optional)"
 					]
 				]
+			}
+		},
+		{
+			"name": "bindOnErase",
+			"doc": {
+				"text": [
+					"Bind the lua function to be used when an interactable area trigger is erased."
+				],
+				"params": [
+					[
+						"[AreaTrigger]",
+						"areaTrigger",
+						"The area trigger instance."
+					],
+					[
+						"string",
+						"callback",
+						"The name of the Lua function to bind."
+					],
+					[
+						"table",
+						"object?",
+						"The object that will receive the callback. (optional)"
+					]
+				],
+				"client_only": true
 			}
 		},
 		{
@@ -96,10 +222,114 @@
 					],
 					[
 						"table",
-						"object=nil",
+						"object?",
 						"The object that will receive the callback. (optional)"
 					]
 				]
+			}
+		},
+		{
+			"name": "bindOnHostDestroy",
+			"doc": {
+				"text": [
+					"Bind the lua function to be used when an area trigger is destroyed."
+				],
+				"params": [
+					[
+						"[AreaTrigger]",
+						"areaTrigger",
+						"The area trigger instance."
+					],
+					[
+						"string",
+						"callback",
+						"The name of the Lua function to bind."
+					],
+					[
+						"table",
+						"object?",
+						"The object that will receive the callback. ( optional )"
+					]
+				]
+			}
+		},
+		{
+			"name": "bindOnHostUnload",
+			"doc": {
+				"text": [
+					"Bind the lua function to be used when an interactable area trigger's host object is unloaded.",
+					"Note: Only the game host can know if a host object is unloaded, to a connected client it will look like the host object was destroyed."
+				],
+				"params": [
+					[
+						"[AreaTrigger]",
+						"areaTrigger",
+						"The area trigger instance."
+					],
+					[
+						"string",
+						"callback",
+						"The name of the Lua function to bind."
+					],
+					[
+						"table",
+						"object?",
+						"The object that will receive the callback. ( optional )"
+					]
+				]
+			}
+		},
+		{
+			"name": "bindOnInteract",
+			"doc": {
+				"text": [
+					"Bind the lua function to be used when a player interacts with an area trigger"
+				],
+				"params": [
+					[
+						"[AreaTrigger]",
+						"areaTrigger",
+						"The area trigger instance."
+					],
+					[
+						"string",
+						"callback",
+						"The name of the Lua function to bind."
+					],
+					[
+						"table",
+						"object?",
+						"The object that will receive the callback. (optional)"
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
+			"name": "bindOnMelee",
+			"doc": {
+				"text": [
+					"Bind the lua function to be used when the area trigger is hit by a melee attack.",
+					"Requires that areaTriggerProxyType has been set to [sm.areaTrigger.areaTriggerProxyType, sm.areaTrigger.areaTriggerProxyType.melee]"
+				],
+				"params": [
+					[
+						"[AreaTrigger]",
+						"areaTrigger",
+						"The area trigger instance."
+					],
+					[
+						"string",
+						"callback",
+						"The name of the Lua function to bind."
+					],
+					[
+						"table",
+						"object?",
+						"The object that will receive the callback. (optional)"
+					]
+				],
+				"server_only": true
 			}
 		},
 		{
@@ -121,7 +351,7 @@
 					],
 					[
 						"table",
-						"object=nil",
+						"object?",
 						"The object that will receive the callback. (optional)"
 					]
 				]
@@ -155,8 +385,44 @@
 					],
 					[
 						"table",
-						"object=nil",
+						"object?",
 						"The object that will receive the callback. (optional)"
+					]
+				]
+			}
+		},
+		{
+			"name": "destroy",
+			"doc": {
+				"text": [
+					"Destroys an area trigger."
+				],
+				"params": [
+					[
+						"[AreaTrigger]",
+						"areaTrigger",
+						"The area trigger to be destroyed."
+					]
+				]
+			}
+		},
+		{
+			"name": "getCharacters",
+			"doc": {
+				"text": [
+					"Gets the trigger collisions for characters inside the area trigger"
+				],
+				"params": [
+					[
+						"[AreaTrigger]",
+						"areaTrigger",
+						"The area trigger instance."
+					]
+				],
+				"return": [
+					[
+						"table",
+						"A table of character trigger collisions."
 					]
 				]
 			}
@@ -179,6 +445,27 @@
 					[
 						"table",
 						"The table with the content."
+					]
+				]
+			}
+		},
+		{
+			"name": "getHarvestables",
+			"doc": {
+				"text": [
+					"Gets the trigger collisions for harvestables inside the area trigger"
+				],
+				"params": [
+					[
+						"[AreaTrigger]",
+						"areaTrigger",
+						"The area trigger instance."
+					]
+				],
+				"return": [
+					[
+						"table",
+						"A table of harvestable trigger collisions."
 					]
 				]
 			}
@@ -229,7 +516,8 @@
 			"name": "getShapes",
 			"doc": {
 				"text": [
-					"Gets the shapes inside the area trigger"
+					"Gets the trigger collisions for shapes inside the area trigger",
+					"Will only return one [Shape] for each [Body] that is colliding with the [AreaTrigger]."
 				],
 				"params": [
 					[
@@ -241,7 +529,7 @@
 				"return": [
 					[
 						"table",
-						"A table of shapes. {[Shape], ...}"
+						"A table of shape trigger collisions."
 					]
 				]
 			}
@@ -284,6 +572,27 @@
 					[
 						"table",
 						"The user data set on this trigger"
+					]
+				]
+			}
+		},
+		{
+			"name": "getWorld",
+			"doc": {
+				"text": [
+					"Returns the world id of the area trigger. Keep in mind that area triggers can move between worlds, so world id might change!"
+				],
+				"params": [
+					[
+						"[AreaTrigger]",
+						"areaTrigger",
+						"The area trigger user."
+					]
+				],
+				"return": [
+					[
+						"[World]",
+						"The _current_ world id of the area trigger."
 					]
 				]
 			}
@@ -394,6 +703,108 @@
 			}
 		},
 		{
+			"name": "setCharacterDetection",
+			"doc": {
+				"text": [
+					"When set to true the area trigger can calculate which characters are inside of the trigger and get the collision information.",
+					"with a call to [AreaTrigger]: getCharacters"
+				],
+				"params": [
+					[
+						"[AreaTrigger]",
+						"areaTrigger",
+						"The area trigger instance."
+					],
+					[
+						"boolean",
+						"detectCharacters",
+						"Character detection on or off."
+					]
+				]
+			}
+		},
+		{
+			"name": "setDestroyOnErase",
+			"doc": {
+				"text": [
+					"Sets whether the areatrigger should be destroyed immediately upon being erased or simply invoke the bound OnErase callback. True by default."
+				],
+				"params": [
+					[
+						"[AreaTrigger]",
+						"areaTrigger",
+						"The area trigger instance."
+					],
+					[
+						"boolean",
+						"destroyOnErase",
+						"Destroy on erase."
+					]
+				]
+			}
+		},
+		{
+			"name": "setEraseTime",
+			"doc": {
+				"text": [
+					"Sets the time it takes to erase this trigger if it is erasable."
+				],
+				"params": [
+					[
+						"[AreaTrigger]",
+						"areaTrigger",
+						"The area trigger instance."
+					],
+					[
+						"number",
+						"eraseTime",
+						"The time it takes to erase this area trigger."
+					]
+				]
+			}
+		},
+		{
+			"name": "setHarvestableDetection",
+			"doc": {
+				"text": [
+					"When set to true the area trigger can calculate which harvestables are inside of the trigger and get the collision information.",
+					"with a call to [AreaTrigger]: getHarvestables"
+				],
+				"params": [
+					[
+						"[AreaTrigger]",
+						"areaTrigger",
+						"The area trigger instance."
+					],
+					[
+						"boolean",
+						"detectHarvestables",
+						"Harvestable detection on or off."
+					]
+				]
+			}
+		},
+		{
+			"name": "setIncludeShapesInContent",
+			"doc": {
+				"text": [
+					"When set to true the area trigger will include individual shapes in its content list."
+				],
+				"params": [
+					[
+						"[AreaTrigger]",
+						"areaTrigger",
+						"The area trigger instance."
+					],
+					[
+						"boolean",
+						"includeShapesInContent",
+						"Include shapes in content on or off."
+					]
+				]
+			}
+		},
+		{
 			"name": "setShapeDetection",
 			"doc": {
 				"text": [
@@ -430,6 +841,49 @@
 						"[Vec3]",
 						"size",
 						"The area trigger's new size."
+					]
+				]
+			}
+		},
+		{
+			"name": "setVoxelDestructible",
+			"doc": {
+				"text": [
+					"Sets whether VoxelTerrain can destroy this area trigger by voxel addition."
+				],
+				"params": [
+					[
+						"[AreaTrigger]",
+						"areaTrigger",
+						"The area trigger instance."
+					],
+					[
+						"boolean",
+						"destructible",
+						"The state to set"
+					]
+				]
+			}
+		},
+		{
+			"name": "setWaterType",
+			"doc": {
+				"text": [
+					"Sets the liquid type of the area trigger. (See [sm.areaTrigger.liquidType])",
+					"Only has an effect on area triggers with the 'water' proxy type; setting it on any other proxy type has no effect.",
+					"Currently only 'lava' has special behavior: it occasionally destroys submerged shapes. Lava behavior requires",
+					"shapes to be included in the content list via [AreaTrigger]: setIncludeShapesInContent."
+				],
+				"params": [
+					[
+						"[AreaTrigger]",
+						"areaTrigger",
+						"The area trigger instance."
+					],
+					[
+						"integer",
+						"waterType",
+						"The liquid type. (See [sm.areaTrigger.liquidType])"
 					]
 				]
 			}
@@ -481,7 +935,7 @@
 			"doc": {
 				"meta": [
 					[
-						"[AreaTrigger],[AreaTrigger]",
+						"[AreaTrigger],[AreaTrigger],boolean",
 						"Checks if two instances of [AreaTrigger] refer to the same AreaTrigger."
 					]
 				]

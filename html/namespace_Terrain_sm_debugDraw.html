@@ -17,6 +17,7 @@
   <h3>Classes</h3>
   <ul>
    <li><a href="class_Game_CharacterClass.html" class="code">CharacterClass</a></li>
+   <li><a href="class_Game_ClientScriptableObjectClass.html" class="code">ClientScriptableObjectClass</a></li>
    <li><a href="class_Game_GameClass.html" class="code">GameClass</a></li>
    <li><a href="class_Game_HarvestableClass.html" class="code">HarvestableClass</a></li>
    <li><a href="class_Game_PlayerClass.html" class="code">PlayerClass</a></li>
@@ -34,14 +35,18 @@
    <li><a href="userdata_Game_Body.html" class="code">Body</a></li>
    <li><a href="userdata_Game_BuilderGuide.html" class="code">BuilderGuide</a></li>
    <li><a href="userdata_Game_Character.html" class="code">Character</a></li>
+   <li><a href="userdata_Game_ClientScriptableObject.html" class="code">ClientScriptableObject</a></li>
    <li><a href="userdata_Game_Color.html" class="code">Color</a></li>
    <li><a href="userdata_Game_Container.html" class="code">Container</a></li>
    <li><a href="userdata_Game_CullSphereGroup.html" class="code">CullSphereGroup</a></li>
    <li><a href="userdata_Game_Effect.html" class="code">Effect</a></li>
+   <li><a href="userdata_Game_Garage.html" class="code">Garage</a></li>
    <li><a href="userdata_Game_GuiInterface.html" class="code">GuiInterface</a></li>
    <li><a href="userdata_Game_Harvestable.html" class="code">Harvestable</a></li>
    <li><a href="userdata_Game_Interactable.html" class="code">Interactable</a></li>
    <li><a href="userdata_Game_Joint.html" class="code">Joint</a></li>
+   <li><a href="userdata_Game_JsonGui.html" class="code">JsonGui</a></li>
+   <li><a href="userdata_Game_JsonWidget.html" class="code">JsonWidget</a></li>
    <li><a href="userdata_Game_Lift.html" class="code">Lift</a></li>
    <li><a href="userdata_Game_LoadCellHandle.html" class="code">LoadCellHandle</a></li>
    <li><a href="userdata_Game_Network.html" class="code">Network</a></li>
@@ -73,6 +78,7 @@
    <li><a href="namespace_Game_sm_cell.html" class="code">sm.cell</a></li>
    <li><a href="namespace_Game_sm_challenge.html" class="code">sm.challenge</a></li>
    <li><a href="namespace_Game_sm_character.html" class="code">sm.character</a></li>
+   <li><a href="namespace_Game_sm_clientScriptableObject.html" class="code">sm.clientScriptableObject</a></li>
    <li><a href="namespace_Game_sm_color.html" class="code">sm.color</a></li>
    <li><a href="namespace_Game_sm_construction.html" class="code">sm.construction</a></li>
    <li><a href="namespace_Game_sm_container.html" class="code">sm.container</a></li>
@@ -80,9 +86,11 @@
    <li><a href="namespace_Game_sm_cullSphereGroup.html" class="code">sm.cullSphereGroup</a></li>
    <li><a href="namespace_Game_sm_debris.html" class="code">sm.debris</a></li>
    <li><a href="namespace_Game_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
+   <li><a href="namespace_Game_sm_debugGui.html" class="code">sm.debugGui</a></li>
    <li><a href="namespace_Game_sm_effect.html" class="code">sm.effect</a></li>
    <li><a href="namespace_Game_sm_event.html" class="code">sm.event</a></li>
    <li><a href="namespace_Game_sm_game.html" class="code">sm.game</a></li>
+   <li><a href="namespace_Game_sm_garage.html" class="code">sm.garage</a></li>
    <li><a href="namespace_Game_sm_gui.html" class="code">sm.gui</a></li>
    <li><a href="namespace_Game_sm_gui_widget.html" class="code">sm.gui.widget</a></li>
    <li><a href="namespace_Game_sm_harvestable.html" class="code">sm.harvestable</a></li>
@@ -90,15 +98,19 @@
    <li><a href="namespace_Game_sm_item.html" class="code">sm.item</a></li>
    <li><a href="namespace_Game_sm_joint.html" class="code">sm.joint</a></li>
    <li><a href="namespace_Game_sm_json.html" class="code">sm.json</a></li>
+   <li><a href="namespace_Game_sm_jsonGui.html" class="code">sm.jsonGui</a></li>
+   <li><a href="namespace_Game_sm_lift.html" class="code">sm.lift</a></li>
    <li><a href="namespace_Game_sm_localPlayer.html" class="code">sm.localPlayer</a></li>
    <li><a href="namespace_Game_sm_log.html" class="code">sm.log</a></li>
    <li><a href="namespace_Game_sm_melee.html" class="code">sm.melee</a></li>
    <li><a href="namespace_Game_sm_menuCreation.html" class="code">sm.menuCreation</a></li>
+   <li><a href="namespace_Game_sm_message.html" class="code">sm.message</a></li>
    <li><a href="namespace_Game_sm_noise.html" class="code">sm.noise</a></li>
    <li><a href="namespace_Game_sm_particle.html" class="code">sm.particle</a></li>
    <li><a href="namespace_Game_sm_pathNode.html" class="code">sm.pathNode</a></li>
    <li><a href="namespace_Game_sm_pathfinder.html" class="code">sm.pathfinder</a></li>
    <li><a href="namespace_Game_sm_physics.html" class="code">sm.physics</a></li>
+   <li><a href="namespace_Game_sm_pipeGraph.html" class="code">sm.pipeGraph</a></li>
    <li><a href="namespace_Game_sm_player.html" class="code">sm.player</a></li>
    <li><a href="namespace_Game_sm_portal.html" class="code">sm.portal</a></li>
    <li><a href="namespace_Game_sm_projectile.html" class="code">sm.projectile</a></li>
@@ -122,8 +134,12 @@
   <h3>Object Types 'userdata'</h3>
   <ul>
    <li><a href="userdata_Terrain_Color.html" class="code">Color</a></li>
+   <li><a href="userdata_Terrain_Container.html" class="code">Container</a></li>
    <li><a href="userdata_Terrain_Harvestable.html" class="code">Harvestable</a></li>
+   <li><a href="userdata_Terrain_Interactable.html" class="code">Interactable</a></li>
+   <li><a href="userdata_Terrain_Portal.html" class="code">Portal</a></li>
    <li><a href="userdata_Terrain_Quat.html" class="code">Quat</a></li>
+   <li><a href="userdata_Terrain_ScriptableObject.html" class="code">ScriptableObject</a></li>
    <li><a href="userdata_Terrain_Uuid.html" class="code">Uuid</a></li>
    <li><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></li>
    <li><a href="userdata_Terrain_World.html" class="code">World</a></li>
@@ -133,47 +149,90 @@
    <li><a href="namespace_Terrain_GLOBAL.html" class="code">GLOBAL</a></li>
    <li><a href="namespace_Terrain_sm.html" class="code">sm</a></li>
    <li><a href="namespace_Terrain_sm_color.html" class="code">sm.color</a></li>
+   <li><a href="namespace_Terrain_sm_container.html" class="code">sm.container</a></li>
    <li><a href="namespace_Terrain_sm_debugDraw.html" class="code">sm.debugDraw</a></li>
-   <li><a href="namespace_Terrain_sm_harvestable.html" class="code">sm.harvestable</a></li>
+   <li><a href="namespace_Terrain_sm_debugGui.html" class="code">sm.debugGui</a></li>
+   <li><a href="namespace_Terrain_sm_interactable.html" class="code">sm.interactable</a></li>
    <li><a href="namespace_Terrain_sm_json.html" class="code">sm.json</a></li>
    <li><a href="namespace_Terrain_sm_log.html" class="code">sm.log</a></li>
    <li><a href="namespace_Terrain_sm_noise.html" class="code">sm.noise</a></li>
    <li><a href="namespace_Terrain_sm_quat.html" class="code">sm.quat</a></li>
+   <li><a href="namespace_Terrain_sm_scriptableObject.html" class="code">sm.scriptableObject</a></li>
    <li><a href="namespace_Terrain_sm_terrainData.html" class="code">sm.terrainData</a></li>
    <li><a href="namespace_Terrain_sm_terrainGeneration.html" class="code">sm.terrainGeneration</a></li>
+   <li><a href="namespace_Terrain_sm_terrainHarvestable.html" class="code">sm.terrainHarvestable</a></li>
    <li><a href="namespace_Terrain_sm_terrainTile.html" class="code">sm.terrainTile</a></li>
+   <li><a href="namespace_Terrain_sm_tunnelGenerator.html" class="code">sm.tunnelGenerator</a></li>
    <li><a href="namespace_Terrain_sm_util.html" class="code">sm.util</a></li>
    <li><a href="namespace_Terrain_sm_uuid.html" class="code">sm.uuid</a></li>
    <li><a href="namespace_Terrain_sm_vec3.html" class="code">sm.vec3</a></li>
+   <li><a href="namespace_Terrain_sm_voxelTerrainCell.html" class="code">sm.voxelTerrainCell</a></li>
   </ul>
  </div>
  <div id="content">
   <h1 class="code">sm.debugDraw</h1>
   <p>The <strong>Debug Draw</strong> api can be used for drawing geometric primitives for debug purposes.</p>
-  <h4>Functions:</h4  <ul>   <li><a href="#addArrow" class="code">addArrow</a></li>   <li><a href="#addSphere" class="code">addSphere</a></li>   <li><a href="#addTransform" class="code">addTransform</a></li>   <li><a href="#clear" class="code">clear</a></li>   <li><a href="#removeArrow" class="code">removeArrow</a></li>   <li><a href="#removeSphere" class="code">removeSphere</a></li>   <li><a href="#removeTransform" class="code">removeTransform</a></li>  </ul>  <hr>
-  <h2 class="code"><a id="addArrow"></a>sm.debugDraw.addArrow(name, from, to=nil, color=nil)</h2>
+  <h4>Functions:</h4  <ul>   <li><a href="#addAabb" class="code">addAabb</a></li>   <li><a href="#addArrow" class="code">addArrow</a></li>   <li><a href="#addBox" class="code">addBox</a></li>   <li><a href="#addSphere" class="code">addSphere</a></li>   <li><a href="#addText" class="code">addText</a></li>   <li><a href="#addTransform" class="code">addTransform</a></li>   <li><a href="#clear" class="code">clear</a></li>   <li><a href="#drawArrowTopDown" class="code">drawArrowTopDown</a></li>   <li><a href="#drawBoxTopDown" class="code">drawBoxTopDown</a></li>   <li><a href="#drawCircleTopDown" class="code">drawCircleTopDown</a></li>   <li><a href="#drawRectTopDown" class="code">drawRectTopDown</a></li>   <li><a href="#drawSphereTopDown" class="code">drawSphereTopDown</a></li>   <li><a href="#flashAabb" class="code">flashAabb</a></li>   <li><a href="#flashArrow" class="code">flashArrow</a></li>   <li><a href="#flashArrowTopDown" class="code">flashArrowTopDown</a></li>   <li><a href="#flashBox" class="code">flashBox</a></li>   <li><a href="#flashBoxTopDown" class="code">flashBoxTopDown</a></li>   <li><a href="#flashCircleTopDown" class="code">flashCircleTopDown</a></li>   <li><a href="#flashRectTopDown" class="code">flashRectTopDown</a></li>   <li><a href="#flashSphere" class="code">flashSphere</a></li>   <li><a href="#flashSphereTopDown" class="code">flashSphereTopDown</a></li>   <li><a href="#flashText" class="code">flashText</a></li>   <li><a href="#removeArrow" class="code">removeArrow</a></li>   <li><a href="#removeBox" class="code">removeBox</a></li>   <li><a href="#removeSphere" class="code">removeSphere</a></li>   <li><a href="#removeText" class="code">removeText</a></li>   <li><a href="#removeTransform" class="code">removeTransform</a></li>  </ul>  <hr>
+  <h2 class="code"><a id="addAabb"></a>sm.debugDraw.addAabb(name, min, max, color?)</h2>
+  <p>Adds a named aabb debug draw.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">string</td><td class="code">name</td><td>The debug transform name.</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></td><td class="code">min</td><td>The box minimum extent.</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></td><td class="code">max</td><td>The box maximum extent.</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Color.html" class="code">Color</a></td><td class="code">color?</td><td>The color. Defaults to white.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="addArrow"></a>sm.debugDraw.addArrow(name, from, to?, color?)</h2>
   <p>Adds a named arrow debug draw.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code">string</td><td class="code">name</td><td>The debug arrow name.</td></tr>
    <tr><td class="code"><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></td><td class="code">from</td><td>The from position.</td></tr>
-   <tr><td class="code"><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></td><td class="code">to=nil</td><td>The to position. Defaults to the from position plus one along the z axis. (World up vector)</td></tr>
-   <tr><td class="code"><a href="userdata_Terrain_Color.html" class="code">Color</a></td><td class="code">color=nil</td><td>The color. Defaults to white.</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></td><td class="code">to?</td><td>The to position. Defaults to the from position plus one along the z axis. (World up vector)</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Color.html" class="code">Color</a></td><td class="code">color?</td><td>The color. Defaults to white.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="addSphere"></a>sm.debugDraw.addSphere(name, center, radius=nil, color=nil)</h2>
+  <h2 class="code"><a id="addBox"></a>sm.debugDraw.addBox(name, min, max, position, rotation?, color?)</h2>
+  <p>Adds a named box debug draw.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">string</td><td class="code">name</td><td>The debug transform name.</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></td><td class="code">min</td><td>The box minimum extent.</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></td><td class="code">max</td><td>The box maximum extent.</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The box position.</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Quat.html" class="code">Quat</a></td><td class="code">rotation?</td><td>The box rotation. Defaults to identity.</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Color.html" class="code">Color</a></td><td class="code">color?</td><td>The color. Defaults to white.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="addSphere"></a>sm.debugDraw.addSphere(name, center, radius?, color?)</h2>
   <p>Adds a named sphere debug draw.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code">string</td><td class="code">name</td><td>The debug sphere name.</td></tr>
    <tr><td class="code"><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></td><td class="code">center</td><td>The sphere center.</td></tr>
-   <tr><td class="code"><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></td><td class="code">radius=nil</td><td>The sphere radius. Defaults to 0.125.</td></tr>
-   <tr><td class="code"><a href="userdata_Terrain_Color.html" class="code">Color</a></td><td class="code">color=nil</td><td>The color. Defaults to white.</td></tr>
+   <tr><td class="code">number</td><td class="code">radius?</td><td>The sphere radius. Defaults to 0.125.</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Color.html" class="code">Color</a></td><td class="code">color?</td><td>The color. Defaults to white.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="addTransform"></a>sm.debugDraw.addTransform(name, origin, rotation, scale=nil)</h2>
+  <h2 class="code"><a id="addText"></a>sm.debugDraw.addText(name, text, position, fade?, scale?, color?)</h2>
+  <p>Adds text in world debug draw.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">string</td><td class="code">name</td><td>The text name.</td></tr>
+   <tr><td class="code">string</td><td class="code">text</td><td>The text content.</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The world position of the text.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">fade?</td><td>If the text should fade. Defaults to false.</td></tr>
+   <tr><td class="code">number</td><td class="code">scale?</td><td>The scale of the text. Defaults to 30.</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Color.html" class="code">Color</a></td><td class="code">color?</td><td>The color. Defaults to white.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="addTransform"></a>sm.debugDraw.addTransform(name, origin, rotation, scale?)</h2>
   <p>Adds a named transform debug draw.</p>
   <h4>Parameters:</h4>
   <table>
@@ -181,36 +240,220 @@
    <tr><td class="code">string</td><td class="code">name</td><td>The debug transform name.</td></tr>
    <tr><td class="code"><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></td><td class="code">origin</td><td>The transform origin.</td></tr>
    <tr><td class="code"><a href="userdata_Terrain_Quat.html" class="code">Quat</a></td><td class="code">rotation</td><td>The transform rotation.</td></tr>
-   <tr><td class="code">number</td><td class="code">scale=nil</td><td>The transform scale. Defaults to 1.0.</td></tr>
+   <tr><td class="code">number</td><td class="code">scale?</td><td>The transform scale. Defaults to 1.0.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="clear"></a>sm.debugDraw.clear(name="")</h2>
-  <p>Removes all debug draws beginning with a given name. </p>
-  <p> </p>
+  <h2 class="code"><a id="clear"></a>sm.debugDraw.clear(name?)</h2>
+  <p>Removes all debug draws beginning with a given name.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code">string</td><td class="code">name=""</td><td>The name to match (Defaults to "", matching all debug draws).</td></tr>
+   <tr><td class="code">string</td><td class="code">name?</td><td>The name to match (Defaults to "", matching all debug draws).</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="drawArrowTopDown"></a>sm.debugDraw.drawArrowTopDown(from, to?, color?)</h2>
+  <p>Draws an arrow.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></td><td class="code">from</td><td>The starting position of the arrow.</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></td><td class="code">to?</td><td>The ending position of the arrow. Defaults to the starting position plus one unit along the z-axis (world up vector).</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Color.html" class="code">Color</a></td><td class="code">color?</td><td>The color of the arrow. Defaults to white.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="drawBoxTopDown"></a>sm.debugDraw.drawBoxTopDown(min, max, position, rotation?, color?, duration?)</h2>
+  <p>Draws a box.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></td><td class="code">min</td><td>The minimum extent of the box.</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></td><td class="code">max</td><td>The maximum extent of the box.</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The position of the box.</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Quat.html" class="code">Quat</a></td><td class="code">rotation?</td><td>The rotation of the box. Defaults to identity.</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Color.html" class="code">Color</a></td><td class="code">color?</td><td>The color of the box. Defaults to white.</td></tr>
+   <tr><td class="code">number</td><td class="code">duration?</td><td>The duration of the flash animation in seconds. Defaults to 0.5 seconds.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="drawCircleTopDown"></a>sm.debugDraw.drawCircleTopDown(center, radius?, color?)</h2>
+  <p>Draws a circle.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></td><td class="code">center</td><td>The center position of the circle.</td></tr>
+   <tr><td class="code">number</td><td class="code">radius?</td><td>The radius of the circle. Defaults to 0.125.</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Color.html" class="code">Color</a></td><td class="code">color?</td><td>The color of the circle. Defaults to white.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="drawRectTopDown"></a>sm.debugDraw.drawRectTopDown(min, max, color?)</h2>
+  <p>Draws a rectangle.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></td><td class="code">min</td><td>The minimum extent of the rectangle.</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></td><td class="code">max</td><td>The maximum extent of the rectangle.</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Color.html" class="code">Color</a></td><td class="code">color?</td><td>The color of the rectangle. Defaults to white.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="drawSphereTopDown"></a>sm.debugDraw.drawSphereTopDown(center, radius?, color?)</h2>
+  <p>Draws a sphere.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></td><td class="code">center</td><td>The center position of the sphere.</td></tr>
+   <tr><td class="code">number</td><td class="code">radius?</td><td>The radius of the sphere. Defaults to 0.125.</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Color.html" class="code">Color</a></td><td class="code">color?</td><td>The color of the sphere. Defaults to white.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="flashAabb"></a>sm.debugDraw.flashAabb(min, max, color?, duration?)</h2>
+  <p>Flashes an axis-aligned bounding box for a specified duration.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></td><td class="code">min</td><td>The minimum world extent of the box.</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></td><td class="code">max</td><td>The maximum world extent of the box.</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Color.html" class="code">Color</a></td><td class="code">color?</td><td>The color of the box. Defaults to white.</td></tr>
+   <tr><td class="code">number</td><td class="code">duration?</td><td>The duration of the flash animation in seconds. Defaults to 0.5 seconds.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="flashArrow"></a>sm.debugDraw.flashArrow(from, to?, color?, duration?)</h2>
+  <p>Flashes an arrow for a specified duration.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></td><td class="code">from</td><td>The starting position of the arrow.</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></td><td class="code">to?</td><td>The ending position of the arrow. Defaults to the starting position plus one unit along the z-axis (world up vector).</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Color.html" class="code">Color</a></td><td class="code">color?</td><td>The color of the arrow. Defaults to white.</td></tr>
+   <tr><td class="code">number</td><td class="code">duration?</td><td>The duration of the flash animation in seconds. Defaults to 0.5 seconds.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="flashArrowTopDown"></a>sm.debugDraw.flashArrowTopDown(from, to?, color?, duration?)</h2>
+  <p>Flashes an arrow for a specified duration.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></td><td class="code">from</td><td>The starting position of the arrow.</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></td><td class="code">to?</td><td>The ending position of the arrow. Defaults to the starting position plus one unit along the z-axis (world up vector).</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Color.html" class="code">Color</a></td><td class="code">color?</td><td>The color of the arrow. Defaults to white.</td></tr>
+   <tr><td class="code">number</td><td class="code">duration?</td><td>The duration of the flash animation in seconds. Defaults to 0.5 seconds.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="flashBox"></a>sm.debugDraw.flashBox(min, max, position, rotation?, color?, duration?)</h2>
+  <p>Flashes a box for a specified duration.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></td><td class="code">min</td><td>The minimum extent of the box.</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></td><td class="code">max</td><td>The maximum extent of the box.</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The position of the box.</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Quat.html" class="code">Quat</a></td><td class="code">rotation?</td><td>The rotation of the box. Defaults to identity.</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Color.html" class="code">Color</a></td><td class="code">color?</td><td>The color of the box. Defaults to white.</td></tr>
+   <tr><td class="code">number</td><td class="code">duration?</td><td>The duration of the flash animation in seconds. Defaults to 0.5 seconds.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="flashBoxTopDown"></a>sm.debugDraw.flashBoxTopDown(min, max, position, rotation?, color?, duration?)</h2>
+  <p>Flashes a box for a specified duration.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></td><td class="code">min</td><td>The minimum extent of the box.</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></td><td class="code">max</td><td>The maximum extent of the box.</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The position of the box.</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Quat.html" class="code">Quat</a></td><td class="code">rotation?</td><td>The rotation of the box. Defaults to identity.</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Color.html" class="code">Color</a></td><td class="code">color?</td><td>The color of the box. Defaults to white.</td></tr>
+   <tr><td class="code">number</td><td class="code">duration?</td><td>The duration of the flash animation in seconds. Defaults to 0.5 seconds.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="flashCircleTopDown"></a>sm.debugDraw.flashCircleTopDown(center, radius?, color?, duration?)</h2>
+  <p>Flashes a circle for a specified duration.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></td><td class="code">center</td><td>The center position of the circle.</td></tr>
+   <tr><td class="code">number</td><td class="code">radius?</td><td>The radius of the circle. Defaults to 0.125.</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Color.html" class="code">Color</a></td><td class="code">color?</td><td>The color of the circle. Defaults to white.</td></tr>
+   <tr><td class="code">number</td><td class="code">duration?</td><td>The duration of the flash animation in seconds. Defaults to 0.5 seconds.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="flashRectTopDown"></a>sm.debugDraw.flashRectTopDown(min, max, color?, duration?)</h2>
+  <p>Flashes a rectangle for a specified duration.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></td><td class="code">min</td><td>The minimum extent of the rectangle.</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></td><td class="code">max</td><td>The maximum extent of the rectangle.</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Color.html" class="code">Color</a></td><td class="code">color?</td><td>The color of the rectangle. Defaults to white.</td></tr>
+   <tr><td class="code">number</td><td class="code">duration?</td><td>The duration of the flash animation in seconds. Defaults to 0.5 seconds.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="flashSphere"></a>sm.debugDraw.flashSphere(center, radius?, color?, duration?)</h2>
+  <p>Flashes a sphere for a specified duration.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></td><td class="code">center</td><td>The center position of the sphere.</td></tr>
+   <tr><td class="code">number</td><td class="code">radius?</td><td>The radius of the sphere. Defaults to 0.125.</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Color.html" class="code">Color</a></td><td class="code">color?</td><td>The color of the sphere. Defaults to white.</td></tr>
+   <tr><td class="code">number</td><td class="code">duration?</td><td>The duration of the flash animation in seconds. Defaults to 0.5 seconds.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="flashSphereTopDown"></a>sm.debugDraw.flashSphereTopDown(center, radius?, color?, duration?)</h2>
+  <p>Flashes a sphere for a specified duration.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></td><td class="code">center</td><td>The center position of the sphere.</td></tr>
+   <tr><td class="code">number</td><td class="code">radius?</td><td>The radius of the sphere. Defaults to 0.125.</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Color.html" class="code">Color</a></td><td class="code">color?</td><td>The color of the sphere. Defaults to white.</td></tr>
+   <tr><td class="code">number</td><td class="code">duration?</td><td>The duration of the flash animation in seconds. Defaults to 0.5 seconds.</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="flashText"></a>sm.debugDraw.flashText(text, position, fade?, scale?, color?, time?)</h2>
+  <p>Draws text in world debug draw.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">string</td><td class="code">text</td><td>The text content.</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Vec3.html" class="code">Vec3</a></td><td class="code">position</td><td>The world position of the text.</td></tr>
+   <tr><td class="code">boolean</td><td class="code">fade?</td><td>If the text should fade. Defaults to false.</td></tr>
+   <tr><td class="code">number</td><td class="code">scale?</td><td>The scale of the text. Defaults to 30.</td></tr>
+   <tr><td class="code"><a href="userdata_Terrain_Color.html" class="code">Color</a></td><td class="code">color?</td><td>The color. Defaults to white.</td></tr>
+   <tr><td class="code">number</td><td class="code">time?</td><td>Time to show text. Defaults to 0.5.</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="removeArrow"></a>sm.debugDraw.removeArrow(name)</h2>
-  <p>Removes a named arrow debug draw. </p>
+  <p>Removes a named arrow debug draw.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code">string</td><td class="code">name</td><td>The debug arrow name.</td></tr>
   </table>
   <hr>
+  <h2 class="code"><a id="removeBox"></a>sm.debugDraw.removeBox(name)</h2>
+  <p>Removes a named box debug draw.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">string</td><td class="code">name</td><td>The debug box name.</td></tr>
+  </table>
+  <hr>
   <h2 class="code"><a id="removeSphere"></a>sm.debugDraw.removeSphere(name)</h2>
-  <p>Removes a named sphere debug draw. </p>
+  <p>Removes a named sphere debug draw.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
    <tr><td class="code">string</td><td class="code">name</td><td>The debug sphere name.</td></tr>
   </table>
   <hr>
+  <h2 class="code"><a id="removeText"></a>sm.debugDraw.removeText(name)</h2>
+  <p>Remove text in world debug draw.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">string</td><td class="code">name</td><td>The text name.</td></tr>
+  </table>
+  <hr>
   <h2 class="code"><a id="removeTransform"></a>sm.debugDraw.removeTransform(name)</h2>
-  <p>Removes a named transform debug draw. </p>
+  <p>Removes a named transform debug draw.</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>

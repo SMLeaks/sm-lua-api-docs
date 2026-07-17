@@ -41,7 +41,7 @@
 					],
 					[
 						"any",
-						"args=nil",
+						"args?",
 						"Optional arguments to be sent to the client."
 					]
 				],
@@ -78,7 +78,7 @@
 					],
 					[
 						"any",
-						"args=nil",
+						"args?",
 						"Optional arguments to be sent to the client."
 					]
 				],
@@ -91,14 +91,14 @@
 				"text": [
 					"Sends a network event from the client to the server. This will run the callback method on the server with optional arguments.",
 					"@code",
-					"-- Example of calling server function over network",
+					"-- Example of calling server function over network, called function receives the optional argument and the sending player",
 					"function MySwitch.client_onInteract( self ) ",
-					"\tself.network:sendToServer( 'server_toggle' )",
+					"\tself.network:sendToServer( 'server_setSwitch', { active = true } )",
 					"end",
 					"",
-					"function MySwitch.server_toggle( self ) ",
-					"\t-- Toggle on and off",
-					"\tself.interactable.active = not self.interactable.active",
+					"function MySwitch.server_setSwitch( self, args, player ) ",
+					"\t-- Set state of switch",
+					"\tself.interactable.active = args.active",
 					"end",
 					"@code"
 				],
@@ -115,7 +115,7 @@
 					],
 					[
 						"any",
-						"args=nil",
+						"args?",
 						"Optional arguments to be sent to the server."
 					]
 				],
@@ -136,9 +136,10 @@
 					"function MyEngine.server_onCreate( self )",
 					"\tself.network:setClientData( { \"gear\" = 1 } )",
 					"end",
-					" ",
-					"function MyEngine.client_onClientDataUpdate( self, data )",
-					"\tself.interactable:setPoseWeight( 0, data.gear / self.maxGears )",
+					"function MyEngine.client_onClientDataUpdate( self, data, channel )",
+					"\tif channel == 1 then",
+					"\t\tself.interactable:setPoseWeight( 0, data.gear / self.maxGears )",
+					"\tend",
 					"end",
 					"@code"
 				],
@@ -155,8 +156,8 @@
 					],
 					[
 						"integer",
-						"channel=1",
-						"Client data channel, 1 or 2 (Optional)"
+						"channel?",
+						"Client data channel, 1 to 4 (Optional) (Defaults to 1)"
 					]
 				],
 				"server_only": true

@@ -3,7 +3,7 @@
 	"namespace_association": "sm.interactable",
 	"doc": {
 		"text": [
-			"A userdata object representing an <strong>interactable shape</strong> in the game."
+			"Represents an interactable object in the game"
 		]
 	},
 	"usage": "server and client",
@@ -72,6 +72,50 @@
 							"The body an interactable's shape is part of."
 						]
 					]
+				}
+			}
+		},
+		{
+			"name": "clientPublicData",
+			"get": {
+				"doc": {
+					"text": [
+						"Returns (client) public data from a interactable."
+					],
+					"params": [
+						[
+							"[Interactable]",
+							"interactable",
+							"The interactable."
+						]
+					],
+					"return": [
+						[
+							"table",
+							"The public data."
+						]
+					],
+					"client_only": true
+				}
+			},
+			"set": {
+				"doc": {
+					"text": [
+						"Sets (client) public data on a interactable."
+					],
+					"params": [
+						[
+							"[Interactable]",
+							"interactable",
+							"The interactable."
+						],
+						[
+							"table",
+							"data",
+							"The public data."
+						]
+					],
+					"client_only": true
 				}
 			}
 		},
@@ -257,7 +301,7 @@
 					],
 					[
 						"integer",
-						"stackSize=MaxSize",
+						"stackSize?",
 						"The stack size. Defaults to maximum possible stack size(65535)."
 					]
 				],
@@ -265,6 +309,43 @@
 					[
 						"[Container]",
 						"The created container."
+					]
+				],
+				"server_only": true
+			}
+		},
+		{
+			"name": "bindDamageDestruction",
+			"doc": {
+				"text": [
+					"Binds a callback to be called if the interactable is destroyed through a source of damage."
+				],
+				"params": [
+					[
+						"[Interactable]",
+						"interactable",
+						"The interactable."
+					],
+					[
+						"string",
+						"callback",
+						"The name of the lua function to bind."
+					]
+				],
+				"server_only": true
+			}
+		},
+		{
+			"name": "clearLightOverrideColor",
+			"doc": {
+				"text": [
+					"Clear the override color of a light controller."
+				],
+				"params": [
+					[
+						"[Interactable]",
+						"interactable",
+						"The interactable."
 					]
 				],
 				"server_only": true
@@ -415,6 +496,28 @@
 			}
 		},
 		{
+			"name": "getCarryData",
+			"doc": {
+				"text": [
+					"Get carry data for a script interactable"
+				],
+				"params": [
+					[
+						"[Interactable]",
+						"interactable",
+						"The interactable, needs to be of script type."
+					]
+				],
+				"return": [
+					[
+						"any",
+						"The data"
+					]
+				],
+				"server_only": true
+			}
+		},
+		{
 			"name": "getChildren",
 			"doc": {
 				"text": [
@@ -429,7 +532,7 @@
 					[
 						"integer",
 						"flags",
-						"Connection type flags filter. (defaults to all types except for sm.interactable.connectionType.bearing (for backwards compability))"
+						"Connection type flags filter. (defaults to all types except for sm.interactable.connectionType.bearing and sm.interactable.connectionType.steering (for backwards compability))"
 					]
 				],
 				"return": [
@@ -438,6 +541,28 @@
 						"A table of the connected child [Interactable, interactables] {[Interactable], ..}."
 					]
 				]
+			}
+		},
+		{
+			"name": "getClientPublicData",
+			"doc": {
+				"text": [
+					"Returns (client) public data from a interactable."
+				],
+				"params": [
+					[
+						"[Interactable]",
+						"interactable",
+						"The interactable."
+					]
+				],
+				"return": [
+					[
+						"table",
+						"The public data."
+					]
+				],
+				"client_only": true
 			}
 		},
 		{
@@ -538,7 +663,7 @@
 					],
 					[
 						"integer",
-						"index=0",
+						"index?",
 						"The index of the container (default: 0)."
 					]
 				],
@@ -589,6 +714,32 @@
 					[
 						"integer",
 						"The interactable's id."
+					]
+				]
+			}
+		},
+		{
+			"name": "getJointCustomData",
+			"doc": {
+				"text": [
+					"Returns custom joint script data."
+				],
+				"params": [
+					[
+						"[Interactable]",
+						"interactable",
+						"The interactable, needs to be of script type."
+					],
+					[
+						"[Joint]",
+						"joint",
+						"The joint."
+					]
+				],
+				"return": [
+					[
+						"any",
+						"The data."
 					]
 				]
 			}
@@ -1085,6 +1236,27 @@
 			}
 		},
 		{
+			"name": "getSteeringSprint",
+			"doc": {
+				"text": [
+					"Returns the sprint value of an steering interactable."
+				],
+				"params": [
+					[
+						"[Interactable]",
+						"interactable",
+						"The interactable."
+					]
+				],
+				"return": [
+					[
+						"boolean",
+						"The sprint value"
+					]
+				]
+			}
+		},
+		{
 			"name": "getType",
 			"doc": {
 				"text": [
@@ -1181,6 +1353,32 @@
 			}
 		},
 		{
+			"name": "hasChanged",
+			"doc": {
+				"text": [
+					"Returns true if the interactable had updates since the given tick."
+				],
+				"params": [
+					[
+						"[Interactable]",
+						"interactable",
+						"The interactable."
+					],
+					[
+						"integer",
+						"tick",
+						"The tick."
+					]
+				],
+				"return": [
+					[
+						"boolean",
+						"Returns true if the interactable has been updated."
+					]
+				]
+			}
+		},
+		{
 			"name": "hasOutputType",
 			"doc": {
 				"text": [
@@ -1267,6 +1465,33 @@
 						"The logic output signal."
 					]
 				]
+			}
+		},
+		{
+			"name": "isAnimLooping",
+			"doc": {
+				"text": [
+					"Returns if the animation isLooping or not."
+				],
+				"params": [
+					[
+						"[Interactable]",
+						"interactable",
+						"The interactable."
+					],
+					[
+						"string",
+						"name",
+						"The name of the animation."
+					]
+				],
+				"return": [
+					[
+						"bool",
+						"Is the animation looping."
+					]
+				],
+				"client_only": true
 			}
 		},
 		{
@@ -1416,6 +1641,48 @@
 			}
 		},
 		{
+			"name": "setCarryData",
+			"doc": {
+				"text": [
+					"Set carry data for a script interactable"
+				],
+				"params": [
+					[
+						"[Interactable]",
+						"interactable",
+						"The interactable, needs to be of script type."
+					],
+					[
+						"any",
+						"data",
+						"The carry data."
+					]
+				],
+				"server_only": true
+			}
+		},
+		{
+			"name": "setClientPublicData",
+			"doc": {
+				"text": [
+					"Sets (client) public data on a interactable."
+				],
+				"params": [
+					[
+						"[Interactable]",
+						"interactable",
+						"The interactable."
+					],
+					[
+						"table",
+						"data",
+						"The public data."
+					]
+				],
+				"client_only": true
+			}
+		},
+		{
 			"name": "setGlowMultiplier",
 			"doc": {
 				"text": [
@@ -1455,6 +1722,83 @@
 					]
 				],
 				"client_only": true
+			}
+		},
+		{
+			"name": "setGyroForce",
+			"doc": {
+				"text": [
+					"Sets a max motor force on the turret seat"
+				],
+				"params": [
+					[
+						"number",
+						"force",
+						"The maximum motor force."
+					]
+				]
+			}
+		},
+		{
+			"name": "setGyroMaxSpeed",
+			"doc": {
+				"text": [
+					"Sets a target speed multiplier on the turret seat"
+				],
+				"params": [
+					[
+						"number",
+						"speedModifier",
+						"The speed modifier."
+					]
+				]
+			}
+		},
+		{
+			"name": "setJointCustomData",
+			"doc": {
+				"text": [
+					"Sets custom joint script data."
+				],
+				"params": [
+					[
+						"[Interactable]",
+						"interactable",
+						"The interactable, needs to be of script type."
+					],
+					[
+						"[Joint]",
+						"joint",
+						"The joint."
+					],
+					[
+						"any",
+						"data",
+						"The data."
+					]
+				],
+				"server_only": true
+			}
+		},
+		{
+			"name": "setLightOverrideColor",
+			"doc": {
+				"text": [
+					"Set the override color of a light controller, ignoring the color of the shape."
+				],
+				"params": [
+					[
+						"[Interactable]",
+						"interactable",
+						"The interactable."
+					],
+					[
+						"[Color]",
+						"color",
+						"The color to override with."
+					]
+				],
+				"server_only": true
 			}
 		},
 		{
@@ -1579,8 +1923,8 @@
 					],
 					[
 						"integer",
-						"steering",
-						"flags\tThe steering flags."
+						"steeringFlags",
+						"The steering flags."
 					]
 				]
 			}
@@ -1708,28 +2052,28 @@
 					],
 					[
 						"number",
-						"left",
-						"angle speed\tThe left angle speed."
+						"leftAngleSpeed",
+						"The left angle speed."
 					],
 					[
 						"number",
-						"right",
-						"angle speed\tThe right angle speed."
+						"rightAngleSpeed",
+						"The right angle speed."
 					],
 					[
 						"number",
-						"left",
-						"angle limit\tThe left angle limit."
+						"leftAngleLimit",
+						"The left angle limit."
 					],
 					[
 						"number",
-						"right",
-						"angle limit\tThe right angle limit."
+						"rightAngleLimit",
+						"The right angle limit."
 					],
 					[
 						"boolean",
 						"unlocked",
-						"Returns true if the joint is unlocked."
+						"Whether the joint is unlocked."
 					]
 				],
 				"client_only": true
@@ -1822,8 +2166,8 @@
 					],
 					[
 						"integer",
-						"steering",
-						"flags\tThe steering flags."
+						"steeringFlags",
+						"The steering flags."
 					]
 				]
 			}
@@ -1835,7 +2179,7 @@
 			"doc": {
 				"meta": [
 					[
-						"[Interactable],[Interactable]",
+						"[Interactable],[Interactable],boolean",
 						"Checks if two instances of [Interactable] refer to the same Interactable."
 					]
 				]

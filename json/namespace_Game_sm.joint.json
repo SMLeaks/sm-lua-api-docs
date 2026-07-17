@@ -17,6 +17,7 @@
 				"text": [
 					"@table",
 					"\"bearing\";\tA bearing part.",
+					"\"spring\";\t\tA spring part.",
 					"\"piston\";\t\tA piston part.",
 					"@table"
 				],

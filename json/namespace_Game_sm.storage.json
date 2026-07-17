@@ -36,6 +36,27 @@
 			}
 		},
 		{
+			"name": "loadTerrainData",
+			"doc": {
+				"text": [
+					"Load terrain data for this world if available."
+				],
+				"params": [
+					[
+						"integer",
+						"worldId",
+						"The id of the world to load terrain data for."
+					]
+				],
+				"return": [
+					[
+						"any",
+						"The data. Any lua object."
+					]
+				]
+			}
+		},
+		{
 			"name": "save",
 			"doc": {
 				"text": [
