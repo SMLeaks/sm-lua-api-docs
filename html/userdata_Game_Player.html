@@ -261,9 +261,19 @@
    <tr><td class="code"><a href="userdata_Game_Color.html" class="code">Color</a></td><td>The color of the shape the player is carrying.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="getCarryData"></a>getCarryData()</h2>
+  <h2 class="code"><a id="getCarryData"></a>getCarryData(player)</h2>
   <p>Server only</p>
-  <p>get the carry data on a player.</p>
+  <p>Get the carry data on a player.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Player.html" class="code">Player</a></td><td class="code">player</td><td>The player.</td></tr>
+  </table>
+  <h4>Returns:</h4>
+  <table>
+   <tr><th>Type</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td>The carry data.</td></tr>
+  </table>
   <hr>
   <h2 class="code"><a id="getCharacter"></a>getCharacter(player)</h2>
   <p>Returns the character the player is controlling.</p>
@@ -305,19 +315,19 @@
    <tr><td class="code"><a href="userdata_Game_Tool.html" class="code">Tool</a></td><td>The player's held tool uuid.</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="getCustomizationUuid"></a>getCustomizationUuid(player, customization)</h2>
+  <h2 class="code"><a id="getCustomizationUuid"></a>getCustomizationUuid(player, categoryIndex)</h2>
   <p>Server only</p>
   <p>Get uuid of customization from index</p>
   <h4>Parameters:</h4>
   <table>
    <tr><th>Type</th><th>Name</th><th>Description</th></tr>
-   <tr><td class="code">[player]</td><td class="code">player</td><td></td></tr>
-   <tr><td class="code">integer</td><td class="code">customization</td><td>index</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Player.html" class="code">Player</a></td><td class="code">player</td><td>The player.</td></tr>
+   <tr><td class="code">integer</td><td class="code">categoryIndex</td><td>The index of the customization category to get the uuid for.</td></tr>
   </table>
   <h4>Returns:</h4>
   <table>
    <tr><th>Type</th><th>Description</th></tr>
-   <tr><td class="code">uuid</td><td>uuid</td></tr>
+   <tr><td class="code"><a href="userdata_Game_Uuid.html" class="code">Uuid</a></td><td>uuid</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="getHotbar"></a>getHotbar(player)</h2>
@@ -457,9 +467,15 @@
    <tr><td class="code">string</td><td class="code">event</td><td>The event to send</td></tr>
   </table>
   <hr>
-  <h2 class="code"><a id="setCarryData"></a>setCarryData()</h2>
+  <h2 class="code"><a id="setCarryData"></a>setCarryData(player, data)</h2>
   <p>Server only</p>
   <p>Set the carry data on a player.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code"><a href="userdata_Game_Player.html" class="code">Player</a></td><td class="code">player</td><td>The player.</td></tr>
+   <tr><td class="code">table</td><td class="code">data</td><td>The carry data.</td></tr>
+  </table>
   <hr>
   <h2 class="code"><a id="setCharacter"></a>setCharacter(player, character)</h2>
   <p>Server only</p>

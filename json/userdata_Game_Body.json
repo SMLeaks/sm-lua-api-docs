@@ -1604,6 +1604,32 @@
 			}
 		},
 		{
+			"name": "transformPoint",
+			"doc": {
+				"text": [
+					"Transforms a point from local space to world space."
+				],
+				"params": [
+					[
+						"[Body]",
+						"body",
+						"The body."
+					],
+					[
+						"[Vec3]",
+						"point",
+						"The point in local space."
+					]
+				],
+				"return": [
+					[
+						"[Vec3]",
+						"The point in world space."
+					]
+				]
+			}
+		},
+		{
 			"name": "transformWorldPoint",
 			"doc": {
 				"text": [

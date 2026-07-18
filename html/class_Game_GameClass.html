@@ -202,9 +202,11 @@
    <li><a href="#server_onRefresh" class="code">server_onRefresh</a></li>
    <li><a href="#client_onRefresh" class="code">client_onRefresh</a></li>
    <li><a href="#server_onFixedUpdate" class="code">server_onFixedUpdate</a></li>
+   <li><a href="#server_onReceiveUpdate" class="code">server_onReceiveUpdate</a></li>
    <li><a href="#client_onFixedUpdate" class="code">client_onFixedUpdate</a></li>
    <li><a href="#client_onUpdate" class="code">client_onUpdate</a></li>
    <li><a href="#client_onClientDataUpdate" class="code">client_onClientDataUpdate</a></li>
+   <li><a href="#client_onLocalPlayerChangedWorld" class="code">client_onLocalPlayerChangedWorld</a></li>
   </ul>
   <h4>Callbacks:</h4>
   <ul>
@@ -312,6 +314,16 @@
    <tr><td class="code">number</td><td class="code">timeStep</td><td>The time period of a tick. (Is always 0.025, a 1/40th of a second.)</td></tr>
   </table>
   <hr>
+  <h2 class="code"><a id="server_onReceiveUpdate"></a>server_onReceiveUpdate(self) <i>serverEventCallback</i></h2>
+  <p>Called occasionally to indicate that some time has passed.</p>
+  <p>For performance reasons; it recommended to use this instead of <a href="class_Game_GameClass.html#server_onFixedUpdate" class="code">server_onFixedUpdate</a> for updates that do not need to happen frequently.</p>
+  <p>Use <a href="namespace_Game_sm_game.html#getCurrentTick" class="code">sm.game.getCurrentTick</a> to calculate the time.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+  </table>
+  <hr>
   <h2 class="code"><a id="client_onFixedUpdate"></a>client_onFixedUpdate(self, timeStep) <i>clientEventCallback</i></h2>
   <p>Called every game tick &ndash; 40 ticks a second. If the frame rate is lower than 40 fps, this event may be called twice.</p>
   <p>During a fixed update, physics and logic between interactables are updated.</p>
@@ -349,6 +361,15 @@
    <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
    <tr><td class="code">any</td><td class="code">data</td><td>Any lua object set with <a href="userdata_Game_Network.html#setClientData" class="code">Network.setClientData</a></td></tr>
    <tr><td class="code">integer</td><td class="code">channel</td><td>Client data channel, 1 or 2. (default: 1)</td></tr>
+  </table>
+  <hr>
+  <h2 class="code"><a id="client_onLocalPlayerChangedWorld"></a>client_onLocalPlayerChangedWorld(self, world) <i>clientEventCallback</i></h2>
+  <p>Called when the client player changes world.</p>
+  <h4>Parameters:</h4>
+  <table>
+   <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+   <tr><td class="code">table</td><td class="code">self</td><td>The class instance.</td></tr>
+   <tr><td class="code"><a href="userdata_Game_World.html" class="code">World</a></td><td class="code">world</td><td>The entered world.</td></tr>
   </table>
   <hr>
   <h2 class="code"><a id="server_onPlayerJoined"></a>server_onPlayerJoined(self, player, newPlayer) <i>serverEventCallback</i></h2>

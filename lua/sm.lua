@@ -445,6 +445,11 @@ Shape.paintable = {}
 Shape.right = {}
 
 ---**Get**:
+---Returns the uuid unique to a shape/block type.  
+---@type Uuid
+Shape.shapeUuid = {}
+
+---**Get**:
 ---Return the amount that is stacked in the shape  
 ---**Set**:
 ---*Server only*  
@@ -1125,6 +1130,11 @@ function Body:setUsable(value) end
 ---@return Vec3 # The point in world space.
 function Body:transformLocalPoint(point) end
 
+---Transforms a point from local space to world space.  
+---@param point Vec3 # The point in local space.
+---@return Vec3 # The point in world space.
+function Body:transformPoint(point) end
+
 ---Transforms a point from world space to local space.  
 ---@param point Vec3 # The point in world space.
 ---@return Vec3 # The point in local space.
@@ -1654,6 +1664,11 @@ Joint.shapeA = {}
 ---Returns the [Shape] that is attached to a joint on another [Body]. This method returns nil if there is no shape attached to the joint.  
 ---@type Shape
 Joint.shapeB = {}
+
+---**Get**:
+---Returns the uuid string unique to a joint type.  
+---@type Uuid
+Joint.shapeUuid = {}
 
 ---**Get**:
 ---Returns the joint type of a joint.  
@@ -2559,7 +2574,8 @@ function Player:getCarry() end
 function Player:getCarryColor() end
 
 ---*Server only*  
----get the carry data on a player.  
+---Get the carry data on a player.  
+---@return table # The carry data.
 function Player:getCarryData() end
 
 ---Returns the character the player is controlling.  
@@ -2577,9 +2593,9 @@ function Player:getCurrentToolUuid() end
 
 ---*Server only*  
 ---Get uuid of customization from index  
----@param customization integer # index
----@return uuid # uuid
-function Player:getCustomizationUuid(customization) end
+---@param categoryIndex integer # The index of the customization category to get the uuid for.
+---@return Uuid # uuid
+function Player:getCustomizationUuid(categoryIndex) end
 
 ---Returns the hotbar container of the player.  
 ---@return Container # The player's hotbar.
@@ -2633,7 +2649,8 @@ function Player:sendCharacterEvent(event) end
 
 ---*Server only*  
 ---Set the carry data on a player.  
-function Player:setCarryData() end
+---@param data table # The carry data.
+function Player:setCarryData(data) end
 
 ---*Server only*  
 ---Sets the character the player is controlling.  
@@ -5151,7 +5168,7 @@ function Garage:getGarageBounds() end
 function Garage:getPlacement() end
 
 ---Returns the position of the garage.  
----@return vec3 # position
+---@return Vec3 # position
 function Garage:getPosition() end
 
 ---Gets the tracked creation Name and JsonTable from the garage.  
@@ -10319,6 +10336,11 @@ function CharacterClass:client_onRefresh() end
 ---@param timeStep number # The time period of a tick. (Is always 0.025, a 1/40th of a second.)
 function CharacterClass:server_onFixedUpdate(timeStep) end
 
+---Called occasionally to indicate that some time has passed.  
+---For performance reasons; it recommended to use this instead of [CharacterClass.server_onFixedUpdate, server_onFixedUpdate] for updates that do not need to happen frequently.  
+---Use [sm.game.getCurrentTick] to calculate the time.  
+function CharacterClass:server_onReceiveUpdate() end
+
 ---Called every game tick &ndash; 40 ticks a second. If the frame rate is lower than 40 fps, this event may be called twice.  
 ---During a fixed update, physics and logic between interactables are updated.  
 ---@param timeStep number # The time period of a tick. (Is always 0.025, a 1/40th of a second.)
@@ -10340,6 +10362,10 @@ function CharacterClass:client_onUpdate(deltaTime) end
 ---@param data any # Any lua object set with [Network.setClientData]
 ---@param channel integer # Client data channel, 1 or 2. (default: 1)
 function CharacterClass:client_onClientDataUpdate(data, channel) end
+
+---Called when the client player changes world.  
+---@param world World # The entered world.
+function CharacterClass:client_onLocalPlayerChangedWorld(world) end
 
 ---Called when the [Character] is hit by a projectile.  
 ---**Note:**
@@ -10435,6 +10461,11 @@ function ClientScriptableObjectClass:client_onRefresh() end
 ---@param timeStep number # The time period of a tick. (Is always 0.025, a 1/40th of a second.)
 function ClientScriptableObjectClass:server_onFixedUpdate(timeStep) end
 
+---Called occasionally to indicate that some time has passed.  
+---For performance reasons; it recommended to use this instead of [ClientScriptableObjectClass.server_onFixedUpdate, server_onFixedUpdate] for updates that do not need to happen frequently.  
+---Use [sm.game.getCurrentTick] to calculate the time.  
+function ClientScriptableObjectClass:server_onReceiveUpdate() end
+
 ---Called every game tick &ndash; 40 ticks a second. If the frame rate is lower than 40 fps, this event may be called twice.  
 ---During a fixed update, physics and logic between interactables are updated.  
 ---@param timeStep number # The time period of a tick. (Is always 0.025, a 1/40th of a second.)
@@ -10456,6 +10487,10 @@ function ClientScriptableObjectClass:client_onUpdate(deltaTime) end
 ---@param data any # Any lua object set with [Network.setClientData]
 ---@param channel integer # Client data channel, 1 or 2. (default: 1)
 function ClientScriptableObjectClass:client_onClientDataUpdate(data, channel) end
+
+---Called when the client player changes world.  
+---@param world World # The entered world.
+function ClientScriptableObjectClass:client_onLocalPlayerChangedWorld(world) end
 
 
 ---@class GameClass
@@ -10527,6 +10562,11 @@ function GameClass:client_onRefresh() end
 ---@param timeStep number # The time period of a tick. (Is always 0.025, a 1/40th of a second.)
 function GameClass:server_onFixedUpdate(timeStep) end
 
+---Called occasionally to indicate that some time has passed.  
+---For performance reasons; it recommended to use this instead of [GameClass.server_onFixedUpdate, server_onFixedUpdate] for updates that do not need to happen frequently.  
+---Use [sm.game.getCurrentTick] to calculate the time.  
+function GameClass:server_onReceiveUpdate() end
+
 ---Called every game tick &ndash; 40 ticks a second. If the frame rate is lower than 40 fps, this event may be called twice.  
 ---During a fixed update, physics and logic between interactables are updated.  
 ---@param timeStep number # The time period of a tick. (Is always 0.025, a 1/40th of a second.)
@@ -10548,6 +10588,10 @@ function GameClass:client_onUpdate(deltaTime) end
 ---@param data any # Any lua object set with [Network.setClientData]
 ---@param channel integer # Client data channel, 1 or 2. (default: 1)
 function GameClass:client_onClientDataUpdate(data, channel) end
+
+---Called when the client player changes world.  
+---@param world World # The entered world.
+function GameClass:client_onLocalPlayerChangedWorld(world) end
 
 ---Called when a [Player] joins the game.  
 ---@param player Player # The joining player.
@@ -10640,6 +10684,11 @@ function HarvestableClass:client_onRefresh() end
 ---@param timeStep number # The time period of a tick. (Is always 0.025, a 1/40th of a second.)
 function HarvestableClass:server_onFixedUpdate(timeStep) end
 
+---Called occasionally to indicate that some time has passed.  
+---For performance reasons; it recommended to use this instead of [HarvestableClass.server_onFixedUpdate, server_onFixedUpdate] for updates that do not need to happen frequently.  
+---Use [sm.game.getCurrentTick] to calculate the time.  
+function HarvestableClass:server_onReceiveUpdate() end
+
 ---Called every game tick &ndash; 40 ticks a second. If the frame rate is lower than 40 fps, this event may be called twice.  
 ---During a fixed update, physics and logic between interactables are updated.  
 ---@param timeStep number # The time period of a tick. (Is always 0.025, a 1/40th of a second.)
@@ -10661,6 +10710,10 @@ function HarvestableClass:client_onUpdate(deltaTime) end
 ---@param data any # Any lua object set with [Network.setClientData]
 ---@param channel integer # Client data channel, 1 or 2. (default: 1)
 function HarvestableClass:client_onClientDataUpdate(data, channel) end
+
+---Called when the client player changes world.  
+---@param world World # The entered world.
+function HarvestableClass:client_onLocalPlayerChangedWorld(world) end
 
 ---Called when the [Harvestable] is unloaded from the game because no [Player]'s [Character] is close enough to it. Also called when exiting the game.  
 function HarvestableClass:server_onUnload() end
@@ -10815,6 +10868,11 @@ function PlayerClass:client_onRefresh() end
 ---@param timeStep number # The time period of a tick. (Is always 0.025, a 1/40th of a second.)
 function PlayerClass:server_onFixedUpdate(timeStep) end
 
+---Called occasionally to indicate that some time has passed.  
+---For performance reasons; it recommended to use this instead of [PlayerClass.server_onFixedUpdate, server_onFixedUpdate] for updates that do not need to happen frequently.  
+---Use [sm.game.getCurrentTick] to calculate the time.  
+function PlayerClass:server_onReceiveUpdate() end
+
 ---Called every game tick &ndash; 40 ticks a second. If the frame rate is lower than 40 fps, this event may be called twice.  
 ---During a fixed update, physics and logic between interactables are updated.  
 ---@param timeStep number # The time period of a tick. (Is always 0.025, a 1/40th of a second.)
@@ -10836,6 +10894,10 @@ function PlayerClass:client_onUpdate(deltaTime) end
 ---@param data any # Any lua object set with [Network.setClientData]
 ---@param channel integer # Client data channel, 1 or 2. (default: 1)
 function PlayerClass:client_onClientDataUpdate(data, channel) end
+
+---Called when the client player changes world.  
+---@param world World # The entered world.
+function PlayerClass:client_onLocalPlayerChangedWorld(world) end
 
 ---Called when the player presses or releases the 'Use' key (default 'E').  
 ---@param character Character # The [Player]'s [Character]'. Same as self.player.character.
@@ -10959,6 +11021,11 @@ function ScriptableObjectClass:client_onRefresh() end
 ---@param timeStep number # The time period of a tick. (Is always 0.025, a 1/40th of a second.)
 function ScriptableObjectClass:server_onFixedUpdate(timeStep) end
 
+---Called occasionally to indicate that some time has passed.  
+---For performance reasons; it recommended to use this instead of [ScriptableObjectClass.server_onFixedUpdate, server_onFixedUpdate] for updates that do not need to happen frequently.  
+---Use [sm.game.getCurrentTick] to calculate the time.  
+function ScriptableObjectClass:server_onReceiveUpdate() end
+
 ---Called every game tick &ndash; 40 ticks a second. If the frame rate is lower than 40 fps, this event may be called twice.  
 ---During a fixed update, physics and logic between interactables are updated.  
 ---@param timeStep number # The time period of a tick. (Is always 0.025, a 1/40th of a second.)
@@ -10980,6 +11047,10 @@ function ScriptableObjectClass:client_onUpdate(deltaTime) end
 ---@param data any # Any lua object set with [Network.setClientData]
 ---@param channel integer # Client data channel, 1 or 2. (default: 1)
 function ScriptableObjectClass:client_onClientDataUpdate(data, channel) end
+
+---Called when the client player changes world.  
+---@param world World # The entered world.
+function ScriptableObjectClass:client_onLocalPlayerChangedWorld(world) end
 
 ---Called when the [ScriptableObject] is unloaded when exiting the game.  
 function ScriptableObjectClass:server_onUnload() end
@@ -11067,6 +11138,11 @@ function ShapeClass:client_onRefresh() end
 ---@param timeStep number # The time period of a tick. (Is always 0.025, a 1/40th of a second.)
 function ShapeClass:server_onFixedUpdate(timeStep) end
 
+---Called occasionally to indicate that some time has passed.  
+---For performance reasons; it recommended to use this instead of [ShapeClass.server_onFixedUpdate, server_onFixedUpdate] for updates that do not need to happen frequently.  
+---Use [sm.game.getCurrentTick] to calculate the time.  
+function ShapeClass:server_onReceiveUpdate() end
+
 ---Called every game tick &ndash; 40 ticks a second. If the frame rate is lower than 40 fps, this event may be called twice.  
 ---During a fixed update, physics and logic between interactables are updated.  
 ---@param timeStep number # The time period of a tick. (Is always 0.025, a 1/40th of a second.)
@@ -11088,6 +11164,10 @@ function ShapeClass:client_onUpdate(deltaTime) end
 ---@param data any # Any lua object set with [Network.setClientData]
 ---@param channel integer # Client data channel, 1 or 2. (default: 1)
 function ShapeClass:client_onClientDataUpdate(data, channel) end
+
+---Called when the client player changes world.  
+---@param world World # The entered world.
+function ShapeClass:client_onLocalPlayerChangedWorld(world) end
 
 ---Called when the [Interactable] is unloaded from the game because no [Player]'s [Character] is close enough to it. Also called when exiting the game.  
 ---**Note:**
@@ -11351,6 +11431,11 @@ function UnitClass:client_onRefresh() end
 ---@param timeStep number # The time period of a tick. (Is always 0.025, a 1/40th of a second.)
 function UnitClass:server_onFixedUpdate(timeStep) end
 
+---Called occasionally to indicate that some time has passed.  
+---For performance reasons; it recommended to use this instead of [UnitClass.server_onFixedUpdate, server_onFixedUpdate] for updates that do not need to happen frequently.  
+---Use [sm.game.getCurrentTick] to calculate the time.  
+function UnitClass:server_onReceiveUpdate() end
+
 ---Called every game tick &ndash; 40 ticks a second. If the frame rate is lower than 40 fps, this event may be called twice.  
 ---During a fixed update, physics and logic between interactables are updated.  
 ---@param timeStep number # The time period of a tick. (Is always 0.025, a 1/40th of a second.)
@@ -11372,6 +11457,10 @@ function UnitClass:client_onUpdate(deltaTime) end
 ---@param data any # Any lua object set with [Network.setClientData]
 ---@param channel integer # Client data channel, 1 or 2. (default: 1)
 function UnitClass:client_onClientDataUpdate(data, channel) end
+
+---Called when the client player changes world.  
+---@param world World # The entered world.
+function UnitClass:client_onLocalPlayerChangedWorld(world) end
 
 ---Called when the [Unit]'s [Character] is hit by a projectile.  
 ---**Note:**
@@ -11581,6 +11670,11 @@ function WorldClass:client_onRefresh() end
 ---@param timeStep number # The time period of a tick. (Is always 0.025, a 1/40th of a second.)
 function WorldClass:server_onFixedUpdate(timeStep) end
 
+---Called occasionally to indicate that some time has passed.  
+---For performance reasons; it recommended to use this instead of [WorldClass.server_onFixedUpdate, server_onFixedUpdate] for updates that do not need to happen frequently.  
+---Use [sm.game.getCurrentTick] to calculate the time.  
+function WorldClass:server_onReceiveUpdate() end
+
 ---Called every game tick &ndash; 40 ticks a second. If the frame rate is lower than 40 fps, this event may be called twice.  
 ---During a fixed update, physics and logic between interactables are updated.  
 ---@param timeStep number # The time period of a tick. (Is always 0.025, a 1/40th of a second.)
@@ -11602,6 +11696,10 @@ function WorldClass:client_onUpdate(deltaTime) end
 ---@param data any # Any lua object set with [Network.setClientData]
 ---@param channel integer # Client data channel, 1 or 2. (default: 1)
 function WorldClass:client_onClientDataUpdate(data, channel) end
+
+---Called when the client player changes world.  
+---@param world World # The entered world.
+function WorldClass:client_onLocalPlayerChangedWorld(world) end
 
 ---Called when the [World] is unloaded from the game on shutdown.  
 function WorldClass:server_onUnload() end
@@ -11804,6 +11902,11 @@ function ToolClass:client_onRefresh() end
 ---@param timeStep number # The time period of a tick. (Is always 0.025, a 1/40th of a second.)
 function ToolClass:server_onFixedUpdate(timeStep) end
 
+---Called occasionally to indicate that some time has passed.  
+---For performance reasons; it recommended to use this instead of [ToolClass.server_onFixedUpdate, server_onFixedUpdate] for updates that do not need to happen frequently.  
+---Use [sm.game.getCurrentTick] to calculate the time.  
+function ToolClass:server_onReceiveUpdate() end
+
 ---Called every game tick &ndash; 40 ticks a second. If the frame rate is lower than 40 fps, this event may be called twice.  
 ---During a fixed update, physics and logic between interactables are updated.  
 ---@param timeStep number # The time period of a tick. (Is always 0.025, a 1/40th of a second.)
@@ -11825,6 +11928,10 @@ function ToolClass:client_onUpdate(deltaTime) end
 ---@param data any # Any lua object set with [Network.setClientData]
 ---@param channel integer # Client data channel, 1 or 2. (default: 1)
 function ToolClass:client_onClientDataUpdate(data, channel) end
+
+---Called when the client player changes world.  
+---@param world World # The entered world.
+function ToolClass:client_onLocalPlayerChangedWorld(world) end
 
 ---Called when a [Player] equips the [Tool].  
 ---@param animate boolean # A boolean indicating whether the event should be animated or not.

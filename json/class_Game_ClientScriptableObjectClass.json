@@ -150,6 +150,24 @@
 			"type": "serverEventCallback"
 		},
 		{
+			"name": "server_onReceiveUpdate",
+			"doc": {
+				"text": [
+					"Called occasionally to indicate that some time has passed.",
+					"For performance reasons; it recommended to use this instead of [ClientScriptableObjectClass.server_onFixedUpdate, server_onFixedUpdate] for updates that do not need to happen frequently.",
+					"Use [sm.game.getCurrentTick] to calculate the time."
+				],
+				"params": [
+					[
+						"table",
+						"self",
+						"The class instance."
+					]
+				]
+			},
+			"type": "serverEventCallback"
+		},
+		{
 			"name": "client_onFixedUpdate",
 			"doc": {
 				"text": [
@@ -222,6 +240,27 @@
 						"integer",
 						"channel",
 						"Client data channel, 1 or 2. (default: 1)"
+					]
+				]
+			},
+			"type": "clientEventCallback"
+		},
+		{
+			"name": "client_onLocalPlayerChangedWorld",
+			"doc": {
+				"text": [
+					"Called when the client player changes world."
+				],
+				"params": [
+					[
+						"table",
+						"self",
+						"The class instance."
+					],
+					[
+						"[World]",
+						"world",
+						"The entered world."
 					]
 				]
 			},

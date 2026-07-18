@@ -515,6 +515,29 @@
 			}
 		},
 		{
+			"name": "shapeUuid",
+			"get": {
+				"doc": {
+					"text": [
+						"Returns the uuid unique to a shape/block type."
+					],
+					"params": [
+						[
+							"[Shape]",
+							"shape",
+							"The shape."
+						]
+					],
+					"return": [
+						[
+							"[Uuid]",
+							"The shape's uuid."
+						]
+					]
+				}
+			}
+		},
+		{
 			"name": "stackedAmount",
 			"get": {
 				"doc": {

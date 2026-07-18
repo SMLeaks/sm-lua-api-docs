@@ -91,7 +91,7 @@
 				],
 				"return": [
 					[
-						"[vec3]",
+						"[Vec3]",
 						"position"
 					]
 				]

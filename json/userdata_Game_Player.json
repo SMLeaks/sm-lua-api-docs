@@ -208,7 +208,20 @@
 			"name": "getCarryData",
 			"doc": {
 				"text": [
-					"get the carry data on a player."
+					"Get the carry data on a player."
+				],
+				"params": [
+					[
+						"[Player]",
+						"player",
+						"The player."
+					]
+				],
+				"return": [
+					[
+						"table",
+						"The carry data."
+					]
 				],
 				"server_only": true
 			}
@@ -285,19 +298,19 @@
 				],
 				"params": [
 					[
-						"[player]",
+						"[Player]",
 						"player",
-						""
+						"The player."
 					],
 					[
 						"integer",
-						"customization",
-						"index"
+						"categoryIndex",
+						"The index of the customization category to get the uuid for."
 					]
 				],
 				"return": [
 					[
-						"uuid",
+						"[Uuid]",
 						"uuid"
 					]
 				],
@@ -551,6 +564,18 @@
 			"doc": {
 				"text": [
 					"Set the carry data on a player."
+				],
+				"params": [
+					[
+						"[Player]",
+						"player",
+						"The player."
+					],
+					[
+						"table",
+						"data",
+						"The carry data."
+					]
 				],
 				"server_only": true
 			}

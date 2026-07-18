@@ -285,6 +285,29 @@
 			}
 		},
 		{
+			"name": "shapeUuid",
+			"get": {
+				"doc": {
+					"text": [
+						"Returns the uuid string unique to a joint type."
+					],
+					"params": [
+						[
+							"[Joint]",
+							"joint",
+							"The joint."
+						]
+					],
+					"return": [
+						[
+							"[Uuid]",
+							"The joint's uuid."
+						]
+					]
+				}
+			}
+		},
+		{
 			"name": "type",
 			"get": {
 				"doc": {
